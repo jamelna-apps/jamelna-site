@@ -1,0 +1,330 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "work": "Proyectos",
+    "photography": "Fotografía",
+    "about": "Sobre Mí",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+  "hero": {
+    "name": "Joe Alexander Meléndez-Naharro",
+    "tagline": "Conectando Comunidades e Ideas en Educación",
+    "description": "Más de 15 años diseñando programas que hacen que la educación STEM, informática e IA sea accesible para todos los estudiantes.\n\nActualmente radicado en Durham, Carolina del Norte, conectando diversos actores y construyendo puentes entre investigación y práctica, política e implementación, innovación y equidad.",
+    "ctaPrimary": "Trabajar Conmigo",
+    "ctaSecondary": "Ver Mi Trabajo",
+    "yearsExperience": "Años de Experiencia"
+  },
+  "home": {
+    "valueProps": {
+      "bridgeBuilder": {
+        "title": "Constructor de Puentes",
+        "description": "Conecto comunidades y ecosistemas diversos - desde maestros en el aula hasta líderes de distrito, desde instituciones de investigación hasta empresas EdTech, desde mercados estadounidenses hasta internacionales. Traduzco entre mundos, construyendo confianza y comprensión compartida entre grupos de interés."
+      },
+      "aiPioneer": {
+        "title": "Pionero en IA Educativa",
+        "description": "Desde la gestión de SceneCraft (plataforma de narración con IA) hasta la formación de más de 500 profesores en el uso responsable de IA, traduzco la IA de vanguardia en impacto práctico en el aula."
+      },
+      "systemsDesigner": {
+        "title": "Diseñador de Sistemas",
+        "description": "He liderado marcos nacionales (SCRIPT), iniciativas a nivel de distrito (NYC CS4All: más de 200 escuelas) y construido programas desde cero que sirven a decenas de miles de estudiantes."
+      }
+    },
+    "featuredWork": {
+      "title": "Proyectos Destacados",
+      "description": "Durante más de 15 años, he liderado iniciativas desde programas prácticos en el aula hasta marcos nacionales.",
+      "viewAll": "Ver Todos los Proyectos",
+      "projects": {
+        "gyst": {
+          "title": "GYST",
+          "subtitle": "App de Estilo y Vestuario con IA"
+        },
+        "smartiegoals": {
+          "title": "SMARTIEgoals",
+          "subtitle": "Plataforma de Seguimiento de Objetivos"
+        },
+        "scenecraft": {
+          "title": "SceneCraft",
+          "subtitle": "Plataforma de Aprendizaje con IA"
+        },
+        "script": {
+          "title": "SCRIPT",
+          "subtitle": "Marco Nacional de Educación en Informática"
+        },
+        "cs4all": {
+          "title": "NYC CS4All",
+          "subtitle": "Implementación en más de 200 Escuelas"
+        },
+        "coaching": {
+          "title": "CS Coaching Toolkit",
+          "subtitle": "Recurso Nacional"
+        }
+      }
+    },
+    "cta": {
+      "title": "Trabajemos Juntos",
+      "description": "Ya sea que seas una empresa EdTech navegando nuevos mercados, una escuela implementando herramientas innovadoras o una organización construyendo alianzas entre comunidades, aporto experiencia práctica en conectar diversos actores y un enfoque colaborativo.",
+      "button": "Ponerse en Contacto"
+    }
+  },
+  "footer": {
+    "tagline": "Consultor de Tecnología Educativa",
+    "location": "Durham, Carolina del Norte",
+    "navigate": "Navegar",
+    "connect": "Conectar",
+    "aboutSite": "Sobre Este Sitio",
+    "siteDescription": "Construido con Next.js, React y Tailwind CSS utilizando desarrollo asistido por IA (Claude CLI). Este sitio en sí mismo demuestra mi enfoque para aprovechar las herramientas de IA para resultados prácticos.",
+    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. Todos los derechos reservados."
+  },
+  "services": {
+    "title": "Servicios",
+    "description": "Ya sea que seas una empresa EdTech navegando nuevos mercados, una escuela implementando herramientas de IA o una organización construyendo programas sostenibles, aporto 15 años de experiencia práctica diseñando programas educativos que funcionan en el mundo real.",
+    "service1": {
+      "title": "Estrategia de Mercado Estadounidense para EdTech Europeo",
+      "youMightNeed": [
+        "Eres una empresa EdTech española/europea explorando expansión en EE.UU.",
+        "Quieres entender la adquisición y toma de decisiones de las escuelas estadounidenses",
+        "Necesitas adaptar tu producto a los estándares curriculares americanos",
+        "Estás buscando asociaciones u oportunidades piloto en EE.UU."
+      ],
+      "whatIBring": [
+        "Gestioné más de 200 escuelas de NYC implementando educación en informática",
+        "Construí relaciones con distritos, departamentos estatales de educación y organizaciones nacionales",
+        "Entiendo las diferencias culturales y estructurales entre la educación estadounidense y española",
+        "Fluidez bilingüe nativa para conectar ambos mercados"
+      ],
+      "recentExample": "Lideré la iniciativa nacional SCRIPT ayudando a más de 50 distritos escolares de EE.UU. a construir planes de educación en informática: sé cómo las escuelas americanas toman decisiones.",
+      "deliverables": "Análisis de mercado, estrategia de entrada, hoja de ruta de asociaciones, diseño piloto",
+      "timeline": "4-8 semanas"
+    },
+    "service2": {
+      "title": "Implementación de IA en Educación",
+      "youMightNeed": [
+        "Tu escuela o distrito quiere implementar herramientas de IA de manera responsable",
+        "Los profesores necesitan formación en alfabetización de IA e integración en el aula",
+        "Estás desarrollando productos educativos impulsados por IA y necesitas orientación pedagógica",
+        "Necesitas marcos para el uso ético de la IA en entornos K-12"
+      ],
+      "whatIBring": [
+        "Actualmente gestionando SceneCraft, una plataforma de aprendizaje impulsada por LLM en NC State",
+        "Diseñé marcos de IA con el profesor en el centro e ingeniería de prompts para educadores",
+        "Formé a más de 500 profesores en tecnología educativa y pensamiento computacional",
+        "Comprensión profunda de qué hace que las herramientas de IA sean realmente útiles para los profesores vs. software sin uso"
+      ],
+      "recentExample": "Liderando el desarrollo de productos de IA para EngageAI Institute, diseñando funciones que apoyan a más de 25,000 estudiantes mientras mantienen a los profesores en control.",
+      "deliverables": "Hoja de ruta de implementación, talleres de desarrollo profesional para profesores, marco de IA responsable, diseño de programa piloto",
+      "timeline": "4-10 semanas"
+    },
+    "service3": {
+      "title": "Diseño de Programas de Informática y STEM",
+      "youMightNeed": [
+        "Tu escuela quiere lanzar o mejorar programas de informática/STEM",
+        "Necesitas marcos curriculares alineados con estándares internacionales",
+        "Los profesores necesitan desarrollo profesional en pedagogía de informática",
+        "Estás diseñando estrategias de implementación de informática a nivel de distrito"
+      ],
+      "whatIBring": [
+        "Lideré CS4All en más de 200 escuelas de Manhattan (2016-2019)",
+        "Dirigí el programa nacional SCRIPT ayudando a distritos a crear planes sostenibles de informática",
+        "Diseñé el CS Coaching Toolkit utilizado por NYC, Louisiana y Carolina del Sur",
+        "Experto en enfoques centrados en la equidad asegurando que todos los estudiantes accedan a la educación en informática"
+      ],
+      "recentExample": "El marco SCRIPT ahora es utilizado por más de 50 distritos de EE.UU. para crear planes integrales y equitativos de educación en informática.",
+      "deliverables": "Hoja de ruta del programa, marcos curriculares, planes de formación docente, guías de implementación",
+      "timeline": "6-10 semanas"
+    },
+    "youMightNeed": "Podrías Necesitar Esto Si",
+    "whatIBring": "Lo Que Aporto",
+    "recentExample": "Ejemplo Reciente",
+    "deliverables": "Entregables",
+    "timeline": "Plazo",
+    "cta": "Iniciar una Conversación"
+  },
+  "work": {
+    "title": "Proyectos",
+    "description": "Durante más de 15 años, he liderado iniciativas desde programas prácticos en el aula hasta marcos nacionales. Aquí hay algunos aspectos destacados que muestran cómo pienso y trabajo.",
+    "role": "Rol",
+    "organization": "Organización",
+    "timeline": "Plazo",
+    "challenge": "Desafío",
+    "whatIDid": "Lo Que Hice",
+    "impact": "Impacto",
+    "skills": "Habilidades",
+    "projects": [
+      {
+        "title": "GYST (Get Your Style Together)",
+        "role": "Fundador y Desarrollador",
+        "organization": "Proyecto Independiente",
+        "timeline": "2024 - Presente",
+        "challenge": "Crear una aplicación móvil que ayude a los usuarios a organizar su vestuario, descubrir su estilo personal y tomar decisiones conscientes sobre su ropa mediante recomendaciones impulsadas por IA.",
+        "whatIDid": [
+          "Diseñé y desarrollé una aplicación móvil full-stack con React Native",
+          "Integré Claude AI para recomendaciones de estilo personalizadas y sugerencias de conjuntos",
+          "Construí integración de compra ética priorizando marcas de segunda mano y sostenibles",
+          "Implementé funciones de salud mental incluyendo registros diarios y seguimiento del estado de ánimo",
+          "Creé un sistema de gamificación con logros e hitos",
+          "Desplegué en Firebase con sincronización de datos en tiempo real"
+        ],
+        "impact": "Construí una herramienta integral de estilismo personal que combina asistencia de IA con valores de sostenibilidad, ayudando a los usuarios a desarrollar confianza en sus elecciones de estilo mientras promueve el consumo ético.",
+        "skills": "React Native, Expo, Firebase, integración de Claude AI, diseño UI/UX, desarrollo de aplicaciones móviles, diseño de tecnología ética"
+      },
+      {
+        "title": "SMARTIEgoals.org",
+        "role": "Fundador y Desarrollador",
+        "organization": "Proyecto Independiente",
+        "timeline": "2024 - Presente",
+        "challenge": "Desarrollar una plataforma de seguimiento de objetivos que ayude a los usuarios a establecer, monitorear y alcanzar metas personales y profesionales mediante hitos estructurados y seguimiento del progreso.",
+        "whatIDid": [
+          "Construí una aplicación web Next.js con arquitectura React moderna",
+          "Diseñé un sistema de jerarquía de objetivos que apoya metas principales y sub-hitos",
+          "Implementé seguimiento del progreso con indicadores visuales y porcentajes de finalización",
+          "Creé una interfaz responsive con Tailwind CSS para una experiencia de usuario óptima",
+          "Integré autenticación y persistencia de datos",
+          "Desarrollé un panel de control para una visión integral de objetivos"
+        ],
+        "impact": "Creé una herramienta accesible para la gestión de objetivos que descompone objetivos ambiciosos en pasos accionables, haciendo que el logro a largo plazo sea más alcanzable.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, diseño responsive, desarrollo full-stack, modelado de datos"
+      },
+      {
+        "title": "SceneCraft",
+        "role": "Research Scholar y Product Manager",
+        "organization": "NC State University, Friday Institute for Educational Innovation",
+        "timeline": "Marzo 2025 - Presente",
+        "challenge": "Construir una plataforma de narración impulsada por IA que ayude a los estudiantes a aprender mediante narrativas mientras mantiene a los profesores en control de los resultados educativos.",
+        "whatIDid": [
+          "Sirvo como gestor de producto y proyecto para plataforma LLM basada en Unity",
+          "Lidero equipos multifuncionales (investigadores, ingenieros, educadores)",
+          "Diseño marcos de ingeniería de prompts y procesos con el profesor en el centro",
+          "Realizo investigación de usuarios con profesores y estudiantes de K-12",
+          "Gestiono la hoja de ruta de desarrollo hacia 25,000 usuarios estudiantes para 2026"
+        ],
+        "impact": "Creé una red de educadores escalando desde escuelas piloto hacia adopción estatal. Desarrollé marcos de IA responsable que ahora informan la hoja de ruta estatal de educación en IA de Carolina del Norte.",
+        "skills": "Desarrollo de productos de IA, diseño LLM, investigación de usuarios, liderazgo multifuncional, marcos de IA responsable"
+      },
+      {
+        "title": "SCRIPT",
+        "role": "Director de Programa",
+        "organization": "CSforALL",
+        "timeline": "Abril 2023 - Diciembre 2024",
+        "challenge": "Crear un marco práctico y sistema de apoyo para ayudar a los distritos escolares estadounidenses a construir planes integrales y sostenibles de educación en informática K-12.",
+        "whatIDid": [
+          "Diseñé y lideré la implementación nacional de la iniciativa SCRIPT",
+          "Creé currículos de talleres, formación de facilitadores y recursos digitales",
+          "Gestioné asociaciones con Microsoft, Northrop Grumman y Hopper-Dean Foundation",
+          "Construí y lideré el Sistema de Gestión de Aprendizaje para la entrega del programa",
+          "Desarrollé herramientas de evaluación basadas en datos para seguir el progreso de los distritos"
+        ],
+        "impact": "Más de 50 distritos escolares en EE.UU. utilizaron el marco SCRIPT para crear planes de informática centrados en la equidad. Formé a más de 30 facilitadores que ahora apoyan a distritos a nivel nacional.",
+        "skills": "Diseño de marcos, escalado de programas nacionales, gestión de asociaciones, formación de facilitadores, sistemas de datos"
+      },
+      {
+        "title": "NYC CS4All",
+        "role": "Director de Educación en Informática",
+        "organization": "Departamento de Educación de NYC",
+        "timeline": "Agosto 2016 - Agosto 2019",
+        "challenge": "Llevar la educación en informática a cada escuela de Manhattan como parte de la iniciativa CS4All de NYC, el esfuerzo de equidad en educación informática más grande de la nación.",
+        "whatIDid": [
+          "Gestioné la implementación de informática en más de 200 escuelas de Manhattan",
+          "Formé a más de 500 educadores en pedagogía de informática y enseñanza culturalmente receptiva",
+          "Construí asociaciones con industria, organizaciones sin ánimo de lucro y organizaciones comunitarias",
+          "Aseguré la alineación curricular con los estándares CSTA K-12",
+          "Lideré iniciativas de equidad aumentando la participación de niñas y estudiantes de color"
+        ],
+        "impact": "Miles de estudiantes que nunca habían accedido a educación en informática obtuvieron vías hacia la computación. Creé un modelo sostenible para la integración de informática a nivel de distrito.",
+        "skills": "Gestión de programas a gran escala, desarrollo profesional docente, diseño centrado en equidad, gestión de stakeholders"
+      },
+      {
+        "title": "CS Coaching Toolkit",
+        "role": "Director, K-12 Coaching Initiatives",
+        "organization": "Cornell Tech",
+        "timeline": "Noviembre 2021 - Abril 2023",
+        "challenge": "Crear marcos y recursos accionables para apoyar el campo emergente del coaching instruccional de informática K-12.",
+        "whatIDid": [
+          "Diseñé el CS Coaching Card Deck y el Toolkit integral",
+          "Creé marcos de coaching con directrices claras para establecer relaciones y proporcionar apoyo",
+          "Desarrollé estrategias centradas en equidad para instrucción inclusiva de informática",
+          "Facilité talleres para NYC DOE, el Estado de Louisiana y Carolina del Sur DOE",
+          "Asesoré a universidades y distritos sobre integración de programas de informática"
+        ],
+        "impact": "El Toolkit fue adoptado a nivel nacional como recurso clave para coaches de informática. Influyó en la práctica de coaching en múltiples estados y distritos.",
+        "skills": "Desarrollo de recursos, diseño de marcos, diseño de desarrollo profesional, asociaciones multi-estatales"
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "p1": "He pasado mi carrera en la intersección de educación, tecnología y equidad.",
+    "p2": "Mi madre es de España y mi padre de Puerto Rico. Crecí bilingüe, viviendo entre dos mundos. Esa doble perspectiva da forma a todo lo que hago: veo problemas desde múltiples ángulos y construyo puentes entre diferentes comunidades, stakeholders y formas de pensar.",
+    "p3": "Mi trayectoria en educación comenzó en Liberty Science Center en Nueva Jersey, donde me enamoré del momento en que los ojos de un estudiante se iluminan al entender algo nuevo. Desde ahí, pasé por educación en museos, programas STEM extraescolares y eventualmente a escuelas K-12.",
+    "p4": "Cuando la Ciudad de Nueva York lanzó CS4All, la iniciativa de equidad en ciencias de la computación más ambiciosa de la nación, ayudé a liderar el trabajo en Manhattan. Durante tres años, vi a maestros que nunca habían programado convertirse en educadores seguros de informática. Vi a estudiantes de comunidades subrepresentadas descubrir talentos que no sabían que tenían. Esa experiencia me enseñó que el acceso no es suficiente: necesitas sistemas, apoyo y un compromiso con la equidad.",
+    "p5": "Desde entonces, he trabajado a escala nacional liderando la iniciativa SCRIPT de CSforALL, diseñé marcos de coaching en Cornell Tech, y ahora sirvo como Research Scholar en el Friday Institute de NC State, gestionando SceneCraft, una herramienta educativa mejorada con IA. En este rol, alinéo investigación, diseño y colaboración de stakeholders para crear soluciones de aprendizaje informadas por datos que responden a las necesidades evolutivas de estudiantes y educadores. Cada posición ha reforzado mi creencia de que la innovación no se propaga solo a través de la tecnología, sino a través de relaciones, confianza y traducción entre los lenguajes de diferentes grupos de stakeholders.",
+    "p6": "Actualmente basado en Durham, Carolina del Norte, estoy trabajando en la intersección de IA y educación mientras planeo una futura mudanza a España. A lo largo de mi carrera, he construido puentes: entre investigadores y practicantes, entre responsables de políticas y maestros, entre sistemas educativos de EE.UU. e internacionales, entre socios corporativos y distritos escolares. Mi familia está en España, y quiero que mi vida diaria refleje lo que he aprendido: que la calidad de vida importa, que la comunidad importa y que puedes hacer trabajo significativo desde cualquier lugar.",
+    "p7": "Aporto un enfoque estratégico e impulsado por la comunidad a todos los aspectos de mi trabajo, fundamentado en un compromiso con la equidad educativa, el liderazgo empático y la integración responsable de tecnologías emergentes. Ya sea ayudando a empresas EdTech a navegar nuevos mercados y asociaciones, apoyando a escuelas en la implementación responsable de herramientas innovadoras o construyendo coaliciones que conectan diferentes ecosistemas de stakeholders, me enfoco en crear cambio sistémico sostenible.",
+    "p8": "Creo profundamente que cada estudiante merece acceso a experiencias de aprendizaje poderosas, independientemente de su origen. Esa creencia, junto con un enfoque en la toma de decisiones informada por datos y prácticas culturalmente receptivas, ha guiado cada programa que he construido y cada asociación que he formado.",
+    "p9": "Si estás trabajando en algo que importa en educación, me encantaría hablar.",
+    "basedIn": "Ubicado en",
+    "basedInValue": "Durham, Carolina del Norte",
+    "workWith": "Trabajo con",
+    "workWithValue": "Organizaciones en España, Europa y EE.UU.",
+    "languages": "Idiomas",
+    "languagesValue": "Inglés (nativo), Español (nativo)",
+    "education": "Educación",
+    "educationValue": "B.A. Artes y Ciencias Liberales, Escritura Creativa\nNew School University",
+    "contact": "Contacto",
+    "linkedin": "LinkedIn",
+    "cta": "Hablemos"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Ya sea que estés explorando cómo podríamos trabajar juntos o simplemente quieras conectar sobre educación y tecnología, me encantaría saber de ti.",
+    "consultingTitle": "Consultas de Consultoría",
+    "consultingIntro": "Si estás interesado en trabajar juntos, así es como empezar:",
+    "consultingStep1": "Envíame un correo",
+    "consultingStep1At": "a",
+    "consultingStep1With": "con:",
+    "consultingBullet1": "Breve descripción de tu desafío u oportunidad",
+    "consultingBullet2": "Qué tipo de apoyo estás buscando",
+    "consultingBullet3": "Plazo (si tienes uno)",
+    "consultingStep2": "Responderé",
+    "consultingStep2Detail": "dentro de 2 días hábiles",
+    "consultingStep3": "Programaremos",
+    "consultingStep3Detail": "una conversación exploratoria de 30 minutos (sin costo, sin obligación)",
+    "consultingStep4": "Si hay una buena conexión",
+    "consultingStep4Detail": "te enviaré una propuesta personalizada",
+    "sendEmail": "Enviar Correo",
+    "employmentTitle": "Oportunidades de Empleo",
+    "employmentIntro": "Estoy abierto a conversaciones sobre la oportunidad adecuada, incluyendo:",
+    "employmentBullet1": "Roles a tiempo completo (remoto o basado en España/EE.UU.)",
+    "employmentBullet2": "Posiciones contractuales para proyectos específicos",
+    "employmentBullet3": "Trabajo remoto con empresas EdTech u organizaciones educativas",
+    "employmentEmail": "Correo",
+    "employmentSubject": "con \"Oportunidad de Empleo\" en la línea de asunto.",
+    "generalTitle": "Consultas Generales",
+    "generalIntro": "¿Quieres conectar sobre IA en educación, discutir tendencias de EdTech españolas o tomar un café virtual? Contáctame: me encanta conocer gente que hace trabajo interesante.",
+    "email": "Correo:",
+    "linkedin": "LinkedIn:",
+    "locationTitle": "Ubicación y Disponibilidad",
+    "locationLabel": "Ubicación",
+    "locationValue": "Durham, Carolina del Norte",
+    "availabilityLabel": "Disponibilidad",
+    "availabilityValue1": "Disponible para trabajo remoto en EE.UU. e internacionalmente",
+    "availabilityValue2": "Abierto a viajar para los proyectos adecuados"
+  },
+  "photography": {
+    "title": "Fotografía",
+    "description": "Una exploración visual de perspectivas, momentos y el mundo que me rodea.",
+    "gettingStarted": "Comenzando",
+    "setupIntro": "¡Tu backend de galería de fotografía está listo! Para comenzar a agregar galerías:",
+    "setupStep1": "Visita",
+    "setupStep1Link": "/studio",
+    "setupStep1Suffix": "para acceder a tu panel de administración",
+    "setupStep2": "Crea una nueva galería y sube fotos",
+    "setupStep3": "Tus galerías aparecerán aquí automáticamente",
+    "openStudio": "Abrir Studio",
+    "photo": "foto",
+    "photos": "fotos",
+    "manageGalleries": "Gestionar Galerías →",
+    "noCoverImage": "Sin imagen de portada"
+  }
+}

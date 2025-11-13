@@ -1,0 +1,6 @@
+# robots.txt for jamelna.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://jamelna.com/sitemap.xml

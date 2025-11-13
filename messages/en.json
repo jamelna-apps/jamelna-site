@@ -1,0 +1,330 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "work": "Work",
+    "photography": "Photography",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "name": "Joe Alexander Meléndez-Naharro",
+    "tagline": "Bridging Communities and Ideas in Education",
+    "description": "15+ years designing programs that make STEM, CS, and AI education accessible to all students.\n\nCurrently based in Durham, NC, connecting diverse stakeholders and building bridges between research and practice, policy and implementation, innovation and equity.",
+    "ctaPrimary": "Work With Me",
+    "ctaSecondary": "View My Work",
+    "yearsExperience": "Years Experience"
+  },
+  "home": {
+    "valueProps": {
+      "bridgeBuilder": {
+        "title": "Bridge Builder",
+        "description": "I connect diverse communities and ecosystems - from classroom teachers to district leaders, from research institutions to EdTech companies, from US to international markets. I translate between worlds, building trust and shared understanding across stakeholder groups."
+      },
+      "aiPioneer": {
+        "title": "AI Education Pioneer",
+        "description": "From managing SceneCraft (AI storytelling platform) to training 500+ teachers in responsible AI use, I translate cutting-edge AI into practical classroom impact."
+      },
+      "systemsDesigner": {
+        "title": "Systems Designer",
+        "description": "I've led national frameworks (SCRIPT), district-wide initiatives (NYC CS4All: 200+ schools), and built programs from scratch that serve tens of thousands of students."
+      }
+    },
+    "featuredWork": {
+      "title": "Selected Work",
+      "description": "Over 15 years, I've led initiatives from hands-on classroom programs to national frameworks.",
+      "viewAll": "See All Work",
+      "projects": {
+        "gyst": {
+          "title": "GYST",
+          "subtitle": "AI-Powered Style & Wardrobe App"
+        },
+        "smartiegoals": {
+          "title": "SMARTIEgoals",
+          "subtitle": "Goal Tracking Platform"
+        },
+        "scenecraft": {
+          "title": "SceneCraft",
+          "subtitle": "AI-Powered Learning Platform"
+        },
+        "script": {
+          "title": "SCRIPT",
+          "subtitle": "National CS Education Framework"
+        },
+        "cs4all": {
+          "title": "NYC CS4All",
+          "subtitle": "200+ School Implementation"
+        },
+        "coaching": {
+          "title": "CS Coaching Toolkit",
+          "subtitle": "National Resource"
+        }
+      }
+    },
+    "cta": {
+      "title": "Let's Work Together",
+      "description": "Whether you're an EdTech company navigating new markets, a school implementing innovative tools, or an organization building partnerships across communities, I bring practical experience in connecting diverse stakeholders and a collaborative approach.",
+      "button": "Get in Touch"
+    }
+  },
+  "footer": {
+    "tagline": "Education Technology Consultant",
+    "location": "Durham, NC",
+    "navigate": "Navigate",
+    "connect": "Connect",
+    "aboutSite": "About This Site",
+    "siteDescription": "Built with Next.js, React, and Tailwind CSS using AI-assisted development (Claude CLI). This site itself demonstrates my approach to leveraging AI tools for practical outcomes.",
+    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. All rights reserved."
+  },
+  "services": {
+    "title": "Services",
+    "description": "Whether you're an EdTech company navigating new markets, a school implementing AI tools, or an organization building sustainable programs, I bring 15 years of hands-on experience designing education programs that work in the real world.",
+    "service1": {
+      "title": "US Market Strategy for European EdTech",
+      "youMightNeed": [
+        "You're a Spanish/European EdTech company exploring US expansion",
+        "You want to understand US school procurement and decision-making",
+        "You need to adapt your product for American curriculum standards",
+        "You're seeking US partnerships or pilot opportunities"
+      ],
+      "whatIBring": [
+        "Managed 200+ NYC schools implementing CS education",
+        "Built relationships with districts, state DOEs, and national organizations",
+        "Understand the cultural and structural differences between US and Spanish education",
+        "Native bilingual fluency to bridge both markets"
+      ],
+      "recentExample": "Led national SCRIPT initiative helping 50+ US school districts build CS education plans - I know how American schools make decisions.",
+      "deliverables": "Market analysis, entry strategy, partnership roadmap, pilot design",
+      "timeline": "4-8 weeks"
+    },
+    "service2": {
+      "title": "AI in Education Implementation",
+      "youMightNeed": [
+        "Your school or district wants to implement AI tools responsibly",
+        "Teachers need training on AI literacy and classroom integration",
+        "You're developing AI-powered educational products and need pedagogical guidance",
+        "You need frameworks for ethical AI use in K-12 settings"
+      ],
+      "whatIBring": [
+        "Currently managing SceneCraft, an LLM-powered learning platform at NC State",
+        "Designed teacher-in-the-loop AI frameworks and prompt engineering for educators",
+        "Trained 500+ teachers in educational technology and computational thinking",
+        "Deep understanding of what makes AI tools actually useful for teachers vs. shelfware"
+      ],
+      "recentExample": "Leading AI product development for EngageAI Institute, designing features that support 25,000+ students while keeping teachers in control.",
+      "deliverables": "Implementation roadmap, teacher PD workshops, responsible AI framework, pilot program design",
+      "timeline": "4-10 weeks"
+    },
+    "service3": {
+      "title": "Computer Science & STEM Program Design",
+      "youMightNeed": [
+        "Your school wants to launch or improve CS/STEM programs",
+        "You need curriculum frameworks aligned to international standards",
+        "Teachers need professional development in CS pedagogy",
+        "You're designing district-wide CS implementation strategies"
+      ],
+      "whatIBring": [
+        "Led CS4All across 200+ Manhattan schools (2016-2019)",
+        "Directed national SCRIPT program helping districts create sustainable CS plans",
+        "Designed the CS Coaching Toolkit used by NYC, Louisiana, and South Carolina",
+        "Expert in equity-focused approaches ensuring all students access to CS education"
+      ],
+      "recentExample": "SCRIPT framework now used by 50+ US districts to create comprehensive, equitable CS education plans.",
+      "deliverables": "Program roadmap, curriculum frameworks, teacher training plans, implementation guides",
+      "timeline": "6-10 weeks"
+    },
+    "youMightNeed": "You Might Need This If",
+    "whatIBring": "What I Bring",
+    "recentExample": "Recent Example",
+    "deliverables": "Deliverables",
+    "timeline": "Timeline",
+    "cta": "Start a Conversation"
+  },
+  "work": {
+    "title": "Work",
+    "description": "Over 15 years, I've led initiatives from hands-on classroom programs to national frameworks. Here are some highlights that show how I think and work.",
+    "role": "Role",
+    "organization": "Organization",
+    "timeline": "Timeline",
+    "challenge": "Challenge",
+    "whatIDid": "What I Did",
+    "impact": "Impact",
+    "skills": "Skills",
+    "projects": [
+      {
+        "title": "GYST (Get Your Style Together)",
+        "role": "Founder & Developer",
+        "organization": "Independent Project",
+        "timeline": "2024 - Present",
+        "challenge": "Create a mobile app that helps users organize their wardrobe, discover their personal style, and make intentional clothing choices through AI-powered recommendations.",
+        "whatIDid": [
+          "Designed and developed full-stack React Native mobile application",
+          "Integrated Claude AI for personalized style recommendations and outfit suggestions",
+          "Built ethical shopping integration prioritizing secondhand and sustainable brands",
+          "Implemented mental health features including daily check-ins and mood tracking",
+          "Created gamification system with achievements and milestones",
+          "Deployed to Firebase with real-time data synchronization"
+        ],
+        "impact": "Built a comprehensive personal styling tool that combines AI assistance with sustainability values, helping users develop confidence in their style choices while promoting ethical consumption.",
+        "skills": "React Native, Expo, Firebase, Claude AI integration, UI/UX design, mobile app development, ethical tech design"
+      },
+      {
+        "title": "SMARTIEgoals.org",
+        "role": "Founder & Developer",
+        "organization": "Independent Project",
+        "timeline": "2024 - Present",
+        "challenge": "Develop a goal-tracking platform that helps users set, monitor, and achieve personal and professional goals through structured milestones and progress tracking.",
+        "whatIDid": [
+          "Built Next.js web application with modern React architecture",
+          "Designed goal hierarchy system supporting main goals and sub-milestones",
+          "Implemented progress tracking with visual indicators and completion percentages",
+          "Created responsive UI with Tailwind CSS for optimal user experience",
+          "Integrated authentication and data persistence",
+          "Developed dashboard for comprehensive goal overview"
+        ],
+        "impact": "Created an accessible tool for goal management that breaks down ambitious objectives into actionable steps, making long-term achievement more attainable.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, responsive design, full-stack development, data modeling"
+      },
+      {
+        "title": "SceneCraft",
+        "role": "Research Scholar & Product Manager",
+        "organization": "NC State University, Friday Institute for Educational Innovation",
+        "timeline": "March 2025 - Present",
+        "challenge": "Build an AI-driven storytelling platform that helps students learn through narrative while keeping teachers in control of educational outcomes.",
+        "whatIDid": [
+          "Serve as product and project manager for Unity-based LLM platform",
+          "Lead cross-functional teams (researchers, engineers, educators)",
+          "Design prompt-engineering frameworks and teacher-in-the-loop processes",
+          "Conduct user research with K-12 teachers and students",
+          "Manage development roadmap toward 25,000 student users by 2026"
+        ],
+        "impact": "Created educator network scaling from pilot schools toward statewide adoption. Developed responsible AI frameworks now informing NC's state AI education roadmap.",
+        "skills": "AI product development, LLM design, user research, cross-functional leadership, responsible AI frameworks"
+      },
+      {
+        "title": "SCRIPT",
+        "role": "Program Lead",
+        "organization": "CSforALL",
+        "timeline": "April 2023 - December 2024",
+        "challenge": "Create a practical framework and support system to help US school districts build comprehensive, sustainable K-12 computer science education plans.",
+        "whatIDid": [
+          "Designed and led national implementation of SCRIPT initiative",
+          "Created workshop curricula, facilitator training, and digital resources",
+          "Managed partnerships with Microsoft, Northrop Grumman, Hopper-Dean Foundation",
+          "Built and led Learning Management System for program delivery",
+          "Developed data-driven evaluation tools to track district progress"
+        ],
+        "impact": "50+ school districts across the US used SCRIPT framework to create equity-focused CS plans. Trained 30+ facilitators who now support districts nationwide.",
+        "skills": "Framework design, national program scaling, partnership management, facilitator training, data systems"
+      },
+      {
+        "title": "NYC CS4All",
+        "role": "Computer Science Education Manager",
+        "organization": "NYC Department of Education",
+        "timeline": "August 2016 - August 2019",
+        "challenge": "Bring computer science education to every school in Manhattan as part of NYC's CS4All initiative - the largest CS education equity effort in the nation.",
+        "whatIDid": [
+          "Managed CS implementation across 200+ schools in Manhattan",
+          "Trained 500+ educators in CS pedagogy and culturally responsive teaching",
+          "Built partnerships with industry, nonprofits, and community organizations",
+          "Ensured curriculum alignment to CSTA standards K-12",
+          "Led equity initiatives increasing participation of girls and students of color"
+        ],
+        "impact": "Thousands of students who had never accessed CS education gained pathways to computing. Created sustainable model for district-wide CS integration.",
+        "skills": "Large-scale program management, teacher professional development, equity-focused design, stakeholder management"
+      },
+      {
+        "title": "CS Coaching Toolkit",
+        "role": "Director, K-12 Coaching Initiatives",
+        "organization": "Cornell Tech",
+        "timeline": "November 2021 - April 2023",
+        "challenge": "Create actionable frameworks and resources to support the emerging field of K-12 computer science instructional coaching.",
+        "whatIDid": [
+          "Designed CS Coaching Card Deck and comprehensive Toolkit",
+          "Created coaching frameworks with clear guidelines for establishing relationships and delivering support",
+          "Developed equity-focused strategies for inclusive CS instruction",
+          "Facilitated workshops for NYC DOE, Louisiana State, South Carolina DOE",
+          "Advised universities and districts on CS program integration"
+        ],
+        "impact": "Toolkit adopted nationally as key resource for CS coaches. Influenced coaching practice across multiple states and districts.",
+        "skills": "Resource development, framework design, professional development design, multi-state partnerships"
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "p1": "I've spent my career at the intersection of education, technology, and equity.",
+    "p2": "My mother is from Spain and my father from Puerto Rico. I grew up bilingual, living between two worlds. That dual perspective shapes everything I do - I see problems from multiple angles and build bridges between different communities, stakeholders, and ways of thinking.",
+    "p3": "My journey in education started at Liberty Science Center in New Jersey, where I fell in love with the moment when a student's eyes light up understanding something new. From there, I moved through museum education, afterschool STEM programs, and eventually into K-12 schools.",
+    "p4": "When New York City launched CS4All - the nation's most ambitious computer science equity initiative - I helped lead the work in Manhattan. Over three years, I watched teachers who'd never coded before become confident CS educators. I saw students from underrepresented communities discover talents they didn't know they had. That experience taught me that access isn't enough - you need systems, support, and a commitment to equity.",
+    "p5": "Since then, I've worked at national scale leading CSforALL's SCRIPT initiative, designed coaching frameworks at Cornell Tech, and now serve as a Research Scholar at NC State's Friday Institute, managing SceneCraft - an AI-enhanced educational tool. In this role, I align research, design, and stakeholder collaboration to create data-informed learning solutions that respond to the evolving needs of students and educators. Each position has reinforced my belief that innovation spreads not through technology alone, but through relationships, trust, and translating between the languages of different stakeholder groups.",
+    "p6": "Currently based in Durham, NC, I'm working at the intersection of AI and education while planning a future move to Spain. Throughout my career, I've built bridges: between researchers and practitioners, between policy makers and teachers, between US and international education systems, between corporate partners and school districts. My family is in Spain, and I want my daily life to reflect what I've learned: that quality of life matters, that community matters, and that you can do meaningful work from anywhere.",
+    "p7": "I bring a strategic, community-driven approach to all aspects of my work, grounded in a commitment to educational equity, empathetic leadership, and the responsible integration of emerging technologies. Whether helping EdTech companies navigate new markets and partnerships, supporting schools in implementing innovative tools responsibly, or building coalitions that bridge different stakeholder ecosystems, I focus on creating sustainable, systemic change.",
+    "p8": "I believe deeply that every student deserves access to powerful learning experiences, regardless of their background. That belief - alongside a focus on data-informed decision making and culturally responsive practices - has guided every program I've built and every partnership I've formed.",
+    "p9": "If you're working on something that matters in education, I'd love to talk.",
+    "basedIn": "Based in",
+    "basedInValue": "Durham, NC",
+    "workWith": "Work with",
+    "workWithValue": "Organizations across Spain, Europe, and the US",
+    "languages": "Languages",
+    "languagesValue": "English (native), Spanish (native)",
+    "education": "Education",
+    "educationValue": "B.A. Liberal Arts & Sciences, Creative Writing\nNew School University",
+    "contact": "Contact",
+    "linkedin": "LinkedIn",
+    "cta": "Let's Talk"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Whether you're exploring how we might work together or just want to connect about education and technology, I'd love to hear from you.",
+    "consultingTitle": "Consulting Inquiries",
+    "consultingIntro": "If you're interested in working together, here's how to start:",
+    "consultingStep1": "Email me",
+    "consultingStep1At": "at",
+    "consultingStep1With": "with:",
+    "consultingBullet1": "Brief description of your challenge or opportunity",
+    "consultingBullet2": "What kind of support you're looking for",
+    "consultingBullet3": "Timeline (if you have one)",
+    "consultingStep2": "I'll respond",
+    "consultingStep2Detail": "within 2 business days",
+    "consultingStep3": "We'll schedule",
+    "consultingStep3Detail": "a 30-minute exploratory conversation (no cost, no obligation)",
+    "consultingStep4": "If there's a fit",
+    "consultingStep4Detail": "I'll send you a custom proposal",
+    "sendEmail": "Send Email",
+    "employmentTitle": "Employment Opportunities",
+    "employmentIntro": "I'm open to conversations about the right opportunity, including:",
+    "employmentBullet1": "Full-time roles (remote or based in Spain/US)",
+    "employmentBullet2": "Contract positions for specific projects",
+    "employmentBullet3": "Remote work with EdTech companies or educational organizations",
+    "employmentEmail": "Email",
+    "employmentSubject": "with \"Employment Opportunity\" in the subject line.",
+    "generalTitle": "General Inquiries",
+    "generalIntro": "Want to connect about AI in education, discuss Spanish EdTech trends, or grab a virtual coffee? Reach out - I love meeting people doing interesting work.",
+    "email": "Email:",
+    "linkedin": "LinkedIn:",
+    "locationTitle": "Location & Availability",
+    "locationLabel": "Location",
+    "locationValue": "Durham, NC",
+    "availabilityLabel": "Availability",
+    "availabilityValue1": "Available for remote work across the US and internationally",
+    "availabilityValue2": "Open to travel for the right projects"
+  },
+  "photography": {
+    "title": "Photography",
+    "description": "A visual exploration of perspectives, moments, and the world around me.",
+    "gettingStarted": "Getting Started",
+    "setupIntro": "Your photography gallery backend is ready! To start adding galleries:",
+    "setupStep1": "Visit",
+    "setupStep1Link": "/studio",
+    "setupStep1Suffix": "to access your admin panel",
+    "setupStep2": "Create a new gallery and upload photos",
+    "setupStep3": "Your galleries will appear here automatically",
+    "openStudio": "Open Studio",
+    "photo": "photo",
+    "photos": "photos",
+    "manageGalleries": "Manage Galleries →",
+    "noCoverImage": "No cover image"
+  }
+}

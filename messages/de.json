@@ -1,0 +1,330 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "work": "Projekte",
+    "photography": "Fotografie",
+    "about": "Über Mich",
+    "contact": "Kontakt",
+    "language": "Sprache"
+  },
+  "hero": {
+    "name": "Joe Alexander Meléndez-Naharro",
+    "tagline": "Gemeinschaften und Ideen in der Bildung verbinden",
+    "description": "Über 15 Jahre Erfahrung in der Entwicklung von Programmen, die MINT, Informatik und KI-Bildung für alle Schüler zugänglich machen.\n\nDerzeit in Durham, North Carolina ansässig, verbinde ich verschiedene Interessengruppen und baue Brücken zwischen Forschung und Praxis, Politik und Umsetzung, Innovation und Gerechtigkeit.",
+    "ctaPrimary": "Mit Mir Arbeiten",
+    "ctaSecondary": "Meine Arbeit Ansehen",
+    "yearsExperience": "Jahre Erfahrung"
+  },
+  "home": {
+    "valueProps": {
+      "bridgeBuilder": {
+        "title": "Brückenbauer",
+        "description": "Ich verbinde verschiedene Gemeinschaften und Ökosysteme - von Klassenlehrern bis zu Bezirksleitern, von Forschungsinstitutionen bis zu EdTech-Unternehmen, von US-amerikanischen bis zu internationalen Märkten. Ich übersetze zwischen Welten und baue Vertrauen und gemeinsames Verständnis zwischen Interessengruppen auf."
+      },
+      "aiPioneer": {
+        "title": "KI-Bildungspionier",
+        "description": "Von der Leitung von SceneCraft (KI-Storytelling-Plattform) bis zur Schulung von über 500 Lehrkräften im verantwortungsvollen Einsatz von KI übersetze ich modernste KI in praktische Auswirkungen im Klassenzimmer."
+      },
+      "systemsDesigner": {
+        "title": "Systemdesigner",
+        "description": "Ich habe nationale Frameworks (SCRIPT), bezirksweite Initiativen (NYC CS4All: 200+ Schulen) geleitet und Programme von Grund auf aufgebaut, die Zehntausende von Schülern erreichen."
+      }
+    },
+    "featuredWork": {
+      "title": "Ausgewählte Projekte",
+      "description": "Über 15 Jahre habe ich Initiativen von praktischen Klassenzimmerprogrammen bis hin zu nationalen Frameworks geleitet.",
+      "viewAll": "Alle Projekte Ansehen",
+      "projects": {
+        "gyst": {
+          "title": "GYST",
+          "subtitle": "KI-gestützte Stil- und Garderobe-App"
+        },
+        "smartiegoals": {
+          "title": "SMARTIEgoals",
+          "subtitle": "Zielverfolgungsplattform"
+        },
+        "scenecraft": {
+          "title": "SceneCraft",
+          "subtitle": "KI-gestützte Lernplattform"
+        },
+        "script": {
+          "title": "SCRIPT",
+          "subtitle": "Nationales Informatik-Bildungsframework"
+        },
+        "cs4all": {
+          "title": "NYC CS4All",
+          "subtitle": "Implementierung in 200+ Schulen"
+        },
+        "coaching": {
+          "title": "CS Coaching Toolkit",
+          "subtitle": "Nationale Ressource"
+        }
+      }
+    },
+    "cta": {
+      "title": "Lassen Sie Uns Zusammenarbeiten",
+      "description": "Ob Sie ein EdTech-Unternehmen sind, das neue Märkte navigiert, eine Schule, die innovative Tools implementiert, oder eine Organisation, die Partnerschaften zwischen Gemeinschaften aufbaut – ich bringe praktische Erfahrung in der Verbindung verschiedener Interessengruppen und einen kollaborativen Ansatz mit.",
+      "button": "Kontakt Aufnehmen"
+    }
+  },
+  "footer": {
+    "tagline": "Bildungstechnologie-Berater",
+    "location": "Durham, North Carolina",
+    "navigate": "Navigation",
+    "connect": "Verbinden",
+    "aboutSite": "Über Diese Website",
+    "siteDescription": "Erstellt mit Next.js, React und Tailwind CSS unter Verwendung von KI-gestützter Entwicklung (Claude CLI). Diese Website selbst demonstriert meinen Ansatz zur Nutzung von KI-Tools für praktische Ergebnisse.",
+    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. Alle Rechte vorbehalten."
+  },
+  "services": {
+    "title": "Dienstleistungen",
+    "description": "Ob Sie ein EdTech-Unternehmen sind, das neue Märkte navigiert, eine Schule, die KI-Tools implementiert, oder eine Organisation, die nachhaltige Programme aufbaut – ich bringe 15 Jahre praktische Erfahrung in der Gestaltung von Bildungsprogrammen mit, die in der realen Welt funktionieren.",
+    "service1": {
+      "title": "US-Marktstrategie für europäische EdTech",
+      "youMightNeed": [
+        "Sie sind ein spanisches/europäisches EdTech-Unternehmen, das eine US-Expansion erkundet",
+        "Sie möchten die Beschaffung und Entscheidungsfindung an US-Schulen verstehen",
+        "Sie müssen Ihr Produkt an amerikanische Lehrplanstandards anpassen",
+        "Sie suchen US-Partnerschaften oder Pilot-Möglichkeiten"
+      ],
+      "whatIBring": [
+        "Verwaltung von über 200 NYC-Schulen bei der Implementierung von Informatik-Bildung",
+        "Aufbau von Beziehungen zu Bezirken, staatlichen Bildungsministerien und nationalen Organisationen",
+        "Verständnis der kulturellen und strukturellen Unterschiede zwischen US- und spanischer Bildung",
+        "Muttersprachliche zweisprachige Kompetenz zur Überbrückung beider Märkte"
+      ],
+      "recentExample": "Leitung der nationalen SCRIPT-Initiative zur Unterstützung von über 50 US-Schulbezirken beim Aufbau von Informatik-Bildungsplänen – ich weiß, wie amerikanische Schulen Entscheidungen treffen.",
+      "deliverables": "Marktanalyse, Einstiegsstrategie, Partnerschafts-Roadmap, Pilot-Design",
+      "timeline": "4-8 Wochen"
+    },
+    "service2": {
+      "title": "KI in der Bildungsimplementierung",
+      "youMightNeed": [
+        "Ihre Schule oder Ihr Bezirk möchte KI-Tools verantwortungsvoll implementieren",
+        "Lehrer benötigen Schulungen zur KI-Kompetenz und Klassenintegration",
+        "Sie entwickeln KI-gestützte Bildungsprodukte und benötigen pädagogische Anleitung",
+        "Sie benötigen Frameworks für den ethischen Einsatz von KI in K-12-Umgebungen"
+      ],
+      "whatIBring": [
+        "Derzeit Leitung von SceneCraft, einer LLM-gestützten Lernplattform an der NC State",
+        "Entwurf von KI-Frameworks mit Lehrern im Zentrum und Prompt-Engineering für Pädagogen",
+        "Schulung von über 500 Lehrern in Bildungstechnologie und rechnerischem Denken",
+        "Tiefes Verständnis dafür, was KI-Tools für Lehrer tatsächlich nützlich macht"
+      ],
+      "recentExample": "Leitung der KI-Produktentwicklung für das EngageAI Institute, Gestaltung von Funktionen, die über 25.000 Schüler unterstützen und gleichzeitig Lehrer in Kontrolle halten.",
+      "deliverables": "Implementierungs-Roadmap, Lehrer-Workshops, Framework für verantwortungsvolle KI, Pilot-Programmdesign",
+      "timeline": "4-10 Wochen"
+    },
+    "service3": {
+      "title": "Informatik- und MINT-Programmdesign",
+      "youMightNeed": [
+        "Ihre Schule möchte Informatik/MINT-Programme starten oder verbessern",
+        "Sie benötigen Lehrplanrahmen, die auf internationale Standards abgestimmt sind",
+        "Lehrer benötigen berufliche Weiterentwicklung in Informatik-Pädagogik",
+        "Sie entwerfen bezirksweite Informatik-Implementierungsstrategien"
+      ],
+      "whatIBring": [
+        "Leitung von CS4All an über 200 Schulen in Manhattan (2016-2019)",
+        "Leitung des nationalen SCRIPT-Programms zur Unterstützung von Bezirken bei der Erstellung nachhaltiger Informatik-Pläne",
+        "Design des CS Coaching Toolkit, das von NYC, Louisiana und South Carolina verwendet wird",
+        "Experte für gerechtigkeitsorientierte Ansätze zur Gewährleistung des Zugangs aller Schüler zur Informatik-Bildung"
+      ],
+      "recentExample": "SCRIPT-Framework wird nun von über 50 US-Bezirken verwendet, um umfassende, gerechte Informatik-Bildungspläne zu erstellen.",
+      "deliverables": "Programm-Roadmap, Lehrplanrahmen, Lehrerausbildungspläne, Implementierungsleitfäden",
+      "timeline": "6-10 Wochen"
+    },
+    "youMightNeed": "Sie Könnten Dies Brauchen, Wenn",
+    "whatIBring": "Was Ich Mitbringe",
+    "recentExample": "Aktuelles Beispiel",
+    "deliverables": "Leistungen",
+    "timeline": "Zeitrahmen",
+    "cta": "Ein Gespräch Beginnen"
+  },
+  "work": {
+    "title": "Projekte",
+    "description": "Über 15 Jahre habe ich Initiativen von praktischen Klassenzimmerprogrammen bis hin zu nationalen Frameworks geleitet. Hier sind einige Highlights, die zeigen, wie ich denke und arbeite.",
+    "role": "Rolle",
+    "organization": "Organisation",
+    "timeline": "Zeitrahmen",
+    "challenge": "Herausforderung",
+    "whatIDid": "Was Ich Getan Habe",
+    "impact": "Auswirkung",
+    "skills": "Fähigkeiten",
+    "projects": [
+      {
+        "title": "GYST (Get Your Style Together)",
+        "role": "Gründer & Entwickler",
+        "organization": "Unabhängiges Projekt",
+        "timeline": "2024 - Heute",
+        "challenge": "Entwicklung einer mobilen App, die Nutzern hilft, ihre Garderobe zu organisieren, ihren persönlichen Stil zu entdecken und bewusste Kleidungsentscheidungen durch KI-gestützte Empfehlungen zu treffen.",
+        "whatIDid": [
+          "Entwurf und Entwicklung einer Full-Stack React Native Mobile-Anwendung",
+          "Integration von Claude AI für personalisierte Stilempfehlungen und Outfit-Vorschläge",
+          "Entwicklung einer ethischen Shopping-Integration mit Priorität auf Second-Hand- und nachhaltigen Marken",
+          "Implementierung von Mental-Health-Funktionen einschließlich täglicher Check-ins und Stimmungsverfolgung",
+          "Erstellung eines Gamification-Systems mit Erfolgen und Meilensteinen",
+          "Bereitstellung auf Firebase mit Echtzeit-Datensynchronisation"
+        ],
+        "impact": "Entwicklung eines umfassenden persönlichen Styling-Tools, das KI-Unterstützung mit Nachhaltigkeitswerten kombiniert und Nutzern hilft, Selbstvertrauen in ihre Stilentscheidungen zu entwickeln und gleichzeitig ethischen Konsum zu fördern.",
+        "skills": "React Native, Expo, Firebase, Claude AI Integration, UI/UX Design, Mobile App-Entwicklung, Ethisches Tech-Design"
+      },
+      {
+        "title": "SMARTIEgoals.org",
+        "role": "Gründer & Entwickler",
+        "organization": "Unabhängiges Projekt",
+        "timeline": "2024 - Heute",
+        "challenge": "Entwicklung einer Zielverfolgungsplattform, die Nutzern hilft, persönliche und berufliche Ziele durch strukturierte Meilensteine und Fortschrittsverfolgung zu setzen, zu überwachen und zu erreichen.",
+        "whatIDid": [
+          "Entwicklung einer Next.js-Webanwendung mit moderner React-Architektur",
+          "Design eines Zielhierarchiesystems mit Hauptzielen und Untermeilensteinen",
+          "Implementierung der Fortschrittsverfolgung mit visuellen Indikatoren und Abschlussprozentsätzen",
+          "Erstellung einer responsiven Benutzeroberfläche mit Tailwind CSS für optimale Nutzererfahrung",
+          "Integration von Authentifizierung und Datenpersistenz",
+          "Entwicklung eines Dashboards für umfassende Zielübersicht"
+        ],
+        "impact": "Schaffung eines zugänglichen Tools für Zielmanagement, das ehrgeizige Ziele in umsetzbare Schritte unterteilt und langfristige Erfolge erreichbarer macht.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Responsive Design, Full-Stack-Entwicklung, Datenmodellierung"
+      },
+      {
+        "title": "SceneCraft",
+        "role": "Research Scholar & Produktmanager",
+        "organization": "NC State University, Friday Institute for Educational Innovation",
+        "timeline": "März 2025 - Heute",
+        "challenge": "Aufbau einer KI-gesteuerten Storytelling-Plattform, die Schülern hilft, durch Narrative zu lernen, während Lehrkräfte die Kontrolle über Bildungsergebnisse behalten.",
+        "whatIDid": [
+          "Leitung als Produkt- und Projektmanager für Unity-basierte LLM-Plattform",
+          "Führung funktionsübergreifender Teams (Forscher, Ingenieure, Pädagogen)",
+          "Design von Prompt-Engineering-Frameworks und Prozessen mit Lehrkräften im Zentrum",
+          "Durchführung von Nutzerforschung mit K-12-Lehrkräften und Schülern",
+          "Verwaltung der Entwicklungs-Roadmap mit Ziel von 25.000 Schülernutzern bis 2026"
+        ],
+        "impact": "Aufbau eines Pädagogen-Netzwerks, das von Pilot-Schulen zu landesweiter Einführung skaliert. Entwicklung verantwortungsvoller KI-Frameworks, die jetzt die staatliche KI-Bildungs-Roadmap von North Carolina informieren.",
+        "skills": "KI-Produktentwicklung, LLM-Design, Nutzerforschung, Funktionsübergreifende Führung, Frameworks für verantwortungsvolle KI"
+      },
+      {
+        "title": "SCRIPT",
+        "role": "Programmleiter",
+        "organization": "CSforALL",
+        "timeline": "April 2023 - Dezember 2024",
+        "challenge": "Schaffung eines praktischen Frameworks und Unterstützungssystems, um US-Schulbezirken beim Aufbau umfassender, nachhaltiger K-12-Informatik-Bildungspläne zu helfen.",
+        "whatIDid": [
+          "Entwurf und Leitung der nationalen Implementierung der SCRIPT-Initiative",
+          "Erstellung von Workshop-Lehrplänen, Facilitator-Schulung und digitalen Ressourcen",
+          "Verwaltung von Partnerschaften mit Microsoft, Northrop Grumman, Hopper-Dean Foundation",
+          "Aufbau und Leitung eines Learning Management Systems für die Programmbereitstellung",
+          "Entwicklung datengesteuerter Evaluierungsinstrumente zur Verfolgung des Bezirksfortschritts"
+        ],
+        "impact": "Über 50 Schulbezirke in den USA nutzten das SCRIPT-Framework zur Erstellung gerechtigkeitsorientierter Informatik-Pläne. Schulung von über 30 Facilitators, die jetzt Bezirke landesweit unterstützen.",
+        "skills": "Framework-Design, Nationale Programmskalierung, Partnerschaftsmanagement, Facilitator-Schulung, Datensysteme"
+      },
+      {
+        "title": "NYC CS4All",
+        "role": "Manager für Informatik-Bildung",
+        "organization": "NYC Department of Education",
+        "timeline": "August 2016 - August 2019",
+        "challenge": "Informatik-Bildung an jede Schule in Manhattan bringen als Teil der NYC CS4All-Initiative – der größten Informatik-Bildungsgerechtigkeitsinitiative des Landes.",
+        "whatIDid": [
+          "Verwaltung der Informatik-Implementierung an über 200 Schulen in Manhattan",
+          "Schulung von über 500 Pädagogen in Informatik-Pädagogik und kulturell responsivem Unterricht",
+          "Aufbau von Partnerschaften mit der Industrie, gemeinnützigen Organisationen und Gemeinschaftsorganisationen",
+          "Sicherstellung der Lehrplanausrichtung an CSTA-Standards K-12",
+          "Leitung von Gerechtigkeitsinitiativen zur Erhöhung der Beteiligung von Mädchen und Schülern of Color"
+        ],
+        "impact": "Tausende von Schülern, die zuvor keinen Zugang zu Informatik-Bildung hatten, erhielten Wege zur Informatik. Schaffung eines nachhaltigen Modells für bezirksweite Informatik-Integration.",
+        "skills": "Großflächiges Programmmanagement, Berufliche Weiterentwicklung für Lehrkräfte, Gerechtigkeitsorientiertes Design, Stakeholder-Management"
+      },
+      {
+        "title": "CS Coaching Toolkit",
+        "role": "Direktor, K-12 Coaching-Initiativen",
+        "organization": "Cornell Tech",
+        "timeline": "November 2021 - April 2023",
+        "challenge": "Schaffung umsetzbarer Frameworks und Ressourcen zur Unterstützung des aufstrebenden Bereichs des K-12-Informatik-Instruktionscoachings.",
+        "whatIDid": [
+          "Design des CS Coaching Card Deck und umfassenden Toolkits",
+          "Erstellung von Coaching-Frameworks mit klaren Richtlinien für den Aufbau von Beziehungen und die Bereitstellung von Unterstützung",
+          "Entwicklung gerechtigkeitsorientierter Strategien für inklusiven Informatik-Unterricht",
+          "Durchführung von Workshops für NYC DOE, Louisiana State, South Carolina DOE",
+          "Beratung von Universitäten und Bezirken zur Informatik-Programmintegration"
+        ],
+        "impact": "Toolkit landesweit als Schlüsselressource für Informatik-Coaches übernommen. Beeinflussung der Coaching-Praxis in mehreren Bundesstaaten und Bezirken.",
+        "skills": "Ressourcenentwicklung, Framework-Design, Berufsbildungsdesign, Mehrstaatliche Partnerschaften"
+      }
+    ]
+  },
+  "about": {
+    "title": "Über Mich",
+    "p1": "Ich habe meine Karriere an der Schnittstelle von Bildung, Technologie und Gerechtigkeit verbracht.",
+    "p2": "Meine Mutter kommt aus Spanien und mein Vater aus Puerto Rico. Ich bin zweisprachig aufgewachsen und lebte zwischen zwei Welten. Diese duale Perspektive prägt alles, was ich tue – ich sehe Probleme aus mehreren Blickwinkeln und baue Brücken zwischen verschiedenen Gemeinschaften, Interessengruppen und Denkweisen.",
+    "p3": "Meine Reise in der Bildung begann im Liberty Science Center in New Jersey, wo ich mich in den Moment verliebte, in dem die Augen eines Schülers aufleuchten, wenn er etwas Neues versteht. Von dort aus bewegte ich mich durch Museumsbildung, außerschulische MINT-Programme und schließlich in K-12-Schulen.",
+    "p4": "Als New York City CS4All startete – die ehrgeizigste Computer Science Equity Initiative des Landes – half ich bei der Leitung der Arbeit in Manhattan. Über drei Jahre hinweg beobachtete ich, wie Lehrer, die noch nie zuvor programmiert hatten, zu selbstbewussten CS-Pädagogen wurden. Ich sah Schüler aus unterrepräsentierten Gemeinschaften Talente entdecken, von denen sie nicht wussten, dass sie sie hatten. Diese Erfahrung lehrte mich, dass Zugang nicht ausreicht – man braucht Systeme, Unterstützung und ein Engagement für Gerechtigkeit.",
+    "p5": "Seitdem habe ich auf nationaler Ebene gearbeitet, die SCRIPT-Initiative von CSforALL geleitet, Coaching-Frameworks bei Cornell Tech entworfen und diene jetzt als Research Scholar am Friday Institute der NC State, wo ich SceneCraft verwalte – ein KI-gestütztes Bildungstool. In dieser Rolle bringe ich Forschung, Design und Stakeholder-Zusammenarbeit in Einklang, um datengestützte Lernlösungen zu schaffen, die auf die sich entwickelnden Bedürfnisse von Schülern und Pädagogen reagieren. Jede Position hat meinen Glauben verstärkt, dass Innovation sich nicht allein durch Technologie verbreitet, sondern durch Beziehungen, Vertrauen und Übersetzung zwischen den Sprachen verschiedener Interessengruppen.",
+    "p6": "Derzeit in Durham, NC ansässig, arbeite ich an der Schnittstelle von KI und Bildung und plane einen zukünftigen Umzug nach Spanien. Während meiner Karriere habe ich Brücken gebaut: zwischen Forschern und Praktikern, zwischen politischen Entscheidungsträgern und Lehrern, zwischen US- und internationalen Bildungssystemen, zwischen Unternehmenspartnern und Schulbezirken. Meine Familie ist in Spanien, und ich möchte, dass mein tägliches Leben widerspiegelt, was ich gelernt habe: dass Lebensqualität wichtig ist, dass Gemeinschaft wichtig ist und dass man von überall aus sinnvolle Arbeit leisten kann.",
+    "p7": "Ich bringe einen strategischen, gemeinschaftsgetriebenen Ansatz in alle Aspekte meiner Arbeit ein, der auf einem Engagement für Bildungsgerechtigkeit, empathischer Führung und der verantwortungsvollen Integration aufstrebender Technologien basiert. Ob ich EdTech-Unternehmen bei der Navigation neuer Märkte und Partnerschaften helfe, Schulen bei der verantwortungsvollen Implementierung innovativer Tools unterstütze oder Koalitionen aufbaue, die verschiedene Stakeholder-Ökosysteme verbinden – ich konzentriere mich darauf, nachhaltigen, systemischen Wandel zu schaffen.",
+    "p8": "Ich glaube zutiefst, dass jeder Schüler Zugang zu kraftvollen Lernerfahrungen verdient, unabhängig von seinem Hintergrund. Dieser Glaube – zusammen mit einem Fokus auf datengestützte Entscheidungsfindung und kulturell responsive Praktiken – hat jedes Programm geleitet, das ich aufgebaut habe, und jede Partnerschaft, die ich eingegangen bin.",
+    "p9": "Wenn Sie an etwas arbeiten, das in der Bildung wichtig ist, würde ich gerne mit Ihnen sprechen.",
+    "basedIn": "Ansässig in",
+    "basedInValue": "Durham, North Carolina",
+    "workWith": "Arbeite mit",
+    "workWithValue": "Organisationen in Spanien, Europa und den USA",
+    "languages": "Sprachen",
+    "languagesValue": "Englisch (Muttersprache), Spanisch (Muttersprache)",
+    "education": "Bildung",
+    "educationValue": "B.A. Geisteswissenschaften, Kreatives Schreiben\nNew School University",
+    "contact": "Kontakt",
+    "linkedin": "LinkedIn",
+    "cta": "Lassen Sie Uns Sprechen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Ob Sie erkunden möchten, wie wir zusammenarbeiten könnten, oder sich einfach über Bildung und Technologie austauschen möchten, ich würde gerne von Ihnen hören.",
+    "consultingTitle": "Beratungsanfragen",
+    "consultingIntro": "Wenn Sie an einer Zusammenarbeit interessiert sind, so geht es los:",
+    "consultingStep1": "Schreiben Sie mir eine E-Mail",
+    "consultingStep1At": "an",
+    "consultingStep1With": "mit:",
+    "consultingBullet1": "Kurze Beschreibung Ihrer Herausforderung oder Chance",
+    "consultingBullet2": "Welche Art von Unterstützung Sie suchen",
+    "consultingBullet3": "Zeitrahmen (falls vorhanden)",
+    "consultingStep2": "Ich antworte",
+    "consultingStep2Detail": "innerhalb von 2 Werktagen",
+    "consultingStep3": "Wir vereinbaren",
+    "consultingStep3Detail": "ein 30-minütiges Erkundungsgespräch (kostenlos, unverbindlich)",
+    "consultingStep4": "Wenn es passt",
+    "consultingStep4Detail": "sende ich Ihnen ein maßgeschneidertes Angebot",
+    "sendEmail": "E-Mail Senden",
+    "employmentTitle": "Beschäftigungsmöglichkeiten",
+    "employmentIntro": "Ich bin offen für Gespräche über die richtige Gelegenheit, einschließlich:",
+    "employmentBullet1": "Vollzeitstellen (remote oder in Spanien/USA)",
+    "employmentBullet2": "Vertragspositionen für spezifische Projekte",
+    "employmentBullet3": "Remote-Arbeit mit EdTech-Unternehmen oder Bildungsorganisationen",
+    "employmentEmail": "E-Mail",
+    "employmentSubject": "mit \"Beschäftigungsmöglichkeit\" in der Betreffzeile.",
+    "generalTitle": "Allgemeine Anfragen",
+    "generalIntro": "Möchten Sie sich über KI in der Bildung austauschen, über spanische EdTech-Trends diskutieren oder einen virtuellen Kaffee trinken? Melden Sie sich – ich liebe es, Menschen zu treffen, die interessante Arbeit leisten.",
+    "email": "E-Mail:",
+    "linkedin": "LinkedIn:",
+    "locationTitle": "Standort & Verfügbarkeit",
+    "locationLabel": "Standort",
+    "locationValue": "Durham, North Carolina",
+    "availabilityLabel": "Verfügbarkeit",
+    "availabilityValue1": "Verfügbar für Remote-Arbeit in den USA und international",
+    "availabilityValue2": "Offen für Reisen für die richtigen Projekte"
+  },
+  "photography": {
+    "title": "Fotografie",
+    "description": "Eine visuelle Erkundung von Perspektiven, Momenten und der Welt um mich herum.",
+    "gettingStarted": "Erste Schritte",
+    "setupIntro": "Ihr Fotogalerie-Backend ist bereit! Um mit dem Hinzufügen von Galerien zu beginnen:",
+    "setupStep1": "Besuchen Sie",
+    "setupStep1Link": "/studio",
+    "setupStep1Suffix": "um auf Ihr Admin-Panel zuzugreifen",
+    "setupStep2": "Erstellen Sie eine neue Galerie und laden Sie Fotos hoch",
+    "setupStep3": "Ihre Galerien werden hier automatisch angezeigt",
+    "openStudio": "Studio Öffnen",
+    "photo": "Foto",
+    "photos": "Fotos",
+    "manageGalleries": "Galerien Verwalten →",
+    "noCoverImage": "Kein Titelbild"
+  }
+}
