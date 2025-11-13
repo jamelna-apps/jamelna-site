@@ -1,6 +1,6 @@
 import { createClient } from 'next-sanity'
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'placeholder'
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'not-configured'
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 
 export const client = createClient({
@@ -10,4 +10,4 @@ export const client = createClient({
   useCdn: false, // Set to true for production
 })
 
-export const isSanityConfigured = projectId !== 'placeholder' && projectId !== ''
+export const isSanityConfigured = projectId !== 'not-configured' && projectId !== ''
