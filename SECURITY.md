@@ -41,27 +41,12 @@ All pages include comprehensive security headers configured in `next.config.ts`:
    - Production should remain public
 
 2. **Review Environment Variables**:
-   - Ensure Sanity tokens are properly scoped (read-only for public)
+   - Review all environment variables regularly
    - Rotate tokens if compromised
 
 3. **Enable Security Headers** (already done in code):
    - Headers are configured in `next.config.ts`
    - Vercel automatically applies these
-
-### For Sanity CMS
-
-1. **API Token Security**:
-   - Use read-only tokens for public data
-   - Never commit tokens to git
-   - Store in Vercel environment variables
-
-2. **CORS Settings**:
-   - Configure allowed origins in Sanity dashboard
-   - Restrict to your domain (jamelna.com, jamelna-site.vercel.app)
-
-3. **Access Control**:
-   - Review team member permissions
-   - Use role-based access control
 
 ### Ongoing Security Practices
 

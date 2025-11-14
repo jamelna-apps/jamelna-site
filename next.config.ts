@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline'", // Tailwind requires unsafe-inline
               "img-src 'self' data: https:",
               "font-src 'self' data:",
-              "connect-src 'self' https://cdn.sanity.io https://*.sanity.io",
+              "connect-src 'self'",
               "frame-ancestors 'none'",
             ].join('; '),
           },
