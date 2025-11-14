@@ -2,10 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const locale = useLocale();
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
 
@@ -36,32 +37,32 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
+                <Link href={`/${locale}`} className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
                   {nav('home')}
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
+                <Link href={`/${locale}/services`} className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
                   {nav('services')}
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
+                <Link href={`/${locale}/work`} className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
                   {nav('work')}
                 </Link>
               </li>
               <li>
-                <Link href="/photography" className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
+                <Link href={`/${locale}/photography`} className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
                   {nav('photography')}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
+                <Link href={`/${locale}/about`} className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
                   {nav('about')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
+                <Link href={`/${locale}/contact`} className="text-gray-600 hover:text-slate-600 transition-colors text-sm">
                   {nav('contact')}
                 </Link>
               </li>

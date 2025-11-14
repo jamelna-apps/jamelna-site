@@ -24,12 +24,12 @@ const Navigation = () => {
   const currentLanguage = languages.find(lang => lang.code === locale) || languages[0];
 
   const navLinks = [
-    { href: '/', label: t('home') },
-    { href: '/services', label: t('services') },
-    { href: '/work', label: t('work') },
-    { href: '/photography', label: t('photography') },
-    { href: '/about', label: t('about') },
-    { href: '/contact', label: t('contact') },
+    { href: `/${locale}`, label: t('home') },
+    { href: `/${locale}/services`, label: t('services') },
+    { href: `/${locale}/work`, label: t('work') },
+    { href: `/${locale}/photography`, label: t('photography') },
+    { href: `/${locale}/about`, label: t('about') },
+    { href: `/${locale}/contact`, label: t('contact') },
   ];
 
   const changeLanguage = (newLocale: string) => {
@@ -78,7 +78,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" tabIndex={0} className="flex items-center gap-2">
+          <Link href={`/${locale}`} tabIndex={0} className="flex items-center gap-2">
             <span className="text-2xl font-bold text-gray-900">
               JAMELNA
             </span>
