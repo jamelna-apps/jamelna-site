@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f1f5f9"/>
+
+  <!-- Border -->
+  <rect x="2" y="2" width="1916" height="1076" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+
+  <!-- Icon - Image placeholder icon -->
+  <g transform="translate(960, 440)">
+    <rect x="-60" y="-40" width="120" height="80" fill="none" stroke="#94a3b8" stroke-width="4" rx="8"/>
+    <circle cx="-25" cy="-10" r="12" fill="#94a3b8"/>
+    <path d="M -50 20 L -20 -10 L 10 10 L 50 -20 L 50 20 Z" fill="#94a3b8"/>
+  </g>
+
+  <!-- Text -->
+  <text x="960" y="620" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="600" fill="#64748b" text-anchor="middle">
+    Wardrobe View
+  </text>
+  <text x="960" y="680" font-family="system-ui, -apple-system, sans-serif" font-size="32" fill="#94a3b8" text-anchor="middle">
+    Coming Soon
+  </text>
+</svg>

@@ -167,7 +167,12 @@
           "部署到Firebase并实现实时数据同步"
         ],
         "impact": "构建了一个综合性的个人造型工具，将人工智能辅助与可持续发展价值观相结合，帮助用户在风格选择中建立信心，同时促进道德消费。",
-        "skills": "React Native、Expo、Firebase、Claude AI集成、UI/UX设计、移动应用开发、道德技术设计"
+        "skills": "React Native、Expo、Firebase、Claude AI集成、UI/UX设计、移动应用开发、道德技术设计",
+        "images": [
+          "/images/screenshots/gyst/home.svg",
+          "/images/screenshots/gyst/wardrobe.svg",
+          "/images/screenshots/gyst/style-quiz.svg"
+        ]
       },
       {
         "title": "SMARTIEgoals.org",
@@ -184,7 +189,38 @@
           "开发用于全面目标概览的仪表板"
         ],
         "impact": "创建了一个易于访问的目标管理工具，将雄心勃勃的目标分解为可操作的步骤，使长期成就更容易实现。",
-        "skills": "Next.js、React、TypeScript、Tailwind CSS、响应式设计、全栈开发、数据建模"
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、响应式设计、全栈开发、数据建模",
+        "images": [
+          "/images/screenshots/smartiegoals/home.png",
+          "/images/screenshots/smartiegoals/dashboard.png",
+          "/images/screenshots/smartiegoals/goal-detail.png"
+        ],
+        "website": "https://smartiegoals.org"
+      },
+      {
+        "title": "Spread Your Ashes",
+        "role": "创作者兼开发者",
+        "organization": "个人艺术项目",
+        "timeline": "2024年至今",
+        "challenge": "创建一个沉思性数字艺术项目，通过互动网络体验探索死亡、遗产和我们与地方的联系主题，理论化一项在全球有意义地点撒骨灰的服务。",
+        "whatIDid": [
+          "使用Three.js设计和构建沉浸式Next.js网络应用程序，实现3D地球可视化",
+          "创建包含18个精选全球地点的交互式地图，从珠穆朗玛峰到近地轨道",
+          "实施光标响应粒子效果和宇宙主题UI设计",
+          "开发包含文化、历史和精神背景的全面地点数据库",
+          "构建旅程跟踪系统，允许用户记录已访问和计划访问的地点",
+          "整合详细价格明细，包括全球法律要求",
+          "在spreadyourashes.com部署到生产环境"
+        ],
+        "impact": "创建了一个独特的数字艺术体验，邀请人们反思死亡、遗产和塑造我们生活的地方。该项目将对死亡的沉思与对使生命有意义的地点的冥想联系起来。",
+        "skills": "Next.js、React、TypeScript、Three.js、Leaflet地图、Framer Motion动画、宇宙UI/UX设计、数据建模、概念艺术、生产部署",
+        "images": [
+          "/images/screenshots/spread-your-ashes/home.png",
+          "/images/screenshots/spread-your-ashes/explore.png",
+          "/images/screenshots/spread-your-ashes/gallery.png",
+          "/images/screenshots/spread-your-ashes/about.png"
+        ],
+        "website": "https://spreadyourashes.com"
       },
       {
         "title": "SceneCraft",

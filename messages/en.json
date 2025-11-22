@@ -167,7 +167,12 @@
           "Deployed to Firebase with real-time data synchronization"
         ],
         "impact": "Built a comprehensive personal styling tool that combines AI assistance with sustainability values, helping users develop confidence in their style choices while promoting ethical consumption.",
-        "skills": "React Native, Expo, Firebase, Claude AI integration, UI/UX design, mobile app development, ethical tech design"
+        "skills": "React Native, Expo, Firebase, Claude AI integration, UI/UX design, mobile app development, ethical tech design",
+        "images": [
+          "/images/screenshots/gyst/home.svg",
+          "/images/screenshots/gyst/wardrobe.svg",
+          "/images/screenshots/gyst/style-quiz.svg"
+        ]
       },
       {
         "title": "SMARTIEgoals.org",
@@ -184,7 +189,38 @@
           "Developed dashboard for comprehensive goal overview"
         ],
         "impact": "Created an accessible tool for goal management that breaks down ambitious objectives into actionable steps, making long-term achievement more attainable.",
-        "skills": "Next.js, React, TypeScript, Tailwind CSS, responsive design, full-stack development, data modeling"
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, responsive design, full-stack development, data modeling",
+        "images": [
+          "/images/screenshots/smartiegoals/home.png",
+          "/images/screenshots/smartiegoals/dashboard.png",
+          "/images/screenshots/smartiegoals/goal-detail.png"
+        ],
+        "website": "https://smartiegoals.org"
+      },
+      {
+        "title": "Spread Your Ashes",
+        "role": "Creator & Developer",
+        "organization": "Personal Art Project",
+        "timeline": "2024 - Present",
+        "challenge": "Create a contemplative digital art project exploring themes of mortality, legacy, and our connection to place through an interactive web experience that theorizes a service for spreading ashes at meaningful global locations.",
+        "whatIDid": [
+          "Designed and built immersive Next.js web application with 3D Earth visualization using Three.js",
+          "Created interactive map with 18 curated global locations from Mount Everest to Low Earth Orbit",
+          "Implemented cursor-responsive particle effects and cosmic-themed UI design",
+          "Developed comprehensive location database with cultural, historical, and spiritual context",
+          "Built journey tracking system allowing users to document places visited and planned",
+          "Integrated detailed pricing breakdowns including legal requirements worldwide",
+          "Deployed to production at spreadyourashes.com"
+        ],
+        "impact": "Created a unique digital art experience that invites reflection on mortality, legacy, and the places that shape our lives. The project bridges contemplation of death with meditation on what locations make life meaningful.",
+        "skills": "Next.js, React, TypeScript, Three.js, Leaflet mapping, Framer Motion animations, cosmic UI/UX design, data modeling, conceptual art, production deployment",
+        "images": [
+          "/images/screenshots/spread-your-ashes/home.png",
+          "/images/screenshots/spread-your-ashes/explore.png",
+          "/images/screenshots/spread-your-ashes/gallery.png",
+          "/images/screenshots/spread-your-ashes/about.png"
+        ],
+        "website": "https://spreadyourashes.com"
       },
       {
         "title": "SceneCraft",
