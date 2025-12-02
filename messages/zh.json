@@ -169,9 +169,9 @@
         "impact": "构建了一个综合性的个人造型工具，将人工智能辅助与可持续发展价值观相结合，帮助用户在风格选择中建立信心，同时促进道德消费。",
         "skills": "React Native、Expo、Firebase、Claude AI集成、UI/UX设计、移动应用开发、道德技术设计",
         "images": [
-          "/images/screenshots/gyst/home.svg",
-          "/images/screenshots/gyst/wardrobe.svg",
-          "/images/screenshots/gyst/style-quiz.svg"
+          "/images/screenshots/gyst/home.png",
+          "/images/screenshots/gyst/outfits.png",
+          "/images/screenshots/gyst/insights.png"
         ]
       },
       {

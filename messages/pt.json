@@ -169,9 +169,9 @@
         "impact": "Construí uma ferramenta abrangente de styling pessoal que combina assistência AI com valores de sustentabilidade, ajudando os utilizadores a desenvolver confiança nas suas escolhas de estilo enquanto promove o consumo ético.",
         "skills": "React Native, Expo, Firebase, integração Claude AI, design UI/UX, desenvolvimento de aplicações móveis, design de tecnologia ética",
         "images": [
-          "/images/screenshots/gyst/home.svg",
-          "/images/screenshots/gyst/wardrobe.svg",
-          "/images/screenshots/gyst/style-quiz.svg"
+          "/images/screenshots/gyst/home.png",
+          "/images/screenshots/gyst/outfits.png",
+          "/images/screenshots/gyst/insights.png"
         ]
       },
       {
