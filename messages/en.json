@@ -157,17 +157,18 @@
         "role": "Founder & Developer",
         "organization": "Independent Project",
         "timeline": "2024 - Present",
-        "challenge": "Create a mobile app that helps users organize their wardrobe, discover their personal style, and make intentional clothing choices through AI-powered recommendations.",
+        "challenge": "Build a mobile app that reimagines how people manage their wardrobe while actively supporting local economies, environmental sustainability, and secondhand markets - proving that technology can drive meaningful change in consumer behavior.",
         "whatIDid": [
-          "Designed and developed full-stack React Native mobile application",
-          "Integrated Claude AI for personalized style recommendations and outfit suggestions",
-          "Built ethical shopping integration prioritizing secondhand and sustainable brands",
-          "Implemented mental health features including daily check-ins and mood tracking",
-          "Created gamification system with achievements and milestones",
-          "Deployed to Firebase with real-time data synchronization"
+          "Designed and developed full-stack React Native mobile application with AI-powered style recommendations",
+          "Built SwapMeet marketplace enabling peer-to-peer clothing trades and sales within local communities",
+          "Created ThriftShop integration connecting users to local secondhand stores with location-based discovery",
+          "Implemented local-only transactions (no shipping) to reduce carbon footprint and support neighborhood economies",
+          "Developed proximity-based filtering to prioritize nearby sellers and shops",
+          "Integrated Claude AI for personalized outfit suggestions that maximize use of existing wardrobe items",
+          "Built gamification system rewarding sustainable choices and secondhand purchases"
         ],
-        "impact": "Built a comprehensive personal styling tool that combines AI assistance with sustainability values, helping users develop confidence in their style choices while promoting ethical consumption.",
-        "skills": "React Native, Expo, Firebase, Claude AI integration, UI/UX design, mobile app development, ethical tech design",
+        "impact": "Created a platform grounded in the philosophy that sustainable fashion should strengthen local communities, not just reduce waste. By designing technology that makes secondhand shopping convenient and social, GYST demonstrates how apps can shift consumer behavior toward environmentally conscious choices while keeping money circulating in local economies.",
+        "skills": "React Native, Expo, Firebase, Claude AI integration, geolocation services, peer-to-peer marketplace design, sustainable tech architecture, UI/UX design",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",

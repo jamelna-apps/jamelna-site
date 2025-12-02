@@ -157,17 +157,18 @@
         "role": "Gründer & Entwickler",
         "organization": "Unabhängiges Projekt",
         "timeline": "2024 - Heute",
-        "challenge": "Entwicklung einer mobilen App, die Nutzern hilft, ihre Garderobe zu organisieren, ihren persönlichen Stil zu entdecken und bewusste Kleidungsentscheidungen durch KI-gestützte Empfehlungen zu treffen.",
+        "challenge": "Entwicklung einer mobilen App, die neu definiert, wie Menschen ihre Garderobe verwalten, während sie aktiv lokale Wirtschaften, ökologische Nachhaltigkeit und Second-Hand-Märkte unterstützen - und beweist, dass Technologie bedeutsame Veränderungen im Konsumverhalten bewirken kann.",
         "whatIDid": [
-          "Entwurf und Entwicklung einer Full-Stack React Native Mobile-Anwendung",
-          "Integration von Claude AI für personalisierte Stilempfehlungen und Outfit-Vorschläge",
-          "Entwicklung einer ethischen Shopping-Integration mit Priorität auf Second-Hand- und nachhaltigen Marken",
-          "Implementierung von Mental-Health-Funktionen einschließlich täglicher Check-ins und Stimmungsverfolgung",
-          "Erstellung eines Gamification-Systems mit Erfolgen und Meilensteinen",
-          "Bereitstellung auf Firebase mit Echtzeit-Datensynchronisation"
+          "Entwurf und Entwicklung einer Full-Stack React Native Mobile-Anwendung mit KI-gestützten Stilempfehlungen",
+          "Aufbau des SwapMeet-Marktplatzes für Peer-to-Peer Kleidungstausch und -verkauf innerhalb lokaler Gemeinschaften",
+          "Erstellung der ThriftShop-Integration zur Verbindung von Nutzern mit lokalen Second-Hand-Läden durch standortbasierte Entdeckung",
+          "Implementierung von nur-lokalen Transaktionen (kein Versand) zur Reduzierung des CO2-Fußabdrucks und Unterstützung der Nachbarschaftswirtschaft",
+          "Entwicklung von nähebasierter Filterung zur Priorisierung nahegelegener Verkäufer und Geschäfte",
+          "Integration von Claude AI für personalisierte Outfit-Vorschläge, die die Nutzung vorhandener Kleidungsstücke maximieren",
+          "Aufbau eines Gamification-Systems, das nachhaltige Entscheidungen und Second-Hand-Käufe belohnt"
         ],
-        "impact": "Entwicklung eines umfassenden persönlichen Styling-Tools, das KI-Unterstützung mit Nachhaltigkeitswerten kombiniert und Nutzern hilft, Selbstvertrauen in ihre Stilentscheidungen zu entwickeln und gleichzeitig ethischen Konsum zu fördern.",
-        "skills": "React Native, Expo, Firebase, Claude AI Integration, UI/UX Design, Mobile App-Entwicklung, Ethisches Tech-Design",
+        "impact": "Erstellung einer Plattform, die auf der Philosophie basiert, dass nachhaltige Mode lokale Gemeinschaften stärken sollte, nicht nur Abfall reduzieren. Durch die Gestaltung von Technologie, die Second-Hand-Shopping bequem und sozial macht, zeigt GYST, wie Apps das Konsumverhalten in Richtung umweltbewusster Entscheidungen lenken können, während das Geld in lokalen Wirtschaften zirkuliert.",
+        "skills": "React Native, Expo, Firebase, Claude AI Integration, Geolokalisierungsdienste, Peer-to-Peer Marktplatz-Design, nachhaltige Tech-Architektur, UI/UX Design",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",

@@ -157,17 +157,18 @@
         "role": "Fundador e Programador",
         "organization": "Projeto Independente",
         "timeline": "2024 - Presente",
-        "challenge": "Criar uma aplicação móvel que ajude os utilizadores a organizar o seu guarda-roupa, descobrir o seu estilo pessoal e fazer escolhas de vestuário intencionais através de recomendações baseadas em AI.",
+        "challenge": "Criar uma aplicação móvel que reimagina como as pessoas gerem o seu guarda-roupa enquanto apoiam ativamente as economias locais, a sustentabilidade ambiental e os mercados de segunda mão - provando que a tecnologia pode impulsionar mudanças significativas no comportamento do consumidor.",
         "whatIDid": [
-          "Desenhei e desenvolvi aplicação móvel full-stack em React Native",
-          "Integrei Claude AI para recomendações de estilo personalizadas e sugestões de conjuntos",
-          "Construí integração de compras éticas priorizando marcas em segunda mão e sustentáveis",
-          "Implementei funcionalidades de saúde mental incluindo check-ins diários e acompanhamento de humor",
-          "Criei sistema de gamificação com conquistas e marcos",
-          "Implementei em Firebase com sincronização de dados em tempo real"
+          "Desenhei e desenvolvi aplicação móvel full-stack em React Native com recomendações de estilo baseadas em AI",
+          "Construí o mercado SwapMeet permitindo trocas e vendas de roupa entre utilizadores dentro de comunidades locais",
+          "Criei integração ThriftShop conectando utilizadores a lojas de segunda mão locais com descoberta baseada em localização",
+          "Implementei transações apenas locais (sem envios) para reduzir a pegada de carbono e apoiar as economias de bairro",
+          "Desenvolvi filtragem baseada em proximidade para priorizar vendedores e lojas próximas",
+          "Integrei Claude AI para sugestões de conjuntos personalizadas que maximizam o uso de peças existentes no guarda-roupa",
+          "Construí sistema de gamificação que recompensa escolhas sustentáveis e compras em segunda mão"
         ],
-        "impact": "Construí uma ferramenta abrangente de styling pessoal que combina assistência AI com valores de sustentabilidade, ajudando os utilizadores a desenvolver confiança nas suas escolhas de estilo enquanto promove o consumo ético.",
-        "skills": "React Native, Expo, Firebase, integração Claude AI, design UI/UX, desenvolvimento de aplicações móveis, design de tecnologia ética",
+        "impact": "Criei uma plataforma fundamentada na filosofia de que a moda sustentável deve fortalecer as comunidades locais, não apenas reduzir desperdício. Ao desenhar tecnologia que torna as compras em segunda mão convenientes e sociais, GYST demonstra como as apps podem mudar o comportamento do consumidor para escolhas ambientalmente conscientes enquanto mantêm o dinheiro a circular nas economias locais.",
+        "skills": "React Native, Expo, Firebase, integração Claude AI, serviços de geolocalização, design de mercado peer-to-peer, arquitetura de tecnologia sustentável, design UI/UX",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
