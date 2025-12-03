@@ -82,6 +82,17 @@ const Navigation = () => {
             <span className="text-2xl font-bold text-gray-900">
               JAMELNA
             </span>
+            <span className="text-gray-300 hidden md:inline">|</span>
+            <span className="hidden md:inline text-xs">
+              <span className="font-bold text-gray-900">J</span>
+              <span className="text-slate-500">oe </span>
+              <span className="font-bold text-gray-900">A</span>
+              <span className="text-slate-500">lexander </span>
+              <span className="font-bold text-gray-900">MEL</span>
+              <span className="text-slate-500">éndez-</span>
+              <span className="font-bold text-gray-900">NA</span>
+              <span className="text-slate-500">harro</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

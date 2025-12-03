@@ -26,22 +26,28 @@ const Hero = () => {
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* White Content Block */}
-        <div className="bg-white p-8 md:p-12 lg:p-16 rounded-lg shadow-lg">
-          {/* Main Heading */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-8">
-            JAMELNA
-          </h1>
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          {/* All content with consistent padding */}
+          <div className="p-8 md:p-12 lg:p-16">
+            {/* Name and Tagline Header */}
+            <div className="mb-6 md:mb-8">
+              <p className="text-3xl md:text-4xl lg:text-5xl mb-2">
+                <span className="font-bold text-gray-900">J</span>
+                <span className="text-slate-600">oe </span>
+                <span className="font-bold text-gray-900">A</span>
+                <span className="text-slate-600">lexander </span>
+                <span className="font-bold text-gray-900">MEL</span>
+                <span className="text-slate-600">éndez-</span>
+                <span className="font-bold text-gray-900">NA</span>
+                <span className="text-slate-600">harro</span>
+              </p>
+              <p className="text-xl md:text-2xl lg:text-3xl text-gray-700">
+                Bridging Communities and Ideas in Education
+              </p>
+            </div>
 
-          {/* Name */}
-          <p className="text-2xl md:text-3xl text-slate-600 mb-8 font-semibold">
-            {t('name')}
-          </p>
-
-          {/* Tagline */}
-          <p className="text-3xl md:text-4xl text-gray-900 mb-8 font-light max-w-3xl">
-            {t('tagline')}
-          </p>
-
+            {/* Divider */}
+            <div className="border-b border-gray-900 -mx-8 md:-mx-12 lg:-mx-16 mb-6 md:mb-8"></div>
           {/* Description */}
           <p className="text-xl text-gray-700 mb-12 max-w-3xl leading-relaxed">
             {t('description')}
@@ -62,6 +68,7 @@ const Hero = () => {
             <div>
               <span className="font-semibold text-gray-900">15+</span> {t('yearsExperience')}
             </div>
+          </div>
           </div>
         </div>
       </div>

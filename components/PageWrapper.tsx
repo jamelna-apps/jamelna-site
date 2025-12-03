@@ -26,7 +26,7 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* White Content Block */}
-        <div className="bg-white p-8 md:p-12 lg:p-16 rounded-lg shadow-lg">
+        <div className="bg-white p-8 md:p-12 lg:p-16 rounded-lg shadow-lg overflow-hidden">
           {children}
         </div>
       </div>
