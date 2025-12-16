@@ -4,26 +4,25 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
-// The JAMELNA sequence for the easter egg
+// The JAMELNA sequence for the easter egg (click order)
 const JAMELNA_SEQUENCE = ['J', 'A', 'M', 'E', 'L', 'N', 'A'];
 
 // Name parts with their JAMELNA letter indices
-// J-oe A-lexander M-el-É-ndez-N-ah-A-rro
+// Joe Alexander Meléndez-NAharro
+// J=0, A=1, M=2, E(é)=3, L=4, N=5, A=6
 const NAME_PARTS = [
   { text: 'J', isJamelna: true, jamelnaIndex: 0 },
-  { text: 'oe', isJamelna: false },
-  { text: ' ', isJamelna: false },
+  { text: 'oe ', isJamelna: false },
   { text: 'A', isJamelna: true, jamelnaIndex: 1 },
-  { text: 'lexander', isJamelna: false },
-  { text: ' ', isJamelna: false },
+  { text: 'lexander ', isJamelna: false },
   { text: 'M', isJamelna: true, jamelnaIndex: 2 },
-  { text: 'elénd', isJamelna: false },
-  { text: 'E', isJamelna: true, jamelnaIndex: 3, isAccented: true }, // The É in Meléndez
-  { text: 'z-', isJamelna: false },
-  { text: 'N', isJamelna: true, jamelnaIndex: 4 },
-  { text: 'ah', isJamelna: false },
-  { text: 'A', isJamelna: true, jamelnaIndex: 5 },
-  { text: 'rro', isJamelna: false },
+  { text: 'e', isJamelna: false },
+  { text: 'l', isJamelna: true, jamelnaIndex: 4 }, // L in Meléndez
+  { text: 'é', isJamelna: true, jamelnaIndex: 3 }, // E (accented) in Meléndez
+  { text: 'ndez-', isJamelna: false },
+  { text: 'N', isJamelna: true, jamelnaIndex: 5 },
+  { text: 'A', isJamelna: true, jamelnaIndex: 6 },
+  { text: 'harro', isJamelna: false },
 ];
 
 const Hero = () => {
@@ -157,7 +156,7 @@ const Hero = () => {
                     }}
                     aria-label={`Letter ${part.text}`}
                   >
-                    {part.isAccented ? 'é' : part.text}
+                    {part.text}
                   </span>
                 );
               }
