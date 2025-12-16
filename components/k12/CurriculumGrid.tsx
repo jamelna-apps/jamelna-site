@@ -65,20 +65,20 @@ const MultiSelectDropdown: React.FC<MultiSelectDropdownProps> = ({
 
   return (
     <div className="flex-1 relative" ref={dropdownRef}>
-      <label htmlFor={id} className="block text-xs font-medium text-gray-500 mb-1">
+      <label htmlFor={id} className="block text-xs font-medium text-text-muted mb-1">
         {label}
       </label>
       <button
         id={id}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 focus:ring-2 focus:ring-slate-500 focus:border-transparent cursor-pointer hover:border-gray-400 transition-colors text-left flex items-center justify-between"
+        className="w-full px-4 py-2.5 bg-deep-card border border-deep-border rounded-lg text-sm font-medium text-text-secondary focus:ring-2 focus:ring-warm/50 focus:border-transparent cursor-pointer hover:border-warm/30 transition-colors text-left flex items-center justify-between"
       >
-        <span className={selected.size === 0 ? 'text-gray-500' : 'text-gray-700'}>
+        <span className={selected.size === 0 ? 'text-text-muted' : 'text-text-primary'}>
           {displayText}
         </span>
         <svg
-          className={`w-4 h-4 text-gray-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 h-4 text-text-muted transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -88,19 +88,19 @@ const MultiSelectDropdown: React.FC<MultiSelectDropdownProps> = ({
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-auto">
+        <div className="absolute z-10 mt-1 w-full bg-deep-card border border-deep-border rounded-lg shadow-lg max-h-60 overflow-auto">
           {options.map((option) => (
             <label
               key={option.value}
-              className="flex items-center px-4 py-2.5 hover:bg-gray-50 cursor-pointer"
+              className="flex items-center px-4 py-2.5 hover:bg-deep-alt cursor-pointer"
             >
               <input
                 type="checkbox"
                 checked={selected.has(option.value)}
                 onChange={() => toggleOption(option.value)}
-                className={`w-4 h-4 rounded border-gray-300 ${chipColor === 'slate' ? 'text-slate-600 focus:ring-slate-500' : 'text-blue-600 focus:ring-blue-500'}`}
+                className={`w-4 h-4 rounded border-deep-border bg-deep ${chipColor === 'slate' ? 'text-primary focus:ring-primary/50' : 'text-warm focus:ring-warm/50'}`}
               />
-              <span className="ml-3 text-sm text-gray-700">{option.label}</span>
+              <span className="ml-3 text-sm text-text-secondary">{option.label}</span>
             </label>
           ))}
         </div>
@@ -149,8 +149,8 @@ const CurriculumGrid: React.FC<CurriculumGridProps> = ({
   return (
     <div>
       {/* Filters */}
-      <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
-        <p className="text-sm font-medium text-gray-700 mb-4">{filterLabel}</p>
+      <div className="mb-8 p-4 bg-deep-card rounded-lg border border-deep-border">
+        <p className="text-sm font-medium text-text-secondary mb-4">{filterLabel}</p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           {/* Grade Level Multi-Select */}
@@ -179,13 +179,13 @@ const CurriculumGrid: React.FC<CurriculumGridProps> = ({
         {/* Active filters display */}
         {(selectedGrades.size > 0 || selectedTopics.size > 0) && (
           <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="text-xs text-gray-500">Active filters:</span>
+            <span className="text-xs text-text-muted">Active filters:</span>
             {Array.from(selectedGrades).map((grade) => (
-              <span key={grade} className="inline-flex items-center gap-1 px-2 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">
+              <span key={grade} className="inline-flex items-center gap-1 px-2 py-1 bg-primary/20 text-primary-light rounded-full text-xs">
                 {gradeLevelLabels[grade]}
                 <button
                   onClick={() => removeGrade(grade)}
-                  className="ml-1 hover:text-slate-900"
+                  className="ml-1 hover:text-white"
                   aria-label={`Remove ${gradeLevelLabels[grade]} filter`}
                 >
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,11 +195,11 @@ const CurriculumGrid: React.FC<CurriculumGridProps> = ({
               </span>
             ))}
             {Array.from(selectedTopics).map((topic) => (
-              <span key={topic} className="inline-flex items-center gap-1 px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
+              <span key={topic} className="inline-flex items-center gap-1 px-2 py-1 bg-warm/20 text-warm-light rounded-full text-xs">
                 {topicLabels[topic]}
                 <button
                   onClick={() => removeTopic(topic)}
-                  className="ml-1 hover:text-blue-900"
+                  className="ml-1 hover:text-white"
                   aria-label={`Remove ${topicLabels[topic]} filter`}
                 >
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,7 +213,7 @@ const CurriculumGrid: React.FC<CurriculumGridProps> = ({
                 setSelectedGrades(new Set());
                 setSelectedTopics(new Set());
               }}
-              className="text-xs text-gray-500 hover:text-gray-700 underline"
+              className="text-xs text-text-muted hover:text-text-primary underline"
             >
               Clear all
             </button>
@@ -222,7 +222,7 @@ const CurriculumGrid: React.FC<CurriculumGridProps> = ({
       </div>
 
       {/* Results Count */}
-      <p className="text-sm text-gray-600 mb-6">
+      <p className="text-sm text-text-secondary mb-6">
         {filteredCurricula.length} {filteredCurricula.length === 1 ? 'curriculum' : 'curricula'} found
       </p>
 
@@ -238,7 +238,7 @@ const CurriculumGrid: React.FC<CurriculumGridProps> = ({
       </div>
 
       {filteredCurricula.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-text-muted">
           No curricula match your current filters. Try adjusting your selection.
         </div>
       )}

@@ -124,6 +124,7 @@ const Navigation = () => {
 
       {/* Main Navigation */}
       <nav
+        aria-label="Main navigation"
         className={`
           fixed top-0 left-0 right-0 z-50
           transition-all duration-500

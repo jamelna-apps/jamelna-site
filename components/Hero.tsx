@@ -7,21 +7,37 @@ import { useLocale, useTranslations } from 'next-intl';
 // The JAMELNA sequence for the easter egg (click order)
 const JAMELNA_SEQUENCE = ['J', 'A', 'M', 'E', 'L', 'N', 'A'];
 
-// Name parts with their JAMELNA letter indices
+// Name word groups - each group stays together on the same line
 // Joe Alexander MELéndez-NAharro
 // J=0, A=1, M=2, E=3, L=4, N=5, A=6
-const NAME_PARTS = [
-  { text: 'J', isJamelna: true, jamelnaIndex: 0 },
-  { text: 'oe ', isJamelna: false },
-  { text: 'A', isJamelna: true, jamelnaIndex: 1 },
-  { text: 'lexander ', isJamelna: false },
-  { text: 'M', isJamelna: true, jamelnaIndex: 2 },
-  { text: 'E', isJamelna: true, jamelnaIndex: 3 }, // JAMELNA E
-  { text: 'L', isJamelna: true, jamelnaIndex: 4 }, // JAMELNA L
-  { text: 'éndez-', isJamelna: false },
-  { text: 'N', isJamelna: true, jamelnaIndex: 5 },
-  { text: 'A', isJamelna: true, jamelnaIndex: 6 },
-  { text: 'harro', isJamelna: false },
+type NamePart = { text: string; isJamelna: boolean; jamelnaIndex?: number };
+type WordGroup = { parts: NamePart[]; noWrap?: boolean };
+
+const NAME_WORD_GROUPS: WordGroup[] = [
+  {
+    parts: [
+      { text: 'J', isJamelna: true, jamelnaIndex: 0 },
+      { text: 'oe', isJamelna: false },
+    ]
+  },
+  {
+    parts: [
+      { text: 'A', isJamelna: true, jamelnaIndex: 1 },
+      { text: 'lexander', isJamelna: false },
+    ]
+  },
+  {
+    parts: [
+      { text: 'M', isJamelna: true, jamelnaIndex: 2 },
+      { text: 'E', isJamelna: true, jamelnaIndex: 3 },
+      { text: 'L', isJamelna: true, jamelnaIndex: 4 },
+      { text: 'éndez-', isJamelna: false },
+      { text: 'N', isJamelna: true, jamelnaIndex: 5 },
+      { text: 'A', isJamelna: true, jamelnaIndex: 6 },
+      { text: 'harro', isJamelna: false },
+    ],
+    noWrap: true  // Keep "MELéndez-NAharro" together
+  },
 ];
 
 const Hero = () => {
@@ -33,6 +49,18 @@ const Hero = () => {
   const [showPortal, setShowPortal] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
   const [letterFeedback, setLetterFeedback] = useState<number | null>(null);
+  const [isNameHovered, setIsNameHovered] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  // Check for reduced motion preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
 
   // Start animation after mount
   useEffect(() => {
@@ -115,60 +143,104 @@ const Hero = () => {
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
         {/* Name display */}
         <h1 className="text-center mb-8">
+          {/* Screen reader accessible full name */}
+          <span className="sr-only">Joe Alexander Meléndez-Naharro</span>
+
+          {/* Visual animated name - hidden from screen readers */}
           <span
+            aria-hidden="true"
             className={`
               block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
-              font-display font-bold tracking-tight
-              transition-opacity duration-1000
-              ${animationStarted ? 'opacity-100' : 'opacity-0'}
+              font-display font-bold tracking-tight cursor-pointer
+              ${prefersReducedMotion ? '' : 'transition-opacity duration-1000'}
+              ${animationStarted || prefersReducedMotion ? 'opacity-100' : 'opacity-0'}
             `}
+            onMouseEnter={() => setIsNameHovered(true)}
+            onMouseLeave={() => setIsNameHovered(false)}
+            onFocus={() => setIsNameHovered(true)}
+            onBlur={() => setIsNameHovered(false)}
           >
-            {NAME_PARTS.map((part, index) => {
-              if (part.isJamelna) {
-                const isClicked = clickedSequence.includes(part.jamelnaIndex!);
-                const isNextInSequence = part.jamelnaIndex === clickedSequence.length;
-                const showFeedback = letterFeedback === part.jamelnaIndex;
+            {NAME_WORD_GROUPS.map((group, groupIndex) => (
+              <span
+                key={groupIndex}
+                className={group.noWrap ? 'whitespace-nowrap' : undefined}
+              >
+                {group.parts.map((part, partIndex) => {
+                  if (part.isJamelna) {
+                    const isClicked = clickedSequence.includes(part.jamelnaIndex!);
+                    const isNextInSequence = part.jamelnaIndex === clickedSequence.length;
+                    const showFeedback = letterFeedback === part.jamelnaIndex;
 
-                return (
+                    return (
+                      <span
+                        key={partIndex}
+                        onClick={() => handleLetterClick(part.jamelnaIndex!)}
+                        className={`
+                          cursor-pointer select-none inline-block
+                          transition-all duration-300
+                          ${isClicked ? 'text-accent scale-110' : 'glow-text-animated'}
+                          ${showFeedback ? 'scale-125' : ''}
+                          ${isNextInSequence ? 'hover:scale-110' : ''}
+                        `}
+                        style={{
+                          animationDelay: `${(part.jamelnaIndex || 0) * 0.3}s`,
+                          textShadow: isClicked
+                            ? '0 0 30px rgba(0, 168, 255, 0.8), 0 0 60px rgba(0, 168, 255, 0.5)'
+                            : undefined,
+                        }}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            handleLetterClick(part.jamelnaIndex!);
+                          }
+                        }}
+                        aria-label={`Letter ${part.text}`}
+                      >
+                        {part.text}
+                      </span>
+                    );
+                  }
+
+                  // Non-JAMELNA letters: hidden by default, revealed on hover
+                  // For reduced motion: always show full name
+                  // Wrapper handles width animation, inner span preserves baseline
+                  const showFull = isNameHovered || prefersReducedMotion;
+                  return (
+                    <span
+                      key={partIndex}
+                      className={`inline-flex overflow-hidden ${prefersReducedMotion ? '' : 'transition-all duration-1000 ease-out'}`}
+                      style={{
+                        maxWidth: showFull ? `${part.text.length + 0.5}ch` : '0',
+                        verticalAlign: 'baseline',
+                      }}
+                    >
+                      <span
+                        className={`whitespace-pre ${prefersReducedMotion ? 'text-text-secondary' : 'text-text-muted/30'}`}
+                        style={{
+                          opacity: showFull ? 1 : 0,
+                          transition: prefersReducedMotion ? 'none' : 'opacity 0.5s ease-out 0.3s',
+                        }}
+                      >
+                        {part.text}
+                      </span>
+                    </span>
+                  );
+                })}
+                {/* Add space between word groups - also animated */}
+                {groupIndex < NAME_WORD_GROUPS.length - 1 && (
                   <span
-                    key={index}
-                    onClick={() => handleLetterClick(part.jamelnaIndex!)}
-                    className={`
-                      cursor-pointer select-none inline-block
-                      transition-all duration-300
-                      ${isClicked ? 'text-accent scale-110' : 'glow-text-animated'}
-                      ${showFeedback ? 'scale-125' : ''}
-                      ${isNextInSequence ? 'hover:scale-110' : ''}
-                    `}
+                    className={`inline-flex overflow-hidden ${prefersReducedMotion ? '' : 'transition-all duration-1000 ease-out'}`}
                     style={{
-                      animationDelay: `${(part.jamelnaIndex || 0) * 0.3}s`,
-                      textShadow: isClicked
-                        ? '0 0 30px rgba(0, 168, 255, 0.8), 0 0 60px rgba(0, 168, 255, 0.5)'
-                        : undefined,
+                      maxWidth: (isNameHovered || prefersReducedMotion) ? '0.4em' : '0',
+                      verticalAlign: 'baseline',
                     }}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        handleLetterClick(part.jamelnaIndex!);
-                      }
-                    }}
-                    aria-label={`Letter ${part.text}`}
                   >
-                    {part.text}
+                    <span className="whitespace-pre">&nbsp;</span>
                   </span>
-                );
-              }
-
-              return (
-                <span
-                  key={index}
-                  className="text-text-muted/70"
-                >
-                  {part.text}
-                </span>
-              );
-            })}
+                )}
+              </span>
+            ))}
           </span>
         </h1>
 

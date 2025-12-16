@@ -159,19 +159,19 @@ export default function K12CSEducation() {
     <PageWrapper>
       {/* Hero Section */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          {t('title')}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+          <span className="text-warm">/</span> {t('title')}
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+        <p className="text-xl text-text-secondary max-w-3xl mx-auto mb-4">
           {t('subtitle')}
         </p>
-        <p className="text-gray-500">
+        <p className="text-text-muted">
           {t('targetAudience')}
         </p>
       </div>
 
       {/* Section Navigation */}
-      <nav className="mb-16 sticky top-0 bg-white/95 backdrop-blur-sm py-4 -mx-4 px-4 border-b border-gray-200 z-10">
+      <nav className="mb-16 sticky top-16 bg-deep/95 backdrop-blur-sm py-4 -mx-4 px-4 border-b border-deep-border z-10">
         <div className="flex flex-wrap justify-center gap-2 md:gap-4">
           {sectionLinks.map((link) => (
             <a
@@ -179,8 +179,8 @@ export default function K12CSEducation() {
               href={link.href || `#${link.id}`}
               className={
                 link.id === 'ai-planner'
-                  ? 'px-3 py-1.5 text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 rounded-full transition-colors inline-flex items-center gap-1'
-                  : 'px-3 py-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors'
+                  ? 'px-3 py-1.5 text-sm font-medium bg-warm text-white hover:bg-warm-light rounded-full transition-colors inline-flex items-center gap-1'
+                  : 'px-3 py-1.5 text-sm font-medium text-text-secondary hover:text-text-primary hover:bg-deep-card rounded-full transition-colors'
               }
             >
               {link.id === 'ai-planner' && (
@@ -196,10 +196,10 @@ export default function K12CSEducation() {
 
       {/* Curriculum Repository Section */}
       <section id="curriculum" className="mb-20 scroll-mt-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="text-2xl font-bold text-text-heading mb-2">
           {t('repository.title')}
         </h2>
-        <p className="text-gray-600 mb-8">
+        <p className="text-text-secondary mb-8">
           {t('repository.description')}
         </p>
         <CurriculumGrid
@@ -216,11 +216,11 @@ export default function K12CSEducation() {
 
       {/* District Profile Form Section */}
       <section id="district-profile" className="mb-20 scroll-mt-20">
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <div className="glass-card p-8">
+          <h2 className="text-2xl font-bold text-text-heading mb-2">
             {t('profile.title')}
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-text-secondary mb-8">
             {t('profile.description')}
           </p>
           <DistrictProfileForm
@@ -232,50 +232,50 @@ export default function K12CSEducation() {
 
       {/* Value Propositions */}
       <section id="why-use" className="mb-20 scroll-mt-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-2xl font-bold text-text-heading mb-8 text-center">
           {t('valueProps.title')}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
+          <div className="bg-deep-card border border-deep-border rounded-lg p-6 text-center hover:border-warm/50 transition-colors">
             <div className="text-3xl mb-3">💰</div>
-            <h3 className="font-semibold text-gray-900 mb-2">{t('valueProps.allFree.title')}</h3>
-            <p className="text-sm text-gray-600">{t('valueProps.allFree.description')}</p>
+            <h3 className="font-semibold text-text-heading mb-2">{t('valueProps.allFree.title')}</h3>
+            <p className="text-sm text-text-secondary">{t('valueProps.allFree.description')}</p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
+          <div className="bg-deep-card border border-deep-border rounded-lg p-6 text-center hover:border-warm/50 transition-colors">
             <div className="text-3xl mb-3">✅</div>
-            <h3 className="font-semibold text-gray-900 mb-2">{t('valueProps.vetted.title')}</h3>
-            <p className="text-sm text-gray-600">{t('valueProps.vetted.description')}</p>
+            <h3 className="font-semibold text-text-heading mb-2">{t('valueProps.vetted.title')}</h3>
+            <p className="text-sm text-text-secondary">{t('valueProps.vetted.description')}</p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
+          <div className="bg-deep-card border border-deep-border rounded-lg p-6 text-center hover:border-warm/50 transition-colors">
             <div className="text-3xl mb-3">📋</div>
-            <h3 className="font-semibold text-gray-900 mb-2">{t('valueProps.aligned.title')}</h3>
-            <p className="text-sm text-gray-600">{t('valueProps.aligned.description')}</p>
+            <h3 className="font-semibold text-text-heading mb-2">{t('valueProps.aligned.title')}</h3>
+            <p className="text-sm text-text-secondary">{t('valueProps.aligned.description')}</p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
+          <div className="bg-deep-card border border-deep-border rounded-lg p-6 text-center hover:border-warm/50 transition-colors">
             <div className="text-3xl mb-3">🎓</div>
-            <h3 className="font-semibold text-gray-900 mb-2">{t('valueProps.comprehensive.title')}</h3>
-            <p className="text-sm text-gray-600">{t('valueProps.comprehensive.description')}</p>
+            <h3 className="font-semibold text-text-heading mb-2">{t('valueProps.comprehensive.title')}</h3>
+            <p className="text-sm text-text-secondary">{t('valueProps.comprehensive.description')}</p>
           </div>
         </div>
       </section>
 
       {/* Standards Section */}
       <section id="standards" className="mb-20 scroll-mt-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="text-2xl font-bold text-text-heading mb-2">
           {t('standards.title')}
         </h2>
-        <p className="text-gray-600 mb-8">
+        <p className="text-text-secondary mb-8">
           {t('standards.description')}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h3 className="font-semibold text-gray-900 mb-2">{t('standards.csta.title')}</h3>
-            <p className="text-sm text-gray-600 mb-4">{t('standards.csta.description')}</p>
+          <div className="bg-deep-card border border-primary/30 rounded-lg p-6 hover:border-primary/60 transition-colors">
+            <h3 className="font-semibold text-text-heading mb-2">{t('standards.csta.title')}</h3>
+            <p className="text-sm text-text-secondary mb-4">{t('standards.csta.description')}</p>
             <a
               href="https://csteachers.org/k12standards/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center gap-1"
+              className="text-primary hover:text-primary-light text-sm font-medium inline-flex items-center gap-1 transition-colors"
             >
               {t('standards.csta.link')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -283,14 +283,14 @@ export default function K12CSEducation() {
               </svg>
             </a>
           </div>
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-            <h3 className="font-semibold text-gray-900 mb-2">{t('standards.states.title')}</h3>
-            <p className="text-sm text-gray-600 mb-4">{t('standards.states.description')}</p>
+          <div className="bg-deep-card border border-warm/30 rounded-lg p-6 hover:border-warm/60 transition-colors">
+            <h3 className="font-semibold text-text-heading mb-2">{t('standards.states.title')}</h3>
+            <p className="text-sm text-text-secondary mb-4">{t('standards.states.description')}</p>
             <a
               href="https://advocacy.code.org/stateofcs"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-600 hover:text-green-800 text-sm font-medium inline-flex items-center gap-1"
+              className="text-warm hover:text-warm-light text-sm font-medium inline-flex items-center gap-1 transition-colors"
             >
               {t('standards.states.link')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -303,21 +303,21 @@ export default function K12CSEducation() {
 
       {/* FAQ Section */}
       <section id="faq" className="mb-20 scroll-mt-20">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">
+        <h2 className="text-2xl font-bold text-text-heading mb-8">
           {t('faq.title')}
         </h2>
         <div className="space-y-4">
           {[1, 2, 3, 4].map((num) => (
-            <div key={num} className="border border-gray-200 rounded-lg overflow-hidden">
+            <div key={num} className="border border-deep-border rounded-lg overflow-hidden">
               <button
                 onClick={() => setExpandedFaq(expandedFaq === num ? null : num)}
-                className="w-full text-left px-6 py-4 bg-gray-50 hover:bg-gray-100 transition-colors flex items-center justify-between"
+                className="w-full text-left px-6 py-4 bg-deep-card hover:bg-deep-alt transition-colors flex items-center justify-between"
               >
-                <span className="font-medium text-gray-900">
+                <span className="font-medium text-text-heading">
                   {t(`faq.q${num}.question`)}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-gray-500 transition-transform ${expandedFaq === num ? 'rotate-180' : ''}`}
+                  className={`w-5 h-5 text-text-muted transition-transform ${expandedFaq === num ? 'rotate-180' : ''}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -326,8 +326,8 @@ export default function K12CSEducation() {
                 </svg>
               </button>
               {expandedFaq === num && (
-                <div className="px-6 py-4 bg-white">
-                  <p className="text-gray-600">{t(`faq.q${num}.answer`)}</p>
+                <div className="px-6 py-4 bg-deep">
+                  <p className="text-text-secondary">{t(`faq.q${num}.answer`)}</p>
                 </div>
               )}
             </div>
