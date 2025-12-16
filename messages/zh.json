@@ -3,10 +3,12 @@
     "home": "首页",
     "services": "服务",
     "work": "项目",
+    "techSovereignty": "技术主权",
     "photography": "摄影",
     "about": "关于我",
     "contact": "联系",
-    "language": "语言"
+    "language": "语言",
+    "k12cs": "K-12计算机科学教育"
   },
   "hero": {
     "name": "Joe Alexander Meléndez-Naharro",
@@ -363,5 +365,400 @@
     "photos": "张照片",
     "manageGalleries": "管理画廊 →",
     "noCoverImage": "无封面图片"
+  },
+  "k12CSEducation": {
+    "title": "K-12计算机科学教育资源",
+    "subtitle": "为学校和学区领导者提供的免费开源课程综合资源库。",
+    "targetAudience": "面向正在建立或扩展计算机科学项目的学校和学区领导者",
+    "sectionNav": {
+      "curriculum": "课程资源",
+      "districtProfile": "学区概况",
+      "aiPlanner": "AI 规划师",
+      "whyUse": "为何使用",
+      "standards": "教学标准",
+      "faq": "常见问题",
+      "comingSoon": "即将推出"
+    },
+    "gradeLevels": {
+      "elementary": "小学 (K-5)",
+      "middle": "初中 (6-8)",
+      "high": "高中 (9-12)",
+      "all": "所有年级"
+    },
+    "topics": {
+      "all": "所有主题",
+      "cs": "计算机科学",
+      "ct": "计算思维",
+      "ai": "人工智能",
+      "cybersecurity": "网络安全",
+      "robotics": "机器人技术",
+      "data": "数据科学",
+      "web": "网络开发"
+    },
+    "pathways": {
+      "robotics": "机器人技术",
+      "cybersecurity": "网络安全",
+      "ai": "人工智能",
+      "dataScience": "数据科学",
+      "webDev": "网络开发",
+      "gameDev": "游戏开发"
+    },
+    "repository": {
+      "title": "课程资源库",
+      "description": "探索来自美国各地的免费开源课程资源。",
+      "filterLabel": "按年级和主题筛选：",
+      "gradeLevelFilter": "年级",
+      "topicFilter": "主题"
+    },
+    "profile": {
+      "title": "学区档案",
+      "description": "分享您的学校或学区信息，获取个性化推荐（即将推出）。",
+      "schoolName": "学校/学区名称",
+      "schoolNamePlaceholder": "输入您的学校或学区名称",
+      "state": "州",
+      "statePlaceholder": "选择您所在的州",
+      "gradeLevelsLabel": "年级",
+      "currentOfferings": "当前计算机科学课程",
+      "currentOfferingsPlaceholder": "描述您当前的计算机科学项目（如有）...",
+      "pathwaysLabel": "感兴趣的领域",
+      "resources": "可用资源",
+      "resourcesPlaceholder": "描述您的预算、技术设备和可用人员...",
+      "submit": "提交档案",
+      "successTitle": "档案已提交！",
+      "successMessage": "感谢您分享学区信息。我们将很快与您联系，提供个性化推荐。"
+    },
+    "comingSoon": {
+      "title": "AI规划助手即将推出",
+      "description": "我们正在开发一款AI助手，帮助您设计与您所在州的计算机科学标准相匹配的定制课程范围和序列。",
+      "emailLabel": "获取发布通知",
+      "emailPlaceholder": "输入您的电子邮件",
+      "emailButton": "通知我",
+      "emailSuccess": "谢谢！AI规划助手上线时我们会通知您。"
+    },
+    "valueProps": {
+      "title": "为什么使用这个资源库？",
+      "allFree": {
+        "title": "100%免费资源",
+        "description": "列出的所有课程都是免费或开源的，消除了优质计算机科学教育的成本障碍。"
+      },
+      "vetted": {
+        "title": "精选验证",
+        "description": "来自Code.org、MIT、哈佛和树莓派基金会等可信组织的资源。"
+      },
+      "aligned": {
+        "title": "符合标准",
+        "description": "许多课程符合CSTA、ISTE和州立计算机科学标准，便于实施。"
+      },
+      "comprehensive": {
+        "title": "K-12全覆盖",
+        "description": "从幼儿园的ScratchJr到高中的AP计算机科学。"
+      }
+    },
+    "standards": {
+      "title": "州标准对齐",
+      "description": "许多州已采用计算机科学教育标准。以下是帮助您调整课程的资源。",
+      "csta": {
+        "title": "CSTA K-12计算机科学标准",
+        "description": "计算机科学教师协会标准为K-12计算机科学教育提供了全面的框架。",
+        "link": "查看CSTA标准"
+      },
+      "states": {
+        "title": "各州要求",
+        "description": "查看您所在州的计算机科学教育要求和标准采用状态。",
+        "link": "州计算机科学政策地图"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": {
+        "question": "如何为我的学校选择合适的课程？",
+        "answer": "考虑您的年级水平、教师经验、可用技术和预算。从一个年级段开始，逐步扩展。Code.org和CS Unplugged是计算机科学新手学校的绝佳起点。"
+      },
+      "q2": {
+        "question": "教师需要计算机科学背景才能教授这些课程吗？",
+        "answer": "大多数课程是为没有计算机科学学位的教师设计的。它们包括全面的教师指南、专业发展资源，通常还有免费培训。Bootstrap和Code.org提供特别强大的教师支持。"
+      },
+      "q3": {
+        "question": "如何为我的学区的计算机科学教育提供资金？",
+        "answer": "许多学区使用Title I、Title II或Title IV-A资金。ESSER资金也支持了计算机科学计划。此外，许多课程完全免费，降低了实施成本。"
+      },
+      "q4": {
+        "question": "我们需要什么技术？",
+        "answer": "要求因课程而异。CS Unplugged不需要计算机。Scratch可在Chromebook和平板电脑上运行。一些高中课程受益于1:1设备。请查看每个课程的技术要求。"
+      }
+    },
+    "aiPlanner": {
+      "title": "AI规划助手",
+      "subtitle": "借助AI驱动的指导设计您的K-12计算机科学教育项目",
+      "welcome": {
+        "title": "欢迎使用AI规划助手",
+        "description": "我可以帮助您创建一个针对您学区量身定制的全面K-12计算机科学教育计划。询问我有关课程推荐、范围和顺序或标准对齐的问题。"
+      },
+      "chat": {
+        "placeholder": "询问有关K-12计算机科学课程规划的问题...",
+        "placeholderWithDistrict": "询问{district}的计算机科学课程...",
+        "clearChat": "清除聊天",
+        "sendMessage": "发送消息"
+      },
+      "sources": {
+        "title": "来源",
+        "csta": "CSTA标准",
+        "statePolicy": "州政策",
+        "curriculum": "课程",
+        "scopeSequence": "范围与顺序"
+      },
+      "suggestedPrompts": {
+        "scopeSequence": {
+          "label": "K-12范围与顺序",
+          "prompt": "创建一个与我们州标准一致的完整K-12计算机科学教育范围和顺序。"
+        },
+        "curriculumRecs": {
+          "label": "课程推荐",
+          "prompt": "您会为我们的年级和发展方向推荐哪些免费的计算机科学课程？"
+        },
+        "cstaAlignment": {
+          "label": "CSTA标准对齐",
+          "prompt": "我们如何使我们的计算机科学项目与所有年级段的CSTA标准保持一致？"
+        },
+        "implementation": {
+          "label": "实施路线图",
+          "prompt": "帮助我们创建一个分阶段的实施计划，在我们学区启动计算机科学教育。"
+        }
+      },
+      "labels": {
+        "thinking": "思考中...",
+        "streaming": "正在生成回复...",
+        "error": "发生错误"
+      },
+      "errors": {
+        "generic": "发生错误。请重试。",
+        "networkError": "网络错误。请检查您的连接并重试。"
+      }
+    }
+  },
+  "techSovereignty": {
+    "hero": {
+      "title": "技术主权",
+      "subtitle": "构建自己的网络。掌控自己的数据。主宰自己的数字未来。",
+      "description": "一个基于项目的课程，教学生和社区构建独立的技术基础设施——从本地网络到自托管人工智能——摆脱对企业技术的依赖。",
+      "ctaPrimary": "探索课程",
+      "ctaSecondary": "浏览工具"
+    },
+    "why": {
+      "title": "为什么要技术主权？",
+      "intro": "大型科技公司提取我们的数据，操纵我们的注意力，使我们依赖于我们无法控制的系统。还有另一条路。",
+      "problem": {
+        "title": "问题",
+        "description": "企业平台收集个人数据，使用算法操纵行为，并创造对昂贵专有系统的依赖——尤其伤害低收入和边缘化社区。"
+      },
+      "vision": {
+        "title": "我们的愿景",
+        "description": "社区拥有自己的技术基础设施：本地网络、自托管服务和服务于人民而非企业利润的人工智能工具。"
+      },
+      "benefit": {
+        "title": "好处",
+        "description": "数字独立、数据隐私、本地经济力量，以及构建和维护反映社区价值观的技术的技能。"
+      }
+    },
+    "curriculum": {
+      "title": "基于项目的课程",
+      "description": "通过构建来学习。每个轨道带您从基础知识到服务于您社区的真实世界项目。"
+    },
+    "tracks": {
+      "networking": {
+        "title": "网络基础",
+        "description": "了解互联网如何工作，从零开始构建自己的网络。",
+        "project1": {
+          "title": "构建您的第一个本地网络",
+          "description": "使用路由器、交换机和多个设备设置家庭网络。学习IP地址、DHCP和基本网络故障排除。",
+          "difficulty": "初学者",
+          "duration": "2-3周"
+        },
+        "project2": {
+          "title": "理解互联网协议",
+          "description": "深入了解TCP/IP、DNS、HTTP和其他使互联网运行的协议。使用数据包嗅探工具查看运动中的数据。",
+          "difficulty": "中级",
+          "duration": "3-4周"
+        },
+        "project3": {
+          "title": "创建网状网络",
+          "description": "构建不依赖集中式基础设施的弹性网状网络。连接邻居并共享资源。",
+          "difficulty": "中级",
+          "duration": "4-6周"
+        },
+        "project4": {
+          "title": "社区互联网基础设施",
+          "description": "设计和规划社区拥有的ISP或无线网络。了解法律、技术和组织要求。",
+          "difficulty": "高级",
+          "duration": "8-12周"
+        }
+      },
+      "selfHosted": {
+        "title": "自托管服务",
+        "description": "用自己的服务替代企业云服务——让您的数据掌握在自己手中。",
+        "project1": {
+          "title": "设置您自己的服务器",
+          "description": "将旧电脑或树莓派变成服务器。学习Linux基础知识、远程访问和系统管理。",
+          "difficulty": "初学者",
+          "duration": "2-3周"
+        },
+        "project2": {
+          "title": "自托管云存储",
+          "description": "部署Nextcloud来替代Google Drive或Dropbox。设置文件同步、共享和协作文档。",
+          "difficulty": "中级",
+          "duration": "2-3周"
+        },
+        "project3": {
+          "title": "社区通讯平台",
+          "description": "设置Matrix/Element进行安全、去中心化的消息传递。为您的社区或组织创建通讯中心。",
+          "difficulty": "中级",
+          "duration": "3-4周"
+        },
+        "project4": {
+          "title": "本地优先应用程序",
+          "description": "构建和部署离线工作并在连接时同步的应用程序。了解本地优先软件运动。",
+          "difficulty": "高级",
+          "duration": "6-8周"
+        }
+      },
+      "ai": {
+        "title": "人工智能/LLM独立",
+        "description": "在您自己的硬件上运行强大的人工智能模型——无需云，数据不会离开您的社区。",
+        "project1": {
+          "title": "理解人工智能模型",
+          "description": "了解大型语言模型如何工作、它们的能力和局限性，以及人工智能部署的伦理考虑。",
+          "difficulty": "初学者",
+          "duration": "2-3周"
+        },
+        "project2": {
+          "title": "运行本地LLM",
+          "description": "使用Ollama或llama.cpp在您自己的电脑上运行开源人工智能模型。比较性能和能力。",
+          "difficulty": "中级",
+          "duration": "2-3周"
+        },
+        "project3": {
+          "title": "针对社区需求进行微调",
+          "description": "为特定社区应用定制人工智能模型——本地语言、文化背景或专业知识。",
+          "difficulty": "高级",
+          "duration": "6-8周"
+        },
+        "project4": {
+          "title": "构建人工智能驱动的工具",
+          "description": "使用本地人工智能创建实用应用程序：文档助手、翻译工具、教育辅助工具或社区资源。",
+          "difficulty": "高级",
+          "duration": "8-12周"
+        }
+      },
+      "appDev": {
+        "title": "应用开发",
+        "description": "构建服务于您社区的应用程序——社交网络、资源目录和本地组织工具。",
+        "project1": {
+          "title": "Web开发基础",
+          "description": "学习HTML、CSS和JavaScript。构建您的第一个静态网站，了解网络如何工作。",
+          "difficulty": "初学者",
+          "duration": "4-6周"
+        },
+        "project2": {
+          "title": "构建社区应用",
+          "description": "创建具有数据库和用户账户的Web应用程序。构建活动日历、资源目录或公告板等工具。",
+          "difficulty": "中级",
+          "duration": "6-8周"
+        },
+        "project3": {
+          "title": "去中心化社交网络",
+          "description": "设置和定制Mastodon等联邦社交平台。了解ActivityPub和联邦宇宙。",
+          "difficulty": "中级",
+          "duration": "4-6周"
+        },
+        "project4": {
+          "title": "移动应用开发",
+          "description": "使用React Native或Flutter为iOS和Android构建移动应用。部署可离线工作的应用。",
+          "difficulty": "高级",
+          "duration": "10-12周"
+        }
+      },
+      "community": {
+        "title": "社区建设",
+        "description": "技术的力量取决于使用它的社区。学习教学、组织和维持。",
+        "project1": {
+          "title": "在您的社区教授技术",
+          "description": "设计和促进分享技术技能的工作坊。学习教学法、无障碍性和包容性教学实践。",
+          "difficulty": "初学者",
+          "duration": "3-4周"
+        },
+        "project2": {
+          "title": "与其他社区建立联系",
+          "description": "在做类似工作的社区之间建立网络。分享资源、知识和相互支持。",
+          "difficulty": "中级",
+          "duration": "持续进行"
+        },
+        "project3": {
+          "title": "可持续技术合作社",
+          "description": "探索社区所有技术的治理模式、融资策略和组织结构。",
+          "difficulty": "高级",
+          "duration": "持续进行"
+        }
+      }
+    },
+    "tools": {
+      "title": "开源工具",
+      "description": "精选的免费开源工具集合，用于构建独立的技术基础设施。",
+      "categories": {
+        "networking": "网络",
+        "selfHosting": "自托管",
+        "llm": "人工智能/LLM工具",
+        "dev": "开发",
+        "hardware": "硬件"
+      },
+      "networking": {
+        "openwrt": "开源路由器固件，让您完全控制您的网络",
+        "pihole": "全网广告拦截和DNS隐私保护",
+        "wireguard": "用于安全连接的现代快速VPN协议"
+      },
+      "selfHosting": {
+        "nextcloud": "自托管文件存储、日历、联系人和协作",
+        "matrix": "去中心化加密通讯平台",
+        "mastodon": "免受企业控制的联邦社交网络"
+      },
+      "llm": {
+        "ollama": "一条命令即可本地运行大型语言模型",
+        "llamacpp": "消费级硬件上LLM的高性能推理",
+        "openwebui": "本地人工智能模型的用户友好界面",
+        "huggingface": "开源人工智能模型和数据集的存储库"
+      },
+      "dev": {
+        "vscode": "免费、强大的代码编辑器，具有丰富的扩展",
+        "git": "用于跟踪代码更改的版本控制系统",
+        "python": "多功能编程语言，非常适合初学者"
+      },
+      "hardware": {
+        "raspberrypi": "经济实惠的单板计算机，适用于服务器和项目",
+        "pine64": "开源硬件：手机、笔记本电脑和单板计算机",
+        "librerouter": "为社区网络设计的开放硬件路由器"
+      }
+    },
+    "educators": {
+      "title": "致教育工作者",
+      "description": "本课程为教师、社区组织者和任何想要将技术主权带到其社区的人设计。所有材料都是免费和开源的。",
+      "benefit1": "灵活的模块，可适应不同的技能水平和时间限制",
+      "benefit2": "无需先前的技术经验——与您的学生一起学习",
+      "benefit3": "基于项目的方法让学生通过真实世界的成果保持参与",
+      "requirements": {
+        "title": "基本要求",
+        "item1": "计算机访问（每2-3名学生一台为理想）",
+        "item2": "互联网连接（用于初始设置和下载）",
+        "item3": "树莓派或旧电脑用于服务器项目",
+        "item4": "好奇心和实验意愿"
+      }
+    },
+    "community": {
+      "title": "加入网络",
+      "description": "技术主权在一起更强大。与其他构建独立基础设施的社区建立联系，分享资源，互相学习。",
+      "cta": {
+        "title": "即将推出",
+        "description": "我们正在建立一个致力于技术主权的社区网络。联系我们成为创始群体的一员。",
+        "button": "联系我们"
+      }
+    }
   }
 }

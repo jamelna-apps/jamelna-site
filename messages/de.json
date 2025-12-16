@@ -3,10 +3,12 @@
     "home": "Startseite",
     "services": "Dienstleistungen",
     "work": "Projekte",
+    "techSovereignty": "Tech-Souveränität",
     "photography": "Fotografie",
     "about": "Über Mich",
     "contact": "Kontakt",
-    "language": "Sprache"
+    "language": "Sprache",
+    "k12cs": "K-12 Informatik-Bildung"
   },
   "hero": {
     "name": "Joe Alexander Meléndez-Naharro",
@@ -363,5 +365,400 @@
     "photos": "Fotos",
     "manageGalleries": "Galerien Verwalten →",
     "noCoverImage": "Kein Titelbild"
+  },
+  "k12CSEducation": {
+    "title": "K-12 Informatik-Bildungsressourcen",
+    "subtitle": "Ein umfassendes Repository kostenloser und quelloffener Lehrpläne für Schul- und Bezirksleiter.",
+    "targetAudience": "Für Schul- und Bezirksleiter, die Informatikprogramme aufbauen oder erweitern",
+    "sectionNav": {
+      "curriculum": "Lehrpläne",
+      "districtProfile": "Bezirksprofil",
+      "aiPlanner": "KI-Planer",
+      "whyUse": "Warum Nutzen",
+      "standards": "Standards",
+      "faq": "FAQ",
+      "comingSoon": "Demnächst"
+    },
+    "gradeLevels": {
+      "elementary": "Grundschule (K-5)",
+      "middle": "Mittelstufe (6-8)",
+      "high": "Oberstufe (9-12)",
+      "all": "Alle Klassenstufen"
+    },
+    "topics": {
+      "all": "Alle Themen",
+      "cs": "Informatik",
+      "ct": "Rechnerisches Denken",
+      "ai": "Künstliche Intelligenz",
+      "cybersecurity": "Cybersicherheit",
+      "robotics": "Robotik",
+      "data": "Datenwissenschaft",
+      "web": "Web-Entwicklung"
+    },
+    "pathways": {
+      "robotics": "Robotik",
+      "cybersecurity": "Cybersicherheit",
+      "ai": "Künstliche Intelligenz",
+      "dataScience": "Datenwissenschaft",
+      "webDev": "Web-Entwicklung",
+      "gameDev": "Spieleentwicklung"
+    },
+    "repository": {
+      "title": "Lehrplan-Repository",
+      "description": "Entdecken Sie kostenlose und quelloffene Lehrplanressourcen aus den gesamten USA.",
+      "filterLabel": "Filtern nach Klassenstufe und Thema:",
+      "gradeLevelFilter": "Klassenstufe",
+      "topicFilter": "Thema"
+    },
+    "profile": {
+      "title": "Bezirksprofil",
+      "description": "Teilen Sie Informationen über Ihre Schule oder Ihren Bezirk, um personalisierte Empfehlungen zu erhalten (demnächst).",
+      "schoolName": "Schul-/Bezirksname",
+      "schoolNamePlaceholder": "Geben Sie Ihren Schul- oder Bezirksnamen ein",
+      "state": "Bundesstaat",
+      "statePlaceholder": "Wählen Sie Ihren Bundesstaat",
+      "gradeLevelsLabel": "Klassenstufen",
+      "currentOfferings": "Aktuelle Informatik-Angebote",
+      "currentOfferingsPlaceholder": "Beschreiben Sie Ihre aktuellen Informatik-Programme, falls vorhanden...",
+      "pathwaysLabel": "Interessengebiete",
+      "resources": "Verfügbare Ressourcen",
+      "resourcesPlaceholder": "Beschreiben Sie Ihr Budget, Ihre Technologie und verfügbares Personal...",
+      "submit": "Profil Einreichen",
+      "successTitle": "Profil Eingereicht!",
+      "successMessage": "Vielen Dank für die Informationen über Ihren Bezirk. Wir werden Sie bald mit personalisierten Empfehlungen kontaktieren."
+    },
+    "comingSoon": {
+      "title": "KI-Planungsassistent Kommt Bald",
+      "description": "Wir entwickeln einen KI-Assistenten, der Ihnen hilft, maßgeschneiderte Umfänge und Sequenzen zu entwerfen, die auf die Informatik-Standards Ihres Bundesstaates abgestimmt sind.",
+      "emailLabel": "Benachrichtigung erhalten, wenn wir starten",
+      "emailPlaceholder": "E-Mail-Adresse eingeben",
+      "emailButton": "Benachrichtigen",
+      "emailSuccess": "Danke! Wir benachrichtigen Sie, wenn der KI-Planungsassistent verfügbar ist."
+    },
+    "valueProps": {
+      "title": "Warum Diese Ressourcen Nutzen?",
+      "allFree": {
+        "title": "100% Kostenlose Ressourcen",
+        "description": "Alle aufgeführten Lehrpläne sind kostenlos oder Open-Source und beseitigen Kostenbarrieren für qualitativ hochwertige Informatikbildung."
+      },
+      "vetted": {
+        "title": "Kuratiert & Geprüft",
+        "description": "Ressourcen von vertrauenswürdigen Organisationen wie Code.org, MIT, Harvard und Raspberry Pi Foundation."
+      },
+      "aligned": {
+        "title": "Standardkonform",
+        "description": "Viele Lehrpläne sind an CSTA-, ISTE- und staatliche Standards angepasst für einfachere Implementierung."
+      },
+      "comprehensive": {
+        "title": "K-12 Abdeckung",
+        "description": "Von ScratchJr für den Kindergarten bis AP Computer Science für Oberstufenschüler."
+      }
+    },
+    "standards": {
+      "title": "Ausrichtung an Staatlichen Standards",
+      "description": "Viele Bundesstaaten haben Informatik-Bildungsstandards übernommen. Hier sind Ressourcen zur Lehrplananpassung.",
+      "csta": {
+        "title": "CSTA K-12 Informatik-Standards",
+        "description": "Die Standards der Computer Science Teachers Association bieten einen umfassenden Rahmen für K-12 Informatikbildung.",
+        "link": "CSTA-Standards Ansehen"
+      },
+      "states": {
+        "title": "Anforderungen nach Bundesstaat",
+        "description": "Überprüfen Sie die Informatik-Bildungsanforderungen Ihres Bundesstaates und den Status der Standardübernahme.",
+        "link": "Informatik-Richtlinien nach Staat"
+      }
+    },
+    "faq": {
+      "title": "Häufig Gestellte Fragen",
+      "q1": {
+        "question": "Wie wähle ich den richtigen Lehrplan für meine Schule?",
+        "answer": "Berücksichtigen Sie Ihre Klassenstufen, Lehrerfahrung, verfügbare Technologie und Budget. Beginnen Sie mit einer Klassenstufe und erweitern Sie schrittweise. Code.org und CS Unplugged sind großartige Einstiegspunkte für Schulen, die neu in Informatik sind."
+      },
+      "q2": {
+        "question": "Brauchen Lehrer Informatik-Hintergründe, um diese Lehrpläne zu unterrichten?",
+        "answer": "Die meisten Lehrpläne sind für Lehrer ohne Informatikabschluss konzipiert. Sie enthalten umfassende Lehrerhandbücher, Fortbildungsressourcen und oft kostenlose Schulungen. Bootstrap und Code.org bieten besonders starke Lehrerunterstützung."
+      },
+      "q3": {
+        "question": "Wie kann ich Informatikbildung in meinem Bezirk finanzieren?",
+        "answer": "Viele Bezirke nutzen Title I, Title II oder Title IV-A Mittel. ESSER-Mittel haben ebenfalls Informatik-Initiativen unterstützt. Außerdem sind viele Lehrpläne völlig kostenlos, was die Implementierungskosten reduziert."
+      },
+      "q4": {
+        "question": "Welche Technologie brauchen wir?",
+        "answer": "Die Anforderungen variieren je nach Lehrplan. CS Unplugged benötigt keine Computer. Scratch läuft auf Chromebooks und Tablets. Einige Oberstufenkurse profitieren von 1:1-Geräten. Prüfen Sie die technischen Anforderungen jedes Lehrplans."
+      }
+    },
+    "aiPlanner": {
+      "title": "KI-Planungsassistent",
+      "subtitle": "Gestalten Sie Ihr K-12 Informatik-Bildungsprogramm mit KI-gestützter Beratung",
+      "welcome": {
+        "title": "Willkommen beim KI-Planungsassistent",
+        "description": "Ich kann Ihnen helfen, einen umfassenden K-12 Informatik-Bildungsplan zu erstellen, der auf Ihren Bezirk zugeschnitten ist. Fragen Sie mich nach Lehrplanempfehlungen, Umfang und Reihenfolge oder Standardausrichtung."
+      },
+      "chat": {
+        "placeholder": "Fragen Sie nach K-12 Informatik-Lehrplanplanung...",
+        "placeholderWithDistrict": "Fragen Sie nach dem Informatik-Lehrplan für {district}...",
+        "clearChat": "Chat löschen",
+        "sendMessage": "Nachricht senden"
+      },
+      "sources": {
+        "title": "Quellen",
+        "csta": "CSTA-Standard",
+        "statePolicy": "Staatliche Richtlinie",
+        "curriculum": "Lehrplan",
+        "scopeSequence": "Umfang & Reihenfolge"
+      },
+      "suggestedPrompts": {
+        "scopeSequence": {
+          "label": "K-12 Umfang & Reihenfolge",
+          "prompt": "Erstellen Sie einen vollständigen K-12 Umfang und Reihenfolge für Informatik-Bildung, ausgerichtet an unseren staatlichen Standards."
+        },
+        "curriculumRecs": {
+          "label": "Lehrplanempfehlungen",
+          "prompt": "Welche kostenlosen Informatik-Lehrpläne würden Sie für unsere Klassenstufen und Schwerpunkte empfehlen?"
+        },
+        "cstaAlignment": {
+          "label": "CSTA-Standards-Ausrichtung",
+          "prompt": "Wie können wir unser Informatik-Programm mit den CSTA-Standards über alle Klassenstufen hinweg ausrichten?"
+        },
+        "implementation": {
+          "label": "Implementierungs-Roadmap",
+          "prompt": "Helfen Sie uns, einen phasenweisen Implementierungsplan für die Einführung von Informatik-Bildung in unserem Bezirk zu erstellen."
+        }
+      },
+      "labels": {
+        "thinking": "Denke nach...",
+        "streaming": "Generiere Antwort...",
+        "error": "Fehler aufgetreten"
+      },
+      "errors": {
+        "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+        "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+      }
+    }
+  },
+  "techSovereignty": {
+    "hero": {
+      "title": "Tech-Souveränität",
+      "subtitle": "Bauen Sie Ihre eigenen Netzwerke. Kontrollieren Sie Ihre eigenen Daten. Gestalten Sie Ihre digitale Zukunft.",
+      "description": "Ein projektbasierter Lehrplan, der Schülern und Gemeinschaften beibringt, unabhängige Technologie-Infrastruktur aufzubauen—von lokalen Netzwerken bis zu selbst gehostetem KI—um sich von der Abhängigkeit von Unternehmenstechnologie zu befreien.",
+      "ctaPrimary": "Lehrplan Erkunden",
+      "ctaSecondary": "Tools Durchsuchen"
+    },
+    "why": {
+      "title": "Warum Tech-Souveränität?",
+      "intro": "Große Technologieunternehmen extrahieren unsere Daten, manipulieren unsere Aufmerksamkeit und machen uns abhängig von Systemen, die wir nicht kontrollieren. Es gibt einen anderen Weg.",
+      "problem": {
+        "title": "Das Problem",
+        "description": "Unternehmensplattformen sammeln persönliche Daten, nutzen Algorithmen zur Verhaltensmanipulation und schaffen Abhängigkeit von teuren proprietären Systemen—was besonders einkommensschwache und marginalisierte Gemeinschaften schadet."
+      },
+      "vision": {
+        "title": "Unsere Vision",
+        "description": "Gemeinschaften, die ihre eigene Technologie-Infrastruktur besitzen: lokale Netzwerke, selbst gehostete Dienste und KI-Tools, die Menschen dienen—nicht Unternehmensgewinnen."
+      },
+      "benefit": {
+        "title": "Der Nutzen",
+        "description": "Digitale Unabhängigkeit, Datenschutz, lokale wirtschaftliche Macht und die Fähigkeiten, Technologie zu bauen und zu warten, die die Werte der Gemeinschaft widerspiegelt."
+      }
+    },
+    "curriculum": {
+      "title": "Projektbasierter Lehrplan",
+      "description": "Lernen durch Bauen. Jeder Track führt Sie von den Grundlagen zu Projekten aus der realen Welt, die Ihrer Gemeinschaft dienen."
+    },
+    "tracks": {
+      "networking": {
+        "title": "Netzwerk-Grundlagen",
+        "description": "Verstehen Sie, wie das Internet funktioniert, und bauen Sie Ihre eigenen Netzwerke von Grund auf.",
+        "project1": {
+          "title": "Bauen Sie Ihr Erstes Lokales Netzwerk",
+          "description": "Richten Sie ein Heimnetzwerk mit Router, Switch und mehreren Geräten ein. Lernen Sie IP-Adressen, DHCP und grundlegende Netzwerk-Fehlerbehebung.",
+          "difficulty": "Anfänger",
+          "duration": "2-3 Wochen"
+        },
+        "project2": {
+          "title": "Internet-Protokolle Verstehen",
+          "description": "Tauchen Sie ein in TCP/IP, DNS, HTTP und andere Protokolle, die das Internet antreiben. Nutzen Sie Paketanalyse-Tools, um Daten in Bewegung zu sehen.",
+          "difficulty": "Fortgeschritten",
+          "duration": "3-4 Wochen"
+        },
+        "project3": {
+          "title": "Ein Mesh-Netzwerk Erstellen",
+          "description": "Bauen Sie ein widerstandsfähiges Mesh-Netzwerk, das nicht von zentralisierter Infrastruktur abhängt. Verbinden Sie Nachbarn und teilen Sie Ressourcen.",
+          "difficulty": "Fortgeschritten",
+          "duration": "4-6 Wochen"
+        },
+        "project4": {
+          "title": "Gemeinschaftliche Internet-Infrastruktur",
+          "description": "Entwerfen und planen Sie einen gemeinschaftlichen ISP oder ein drahtloses Netzwerk. Verstehen Sie rechtliche, technische und organisatorische Anforderungen.",
+          "difficulty": "Experte",
+          "duration": "8-12 Wochen"
+        }
+      },
+      "selfHosted": {
+        "title": "Selbst Gehostete Dienste",
+        "description": "Ersetzen Sie Unternehmens-Cloud-Dienste durch Ihre eigenen—und behalten Sie Ihre Daten unter Ihrer Kontrolle.",
+        "project1": {
+          "title": "Richten Sie Ihren Eigenen Server Ein",
+          "description": "Verwandeln Sie einen alten Computer oder Raspberry Pi in einen Server. Lernen Sie Linux-Grundlagen, Fernzugriff und Systemadministration.",
+          "difficulty": "Anfänger",
+          "duration": "2-3 Wochen"
+        },
+        "project2": {
+          "title": "Selbst Gehosteter Cloud-Speicher",
+          "description": "Stellen Sie Nextcloud bereit, um Google Drive oder Dropbox zu ersetzen. Richten Sie Dateisynchronisation, Freigabe und gemeinsame Dokumente ein.",
+          "difficulty": "Fortgeschritten",
+          "duration": "2-3 Wochen"
+        },
+        "project3": {
+          "title": "Gemeinschaftliche Kommunikationsplattform",
+          "description": "Richten Sie Matrix/Element für sichere, dezentralisierte Nachrichtenübermittlung ein. Erstellen Sie einen Kommunikations-Hub für Ihre Gemeinschaft oder Organisation.",
+          "difficulty": "Fortgeschritten",
+          "duration": "3-4 Wochen"
+        },
+        "project4": {
+          "title": "Local-First Anwendungen",
+          "description": "Bauen und deployen Sie Anwendungen, die offline funktionieren und sich bei Verbindung synchronisieren. Verstehen Sie die Local-First Software-Bewegung.",
+          "difficulty": "Experte",
+          "duration": "6-8 Wochen"
+        }
+      },
+      "ai": {
+        "title": "KI/LLM-Unabhängigkeit",
+        "description": "Führen Sie leistungsstarke KI-Modelle auf Ihrer eigenen Hardware aus—keine Cloud erforderlich, keine Daten verlassen Ihre Gemeinschaft.",
+        "project1": {
+          "title": "KI-Modelle Verstehen",
+          "description": "Lernen Sie, wie große Sprachmodelle funktionieren, ihre Fähigkeiten und Grenzen, und die ethischen Überlegungen des KI-Einsatzes.",
+          "difficulty": "Anfänger",
+          "duration": "2-3 Wochen"
+        },
+        "project2": {
+          "title": "Lokale LLMs Ausführen",
+          "description": "Verwenden Sie Ollama oder llama.cpp, um Open-Source-KI-Modelle auf Ihrem eigenen Computer auszuführen. Vergleichen Sie Leistung und Fähigkeiten.",
+          "difficulty": "Fortgeschritten",
+          "duration": "2-3 Wochen"
+        },
+        "project3": {
+          "title": "Feinabstimmung für Gemeinschaftliche Bedürfnisse",
+          "description": "Passen Sie KI-Modelle für spezifische Gemeinschaftsanwendungen an—lokale Sprache, kultureller Kontext oder spezialisiertes Wissen.",
+          "difficulty": "Experte",
+          "duration": "6-8 Wochen"
+        },
+        "project4": {
+          "title": "KI-gestützte Tools Bauen",
+          "description": "Erstellen Sie praktische Anwendungen mit lokaler KI: Dokumentenassistenten, Übersetzungstools, Bildungshilfen oder Gemeinschaftsressourcen.",
+          "difficulty": "Experte",
+          "duration": "8-12 Wochen"
+        }
+      },
+      "appDev": {
+        "title": "App-Entwicklung",
+        "description": "Bauen Sie Anwendungen, die Ihrer Gemeinschaft dienen—soziale Netzwerke, Ressourcenverzeichnisse und Tools für lokale Organisierung.",
+        "project1": {
+          "title": "Web-Entwicklung Grundlagen",
+          "description": "Lernen Sie HTML, CSS und JavaScript. Bauen Sie Ihre ersten statischen Websites und verstehen Sie, wie das Web funktioniert.",
+          "difficulty": "Anfänger",
+          "duration": "4-6 Wochen"
+        },
+        "project2": {
+          "title": "Gemeinschafts-Apps Bauen",
+          "description": "Erstellen Sie Webanwendungen mit Datenbanken und Benutzerkonten. Bauen Sie Tools wie Veranstaltungskalender, Ressourcenverzeichnisse oder Pinnwände.",
+          "difficulty": "Fortgeschritten",
+          "duration": "6-8 Wochen"
+        },
+        "project3": {
+          "title": "Dezentralisierte Soziale Netzwerke",
+          "description": "Richten Sie föderierte soziale Plattformen wie Mastodon ein und passen Sie sie an. Verstehen Sie ActivityPub und das Fediverse.",
+          "difficulty": "Fortgeschritten",
+          "duration": "4-6 Wochen"
+        },
+        "project4": {
+          "title": "Mobile App-Entwicklung",
+          "description": "Bauen Sie mobile Apps für iOS und Android mit React Native oder Flutter. Deployen Sie Apps, die offline funktionieren.",
+          "difficulty": "Experte",
+          "duration": "10-12 Wochen"
+        }
+      },
+      "community": {
+        "title": "Gemeinschaftsaufbau",
+        "description": "Technologie ist nur so mächtig wie die Gemeinschaft, die sie nutzt. Lernen Sie zu lehren, zu organisieren und aufrechtzuerhalten.",
+        "project1": {
+          "title": "Technologie in Ihrer Gemeinschaft Lehren",
+          "description": "Entwerfen und leiten Sie Workshops, um technische Fähigkeiten zu teilen. Lernen Sie Pädagogik, Barrierefreiheit und inklusive Unterrichtspraktiken.",
+          "difficulty": "Anfänger",
+          "duration": "3-4 Wochen"
+        },
+        "project2": {
+          "title": "Mit Anderen Gemeinschaften Verbinden",
+          "description": "Bauen Sie Netzwerke zwischen Gemeinschaften, die ähnliche Arbeit leisten. Teilen Sie Ressourcen, Wissen und gegenseitige Unterstützung.",
+          "difficulty": "Fortgeschritten",
+          "duration": "Fortlaufend"
+        },
+        "project3": {
+          "title": "Nachhaltige Tech-Genossenschaften",
+          "description": "Erkunden Sie Governance-Modelle, Finanzierungsstrategien und Organisationsstrukturen für gemeinschaftseigene Technologie.",
+          "difficulty": "Experte",
+          "duration": "Fortlaufend"
+        }
+      }
+    },
+    "tools": {
+      "title": "Open-Source-Tools",
+      "description": "Eine kuratierte Sammlung kostenloser, quelloffener Tools zum Aufbau unabhängiger Technologie-Infrastruktur.",
+      "categories": {
+        "networking": "Netzwerk",
+        "selfHosting": "Self-Hosting",
+        "llm": "KI/LLM-Tools",
+        "dev": "Entwicklung",
+        "hardware": "Hardware"
+      },
+      "networking": {
+        "openwrt": "Open-Source-Router-Firmware, die Ihnen volle Kontrolle über Ihr Netzwerk gibt",
+        "pihole": "Netzwerkweite Werbeblockierung und DNS-Datenschutz",
+        "wireguard": "Modernes, schnelles VPN-Protokoll für sichere Verbindungen"
+      },
+      "selfHosting": {
+        "nextcloud": "Selbst gehosteter Dateispeicher, Kalender, Kontakte und Zusammenarbeit",
+        "matrix": "Dezentralisierte, verschlüsselte Kommunikationsplattform",
+        "mastodon": "Föderiertes soziales Netzwerk frei von Unternehmenskontrolle"
+      },
+      "llm": {
+        "ollama": "Führen Sie große Sprachmodelle lokal mit einem Befehl aus",
+        "llamacpp": "Hochleistungs-Inferenz für LLMs auf Consumer-Hardware",
+        "openwebui": "Benutzerfreundliche Oberfläche für lokale KI-Modelle",
+        "huggingface": "Repository für Open-Source-KI-Modelle und Datensätze"
+      },
+      "dev": {
+        "vscode": "Kostenloser, leistungsstarker Code-Editor mit umfangreichen Erweiterungen",
+        "git": "Versionskontrollsystem zum Verfolgen von Code-Änderungen",
+        "python": "Vielseitige Programmiersprache, ideal für Anfänger"
+      },
+      "hardware": {
+        "raspberrypi": "Erschwinglicher Einplatinencomputer für Server und Projekte",
+        "pine64": "Open-Source-Hardware: Telefone, Laptops und Einplatinencomputer",
+        "librerouter": "Open-Hardware-Router für Gemeinschaftsnetzwerke"
+      }
+    },
+    "educators": {
+      "title": "Für Pädagogen",
+      "description": "Dieser Lehrplan ist für Lehrer, Gemeinschaftsorganisatoren und alle konzipiert, die Tech-Souveränität in ihre Gemeinschaft bringen möchten. Alle Materialien sind kostenlos und quelloffen.",
+      "benefit1": "Flexible Module, die sich an verschiedene Fähigkeitsstufen und Zeitbeschränkungen anpassen",
+      "benefit2": "Keine technische Vorerfahrung erforderlich—lernen Sie gemeinsam mit Ihren Schülern",
+      "benefit3": "Projektbasierter Ansatz hält Schüler mit realen Ergebnissen engagiert",
+      "requirements": {
+        "title": "Grundvoraussetzungen",
+        "item1": "Computerzugang (einer pro 2-3 Schüler ideal)",
+        "item2": "Internetverbindung (für Ersteinrichtung und Downloads)",
+        "item3": "Raspberry Pi oder alter Computer für Serverprojekte",
+        "item4": "Neugier und Bereitschaft zu experimentieren"
+      }
+    },
+    "community": {
+      "title": "Dem Netzwerk Beitreten",
+      "description": "Tech-Souveränität ist gemeinsam stärker. Verbinden Sie sich mit anderen Gemeinschaften, die unabhängige Infrastruktur aufbauen, teilen Sie Ressourcen und lernen Sie voneinander.",
+      "cta": {
+        "title": "Demnächst",
+        "description": "Wir bauen ein Netzwerk von Gemeinschaften auf, die sich der Tech-Souveränität verschrieben haben. Nehmen Sie Kontakt auf, um Teil der Gründungsgruppe zu werden.",
+        "button": "Kontakt Aufnehmen"
+      }
+    }
   }
 }

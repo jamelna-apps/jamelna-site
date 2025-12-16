@@ -1,106 +1,219 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
-import Button from '@/components/Button';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+
+// Scroll reveal hook
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = ref.current?.querySelectorAll('.reveal');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return ref;
+}
 
 export default function Home() {
   const t = useTranslations('home');
+  const locale = useLocale();
+  const containerRef = useScrollReveal();
+
+  const expertiseItems = [
+    {
+      title: t('valueProps.bridgeBuilder.title'),
+      desc: t('valueProps.bridgeBuilder.description'),
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+      ),
+    },
+    {
+      title: t('valueProps.aiPioneer.title'),
+      desc: t('valueProps.aiPioneer.description'),
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: t('valueProps.systemsDesigner.title'),
+      desc: t('valueProps.systemsDesigner.description'),
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const projects = [
+    { key: 'gyst', anchor: 'gyst-get-your-style-together' },
+    { key: 'smartiegoals', anchor: 'smartiegoals-org' },
+    { key: 'scenecraft', anchor: 'scenecraft' },
+    { key: 'script', anchor: 'script' },
+    { key: 'cs4all', anchor: 'nyc-cs4all' },
+    { key: 'coaching', anchor: 'cs-coaching-toolkit' },
+  ];
 
   return (
-    <div className="bg-white">
+    <div ref={containerRef} className="bg-deep">
       {/* Hero Section */}
       <Hero />
 
       {/* Core Expertise Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">
-            Core Expertise
+      <section className="py-24 bg-deep-alt relative overflow-hidden">
+        {/* Subtle gradient accent */}
+        <div
+          className="absolute top-0 left-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, rgba(0, 168, 255, 0.3), transparent)' }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h2 className="reveal text-4xl md:text-5xl font-display font-bold text-text-heading mb-16 -ml-4 md:-ml-8">
+            <span className="text-accent">/</span> Core Expertise
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: t('valueProps.bridgeBuilder.title'),
-                desc: t('valueProps.bridgeBuilder.description'),
-              },
-              {
-                title: t('valueProps.aiPioneer.title'),
-                desc: t('valueProps.aiPioneer.description'),
-              },
-              {
-                title: t('valueProps.systemsDesigner.title'),
-                desc: t('valueProps.systemsDesigner.description'),
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-lg border border-gray-200 hover:border-slate-500 transition-colors">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+          {/* Asymmetric grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Large card */}
+            <div className="reveal lg:col-span-7 glass-card p-8 stagger-1">
+              <div className="text-accent mb-4">{expertiseItems[0].icon}</div>
+              <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
+                {expertiseItems[0].title}
+              </h3>
+              <p className="text-text-primary/80 text-lg leading-relaxed">
+                {expertiseItems[0].desc}
+              </p>
+            </div>
+
+            {/* Stacked smaller cards */}
+            <div className="lg:col-span-5 flex flex-col gap-6">
+              {expertiseItems.slice(1).map((item, i) => (
+                <div
+                  key={i}
+                  className={`reveal glass-card p-6 stagger-${i + 2}`}
+                >
+                  <div className="text-accent mb-3">{item.icon}</div>
+                  <h3 className="text-xl font-display font-bold text-text-heading mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-text-primary/80 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Featured Work Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-deep relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              {t('featuredWork.title')}
+          <div className="reveal mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading -ml-4 md:-ml-8 lg:-ml-16">
+              <span className="text-accent">/</span> {t('featuredWork.title')}
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-text-muted mt-4 max-w-2xl">
               {t('featuredWork.description')}
             </p>
           </div>
 
+          {/* Masonry-style grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[
-              { key: 'gyst', anchor: 'gyst-get-your-style-together' },
-              { key: 'smartiegoals', anchor: 'smartiegoals-org' },
-              { key: 'scenecraft', anchor: 'scenecraft' },
-              { key: 'script', anchor: 'script' },
-              { key: 'cs4all', anchor: 'nyc-cs4all' },
-              { key: 'coaching', anchor: 'cs-coaching-toolkit' },
-            ].map((project, index) => (
+            {projects.map((project, index) => (
               <Link
                 key={index}
-                href={`/work#${project.anchor}`}
-                className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:border-slate-500 transition-colors block"
+                href={`/${locale}/work#${project.anchor}`}
+                className={`
+                  reveal glass-card p-6 group
+                  stagger-${(index % 5) + 1}
+                  ${index === 0 ? 'md:col-span-2 lg:col-span-1' : ''}
+                `}
               >
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <div className="flex items-start justify-between mb-4">
+                  <span className="text-xs font-mono text-text-muted">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <svg
+                    className="w-5 h-5 text-text-muted group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-display font-bold text-text-heading mb-2 group-hover:text-accent transition-colors">
                   {t(`featuredWork.projects.${project.key}.title`)}
                 </h3>
-                <p className="text-gray-700 text-sm">
+                <p className="text-text-primary/70 text-sm">
                   {t(`featuredWork.projects.${project.key}.subtitle`)}
                 </p>
               </Link>
             ))}
           </div>
 
-          <div className="text-center">
-            <Button href="/work" variant="outline" size="lg">
+          <div className="reveal text-center">
+            <Link
+              href={`/${locale}/work`}
+              className="
+                inline-flex items-center gap-2 px-6 py-3 rounded-lg
+                border border-accent/50 text-accent font-semibold
+                hover:bg-accent/10 hover:border-accent
+                transition-all duration-300
+              "
+            >
               {t('featuredWork.viewAll')}
-            </Button>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-600">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-32 bg-deep-alt relative overflow-hidden">
+        {/* Spotlight effect */}
+        <div
+          className="absolute inset-0 opacity-30"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0, 168, 255, 0.15), transparent 60%)',
+          }}
+        />
+
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
             {t('cta.title')}
           </h2>
-          <p className="text-xl text-slate-100 mb-10">
+          <p className="reveal text-xl text-text-muted mb-12 stagger-1">
             {t('cta.description')}
           </p>
-          <Button href="/contact" variant="secondary" size="lg">
-            {t('cta.button')}
-          </Button>
+          <div className="reveal stagger-2">
+            <Link href={`/${locale}/contact`} className="btn-glow inline-block text-lg">
+              {t('cta.button')}
+            </Link>
+          </div>
         </div>
       </section>
     </div>

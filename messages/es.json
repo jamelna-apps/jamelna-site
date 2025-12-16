@@ -3,6 +3,8 @@
     "home": "Inicio",
     "services": "Servicios",
     "work": "Proyectos",
+    "techSovereignty": "Soberanía Tech",
+    "k12cs": "Educación en Informática K-12",
     "photography": "Fotografía",
     "about": "Sobre Mí",
     "contact": "Contacto",
@@ -363,5 +365,389 @@
     "photos": "fotos",
     "manageGalleries": "Gestionar Galerías →",
     "noCoverImage": "Sin imagen de portada"
+  },
+  "k12CSEducation": {
+    "title": "Recursos de Educación en Informática K-12",
+    "subtitle": "Un repositorio completo de currículos gratuitos y de código abierto para líderes de escuelas y distritos.",
+    "targetAudience": "Para líderes de escuelas y distritos que construyen o expanden programas de informática",
+    "sectionNav": {
+      "curriculum": "Currículos",
+      "districtProfile": "Perfil del Distrito",
+      "aiPlanner": "Planificador IA",
+      "whyUse": "Por Qué Usarlo",
+      "standards": "Estándares",
+      "faq": "Preguntas Frecuentes",
+      "comingSoon": "Próximamente"
+    },
+    "gradeLevels": {
+      "elementary": "Primaria (K-5)",
+      "middle": "Secundaria (6-8)",
+      "high": "Bachillerato (9-12)",
+      "all": "Todos los Niveles"
+    },
+    "topics": {
+      "all": "Todos los Temas",
+      "cs": "Informática",
+      "ct": "Pensamiento Computacional",
+      "ai": "Inteligencia Artificial",
+      "cybersecurity": "Ciberseguridad",
+      "robotics": "Robótica",
+      "data": "Ciencia de Datos",
+      "web": "Desarrollo Web"
+    },
+    "pathways": {
+      "robotics": "Robótica",
+      "cybersecurity": "Ciberseguridad",
+      "ai": "Inteligencia Artificial",
+      "dataScience": "Ciencia de Datos",
+      "webDev": "Desarrollo Web",
+      "gameDev": "Desarrollo de Videojuegos"
+    },
+    "repository": {
+      "title": "Repositorio de Currículos",
+      "description": "Explora recursos curriculares gratuitos y de código abierto de todo Estados Unidos.",
+      "filterLabel": "Filtrar por nivel y tema:",
+      "gradeLevelFilter": "Nivel Escolar",
+      "topicFilter": "Tema"
+    },
+    "profile": {
+      "title": "Perfil de Distrito",
+      "description": "Comparte información sobre tu escuela o distrito para recibir recomendaciones personalizadas (próximamente).",
+      "schoolName": "Nombre de la Escuela/Distrito",
+      "schoolNamePlaceholder": "Ingresa el nombre de tu escuela o distrito",
+      "state": "Estado",
+      "statePlaceholder": "Selecciona tu estado",
+      "gradeLevelsLabel": "Niveles de Grado",
+      "currentOfferings": "Ofertas Actuales de Informática",
+      "currentOfferingsPlaceholder": "Describe tus programas actuales de informática, si los hay...",
+      "pathwaysLabel": "Áreas de Interés",
+      "resources": "Recursos Disponibles",
+      "resourcesPlaceholder": "Describe tu presupuesto, tecnología y personal disponible...",
+      "submit": "Enviar Perfil",
+      "successTitle": "¡Perfil Enviado!",
+      "successMessage": "Gracias por compartir información sobre tu distrito. Pronto nos pondremos en contacto con recomendaciones personalizadas."
+    },
+    "comingSoon": {
+      "title": "Asistente de Planificación con IA Próximamente",
+      "description": "Estamos desarrollando un asistente con IA que te ayudará a diseñar alcances y secuencias personalizadas alineadas con los estándares de informática de tu estado.",
+      "emailLabel": "Recibe notificación cuando lancemos",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "emailButton": "Notificarme",
+      "emailSuccess": "¡Gracias! Te notificaremos cuando lancemos el Asistente de Planificación con IA."
+    },
+    "valueProps": {
+      "title": "¿Por Qué Usar Este Repositorio?",
+      "allFree": {
+        "title": "100% Recursos Gratuitos",
+        "description": "Todos los currículos listados son gratuitos o de código abierto, eliminando barreras de costo para una educación de calidad."
+      },
+      "vetted": {
+        "title": "Curados y Verificados",
+        "description": "Recursos de organizaciones confiables como Code.org, MIT, Harvard y Raspberry Pi Foundation."
+      },
+      "aligned": {
+        "title": "Alineados con Estándares",
+        "description": "Muchos currículos están alineados con los estándares CSTA, ISTE y estatales para facilitar la implementación."
+      },
+      "comprehensive": {
+        "title": "Cobertura K-12",
+        "description": "Desde ScratchJr para jardín de infantes hasta AP Computer Science para estudiantes de bachillerato."
+      }
+    },
+    "standards": {
+      "title": "Alineación con Estándares Estatales",
+      "description": "Muchos estados han adoptado estándares de educación en informática. Aquí hay recursos para ayudarte a alinear tu currículo.",
+      "csta": {
+        "title": "Estándares CSTA K-12",
+        "description": "Los estándares de la Asociación de Profesores de Informática proporcionan un marco integral para la educación K-12 en informática.",
+        "link": "Ver Estándares CSTA"
+      },
+      "states": {
+        "title": "Requisitos por Estado",
+        "description": "Consulta los requisitos de educación en informática de tu estado y el estado de adopción de estándares.",
+        "link": "Mapa de Políticas CS por Estado"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿Cómo elijo el currículo adecuado para mi escuela?",
+        "answer": "Considera tus niveles de grado, experiencia de los maestros, tecnología disponible y presupuesto. Comienza con un nivel de grado y expande gradualmente. Code.org y CS Unplugged son excelentes puntos de entrada para escuelas nuevas en informática."
+      },
+      "q2": {
+        "question": "¿Los maestros necesitan experiencia en informática para enseñar estos currículos?",
+        "answer": "La mayoría de los currículos están diseñados para maestros sin títulos en informática. Incluyen guías completas para maestros, recursos de desarrollo profesional y, a menudo, capacitación gratuita. Bootstrap y Code.org ofrecen un apoyo particularmente fuerte."
+      },
+      "q3": {
+        "question": "¿Cómo puedo financiar la educación en informática en mi distrito?",
+        "answer": "Muchos distritos usan fondos del Título I, Título II o Título IV-A. Los fondos ESSER también han apoyado iniciativas de informática. Además, muchos currículos son completamente gratuitos, reduciendo los costos de implementación."
+      },
+      "q4": {
+        "question": "¿Qué tecnología necesitamos?",
+        "answer": "Los requisitos varían según el currículo. CS Unplugged no requiere computadoras. Scratch funciona en Chromebooks y tabletas. Algunos cursos de bachillerato se benefician de dispositivos 1:1. Consulta los requisitos técnicos de cada currículo."
+      }
+    },
+    "aiPlanner": {
+      "title": "Asistente de Planificación con IA",
+      "subtitle": "Diseña tu programa de educación K-12 en informática con orientación impulsada por IA",
+      "welcome": {
+        "title": "Bienvenido al Asistente de Planificación con IA",
+        "description": "Puedo ayudarte a crear un plan integral de educación K-12 en informática adaptado a tu distrito. Pregúntame sobre recomendaciones de currículo, secuencia y alcance, o alineación con estándares."
+      },
+      "chat": {
+        "placeholder": "Pregunta sobre planificación de currículo K-12 en informática...",
+        "placeholderWithDistrict": "Pregunta sobre currículo de informática para {district}...",
+        "clearChat": "Limpiar chat",
+        "sendMessage": "Enviar mensaje"
+      },
+      "sources": {
+        "title": "Fuentes",
+        "csta": "Estándar CSTA",
+        "statePolicy": "Política Estatal",
+        "curriculum": "Currículo",
+        "scopeSequence": "Alcance y Secuencia"
+      },
+      "suggestedPrompts": {
+        "scopeSequence": "Crea un alcance y secuencia K-12 completo para educación en informática alineado con nuestros estándares estatales.",
+        "curriculum": "¿Qué currículos gratuitos de informática recomendarías para nuestros niveles de grado y trayectorias?",
+        "csta": "¿Cómo podemos alinear nuestro programa de informática con los estándares CSTA en todos los niveles?",
+        "implementation": "Ayúdanos a crear un plan de implementación por fases para lanzar la educación en informática en nuestro distrito."
+      },
+      "labels": {
+        "scopeSequence": "Alcance y Secuencia K-12",
+        "curriculum": "Recomendaciones de Currículo",
+        "csta": "Alineación con Estándares CSTA",
+        "implementation": "Hoja de Ruta de Implementación"
+      },
+      "errors": {
+        "generic": "Ocurrió un error. Por favor intenta de nuevo.",
+        "networkError": "No se pudo conectar. Por favor verifica tu conexión a internet."
+      }
+    }
+  },
+  "techSovereignty": {
+    "hero": {
+      "title": "Soberanía Tecnológica",
+      "subtitle": "Construye tus propias redes. Controla tus propios datos. Adueñate de tu futuro digital.",
+      "description": "Un currículo basado en proyectos que enseña a estudiantes y comunidades a construir infraestructura tecnológica independiente—desde redes locales hasta IA autoalojada—liberándose de la dependencia de la tecnología corporativa.",
+      "ctaPrimary": "Explorar Currículo",
+      "ctaSecondary": "Ver Herramientas"
+    },
+    "why": {
+      "title": "¿Por Qué Soberanía Tecnológica?",
+      "intro": "Las grandes empresas tecnológicas extraen nuestros datos, manipulan nuestra atención y nos hacen dependientes de sistemas que no controlamos. Hay otra manera.",
+      "problem": {
+        "title": "El Problema",
+        "description": "Las plataformas corporativas recolectan datos personales, usan algoritmos para manipular comportamientos y crean dependencia de sistemas propietarios costosos—perjudicando especialmente a las comunidades de bajos ingresos y marginadas."
+      },
+      "vision": {
+        "title": "Nuestra Visión",
+        "description": "Comunidades que poseen su propia infraestructura tecnológica: redes locales, servicios autoalojados y herramientas de IA que sirven a las personas—no a las ganancias corporativas."
+      },
+      "benefit": {
+        "title": "El Beneficio",
+        "description": "Independencia digital, privacidad de datos, poder económico local y las habilidades para construir y mantener tecnología que refleje los valores de la comunidad."
+      }
+    },
+    "curriculum": {
+      "title": "Currículo Basado en Proyectos",
+      "description": "Aprende construyendo. Cada pista te lleva desde los fundamentos hasta proyectos del mundo real que sirven a tu comunidad."
+    },
+    "tracks": {
+      "networking": {
+        "title": "Fundamentos de Redes",
+        "description": "Comprende cómo funciona internet y construye tus propias redes desde cero.",
+        "project1": {
+          "title": "Construye Tu Primera Red Local",
+          "description": "Configura una red doméstica con router, switch y múltiples dispositivos. Aprende direcciones IP, DHCP y solución básica de problemas de red.",
+          "difficulty": "Principiante",
+          "duration": "2-3 semanas"
+        },
+        "project2": {
+          "title": "Entendiendo los Protocolos de Internet",
+          "description": "Profundiza en TCP/IP, DNS, HTTP y otros protocolos que hacen funcionar internet. Usa herramientas de captura de paquetes para ver datos en movimiento.",
+          "difficulty": "Intermedio",
+          "duration": "3-4 semanas"
+        },
+        "project3": {
+          "title": "Creando una Red Mesh",
+          "description": "Construye una red mesh resiliente que no dependa de infraestructura centralizada. Conecta vecinos y comparte recursos.",
+          "difficulty": "Intermedio",
+          "duration": "4-6 semanas"
+        },
+        "project4": {
+          "title": "Infraestructura de Internet Comunitaria",
+          "description": "Diseña y planifica un ISP comunitario o red inalámbrica. Comprende los requisitos legales, técnicos y organizativos.",
+          "difficulty": "Avanzado",
+          "duration": "8-12 semanas"
+        }
+      },
+      "selfHosted": {
+        "title": "Servicios Autoalojados",
+        "description": "Reemplaza los servicios de nube corporativos con los tuyos propios—manteniendo tus datos bajo tu control.",
+        "project1": {
+          "title": "Configura Tu Propio Servidor",
+          "description": "Transforma un ordenador viejo o Raspberry Pi en un servidor. Aprende lo básico de Linux, acceso remoto y administración de sistemas.",
+          "difficulty": "Principiante",
+          "duration": "2-3 semanas"
+        },
+        "project2": {
+          "title": "Almacenamiento en la Nube Autoalojado",
+          "description": "Despliega Nextcloud para reemplazar Google Drive o Dropbox. Configura sincronización de archivos, compartición y documentos colaborativos.",
+          "difficulty": "Intermedio",
+          "duration": "2-3 semanas"
+        },
+        "project3": {
+          "title": "Plataforma de Comunicación Comunitaria",
+          "description": "Configura Matrix/Element para mensajería segura y descentralizada. Crea un centro de comunicación para tu comunidad u organización.",
+          "difficulty": "Intermedio",
+          "duration": "3-4 semanas"
+        },
+        "project4": {
+          "title": "Aplicaciones Local-First",
+          "description": "Construye y despliega aplicaciones que funcionan sin conexión y se sincronizan cuando hay conexión. Comprende el movimiento de software local-first.",
+          "difficulty": "Avanzado",
+          "duration": "6-8 semanas"
+        }
+      },
+      "ai": {
+        "title": "Independencia en IA/LLM",
+        "description": "Ejecuta modelos de IA potentes en tu propio hardware—sin nube requerida, sin datos saliendo de tu comunidad.",
+        "project1": {
+          "title": "Entendiendo los Modelos de IA",
+          "description": "Aprende cómo funcionan los modelos de lenguaje grandes, sus capacidades y limitaciones, y las consideraciones éticas del despliegue de IA.",
+          "difficulty": "Principiante",
+          "duration": "2-3 semanas"
+        },
+        "project2": {
+          "title": "Ejecutando LLMs Locales",
+          "description": "Usa Ollama o llama.cpp para ejecutar modelos de IA de código abierto en tu propio ordenador. Compara rendimiento y capacidades.",
+          "difficulty": "Intermedio",
+          "duration": "2-3 semanas"
+        },
+        "project3": {
+          "title": "Ajuste Fino para Necesidades Comunitarias",
+          "description": "Personaliza modelos de IA para aplicaciones comunitarias específicas—idioma local, contexto cultural o conocimiento especializado.",
+          "difficulty": "Avanzado",
+          "duration": "6-8 semanas"
+        },
+        "project4": {
+          "title": "Construyendo Herramientas con IA",
+          "description": "Crea aplicaciones prácticas usando IA local: asistentes de documentos, herramientas de traducción, ayudas educativas o recursos comunitarios.",
+          "difficulty": "Avanzado",
+          "duration": "8-12 semanas"
+        }
+      },
+      "appDev": {
+        "title": "Desarrollo de Aplicaciones",
+        "description": "Construye aplicaciones que sirvan a tu comunidad—redes sociales, directorios de recursos y herramientas para organización local.",
+        "project1": {
+          "title": "Fundamentos de Desarrollo Web",
+          "description": "Aprende HTML, CSS y JavaScript. Construye tus primeros sitios web estáticos y comprende cómo funciona la web.",
+          "difficulty": "Principiante",
+          "duration": "4-6 semanas"
+        },
+        "project2": {
+          "title": "Construyendo Apps Comunitarias",
+          "description": "Crea aplicaciones web con bases de datos y cuentas de usuario. Construye herramientas como calendarios de eventos, directorios de recursos o tablones de anuncios.",
+          "difficulty": "Intermedio",
+          "duration": "6-8 semanas"
+        },
+        "project3": {
+          "title": "Redes Sociales Descentralizadas",
+          "description": "Configura y personaliza plataformas sociales federadas como Mastodon. Comprende ActivityPub y el fediverso.",
+          "difficulty": "Intermedio",
+          "duration": "4-6 semanas"
+        },
+        "project4": {
+          "title": "Desarrollo de Apps Móviles",
+          "description": "Construye apps móviles para iOS y Android usando React Native o Flutter. Despliega apps que funcionan sin conexión.",
+          "difficulty": "Avanzado",
+          "duration": "10-12 semanas"
+        }
+      },
+      "community": {
+        "title": "Construcción de Comunidad",
+        "description": "La tecnología es tan poderosa como la comunidad que la usa. Aprende a enseñar, organizar y sostener.",
+        "project1": {
+          "title": "Enseñando Tecnología en Tu Comunidad",
+          "description": "Diseña y facilita talleres para compartir habilidades técnicas. Aprende pedagogía, accesibilidad y prácticas de enseñanza inclusiva.",
+          "difficulty": "Principiante",
+          "duration": "3-4 semanas"
+        },
+        "project2": {
+          "title": "Conectando con Otras Comunidades",
+          "description": "Construye redes entre comunidades que hacen trabajo similar. Comparte recursos, conocimiento y apoyo mutuo.",
+          "difficulty": "Intermedio",
+          "duration": "Continuo"
+        },
+        "project3": {
+          "title": "Cooperativas Tecnológicas Sostenibles",
+          "description": "Explora modelos de gobernanza, estrategias de financiación y estructuras organizativas para tecnología de propiedad comunitaria.",
+          "difficulty": "Avanzado",
+          "duration": "Continuo"
+        }
+      }
+    },
+    "tools": {
+      "title": "Herramientas de Código Abierto",
+      "description": "Una colección curada de herramientas gratuitas y de código abierto para construir infraestructura tecnológica independiente.",
+      "categories": {
+        "networking": "Redes",
+        "selfHosting": "Autoalojamiento",
+        "llm": "Herramientas de IA/LLM",
+        "dev": "Desarrollo",
+        "hardware": "Hardware"
+      },
+      "networking": {
+        "openwrt": "Firmware de router de código abierto que te da control total de tu red",
+        "pihole": "Bloqueo de anuncios a nivel de red y privacidad DNS",
+        "wireguard": "Protocolo VPN moderno y rápido para conexiones seguras"
+      },
+      "selfHosting": {
+        "nextcloud": "Almacenamiento de archivos autoalojado, calendario, contactos y colaboración",
+        "matrix": "Plataforma de comunicación descentralizada y cifrada",
+        "mastodon": "Red social federada libre de control corporativo"
+      },
+      "llm": {
+        "ollama": "Ejecuta modelos de lenguaje grandes localmente con un solo comando",
+        "llamacpp": "Inferencia de alto rendimiento para LLMs en hardware de consumidor",
+        "openwebui": "Interfaz amigable para modelos de IA locales",
+        "huggingface": "Repositorio de modelos de IA y conjuntos de datos de código abierto"
+      },
+      "dev": {
+        "vscode": "Editor de código gratuito y potente con extensiones extensivas",
+        "git": "Sistema de control de versiones para rastrear cambios en el código",
+        "python": "Lenguaje de programación versátil ideal para principiantes"
+      },
+      "hardware": {
+        "raspberrypi": "Ordenador de placa única asequible para servidores y proyectos",
+        "pine64": "Hardware de código abierto: teléfonos, portátiles y ordenadores de placa única",
+        "librerouter": "Router de hardware abierto diseñado para redes comunitarias"
+      }
+    },
+    "educators": {
+      "title": "Para Educadores",
+      "description": "Este currículo está diseñado para profesores, organizadores comunitarios y cualquier persona que quiera llevar la soberanía tecnológica a su comunidad. Todos los materiales son gratuitos y de código abierto.",
+      "benefit1": "Módulos flexibles que se adaptan a diferentes niveles de habilidad y restricciones de tiempo",
+      "benefit2": "No se requiere experiencia técnica previa—aprende junto a tus estudiantes",
+      "benefit3": "Enfoque basado en proyectos que mantiene a los estudiantes comprometidos con resultados del mundo real",
+      "requirements": {
+        "title": "Requisitos Básicos",
+        "item1": "Acceso a ordenadores (uno por cada 2-3 estudiantes es ideal)",
+        "item2": "Conexión a internet (para configuración inicial y descargas)",
+        "item3": "Raspberry Pi u ordenador antiguo para proyectos de servidor",
+        "item4": "Curiosidad y disposición para experimentar"
+      }
+    },
+    "community": {
+      "title": "Únete a la Red",
+      "description": "La soberanía tecnológica es más fuerte junta. Conéctate con otras comunidades que construyen infraestructura independiente, comparte recursos y aprende mutuamente.",
+      "cta": {
+        "title": "Próximamente",
+        "description": "Estamos construyendo una red de comunidades comprometidas con la soberanía tecnológica. Ponte en contacto para ser parte del grupo fundador.",
+        "button": "Ponerse en Contacto"
+      }
+    }
   }
 }
