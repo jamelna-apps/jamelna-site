@@ -77,11 +77,11 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-deep">
-      {/* Animated gradient background */}
+      {/* Animated gradient background (GYST-inspired warm + blue accents) */}
       <div
-        className="absolute inset-0 opacity-50"
+        className="absolute inset-0 opacity-60"
         style={{
-          background: 'radial-gradient(ellipse at 30% 20%, rgba(0, 168, 255, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)',
+          background: 'radial-gradient(ellipse at 30% 20%, rgba(143, 168, 200, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(201, 112, 77, 0.1) 0%, transparent 50%)',
         }}
       />
 
@@ -206,7 +206,7 @@ const Hero = () => {
         >
           <a
             href={`/${locale}/contact`}
-            className="btn-glow text-center"
+            className="btn-warm text-center"
           >
             {t('ctaPrimary')}
           </a>
@@ -214,8 +214,8 @@ const Hero = () => {
             href={`/${locale}/work`}
             className="
               px-6 py-3 rounded-lg font-semibold text-center
-              border border-accent/50 text-accent
-              hover:bg-accent/10 hover:border-accent
+              border border-primary/50 text-primary
+              hover:bg-primary/10 hover:border-primary
               transition-all duration-300
             "
           >

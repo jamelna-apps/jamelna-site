@@ -9,27 +9,59 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Dark backgrounds
-        deep: '#0a0a0f',
-        'deep-alt': '#0d1117',
-        'deep-card': '#1a1a2e',
-        'deep-border': '#16161a',
-        'deep-footer': '#050508',
-        // Accent colors
+        // Dark backgrounds (GYST-inspired)
+        deep: {
+          DEFAULT: '#1C1C1E',
+          darker: '#0a0a0f',
+          alt: '#141416',
+          card: '#2C2C2E',
+          border: '#38383A',
+          footer: '#121214',
+        },
+        // Primary - Glaucous Blue (from GYST)
+        primary: {
+          DEFAULT: '#8FA8C8',
+          light: '#9BB5D4',
+          dark: '#6082B6',
+          glow: 'rgba(143, 168, 200, 0.4)',
+        },
+        // Accent - Electric Blue (site identity)
         accent: {
           DEFAULT: '#00a8ff',
           cyan: '#00d4ff',
           glow: 'rgba(0, 168, 255, 0.4)',
         },
-        // Secret room accent
+        // Warm accent - Rust/Burnt Orange (from GYST)
+        warm: {
+          DEFAULT: '#C9704D',
+          light: '#D4896A',
+          dark: '#B7410E',
+          glow: 'rgba(201, 112, 77, 0.4)',
+        },
+        // Secret room accent - Purple/Violet
         secret: {
           DEFAULT: '#8b5cf6',
+          light: '#a78bfa',
           glow: 'rgba(139, 92, 246, 0.4)',
         },
+        // Highlight colors (GYST rewards-inspired)
+        highlight: {
+          gold: '#FFD700',
+          orange: '#FFA500',
+          turquoise: '#40E0D0',
+          green: '#34C759',
+        },
         // Text colors
-        'text-primary': '#e4e4e7',
+        text: {
+          primary: '#FFFFFF',
+          secondary: '#D1D1D6',
+          muted: '#636366',
+          heading: '#fafafa',
+        },
+        // Legacy text colors (for compatibility)
+        'text-primary': '#FFFFFF',
         'text-heading': '#fafafa',
-        'text-muted': '#71717a',
+        'text-muted': '#636366',
       },
       fontFamily: {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],

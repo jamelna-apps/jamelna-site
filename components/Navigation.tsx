@@ -127,14 +127,14 @@ const Navigation = () => {
           fixed top-0 left-0 right-0 z-50
           transition-all duration-500
           ${shouldShowNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
-          ${isScrolled ? 'bg-deep/90 backdrop-blur-lg border-b border-deep-border' : 'bg-transparent'}
+          ${isScrolled ? 'bg-deep/95 backdrop-blur-lg border-b border-deep-border' : 'bg-transparent'}
         `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href={`/${locale}`} tabIndex={0} className="flex items-center gap-2 group">
-              <span className="text-2xl font-display font-bold text-text-heading group-hover:text-accent transition-colors">
+              <span className="text-2xl font-display font-bold text-text-heading group-hover:text-warm transition-colors">
                 JAMELNA
               </span>
             </Link>
@@ -149,14 +149,14 @@ const Navigation = () => {
                   className={`
                     text-sm font-medium transition-all duration-300 relative
                     ${isActive(link.href)
-                      ? 'text-accent'
-                      : 'text-text-primary hover:text-accent'
+                      ? 'text-primary'
+                      : 'text-text-primary hover:text-warm'
                     }
                   `}
                 >
                   {link.label}
                   {isActive(link.href) && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent rounded-full" />
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
                 </Link>
               ))}
@@ -169,7 +169,7 @@ const Navigation = () => {
                   aria-expanded={isLangMenuOpen}
                   aria-haspopup="true"
                   aria-controls="language-menu"
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-text-primary hover:text-accent rounded-lg hover:bg-deep-card/50 transition-all"
+                  className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-text-primary hover:text-primary rounded-lg hover:bg-deep-card/50 transition-all"
                 >
                   <span>{currentLanguage.flag}</span>
                   <span>{currentLanguage.code.toUpperCase()}</span>
@@ -188,8 +188,8 @@ const Navigation = () => {
                         role="menuitem"
                         className={`w-full text-left px-4 py-2 text-sm flex items-center gap-3 transition-colors ${
                           locale === lang.code
-                            ? 'bg-accent/10 text-accent'
-                            : 'text-text-primary hover:bg-deep-border/50 hover:text-accent'
+                            ? 'bg-primary/10 text-primary'
+                            : 'text-text-primary hover:bg-deep-border/50 hover:text-warm'
                         }`}
                       >
                         <span>{lang.flag}</span>
@@ -234,8 +234,8 @@ const Navigation = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     isActive(link.href)
-                      ? 'bg-accent/10 text-accent'
-                      : 'text-text-primary hover:bg-deep-card/50 hover:text-accent'
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-text-primary hover:bg-deep-card/50 hover:text-warm'
                   }`}
                 >
                   {link.label}
@@ -257,8 +257,8 @@ const Navigation = () => {
                       role="menuitem"
                       className={`w-full text-left px-4 py-2 rounded-lg text-sm flex items-center gap-3 transition-all ${
                         locale === lang.code
-                          ? 'bg-accent/10 text-accent'
-                          : 'text-text-primary hover:bg-deep-card/50 hover:text-accent'
+                          ? 'bg-primary/10 text-primary'
+                          : 'text-text-primary hover:bg-deep-card/50 hover:text-warm'
                       }`}
                     >
                       <span>{lang.flag}</span>

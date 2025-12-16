@@ -1,18 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark theme colors */
-  --background: #0a0a0f;
-  --foreground: #e4e4e7;
+  /* Dark theme colors (GYST-inspired) */
+  --background: #1C1C1E;
+  --background-darker: #0a0a0f;
+  --foreground: #FFFFFF;
+  --foreground-secondary: #D1D1D6;
+  --foreground-muted: #636366;
 
-  /* Accent colors */
+  /* Primary - Glaucous Blue (from GYST) */
+  --primary: #8FA8C8;
+  --primary-light: #9BB5D4;
+  --primary-dark: #6082B6;
+  --primary-glow: rgba(143, 168, 200, 0.4);
+
+  /* Accent - Electric Blue (site identity) */
   --accent: #00a8ff;
   --accent-cyan: #00d4ff;
   --accent-glow: rgba(0, 168, 255, 0.4);
 
+  /* Warm accent - Rust/Burnt Orange (from GYST) */
+  --warm: #C9704D;
+  --warm-light: #D4896A;
+  --warm-dark: #B7410E;
+  --warm-glow: rgba(201, 112, 77, 0.4);
+
   /* Secret room accent */
   --secret: #8b5cf6;
   --secret-glow: rgba(139, 92, 246, 0.4);
+
+  /* Highlight colors */
+  --gold: #FFD700;
+  --turquoise: #40E0D0;
 }
 
 html {
@@ -53,16 +72,16 @@ body::before {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #1C1C1E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1a1a2e;
+  background: #38383A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00a8ff;
+  background: var(--primary);
 }
 
 /* Accessibility: Skip to content link */
@@ -100,20 +119,26 @@ textarea:focus-visible {
   box-shadow: 0 0 0 4px rgba(0, 168, 255, 0.2);
 }
 
-/* Dark glass card effect */
+/* Dark glass card effect (GYST-inspired) */
 .glass-card {
-  background: rgba(26, 26, 46, 0.6);
+  background: rgba(44, 44, 46, 0.6);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(56, 56, 58, 0.5);
   border-radius: 1rem;
   transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-  background: rgba(26, 26, 46, 0.8);
-  border-color: rgba(0, 168, 255, 0.3);
-  box-shadow: 0 0 30px rgba(0, 168, 255, 0.1);
+  background: rgba(44, 44, 46, 0.9);
+  border-color: var(--warm-glow);
+  box-shadow: 0 0 30px var(--warm-glow);
   transform: translateY(-2px);
+}
+
+/* Glass card with primary accent */
+.glass-card-primary:hover {
+  border-color: var(--primary-glow);
+  box-shadow: 0 0 30px var(--primary-glow);
 }
 
 /* Glow text effect */
@@ -173,10 +198,10 @@ textarea:focus-visible {
   opacity: 1;
 }
 
-/* Button glow effect */
+/* Button glow effect - Electric Blue */
 .btn-glow {
   position: relative;
-  background: #00a8ff;
+  background: var(--accent);
   color: #0a0a0f;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
@@ -185,8 +210,42 @@ textarea:focus-visible {
 }
 
 .btn-glow:hover {
-  background: #00d4ff;
-  box-shadow: 0 0 30px rgba(0, 168, 255, 0.5);
+  background: var(--accent-cyan);
+  box-shadow: 0 0 30px var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+/* Warm button - Rust/Orange (GYST-inspired) */
+.btn-warm {
+  position: relative;
+  background: var(--warm);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-warm:hover {
+  background: var(--warm-light);
+  box-shadow: 0 0 30px var(--warm-glow);
+  transform: translateY(-1px);
+}
+
+/* Primary button - Glaucous Blue (GYST-inspired) */
+.btn-primary {
+  position: relative;
+  background: var(--primary);
+  color: #1C1C1E;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  box-shadow: 0 0 30px var(--primary-glow);
   transform: translateY(-1px);
 }
 

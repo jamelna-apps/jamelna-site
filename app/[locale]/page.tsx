@@ -81,26 +81,26 @@ export default function Home() {
 
       {/* Core Expertise Section */}
       <section className="py-24 bg-deep-alt relative overflow-hidden">
-        {/* Subtle gradient accent */}
+        {/* Subtle gradient accent (GYST-inspired primary blue) */}
         <div
           className="absolute top-0 left-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(0, 168, 255, 0.3), transparent)' }}
+          style={{ background: 'radial-gradient(circle, rgba(143, 168, 200, 0.4), transparent)' }}
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="reveal text-4xl md:text-5xl font-display font-bold text-text-heading mb-16 -ml-4 md:-ml-8">
-            <span className="text-accent">/</span> Core Expertise
+            <span className="text-warm">/</span> Core Expertise
           </h2>
 
           {/* Asymmetric grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Large card */}
             <div className="reveal lg:col-span-7 glass-card p-8 stagger-1">
-              <div className="text-accent mb-4">{expertiseItems[0].icon}</div>
+              <div className="text-warm mb-4">{expertiseItems[0].icon}</div>
               <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
                 {expertiseItems[0].title}
               </h3>
-              <p className="text-text-primary/80 text-lg leading-relaxed">
+              <p className="text-text-secondary text-lg leading-relaxed">
                 {expertiseItems[0].desc}
               </p>
             </div>
@@ -112,11 +112,11 @@ export default function Home() {
                   key={i}
                   className={`reveal glass-card p-6 stagger-${i + 2}`}
                 >
-                  <div className="text-accent mb-3">{item.icon}</div>
+                  <div className="text-primary mb-3">{item.icon}</div>
                   <h3 className="text-xl font-display font-bold text-text-heading mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-text-primary/80 leading-relaxed">
+                  <p className="text-text-secondary leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -131,7 +131,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="reveal mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading -ml-4 md:-ml-8 lg:-ml-16">
-              <span className="text-accent">/</span> {t('featuredWork.title')}
+              <span className="text-primary">/</span> {t('featuredWork.title')}
             </h2>
             <p className="text-xl text-text-muted mt-4 max-w-2xl">
               {t('featuredWork.description')}
@@ -155,7 +155,7 @@ export default function Home() {
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <svg
-                    className="w-5 h-5 text-text-muted group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    className="w-5 h-5 text-text-muted group-hover:text-warm group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -163,10 +163,10 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-display font-bold text-text-heading mb-2 group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-display font-bold text-text-heading mb-2 group-hover:text-warm transition-colors">
                   {t(`featuredWork.projects.${project.key}.title`)}
                 </h3>
-                <p className="text-text-primary/70 text-sm">
+                <p className="text-text-secondary text-sm">
                   {t(`featuredWork.projects.${project.key}.subtitle`)}
                 </p>
               </Link>
@@ -178,8 +178,8 @@ export default function Home() {
               href={`/${locale}/work`}
               className="
                 inline-flex items-center gap-2 px-6 py-3 rounded-lg
-                border border-accent/50 text-accent font-semibold
-                hover:bg-accent/10 hover:border-accent
+                border border-primary/50 text-primary font-semibold
+                hover:bg-primary/10 hover:border-primary
                 transition-all duration-300
               "
             >
@@ -194,11 +194,11 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-32 bg-deep-alt relative overflow-hidden">
-        {/* Spotlight effect */}
+        {/* Spotlight effect (GYST-inspired warm glow) */}
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            background: 'radial-gradient(ellipse at center, rgba(0, 168, 255, 0.15), transparent 60%)',
+            background: 'radial-gradient(ellipse at center, rgba(201, 112, 77, 0.2), transparent 60%)',
           }}
         />
 
@@ -210,7 +210,7 @@ export default function Home() {
             {t('cta.description')}
           </p>
           <div className="reveal stagger-2">
-            <Link href={`/${locale}/contact`} className="btn-glow inline-block text-lg">
+            <Link href={`/${locale}/contact`} className="btn-warm inline-block text-lg">
               {t('cta.button')}
             </Link>
           </div>
