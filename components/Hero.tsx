@@ -8,7 +8,7 @@ import { useLocale, useTranslations } from 'next-intl';
 const JAMELNA_SEQUENCE = ['J', 'A', 'M', 'E', 'L', 'N', 'A'];
 
 // Name parts with their JAMELNA letter indices
-// Joe Alexander Meléndez-NAharro
+// Joe Alexander MELéndez-NAharro
 // J=0, A=1, M=2, E(é)=3, L=4, N=5, A=6
 const NAME_PARTS = [
   { text: 'J', isJamelna: true, jamelnaIndex: 0 },
@@ -16,9 +16,9 @@ const NAME_PARTS = [
   { text: 'A', isJamelna: true, jamelnaIndex: 1 },
   { text: 'lexander ', isJamelna: false },
   { text: 'M', isJamelna: true, jamelnaIndex: 2 },
-  { text: 'e', isJamelna: false },
-  { text: 'l', isJamelna: true, jamelnaIndex: 4 }, // L in Meléndez
-  { text: 'é', isJamelna: true, jamelnaIndex: 3 }, // E (accented) in Meléndez
+  { text: 'E', isJamelna: false }, // uppercase E (not the JAMELNA E)
+  { text: 'L', isJamelna: true, jamelnaIndex: 4 }, // uppercase L
+  { text: 'é', isJamelna: true, jamelnaIndex: 3 }, // lowercase accented é (this is JAMELNA E)
   { text: 'ndez-', isJamelna: false },
   { text: 'N', isJamelna: true, jamelnaIndex: 5 },
   { text: 'A', isJamelna: true, jamelnaIndex: 6 },
