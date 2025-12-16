@@ -39,10 +39,10 @@ export default function ServicesPage() {
     <PageWrapper>
       {/* Page Header */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          {t('title')}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+          <span className="text-warm">/</span> {t('title')}
         </h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
           {t('description')}
         </p>
       </div>

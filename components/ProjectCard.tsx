@@ -29,21 +29,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const t = useTranslations('work');
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-8 mb-12 hover:border-slate-500 transition-colors">
+    <div className="glass-card p-8 mb-12">
       {/* Header */}
       <div className="mb-6">
         <div className="flex flex-wrap items-center justify-between mb-2 gap-4">
-          <h3 className="text-sm font-bold text-slate-600 uppercase tracking-wider">
+          <h3 className="text-sm font-bold text-warm uppercase tracking-wider font-mono">
             {role}
           </h3>
           <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600">{timeline}</span>
+            <span className="text-sm text-text-muted">{timeline}</span>
             {website && (
               <a
                 href={website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-slate-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-700 transition-colors"
+                className="btn-primary inline-flex items-center gap-2 text-sm py-2"
               >
                 Visit Site
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
           </div>
         </div>
-        <p className="text-lg text-gray-700">{organization}</p>
+        <p className="text-lg text-text-secondary">{organization}</p>
       </div>
 
       {/* Screenshot Gallery */}
@@ -63,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-video rounded-lg overflow-hidden border border-gray-200 hover:border-slate-500 transition-colors group cursor-pointer"
+                className="relative aspect-video rounded-lg overflow-hidden border border-deep-border hover:border-primary/50 transition-colors group cursor-pointer"
               >
                 <Image
                   src={image}
@@ -79,41 +79,41 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* The Challenge */}
       <div className="mb-6">
-        <h4 className="text-lg font-bold text-gray-900 mb-3">
+        <h4 className="text-lg font-bold text-warm mb-3">
           {t('challenge')}
         </h4>
-        <p className="text-gray-700 leading-relaxed">{challenge}</p>
+        <p className="text-text-secondary leading-relaxed">{challenge}</p>
       </div>
 
       {/* What I Did */}
       <div className="mb-6">
-        <h4 className="text-lg font-bold text-gray-900 mb-3">
+        <h4 className="text-lg font-bold text-primary mb-3">
           {t('whatIDid')}
         </h4>
         <ul className="space-y-2">
           {whatIDid.map((item, index) => (
             <li key={index} className="flex items-start">
-              <span className="text-slate-600 mr-2 mt-1">→</span>
-              <span className="text-gray-700">{item}</span>
+              <span className="text-primary mr-2 mt-1">→</span>
+              <span className="text-text-secondary">{item}</span>
             </li>
           ))}
         </ul>
       </div>
 
       {/* The Impact */}
-      <div className="mb-6 bg-slate-50 border border-slate-200 rounded-lg p-6">
-        <h4 className="text-lg font-bold text-gray-900 mb-3">
+      <div className="mb-6 bg-deep-card border border-deep-border rounded-lg p-6">
+        <h4 className="text-lg font-bold text-text-heading mb-3">
           {t('impact')}
         </h4>
-        <p className="text-gray-700 leading-relaxed">{impact}</p>
+        <p className="text-text-secondary leading-relaxed">{impact}</p>
       </div>
 
       {/* Skills Demonstrated */}
       <div>
-        <h4 className="text-sm font-bold text-gray-600 uppercase mb-3 tracking-wider">
+        <h4 className="text-sm font-bold text-warm uppercase mb-3 tracking-wider font-mono">
           {t('skills')}
         </h4>
-        <p className="text-gray-700">{skills}</p>
+        <p className="text-text-secondary">{skills}</p>
       </div>
     </div>
   );

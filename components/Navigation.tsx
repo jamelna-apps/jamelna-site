@@ -104,7 +104,8 @@ const Navigation = () => {
   }, [isLangMenuOpen]);
 
   // Don't render nav on homepage until scrolled, but show menu button
-  const shouldShowNav = !isHomePage || isVisible;
+  // Also show nav when mobile menu is open
+  const shouldShowNav = !isHomePage || isVisible || isMenuOpen;
 
   return (
     <>
@@ -127,7 +128,7 @@ const Navigation = () => {
           fixed top-0 left-0 right-0 z-50
           transition-all duration-500
           ${shouldShowNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
-          ${isScrolled ? 'bg-deep/95 backdrop-blur-lg border-b border-deep-border' : 'bg-transparent'}
+          ${isScrolled || isMenuOpen ? 'bg-deep/95 backdrop-blur-lg border-b border-deep-border' : 'bg-transparent'}
         `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

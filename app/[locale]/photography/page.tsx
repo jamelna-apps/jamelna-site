@@ -7,8 +7,6 @@ import Lightbox from '@/components/Lightbox';
 import { useTranslations } from 'next-intl';
 import { Gallery } from '@/lib/photos';
 
-// This will be populated at build time
-// For now, we'll handle it client-side with an API route
 export default function PhotographyPage() {
   const t = useTranslations('photography');
   const [galleries, setGalleries] = React.useState<Gallery[]>([]);
@@ -42,10 +40,10 @@ export default function PhotographyPage() {
     return (
       <PageWrapper>
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {t('title')}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+            <span className="text-warm">/</span> {t('title')}
           </h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Loading galleries...
           </p>
         </div>
@@ -57,22 +55,22 @@ export default function PhotographyPage() {
     return (
       <PageWrapper>
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {t('title')}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+            <span className="text-warm">/</span> {t('title')}
           </h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             {t('description')}
           </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Getting Started</h2>
-            <p className="text-sm text-gray-700 mb-4">
-              To add photography galleries, create folders in <code className="bg-gray-200 px-2 py-1 rounded">public/photos/</code>
+          <div className="glass-card p-8">
+            <h2 className="text-xl font-display font-bold text-text-heading mb-4">Getting Started</h2>
+            <p className="text-sm text-text-secondary mb-4">
+              To add photography galleries, create folders in <code className="bg-deep-card px-2 py-1 rounded text-primary">public/photos/</code>
             </p>
-            <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700">
-              <li>Create a folder in <code className="bg-gray-200 px-1 rounded">public/photos/</code> (e.g., <code className="bg-gray-200 px-1 rounded">my-gallery</code>)</li>
+            <ol className="list-decimal list-inside space-y-2 text-sm text-text-secondary">
+              <li>Create a folder in <code className="bg-deep-card px-1 rounded text-primary">public/photos/</code> (e.g., <code className="bg-deep-card px-1 rounded text-primary">my-gallery</code>)</li>
               <li>Add your photos to that folder (supports .jpg, .jpeg, .png, .webp, .gif)</li>
               <li>Refresh this page to see your gallery!</li>
             </ol>
@@ -86,10 +84,10 @@ export default function PhotographyPage() {
     <PageWrapper>
       {/* Page Header */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          {t('title')}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+          <span className="text-warm">/</span> {t('title')}
         </h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+        <p className="text-lg text-text-secondary max-w-2xl mx-auto">
           {t('description')}
         </p>
       </div>
@@ -98,9 +96,9 @@ export default function PhotographyPage() {
       <div className="space-y-20">
         {galleries.map((gallery) => (
           <div key={gallery.id}>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">{gallery.name}</h2>
+            <h2 className="text-3xl font-display font-bold text-text-heading mb-4">{gallery.name}</h2>
             {gallery.description && (
-              <p className="text-lg text-gray-700 mb-8">{gallery.description}</p>
+              <p className="text-lg text-text-secondary mb-8">{gallery.description}</p>
             )}
 
             {/* Photo Grid */}
@@ -109,7 +107,7 @@ export default function PhotographyPage() {
                 <button
                   key={index}
                   onClick={() => openLightbox(gallery, index)}
-                  className="aspect-square bg-gray-100 rounded-lg overflow-hidden group cursor-pointer"
+                  className="aspect-square bg-deep-card rounded-lg overflow-hidden group cursor-pointer border border-deep-border hover:border-warm/50 transition-colors"
                   onContextMenu={(e) => e.preventDefault()}
                   onDragStart={(e) => e.preventDefault()}
                 >

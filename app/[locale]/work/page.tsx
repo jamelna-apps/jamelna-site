@@ -22,10 +22,10 @@ export default function WorkPage() {
     <PageWrapper>
       {/* Page Header */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          {t('title')}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+          <span className="text-primary">/</span> {t('title')}
         </h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
           {t('description')}
         </p>
       </div>
@@ -38,8 +38,8 @@ export default function WorkPage() {
         return (
           <div key={index} id={projectId} className="scroll-mt-20">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-12 bg-slate-600"></div>
-              <h2 className="text-3xl font-bold text-gray-900">
+              <div className="w-1 h-12 bg-warm"></div>
+              <h2 className="text-3xl font-display font-bold text-text-heading">
                 {project.title}
               </h2>
             </div>
