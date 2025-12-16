@@ -163,7 +163,7 @@ const Hero = () => {
               return (
                 <span
                   key={index}
-                  className="text-text-primary"
+                  className="text-text-muted/70"
                 >
                   {part.text}
                 </span>
