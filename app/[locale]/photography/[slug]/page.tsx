@@ -5,7 +5,7 @@ import { client, isSanityConfigured } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 
 async function getGallery(slug: string) {
-  if (!isSanityConfigured) {
+  if (!isSanityConfigured || !client) {
     return null;
   }
 
