@@ -107,15 +107,15 @@ function parseFundingRecommendation(text: string): { beforeLink: string; linkTex
 }
 
 const TYPE_COLORS = {
-  urban: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
-  suburban: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
-  rural: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+  urban: 'bg-purple-900/30 text-purple-300',
+  suburban: 'bg-primary/20 text-primary-light',
+  rural: 'bg-highlight-green/20 text-highlight-green',
 };
 
 const RESOURCE_COLORS = {
-  high: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300',
-  moderate: 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300',
-  limited: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
+  high: 'bg-highlight-green/20 text-highlight-green',
+  moderate: 'bg-warm/20 text-warm-light',
+  limited: 'bg-highlight-red/20 text-highlight-red',
 };
 
 const TYPE_ICONS = {
@@ -146,14 +146,14 @@ function PlanDetailSection({ title, children, defaultOpen = false }: PlanDetailS
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="border-b border-gray-200 dark:border-gray-700 last:border-0">
+    <div className="border-b border-deep-border last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-3 px-4 flex items-center justify-between text-left hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+        className="w-full py-3 px-4 flex items-center justify-between text-left hover:bg-deep-alt transition-colors"
       >
-        <span className="font-medium text-gray-900 dark:text-white">{title}</span>
+        <span className="font-medium text-text-heading">{title}</span>
         <svg
-          className={`w-5 h-5 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-text-muted transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -176,21 +176,21 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
   const { profile } = plan;
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-gray-700">
+    <div className="bg-deep-card rounded-xl shadow-md overflow-hidden border border-deep-border hover:border-warm/30 transition-colors">
       {/* Card Header - Always visible */}
       <button
         onClick={onToggle}
-        className="w-full text-left p-5 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+        className="w-full text-left p-5 hover:bg-deep-alt transition-colors"
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-gray-400">{TYPE_ICONS[profile.type]}</span>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <span className="text-text-muted">{TYPE_ICONS[profile.type]}</span>
+              <h3 className="text-lg font-semibold text-text-heading">
                 {profile.schoolName}
               </h3>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-sm text-text-secondary mb-3">
               {profile.location} | {profile.studentCount}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -201,14 +201,14 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
                 {profile.resources === 'high' ? 'High Resources' : profile.resources === 'moderate' ? 'Moderate Resources' : 'Limited Resources'}
               </span>
               {profile.gradeLevels.map((level) => (
-                <span key={level} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                <span key={level} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-deep-alt text-text-secondary">
                   {level}
                 </span>
               ))}
             </div>
           </div>
           <svg
-            className={`w-6 h-6 text-gray-400 transition-transform flex-shrink-0 ${isExpanded ? 'rotate-180' : ''}`}
+            className={`w-6 h-6 text-text-muted transition-transform flex-shrink-0 ${isExpanded ? 'rotate-180' : ''}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -220,8 +220,8 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
         {/* Highlights */}
         <div className="mt-4 flex flex-wrap gap-2">
           {profile.highlights.map((highlight, idx) => (
-            <span key={idx} className="inline-flex items-center text-xs text-gray-500 dark:text-gray-400">
-              <svg className="w-3 h-3 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <span key={idx} className="inline-flex items-center text-xs text-text-muted">
+              <svg className="w-3 h-3 mr-1 text-highlight-green" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
               {highlight}
@@ -232,34 +232,34 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="border-t border-gray-200 dark:border-gray-700">
+        <div className="border-t border-deep-border">
           {/* Executive Summary */}
-          <div className="p-5 bg-slate-50 dark:bg-slate-900/50">
-            <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+          <div className="p-5 bg-deep-alt">
+            <h4 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-2">
               Executive Summary
             </h4>
-            <p className="text-gray-700 dark:text-gray-300">{plan.plan.executiveSummary}</p>
+            <p className="text-text-secondary">{plan.plan.executiveSummary}</p>
           </div>
 
-          <div className="divide-y divide-gray-200 dark:divide-gray-700">
+          <div className="divide-y divide-deep-border">
             {/* Scope & Sequence */}
             <PlanDetailSection title="Scope & Sequence" defaultOpen>
               <div className="overflow-x-auto">
                 <table className="min-w-full text-sm">
                   <thead>
-                    <tr className="bg-gray-50 dark:bg-gray-800">
-                      <th className="px-3 py-2 text-left font-medium text-gray-900 dark:text-white">Grade</th>
-                      <th className="px-3 py-2 text-left font-medium text-gray-900 dark:text-white">Focus</th>
-                      <th className="px-3 py-2 text-left font-medium text-gray-900 dark:text-white">Curricula</th>
-                      <th className="px-3 py-2 text-left font-medium text-gray-900 dark:text-white">Time</th>
+                    <tr className="bg-deep-alt">
+                      <th className="px-3 py-2 text-left font-medium text-text-heading">Grade</th>
+                      <th className="px-3 py-2 text-left font-medium text-text-heading">Focus</th>
+                      <th className="px-3 py-2 text-left font-medium text-text-heading">Curricula</th>
+                      <th className="px-3 py-2 text-left font-medium text-text-heading">Time</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                  <tbody className="divide-y divide-deep-border">
                     {plan.plan.scopeSequence.map((item, idx) => (
                       <tr key={idx}>
-                        <td className="px-3 py-2 font-medium text-gray-900 dark:text-white whitespace-nowrap">{item.gradeLevel}</td>
-                        <td className="px-3 py-2 text-gray-600 dark:text-gray-400">{item.focus}</td>
-                        <td className="px-3 py-2 text-gray-600 dark:text-gray-400">
+                        <td className="px-3 py-2 font-medium text-text-heading whitespace-nowrap">{item.gradeLevel}</td>
+                        <td className="px-3 py-2 text-text-secondary">{item.focus}</td>
+                        <td className="px-3 py-2 text-text-secondary">
                           <div className="flex flex-wrap gap-1">
                             {item.curricula.map((c, i) => {
                               const url = getCurriculumUrl(c);
@@ -269,7 +269,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
                                   href={url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs hover:bg-blue-100 dark:hover:bg-blue-800/50 transition-colors"
+                                  className="inline-flex items-center gap-1 px-2 py-0.5 bg-primary/20 text-primary-light rounded text-xs hover:bg-primary/30 transition-colors"
                                 >
                                   {c}
                                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -277,14 +277,14 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
                                   </svg>
                                 </a>
                               ) : (
-                                <span key={i} className="inline-block px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs">
+                                <span key={i} className="inline-block px-2 py-0.5 bg-primary/20 text-primary-light rounded text-xs">
                                   {c}
                                 </span>
                               );
                             })}
                           </div>
                         </td>
-                        <td className="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs">{item.timeAllocation}</td>
+                        <td className="px-3 py-2 text-text-secondary text-xs">{item.timeAllocation}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -296,16 +296,16 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
             <PlanDetailSection title="Subject Integration">
               <div className="space-y-4">
                 {plan.plan.subjectIntegration.map((subject, idx) => (
-                  <div key={idx} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
-                    <h5 className="font-medium text-gray-900 dark:text-white mb-2">{subject.subject}</h5>
-                    <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                  <div key={idx} className="bg-deep-alt rounded-lg p-3">
+                    <h5 className="font-medium text-text-heading mb-2">{subject.subject}</h5>
+                    <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
                       {subject.activities.map((activity, i) => (
                         <li key={i}>{activity}</li>
                       ))}
                     </ul>
                     <div className="mt-2 flex flex-wrap gap-1">
                       {subject.standards.map((std, i) => (
-                        <span key={i} className="text-xs text-gray-500 dark:text-gray-400 font-mono">{std}</span>
+                        <span key={i} className="text-xs text-text-muted font-mono">{std}</span>
                       ))}
                     </div>
                   </div>
@@ -318,8 +318,8 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
               <div className="space-y-4">
                 {plan.plan.staffGuidance.map((staff, idx) => (
                   <div key={idx}>
-                    <h5 className="font-medium text-gray-900 dark:text-white mb-2">{staff.role}</h5>
-                    <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                    <h5 className="font-medium text-text-heading mb-2">{staff.role}</h5>
+                    <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
                       {staff.responsibilities.map((resp, i) => (
                         <li key={i}>{resp}</li>
                       ))}
@@ -333,12 +333,12 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
             <PlanDetailSection title="Career Pathways">
               <div className="space-y-4">
                 {plan.plan.pathways.map((pathway, idx) => (
-                  <div key={idx} className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-lg p-3">
-                    <h5 className="font-medium text-gray-900 dark:text-white mb-2">{pathway.name}</h5>
+                  <div key={idx} className="bg-gradient-to-r from-purple-900/20 to-primary/20 rounded-lg p-3">
+                    <h5 className="font-medium text-text-heading mb-2">{pathway.name}</h5>
                     <div className="space-y-1">
                       {pathway.progression.map((step, i) => (
-                        <div key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                          <span className="w-5 h-5 rounded-full bg-purple-200 dark:bg-purple-800 flex items-center justify-center flex-shrink-0 text-xs font-medium text-purple-800 dark:text-purple-200">
+                        <div key={i} className="flex items-start gap-2 text-sm text-text-secondary">
+                          <span className="w-5 h-5 rounded-full bg-purple-800 flex items-center justify-center flex-shrink-0 text-xs font-medium text-purple-200">
                             {i + 1}
                           </span>
                           <span>{step}</span>
@@ -354,14 +354,14 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
             <PlanDetailSection title="Implementation Roadmap">
               <div className="space-y-4">
                 {plan.plan.implementation.map((phase, idx) => (
-                  <div key={idx} className="border-l-4 border-slate-500 pl-4">
+                  <div key={idx} className="border-l-4 border-warm pl-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <h5 className="font-medium text-gray-900 dark:text-white">{phase.phase}</h5>
-                      <span className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded">
+                      <h5 className="font-medium text-text-heading">{phase.phase}</h5>
+                      <span className="text-xs bg-deep-alt text-text-secondary px-2 py-0.5 rounded">
                         {phase.timeline}
                       </span>
                     </div>
-                    <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                    <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
                       {phase.actions.map((action, i) => (
                         <li key={i}>{action}</li>
                       ))}
@@ -377,8 +377,8 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
                 {plan.plan.fundingRecommendations.map((rec, idx) => {
                   const parsed = parseFundingRecommendation(rec);
                   return (
-                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                      <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li key={idx} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <svg className="w-5 h-5 text-highlight-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       {parsed ? (
@@ -388,7 +388,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
                             href={parsed.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
+                            className="text-primary-light hover:underline inline-flex items-center gap-1"
                           >
                             {parsed.linkText}
                             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -410,11 +410,11 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
             <PlanDetailSection title="Success Metrics">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {plan.plan.successMetrics.map((metric, idx) => (
-                  <div key={idx} className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                    <svg className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div key={idx} className="flex items-start gap-2 bg-highlight-green/10 rounded-lg p-3">
+                    <svg className="w-5 h-5 text-highlight-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-sm text-gray-700 dark:text-gray-300">{metric}</span>
+                    <span className="text-sm text-text-secondary">{metric}</span>
                   </div>
                 ))}
               </div>
@@ -444,10 +444,10 @@ export default function SamplePlans() {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+        <h2 className="text-2xl font-bold text-text-heading mb-2">
           Sample Plans for Different School Contexts
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <p className="text-text-secondary max-w-2xl mx-auto">
           Browse example plans generated for various school types and resource levels.
           These samples demonstrate the comprehensive guidance our AI planner provides.
         </p>
@@ -456,16 +456,16 @@ export default function SamplePlans() {
       {/* Filters */}
       <div className="flex flex-wrap justify-center gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600 dark:text-gray-400">School Type:</span>
-          <div className="flex rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
+          <span className="text-sm text-text-secondary">School Type:</span>
+          <div className="flex rounded-lg overflow-hidden border border-deep-border">
             {(['all', 'urban', 'suburban', 'rural'] as FilterType[]).map((type) => (
               <button
                 key={type}
                 onClick={() => setTypeFilter(type)}
                 className={`px-3 py-1.5 text-sm font-medium transition-colors ${
                   typeFilter === type
-                    ? 'bg-slate-600 text-white'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    ? 'bg-warm text-white'
+                    : 'bg-deep-card text-text-secondary hover:bg-deep-alt'
                 }`}
               >
                 {type === 'all' ? 'All' : type.charAt(0).toUpperCase() + type.slice(1)}
@@ -475,16 +475,16 @@ export default function SamplePlans() {
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-sm text-gray-600 dark:text-gray-400">Resources:</span>
-          <div className="flex rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600">
+          <span className="text-sm text-text-secondary">Resources:</span>
+          <div className="flex rounded-lg overflow-hidden border border-deep-border">
             {(['all', 'high', 'moderate', 'limited'] as ResourceFilter[]).map((level) => (
               <button
                 key={level}
                 onClick={() => setResourceFilter(level)}
                 className={`px-3 py-1.5 text-sm font-medium transition-colors ${
                   resourceFilter === level
-                    ? 'bg-slate-600 text-white'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    ? 'bg-warm text-white'
+                    : 'bg-deep-card text-text-secondary hover:bg-deep-alt'
                 }`}
               >
                 {level === 'all' ? 'All' : level.charAt(0).toUpperCase() + level.slice(1)}
@@ -497,7 +497,7 @@ export default function SamplePlans() {
       {/* Plan Cards */}
       <div className="space-y-4">
         {filteredPlans.length === 0 ? (
-          <div className="text-center py-12 text-gray-500 dark:text-gray-400">
+          <div className="text-center py-12 text-text-muted">
             No plans match the selected filters.
           </div>
         ) : (
@@ -513,16 +513,16 @@ export default function SamplePlans() {
       </div>
 
       {/* CTA */}
-      <div className="text-center py-8 bg-gradient-to-r from-slate-100 to-blue-100 dark:from-slate-900 dark:to-blue-900/50 rounded-xl">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+      <div className="text-center py-8 bg-gradient-to-r from-deep-card to-primary/20 rounded-xl border border-deep-border">
+        <h3 className="text-xl font-semibold text-text-heading mb-2">
           Ready to create your custom plan?
         </h3>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
+        <p className="text-text-secondary mb-4">
           Complete our questionnaire and get a personalized CS education plan for your school.
         </p>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors inline-flex items-center gap-2"
+          className="btn-warm px-6 py-3 font-medium rounded-lg inline-flex items-center gap-2"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />

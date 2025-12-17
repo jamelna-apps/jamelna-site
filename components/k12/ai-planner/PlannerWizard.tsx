@@ -340,9 +340,9 @@ export function PlannerWizard({
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-deep">
       {/* Progress Steps - Clean Modern Design */}
-      <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-10">
+      <div className="bg-deep-card border-b border-deep-border sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-4 py-6">
           {/* Minimal Stepper */}
           <div className="flex items-center justify-center">
@@ -364,11 +364,11 @@ export function PlannerWizard({
                     <div
                       className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 ${
                         isActive
-                          ? 'bg-slate-700 text-white shadow-lg scale-110'
+                          ? 'bg-warm text-white shadow-lg scale-110'
                           : isCompleted
-                          ? 'bg-green-500 text-white'
-                          : 'bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-500'
-                      } ${isAccessible && !isGenerating && !isActive ? 'group-hover:bg-gray-200 dark:group-hover:bg-gray-700' : ''}`}
+                          ? 'bg-highlight-green text-white'
+                          : 'bg-deep-alt text-text-muted'
+                      } ${isAccessible && !isGenerating && !isActive ? 'group-hover:bg-deep-border' : ''}`}
                     >
                       {getStepIcon(step.id, isCompleted)}
                     </div>
@@ -376,10 +376,10 @@ export function PlannerWizard({
                     <span
                       className={`hidden md:block mt-2 text-xs font-medium transition-colors ${
                         isActive
-                          ? 'text-slate-700 dark:text-slate-300'
+                          ? 'text-warm'
                           : isCompleted
-                          ? 'text-green-600 dark:text-green-400'
-                          : 'text-gray-400 dark:text-gray-500'
+                          ? 'text-highlight-green'
+                          : 'text-text-muted'
                       }`}
                     >
                       {step.title}
@@ -390,8 +390,8 @@ export function PlannerWizard({
                     <div
                       className={`w-12 md:w-20 h-0.5 mx-1 md:mx-2 transition-colors ${
                         index < currentStepIndex
-                          ? 'bg-green-500'
-                          : 'bg-gray-200 dark:bg-gray-700'
+                          ? 'bg-highlight-green'
+                          : 'bg-deep-border'
                       }`}
                     />
                   )}
@@ -402,8 +402,8 @@ export function PlannerWizard({
 
           {/* Current Step Info - Clean single line below */}
           <div className="mt-4 text-center">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              <span className="font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm text-text-secondary">
+              <span className="font-medium text-text-heading">
                 Step {currentStepIndex + 1}:
               </span>{' '}
               {steps[currentStepIndex]?.description}
@@ -415,11 +415,11 @@ export function PlannerWizard({
       {/* Error Display */}
       {error && (
         <div className="max-w-6xl mx-auto px-4 mt-4">
-          <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg p-4">
-            <p className="text-red-600 dark:text-red-400">{error}</p>
+          <div className="bg-highlight-red/10 border border-highlight-red/30 rounded-lg p-4">
+            <p className="text-highlight-red">{error}</p>
             <button
               onClick={() => setError(null)}
-              className="mt-2 text-sm text-red-500 hover:text-red-700"
+              className="mt-2 text-sm text-highlight-red/70 hover:text-highlight-red"
             >
               Dismiss
             </button>
@@ -451,9 +451,9 @@ export function PlannerWizard({
         {currentStep === 'generate' && isGenerating && (
           <div className="max-w-lg mx-auto text-center py-16">
             <div className="mb-8">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-warm/20 flex items-center justify-center">
                 <svg
-                  className="w-12 h-12 text-blue-600 dark:text-blue-400 animate-pulse"
+                  className="w-12 h-12 text-warm animate-pulse"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -466,22 +466,22 @@ export function PlannerWizard({
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-2xl font-bold text-text-heading mb-2">
                 {mergedLabels.generating}
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-text-secondary">
                 {mergedLabels.generatingDesc}
               </p>
             </div>
 
             {/* Progress Bar */}
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+            <div className="w-full bg-deep-alt rounded-full h-2 overflow-hidden">
               <div
-                className="bg-blue-600 h-full rounded-full transition-all duration-500"
+                className="bg-warm h-full rounded-full transition-all duration-500"
                 style={{ width: `${generationProgress}%` }}
               />
             </div>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+            <p className="text-sm text-text-muted mt-2">
               {Math.round(generationProgress)}% complete
             </p>
           </div>
@@ -522,13 +522,13 @@ export function PlannerWizard({
       </div>
 
       {/* Navigation Footer */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <div className="fixed bottom-0 left-0 right-0 bg-deep-card border-t border-deep-border">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div>
             {currentStep !== 'profile' && (
               <button
                 onClick={handleStartOver}
-                className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                className="text-sm text-text-muted hover:text-text-primary transition-colors"
               >
                 {mergedLabels.startOver}
               </button>
@@ -540,8 +540,8 @@ export function PlannerWizard({
               disabled={!canGoBack}
               className={`px-4 py-2 text-sm font-medium rounded-lg border transition-colors ${
                 canGoBack
-                  ? 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
-                  : 'border-gray-200 dark:border-gray-700 text-gray-400 dark:text-gray-600 cursor-not-allowed'
+                  ? 'border-deep-border text-text-secondary hover:bg-deep-alt'
+                  : 'border-deep-border/50 text-text-muted cursor-not-allowed'
               }`}
             >
               {mergedLabels.back}
@@ -552,8 +552,8 @@ export function PlannerWizard({
                 disabled={!canGoNext || (currentStep === 'review' && !districtProfile)}
                 className={`px-6 py-2 text-sm font-medium rounded-lg transition-colors ${
                   canGoNext && (currentStep !== 'review' || districtProfile)
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-gray-300 dark:bg-gray-700 text-gray-500 cursor-not-allowed'
+                    ? 'btn-warm'
+                    : 'bg-deep-alt text-text-muted cursor-not-allowed'
                 }`}
               >
                 {currentStep === 'review' ? 'Generate Plan' : mergedLabels.next}

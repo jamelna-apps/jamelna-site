@@ -112,10 +112,10 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
 
   if (submitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+      <div className="bg-highlight-green/10 border border-highlight-green/30 rounded-lg p-8 text-center">
         <div className="text-4xl mb-4">✓</div>
-        <h3 className="text-xl font-bold text-green-800 mb-2">{labels.successTitle}</h3>
-        <p className="text-green-700">{labels.successMessage}</p>
+        <h3 className="text-xl font-bold text-highlight-green mb-2">{labels.successTitle}</h3>
+        <p className="text-highlight-green/80">{labels.successMessage}</p>
       </div>
     );
   }
@@ -123,14 +123,14 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {error && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+        <div className="bg-highlight-red/10 border border-highlight-red/30 rounded-lg p-4 text-highlight-red">
           {labels.error || error}
         </div>
       )}
 
       {/* School/District Name */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-text-heading mb-2">
           {labels.schoolName}
         </label>
         <input
@@ -138,7 +138,7 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
           value={formData.schoolName}
           onChange={(e) => setFormData({ ...formData, schoolName: e.target.value })}
           placeholder={labels.schoolNamePlaceholder}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+          className="w-full px-4 py-3 bg-deep-card border border-deep-border rounded-lg text-text-primary placeholder:text-text-muted focus:ring-2 focus:ring-warm/50 focus:border-warm/50"
           required
           disabled={isLoading}
         />
@@ -146,7 +146,7 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
 
       {/* City */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-text-heading mb-2">
           {labels.city}
         </label>
         <input
@@ -154,7 +154,7 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
           value={formData.city}
           onChange={(e) => setFormData({ ...formData, city: e.target.value })}
           placeholder={labels.cityPlaceholder}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+          className="w-full px-4 py-3 bg-deep-card border border-deep-border rounded-lg text-text-primary placeholder:text-text-muted focus:ring-2 focus:ring-warm/50 focus:border-warm/50"
           required
           disabled={isLoading}
         />
@@ -162,19 +162,19 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
 
       {/* State */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-text-heading mb-2">
           {labels.state}
         </label>
         <select
           value={formData.state}
           onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+          className="w-full px-4 py-3 bg-deep-card border border-deep-border rounded-lg text-text-primary focus:ring-2 focus:ring-warm/50 focus:border-warm/50"
           required
           disabled={isLoading}
         >
-          <option value="">{labels.statePlaceholder}</option>
+          <option value="" className="bg-deep-card text-text-muted">{labels.statePlaceholder}</option>
           {US_STATES.map((state) => (
-            <option key={state} value={state}>
+            <option key={state} value={state} className="bg-deep-card text-text-primary">
               {state}
             </option>
           ))}
@@ -183,7 +183,7 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
 
       {/* Grade Levels */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-text-heading mb-2">
           {labels.gradeLevels}
         </label>
         <div className="flex flex-wrap gap-3">
@@ -195,8 +195,8 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
               disabled={isLoading}
               className={`px-4 py-2 rounded-lg border-2 transition-colors ${
                 formData.gradeLevels.includes(level)
-                  ? 'border-slate-600 bg-slate-50 text-slate-700'
-                  : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
+                  ? 'border-warm bg-warm/10 text-warm'
+                  : 'border-deep-border bg-deep-card text-text-secondary hover:border-warm/50'
               } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
               {labels.gradeLevelOptions[level]}
@@ -207,7 +207,7 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
 
       {/* Current CS Offerings */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-text-heading mb-2">
           {labels.currentOfferings}
         </label>
         <textarea
@@ -215,14 +215,14 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
           onChange={(e) => setFormData({ ...formData, currentOfferings: e.target.value })}
           placeholder={labels.currentOfferingsPlaceholder}
           rows={3}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+          className="w-full px-4 py-3 bg-deep-card border border-deep-border rounded-lg text-text-primary placeholder:text-text-muted focus:ring-2 focus:ring-warm/50 focus:border-warm/50"
           disabled={isLoading}
         />
       </div>
 
       {/* Pathways of Interest */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-text-heading mb-2">
           {labels.pathways}
         </label>
         <PathwaySelector
@@ -234,7 +234,7 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
 
       {/* Available Resources */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-text-heading mb-2">
           {labels.resources}
         </label>
         <textarea
@@ -242,7 +242,7 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
           onChange={(e) => setFormData({ ...formData, resources: e.target.value })}
           placeholder={labels.resourcesPlaceholder}
           rows={3}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent"
+          className="w-full px-4 py-3 bg-deep-card border border-deep-border rounded-lg text-text-primary placeholder:text-text-muted focus:ring-2 focus:ring-warm/50 focus:border-warm/50"
           disabled={isLoading}
         />
       </div>
@@ -251,8 +251,8 @@ const DistrictProfileForm: React.FC<DistrictProfileFormProps> = ({ labels, onPro
       <button
         type="submit"
         disabled={isLoading}
-        className={`w-full bg-slate-700 text-white py-3 px-6 rounded-lg font-medium transition-colors ${
-          isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-slate-800'
+        className={`w-full btn-warm py-3 px-6 rounded-lg font-medium transition-colors ${
+          isLoading ? 'opacity-50 cursor-not-allowed' : ''
         }`}
       >
         {isLoading ? (labels.saving || 'Saving...') : labels.submit}

@@ -45,12 +45,12 @@ const PathwaySelector: React.FC<PathwaySelectorProps> = ({
             onClick={() => togglePathway(pathway)}
             className={`p-4 rounded-lg border-2 text-left transition-all ${
               isSelected
-                ? 'border-slate-600 bg-slate-50'
-                : 'border-gray-200 bg-white hover:border-gray-300'
+                ? 'border-warm bg-warm/10'
+                : 'border-deep-border bg-deep-card hover:border-warm/50'
             }`}
           >
             <span className="text-2xl mb-2 block">{pathwayIcons[pathway]}</span>
-            <span className={`text-sm font-medium ${isSelected ? 'text-slate-700' : 'text-gray-700'}`}>
+            <span className={`text-sm font-medium ${isSelected ? 'text-warm' : 'text-text-secondary'}`}>
               {labels[pathway]}
             </span>
           </button>

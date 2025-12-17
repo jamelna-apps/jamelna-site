@@ -34,10 +34,10 @@ export default function AIPlannerPage() {
     <PageWrapper>
       {/* Hero Section */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          {t('title')}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+          <span className="text-warm">/</span> {t('title')}
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-text-secondary max-w-3xl mx-auto">
           {t('subtitle')}
         </p>
       </div>
@@ -53,7 +53,7 @@ export default function AIPlannerPage() {
       </div>
 
       {/* Sample Plans Section */}
-      <div className="mt-16 border-t border-gray-200 dark:border-gray-700 pt-16" id="sample-plans">
+      <div className="mt-16 border-t border-deep-border pt-16" id="sample-plans">
         <SamplePlans />
       </div>
 
@@ -61,7 +61,7 @@ export default function AIPlannerPage() {
       <div className="mt-8 text-center">
         <Link
           href={`/${locale}/k12-cs-education`}
-          className="text-slate-600 hover:text-slate-800 text-sm inline-flex items-center gap-1"
+          className="text-text-secondary hover:text-warm text-sm inline-flex items-center gap-1 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
