@@ -45,6 +45,7 @@ export default function AIPlannerPage() {
       {/* Wizard Container */}
       <div className="max-w-5xl mx-auto" id="planner">
         <PlannerWizard
+          embedded
           labels={wizardLabels}
           onComplete={(plan) => {
             console.log('Plan complete:', plan);

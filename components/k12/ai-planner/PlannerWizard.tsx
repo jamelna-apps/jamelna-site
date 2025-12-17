@@ -61,6 +61,8 @@ interface WizardStepConfig {
 interface PlannerWizardProps {
   initialProfile?: EnhancedDistrictProfile;
   locale?: string;
+  /** When true, removes fixed positioning and full-page layout for embedding in other pages */
+  embedded?: boolean;
   labels?: {
     stepProfile: string;
     stepReview: string;
@@ -102,6 +104,7 @@ const DEFAULT_LABELS = {
 export function PlannerWizard({
   initialProfile,
   locale = 'en',
+  embedded = false,
   labels = DEFAULT_LABELS,
   onComplete,
 }: PlannerWizardProps) {
@@ -340,9 +343,9 @@ export function PlannerWizard({
   };
 
   return (
-    <div className="min-h-screen bg-deep">
+    <div className={embedded ? 'border border-deep-border rounded-lg overflow-hidden' : 'min-h-screen bg-deep'}>
       {/* Progress Steps - Clean Modern Design */}
-      <div className="bg-deep-card border-b border-deep-border sticky top-0 z-10">
+      <div className={`bg-deep-card border-b border-deep-border ${embedded ? '' : 'sticky top-0 z-10'}`}>
         <div className="max-w-4xl mx-auto px-4 py-6">
           {/* Minimal Stepper */}
           <div className="flex items-center justify-center">
@@ -522,7 +525,7 @@ export function PlannerWizard({
       </div>
 
       {/* Navigation Footer */}
-      <div className="fixed bottom-0 left-0 right-0 bg-deep-card border-t border-deep-border">
+      <div className={`bg-deep-card border-t border-deep-border ${embedded ? '' : 'fixed bottom-0 left-0 right-0'}`}>
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div>
             {currentStep !== 'profile' && (
