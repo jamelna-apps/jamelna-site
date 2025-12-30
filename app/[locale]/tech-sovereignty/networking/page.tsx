@@ -250,7 +250,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
           {/* Action & Expression */}
           <div className="bg-deep-card rounded-lg p-4 border border-secret/20">
             <h6 className="text-sm font-semibold text-purple-300 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-purple-500/100/20 rounded-full flex items-center justify-center text-xs">3</span>
+              <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-xs">3</span>
               Multiple Means of Action & Expression
               <span className="text-xs font-normal text-purple-300">(The &quot;How&quot; of Learning)</span>
             </h6>
@@ -448,7 +448,7 @@ const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
                 ? 'bg-secret/20 text-secret-light'
                 : lesson.gradeBand === '9-12'
                   ? 'bg-primary/20 text-primary'
-                  : 'bg-purple-500/100/20 text-purple-300'
+                  : 'bg-purple-500/20 text-purple-300'
             }`}>
               {lesson.gradeBand === '6-8' ? 'Grades 6-8' : lesson.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
             </span>
@@ -565,7 +565,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
                   ? 'bg-secret/20 text-secret-light'
                   : project.gradeBand === '9-12'
                     ? 'bg-primary/20 text-primary'
-                    : 'bg-purple-500/100/20 text-purple-300'
+                    : 'bg-purple-500/20 text-purple-300'
               }`}>
                 {project.gradeBand === '6-8' ? 'Grades 6-8' : project.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
               </span>
@@ -7679,7 +7679,7 @@ export default function NetworkingCurriculum() {
           </Link>
 
           <div className="flex items-center gap-3 mb-4">
-            <span className="bg-green-500/100 text-white text-sm px-3 py-1 rounded-full">Track A</span>
+            <span className="bg-green-500 text-white text-sm px-3 py-1 rounded-full">Track A</span>
             <span className="bg-deep-alt text-sm px-3 py-1 rounded-full">4 Projects</span>
           </div>
 
@@ -7914,7 +7914,7 @@ export default function NetworkingCurriculum() {
             {/* Community Network Manual */}
             <div className="bg-deep-card rounded-lg border border-primary/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-purple-500/100/20 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
