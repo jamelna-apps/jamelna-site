@@ -136,19 +136,19 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-lg overflow-hidden">
+    <div className="bg-gradient-to-r from-secret/10 to-primary/10 border border-secret/30 rounded-lg overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full p-4 flex items-center justify-between text-left hover:bg-emerald-50/50 transition-colors"
+        className="w-full p-4 flex items-center justify-between text-left hover:bg-secret/10 transition-colors"
       >
         <div className="flex items-center gap-2">
-          <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-secret" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-          <span className="font-semibold text-emerald-800">Universal Design for Learning (UDL) Supports</span>
+          <span className="font-semibold text-secret-light">Universal Design for Learning (UDL) Supports</span>
         </div>
         <svg
-          className={`w-5 h-5 text-emerald-600 transform transition-transform ${expanded ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-secret transform transition-transform ${expanded ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -161,10 +161,10 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
         <div className="px-4 pb-4 space-y-4">
           {/* Engagement */}
           <div className="bg-deep-card rounded-lg p-4 border border-primary/20">
-            <h6 className="text-sm font-semibold text-emerald-700 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-xs">1</span>
+            <h6 className="text-sm font-semibold text-secret-light mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 bg-secret/20 rounded-full flex items-center justify-center text-xs">1</span>
               Multiple Means of Engagement
-              <span className="text-xs font-normal text-emerald-600">(The &quot;Why&quot; of Learning)</span>
+              <span className="text-xs font-normal text-secret">(The &quot;Why&quot; of Learning)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
@@ -172,7 +172,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.choiceAndAutonomy.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-emerald-400">•</span>
+                      <span className="text-secret/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -183,7 +183,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.relevanceAndAuthenticity.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-emerald-400">•</span>
+                      <span className="text-secret/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -194,7 +194,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.selfRegulation.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-emerald-400">•</span>
+                      <span className="text-secret/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -205,10 +205,10 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
 
           {/* Representation */}
           <div className="bg-deep-card rounded-lg p-4 border border-secondary/20">
-            <h6 className="text-sm font-semibold text-blue-700 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs">2</span>
+            <h6 className="text-sm font-semibold text-primary mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-xs">2</span>
               Multiple Means of Representation
-              <span className="text-xs font-normal text-blue-600">(The &quot;What&quot; of Learning)</span>
+              <span className="text-xs font-normal text-primary">(The &quot;What&quot; of Learning)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
@@ -216,7 +216,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.multipleFormats.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-blue-400">•</span>
+                      <span className="text-primary/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -227,7 +227,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.vocabularySupport.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-blue-400">•</span>
+                      <span className="text-primary/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -238,7 +238,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.backgroundKnowledge.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-blue-400">•</span>
+                      <span className="text-primary/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -249,10 +249,10 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
 
           {/* Action & Expression */}
           <div className="bg-deep-card rounded-lg p-4 border border-secret/20">
-            <h6 className="text-sm font-semibold text-purple-700 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center text-xs">3</span>
+            <h6 className="text-sm font-semibold text-purple-300 mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 bg-purple-500/100/20 rounded-full flex items-center justify-center text-xs">3</span>
               Multiple Means of Action & Expression
-              <span className="text-xs font-normal text-purple-600">(The &quot;How&quot; of Learning)</span>
+              <span className="text-xs font-normal text-purple-300">(The &quot;How&quot; of Learning)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
@@ -260,7 +260,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.physicalOptions.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-purple-400">•</span>
+                      <span className="text-purple-300">•</span>
                       {item}
                     </li>
                   ))}
@@ -271,7 +271,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.expressionOptions.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-purple-400">•</span>
+                      <span className="text-purple-300">•</span>
                       {item}
                     </li>
                   ))}
@@ -282,7 +282,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.executiveFunctionSupport.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-purple-400">•</span>
+                      <span className="text-purple-300">•</span>
                       {item}
                     </li>
                   ))}
@@ -304,10 +304,10 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
     <div className="border border-deep-border rounded-lg overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full p-4 bg-gradient-to-r from-blue-50 to-cyan-50 flex items-center justify-between text-left hover:from-blue-100 hover:to-cyan-100 transition-colors"
+        className="w-full p-4 bg-gradient-to-r from-primary/10 to-primary/5 flex items-center justify-between text-left hover:from-primary/15 hover:to-primary/10 transition-colors"
       >
         <div className="flex items-center gap-3">
-          <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+          <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
             {index + 1}
           </span>
           <div>
@@ -316,7 +316,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           </div>
         </div>
         <svg
-          className={`w-5 h-5 text-blue-600 transform transition-transform ${expanded ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-primary transform transition-transform ${expanded ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -334,8 +334,8 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 
           {/* Video Resources (if available) */}
           {activity.videoResources && activity.videoResources.length > 0 && (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-              <h6 className="text-sm font-semibold text-red-800 mb-2 flex items-center gap-2">
+            <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+              <h6 className="text-sm font-semibold text-red-300 mb-2 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -353,10 +353,10 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div>
-                        <p className="text-sm font-medium text-red-900">{video.title}</p>
-                        <p className="text-xs text-red-700">{video.description}</p>
+                        <p className="text-sm font-medium text-red-300">{video.title}</p>
+                        <p className="text-xs text-red-300">{video.description}</p>
                       </div>
-                      <span className="flex-shrink-0 text-xs bg-red-100 text-red-800 px-2 py-0.5 rounded">
+                      <span className="flex-shrink-0 text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded">
                         {video.duration}
                       </span>
                     </div>
@@ -369,7 +369,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           {/* Step-by-step instructions */}
           <div>
             <h6 className="text-sm font-semibold text-text-heading mb-3 flex items-center gap-2">
-              <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
               </svg>
               Step-by-Step Instructions
@@ -377,7 +377,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
             <div className="space-y-3">
               {activity.steps.map((step, i) => (
                 <div key={i} className="flex gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-xs font-bold">
+                  <div className="flex-shrink-0 w-6 h-6 bg-primary/20 text-primary rounded-full flex items-center justify-center text-xs font-bold">
                     {i + 1}
                   </div>
                   <div className="flex-1">
@@ -388,8 +388,8 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                       </span>
                     )}
                     {step.teacherNotes && (
-                      <div className="mt-2 bg-amber-50 border-l-2 border-amber-400 pl-3 py-1">
-                        <p className="text-xs text-amber-800">
+                      <div className="mt-2 bg-amber-500/10 border-l-2 border-amber-400 pl-3 py-1">
+                        <p className="text-xs text-amber-300">
                           <span className="font-semibold">Teacher Note:</span> {step.teacherNotes}
                         </p>
                       </div>
@@ -402,27 +402,27 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 
           {/* Formative Assessment */}
           {activity.formativeAssessment && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-              <h6 className="text-xs font-semibold text-green-800 mb-1 flex items-center gap-1">
+            <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+              <h6 className="text-xs font-semibold text-green-300 mb-1 flex items-center gap-1">
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Check for Understanding
               </h6>
-              <p className="text-xs text-green-700">{activity.formativeAssessment}</p>
+              <p className="text-xs text-green-300">{activity.formativeAssessment}</p>
             </div>
           )}
 
           {/* Differentiation */}
           {activity.differentiation && (
             <div className="grid md:grid-cols-2 gap-3">
-              <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
-                <h6 className="text-xs font-semibold text-orange-800 mb-1">Support (Struggling Learners)</h6>
-                <p className="text-xs text-orange-700">{activity.differentiation.support}</p>
+              <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg p-3">
+                <h6 className="text-xs font-semibold text-orange-300 mb-1">Support (Struggling Learners)</h6>
+                <p className="text-xs text-orange-300">{activity.differentiation.support}</p>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
-                <h6 className="text-xs font-semibold text-purple-800 mb-1">Extension (Advanced Learners)</h6>
-                <p className="text-xs text-purple-700">{activity.differentiation.extension}</p>
+              <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-3">
+                <h6 className="text-xs font-semibold text-purple-300 mb-1">Extension (Advanced Learners)</h6>
+                <p className="text-xs text-purple-300">{activity.differentiation.extension}</p>
               </div>
             </div>
           )}
@@ -436,7 +436,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
   <div className="bg-deep-card border border-deep-border rounded-lg p-6 hover:shadow-md transition-shadow">
     <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-10 h-10 bg-slate-600 text-white rounded-full flex items-center justify-center font-bold">
+      <div className="flex-shrink-0 w-10 h-10 bg-deep-alt text-white rounded-full flex items-center justify-center font-bold">
         {index + 1}
       </div>
       <div className="flex-1">
@@ -445,10 +445,10 @@ const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
           <div className="flex items-center gap-2">
             <span className={`text-xs px-2 py-1 rounded font-medium ${
               lesson.gradeBand === '6-8'
-                ? 'bg-emerald-100 text-emerald-700'
+                ? 'bg-secret/20 text-secret-light'
                 : lesson.gradeBand === '9-12'
-                  ? 'bg-blue-100 text-blue-700'
-                  : 'bg-purple-100 text-purple-700'
+                  ? 'bg-primary/20 text-primary'
+                  : 'bg-purple-500/100/20 text-purple-300'
             }`}>
               {lesson.gradeBand === '6-8' ? 'Grades 6-8' : lesson.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
             </span>
@@ -459,15 +459,15 @@ const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
         <div className="space-y-4 mt-4">
           {/* Deep Understanding - Highlighted */}
           {lesson.conceptualUnderstanding && lesson.conceptualUnderstanding.length > 0 && (
-            <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-4">
-              <h5 className="text-sm font-semibold text-indigo-800 mb-2 flex items-center gap-2">
+            <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-lg p-4">
+              <h5 className="text-sm font-semibold text-indigo-300 mb-2 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
                 Deep Understanding Goals
               </h5>
-              <p className="text-xs text-indigo-600 mb-2 italic">Students should be able to explain in their own words:</p>
-              <ul className="text-sm text-indigo-900 space-y-1">
+              <p className="text-xs text-indigo-400 mb-2 italic">Students should be able to explain in their own words:</p>
+              <ul className="text-sm text-indigo-300 space-y-1">
                 {lesson.conceptualUnderstanding.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-indigo-500 mt-1">&#9733;</span>
@@ -497,7 +497,7 @@ const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
           {lesson.detailedActivities && lesson.detailedActivities.length > 0 ? (
             <div>
               <h5 className="text-sm font-medium text-text-secondary mb-3 flex items-center gap-2">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
                 Detailed Activities
@@ -514,7 +514,7 @@ const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
               <ul className="text-sm text-text-muted space-y-1">
                 {lesson.activities.map((activity, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-blue-500">&#8226;</span>
+                    <span className="text-primary">&#8226;</span>
                     {activity}
                   </li>
                 ))}
@@ -541,9 +541,9 @@ const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
 // Project Section Component
 const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; isExpanded: boolean; onToggle: () => void }) => {
   const difficultyColors: Record<string, string> = {
-    'Beginner': 'bg-green-100 text-green-800',
-    'Intermediate': 'bg-yellow-100 text-yellow-800',
-    'Advanced': 'bg-red-100 text-red-800',
+    'Beginner': 'bg-green-500/20 text-green-300',
+    'Intermediate': 'bg-yellow-500/20 text-yellow-300',
+    'Advanced': 'bg-red-500/20 text-red-300',
   };
 
   return (
@@ -562,14 +562,14 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
               </span>
               <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                 project.gradeBand === '6-8'
-                  ? 'bg-emerald-100 text-emerald-700'
+                  ? 'bg-secret/20 text-secret-light'
                   : project.gradeBand === '9-12'
-                    ? 'bg-blue-100 text-blue-700'
-                    : 'bg-purple-100 text-purple-700'
+                    ? 'bg-primary/20 text-primary'
+                    : 'bg-purple-500/100/20 text-purple-300'
               }`}>
                 {project.gradeBand === '6-8' ? 'Grades 6-8' : project.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
               </span>
-              <span className="text-xs px-2 py-1 rounded-full bg-slate-100 text-slate-800">
+              <span className="text-xs px-2 py-1 rounded-full bg-deep-alt text-text-heading">
                 {project.duration}
               </span>
             </div>
@@ -604,7 +604,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <ul className="space-y-2">
               {project.learningObjectives.map((objective, i) => (
                 <li key={i} className="flex items-start gap-3 text-text-muted">
-                  <span className="flex-shrink-0 w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-medium">
+                  <span className="flex-shrink-0 w-6 h-6 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm font-medium">
                     {i + 1}
                   </span>
                   {objective}
@@ -663,7 +663,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           </div>
 
           {/* Assessment */}
-          <div className="bg-slate-50 rounded-lg p-6">
+          <div className="bg-deep-alt rounded-lg p-6">
             <h4 className="text-lg font-semibold text-text-heading mb-4">Assessment</h4>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -699,12 +699,12 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           </div>
 
           {/* Real World Connections */}
-          <div className="bg-blue-50 rounded-lg p-6">
+          <div className="bg-primary/10 rounded-lg p-6">
             <h4 className="text-lg font-semibold text-text-heading mb-3">Real-World Connections</h4>
             <ul className="space-y-2">
               {project.realWorldConnections.map((connection, i) => (
                 <li key={i} className="flex items-start gap-2 text-text-secondary">
-                  <span className="text-blue-500">&#8594;</span>
+                  <span className="text-primary">&#8594;</span>
                   {connection}
                 </li>
               ))}
@@ -7666,7 +7666,7 @@ export default function NetworkingCurriculum() {
   return (
     <div className="min-h-screen bg-deep">
       {/* Header */}
-      <div className="bg-slate-800 text-white py-16">
+      <div className="bg-deep text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href={`/${locale}/tech-sovereignty`}
@@ -7679,8 +7679,8 @@ export default function NetworkingCurriculum() {
           </Link>
 
           <div className="flex items-center gap-3 mb-4">
-            <span className="bg-green-500 text-white text-sm px-3 py-1 rounded-full">Track A</span>
-            <span className="bg-slate-600 text-sm px-3 py-1 rounded-full">4 Projects</span>
+            <span className="bg-green-500/100 text-white text-sm px-3 py-1 rounded-full">Track A</span>
+            <span className="bg-deep-alt text-sm px-3 py-1 rounded-full">4 Projects</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -7691,15 +7691,15 @@ export default function NetworkingCurriculum() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <div className="bg-slate-700 px-4 py-2 rounded-lg">
+            <div className="bg-deep-card px-4 py-2 rounded-lg">
               <span className="text-slate-400 text-sm">Duration</span>
               <p className="font-semibold">17-23 weeks total</p>
             </div>
-            <div className="bg-slate-700 px-4 py-2 rounded-lg">
+            <div className="bg-deep-card px-4 py-2 rounded-lg">
               <span className="text-slate-400 text-sm">Skill Level</span>
               <p className="font-semibold">Beginner to Advanced</p>
             </div>
-            <div className="bg-slate-700 px-4 py-2 rounded-lg">
+            <div className="bg-deep-card px-4 py-2 rounded-lg">
               <span className="text-slate-400 text-sm">Projects</span>
               <p className="font-semibold">4 hands-on projects</p>
             </div>
@@ -7747,19 +7747,19 @@ export default function NetworkingCurriculum() {
               <h3 className="font-semibold text-text-heading mb-2">Why This Matters</h3>
               <ul className="space-y-2 text-text-secondary">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">&#8594;</span>
+                  <span className="text-primary mt-1">&#8594;</span>
                   Understanding networks is foundational to all tech sovereignty work
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">&#8594;</span>
+                  <span className="text-primary mt-1">&#8594;</span>
                   Communities can build their own internet access
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">&#8594;</span>
+                  <span className="text-primary mt-1">&#8594;</span>
                   Network knowledge helps you make informed privacy decisions
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">&#8594;</span>
+                  <span className="text-primary mt-1">&#8594;</span>
                   These skills are in high demand across many careers
                 </li>
               </ul>
@@ -7784,7 +7784,7 @@ export default function NetworkingCurriculum() {
         </div>
 
         {/* Educator Notes */}
-        <div className="mt-12 bg-amber-50 rounded-xl border border-amber-200 p-8">
+        <div className="mt-12 bg-amber-500/10 rounded-xl border border-amber-500/30 p-8">
           <h2 className="text-2xl font-bold text-text-heading mb-4">Notes for Educators</h2>
           <div className="space-y-4 text-text-secondary">
             <p>
@@ -7814,7 +7814,7 @@ export default function NetworkingCurriculum() {
         </div>
 
         {/* Community Network Resources */}
-        <div className="mt-12 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl border border-teal-200 p-8">
+        <div className="mt-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/30 p-8">
           <h2 className="text-2xl font-bold text-text-heading mb-2">Community Network Resources</h2>
           <p className="text-text-secondary mb-6">
             Learn from real-world community networks and access comprehensive guides for building your own.
@@ -7825,8 +7825,8 @@ export default function NetworkingCurriculum() {
             {/* NYC Mesh */}
             <div className="bg-deep-card rounded-lg border border-primary/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                 </div>
@@ -7840,7 +7840,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.nycmesh.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-teal-600 hover:text-teal-800 flex items-center gap-1"
+                  className="text-sm text-primary hover:text-primary flex items-center gap-1"
                 >
                   Main Site
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7851,7 +7851,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.nycmesh.net/blog/how/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-teal-600 hover:text-teal-800 flex items-center gap-1"
+                  className="text-sm text-primary hover:text-primary flex items-center gap-1"
                 >
                   How It Works
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7862,7 +7862,7 @@ export default function NetworkingCurriculum() {
                   href="https://wiki.nycmesh.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-teal-600 hover:text-teal-800 flex items-center gap-1"
+                  className="text-sm text-primary hover:text-primary flex items-center gap-1"
                 >
                   Technical Wiki
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7875,8 +7875,8 @@ export default function NetworkingCurriculum() {
             {/* Internet Society DIY Toolkit */}
             <div className="bg-deep-card rounded-lg border border-primary/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
@@ -7890,7 +7890,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.internetsociety.org/resources/community-network-diy-toolkit/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1"
+                  className="text-sm text-primary hover:text-primary flex items-center gap-1"
                 >
                   Complete Toolkit
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7901,7 +7901,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.internetsociety.org/blog/2024/02/build-a-community-network/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1"
+                  className="text-sm text-primary hover:text-primary flex items-center gap-1"
                 >
                   Getting Started Guide
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7914,8 +7914,8 @@ export default function NetworkingCurriculum() {
             {/* Community Network Manual */}
             <div className="bg-deep-card rounded-lg border border-primary/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-purple-500/100/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
@@ -7929,7 +7929,7 @@ export default function NetworkingCurriculum() {
                   href="https://direitorio.fgv.br/en/publication/community-network-manual-how-build-internet-yourself"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-purple-600 hover:text-purple-800 flex items-center gap-1"
+                  className="text-sm text-purple-300 hover:text-purple-300 flex items-center gap-1"
                 >
                   Community Network Manual
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7940,7 +7940,7 @@ export default function NetworkingCurriculum() {
                   href="https://librerouter.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-purple-600 hover:text-purple-800 flex items-center gap-1"
+                  className="text-sm text-purple-300 hover:text-purple-300 flex items-center gap-1"
                 >
                   LibreRouter Project
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7953,8 +7953,8 @@ export default function NetworkingCurriculum() {
             {/* Other Community Networks */}
             <div className="bg-deep-card rounded-lg border border-primary/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -7968,7 +7968,7 @@ export default function NetworkingCurriculum() {
                   href="https://guifi.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-green-600 hover:text-green-800 flex items-center gap-1"
+                  className="text-sm text-green-400 hover:text-green-300 flex items-center gap-1"
                 >
                   Guifi.net (Spain)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7979,7 +7979,7 @@ export default function NetworkingCurriculum() {
                   href="https://freifunk.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-green-600 hover:text-green-800 flex items-center gap-1"
+                  className="text-sm text-green-400 hover:text-green-300 flex items-center gap-1"
                 >
                   Freifunk (Germany)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7990,7 +7990,7 @@ export default function NetworkingCurriculum() {
                   href="https://detroitcommunitytech.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-green-600 hover:text-green-800 flex items-center gap-1"
+                  className="text-sm text-green-400 hover:text-green-300 flex items-center gap-1"
                 >
                   Detroit Community Tech
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8003,8 +8003,8 @@ export default function NetworkingCurriculum() {
             {/* Technical Resources */}
             <div className="bg-deep-card rounded-lg border border-primary/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -8019,7 +8019,7 @@ export default function NetworkingCurriculum() {
                   href="https://openwrt.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-orange-600 hover:text-orange-800 flex items-center gap-1"
+                  className="text-sm text-orange-400 hover:text-orange-300 flex items-center gap-1"
                 >
                   OpenWrt (Router Firmware)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8030,7 +8030,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.open-mesh.org/projects/batman-adv/wiki"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-orange-600 hover:text-orange-800 flex items-center gap-1"
+                  className="text-sm text-orange-400 hover:text-orange-300 flex items-center gap-1"
                 >
                   BATMAN-adv (Mesh Protocol)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8041,7 +8041,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.wireshark.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-orange-600 hover:text-orange-800 flex items-center gap-1"
+                  className="text-sm text-orange-400 hover:text-orange-300 flex items-center gap-1"
                 >
                   Wireshark (Traffic Analysis)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8054,8 +8054,8 @@ export default function NetworkingCurriculum() {
             {/* Books & Reading */}
             <div className="bg-deep-card rounded-lg border border-primary/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
@@ -8069,7 +8069,7 @@ export default function NetworkingCurriculum() {
                   href="http://wndw.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
+                  className="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
                 >
                   Wireless Networking in the Developing World
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8080,7 +8080,7 @@ export default function NetworkingCurriculum() {
                   href="https://apc.org/en/pubs/telecommunications-reclaimed"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
+                  className="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
                 >
                   Telecommunications Reclaimed
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8092,7 +8092,7 @@ export default function NetworkingCurriculum() {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-8 bg-teal-100 rounded-lg p-6 text-center">
+          <div className="mt-8 bg-primary/20 rounded-lg p-6 text-center">
             <h3 className="text-lg font-bold text-teal-900 mb-2">Ready to Build?</h3>
             <p className="text-sm text-teal-800 mb-4">
               Start with the curriculum above, then connect with existing community networks to learn from their experience.
@@ -8112,27 +8112,27 @@ export default function NetworkingCurriculum() {
                 <h4 className="font-semibold text-text-heading mb-2">Community Networks</h4>
                 <ul className="space-y-1 text-text-muted">
                   <li>
-                    <a href="https://www.nycmesh.net" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">NYC Mesh</a>
+                    <a href="https://www.nycmesh.net" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">NYC Mesh</a>
                     {' '}- Documentation, install guides, and community organizing practices
                   </li>
                   <li>
-                    <a href="https://guifi.net" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">guifi.net</a>
+                    <a href="https://guifi.net" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">guifi.net</a>
                     {' '}- Network commons model and cooperative governance structures
                   </li>
                   <li>
-                    <a href="https://www.freifunk.net" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">Freifunk</a>
+                    <a href="https://www.freifunk.net" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">Freifunk</a>
                     {' '}- Open source mesh networking and community building
                   </li>
                   <li>
-                    <a href="https://b4rn.org.uk" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">B4RN (Broadband for the Rural North)</a>
+                    <a href="https://b4rn.org.uk" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">B4RN (Broadband for the Rural North)</a>
                     {' '}- Rural cooperative fiber network model
                   </li>
                   <li>
-                    <a href="https://detroitcommunitytech.org" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">Detroit Community Technology Project</a>
+                    <a href="https://detroitcommunitytech.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">Detroit Community Technology Project</a>
                     {' '}- Digital stewards program and community training methodology
                   </li>
                   <li>
-                    <a href="https://www.intnetwork.org" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">Rhizomatica</a>
+                    <a href="https://www.intnetwork.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">Rhizomatica</a>
                     {' '}- Indigenous community network and autonomous telecommunications
                   </li>
                 </ul>
@@ -8141,23 +8141,23 @@ export default function NetworkingCurriculum() {
                 <h4 className="font-semibold text-text-heading mb-2">Educational Resources</h4>
                 <ul className="space-y-1 text-text-muted">
                   <li>
-                    <a href="https://www.internetsociety.org/resources/community-network-diy-toolkit/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">Internet Society</a>
+                    <a href="https://www.internetsociety.org/resources/community-network-diy-toolkit/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">Internet Society</a>
                     {' '}- Community Network DIY Toolkit and training materials
                   </li>
                   <li>
-                    <a href="https://apc.org" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">Association for Progressive Communications (APC)</a>
+                    <a href="https://apc.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">Association for Progressive Communications (APC)</a>
                     {' '}- Community network policy advocacy and documentation
                   </li>
                   <li>
-                    <a href="http://wndw.net" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">WNDW</a>
+                    <a href="http://wndw.net" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">WNDW</a>
                     {' '}- Wireless Networking in the Developing World guide
                   </li>
                   <li>
-                    <a href="https://open-mesh.org/projects/batman-adv/wiki" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">B.A.T.M.A.N. Project</a>
+                    <a href="https://open-mesh.org/projects/batman-adv/wiki" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">B.A.T.M.A.N. Project</a>
                     {' '}- BATMAN-adv mesh protocol documentation
                   </li>
                   <li>
-                    <a href="https://openwrt.org" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-800">OpenWrt Project</a>
+                    <a href="https://openwrt.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary">OpenWrt Project</a>
                     {' '}- Open source router firmware and networking guides
                   </li>
                 </ul>
@@ -8175,7 +8175,7 @@ export default function NetworkingCurriculum() {
         <div className="mt-12 flex justify-between items-center">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center text-slate-600 hover:text-slate-800 transition-colors"
+            className="inline-flex items-center text-slate-600 hover:text-text-heading transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -8184,7 +8184,7 @@ export default function NetworkingCurriculum() {
           </Link>
           <Link
             href={`/${locale}/tech-sovereignty/self-hosted`}
-            className="inline-flex items-center bg-slate-800 text-white px-6 py-3 rounded-lg hover:bg-slate-700 transition-colors"
+            className="inline-flex items-center bg-deep text-white px-6 py-3 rounded-lg hover:bg-deep-card transition-colors"
           >
             Next: Self-Hosted Services
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
