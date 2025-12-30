@@ -674,8 +674,322 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
   );
 };
 
-// Placeholder projects data (will be filled in Task 9-12)
-const projects: Project[] = [];
+// Project 1: Personal Cloud Storage with Nextcloud
+const project1: Project = {
+  id: 'project-1',
+  title: 'Project 1: Personal Cloud Storage with Nextcloud',
+  description: 'Set up your own cloud storage system that replaces Google Drive, Dropbox, and iCloud',
+  difficulty: 'Beginner',
+  duration: '2-3 weeks',
+  gradeBand: '6-12',
+  overview: `Students will deploy and configure Nextcloud, an open-source cloud storage platform,
+    learning about file synchronization, user authentication, and data sovereignty. By the end,
+    they'll have a working personal cloud accessible from any device.`,
+  learningObjectives: [
+    'Understand how cloud storage works (sync protocols, file versioning, conflict resolution)',
+    'Configure a web server (Apache/Nginx) to serve a PHP application',
+    'Set up user authentication and access controls',
+    'Implement HTTPS with SSL certificates for secure data transmission',
+    'Compare self-hosted vs commercial cloud storage (privacy, cost, reliability trade-offs)'
+  ],
+  prerequisites: [
+    'Basic understanding of files and folders',
+    'Familiarity with web browsers',
+    'Completed Track A Project 1 (networking basics) recommended'
+  ],
+  materials: {
+    required: [
+      'Raspberry Pi 4 (4GB+ RAM) or old laptop/desktop',
+      'MicroSD card (32GB+) or SSD for Pi',
+      'Ethernet cable or WiFi connection',
+      'USB storage drive (for actual cloud storage)'
+    ],
+    optional: [
+      'Domain name (for external access)',
+      'Dynamic DNS service account',
+      'SSL certificate (or use Let\'s Encrypt)'
+    ]
+  },
+  lessons: [
+    {
+      title: 'Lesson 1: What is Cloud Storage, Really?',
+      duration: '90 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Define cloud storage and identify its key components',
+        'Trace the path of a file from device to cloud and back',
+        'Compare commercial cloud services with self-hosted alternatives',
+        'Identify privacy implications of storing data on third-party servers'
+      ],
+      conceptualUnderstanding: [
+        'Cloud storage is just "someone else\'s computer" - understanding server infrastructure',
+        'Sync vs backup: why files appear on all your devices',
+        'The trade-off triangle: convenience, privacy, and control'
+      ],
+      activities: [
+        'Map the journey of a photo from phone to Google Photos',
+        'Read and discuss terms of service for major cloud providers',
+        'Design your ideal cloud storage system on paper'
+      ],
+      detailedActivities: [
+        {
+          title: 'Activity 1: Where Does Your Data Actually Go?',
+          duration: '25 minutes',
+          overview: 'Students trace the physical and logical path of a file uploaded to cloud storage',
+          steps: [
+            {
+              instruction: 'Open discussion: "When you save a photo to iCloud/Google Photos, where does it go?"',
+              teacherNotes: 'Collect responses without correcting yet. Most students think "the cloud" is abstract.',
+              duration: '5 min'
+            },
+            {
+              instruction: 'Show a map of Google/Apple data centers. Explain that "the cloud" is physical buildings with millions of hard drives.',
+              teacherNotes: 'Use Google\'s data center virtual tour video if available.',
+              duration: '5 min'
+            },
+            {
+              instruction: 'Draw diagram together: Phone → Internet → Data Center → Storage Array → Your File',
+              teacherNotes: 'Have students copy this into their notebooks. This becomes a reference diagram.',
+              duration: '10 min'
+            },
+            {
+              instruction: 'Discuss: What could go wrong at each step? Who has access at each point?',
+              teacherNotes: 'Guide toward: ISP can see metadata, company employees could access files, government subpoenas, data breaches.',
+              duration: '5 min'
+            }
+          ],
+          formativeAssessment: 'Can students explain why "the cloud" is a misleading term?',
+          differentiation: {
+            support: 'Provide pre-drawn diagram template for students to label',
+            extension: 'Research and present on a specific data center incident or breach'
+          }
+        },
+        {
+          title: 'Activity 2: Terms of Service Detective',
+          duration: '30 minutes',
+          overview: 'Students analyze real ToS documents to understand data rights',
+          steps: [
+            {
+              instruction: 'Distribute printed excerpts from Google Drive, Dropbox, and iCloud ToS (pre-selected relevant sections)',
+              teacherNotes: 'Prepare excerpts focusing on: data usage rights, sharing with third parties, government requests, account termination.',
+              duration: '5 min'
+            },
+            {
+              instruction: 'In pairs, highlight: 1) What rights you give them 2) What they can do with your data 3) When they can delete your account',
+              teacherNotes: 'Circulate and help with legal language. Pre-define difficult terms.',
+              duration: '15 min'
+            },
+            {
+              instruction: 'Each pair shares most surprising finding with class',
+              duration: '10 min'
+            }
+          ],
+          formativeAssessment: 'Can students identify at least one concerning clause in each ToS?'
+        },
+        {
+          title: 'Activity 3: Design Your Ideal Cloud',
+          duration: '25 minutes',
+          overview: 'Students design their ideal cloud storage system, setting up the project motivation',
+          steps: [
+            {
+              instruction: 'Prompt: "If you could design your own cloud storage, what features would it have?"',
+              duration: '5 min'
+            },
+            {
+              instruction: 'Students sketch their design including: where data is stored, who can access it, how it syncs',
+              duration: '15 min'
+            },
+            {
+              instruction: 'Gallery walk: students view others\' designs and leave sticky note feedback',
+              duration: '5 min'
+            }
+          ],
+          formativeAssessment: 'Do designs show understanding of the client-server model?',
+          differentiation: {
+            support: 'Provide template with prompts: "My files are stored in ___", "To access them I need ___"',
+            extension: 'Include security measures, backup strategies, or multi-user access in design'
+          }
+        }
+      ],
+      materials: [
+        'Printed ToS excerpts from major cloud providers',
+        'World map showing data center locations',
+        'Blank paper for design activity',
+        'Sticky notes for gallery walk'
+      ],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: [
+            'Choose which cloud provider ToS to analyze in depth',
+            'Design cloud system for personal use case (photos, documents, music)'
+          ],
+          relevanceAndAuthenticity: [
+            'Analyze services students actually use daily',
+            'Connect to news stories about data breaches'
+          ],
+          selfRegulation: [
+            'Reflection prompt: What surprised you most today?',
+            'Goal setting: What do you want your cloud storage to be like?'
+          ]
+        },
+        representation: {
+          multipleFormats: [
+            'Visual diagrams of data flow',
+            'Written ToS analysis',
+            'Verbal class discussion'
+          ],
+          vocabularySupport: [
+            'Word wall: server, client, sync, encrypt, ToS, data center',
+            'Pre-teach legal terminology in ToS'
+          ],
+          backgroundKnowledge: [
+            'Start with familiar apps (Photos, Drive) before abstract concepts',
+            'Connect to physical experiences (file cabinets, mailboxes)'
+          ]
+        },
+        actionExpression: {
+          physicalOptions: [
+            'Digital or paper-based ToS analysis',
+            'Standing gallery walk or seated pair share'
+          ],
+          expressionOptions: [
+            'Sketch, write, or verbally describe cloud design',
+            'Individual or pair work for ToS activity'
+          ],
+          executiveFunctionSupport: [
+            'Checklist for ToS analysis points',
+            'Timer visible for activity transitions',
+            'Graphic organizer for design activity'
+          ]
+        }
+      }
+    },
+    {
+      title: 'Lesson 2: Preparing Your Server Hardware',
+      duration: '90 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Set up Raspberry Pi or repurpose old computer as server',
+        'Install and configure Raspberry Pi OS or Ubuntu Server',
+        'Understand server vs desktop operating systems',
+        'Configure SSH for remote management'
+      ],
+      conceptualUnderstanding: [
+        'A server is just a computer that serves files/services to other computers',
+        'Headless operation: why servers don\'t need monitors',
+        'Security considerations for always-on devices'
+      ],
+      activities: [
+        'Assemble and boot Raspberry Pi',
+        'Install operating system from scratch',
+        'Configure SSH and test remote connection'
+      ],
+      materials: [
+        'Raspberry Pi 4 with power supply',
+        'MicroSD card and card reader',
+        'Ethernet cable',
+        'Separate computer for SSH access'
+      ]
+    },
+    {
+      title: 'Lesson 3: Installing Nextcloud',
+      duration: '90 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Understand LAMP/LEMP stack components',
+        'Install Apache web server and PHP',
+        'Set up MariaDB database',
+        'Deploy Nextcloud via web installer'
+      ],
+      conceptualUnderstanding: [
+        'Web applications need: web server + language runtime + database',
+        'How HTTP requests flow through the stack',
+        'Configuration files: where settings live'
+      ],
+      activities: [
+        'Install web server and verify it works',
+        'Configure PHP with required extensions',
+        'Create database and user for Nextcloud'
+      ],
+      materials: [
+        'Prepared server from Lesson 2',
+        'Nextcloud installation documentation (printed or accessible)'
+      ]
+    },
+    {
+      title: 'Lesson 4: Securing Your Cloud',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Configure HTTPS with Let\'s Encrypt',
+        'Understand SSL/TLS certificates and encryption',
+        'Set up firewall rules',
+        'Configure Nextcloud security hardening options'
+      ],
+      conceptualUnderstanding: [
+        'Encryption in transit vs at rest',
+        'Certificate authorities and trust chains',
+        'Defense in depth: multiple security layers'
+      ],
+      activities: [
+        'Generate and install SSL certificate',
+        'Configure firewall with UFW',
+        'Run Nextcloud security scan and fix issues'
+      ],
+      materials: [
+        'Domain name (or use DuckDNS for free subdomain)',
+        'Nextcloud security documentation'
+      ]
+    },
+    {
+      title: 'Lesson 5: Using and Maintaining Your Cloud',
+      duration: '90 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Install sync clients on multiple devices',
+        'Configure automated backups',
+        'Set up users and sharing permissions',
+        'Create maintenance routine (updates, monitoring)'
+      ],
+      conceptualUnderstanding: [
+        'Sync conflict resolution: what happens with simultaneous edits',
+        'Backup vs sync: why you need both',
+        'The responsibility of self-hosting: you\'re the IT department now'
+      ],
+      activities: [
+        'Install desktop and mobile sync clients',
+        'Create test files and verify sync',
+        'Set up automated backup to external drive'
+      ],
+      materials: [
+        'Mobile devices for testing',
+        'External USB drive for backups'
+      ]
+    }
+  ],
+  assessment: {
+    formative: [
+      'Exit tickets after each lesson',
+      'Diagram checks: can students draw data flow?',
+      'Configuration file annotations: explain what each setting does'
+    ],
+    summative: 'Working Nextcloud installation that students can demonstrate: upload file from phone, access from computer, explain the path data takes'
+  },
+  extensions: [
+    'Set up Nextcloud Talk for video calls',
+    'Install collaborative document editing (Collabora or OnlyOffice)',
+    'Configure external access through router port forwarding',
+    'Set up two-factor authentication'
+  ],
+  realWorldConnections: [
+    'Disroot.org - volunteer-run privacy-focused services',
+    'Schools and organizations running their own Nextcloud instances',
+    'The European Union\'s push for digital sovereignty'
+  ]
+};
+
+// Projects array
+const projects: Project[] = [project1];
 
 // Main Page Component
 export default function SelfHostedPage() {
