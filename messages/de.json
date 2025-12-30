@@ -42,6 +42,10 @@
           "title": "GYST",
           "subtitle": "KI-gestützte Stil- und Garderobe-App"
         },
+        "codetale": {
+          "title": "CodeTale",
+          "subtitle": "KI-gestützte Lernplattform"
+        },
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "Zielverfolgungsplattform"
@@ -176,6 +180,31 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ]
+      },
+      {
+        "title": "CodeTale",
+        "role": "Ersteller & Entwickler",
+        "organization": "Unabhängiges Projekt",
+        "timeline": "2024 - Heute",
+        "challenge": "Erstellung einer Bildungsplattform, die Kindern von 8-14 Jahren durch Spielerstellung rechnerisches Denken beibringt, basierend auf lernwissenschaftlicher Forschung und mit KI-geführtem Unterricht.",
+        "whatIDid": [
+          "Entwurf und Entwicklung einer Next.js-Webanwendung mit forschungsbasierter Pädagogik zum Unterrichten von rechnerischem Denken",
+          "Erstellung von Cappy, einem KI-Capybara-Maskottchen mit 6 animierten Zuständen, das Schüler durch die Spielerstellung führt",
+          "Aufbau von zwei Spielerstellungspfaden: Abenteuer (story-basiertes Point-and-Click) und Action (kachelbasierte Dungeon-Spiele)",
+          "Implementierung von drei Schwierigkeitsstufen (Entdecker, Ersteller, Programmierer) basierend auf der Zone der proximalen Entwicklung",
+          "Integration von Claude AI für Inhaltsgenerierung mit erklärbarer KI, die Kindern Prompt-Engineering beibringt",
+          "Entwicklung von visuellen Spielkarten, geführten Debugging-Tools und kontextuellen Lernmomenten",
+          "Anwendung von Prinzipien der kognitiven Belastungstheorie mit schrittweisen Assistenten und progressiver Funktionsenthüllung",
+          "Erstellung einer Pixel-Art-Benutzeroberfläche mit Web Audio API Soundfeedback für kinderfreundliche Interaktion"
+        ],
+        "impact": "Erstellung eines Bildungstools, das rechnerisches Denken für Grund- und Mittelschüler zugänglich macht. Durch die Kombination von Spielerstellung mit KI-Unterstützung und forschungsbasierter Pädagogik zeigt CodeTale, wie Technologie Kindern nicht nur beibringen kann, KI zu nutzen, sondern zu verstehen, wie man effektiv mit ihr zusammenarbeitet.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Claude AI Integration, lernwissenschaftliche Forschung, pädagogisches Spieldesign, kognitive Belastungstheorie, konstruktionistisches Lernen",
+        "images": [
+          "/images/screenshots/codetale/home.png",
+          "/images/screenshots/codetale/create.png",
+          "/images/screenshots/codetale/learn.png"
+        ],
+        "website": "https://codetale.jamelna.com"
       },
       {
         "title": "SMARTIEgoals.org",
