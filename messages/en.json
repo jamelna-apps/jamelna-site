@@ -556,6 +556,12 @@
           "description": "Explore governance models, funding strategies, and organizational structures for community-owned technology.",
           "difficulty": "Advanced",
           "duration": "Ongoing"
+        },
+        "project4": {
+          "title": "Collaborative Technology Governance",
+          "description": "Develop governance structures that keep technology accountable to community needs—policies, decision-making, and ethics.",
+          "difficulty": "Advanced",
+          "duration": "5-6 weeks"
         }
       }
     },
