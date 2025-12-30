@@ -140,7 +140,7 @@ function TrackSection({ icon, title, description, projects, color, trackLink, tr
           )}
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ml-0 md:ml-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
@@ -277,7 +277,7 @@ export default function TechSovereigntyPage() {
       <TableOfContents />
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
         {/* Purple gradient background for secret page */}
         <div className="absolute inset-0 bg-gradient-to-br from-secret/20 via-deep to-deep-darker"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
@@ -289,7 +289,7 @@ export default function TechSovereigntyPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
             <span className="text-secret">/</span> {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
             {t('hero.subtitle')}
           </p>
           <p className="text-lg text-text-muted mb-10 max-w-2xl mx-auto">
