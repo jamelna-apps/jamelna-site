@@ -1885,8 +1885,454 @@ const project3: Project = {
   ]
 };
 
+// Project 4: Home Automation Dashboard
+const project4: Project = {
+  id: 'home-automation',
+  title: 'Project 4: Home Automation Dashboard',
+  description: 'Deploy Home Assistant for local-first smart home control without cloud dependencies',
+  difficulty: 'Intermediate',
+  duration: '3-4 weeks',
+  gradeBand: '9-12',
+  overview: `Students deploy Home Assistant, an open-source home automation platform, learning about IoT protocols, local-first design, and the privacy implications of smart devices. This project combines hardware interaction with software configuration, teaching students to question why smart devices "need" cloud connections and how to build systems that respect user privacy.`,
+  learningObjectives: [
+    'Understand IoT protocols (Zigbee, Z-Wave, WiFi, MQTT)',
+    'Deploy Home Assistant on a Raspberry Pi',
+    'Configure automations based on triggers and conditions',
+    'Analyze privacy implications of smart home devices'
+  ],
+  prerequisites: [
+    'Basic Linux command line (from Project 1)',
+    'Understanding of networking concepts',
+    'Completed Project 1 or equivalent server experience'
+  ],
+  materials: {
+    required: [
+      'Raspberry Pi 4 (4GB+ recommended)',
+      'microSD card (32GB+)',
+      'Power supply',
+      'Ethernet connection recommended'
+    ],
+    optional: [
+      'Zigbee USB adapter (Sonoff, ConBee)',
+      'Smart devices for testing (bulbs, sensors, plugs)',
+      'MQTT broker setup',
+      'Temperature/humidity sensors'
+    ]
+  },
+  lessons: [
+    {
+      title: 'Lesson 1: The Smart Home Privacy Problem',
+      duration: '60 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Identify data collection in commercial smart home products',
+        'Explain why cloud-dependent IoT is a privacy risk',
+        'Understand the local-first alternative approach'
+      ],
+      conceptualUnderstanding: [
+        'Most smart devices send data to company servers',
+        'Cloud dependency means devices stop working if company closes',
+        'Local-first: devices talk to YOUR server, not theirs',
+        'Open protocols vs proprietary ecosystems'
+      ],
+      activities: [
+        'Smart Device Data Audit',
+        'Privacy Policy Investigation',
+        'Local-First Design Principles'
+      ],
+      detailedActivities: [
+        {
+          title: 'Smart Device Data Audit',
+          duration: '20 minutes',
+          overview: 'Investigate what data common smart devices collect and transmit.',
+          steps: [
+            { instruction: 'List smart devices in students\' homes (or school)', teacherNotes: 'Alexa, Google Home, Ring, Nest, smart TVs, etc.' },
+            { instruction: 'Research: what data does each device collect?', teacherNotes: 'Voice recordings, video, usage patterns, location' },
+            { instruction: 'Diagram the data flow: device → cloud → company servers', teacherNotes: 'Emphasize that data leaves your home' },
+            { instruction: 'Discussion: who benefits from this data collection?', teacherNotes: 'Targeted ads, product development, third-party sales' }
+          ],
+          formativeAssessment: 'Students can identify at least 3 types of data collected by smart devices'
+        },
+        {
+          title: 'Privacy Policy Investigation',
+          duration: '20 minutes',
+          overview: 'Read actual privacy policies to understand data practices.',
+          steps: [
+            { instruction: 'Find the privacy policy for a popular smart device', teacherNotes: 'Ring, Nest, or similar—they\'re public' },
+            { instruction: 'Search for keywords: "share", "third party", "retain", "law enforcement"', teacherNotes: 'Often surprising what\'s allowed' },
+            { instruction: 'Document 3 concerning clauses you find', teacherNotes: 'Students often find this eye-opening' },
+            { instruction: 'Discussion: did you know this before buying/using the device?', teacherNotes: 'Leads into informed consent discussion' }
+          ],
+          differentiation: {
+            support: 'Provide pre-selected policy excerpts to analyze',
+            extension: 'Compare policies across competing brands'
+          }
+        },
+        {
+          title: 'Local-First Design Principles',
+          duration: '15 minutes',
+          overview: 'Understand the alternative approach to smart home design.',
+          steps: [
+            { instruction: 'Define local-first: data stays on your network', teacherNotes: 'No cloud required for basic operation' },
+            { instruction: 'Compare: cloud-dependent vs local-first architecture', teacherNotes: 'Draw both diagrams side by side' },
+            { instruction: 'Discuss trade-offs: convenience vs privacy/control', teacherNotes: 'No remote access without extra setup' },
+            { instruction: 'Introduce Home Assistant as a local-first solution', teacherNotes: 'Preview what we\'ll build' }
+          ]
+        }
+      ],
+      materials: ['Computers for research', 'Whiteboard for diagrams'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose devices to investigate', 'Select privacy policy to analyze'],
+          relevanceAndAuthenticity: ['Examine devices in their own homes', 'Real privacy policies'],
+          selfRegulation: ['Privacy concern checklist', 'Reflection on personal device use']
+        },
+        representation: {
+          multipleFormats: ['Written policies', 'Data flow diagrams', 'Group discussion'],
+          vocabularySupport: ['IoT terminology glossary', 'Privacy policy jargon decoder'],
+          backgroundKnowledge: ['Connect to personal device experience', 'News stories about smart device privacy']
+        },
+        actionExpression: {
+          physicalOptions: ['Research individually or in pairs', 'Present findings verbally or in writing'],
+          expressionOptions: ['Written analysis, diagram, or presentation'],
+          executiveFunctionSupport: ['Research guide with prompts', 'Policy analysis template']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may think "I have nothing to hide"—discuss aggregate data risks',
+          'Cloud = inherently bad is too simplistic—discuss when it\'s appropriate',
+          'Local-first doesn\'t mean no internet—just no dependency on external servers'
+        ],
+        keyTakeaways: [
+          'Smart devices often collect more data than needed for their function',
+          'Cloud dependency creates single points of failure',
+          'Local-first gives you control over your data'
+        ],
+        preparationTips: [
+          'Bookmark some "shocking" privacy policy clauses',
+          'Have news articles ready about smart device privacy incidents',
+          'Prepare comparison chart of cloud vs local architecture'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 2: Installing Home Assistant',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Flash Home Assistant OS to SD card',
+        'Complete initial setup and onboarding',
+        'Navigate the Home Assistant interface'
+      ],
+      conceptualUnderstanding: [
+        'Home Assistant is a complete operating system for home automation',
+        'Integrations connect to different device types',
+        'Entities represent individual devices or sensors',
+        'The dashboard displays and controls your smart home'
+      ],
+      activities: [
+        'Flash and Boot Home Assistant',
+        'Initial Configuration',
+        'Interface Exploration'
+      ],
+      detailedActivities: [
+        {
+          title: 'Flash and Boot Home Assistant',
+          duration: '30 minutes',
+          overview: 'Install Home Assistant Operating System on Raspberry Pi.',
+          steps: [
+            { instruction: 'Download Home Assistant OS image for Raspberry Pi', teacherNotes: 'From home-assistant.io, match to Pi model' },
+            { instruction: 'Use Raspberry Pi Imager or Balena Etcher to flash SD card', teacherNotes: 'Process takes 5-10 minutes' },
+            { instruction: 'Insert SD card, connect ethernet, power on Pi', teacherNotes: 'First boot takes several minutes' },
+            { instruction: 'Access http://homeassistant.local:8123 from browser', teacherNotes: 'May take 5-20 minutes for first-time setup' }
+          ],
+          formativeAssessment: 'Students can access Home Assistant web interface'
+        },
+        {
+          title: 'Initial Configuration',
+          duration: '30 minutes',
+          overview: 'Complete the onboarding wizard and create an account.',
+          steps: [
+            { instruction: 'Create owner account with strong password', teacherNotes: 'This is the admin account—save credentials!' },
+            { instruction: 'Set home location and timezone', teacherNotes: 'Used for sun-based automations' },
+            { instruction: 'Review auto-discovered integrations', teacherNotes: 'May find printers, TVs, etc. on network' },
+            { instruction: 'Explore Settings → System → Network', teacherNotes: 'Understand how HA connects to your network' }
+          ],
+          differentiation: {
+            support: 'Provide step-by-step screenshot guide',
+            extension: 'Configure static IP address for stability'
+          }
+        },
+        {
+          title: 'Interface Exploration',
+          duration: '25 minutes',
+          overview: 'Learn to navigate Home Assistant\'s interface.',
+          steps: [
+            { instruction: 'Tour the sidebar: Overview, Energy, Map, Logbook, History', teacherNotes: 'Each serves a different purpose' },
+            { instruction: 'Explore Settings → Devices & Services', teacherNotes: 'This is where integrations live' },
+            { instruction: 'Check Developer Tools → States', teacherNotes: 'See all entities and their current states' },
+            { instruction: 'Find the Add Integration button', teacherNotes: 'We\'ll use this in next lesson' }
+          ]
+        }
+      ],
+      materials: ['Raspberry Pi 4', 'microSD card', 'Power supply', 'Ethernet cable', 'Computer for flashing'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose home location', 'Personalize dashboard name'],
+          relevanceAndAuthenticity: ['Setting up real automation system', 'Will use throughout remaining lessons'],
+          selfRegulation: ['Boot progress checklist', 'Setup verification steps']
+        },
+        representation: {
+          multipleFormats: ['Video setup guides', 'Written instructions', 'Live demonstration'],
+          vocabularySupport: ['Home Assistant terminology glossary', 'Integration types explained'],
+          backgroundKnowledge: ['Review of Raspberry Pi from Project 1', 'Operating system concepts']
+        },
+        actionExpression: {
+          physicalOptions: ['Physical Pi setup or virtual machine option', 'Pair work'],
+          expressionOptions: ['Document setup process', 'Screenshot progress'],
+          executiveFunctionSupport: ['Step-by-step checklist', 'Troubleshooting FAQ']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may expect instant setup—Home Assistant first boot is slow',
+          'homeassistant.local may not resolve on all networks—use IP address backup',
+          'HA OS is different from HA Container or HA Core—we\'re using OS'
+        ],
+        keyTakeaways: [
+          'Home Assistant runs as a complete system on dedicated hardware',
+          'The web interface is how you configure and control everything',
+          'Entities are the building blocks—every device becomes entities'
+        ],
+        preparationTips: [
+          'Pre-flash some SD cards as backups for classroom',
+          'Test network discovery (homeassistant.local) on school network',
+          'Have Pi IP addresses ready if mDNS doesn\'t work'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 3: Adding Devices and Integrations',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Add integrations for different device types',
+        'Understand device protocols (WiFi, Zigbee, Z-Wave)',
+        'Configure entity customization'
+      ],
+      conceptualUnderstanding: [
+        'Integrations are bridges between Home Assistant and devices',
+        'WiFi devices: easy setup but cloud-dependent risks',
+        'Zigbee/Z-Wave: local protocols that need a coordinator',
+        'MQTT: message protocol for DIY IoT projects'
+      ],
+      activities: [
+        'Integration Installation',
+        'Protocol Comparison',
+        'Entity Customization'
+      ],
+      detailedActivities: [
+        {
+          title: 'Integration Installation',
+          duration: '40 minutes',
+          overview: 'Add various integrations to connect devices.',
+          steps: [
+            { instruction: 'Add a WiFi integration (e.g., TP-Link, Tuya if available)', teacherNotes: 'These demonstrate cloud vs local options' },
+            { instruction: 'Add weather integration (Met.no—no API key needed)', teacherNotes: 'Good first integration, always works' },
+            { instruction: 'If available: add Zigbee coordinator and pair a device', teacherNotes: 'Demonstrates local-only protocol' },
+            { instruction: 'View new entities in Developer Tools → States', teacherNotes: 'Watch entities appear after adding devices' }
+          ],
+          formativeAssessment: 'Students have at least 2 integrations configured with entities'
+        },
+        {
+          title: 'Protocol Comparison',
+          duration: '25 minutes',
+          overview: 'Understand the differences between IoT protocols.',
+          steps: [
+            { instruction: 'Create a comparison table: WiFi, Zigbee, Z-Wave, Bluetooth', teacherNotes: 'Range, power use, mesh capability, cloud dependency' },
+            { instruction: 'Discuss: why do Zigbee/Z-Wave need a coordinator?', teacherNotes: 'They don\'t speak IP—need translation' },
+            { instruction: 'Research: which protocol is most privacy-friendly?', teacherNotes: 'Zigbee/Z-Wave are local by design' },
+            { instruction: 'Diagram a mixed-protocol smart home', teacherNotes: 'Real homes often use multiple protocols' }
+          ],
+          differentiation: {
+            support: 'Provide pre-filled protocol comparison template',
+            extension: 'Research Matter protocol and its unification goals'
+          }
+        },
+        {
+          title: 'Entity Customization',
+          duration: '20 minutes',
+          overview: 'Rename and organize entities for usability.',
+          steps: [
+            { instruction: 'Find entities with unclear names (often device IDs)', teacherNotes: 'Default names are often cryptic' },
+            { instruction: 'Rename entities to human-friendly names', teacherNotes: 'Living Room Light instead of light.0x84...' },
+            { instruction: 'Assign entities to Areas (rooms)', teacherNotes: 'Helps with voice control and organization' },
+            { instruction: 'Add entities to dashboard cards', teacherNotes: 'Creating a useful overview' }
+          ]
+        }
+      ],
+      materials: ['Configured Home Assistant', 'Various smart devices if available', 'Zigbee coordinator (optional)'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose which integrations to add', 'Name entities personally'],
+          relevanceAndAuthenticity: ['Working with real devices', 'Building their smart home'],
+          selfRegulation: ['Integration checklist', 'Protocol comparison worksheet']
+        },
+        representation: {
+          multipleFormats: ['Protocol diagrams', 'Integration screenshots', 'Discussion'],
+          vocabularySupport: ['IoT protocol glossary', 'Entity terminology'],
+          backgroundKnowledge: ['Network concepts from prior projects', 'WiFi familiarity']
+        },
+        actionExpression: {
+          physicalOptions: ['Configure via GUI', 'YAML editing for advanced'],
+          expressionOptions: ['Document integration process', 'Create protocol comparison'],
+          executiveFunctionSupport: ['Integration setup guide', 'Troubleshooting steps']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'WiFi devices aren\'t automatically bad—some work locally',
+          'Zigbee isn\'t better than Z-Wave or vice versa—different trade-offs',
+          'Students may think all smart devices are compatible—they\'re not'
+        ],
+        keyTakeaways: [
+          'Different protocols have different privacy implications',
+          'Local protocols (Zigbee, Z-Wave) don\'t require internet',
+          'Entity naming and organization matters for usability'
+        ],
+        preparationTips: [
+          'Test integrations beforehand—some require specific setup',
+          'Have non-cloud integrations ready (weather, sun) as fallbacks',
+          'Prepare protocol comparison answers for discussion'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 4: Creating Automations',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Create automations with triggers, conditions, and actions',
+        'Debug automations using traces',
+        'Design useful home automations'
+      ],
+      conceptualUnderstanding: [
+        'Triggers: events that start an automation',
+        'Conditions: requirements that must be true',
+        'Actions: what happens when automation runs',
+        'Automations are programming without traditional code'
+      ],
+      activities: [
+        'Automation Fundamentals',
+        'Build Your First Automation',
+        'Advanced Automation Patterns'
+      ],
+      detailedActivities: [
+        {
+          title: 'Automation Fundamentals',
+          duration: '20 minutes',
+          overview: 'Understand the trigger-condition-action model.',
+          steps: [
+            { instruction: 'Draw the automation flow: Trigger → Condition → Action', teacherNotes: 'Like an if-then statement' },
+            { instruction: 'Examples of triggers: time, device state change, sunrise/sunset', teacherNotes: 'Anything that can be detected' },
+            { instruction: 'Examples of conditions: time range, someone home, device state', teacherNotes: 'Optional filters' },
+            { instruction: 'Examples of actions: turn on light, send notification, play media', teacherNotes: 'What you want to happen' }
+          ],
+          formativeAssessment: 'Students can explain the trigger-condition-action model'
+        },
+        {
+          title: 'Build Your First Automation',
+          duration: '40 minutes',
+          overview: 'Create a working automation from scratch.',
+          steps: [
+            { instruction: 'Navigate to Settings → Automations & Scenes', teacherNotes: 'This is the automation editor' },
+            { instruction: 'Create new automation: "Sunset Notification"', teacherNotes: 'Simple but demonstrates the pattern' },
+            { instruction: 'Trigger: Sun → Sunset', teacherNotes: 'Uses home location for accurate time' },
+            { instruction: 'Condition: (optional) Only on weekdays', teacherNotes: 'Shows how conditions filter triggers' },
+            { instruction: 'Action: Call service → Persistent notification', teacherNotes: 'Creates a notification in HA' },
+            { instruction: 'Test the automation using "Run Actions"', teacherNotes: 'Don\'t wait for sunset to test!' }
+          ],
+          differentiation: {
+            support: 'Provide pre-written automation to modify',
+            extension: 'Create multi-action automation with delays'
+          }
+        },
+        {
+          title: 'Advanced Automation Patterns',
+          duration: '25 minutes',
+          overview: 'Learn common automation patterns for smart homes.',
+          steps: [
+            { instruction: 'Pattern 1: Motion-activated lighting', teacherNotes: 'Trigger: motion, Action: light on, Condition: dark outside' },
+            { instruction: 'Pattern 2: Presence-based climate control', teacherNotes: 'Turn off heating when everyone leaves' },
+            { instruction: 'Pattern 3: Security alerts', teacherNotes: 'Notification when door opens while away' },
+            { instruction: 'Design your own automation for a real need', teacherNotes: 'Students identify a problem to solve' },
+            { instruction: 'Use Automation Trace to debug issues', teacherNotes: 'Shows why automations did/didn\'t run' }
+          ]
+        }
+      ],
+      materials: ['Configured Home Assistant with devices', 'At least one controllable device for testing'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Design custom automations', 'Choose notification content'],
+          relevanceAndAuthenticity: ['Solve real problems in their environment', 'See immediate results'],
+          selfRegulation: ['Automation planning template', 'Testing checklist']
+        },
+        representation: {
+          multipleFormats: ['Visual automation editor', 'YAML representation', 'Flowchart diagrams'],
+          vocabularySupport: ['Automation terminology', 'Service call explanation'],
+          backgroundKnowledge: ['If-then logic from any programming experience']
+        },
+        actionExpression: {
+          physicalOptions: ['Visual editor or YAML', 'Test automations manually'],
+          expressionOptions: ['Create automation, document design, present to class'],
+          executiveFunctionSupport: ['Automation design template', 'Debugging guide']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Automations run instantly—there can be slight delays',
+          'Multiple triggers means all must fire—no, any trigger starts it',
+          'Conditions are required—they\'re optional'
+        ],
+        keyTakeaways: [
+          'Automations are the power of smart homes—not just control',
+          'Good automations solve real problems, not just tech demos',
+          'Trace tool is essential for debugging'
+        ],
+        preparationTips: [
+          'Create example automations beforehand for demonstration',
+          'Have a testable device (light, notification) for immediate feedback',
+          'Prepare troubleshooting guide for common automation issues'
+        ]
+      }
+    }
+  ],
+  assessment: {
+    formative: [
+      'Can students explain local-first vs cloud-dependent smart home?',
+      'Successfully installed and configured Home Assistant?',
+      'Created working automation with trigger, condition, action?'
+    ],
+    summative: 'Working Home Assistant installation with at least 3 automations that solve real problems, documented with explanations of privacy benefits'
+  },
+  extensions: [
+    'Add voice control with local-only assistant (Rhasspy)',
+    'Build DIY sensors with ESP32 and ESPHome',
+    'Set up energy monitoring dashboard',
+    'Configure remote access with Tailscale (VPN)',
+    'Create presence detection without cloud services'
+  ],
+  realWorldConnections: [
+    'Home Assistant has over 2 million active users worldwide',
+    'Smart home privacy concerns are increasingly in the news',
+    'Energy monitoring helps reduce environmental impact',
+    'Local automation works during internet outages'
+  ]
+};
+
 // Projects array
-const projects: Project[] = [project1, project2, project3];
+const projects: Project[] = [project1, project2, project3, project4];
 
 // Main Page Component
 export default function SelfHostedPage() {
