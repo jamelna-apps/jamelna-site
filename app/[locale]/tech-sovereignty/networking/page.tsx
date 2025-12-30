@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
@@ -8196,6 +8197,3 @@ export default function NetworkingCurriculum() {
     </div>
   );
 }
-
-// Need to import React for useState
-import React from 'react';
