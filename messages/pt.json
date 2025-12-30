@@ -42,6 +42,10 @@
           "title": "GYST",
           "subtitle": "Aplicação de Estilo e Guarda-Roupa com AI"
         },
+        "codetale": {
+          "title": "CodeTale",
+          "subtitle": "Plataforma de Aprendizagem com AI"
+        },
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "Plataforma de Acompanhamento de Objetivos"
@@ -176,6 +180,31 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ]
+      },
+      {
+        "title": "CodeTale",
+        "role": "Criador e Programador",
+        "organization": "Projeto Independente",
+        "timeline": "2024 - Presente",
+        "challenge": "Criar uma plataforma educacional que ensina pensamento computacional a crianças de 8-14 anos através da criação de jogos, fundamentada em investigação de ciências da aprendizagem e com instrução guiada por AI.",
+        "whatIDid": [
+          "Desenhei e desenvolvi aplicação web Next.js com pedagogia baseada em investigação para ensinar pensamento computacional",
+          "Criei Cappy, uma mascote capivara de AI com 6 estados animados que guia os alunos na criação de jogos",
+          "Construí dois caminhos de criação de jogos: Aventura (point-and-click narrativo) e Ação (jogos de dungeon baseados em tiles)",
+          "Implementei três níveis de dificuldade (Explorador, Criador, Programador) baseados na teoria da Zona de Desenvolvimento Proximal",
+          "Integrei Claude AI para geração de conteúdo com AI explicável que ensina engenharia de prompts a crianças",
+          "Desenvolvi mapas visuais de jogos, ferramentas de depuração guiada e momentos de aprendizagem contextuais",
+          "Apliquei princípios de teoria de carga cognitiva com assistentes passo a passo e revelação progressiva de funcionalidades",
+          "Criei interface pixel art com feedback de som via Web Audio API para interação amigável para crianças"
+        ],
+        "impact": "Construí uma ferramenta educacional que torna o pensamento computacional acessível para alunos do ensino básico e secundário. Ao combinar criação de jogos com assistência de AI e pedagogia baseada em investigação, CodeTale demonstra como a tecnologia pode ensinar crianças não apenas a usar AI, mas a entender como colaborar com ela efetivamente.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, integração Claude AI, investigação em ciências da aprendizagem, design de jogos educacionais, teoria de carga cognitiva, aprendizagem construcionista",
+        "images": [
+          "/images/screenshots/codetale/home.png",
+          "/images/screenshots/codetale/create.png",
+          "/images/screenshots/codetale/learn.png"
+        ],
+        "website": "https://codetale.jamelna.com"
       },
       {
         "title": "SMARTIEgoals.org",

@@ -42,6 +42,10 @@
           "title": "GYST",
           "subtitle": "AI-Powered Style & Wardrobe App"
         },
+        "codetale": {
+          "title": "CodeTale",
+          "subtitle": "AI-Powered Learning Platform"
+        },
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "Goal Tracking Platform"
@@ -176,6 +180,31 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ]
+      },
+      {
+        "title": "CodeTale",
+        "role": "Creator & Developer",
+        "organization": "Independent Project",
+        "timeline": "2024 - Present",
+        "challenge": "Create an educational platform that teaches computational thinking to children ages 8-14 through game creation, grounded in learning science research and featuring AI-guided instruction.",
+        "whatIDid": [
+          "Designed and developed Next.js web application with research-backed pedagogy for teaching computational thinking",
+          "Created Cappy, an AI capybara mascot with 6 animated states that guides students through game creation",
+          "Built two game creation paths: Adventure (story-driven point-and-click) and Action (tile-based dungeon games)",
+          "Implemented three difficulty levels (Explorer, Creator, Coder) based on Zone of Proximal Development theory",
+          "Integrated Claude AI for content generation with explainable AI that teaches prompt engineering to kids",
+          "Developed visual game maps, guided debugging tools, and contextual learning moments",
+          "Applied cognitive load theory principles with step-by-step wizards and progressive feature disclosure",
+          "Created pixel art UI with Web Audio API sound feedback for child-friendly interaction"
+        ],
+        "impact": "Built an educational tool that makes computational thinking accessible to elementary and middle school students. By combining game creation with AI assistance and research-backed pedagogy, CodeTale demonstrates how technology can teach kids not just to use AI, but to understand how to collaborate with it effectively.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Claude AI integration, learning science research, educational game design, cognitive load theory, constructionist learning",
+        "images": [
+          "/images/screenshots/codetale/home.png",
+          "/images/screenshots/codetale/create.png",
+          "/images/screenshots/codetale/learn.png"
+        ],
+        "website": "https://codetale.jamelna.com"
       },
       {
         "title": "SMARTIEgoals.org",
@@ -527,6 +556,12 @@
           "description": "Explore governance models, funding strategies, and organizational structures for community-owned technology.",
           "difficulty": "Advanced",
           "duration": "Ongoing"
+        },
+        "project4": {
+          "title": "Collaborative Technology Governance",
+          "description": "Develop governance structures that keep technology accountable to community needs—policies, decision-making, and ethics.",
+          "difficulty": "Advanced",
+          "duration": "5-6 weeks"
         }
       }
     },

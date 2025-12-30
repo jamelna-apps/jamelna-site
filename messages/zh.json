@@ -42,6 +42,10 @@
           "title": "GYST",
           "subtitle": "人工智能风格和衣橱应用"
         },
+        "codetale": {
+          "title": "CodeTale",
+          "subtitle": "人工智能学习平台"
+        },
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "目标跟踪平台"
@@ -176,6 +180,31 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ]
+      },
+      {
+        "title": "CodeTale",
+        "role": "创建者兼开发者",
+        "organization": "独立项目",
+        "timeline": "2024年至今",
+        "challenge": "创建一个教育平台，通过游戏创作教授8-14岁儿童计算思维，基于学习科学研究，并配备AI引导教学。",
+        "whatIDid": [
+          "设计和开发具有研究支持教学法的Next.js网络应用程序，用于教授计算思维",
+          "创建Cappy，一个具有6种动画状态的AI水豚吉祥物，引导学生进行游戏创作",
+          "构建两条游戏创作路径：冒险（故事驱动的点击游戏）和动作（基于瓷砖的地牢游戏）",
+          "基于最近发展区理论实施三个难度级别（探索者、创造者、编程者）",
+          "集成Claude AI进行内容生成，配备可解释AI教孩子们提示工程",
+          "开发可视化游戏地图、引导式调试工具和上下文学习时刻",
+          "应用认知负荷理论原则，配备分步向导和渐进式功能展示",
+          "创建像素艺术界面，配备Web Audio API声音反馈，实现儿童友好的交互"
+        ],
+        "impact": "构建了一个使计算思维对小学和中学生更易理解的教育工具。通过将游戏创作与AI辅助和研究支持的教学法相结合，CodeTale展示了技术如何教孩子们不仅使用AI，还理解如何有效地与AI协作。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、Claude AI集成、学习科学研究、教育游戏设计、认知负荷理论、建构主义学习",
+        "images": [
+          "/images/screenshots/codetale/home.png",
+          "/images/screenshots/codetale/create.png",
+          "/images/screenshots/codetale/learn.png"
+        ],
+        "website": "https://codetale.jamelna.com"
       },
       {
         "title": "SMARTIEgoals.org",
