@@ -7665,48 +7665,57 @@ export default function NetworkingCurriculum() {
   ];
 
   return (
-    <div className="min-h-screen bg-deep">
+    <main className="min-h-screen bg-deep">
       {/* Header */}
-      <div className="bg-deep text-white py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-deep-alt border-b border-deep-border">
+        <div className="max-w-6xl mx-auto px-4 py-4">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center text-slate-300 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-sm text-text-muted hover:text-primary transition-colors"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Tech Sovereignty
           </Link>
+        </div>
+      </div>
 
+      {/* Hero Section */}
+      <section className="relative py-12 md:py-16 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-deep to-deep-darker"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, rgba(143, 168, 200, 0.4), transparent)' }} />
+
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex items-center gap-3 mb-4">
-            <span className="bg-green-500 text-white text-sm px-3 py-1 rounded-full">Track A</span>
-            <span className="bg-deep-alt text-sm px-3 py-1 rounded-full">4 Projects</span>
+            <span className="bg-primary text-deep text-sm px-3 py-1 rounded-full font-medium">Track A</span>
+            <span className="bg-deep-card text-text-secondary text-sm px-3 py-1 rounded-full border border-deep-border">4 Projects</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-text-heading mb-4">
             {t('tracks.networking.title')}
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl">
+          <p className="text-xl text-text-secondary max-w-3xl mb-8">
             {t('tracks.networking.description')}
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <div className="bg-deep-card px-4 py-2 rounded-lg">
-              <span className="text-slate-400 text-sm">Duration</span>
-              <p className="font-semibold">17-23 weeks total</p>
+          <div className="flex flex-wrap gap-4">
+            <div className="bg-deep-card px-4 py-2 rounded-lg border border-deep-border">
+              <span className="text-text-muted text-sm">Duration</span>
+              <p className="font-semibold text-text-heading">17-23 weeks total</p>
             </div>
-            <div className="bg-deep-card px-4 py-2 rounded-lg">
-              <span className="text-slate-400 text-sm">Skill Level</span>
-              <p className="font-semibold">Beginner to Advanced</p>
+            <div className="bg-deep-card px-4 py-2 rounded-lg border border-deep-border">
+              <span className="text-text-muted text-sm">Skill Level</span>
+              <p className="font-semibold text-text-heading">Beginner to Advanced</p>
             </div>
-            <div className="bg-deep-card px-4 py-2 rounded-lg">
-              <span className="text-slate-400 text-sm">Projects</span>
-              <p className="font-semibold">4 hands-on projects</p>
+            <div className="bg-deep-card px-4 py-2 rounded-lg border border-deep-border">
+              <span className="text-text-muted text-sm">Projects</span>
+              <p className="font-semibold text-text-heading">4 hands-on projects</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Track Overview */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -8194,6 +8203,6 @@ export default function NetworkingCurriculum() {
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
