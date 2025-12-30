@@ -109,8 +109,10 @@ interface TrackSectionProps {
 }
 
 function TrackSection({ icon, title, description, projects, color, trackLink, trackAvailable }: TrackSectionProps) {
+  const allComingSoon = projects.every(p => p.status === 'coming-soon');
+
   return (
-    <div className="mb-12">
+    <div className={`mb-12 ${allComingSoon ? 'opacity-70' : ''}`}>
       <div className="flex items-start gap-4 mb-6">
         <div className={`w-12 h-12 rounded-xl ${color} flex items-center justify-center flex-shrink-0`}>
           {icon}
@@ -144,6 +146,58 @@ function TrackSection({ icon, title, description, projects, color, trackLink, tr
         ))}
       </div>
     </div>
+  );
+}
+
+// Table of Contents Component
+function TableOfContents() {
+  const [activeSection, setActiveSection] = React.useState('');
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -80% 0px' }
+    );
+
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const links = [
+    { id: 'why', label: 'Why Tech Sovereignty' },
+    { id: 'curriculum', label: 'Curriculum' },
+    { id: 'tools', label: 'Tools' },
+    { id: 'educators', label: 'For Educators' },
+    { id: 'community', label: 'Community' },
+  ];
+
+  return (
+    <nav className="hidden lg:block fixed right-8 top-1/2 -translate-y-1/2 z-40">
+      <ul className="space-y-2">
+        {links.map((link) => (
+          <li key={link.id}>
+            <a
+              href={`#${link.id}`}
+              className={`block text-xs px-3 py-1.5 rounded-full transition-all ${
+                activeSection === link.id
+                  ? 'bg-secret text-white'
+                  : 'text-text-muted hover:text-text-secondary hover:bg-deep-card'
+              }`}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 
@@ -220,6 +274,8 @@ export default function TechSovereigntyPage() {
 
   return (
     <main className="min-h-screen bg-deep">
+      <TableOfContents />
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         {/* Purple gradient background for secret page */}
@@ -257,7 +313,7 @@ export default function TechSovereigntyPage() {
       </section>
 
       {/* Why Tech Sovereignty */}
-      <section className="py-20 px-4 bg-deep-alt">
+      <section id="why" className="py-20 px-4 bg-deep-alt">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6 text-center">
             {t('why.title')}
@@ -453,7 +509,7 @@ export default function TechSovereigntyPage() {
       </section>
 
       {/* For Educators */}
-      <section className="py-20 px-4 bg-deep-darker">
+      <section id="educators" className="py-20 px-4 bg-deep-darker">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -510,7 +566,7 @@ export default function TechSovereigntyPage() {
       </section>
 
       {/* Community Network */}
-      <section className="py-20 px-4 bg-deep">
+      <section id="community" className="py-20 px-4 bg-deep">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6">
             {t('community.title')}
