@@ -414,27 +414,27 @@ export default function TechSovereigntyPage() {
           {/* Track D: App Development */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             }
             title={t('tracks.appDev.title')}
             description={t('tracks.appDev.description')}
             projects={appDevProjects}
-            color="bg-accent/20"
+            color="bg-primary/20"
           />
 
           {/* Track E: Community Building */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-highlight-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-warm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             }
             title={t('tracks.community.title')}
             description={t('tracks.community.description')}
             projects={communityProjects}
-            color="bg-highlight-orange/20"
+            color="bg-warm/20"
           />
         </div>
       </section>
@@ -486,7 +486,7 @@ export default function TechSovereigntyPage() {
             {/* Development Tools */}
             <div>
               <h3 className="text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-accent-cyan rounded-full"></span>
+                <span className="w-2 h-2 bg-primary rounded-full"></span>
                 {t('tools.categories.dev')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -497,7 +497,7 @@ export default function TechSovereigntyPage() {
             {/* Hardware */}
             <div>
               <h3 className="text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-text-muted rounded-full"></span>
+                <span className="w-2 h-2 bg-primary/50 rounded-full"></span>
                 {t('tools.categories.hardware')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
