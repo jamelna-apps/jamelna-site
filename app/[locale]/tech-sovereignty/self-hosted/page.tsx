@@ -88,6 +88,12 @@ interface DetailedActivity {
 type GradeBand = '6-8' | '9-12' | '6-12';
 
 // Types
+interface TeacherNotes {
+  commonMisconceptions?: string[];
+  keyTakeaways?: string[];
+  preparationTips?: string[];
+}
+
 interface Lesson {
   title: string;
   duration: string;
@@ -98,6 +104,7 @@ interface Lesson {
   detailedActivities?: DetailedActivity[];
   materials: string[];
   udl?: UDLFramework;
+  teacherNotes?: TeacherNotes;
 }
 
 interface Project {
@@ -988,8 +995,452 @@ const project1: Project = {
   ]
 };
 
+// Project 2: Private Communication with Matrix
+const project2: Project = {
+  id: 'private-communication',
+  title: 'Project 2: Private Communication with Matrix',
+  description: 'Deploy your own encrypted chat server using Matrix and Element',
+  difficulty: 'Intermediate',
+  duration: '3-4 weeks',
+  gradeBand: '9-12',
+  overview: `Students set up a Matrix homeserver for private, encrypted communication. They'll learn about end-to-end encryption, federation, and how modern chat systems work. Unlike centralized services like WhatsApp or Discord, Matrix allows servers to talk to each other—just like email. This project teaches both the technical skills and the conceptual understanding needed to make informed choices about communication privacy.`,
+  learningObjectives: [
+    'Understand end-to-end encryption and key exchange',
+    'Configure a Matrix homeserver (Synapse or Dendrite)',
+    'Set up federation with other Matrix servers',
+    'Compare centralized vs federated communication systems'
+  ],
+  prerequisites: [
+    'Completed Project 1 (server basics)',
+    'Understanding of client-server architecture',
+    'Basic Linux command line skills'
+  ],
+  materials: {
+    required: [
+      'Server from Project 1 (or new Raspberry Pi)',
+      'Domain name with DNS access',
+      'SSL certificate (Let\'s Encrypt)'
+    ],
+    optional: [
+      'TURN server for voice/video calls',
+      'Additional storage for media files',
+      'Second device for testing verification'
+    ]
+  },
+  lessons: [
+    {
+      title: 'Lesson 1: How Does Chat Actually Work?',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Trace message flow in centralized systems (iMessage, WhatsApp)',
+        'Understand federation: how email-style systems work',
+        'Explain end-to-end encryption at a conceptual level'
+      ],
+      conceptualUnderstanding: [
+        'Centralized: your messages go through one company\'s servers',
+        'Federated: your server talks to other servers (like email)',
+        'E2EE: even the server operator cannot read your messages'
+      ],
+      activities: [
+        'Message Flow Diagrams',
+        'Physical Encryption Demo',
+        'Research Matrix Protocol'
+      ],
+      detailedActivities: [
+        {
+          title: 'Message Flow Diagrams',
+          duration: '25 minutes',
+          overview: 'Students diagram how messages travel in different systems to understand the trust relationships involved.',
+          steps: [
+            { instruction: 'In groups, draw the path a text message takes from your phone to your friend\'s phone via SMS', teacherNotes: 'Have students consider: who can read this message at each step?' },
+            { instruction: 'Draw the same diagram for WhatsApp', teacherNotes: 'Discuss: what does "end-to-end encrypted" mean in WhatsApp\'s case?' },
+            { instruction: 'Draw how email works between two different providers (Gmail to Outlook)', teacherNotes: 'This is the federation model—servers talking to servers' },
+            { instruction: 'Discuss as class: which model gives you the most control?', teacherNotes: 'There\'s no "right" answer—convenience vs control trade-offs' }
+          ],
+          formativeAssessment: 'Students can correctly identify where messages are readable in each system'
+        },
+        {
+          title: 'Physical Encryption Demo',
+          duration: '30 minutes',
+          overview: 'Using physical objects, demonstrate how encryption protects message content even from the delivery service.',
+          steps: [
+            { instruction: 'Set up 3 stations: Sender, Server (you), Recipient', teacherNotes: 'You\'ll act as the "server" passing messages' },
+            { instruction: 'Round 1: Pass a folded note (unencrypted). Can the server read it? Yes.', duration: '5 min' },
+            { instruction: 'Round 2: Put note in envelope, seal it (basic encryption). Server can see sender/recipient but not content.', duration: '5 min' },
+            { instruction: 'Round 3: Give sender and recipient matching locks they set up beforehand (E2EE). Even if server opens envelope, content is locked.', teacherNotes: 'This is how key exchange works—keys established before server involved' },
+            { instruction: 'Discussion: What information can the server ALWAYS see? (Metadata)', teacherNotes: 'Even E2EE reveals who talks to whom and when' }
+          ],
+          formativeAssessment: 'Students can explain why E2EE is different from regular encryption',
+          differentiation: {
+            support: 'Provide pre-drawn diagrams showing the envelope analogy',
+            extension: 'Research how Signal Protocol achieves forward secrecy'
+          }
+        },
+        {
+          title: 'Research Matrix Protocol',
+          duration: '30 minutes',
+          overview: 'Students explore the Matrix ecosystem to understand what they\'ll be building.',
+          steps: [
+            { instruction: 'Visit matrix.org and read the "What is Matrix?" page', teacherNotes: 'Focus on federation and interoperability concepts' },
+            { instruction: 'Find 3 organizations that use Matrix for official communication', teacherNotes: 'German healthcare, French government (Tchap), Mozilla' },
+            { instruction: 'Compare Matrix to other options: Signal, Discord, Slack', teacherNotes: 'Make a table: centralized?, E2EE?, self-hostable?, bridges?' },
+            { instruction: 'Write 1 paragraph: Why might a school want to run their own Matrix server?', teacherNotes: 'Look for: data ownership, privacy, independence from companies' }
+          ]
+        }
+      ],
+      materials: ['Envelopes, paper, small locks with keys for encryption demo', 'Computers for research portion'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose which messaging systems to compare', 'Select research focus area'],
+          relevanceAndAuthenticity: ['Discuss apps students actually use', 'Real organization case studies'],
+          selfRegulation: ['Reflection on own messaging habits', 'Privacy preference assessment']
+        },
+        representation: {
+          multipleFormats: ['Physical demonstrations', 'Visual diagrams', 'Written explanations'],
+          vocabularySupport: ['Glossary of encryption terms', 'Analogy reference sheet'],
+          backgroundKnowledge: ['Review of client-server model from Project 1', 'Comparison to familiar apps']
+        },
+        actionExpression: {
+          physicalOptions: ['Draw on paper or digital whiteboard', 'Physical participation in demo'],
+          expressionOptions: ['Diagram, written explanation, or verbal presentation'],
+          executiveFunctionSupport: ['Research questions provided', 'Comparison table template']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students often think "encrypted" means no one can read messages—clarify transport vs E2E encryption',
+          'Some students believe WhatsApp is private because Facebook "can\'t read messages"—discuss metadata',
+          'Federation can be confused with decentralization—they\'re related but distinct'
+        ],
+        keyTakeaways: [
+          'Trust is distributed differently in centralized vs federated systems',
+          'E2EE protects content but not metadata',
+          'Self-hosting gives maximum control but requires more work'
+        ],
+        preparationTips: [
+          'Test the envelope demo beforehand—timing matters',
+          'Have backup examples of Matrix deployments ready',
+          'Prepare to discuss current events related to messaging privacy'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 2: Installing Matrix Synapse',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Install Synapse homeserver using Docker',
+        'Configure PostgreSQL database',
+        'Set up reverse proxy with Nginx'
+      ],
+      conceptualUnderstanding: [
+        'Docker: running software in isolated containers',
+        'Why Matrix uses PostgreSQL instead of SQLite for production',
+        'Reverse proxy: one public entry point routing to multiple services'
+      ],
+      activities: [
+        'Docker Architecture Review',
+        'Deploy Synapse Stack',
+        'Configure Nginx Reverse Proxy'
+      ],
+      detailedActivities: [
+        {
+          title: 'Docker Architecture Review',
+          duration: '15 minutes',
+          overview: 'Understand why we use Docker for deploying complex services.',
+          steps: [
+            { instruction: 'Diagram the difference between running software directly vs in Docker', teacherNotes: 'Focus on isolation and reproducibility' },
+            { instruction: 'Discuss: why might Synapse need multiple containers? (web server, database, Synapse itself)', teacherNotes: 'This is the microservices pattern' },
+            { instruction: 'Review docker-compose.yml structure from Project 1', teacherNotes: 'Reinforce that compose orchestrates multiple containers' }
+          ]
+        },
+        {
+          title: 'Deploy Synapse Stack',
+          duration: '45 minutes',
+          overview: 'Use Docker Compose to deploy a complete Matrix homeserver.',
+          steps: [
+            { instruction: 'Create project directory: mkdir ~/matrix && cd ~/matrix', teacherNotes: 'Separate from Nextcloud to keep things organized' },
+            { instruction: 'Create docker-compose.yml with Synapse, PostgreSQL, and Nginx', teacherNotes: 'Provide template—students modify for their domain' },
+            { instruction: 'Generate Synapse configuration: docker run --rm -v ./data:/data matrixdotorg/synapse generate', teacherNotes: 'Explain what each generated file does' },
+            { instruction: 'Modify homeserver.yaml: set server_name to your domain', teacherNotes: 'server_name cannot be changed later!' },
+            { instruction: 'Start the stack: docker-compose up -d', teacherNotes: 'Check logs if issues arise' },
+            { instruction: 'Create first admin user: docker exec -it synapse register_new_matrix_user -c /data/homeserver.yaml http://localhost:8008', teacherNotes: 'Save these credentials securely!' }
+          ],
+          formativeAssessment: 'Students can explain what each container in the stack does',
+          differentiation: {
+            support: 'Provide complete docker-compose.yml to modify rather than write from scratch',
+            extension: 'Configure persistent logging and log rotation'
+          }
+        },
+        {
+          title: 'Configure Nginx Reverse Proxy',
+          duration: '25 minutes',
+          overview: 'Set up Nginx to route Matrix traffic and handle SSL.',
+          steps: [
+            { instruction: 'Explain the reverse proxy concept: one public port, multiple internal services', teacherNotes: 'Draw diagram: internet → nginx:443 → synapse:8008' },
+            { instruction: 'Add Nginx configuration for Matrix endpoints', teacherNotes: 'Key endpoints: /_matrix, /_synapse' },
+            { instruction: 'Configure SSL with Let\'s Encrypt (or reuse existing certificate)', teacherNotes: 'Matrix requires HTTPS for federation' },
+            { instruction: 'Test: curl https://yourdomain/_matrix/client/versions', teacherNotes: 'Should return JSON with supported versions' }
+          ]
+        }
+      ],
+      materials: ['Server with Docker from Project 1', 'Docker Compose file template', 'Nginx configuration template'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose server name/branding', 'Decide on resource limits'],
+          relevanceAndAuthenticity: ['Students run their own chat server', 'Real production setup patterns'],
+          selfRegulation: ['Troubleshooting checklist', 'Success verification steps']
+        },
+        representation: {
+          multipleFormats: ['Architecture diagrams', 'Command-line walkthrough', 'Configuration file comments'],
+          vocabularySupport: ['Docker terminology glossary', 'Matrix-specific terms explained'],
+          backgroundKnowledge: ['Review of Docker concepts from Project 1', 'Database basics']
+        },
+        actionExpression: {
+          physicalOptions: ['Command-line or GUI tools', 'Pair programming option'],
+          expressionOptions: ['Document setup process', 'Create architecture diagram'],
+          executiveFunctionSupport: ['Step-by-step checklist', 'Verification commands at each stage']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may think server_name is just a display name—it\'s the permanent identity',
+          'PostgreSQL may seem unnecessary for small installs—explain performance at scale',
+          'Reverse proxy seems like extra complexity—explain security and flexibility benefits'
+        ],
+        keyTakeaways: [
+          'Container orchestration makes complex deployments manageable',
+          'Databases handle persistence while application handles logic',
+          'Reverse proxies are standard practice for production services'
+        ],
+        preparationTips: [
+          'Test the full deployment on your own server first',
+          'Have pre-built docker-compose.yml files ready for troubleshooting',
+          'Prepare for DNS propagation delays if students are setting up new domains'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 3: Federation and Identity',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Configure DNS for Matrix federation',
+        'Set up .well-known endpoints',
+        'Test federation with matrix.org'
+      ],
+      conceptualUnderstanding: [
+        'SRV records: how servers discover each other',
+        'Matrix IDs: @user:server.com format and why it matters',
+        'Federation delegation: running your server on a subdomain while using main domain for IDs'
+      ],
+      activities: [
+        'Understanding Matrix Federation',
+        'Configure DNS Records',
+        'Test Federation'
+      ],
+      detailedActivities: [
+        {
+          title: 'Understanding Matrix Federation',
+          duration: '20 minutes',
+          overview: 'Learn how Matrix servers find and communicate with each other.',
+          steps: [
+            { instruction: 'Compare Matrix federation to email: @user:server.com ≈ user@server.com', teacherNotes: 'The analogy is very close' },
+            { instruction: 'Diagram: what happens when @alice:server-a.com messages @bob:server-b.com?', teacherNotes: 'Server A must find Server B, then deliver message' },
+            { instruction: 'Discuss: why is this better than everyone using matrix.org?', teacherNotes: 'Independence, privacy, resilience' },
+            { instruction: 'Research: find the DNS records used for Matrix federation (SRV, .well-known)', teacherNotes: 'Two methods: SRV records or .well-known files' }
+          ]
+        },
+        {
+          title: 'Configure DNS Records',
+          duration: '30 minutes',
+          overview: 'Set up the DNS records needed for your server to join the federation.',
+          steps: [
+            { instruction: 'Add SRV record: _matrix._tcp.yourdomain → your server IP', teacherNotes: 'Format: _matrix._tcp.domain. 3600 IN SRV 10 0 443 matrix.domain.' },
+            { instruction: 'Or configure .well-known/matrix/server endpoint', teacherNotes: '.well-known is simpler if you have web hosting already' },
+            { instruction: 'Add .well-known/matrix/client for client discovery', teacherNotes: 'Helps Element and other clients find your server' },
+            { instruction: 'Test DNS resolution: dig _matrix._tcp.yourdomain SRV', teacherNotes: 'May need to wait for DNS propagation' }
+          ],
+          formativeAssessment: 'Students can explain why both server and client discovery endpoints are needed'
+        },
+        {
+          title: 'Test Federation',
+          duration: '35 minutes',
+          overview: 'Verify your server can communicate with the wider Matrix network.',
+          steps: [
+            { instruction: 'Use federation tester: federationtester.matrix.org', teacherNotes: 'Shows exactly what\'s working or broken' },
+            { instruction: 'Log into Element web (element.io) with your Matrix account', teacherNotes: 'Use your @user:yourdomain.com ID' },
+            { instruction: 'Join a public room on matrix.org (like #matrix:matrix.org)', teacherNotes: 'This proves federation is working' },
+            { instruction: 'Invite a classmate from a different server to a room on yours', teacherNotes: 'Test both directions of federation' },
+            { instruction: 'Document what worked and any issues encountered', teacherNotes: 'Troubleshooting federation is a valuable skill' }
+          ],
+          differentiation: {
+            support: 'Pair students for troubleshooting, provide step-by-step DNS guide',
+            extension: 'Set up federation with multiple Matrix servers, explore server ACLs'
+          }
+        }
+      ],
+      materials: ['DNS management access', 'Federation tester website', 'Element web access'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose federation testing partners', 'Select public rooms to join'],
+          relevanceAndAuthenticity: ['Connect with global Matrix network', 'Real federation like real services'],
+          selfRegulation: ['Federation checklist', 'Troubleshooting flowchart']
+        },
+        representation: {
+          multipleFormats: ['DNS record examples', 'Federation flow diagrams', 'Video tutorials'],
+          vocabularySupport: ['DNS terminology glossary', 'Matrix federation terms'],
+          backgroundKnowledge: ['Review of DNS from networking unit', 'Email federation comparison']
+        },
+        actionExpression: {
+          physicalOptions: ['Use DNS management GUI or command line', 'Test via web or CLI tools'],
+          expressionOptions: ['Write documentation or create video walkthrough'],
+          executiveFunctionSupport: ['Step-by-step DNS setup guide', 'Verification checkpoints']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may think federation happens automatically—it requires correct configuration',
+          'SRV records and .well-known seem redundant—they\'re alternative methods, not both required',
+          'Federation issues are often blamed on Matrix—usually it\'s DNS or firewall configuration'
+        ],
+        keyTakeaways: [
+          'Federation is what makes Matrix decentralized—any server can talk to any other',
+          'DNS is the foundation of server discovery on the internet',
+          'Testing federation early prevents harder debugging later'
+        ],
+        preparationTips: [
+          'Have DNS propagation checking tools bookmarked',
+          'Set up a test account on matrix.org for federation testing',
+          'Prepare troubleshooting guide for common federation issues'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 4: Security and Privacy',
+      duration: '90 minutes',
+      gradeBand: '9-12',
+      objectives: [
+        'Enable and verify end-to-end encryption',
+        'Set up device verification',
+        'Configure message retention policies'
+      ],
+      conceptualUnderstanding: [
+        'Cross-signing: cryptographically verifying that devices belong to users',
+        'Key backup: recovering encrypted message history on new devices',
+        'Metadata: understanding what encryption protects vs what remains visible'
+      ],
+      activities: [
+        'Understanding E2EE in Matrix',
+        'Device Verification Workshop',
+        'Admin Powers and Limitations'
+      ],
+      detailedActivities: [
+        {
+          title: 'Understanding E2EE in Matrix',
+          duration: '20 minutes',
+          overview: 'Deep dive into how Matrix implements end-to-end encryption.',
+          steps: [
+            { instruction: 'Review: in Lesson 1, we discussed E2EE conceptually. Now let\'s see the implementation.', teacherNotes: 'Connect back to envelope demo' },
+            { instruction: 'Explain Olm/Megolm: how Matrix encrypts messages', teacherNotes: 'Olm for 1:1 key exchange, Megolm for group efficiency' },
+            { instruction: 'Discuss: what does the server see in an encrypted room?', teacherNotes: 'Metadata: who, when, room membership—but not content' },
+            { instruction: 'As server admin, try to read an encrypted message from the database', teacherNotes: 'They\'ll see encrypted blobs—proves E2EE works!' }
+          ]
+        },
+        {
+          title: 'Device Verification Workshop',
+          duration: '35 minutes',
+          overview: 'Practice the security rituals that make E2EE trustworthy.',
+          steps: [
+            { instruction: 'Create an encrypted room with a partner', teacherNotes: 'Enable encryption when creating the room' },
+            { instruction: 'Start device verification process in Element', teacherNotes: 'Click the shield icon next to their name' },
+            { instruction: 'Compare security keys using emoji or QR code', teacherNotes: 'This proves you\'re talking to the real person, not an attacker' },
+            { instruction: 'Discuss: why is verification important? What attacks does it prevent?', teacherNotes: 'Man-in-the-middle attacks' },
+            { instruction: 'Set up cross-signing for your own devices', teacherNotes: 'Once set up, new devices can be verified from verified devices' },
+            { instruction: 'Test key backup: log out, log back in, verify message history', teacherNotes: 'Without backup, encrypted history is lost on logout' }
+          ],
+          formativeAssessment: 'Students can explain what verification proves and why it matters'
+        },
+        {
+          title: 'Admin Powers and Limitations',
+          duration: '30 minutes',
+          overview: 'Understand what a server admin can and cannot access.',
+          steps: [
+            { instruction: 'Log into your Synapse admin interface', teacherNotes: 'Via Synapse Admin or command line' },
+            { instruction: 'List what admin can do: see users, rooms, server stats', teacherNotes: 'Powerful administrative capabilities' },
+            { instruction: 'Demonstrate what admin CANNOT do: read E2EE message content', teacherNotes: 'Query database directly to show encrypted blobs' },
+            { instruction: 'Configure message retention policies', teacherNotes: 'Even if you can\'t read messages, you can delete them' },
+            { instruction: 'Discussion: what responsibilities come with running a server?', teacherNotes: 'Legal, ethical, community standards' }
+          ],
+          differentiation: {
+            support: 'Guided admin interface tour with screenshots',
+            extension: 'Research legal implications of hosting communication services'
+          }
+        }
+      ],
+      materials: ['Multiple devices for verification testing', 'Element client on each device', 'Database access for admin demonstration'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose verification method (emoji/QR)', 'Select retention policy approach'],
+          relevanceAndAuthenticity: ['Real security practices used by journalists and activists', 'Actual privacy protection'],
+          selfRegulation: ['Security checklist', 'Verification completion tracker']
+        },
+        representation: {
+          multipleFormats: ['Live demonstration', 'Written guides', 'Video tutorials'],
+          vocabularySupport: ['Encryption glossary', 'Key management terms'],
+          backgroundKnowledge: ['Encryption concepts from Lesson 1', 'Database concepts from Project 1']
+        },
+        actionExpression: {
+          physicalOptions: ['QR code or emoji verification', 'GUI or CLI administration'],
+          expressionOptions: ['Document security setup', 'Create user guide for classmates'],
+          executiveFunctionSupport: ['Step-by-step verification guide', 'Admin tasks checklist']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may think encryption is automatic—it must be enabled per-room in Matrix',
+          'Verification seems paranoid—explain targeted attacks on high-value targets',
+          'Server admin = all-powerful is wrong—E2EE specifically limits admin power'
+        ],
+        keyTakeaways: [
+          'E2EE protects content even from the server operator',
+          'Verification is how you know encryption is working correctly',
+          'Running a server comes with responsibilities, not just powers'
+        ],
+        preparationTips: [
+          'Have multiple test devices ready',
+          'Create a cheat sheet for Element\'s verification UI',
+          'Prepare database queries that demonstrate encrypted content'
+        ]
+      }
+    }
+  ],
+  assessment: {
+    formative: [
+      'Can students explain the difference between centralized and federated communication?',
+      'Configuration file review: can students explain each setting in homeserver.yaml?',
+      'Diagram check: can students show message flow with encryption?'
+    ],
+    summative: 'Working Matrix server that can: create encrypted rooms, federate with matrix.org, demonstrate that admin cannot read E2EE messages'
+  },
+  extensions: [
+    'Set up TURN server for voice/video calls (coturn)',
+    'Install Matrix bridges (IRC, Slack, Discord)',
+    'Configure SSO integration with your Nextcloud from Project 1',
+    'Set up Element web client on your own domain',
+    'Explore Matrix Spaces for organizing rooms'
+  ],
+  realWorldConnections: [
+    'German government\'s Matrix deployment for healthcare communication',
+    'French government\'s Tchap (Matrix-based) official messaging system',
+    'Mozilla\'s migration from IRC to Matrix for community chat',
+    'Open source communities using Matrix for real-time collaboration'
+  ]
+};
+
 // Projects array
-const projects: Project[] = [project1];
+const projects: Project[] = [project1, project2];
 
 // Main Page Component
 export default function SelfHostedPage() {
