@@ -214,10 +214,10 @@ export default function TechSovereigntyPage() {
   ];
 
   const selfHostedProjects: Project[] = [
-    { title: t('tracks.selfHosted.project1.title'), description: t('tracks.selfHosted.project1.description'), difficulty: t('tracks.selfHosted.project1.difficulty'), duration: t('tracks.selfHosted.project1.duration'), status: 'coming-soon' },
-    { title: t('tracks.selfHosted.project2.title'), description: t('tracks.selfHosted.project2.description'), difficulty: t('tracks.selfHosted.project2.difficulty'), duration: t('tracks.selfHosted.project2.duration'), status: 'coming-soon' },
-    { title: t('tracks.selfHosted.project3.title'), description: t('tracks.selfHosted.project3.description'), difficulty: t('tracks.selfHosted.project3.difficulty'), duration: t('tracks.selfHosted.project3.duration'), status: 'coming-soon' },
-    { title: t('tracks.selfHosted.project4.title'), description: t('tracks.selfHosted.project4.description'), difficulty: t('tracks.selfHosted.project4.difficulty'), duration: t('tracks.selfHosted.project4.duration'), status: 'coming-soon' },
+    { title: t('tracks.selfHosted.project1.title'), description: t('tracks.selfHosted.project1.description'), difficulty: t('tracks.selfHosted.project1.difficulty'), duration: t('tracks.selfHosted.project1.duration'), status: 'available', link: `/${locale}/tech-sovereignty/self-hosted?project=1` },
+    { title: t('tracks.selfHosted.project2.title'), description: t('tracks.selfHosted.project2.description'), difficulty: t('tracks.selfHosted.project2.difficulty'), duration: t('tracks.selfHosted.project2.duration'), status: 'available', link: `/${locale}/tech-sovereignty/self-hosted?project=2` },
+    { title: t('tracks.selfHosted.project3.title'), description: t('tracks.selfHosted.project3.description'), difficulty: t('tracks.selfHosted.project3.difficulty'), duration: t('tracks.selfHosted.project3.duration'), status: 'available', link: `/${locale}/tech-sovereignty/self-hosted?project=3` },
+    { title: t('tracks.selfHosted.project4.title'), description: t('tracks.selfHosted.project4.description'), difficulty: t('tracks.selfHosted.project4.difficulty'), duration: t('tracks.selfHosted.project4.duration'), status: 'available', link: `/${locale}/tech-sovereignty/self-hosted?project=4` },
   ];
 
   const aiProjects: Project[] = [
@@ -396,6 +396,8 @@ export default function TechSovereigntyPage() {
             description={t('tracks.selfHosted.description')}
             projects={selfHostedProjects}
             color="bg-secret/20"
+            trackLink={`/${locale}/tech-sovereignty/self-hosted`}
+            trackAvailable={true}
           />
 
           {/* Track C: AI/LLM Independence */}
