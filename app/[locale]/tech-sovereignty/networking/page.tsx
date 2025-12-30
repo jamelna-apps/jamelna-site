@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation';
 
 // Core Pedagogical Principle Component
 const CorePrinciple = () => (
-  <div className="bg-gradient-to-r from-secret/20 to-secret/10 border border-secret/30 rounded-xl p-6 mb-8">
+  <div className="bg-deep-card border border-secret/30 rounded-xl p-6 mb-8">
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0 w-12 h-12 bg-secret/30 rounded-xl flex items-center justify-center">
         <svg className="w-6 h-6 text-secret" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,10 +136,10 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <div className="bg-gradient-to-r from-secret/10 to-primary/10 border border-secret/30 rounded-lg overflow-hidden">
+    <div className="bg-deep-alt border border-secret/30 rounded-lg overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full p-4 flex items-center justify-between text-left hover:bg-secret/10 transition-colors"
+        className="w-full p-4 flex items-center justify-between text-left hover:bg-deep-card transition-colors"
       >
         <div className="flex items-center gap-2">
           <svg className="w-5 h-5 text-secret" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -304,7 +304,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
     <div className="border border-deep-border rounded-lg overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full p-4 bg-gradient-to-r from-primary/10 to-primary/5 flex items-center justify-between text-left hover:from-primary/15 hover:to-primary/10 transition-colors"
+        className="w-full p-4 bg-deep-alt flex items-center justify-between text-left hover:bg-deep-card transition-colors"
       >
         <div className="flex items-center gap-3">
           <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
@@ -7814,7 +7814,7 @@ export default function NetworkingCurriculum() {
         </div>
 
         {/* Community Network Resources */}
-        <div className="mt-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/30 p-8">
+        <div className="mt-12 bg-deep-card rounded-xl border border-primary/30 p-8">
           <h2 className="text-2xl font-bold text-text-heading mb-2">Community Network Resources</h2>
           <p className="text-text-secondary mb-6">
             Learn from real-world community networks and access comprehensive guides for building your own.
