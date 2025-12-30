@@ -1439,8 +1439,454 @@ const project2: Project = {
   ]
 };
 
+// Project 3: Personal Website with Static Site Generator
+const project3: Project = {
+  id: 'personal-website',
+  title: 'Project 3: Personal Website with Static Site Generator',
+  description: 'Build and host your own website using Hugo or Jekyll without relying on social media platforms',
+  difficulty: 'Beginner',
+  duration: '2-3 weeks',
+  gradeBand: '6-12',
+  overview: `Students create their own personal website using a static site generator, learning the difference between static and dynamic websites. They'll understand how the web works at a fundamental level, host their site without depending on social media platforms, and gain digital ownership skills that last a lifetime. This project is accessible to younger students while still teaching important concepts.`,
+  learningObjectives: [
+    'Understand the difference between static and dynamic websites',
+    'Use a static site generator (Hugo or Jekyll) to build a website',
+    'Deploy a website using GitHub Pages or similar free hosting',
+    'Explain how DNS and web hosting work together'
+  ],
+  prerequisites: [
+    'Basic computer skills',
+    'Text editing fundamentals',
+    'No prior coding experience required'
+  ],
+  materials: {
+    required: [
+      'Computer with internet access',
+      'Text editor (VS Code recommended)',
+      'GitHub account (free)'
+    ],
+    optional: [
+      'Custom domain name',
+      'Raspberry Pi for self-hosting',
+      'Basic HTML/CSS knowledge'
+    ]
+  },
+  lessons: [
+    {
+      title: 'Lesson 1: How Does the Web Work?',
+      duration: '60 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Explain what happens when you visit a website',
+        'Distinguish between static and dynamic websites',
+        'Understand why owning your own website matters'
+      ],
+      conceptualUnderstanding: [
+        'Browsers request files from servers using URLs',
+        'Static sites: pre-built HTML files served as-is',
+        'Dynamic sites: server generates HTML on each request',
+        'Your website = your digital home that you control'
+      ],
+      activities: [
+        'Web Request Journey',
+        'Static vs Dynamic Comparison',
+        'Why Own Your Website?'
+      ],
+      detailedActivities: [
+        {
+          title: 'Web Request Journey',
+          duration: '20 minutes',
+          overview: 'Trace what happens from typing a URL to seeing a webpage.',
+          steps: [
+            { instruction: 'Open browser developer tools (F12), go to Network tab', teacherNotes: 'This reveals the hidden communication' },
+            { instruction: 'Type a simple URL and watch the requests flow', teacherNotes: 'Notice HTML, CSS, JS, images loading separately' },
+            { instruction: 'Draw a diagram: Your Computer → DNS → Server → Response', teacherNotes: 'Each step is a real network hop' },
+            { instruction: 'Discuss: what if the server is slow or down?', teacherNotes: 'Leads into static vs dynamic discussion' }
+          ],
+          formativeAssessment: 'Students can explain the journey of a web request'
+        },
+        {
+          title: 'Static vs Dynamic Comparison',
+          duration: '20 minutes',
+          overview: 'Understand the key differences between static and dynamic websites.',
+          steps: [
+            { instruction: 'Visit a static site (like a documentation site) and view source', teacherNotes: 'HTML is all there, readable' },
+            { instruction: 'Visit a dynamic site (like Twitter) and view source', teacherNotes: 'Often just JavaScript, content loads later' },
+            { instruction: 'Create a comparison table: speed, complexity, hosting cost, security', teacherNotes: 'Static wins on most metrics for simple sites' },
+            { instruction: 'Discussion: when would you need a dynamic site?', teacherNotes: 'User accounts, real-time data, personalization' }
+          ],
+          differentiation: {
+            support: 'Provide pre-made comparison table to fill in',
+            extension: 'Research how CDNs make static sites even faster'
+          }
+        },
+        {
+          title: 'Why Own Your Website?',
+          duration: '15 minutes',
+          overview: 'Discuss digital ownership and why personal websites matter.',
+          steps: [
+            { instruction: 'List all the places students share content online', teacherNotes: 'Instagram, TikTok, YouTube, etc.' },
+            { instruction: 'Discuss: who owns that content? What happens if the platform closes?', teacherNotes: 'MySpace, Vine are historical examples' },
+            { instruction: 'Your website = content you control forever', teacherNotes: 'Even if hosting moves, you keep everything' },
+            { instruction: 'Brainstorm: what would you put on your personal website?', teacherNotes: 'Portfolio, blog, projects, art, etc.' }
+          ]
+        }
+      ],
+      materials: ['Computers with browsers', 'Whiteboard for diagrams'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose websites to analyze', 'Select personal website topic'],
+          relevanceAndAuthenticity: ['Connect to platforms students use', 'Real ownership concerns'],
+          selfRegulation: ['Reflection on digital presence', 'Goal setting for personal site']
+        },
+        representation: {
+          multipleFormats: ['Visual network diagrams', 'Browser developer tools', 'Discussion'],
+          vocabularySupport: ['Web terminology glossary', 'HTTP/HTML basics explained'],
+          backgroundKnowledge: ['Start from everyday browsing experience']
+        },
+        actionExpression: {
+          physicalOptions: ['Draw diagrams on paper or digitally', 'Type or speak observations'],
+          expressionOptions: ['Written notes, verbal discussion, or visual diagrams'],
+          executiveFunctionSupport: ['Structured comparison table', 'Step-by-step browser inspection']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may think websites are "in the cloud" without physical servers',
+          'Static sounds boring or limited—emphasize that most sites can be static',
+          'Some think you need to code to have a website—generators handle that'
+        ],
+        keyTakeaways: [
+          'Every website is files served from a computer somewhere',
+          'Static sites are simpler, faster, cheaper, and more secure',
+          'Owning your website gives you digital independence'
+        ],
+        preparationTips: [
+          'Have examples of static and dynamic sites ready',
+          'Test browser dev tools in the classroom browser',
+          'Prepare discussion about platform closures (Vine, MySpace)'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 2: Setting Up Your Site Generator',
+      duration: '90 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Install and configure Hugo or Jekyll',
+        'Create a new site with a theme',
+        'Understand the file structure of a static site'
+      ],
+      conceptualUnderstanding: [
+        'Site generators turn content files into HTML',
+        'Themes provide design without coding',
+        'Content is separate from presentation',
+        'Markdown: simple text formatting'
+      ],
+      activities: [
+        'Install Hugo/Jekyll',
+        'Create Your First Site',
+        'Explore the File Structure'
+      ],
+      detailedActivities: [
+        {
+          title: 'Install Hugo/Jekyll',
+          duration: '25 minutes',
+          overview: 'Set up the static site generator on student computers.',
+          steps: [
+            { instruction: 'For Hugo: download binary or use package manager', teacherNotes: 'Hugo is a single binary, easier for classroom setup' },
+            { instruction: 'Verify installation: hugo version', teacherNotes: 'Should show version number' },
+            { instruction: 'Discuss what a site generator does', teacherNotes: 'Takes your content + theme = complete website' },
+            { instruction: 'Compare to alternatives: writing HTML by hand vs. using Wix/Squarespace', teacherNotes: 'Generator is middle ground: control + convenience' }
+          ],
+          formativeAssessment: 'Students can run hugo version successfully'
+        },
+        {
+          title: 'Create Your First Site',
+          duration: '40 minutes',
+          overview: 'Initialize a new Hugo site and add a theme.',
+          steps: [
+            { instruction: 'Run: hugo new site mywebsite', teacherNotes: 'Creates folder structure' },
+            { instruction: 'Explore the generated folders: content, themes, static, config', teacherNotes: 'Each has a purpose' },
+            { instruction: 'Add a theme: git clone a theme into themes folder', teacherNotes: 'Recommend simple themes like Ananke or PaperMod' },
+            { instruction: 'Update config.toml with theme name and site title', teacherNotes: 'Config controls site-wide settings' },
+            { instruction: 'Run: hugo server', teacherNotes: 'Live preview at localhost:1313' },
+            { instruction: 'Open browser and see your site!', teacherNotes: 'Celebrate this milestone!' }
+          ],
+          differentiation: {
+            support: 'Provide pre-configured config.toml files',
+            extension: 'Explore theme customization options'
+          }
+        },
+        {
+          title: 'Explore the File Structure',
+          duration: '20 minutes',
+          overview: 'Understand what each folder and file does.',
+          steps: [
+            { instruction: 'content/: where your posts and pages live', teacherNotes: 'This is what you edit day-to-day' },
+            { instruction: 'themes/: design and layout files', teacherNotes: 'You can customize or swap these' },
+            { instruction: 'static/: images, CSS, JS that don\'t change', teacherNotes: 'Files here copy directly to output' },
+            { instruction: 'public/: the generated site (after hugo build)', teacherNotes: 'This is what gets uploaded to hosting' },
+            { instruction: 'Create a diagram showing how files flow', teacherNotes: 'content + theme → hugo → public' }
+          ]
+        }
+      ],
+      materials: ['Computers with Hugo installed', 'Terminal/command line access', 'Text editor'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose site name and theme', 'Personalize config settings'],
+          relevanceAndAuthenticity: ['Building their actual website', 'Real tool used professionally'],
+          selfRegulation: ['Checkpoint: site running locally', 'Troubleshooting checklist']
+        },
+        representation: {
+          multipleFormats: ['Command-line walkthrough', 'File structure diagrams', 'Live preview'],
+          vocabularySupport: ['Command-line terminology', 'Hugo-specific terms'],
+          backgroundKnowledge: ['Connect to Lesson 1 concepts', 'File/folder basics']
+        },
+        actionExpression: {
+          physicalOptions: ['Type commands or use GUI file manager', 'Pair programming option'],
+          expressionOptions: ['Document setup process', 'Screenshot progress'],
+          executiveFunctionSupport: ['Step-by-step command list', 'Expected output examples']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may confuse the source files with the generated output',
+          'hugo server vs hugo build confusion—one is preview, one is production',
+          'Theme installation can fail if not in correct folder'
+        ],
+        keyTakeaways: [
+          'Site generators automate the tedious parts of web development',
+          'Content and design are intentionally separate',
+          'Local preview lets you test before publishing'
+        ],
+        preparationTips: [
+          'Pre-download Hugo binaries for faster classroom setup',
+          'Have theme zip files available if git clone is slow',
+          'Test the full workflow on classroom computers beforehand'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 3: Creating Content with Markdown',
+      duration: '60 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Write content using Markdown syntax',
+        'Create posts and pages for your site',
+        'Add images and links to your content'
+      ],
+      conceptualUnderstanding: [
+        'Markdown: simple formatting that converts to HTML',
+        'Front matter: metadata at the top of content files',
+        'Content organization: posts, pages, sections'
+      ],
+      activities: [
+        'Markdown Basics',
+        'Create Your First Post',
+        'Add Images and Links'
+      ],
+      detailedActivities: [
+        {
+          title: 'Markdown Basics',
+          duration: '20 minutes',
+          overview: 'Learn the simple syntax for formatting text.',
+          steps: [
+            { instruction: 'Create a test.md file in a text editor', teacherNotes: 'Any editor works, VS Code has nice preview' },
+            { instruction: 'Practice: # Heading, **bold**, *italic*, - lists', teacherNotes: 'Start with most common elements' },
+            { instruction: 'Preview the Markdown (VS Code preview or online tool)', teacherNotes: 'See how it converts to formatted text' },
+            { instruction: 'Discussion: why use Markdown instead of Word?', teacherNotes: 'Portable, version-controllable, future-proof' }
+          ],
+          formativeAssessment: 'Students can format a paragraph with headings, bold, and lists'
+        },
+        {
+          title: 'Create Your First Post',
+          duration: '25 minutes',
+          overview: 'Add content to your Hugo site.',
+          steps: [
+            { instruction: 'Run: hugo new posts/my-first-post.md', teacherNotes: 'Creates file with front matter template' },
+            { instruction: 'Open the file and examine the front matter', teacherNotes: 'Title, date, draft status' },
+            { instruction: 'Write 2-3 paragraphs about something you care about', teacherNotes: 'Personal interest makes it engaging' },
+            { instruction: 'Set draft: false in front matter', teacherNotes: 'Otherwise post won\'t appear' },
+            { instruction: 'Check hugo server preview', teacherNotes: 'Post should appear on home page' }
+          ],
+          differentiation: {
+            support: 'Provide topic prompts and sentence starters',
+            extension: 'Create multiple posts with categories/tags'
+          }
+        },
+        {
+          title: 'Add Images and Links',
+          duration: '15 minutes',
+          overview: 'Enhance your posts with media and navigation.',
+          steps: [
+            { instruction: 'Add an image to static/images/ folder', teacherNotes: 'Can be personal photo or free stock' },
+            { instruction: 'Reference in Markdown: ![Alt text](/images/photo.jpg)', teacherNotes: 'Path starts from site root' },
+            { instruction: 'Add a link: [Link text](https://example.com)', teacherNotes: 'Can be internal or external' },
+            { instruction: 'Preview and verify images/links work', teacherNotes: 'Common issue: wrong path' }
+          ]
+        }
+      ],
+      materials: ['Text editor with Markdown preview', 'Sample images to use'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose post topics', 'Select images'],
+          relevanceAndAuthenticity: ['Writing about personal interests', 'Real content for their site'],
+          selfRegulation: ['Markdown cheat sheet', 'Preview before publish']
+        },
+        representation: {
+          multipleFormats: ['Written syntax guide', 'Live preview', 'Before/after comparisons'],
+          vocabularySupport: ['Markdown syntax reference card', 'Front matter explanation'],
+          backgroundKnowledge: ['Connect to word processing familiarity']
+        },
+        actionExpression: {
+          physicalOptions: ['Type or use Markdown editor with buttons', 'Voice-to-text for content'],
+          expressionOptions: ['Write original content or adapt existing'],
+          executiveFunctionSupport: ['Post template', 'Checklist: front matter, content, images']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Markdown seems harder than Word—it\'s actually simpler once learned',
+          'Image paths confuse students—always start from site root',
+          'draft: true in front matter hides posts—common gotcha'
+        ],
+        keyTakeaways: [
+          'Markdown is a universal, future-proof format',
+          'Front matter controls how content appears',
+          'Preview locally before publishing'
+        ],
+        preparationTips: [
+          'Print Markdown cheat sheets for desks',
+          'Have sample images ready to share',
+          'Prepare example front matter for different post types'
+        ]
+      }
+    },
+    {
+      title: 'Lesson 4: Publishing Your Site',
+      duration: '90 minutes',
+      gradeBand: '6-12',
+      objectives: [
+        'Build the final site files',
+        'Deploy to GitHub Pages (free hosting)',
+        'Optionally configure a custom domain'
+      ],
+      conceptualUnderstanding: [
+        'hugo build creates the deployable files',
+        'GitHub Pages hosts static sites for free',
+        'DNS connects your domain to your hosting',
+        'Your site is now live on the real internet!'
+      ],
+      activities: [
+        'Build Your Site',
+        'Deploy to GitHub Pages',
+        'Custom Domain Setup (Optional)'
+      ],
+      detailedActivities: [
+        {
+          title: 'Build Your Site',
+          duration: '15 minutes',
+          overview: 'Generate the final HTML files for deployment.',
+          steps: [
+            { instruction: 'Run: hugo (without server)', teacherNotes: 'Creates/updates public folder' },
+            { instruction: 'Explore the public/ folder', teacherNotes: 'This is your complete website' },
+            { instruction: 'Open public/index.html in browser', teacherNotes: 'Works without server—it\'s just files!' },
+            { instruction: 'Discuss: these files can go on any web server', teacherNotes: 'Flexibility of static sites' }
+          ],
+          formativeAssessment: 'Students have a public/ folder with their complete site'
+        },
+        {
+          title: 'Deploy to GitHub Pages',
+          duration: '50 minutes',
+          overview: 'Put your site on the internet for free using GitHub.',
+          steps: [
+            { instruction: 'Create GitHub account if needed', teacherNotes: 'Free, requires email verification' },
+            { instruction: 'Create new repository named username.github.io', teacherNotes: 'Special name gives you free hosting' },
+            { instruction: 'Upload public/ folder contents to repository', teacherNotes: 'Can use web upload or git' },
+            { instruction: 'Enable GitHub Pages in repository settings', teacherNotes: 'Deploy from main branch' },
+            { instruction: 'Wait 1-2 minutes, then visit https://username.github.io', teacherNotes: 'Your site is live!' },
+            { instruction: 'Celebrate! Share your URL with classmates', teacherNotes: 'This is a real accomplishment!' }
+          ],
+          differentiation: {
+            support: 'Use GitHub web interface for uploads',
+            extension: 'Set up GitHub Actions for automatic deployment'
+          }
+        },
+        {
+          title: 'Custom Domain Setup (Optional)',
+          duration: '20 minutes',
+          overview: 'Connect your own domain name to your site.',
+          steps: [
+            { instruction: 'If you have a domain, access DNS settings', teacherNotes: 'This is optional/advanced' },
+            { instruction: 'Add CNAME record pointing to username.github.io', teacherNotes: 'Or A records for apex domain' },
+            { instruction: 'Add custom domain in GitHub Pages settings', teacherNotes: 'GitHub will verify DNS' },
+            { instruction: 'Enable HTTPS', teacherNotes: 'GitHub provides free SSL certificates' }
+          ]
+        }
+      ],
+      materials: ['GitHub accounts', 'Completed Hugo site', 'Optional: domain name'],
+      udl: {
+        engagement: {
+          choiceAndAutonomy: ['Choose repository name', 'Decide on custom domain'],
+          relevanceAndAuthenticity: ['Site is live on real internet', 'Shareable with family/friends'],
+          selfRegulation: ['Deployment checklist', 'Verification steps']
+        },
+        representation: {
+          multipleFormats: ['Step-by-step screenshots', 'Video walkthrough option', 'Written guide'],
+          vocabularySupport: ['GitHub terminology', 'DNS basics explained'],
+          backgroundKnowledge: ['Connect to web request journey from Lesson 1']
+        },
+        actionExpression: {
+          physicalOptions: ['Web interface or command line', 'Pair deployment'],
+          expressionOptions: ['Document process', 'Help classmates deploy'],
+          executiveFunctionSupport: ['Deployment checklist', 'Troubleshooting FAQ']
+        }
+      },
+      teacherNotes: {
+        commonMisconceptions: [
+          'Students may think GitHub is only for code—it hosts any files',
+          'username.github.io naming is required for free hosting to work',
+          'DNS propagation takes time—custom domains don\'t work instantly'
+        ],
+        keyTakeaways: [
+          'Static sites can be hosted for free',
+          'Your site is now globally accessible',
+          'You own this content and can move it anywhere'
+        ],
+        preparationTips: [
+          'Create a demo GitHub account for walkthrough',
+          'Have troubleshooting guide ready for common issues',
+          'Prepare celebration activity when sites go live'
+        ]
+      }
+    }
+  ],
+  assessment: {
+    formative: [
+      'Can students explain static vs dynamic websites?',
+      'Site preview working locally?',
+      'Content formatted correctly in Markdown?'
+    ],
+    summative: 'Published personal website with at least 3 posts, working navigation, and accessible at a public URL'
+  },
+  extensions: [
+    'Add a custom theme or modify existing one',
+    'Set up comments using Disqus or utterances',
+    'Create a portfolio section with project showcases',
+    'Add an RSS feed for subscribers',
+    'Self-host on Raspberry Pi with Nginx'
+  ],
+  realWorldConnections: [
+    'Many developers and writers use static site generators for blogs',
+    'Major documentation sites use Hugo/Jekyll (Kubernetes, Bootstrap)',
+    'The "IndieWeb" movement promotes personal website ownership',
+    'College application portfolios benefit from personal websites'
+  ]
+};
+
 // Projects array
-const projects: Project[] = [project1, project2];
+const projects: Project[] = [project1, project2, project3];
 
 // Main Page Component
 export default function SelfHostedPage() {
