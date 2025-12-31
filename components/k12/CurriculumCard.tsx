@@ -14,32 +14,32 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
   };
 
   return (
-    <div className="bg-deep-card border border-deep-border rounded-lg overflow-hidden hover:border-warm/50 hover:shadow-lg hover:shadow-warm/10 transition-all">
+    <div className="bg-zinc-900 border border-zinc-700 rounded-lg overflow-hidden hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10 transition-all">
       <div className="p-6">
         {/* Header */}
         <div className="mb-4">
-          <h3 className="text-lg font-bold text-text-heading mb-1">
+          <h3 className="text-lg font-bold text-white mb-1">
             {curriculum.name}
           </h3>
-          <p className="text-sm text-text-secondary">
+          <p className="text-sm text-zinc-400">
             {curriculum.organization}
           </p>
         </div>
 
         {/* Grade Range Badge */}
         <div className="mb-4">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary-light">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-500/20 text-blue-300">
             {curriculum.gradeRange}
           </span>
           {curriculum.isFree && (
-            <span className="ml-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-highlight-green/20 text-highlight-green">
+            <span className="ml-2 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-500/20 text-emerald-400">
               Free
             </span>
           )}
         </div>
 
         {/* Description */}
-        <p className="text-text-secondary text-sm mb-4 line-clamp-3">
+        <p className="text-zinc-400 text-sm mb-4 line-clamp-3">
           {curriculum.description}
         </p>
 
@@ -48,7 +48,7 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
           {curriculum.topics.map((topic) => (
             <span
               key={topic}
-              className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-warm/20 text-warm-light"
+              className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-orange-500/20 text-orange-300"
             >
               {getLabel(topic)}
             </span>
@@ -57,7 +57,7 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
 
         {/* Standards Alignment */}
         {curriculum.hasStandardsAlignment && curriculum.standardsNotes && (
-          <p className="text-xs text-text-muted mb-4">
+          <p className="text-xs text-zinc-500 mb-4">
             {curriculum.standardsNotes}
           </p>
         )}
@@ -67,7 +67,7 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
           href={curriculum.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-warm hover:text-warm-light font-medium text-sm transition-colors"
+          className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium text-sm transition-colors"
         >
           Visit Resource
           <svg
