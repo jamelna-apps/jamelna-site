@@ -75,32 +75,32 @@ export default function Home() {
   ];
 
   return (
-    <div ref={containerRef} className="bg-deep">
-      {/* Hero Section */}
+    <div ref={containerRef} className="bg-zinc-900">
+      {/* Hero Section - Keep original styling */}
       <Hero />
 
       {/* Core Expertise Section */}
-      <section className="py-24 bg-deep-alt relative overflow-hidden">
-        {/* Subtle gradient accent (GYST-inspired primary blue) */}
+      <section className="py-24 bg-zinc-950 relative overflow-hidden">
+        {/* Subtle gradient accent */}
         <div
           className="absolute top-0 left-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(143, 168, 200, 0.4), transparent)' }}
+          style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent)' }}
         />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="reveal text-4xl md:text-5xl font-display font-bold text-text-heading mb-16 -ml-4 md:-ml-8">
-            <span className="text-warm">/</span> Core Expertise
+          <h2 className="reveal text-4xl md:text-5xl font-display font-bold text-white mb-16 -ml-4 md:-ml-8">
+            <span className="text-orange-400">/</span> Core Expertise
           </h2>
 
           {/* Asymmetric grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Large card */}
-            <div className="reveal lg:col-span-7 glass-card p-8 stagger-1">
-              <div className="text-warm mb-4">{expertiseItems[0].icon}</div>
-              <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
+            <div className="reveal lg:col-span-7 bg-zinc-800 border border-zinc-700 rounded-lg p-8 hover:border-orange-500/50 transition-colors stagger-1">
+              <div className="text-orange-400 mb-4">{expertiseItems[0].icon}</div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4">
                 {expertiseItems[0].title}
               </h3>
-              <p className="text-text-secondary text-lg leading-relaxed">
+              <p className="text-zinc-300 text-lg leading-relaxed">
                 {expertiseItems[0].desc}
               </p>
             </div>
@@ -110,13 +110,13 @@ export default function Home() {
               {expertiseItems.slice(1).map((item, i) => (
                 <div
                   key={i}
-                  className={`reveal glass-card p-6 stagger-${i + 2}`}
+                  className={`reveal bg-zinc-800 border border-zinc-700 rounded-lg p-6 hover:border-blue-500/50 transition-colors stagger-${i + 2}`}
                 >
-                  <div className="text-primary mb-3">{item.icon}</div>
-                  <h3 className="text-xl font-display font-bold text-text-heading mb-2">
+                  <div className="text-blue-400 mb-3">{item.icon}</div>
+                  <h3 className="text-xl font-display font-bold text-white mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-text-secondary leading-relaxed">
+                  <p className="text-zinc-400 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -127,13 +127,13 @@ export default function Home() {
       </section>
 
       {/* Featured Work Section */}
-      <section className="py-24 bg-deep relative overflow-hidden">
+      <section className="py-24 bg-zinc-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="reveal mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading -ml-4 md:-ml-8 lg:-ml-16">
-              <span className="text-primary">/</span> {t('featuredWork.title')}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white -ml-4 md:-ml-8 lg:-ml-16">
+              <span className="text-blue-400">/</span> {t('featuredWork.title')}
             </h2>
-            <p className="text-xl text-text-muted mt-4 max-w-2xl">
+            <p className="text-xl text-zinc-400 mt-4 max-w-2xl">
               {t('featuredWork.description')}
             </p>
           </div>
@@ -145,17 +145,18 @@ export default function Home() {
                 key={index}
                 href={`/${locale}/work#${project.anchor}`}
                 className={`
-                  reveal glass-card p-6 group
+                  reveal bg-zinc-800 border border-zinc-700 rounded-lg p-6 group
+                  hover:border-orange-500/50 transition-colors
                   stagger-${(index % 5) + 1}
                   ${index === 0 ? 'md:col-span-2 lg:col-span-1' : ''}
                 `}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <span className="text-xs font-mono text-text-muted">
+                  <span className="text-xs font-mono text-zinc-500">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <svg
-                    className="w-5 h-5 text-text-muted group-hover:text-warm group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    className="w-5 h-5 text-zinc-500 group-hover:text-orange-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -163,10 +164,10 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-display font-bold text-text-heading mb-2 group-hover:text-warm transition-colors">
+                <h3 className="text-xl font-display font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
                   {t(`featuredWork.projects.${project.key}.title`)}
                 </h3>
-                <p className="text-text-secondary text-sm">
+                <p className="text-zinc-400 text-sm">
                   {t(`featuredWork.projects.${project.key}.subtitle`)}
                 </p>
               </Link>
@@ -178,8 +179,8 @@ export default function Home() {
               href={`/${locale}/work`}
               className="
                 inline-flex items-center gap-2 px-6 py-3 rounded-lg
-                border border-primary/50 text-primary font-semibold
-                hover:bg-primary/10 hover:border-primary
+                border border-blue-500/50 text-blue-400 font-semibold
+                hover:bg-blue-500/10 hover:border-blue-400
                 transition-all duration-300
               "
             >
@@ -193,24 +194,27 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-deep-alt relative overflow-hidden">
-        {/* Spotlight effect (GYST-inspired warm glow) */}
+      <section className="py-32 bg-zinc-950 relative overflow-hidden">
+        {/* Spotlight effect */}
         <div
           className="absolute inset-0 opacity-30"
           style={{
-            background: 'radial-gradient(ellipse at center, rgba(201, 112, 77, 0.2), transparent 60%)',
+            background: 'radial-gradient(ellipse at center, rgba(249, 115, 22, 0.2), transparent 60%)',
           }}
         />
 
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+          <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
             {t('cta.title')}
           </h2>
-          <p className="reveal text-xl text-text-muted mb-12 stagger-1">
+          <p className="reveal text-xl text-zinc-400 mb-12 stagger-1">
             {t('cta.description')}
           </p>
           <div className="reveal stagger-2">
-            <Link href={`/${locale}/contact`} className="btn-warm inline-block text-lg">
+            <Link
+              href={`/${locale}/contact`}
+              className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors text-lg"
+            >
               {t('cta.button')}
             </Link>
           </div>
