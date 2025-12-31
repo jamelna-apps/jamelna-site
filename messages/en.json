@@ -630,6 +630,14 @@
     "title": "K-12 CS Education Resources",
     "subtitle": "Free and open-source computer science curricula for schools across America",
     "targetAudience": "For school leaders, district administrators, and CS education champions",
+    "hero": {
+      "ctaPrimary": "Explore Curricula",
+      "ctaSecondary": "AI Implementation Planner"
+    },
+    "implementation": {
+      "title": "Implementation Support",
+      "description": "Get personalized guidance for bringing CS education to your school or district."
+    },
     "sectionNav": {
       "curriculum": "Curricula",
       "districtProfile": "District Profile",
@@ -687,7 +695,9 @@
       "resourcesPlaceholder": "Describe your technology resources, teacher expertise, and any constraints...",
       "submit": "Submit Profile",
       "successTitle": "Thank You!",
-      "successMessage": "Your district profile has been submitted. We're building an AI planning assistant that will use this information to help you design a comprehensive CS scope and sequence. Stay tuned!"
+      "successMessage": "Your district profile has been submitted. We're building an AI planning assistant that will use this information to help you design a comprehensive CS scope and sequence. Stay tuned!",
+      "shortDescription": "Complete a brief assessment to receive tailored curriculum and implementation recommendations.",
+      "startButton": "Start Assessment"
     },
     "comingSoon": {
       "title": "AI Planning Assistant Coming Soon",
@@ -699,6 +709,7 @@
     },
     "valueProps": {
       "title": "Why Use This Resource Hub?",
+      "intro": "Everything you need to bring computer science to your school.",
       "allFree": {
         "title": "100% Free Resources",
         "description": "Every curriculum listed is free or open-source, removing cost barriers to quality CS education."
@@ -752,6 +763,8 @@
     "aiPlanner": {
       "title": "AI Planning Assistant",
       "subtitle": "Design your K-12 CS education program with AI-powered guidance",
+      "cardTitle": "AI Implementation Planner",
+      "cardDescription": "Answer a few questions about your context and get a customized implementation roadmap with curriculum recommendations.",
       "welcome": {
         "title": "Welcome to the AI Planning Assistant",
         "description": "I can help you create a comprehensive K-12 CS education plan tailored to your district. Ask me about curriculum recommendations, scope and sequence, or standards alignment."
@@ -785,6 +798,13 @@
         "generic": "An error occurred. Please try again.",
         "networkError": "Unable to connect. Please check your internet connection."
       }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Use our AI-powered planner to create a customized implementation roadmap for your school or district.",
+      "cardTitle": "AI Implementation Planner",
+      "cardDescription": "Get personalized recommendations based on your school's unique context and goals.",
+      "button": "Start Planning"
     }
   }
 }

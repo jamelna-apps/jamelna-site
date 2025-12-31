@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ServiceCard from '@/components/ServiceCard';
-import PageWrapper from '@/components/PageWrapper';
 import { useTranslations } from 'next-intl';
 
 export default function ServicesPage() {
@@ -36,21 +35,31 @@ export default function ServicesPage() {
   ];
 
   return (
-    <PageWrapper>
-      {/* Page Header */}
-      <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-          <span className="text-warm">/</span> {t('title')}
-        </h1>
-        <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-          {t('description')}
-        </p>
-      </div>
+    <main className="min-h-screen bg-zinc-900 pt-16">
+      {/* Hero Section */}
+      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-zinc-900 to-zinc-950"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
+          style={{ background: 'radial-gradient(circle, rgba(249, 115, 22, 0.4), transparent)' }} />
+
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+            <span className="text-orange-400">/</span> {t('title')}
+          </h1>
+          <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            {t('description')}
+          </p>
+        </div>
+      </section>
 
       {/* Service Cards */}
-      {services.map((service, index) => (
-        <ServiceCard key={index} {...service} />
-      ))}
-    </PageWrapper>
+      <section className="py-12 px-4 bg-zinc-950">
+        <div className="max-w-5xl mx-auto space-y-8">
+          {services.map((service, index) => (
+            <ServiceCard key={index} {...service} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
