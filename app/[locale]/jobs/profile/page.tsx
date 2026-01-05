@@ -6,6 +6,7 @@ import AuthGuard from '@/components/jobs/AuthGuard';
 import { useJobsAuth } from '@/lib/jobs/auth-context';
 import { getProfile, updateProfile } from '@/lib/jobs/conductor-client';
 import type { JobProfile } from '@/lib/jobs/types';
+import ImportProfileWizard from '@/components/jobs/ImportProfileWizard';
 
 const inputStyle = { background: 'rgba(56, 56, 58, 0.5)', border: '1px solid rgba(56, 56, 58, 0.8)' };
 
@@ -15,6 +16,7 @@ function ProfileContent() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [showImportWizard, setShowImportWizard] = useState(false);
 
   const loadProfile = useCallback(async () => {
     if (!sessionToken) return;
@@ -54,6 +56,45 @@ function ProfileContent() {
     setProfile({ ...profile, [field]: value });
   };
 
+  const handleImportComplete = (importedProfile: Partial<JobProfile>) => {
+    if (!profile) return;
+
+    // Merge imported data with existing profile
+    const merged: JobProfile = {
+      ...profile,
+      name: importedProfile.name || profile.name,
+      summary: importedProfile.summary || profile.summary,
+      location: importedProfile.location || profile.location,
+      linkedInUrl: importedProfile.linkedInUrl || profile.linkedInUrl,
+      targetRoles: importedProfile.targetRoles && importedProfile.targetRoles.length > 0
+        ? importedProfile.targetRoles
+        : profile.targetRoles,
+      targetLocations: importedProfile.targetLocations && importedProfile.targetLocations.length > 0
+        ? importedProfile.targetLocations
+        : profile.targetLocations,
+      // Merge skills (union, avoiding duplicates by name)
+      skills: [
+        ...profile.skills,
+        ...(importedProfile.skills || []).filter(
+          imported => !profile.skills.some(existing =>
+            existing.name.toLowerCase() === imported.name.toLowerCase()
+          )
+        )
+      ],
+      // Merge experience if it exists
+      experience: importedProfile.experience && importedProfile.experience.length > 0
+        ? [...(profile.experience || []), ...importedProfile.experience]
+        : (profile.experience || []),
+      // Merge education if it exists
+      education: importedProfile.education && importedProfile.education.length > 0
+        ? [...(profile.education || []), ...importedProfile.education]
+        : (profile.education || []),
+    };
+
+    setProfile(merged);
+    setShowImportWizard(false);
+  };
+
   if (loading) {
     return <div className="text-center py-12 text-[#636366]">Loading profile...</div>;
   }
@@ -68,9 +109,18 @@ function ProfileContent() {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-3xl space-y-8">
-      <div>
-        <h1 className="text-2xl font-bold text-white">Your Profile</h1>
-        <p className="text-[#D1D1D6]">This information powers job matching and cover letter generation</p>
+      <div className="flex justify-between items-center">
+        <div>
+          <h1 className="text-2xl font-bold text-white">Your Profile</h1>
+          <p className="text-[#D1D1D6]">This information powers job matching and cover letter generation</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setShowImportWizard(true)}
+          className="btn-warm"
+        >
+          Import Profile
+        </button>
       </div>
 
       {message && (
@@ -263,6 +313,13 @@ function ProfileContent() {
           {saving ? 'Saving...' : 'Save Profile'}
         </button>
       </div>
+
+      <ImportProfileWizard
+        isOpen={showImportWizard}
+        onClose={() => setShowImportWizard(false)}
+        onImportComplete={handleImportComplete}
+        sessionToken={sessionToken!}
+      />
     </form>
   );
 }

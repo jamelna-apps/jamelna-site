@@ -4,7 +4,10 @@ import type {
   JobProfile,
   Job,
   Application,
-  JobSettings
+  JobSettings,
+  ScanResult,
+  DiscoveredJob,
+  DiscoveredJobStatus
 } from './types';
 
 const CONDUCTOR_API_URL = process.env.CONDUCTOR_API_URL || process.env.NEXT_PUBLIC_CONDUCTOR_API_URL;
@@ -66,6 +69,57 @@ export async function updateProfile(
     { method: 'PUT', body: JSON.stringify(profile) },
     sessionToken
   );
+}
+
+export async function importProfile(
+  sessionToken: string,
+  data: {
+    resume?: File;
+    linkedInUrl?: string;
+    websiteUrls?: string[];
+  }
+): Promise<ConductorResponse<{
+  extracted: Partial<JobProfile>;
+  sources: Record<string, { parsed: boolean; fields?: string[]; pages?: string[]; error?: string }>;
+}>> {
+  const url = `${CONDUCTOR_API_URL}/api/jobs/import-profile`;
+
+  const formData = new FormData();
+
+  if (data.resume) {
+    formData.append('resume', data.resume);
+  }
+
+  if (data.linkedInUrl) {
+    formData.append('linkedInUrl', data.linkedInUrl);
+  }
+
+  if (data.websiteUrls && data.websiteUrls.length > 0) {
+    data.websiteUrls.forEach((url, index) => {
+      formData.append(`websiteUrls[${index}]`, url);
+    });
+  }
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${sessionToken}`,
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      return { error: errorData.error || `HTTP ${response.status}` };
+    }
+
+    const responseData = await response.json();
+    return { data: responseData };
+  } catch (error) {
+    console.error('Conductor API error:', error);
+    return { error: 'Network error' };
+  }
 }
 
 // Job operations
@@ -152,6 +206,54 @@ export async function updateSettings(
   return conductorFetch<JobSettings>(
     '/api/jobs/settings',
     { method: 'PUT', body: JSON.stringify(settings) },
+    sessionToken
+  );
+}
+
+// Job scanning operations
+export async function scanJobs(
+  sessionToken: string,
+  options?: { feedIds?: string[]; scraperIds?: string[] }
+): Promise<ConductorResponse<ScanResult>> {
+  return conductorFetch<ScanResult>(
+    '/api/jobs/scan',
+    { method: 'POST', body: JSON.stringify(options || {}) },
+    sessionToken
+  );
+}
+
+export async function getDiscoveredJobs(
+  sessionToken: string,
+  filters?: { status?: string; minMatchScore?: number; source?: string }
+): Promise<ConductorResponse<DiscoveredJob[]>> {
+  const queryParams = new URLSearchParams();
+
+  if (filters?.status) {
+    queryParams.append('status', filters.status);
+  }
+
+  if (filters?.minMatchScore !== undefined) {
+    queryParams.append('minMatchScore', filters.minMatchScore.toString());
+  }
+
+  if (filters?.source) {
+    queryParams.append('source', filters.source);
+  }
+
+  const queryString = queryParams.toString();
+  const endpoint = queryString ? `/api/jobs/discovered?${queryString}` : '/api/jobs/discovered';
+
+  return conductorFetch<DiscoveredJob[]>(endpoint, { method: 'GET' }, sessionToken);
+}
+
+export async function updateJobStatus(
+  sessionToken: string,
+  jobId: string,
+  status: DiscoveredJobStatus
+): Promise<ConductorResponse<void>> {
+  return conductorFetch<void>(
+    `/api/jobs/discovered/${jobId}`,
+    { method: 'PATCH', body: JSON.stringify({ status }) },
     sessionToken
   );
 }

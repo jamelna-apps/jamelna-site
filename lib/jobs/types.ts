@@ -138,3 +138,33 @@ export interface ExtractedJob {
   salary?: string;
   postedDate?: string;
 }
+
+// Job scanning types
+export interface ScanResult {
+  totalFound: number;
+  newJobs: number;
+  duplicatesSkipped: number;
+  errors: { source: string; error: string }[];
+  scanDuration: number;
+}
+
+export interface DiscoveredJob {
+  id: string;
+  urlHash: string;
+  url: string;
+  title: string;
+  company: string;
+  location: string;
+  remote: boolean;
+  requirements: string[];
+  salary: string | null;
+  description: string;
+  source: string;
+  matchScore: number;
+  matchReasons: string[];
+  gaps: string[];
+  status: DiscoveredJobStatus;
+  discoveredAt: string;
+}
+
+export type DiscoveredJobStatus = 'new' | 'saved' | 'applied' | 'rejected';

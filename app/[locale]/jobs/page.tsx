@@ -5,8 +5,8 @@ import { useState, useEffect, useCallback } from 'react';
 import AuthGuard from '@/components/jobs/AuthGuard';
 import AddJobModal from '@/components/jobs/AddJobModal';
 import { useJobsAuth } from '@/lib/jobs/auth-context';
-import { getJobs } from '@/lib/jobs/conductor-client';
-import type { Job } from '@/lib/jobs/types';
+import { getJobs, getDiscoveredJobs, scanJobs } from '@/lib/jobs/conductor-client';
+import type { Job, DiscoveredJob, ScanResult } from '@/lib/jobs/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -18,6 +18,9 @@ function DashboardContent() {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAddModal, setShowAddModal] = useState(false);
+  const [discoveredJobs, setDiscoveredJobs] = useState<DiscoveredJob[]>([]);
+  const [scanning, setScanning] = useState(false);
+  const [lastScanResult, setLastScanResult] = useState<ScanResult | null>(null);
 
   const loadJobs = useCallback(async () => {
     if (!sessionToken) return;
@@ -30,9 +33,35 @@ function DashboardContent() {
     setLoading(false);
   }, [sessionToken]);
 
+  const loadDiscoveredJobs = useCallback(async () => {
+    if (!sessionToken) return;
+    const result = await getDiscoveredJobs(sessionToken, { status: 'new', minMatchScore: 50 });
+    if (result.data) {
+      // Filter to jobs discovered in last 24 hours
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const todayJobs = result.data.filter(job =>
+        new Date(job.discoveredAt) >= today
+      );
+      setDiscoveredJobs(todayJobs);
+    }
+  }, [sessionToken]);
+
+  const handleScanNow = async () => {
+    if (!sessionToken) return;
+    setScanning(true);
+    const result = await scanJobs(sessionToken);
+    if (result.data) {
+      setLastScanResult(result.data);
+      await loadDiscoveredJobs(); // Refresh list after scan
+    }
+    setScanning(false);
+  };
+
   useEffect(() => {
     loadJobs();
-  }, [loadJobs]);
+    loadDiscoveredJobs();
+  }, [loadJobs, loadDiscoveredJobs]);
 
   // Calculate stats
   const newJobs = jobs.filter(j => j.status === 'new');
@@ -75,6 +104,77 @@ function DashboardContent() {
           <p className="text-3xl font-bold text-[#C9704D]">{highMatchJobs.length}</p>
         </div>
       </div>
+
+      {/* Today's Matches Section */}
+      <section className="glass-card p-6">
+        <div className="flex justify-between items-center mb-4">
+          <div>
+            <h2 className="text-lg font-semibold text-white">Today's Matches</h2>
+            <p className="text-sm text-[#636366]">
+              {discoveredJobs.length} new jobs found
+            </p>
+          </div>
+          <button
+            onClick={handleScanNow}
+            disabled={scanning}
+            className="px-4 py-2 text-sm rounded-lg bg-[#00a8ff]/20 text-[#00a8ff] hover:bg-[#00a8ff]/30 disabled:opacity-50"
+          >
+            {scanning ? 'Scanning...' : 'Scan Now'}
+          </button>
+        </div>
+
+        {/* Show scan result if available */}
+        {lastScanResult && (
+          <div className="mb-4 p-3 rounded-lg bg-[#40E0D0]/10 text-[#40E0D0] text-sm">
+            Found {lastScanResult.newJobs} new jobs ({lastScanResult.duplicatesSkipped} duplicates skipped)
+          </div>
+        )}
+
+        {/* Job cards */}
+        <div className="space-y-3">
+          {discoveredJobs.slice(0, 5).map(job => (
+            <div key={job.id} className="p-4 rounded-lg" style={{ background: 'rgba(56, 56, 58, 0.3)' }}>
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-medium text-white">{job.title}</h3>
+                  <p className="text-sm text-[#D1D1D6]">{job.company}</p>
+                  <p className="text-xs text-[#636366]">
+                    {job.remote ? 'Remote' : job.location} • {job.source}
+                  </p>
+                </div>
+                <div className="text-right">
+                  <span className={`text-sm font-medium ${
+                    job.matchScore >= 80 ? 'text-[#40E0D0]' :
+                    job.matchScore >= 60 ? 'text-[#00a8ff]' : 'text-[#636366]'
+                  }`}>
+                    {job.matchScore}% match
+                  </span>
+                </div>
+              </div>
+              <a
+                href={job.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block text-sm text-[#00a8ff] hover:underline"
+              >
+                View Job →
+              </a>
+            </div>
+          ))}
+
+          {discoveredJobs.length > 5 && (
+            <a href="./jobs/all" className="block text-center text-sm text-[#00a8ff] hover:underline py-2">
+              View All {discoveredJobs.length} Jobs →
+            </a>
+          )}
+
+          {discoveredJobs.length === 0 && !scanning && (
+            <p className="text-center text-[#636366] py-4">
+              No new matches today. Click "Scan Now" to search for jobs.
+            </p>
+          )}
+        </div>
+      </section>
 
       {/* High Match Jobs */}
       <div className="glass-card">
