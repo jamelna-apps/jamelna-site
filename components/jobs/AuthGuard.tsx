@@ -4,7 +4,6 @@
 import { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useJobsAuth } from '@/lib/jobs/auth-context';
-import JobsNav from './JobsNav';
 
 interface AuthGuardProps {
   children: React.ReactNode;
@@ -26,7 +25,7 @@ export default function AuthGuard({ children }: AuthGuardProps) {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex items-center justify-center py-12">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00a8ff] mx-auto"></div>
           <p className="mt-4 text-[#D1D1D6]">Loading...</p>
@@ -39,12 +38,5 @@ export default function AuthGuard({ children }: AuthGuardProps) {
     return null; // Will redirect
   }
 
-  return (
-    <>
-      <JobsNav />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {children}
-      </main>
-    </>
-  );
+  return <>{children}</>;
 }
