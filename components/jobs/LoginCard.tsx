@@ -1,13 +1,26 @@
 // components/jobs/LoginCard.tsx
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import { useJobsAuth } from '@/lib/jobs/auth-context';
 
 export default function LoginCard() {
-  const { signInWithGoogle, loading } = useJobsAuth();
+  const { user, signInWithGoogle, loading } = useJobsAuth();
   const [error, setError] = useState<string | null>(null);
   const [isSigningIn, setIsSigningIn] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Extract locale from pathname
+  const locale = pathname.split('/')[1] || 'en';
+
+  // Redirect to dashboard if already logged in
+  useEffect(() => {
+    if (!loading && user) {
+      router.push(`/${locale}/jobs`);
+    }
+  }, [user, loading, router, locale]);
 
   const handleSignIn = async () => {
     setError(null);
@@ -15,6 +28,7 @@ export default function LoginCard() {
 
     try {
       await signInWithGoogle();
+      // Redirect handled by useEffect when user state changes
     } catch (err) {
       setError('Failed to sign in. Please try again.');
       console.error(err);
