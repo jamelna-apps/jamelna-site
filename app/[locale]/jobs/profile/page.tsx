@@ -7,6 +7,8 @@ import { useJobsAuth } from '@/lib/jobs/auth-context';
 import { getProfile, updateProfile } from '@/lib/jobs/conductor-client';
 import type { JobProfile } from '@/lib/jobs/types';
 
+const inputStyle = { background: 'rgba(56, 56, 58, 0.5)', border: '1px solid rgba(56, 56, 58, 0.8)' };
+
 function ProfileContent() {
   const { sessionToken } = useJobsAuth();
   const [profile, setProfile] = useState<JobProfile | null>(null);
@@ -53,13 +55,13 @@ function ProfileContent() {
   };
 
   if (loading) {
-    return <div className="text-center py-12 text-gray-500">Loading profile...</div>;
+    return <div className="text-center py-12 text-[#636366]">Loading profile...</div>;
   }
 
   if (!profile) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">No profile found. Creating one...</p>
+        <p className="text-[#636366]">No profile found. Creating one...</p>
       </div>
     );
   }
@@ -67,62 +69,69 @@ function ProfileContent() {
   return (
     <form onSubmit={handleSubmit} className="max-w-3xl space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Your Profile</h1>
-        <p className="text-gray-600">This information powers job matching and cover letter generation</p>
+        <h1 className="text-2xl font-bold text-white">Your Profile</h1>
+        <p className="text-[#D1D1D6]">This information powers job matching and cover letter generation</p>
       </div>
 
       {message && (
-        <div className={`p-4 rounded-md ${
-          message.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
-        }`}>
+        <div
+          className="p-4 rounded-md"
+          style={message.type === 'success'
+            ? { background: 'rgba(64, 224, 208, 0.15)', color: '#40E0D0' }
+            : { background: 'rgba(220, 38, 38, 0.15)', color: '#f87171' }
+          }
+        >
           {message.text}
         </div>
       )}
 
       {/* Basic Info */}
-      <section className="bg-white p-6 rounded-lg border border-gray-200 space-y-4">
-        <h2 className="font-semibold text-gray-900">Basic Information</h2>
+      <section className="glass-card p-6 space-y-4">
+        <h2 className="font-semibold text-white">Basic Information</h2>
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <label className="block text-sm font-medium text-[#D1D1D6] mb-1">Name</label>
             <input
               type="text"
               value={profile.name}
               onChange={(e) => updateField('name', e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="w-full px-3 py-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+              style={inputStyle}
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
+            <label className="block text-sm font-medium text-[#D1D1D6] mb-1">Location</label>
             <input
               type="text"
               value={profile.location}
               onChange={(e) => updateField('location', e.target.value)}
               placeholder="e.g., Madrid, Spain"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="w-full px-3 py-2 rounded-md text-white placeholder-[#636366] focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+              style={inputStyle}
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">LinkedIn URL</label>
+          <label className="block text-sm font-medium text-[#D1D1D6] mb-1">LinkedIn URL</label>
           <input
             type="url"
             value={profile.linkedInUrl || ''}
             onChange={(e) => updateField('linkedInUrl', e.target.value)}
             placeholder="https://linkedin.com/in/yourprofile"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md"
+            className="w-full px-3 py-2 rounded-md text-white placeholder-[#636366] focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+            style={inputStyle}
           />
         </div>
       </section>
 
       {/* Target Roles */}
-      <section className="bg-white p-6 rounded-lg border border-gray-200 space-y-4">
-        <h2 className="font-semibold text-gray-900">Target Roles</h2>
+      <section className="glass-card p-6 space-y-4">
+        <h2 className="font-semibold text-white">Target Roles</h2>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-[#D1D1D6] mb-1">
             Roles (comma-separated)
           </label>
           <input
@@ -130,12 +139,13 @@ function ProfileContent() {
             value={profile.targetRoles.join(', ')}
             onChange={(e) => updateField('targetRoles', e.target.value.split(',').map(s => s.trim()).filter(Boolean))}
             placeholder="Product Manager, EdTech Lead, AI Education Specialist"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md"
+            className="w-full px-3 py-2 rounded-md text-white placeholder-[#636366] focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+            style={inputStyle}
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-[#D1D1D6] mb-1">
             Locations (comma-separated)
           </label>
           <input
@@ -143,17 +153,18 @@ function ProfileContent() {
             value={profile.targetLocations.join(', ')}
             onChange={(e) => updateField('targetLocations', e.target.value.split(',').map(s => s.trim()).filter(Boolean))}
             placeholder="Remote, Spain, EU"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md"
+            className="w-full px-3 py-2 rounded-md text-white placeholder-[#636366] focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+            style={inputStyle}
           />
         </div>
       </section>
 
       {/* Summary */}
-      <section className="bg-white p-6 rounded-lg border border-gray-200 space-y-4">
-        <h2 className="font-semibold text-gray-900">Professional Summary</h2>
+      <section className="glass-card p-6 space-y-4">
+        <h2 className="font-semibold text-white">Professional Summary</h2>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-[#D1D1D6] mb-1">
             Summary (used in cover letters)
           </label>
           <textarea
@@ -161,19 +172,20 @@ function ProfileContent() {
             onChange={(e) => updateField('summary', e.target.value)}
             rows={4}
             placeholder="A brief professional summary highlighting your key strengths..."
-            className="w-full px-3 py-2 border border-gray-300 rounded-md"
+            className="w-full px-3 py-2 rounded-md text-white placeholder-[#636366] focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+            style={inputStyle}
           />
         </div>
       </section>
 
       {/* Skills */}
-      <section className="bg-white p-6 rounded-lg border border-gray-200 space-y-4">
-        <h2 className="font-semibold text-gray-900">Skills</h2>
+      <section className="glass-card p-6 space-y-4">
+        <h2 className="font-semibold text-white">Skills</h2>
 
         {profile.skills.map((skill, index) => (
           <div key={index} className="flex gap-4 items-end">
             <div className="flex-1">
-              <label className="block text-xs text-gray-500 mb-1">Skill</label>
+              <label className="block text-xs text-[#636366] mb-1">Skill</label>
               <input
                 type="text"
                 value={skill.name}
@@ -182,11 +194,12 @@ function ProfileContent() {
                   newSkills[index] = { ...skill, name: e.target.value };
                   updateField('skills', newSkills);
                 }}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+                className="w-full px-3 py-2 rounded-md text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+                style={inputStyle}
               />
             </div>
             <div className="w-32">
-              <label className="block text-xs text-gray-500 mb-1">Level</label>
+              <label className="block text-xs text-[#636366] mb-1">Level</label>
               <select
                 value={skill.level}
                 onChange={(e) => {
@@ -194,7 +207,8 @@ function ProfileContent() {
                   newSkills[index] = { ...skill, level: e.target.value as typeof skill.level };
                   updateField('skills', newSkills);
                 }}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+                className="w-full px-3 py-2 rounded-md text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+                style={inputStyle}
               >
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
@@ -203,7 +217,7 @@ function ProfileContent() {
               </select>
             </div>
             <div className="w-24">
-              <label className="block text-xs text-gray-500 mb-1">Years</label>
+              <label className="block text-xs text-[#636366] mb-1">Years</label>
               <input
                 type="number"
                 value={skill.yearsExp}
@@ -212,7 +226,8 @@ function ProfileContent() {
                   newSkills[index] = { ...skill, yearsExp: Number(e.target.value) };
                   updateField('skills', newSkills);
                 }}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+                className="w-full px-3 py-2 rounded-md text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+                style={inputStyle}
               />
             </div>
             <button
@@ -220,7 +235,7 @@ function ProfileContent() {
               onClick={() => {
                 updateField('skills', profile.skills.filter((_, i) => i !== index));
               }}
-              className="px-2 py-2 text-red-600 hover:text-red-800"
+              className="px-2 py-2 text-[#f87171] hover:text-[#fca5a5] transition-colors"
             >
               ✕
             </button>
@@ -232,7 +247,7 @@ function ProfileContent() {
           onClick={() => {
             updateField('skills', [...profile.skills, { name: '', level: 'intermediate', yearsExp: 1 }]);
           }}
-          className="text-sm text-blue-600 hover:underline"
+          className="text-sm text-[#00a8ff] hover:underline"
         >
           + Add Skill
         </button>
@@ -243,7 +258,7 @@ function ProfileContent() {
         <button
           type="submit"
           disabled={saving}
-          className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+          className="btn-warm disabled:opacity-50"
         >
           {saving ? 'Saving...' : 'Save Profile'}
         </button>

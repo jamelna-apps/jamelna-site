@@ -48,7 +48,6 @@ export default function AIPlannerPage() {
           embedded
           labels={wizardLabels}
           onComplete={(plan) => {
-            console.log('Plan complete:', plan);
           }}
         />
       </div>

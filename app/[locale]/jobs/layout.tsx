@@ -11,7 +11,7 @@ export const metadata = {
 export default function JobsLayout({ children }: { children: ReactNode }) {
   return (
     <JobsAuthProvider>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen" style={{ background: 'var(--background)' }}>
         {children}
       </div>
     </JobsAuthProvider>

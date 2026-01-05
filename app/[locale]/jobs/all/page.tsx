@@ -49,41 +49,45 @@ function AllJobsContent() {
     return true;
   }).sort((a, b) => b.matchScore - a.matchScore);
 
+  const inputStyle = { background: 'rgba(56, 56, 58, 0.5)', border: '1px solid rgba(56, 56, 58, 0.8)' };
+
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">All Jobs</h1>
-          <p className="text-gray-600">{filteredJobs.length} jobs found</p>
+          <h1 className="text-2xl font-bold text-white">All Jobs</h1>
+          <p className="text-[#D1D1D6]">{filteredJobs.length} jobs found</p>
         </div>
         <button
           onClick={() => setShowAddModal(true)}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+          className="btn-warm"
         >
           + Add Job
         </button>
       </div>
 
       {/* Filters */}
-      <div className="bg-white p-4 rounded-lg border border-gray-200 flex flex-wrap gap-4">
+      <div className="glass-card p-4 flex flex-wrap gap-4">
         <div>
-          <label className="block text-xs text-gray-500 mb-1">Search</label>
+          <label className="block text-xs text-[#636366] mb-1">Search</label>
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Title or company..."
-            className="px-3 py-1.5 border border-gray-300 rounded text-sm w-48"
+            className="px-3 py-1.5 rounded text-sm w-48 text-white placeholder-[#636366] focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+            style={inputStyle}
           />
         </div>
 
         <div>
-          <label className="block text-xs text-gray-500 mb-1">Status</label>
+          <label className="block text-xs text-[#636366] mb-1">Status</label>
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value as JobStatus | 'all')}
-            className="px-3 py-1.5 border border-gray-300 rounded text-sm"
+            className="px-3 py-1.5 rounded text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+            style={inputStyle}
           >
             <option value="all">All Statuses</option>
             <option value="new">New</option>
@@ -97,11 +101,12 @@ function AllJobsContent() {
         </div>
 
         <div>
-          <label className="block text-xs text-gray-500 mb-1">Min Match Score</label>
+          <label className="block text-xs text-[#636366] mb-1">Min Match Score</label>
           <select
             value={minScore}
             onChange={(e) => setMinScore(Number(e.target.value))}
-            className="px-3 py-1.5 border border-gray-300 rounded text-sm"
+            className="px-3 py-1.5 rounded text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+            style={inputStyle}
           >
             <option value={0}>Any</option>
             <option value={60}>60%+</option>
@@ -114,13 +119,13 @@ function AllJobsContent() {
 
       {/* Job List */}
       {loading ? (
-        <div className="text-center py-12 text-gray-500">Loading jobs...</div>
+        <div className="text-center py-12 text-[#636366]">Loading jobs...</div>
       ) : filteredJobs.length === 0 ? (
-        <div className="text-center py-12 bg-white rounded-lg border border-gray-200">
-          <p className="text-gray-500">No jobs found matching your filters.</p>
+        <div className="text-center py-12 glass-card">
+          <p className="text-[#636366]">No jobs found matching your filters.</p>
           <button
             onClick={() => setShowAddModal(true)}
-            className="mt-2 text-blue-600 hover:underline"
+            className="mt-2 text-[#00a8ff] hover:underline"
           >
             Add a job posting
           </button>

@@ -46,16 +46,16 @@ export default function LoginCard() {
   }
 
   return (
-    <div className="max-w-md mx-auto mt-20 p-8 bg-white rounded-lg shadow-md">
-      <h1 className="text-2xl font-bold text-center text-gray-900 mb-2">
+    <div className="max-w-md mx-auto mt-20 p-8 rounded-2xl glass-card">
+      <h1 className="text-2xl font-bold text-center text-white mb-2">
         Job Search Dashboard
       </h1>
-      <p className="text-center text-gray-600 mb-8">
+      <p className="text-center text-[#D1D1D6] mb-8">
         Sign in to access your personal job search tools
       </p>
 
       {error && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm">
+        <div className="mb-4 p-3 rounded-md text-sm" style={{ background: 'rgba(220, 38, 38, 0.2)', border: '1px solid rgba(220, 38, 38, 0.3)', color: '#fca5a5' }}>
           {error}
         </div>
       )}
@@ -63,7 +63,8 @@ export default function LoginCard() {
       <button
         onClick={handleSignIn}
         disabled={isSigningIn}
-        className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors disabled:opacity-50"
+        className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-lg transition-all disabled:opacity-50 hover:translate-y-[-1px]"
+        style={{ background: 'rgba(56, 56, 58, 0.5)', border: '1px solid rgba(56, 56, 58, 0.8)' }}
       >
         <svg className="w-5 h-5" viewBox="0 0 24 24">
           <path
@@ -83,12 +84,12 @@ export default function LoginCard() {
             d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
           />
         </svg>
-        <span className="text-gray-700 font-medium">
+        <span className="text-white font-medium">
           {isSigningIn ? 'Signing in...' : 'Continue with Google'}
         </span>
       </button>
 
-      <p className="mt-6 text-center text-xs text-gray-500">
+      <p className="mt-6 text-center text-xs text-[#636366]">
         This is a private dashboard for personal use only.
       </p>
     </div>

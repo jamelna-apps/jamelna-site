@@ -45,19 +45,19 @@ export default function AddJobModal({ isOpen, onClose, onJobAdded }: AddJobModal
       <div className="flex items-center justify-center min-h-screen px-4">
         {/* Backdrop */}
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+          className="fixed inset-0 bg-black bg-opacity-70 transition-opacity backdrop-blur-sm"
           onClick={onClose}
         />
 
         {/* Modal */}
-        <div className="relative bg-white rounded-lg shadow-xl max-w-md w-full p-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        <div className="relative rounded-2xl shadow-xl max-w-md w-full p-6" style={{ background: 'rgba(44, 44, 46, 0.95)', border: '1px solid rgba(56, 56, 58, 0.5)' }}>
+          <h2 className="text-lg font-semibold text-white mb-4">
             Add Job from URL
           </h2>
 
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="url" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="url" className="block text-sm font-medium text-[#D1D1D6] mb-1">
                 Job Posting URL
               </label>
               <input
@@ -66,16 +66,17 @@ export default function AddJobModal({ isOpen, onClose, onJobAdded }: AddJobModal
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="https://company.com/careers/job-title"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00a8ff] text-white placeholder-[#636366]"
+                style={{ background: 'rgba(56, 56, 58, 0.5)', border: '1px solid rgba(56, 56, 58, 0.8)' }}
                 required
               />
-              <p className="mt-1 text-xs text-gray-500">
+              <p className="mt-1 text-xs text-[#636366]">
                 Paste any job posting URL. AI will extract the details.
               </p>
             </div>
 
             {error && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md text-red-700 text-sm">
+              <div className="mb-4 p-3 rounded-md text-sm" style={{ background: 'rgba(220, 38, 38, 0.2)', border: '1px solid rgba(220, 38, 38, 0.3)', color: '#fca5a5' }}>
                 {error}
               </div>
             )}
@@ -84,14 +85,14 @@ export default function AddJobModal({ isOpen, onClose, onJobAdded }: AddJobModal
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2 text-gray-700 hover:text-gray-900"
+                className="px-4 py-2 text-[#D1D1D6] hover:text-white transition-colors"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading || !url.trim()}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50"
+                className="btn-warm disabled:opacity-50"
               >
                 {loading ? 'Adding...' : 'Add Job'}
               </button>

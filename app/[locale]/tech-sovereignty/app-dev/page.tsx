@@ -573,7 +573,6 @@ const project1: Project = {
           ],
           steps: [
             { instruction: 'Create "script.js" and link it to your HTML with <script src="script.js"></script> before </body>.', duration: '3 min', teacherNotes: 'Script goes at the end of body so HTML loads first.' },
-            { instruction: 'Write: console.log("Hello JavaScript!"); Save and refresh. Open DevTools Console to see the message.', duration: '3 min' },
             { instruction: 'Change to: alert("Welcome to my page!"); This creates a popup. More visible, but annoying!', duration: '3 min' },
             { instruction: 'Better approach: Select an element and change it. document.querySelector("h1").textContent = "Changed by JS!";', duration: '5 min', teacherNotes: 'This is the key insight - JS can read and change the page.' },
             { instruction: 'Practice: Use querySelector to change another element on your page.', duration: '4 min' }
@@ -1006,7 +1005,6 @@ const project2: Project = {
           duration: '15 minutes',
           overview: 'Students connect their HTML/JavaScript frontend to the API.',
           steps: [
-            { instruction: 'In JavaScript, use fetch() to call the API: fetch("/contacts").then(res => res.json()).then(data => console.log(data));', duration: '5 min' },
             { instruction: 'Display the data: Loop through contacts and add them to the page.', duration: '5 min' },
             { instruction: 'Create new contact: Use fetch with method: "POST" and body containing the new data.', duration: '5 min', teacherNotes: 'This connects everything - user types, JS calls API, API writes to database.' }
           ],

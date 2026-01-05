@@ -12,15 +12,15 @@ interface JobCardProps {
   expanded?: boolean;
 }
 
-const statusColors: Record<JobStatus, string> = {
-  new: 'bg-gray-100 text-gray-800',
-  reviewing: 'bg-yellow-100 text-yellow-800',
-  applying: 'bg-blue-100 text-blue-800',
-  applied: 'bg-purple-100 text-purple-800',
-  interviewing: 'bg-green-100 text-green-800',
-  offer: 'bg-emerald-100 text-emerald-800',
-  rejected: 'bg-red-100 text-red-800',
-  withdrawn: 'bg-gray-100 text-gray-600',
+const statusColors: Record<JobStatus, { bg: string; text: string }> = {
+  new: { bg: 'rgba(255, 255, 255, 0.1)', text: '#D1D1D6' },
+  reviewing: { bg: 'rgba(255, 215, 0, 0.15)', text: '#FFD700' },
+  applying: { bg: 'rgba(0, 168, 255, 0.15)', text: '#00a8ff' },
+  applied: { bg: 'rgba(139, 92, 246, 0.15)', text: '#a78bfa' },
+  interviewing: { bg: 'rgba(64, 224, 208, 0.15)', text: '#40E0D0' },
+  offer: { bg: 'rgba(16, 185, 129, 0.15)', text: '#10b981' },
+  rejected: { bg: 'rgba(220, 38, 38, 0.15)', text: '#f87171' },
+  withdrawn: { bg: 'rgba(107, 114, 128, 0.15)', text: '#6b7280' },
 };
 
 export default function JobCard({ job, onUpdate, expanded = false }: JobCardProps) {
@@ -48,71 +48,79 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
     setGeneratingLetter(false);
   };
 
-  const matchColor = job.matchScore >= 80
-    ? 'text-green-600 bg-green-50'
+  const matchStyle = job.matchScore >= 80
+    ? { bg: 'rgba(64, 224, 208, 0.2)', text: '#40E0D0' }
     : job.matchScore >= 60
-      ? 'text-yellow-600 bg-yellow-50'
-      : 'text-gray-600 bg-gray-50';
+      ? { bg: 'rgba(255, 215, 0, 0.2)', text: '#FFD700' }
+      : { bg: 'rgba(107, 114, 128, 0.2)', text: '#9ca3af' };
+
+  const inputStyle = { background: 'rgba(56, 56, 58, 0.5)', border: '1px solid rgba(56, 56, 58, 0.8)' };
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+    <div className="glass-card overflow-hidden">
       {/* Header */}
       <div
-        className="p-4 cursor-pointer hover:bg-gray-50"
+        className="p-4 cursor-pointer hover:bg-[rgba(56,56,58,0.3)] transition-colors"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex justify-between items-start">
           <div className="flex-1">
-            <h3 className="font-medium text-gray-900">{job.title}</h3>
-            <p className="text-sm text-gray-600">{job.company}</p>
+            <h3 className="font-medium text-white">{job.title}</h3>
+            <p className="text-sm text-[#D1D1D6]">{job.company}</p>
             <div className="mt-1 flex flex-wrap gap-2">
               {job.remote && (
-                <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
+                <span className="text-xs px-2 py-0.5 rounded" style={{ background: 'rgba(0, 168, 255, 0.2)', color: '#00a8ff' }}>
                   Remote
                 </span>
               )}
-              <span className="text-xs text-gray-500">{job.location}</span>
-              <span className={`text-xs px-2 py-0.5 rounded ${statusColors[job.status]}`}>
+              <span className="text-xs text-[#636366]">{job.location}</span>
+              <span
+                className="text-xs px-2 py-0.5 rounded capitalize"
+                style={{ background: statusColors[job.status].bg, color: statusColors[job.status].text }}
+              >
                 {job.status}
               </span>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <span className={`px-3 py-1 rounded-full text-sm font-medium ${matchColor}`}>
+            <span
+              className="px-3 py-1 rounded-full text-sm font-medium"
+              style={{ background: matchStyle.bg, color: matchStyle.text }}
+            >
               {job.matchScore}%
             </span>
-            <span className="text-gray-400">{isExpanded ? '▲' : '▼'}</span>
+            <span className="text-[#636366]">{isExpanded ? '▲' : '▼'}</span>
           </div>
         </div>
       </div>
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="border-t border-gray-200 p-4 space-y-4">
+        <div className="border-t p-4 space-y-4" style={{ borderColor: 'rgba(56, 56, 58, 0.5)' }}>
           {/* Match Analysis */}
           <div>
-            <h4 className="font-medium text-gray-900 mb-2">Match Analysis</h4>
+            <h4 className="font-medium text-white mb-2">Match Analysis</h4>
             <div className="space-y-1">
               {job.matchReasons.map((reason, i) => (
-                <p key={i} className="text-sm text-green-700">✓ {reason}</p>
+                <p key={i} className="text-sm text-[#40E0D0]">✓ {reason}</p>
               ))}
               {job.gaps.map((gap, i) => (
-                <p key={i} className="text-sm text-yellow-700">⚠ {gap}</p>
+                <p key={i} className="text-sm text-[#FFD700]">⚠ {gap}</p>
               ))}
             </div>
           </div>
 
           {/* Description */}
           <div>
-            <h4 className="font-medium text-gray-900 mb-2">Description</h4>
-            <p className="text-sm text-gray-700 whitespace-pre-wrap">{job.description}</p>
+            <h4 className="font-medium text-white mb-2">Description</h4>
+            <p className="text-sm text-[#D1D1D6] whitespace-pre-wrap">{job.description}</p>
           </div>
 
           {/* Requirements */}
           {job.requirements.length > 0 && (
             <div>
-              <h4 className="font-medium text-gray-900 mb-2">Requirements</h4>
-              <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+              <h4 className="font-medium text-white mb-2">Requirements</h4>
+              <ul className="list-disc list-inside text-sm text-[#D1D1D6] space-y-1">
                 {job.requirements.map((req, i) => (
                   <li key={i}>{req}</li>
                 ))}
@@ -123,15 +131,15 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
           {/* Cover Letter */}
           {coverLetter && (
             <div>
-              <h4 className="font-medium text-gray-900 mb-2">Generated Cover Letter</h4>
-              <div className="bg-gray-50 p-4 rounded-md">
-                <pre className="text-sm text-gray-700 whitespace-pre-wrap font-sans">
+              <h4 className="font-medium text-white mb-2">Generated Cover Letter</h4>
+              <div className="p-4 rounded-md" style={{ background: 'rgba(56, 56, 58, 0.5)' }}>
+                <pre className="text-sm text-[#D1D1D6] whitespace-pre-wrap font-sans">
                   {coverLetter}
                 </pre>
               </div>
               <button
                 onClick={() => navigator.clipboard.writeText(coverLetter)}
-                className="mt-2 text-sm text-blue-600 hover:underline"
+                className="mt-2 text-sm text-[#00a8ff] hover:underline"
               >
                 Copy to clipboard
               </button>
@@ -139,11 +147,11 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
           )}
 
           {/* Actions */}
-          <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-200">
+          <div className="flex flex-wrap gap-2 pt-2 border-t" style={{ borderColor: 'rgba(56, 56, 58, 0.5)' }}>
             <button
               onClick={handleGenerateCoverLetter}
               disabled={generatingLetter}
-              className="px-3 py-1.5 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 disabled:opacity-50"
+              className="btn-warm text-sm disabled:opacity-50"
             >
               {generatingLetter ? 'Generating...' : 'Generate Cover Letter'}
             </button>
@@ -152,7 +160,8 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
               href={job.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded hover:bg-gray-200"
+              className="px-3 py-1.5 text-[#D1D1D6] text-sm rounded hover:text-white transition-colors"
+              style={inputStyle}
             >
               View Original →
             </a>
@@ -161,7 +170,8 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
               value={job.status}
               onChange={(e) => handleStatusChange(e.target.value as JobStatus)}
               disabled={updatingStatus}
-              className="px-3 py-1.5 border border-gray-300 text-sm rounded"
+              className="px-3 py-1.5 text-sm rounded text-white focus:outline-none focus:ring-2 focus:ring-[#00a8ff]"
+              style={inputStyle}
             >
               <option value="new">New</option>
               <option value="reviewing">Reviewing</option>
