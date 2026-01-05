@@ -28,6 +28,9 @@ async function conductorFetch<T>(
 ): Promise<ConductorResponse<T>> {
   const url = `${CONDUCTOR_API_URL}${endpoint}`;
 
+  console.log('[Conductor] Fetching:', url);
+  console.log('[Conductor] API URL from env:', CONDUCTOR_API_URL);
+
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
   };
@@ -42,16 +45,19 @@ async function conductorFetch<T>(
       headers,
     });
 
+    console.log('[Conductor] Response status:', response.status);
+
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
+      console.log('[Conductor] Error data:', errorData);
       return { error: errorData.error || `HTTP ${response.status}` };
     }
 
     const data = await response.json();
     return { data };
   } catch (error) {
-    console.error('Conductor API error:', error);
-    return { error: 'Network error' };
+    console.error('[Conductor] Fetch error:', error);
+    return { error: `Network error: ${error instanceof Error ? error.message : 'Unknown'}` };
   }
 }
 
