@@ -9,7 +9,7 @@ const navItems = [
   { href: '/jobs', label: 'Dashboard', icon: '📊' },
   { href: '/jobs/all', label: 'All Jobs', icon: '💼' },
   { href: '/jobs/profile', label: 'Profile', icon: '👤' },
-  // Phase 2+: Applications, Sources, Settings
+  { href: '/jobs/settings', label: 'Settings', icon: '⚙️' },
 ];
 
 export default function JobsNav() {
