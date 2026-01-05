@@ -27,9 +27,8 @@ async function conductorFetch<T>(
 ): Promise<ConductorResponse<T>> {
   const url = `${CONDUCTOR_API_URL}${endpoint}`;
 
-  const headers: HeadersInit = {
+  const headers: Record<string, string> = {
     'Content-Type': 'application/json',
-    ...options.headers,
   };
 
   if (sessionToken) {
