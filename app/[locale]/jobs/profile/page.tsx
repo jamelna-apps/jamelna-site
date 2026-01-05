@@ -22,9 +22,13 @@ function ProfileContent() {
     if (!sessionToken) return;
 
     setLoading(true);
+    setMessage(null);
     const result = await getProfile(sessionToken);
     if (result.data) {
       setProfile(result.data);
+    } else if (result.error) {
+      console.error('Profile load error:', result.error);
+      setMessage({ type: 'error', text: `Failed to load profile: ${result.error}` });
     }
     setLoading(false);
   }, [sessionToken]);
@@ -102,7 +106,22 @@ function ProfileContent() {
   if (!profile) {
     return (
       <div className="text-center py-12">
-        <p className="text-[#636366]">No profile found. Creating one...</p>
+        {message ? (
+          <div
+            className="p-4 rounded-md max-w-md mx-auto"
+            style={{ background: 'rgba(220, 38, 38, 0.15)', color: '#f87171' }}
+          >
+            {message.text}
+            <button
+              onClick={loadProfile}
+              className="block mx-auto mt-4 px-4 py-2 bg-[#00a8ff] text-white rounded"
+            >
+              Retry
+            </button>
+          </div>
+        ) : (
+          <p className="text-[#636366]">Loading profile...</p>
+        )}
       </div>
     );
   }
