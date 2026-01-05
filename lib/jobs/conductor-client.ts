@@ -4,8 +4,6 @@ import type {
   JobProfile,
   Job,
   Application,
-  MatchResult,
-  ExtractedJob,
   JobSettings
 } from './types';
 
@@ -109,18 +107,6 @@ export async function deleteJob(
   return conductorFetch<{ success: boolean }>(
     `/api/jobs/${jobId}`,
     { method: 'DELETE' },
-    sessionToken
-  );
-}
-
-// Match scoring
-export async function scoreJob(
-  sessionToken: string,
-  jobId: string
-): Promise<ConductorResponse<MatchResult>> {
-  return conductorFetch<MatchResult>(
-    '/api/jobs/match',
-    { method: 'POST', body: JSON.stringify({ jobId }) },
     sessionToken
   );
 }

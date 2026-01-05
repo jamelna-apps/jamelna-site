@@ -140,11 +140,11 @@ function DashboardContent() {
           <p className="text-sm text-gray-500">Improve your match accuracy</p>
         </Link>
         <Link
-          href={`/${locale}/jobs/applications`}
+          href={`/${locale}/jobs/all?status=applied`}
           className="p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors"
         >
           <h3 className="font-medium text-gray-900">Track Applications</h3>
-          <p className="text-sm text-gray-500">Manage your pipeline</p>
+          <p className="text-sm text-gray-500">View applied jobs</p>
         </Link>
       </div>
 
