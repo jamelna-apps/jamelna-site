@@ -2,12 +2,20 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
 const Footer = () => {
+  const pathname = usePathname();
   const locale = useLocale();
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
+
+  // Don't render footer on jobs section - it has its own layout
+  const isJobsSection = pathname?.includes('/jobs');
+  if (isJobsSection) {
+    return null;
+  }
 
   return (
     <footer className="bg-deep-footer border-t border-deep-border">

@@ -18,6 +18,9 @@ const Navigation = () => {
   // Check if we're on the homepage
   const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
 
+  // Check if we're on the jobs section (has its own navigation)
+  const isJobsSection = pathname?.includes('/jobs');
+
   const languages = [
     { code: 'en', label: 'English', flag: '🇬🇧' },
     { code: 'es', label: 'Español', flag: '🇪🇸' },
@@ -106,6 +109,11 @@ const Navigation = () => {
   // Don't render nav on homepage until scrolled, but show menu button
   // Also show nav when mobile menu is open
   const shouldShowNav = !isHomePage || isVisible || isMenuOpen;
+
+  // Don't render main nav on jobs section - it has its own navigation
+  if (isJobsSection) {
+    return null;
+  }
 
   return (
     <>
