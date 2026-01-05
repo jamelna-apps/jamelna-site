@@ -34,11 +34,12 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'", // Next.js requires unsafe-eval and unsafe-inline
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com https://*.firebaseapp.com", // Next.js + Firebase Auth
               "style-src 'self' 'unsafe-inline'", // Tailwind requires unsafe-inline
               "img-src 'self' data: https:",
               "font-src 'self' data:",
-              "connect-src 'self'",
+              "connect-src 'self' https://*.googleapis.com https://*.firebaseapp.com https://conductor-jamelna-apps.vercel.app", // Firebase + Conductor API
+              "frame-src https://accounts.google.com https://*.firebaseapp.com", // Google OAuth popup
               "frame-ancestors 'none'",
             ].join('; '),
           },
