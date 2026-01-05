@@ -108,20 +108,30 @@ function ProfileContent() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl space-y-8">
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-2xl font-bold text-white">Your Profile</h1>
-          <p className="text-[#D1D1D6]">This information powers job matching and cover letter generation</p>
-        </div>
+    <div className="max-w-3xl space-y-8">
+      <div>
+        <h1 className="text-2xl font-bold text-white">Your Profile</h1>
+        <p className="text-[#D1D1D6]">This information powers job matching and cover letter generation</p>
+      </div>
+
+      {/* Import Section - Prominent */}
+      <section className="glass-card p-6" style={{ background: 'rgba(0, 168, 255, 0.1)', border: '1px solid rgba(0, 168, 255, 0.3)' }}>
+        <h2 className="font-semibold text-white mb-2">Import Your Profile</h2>
+        <p className="text-[#D1D1D6] text-sm mb-4">
+          Quickly populate your profile by importing from your resume, LinkedIn, or website.
+        </p>
         <button
           type="button"
           onClick={() => setShowImportWizard(true)}
-          className="btn-warm"
+          className="px-6 py-3 rounded-lg font-medium text-white transition-all"
+          style={{
+            background: 'linear-gradient(135deg, #00a8ff 0%, #0070cc 100%)',
+            boxShadow: '0 4px 14px rgba(0, 168, 255, 0.4)'
+          }}
         >
-          Import Profile
+          Upload Resume / Add LinkedIn
         </button>
-      </div>
+      </section>
 
       {message && (
         <div
@@ -135,6 +145,7 @@ function ProfileContent() {
         </div>
       )}
 
+      <form onSubmit={handleSubmit} className="space-y-8">
       {/* Basic Info */}
       <section className="glass-card p-6 space-y-4">
         <h2 className="font-semibold text-white">Basic Information</h2>
@@ -308,11 +319,16 @@ function ProfileContent() {
         <button
           type="submit"
           disabled={saving}
-          className="btn-warm disabled:opacity-50"
+          className="px-6 py-3 rounded-lg font-medium text-white transition-all disabled:opacity-50"
+          style={{
+            background: 'linear-gradient(135deg, #C9704D 0%, #a85a3a 100%)',
+            boxShadow: '0 4px 14px rgba(201, 112, 77, 0.4)'
+          }}
         >
           {saving ? 'Saving...' : 'Save Profile'}
         </button>
       </div>
+      </form>
 
       <ImportProfileWizard
         isOpen={showImportWizard}
@@ -320,7 +336,7 @@ function ProfileContent() {
         onImportComplete={handleImportComplete}
         sessionToken={sessionToken!}
       />
-    </form>
+    </div>
   );
 }
 
