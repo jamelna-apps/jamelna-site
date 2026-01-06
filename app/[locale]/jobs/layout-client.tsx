@@ -4,6 +4,7 @@
 import { ReactNode } from 'react';
 import { JobsAuthProvider, useJobsAuth } from '@/lib/jobs/auth-context';
 import JobsNav from '@/components/jobs/JobsNav';
+import ChatWidget from '@/components/jobs/ChatWidget';
 
 function LayoutContent({ children }: { children: ReactNode }) {
   const { user, loading } = useJobsAuth();
@@ -17,6 +18,7 @@ function LayoutContent({ children }: { children: ReactNode }) {
       <main className={showNav ? "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" : ""}>
         {children}
       </main>
+      <ChatWidget />
     </div>
   );
 }
