@@ -101,9 +101,8 @@ export async function importProfile(
   }
 
   if (data.websiteUrls && data.websiteUrls.length > 0) {
-    data.websiteUrls.forEach((url, index) => {
-      formData.append(`websiteUrls[${index}]`, url);
-    });
+    // Backend expects JSON string, not indexed fields
+    formData.append('websiteUrls', JSON.stringify(data.websiteUrls));
   }
 
   try {
