@@ -167,6 +167,21 @@ export interface CompanyResearch {
   fromCache?: boolean;
 }
 
+export type InsightType = 'application_deadline' | 'interview_upcoming' | 'offer_response_due' | 'follow_up_due';
+export type InsightPriority = 'urgent' | 'high' | 'medium';
+
+export interface JobInsight {
+  id: string;
+  type: InsightType;
+  priority: InsightPriority;
+  title: string;
+  description: string;
+  jobId: string;
+  dueDate: string;
+  dismissed: boolean;
+  createdAt: string;
+}
+
 export interface JobSettings {
   digestTime: string;
   digestEmail: string;
