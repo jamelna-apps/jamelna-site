@@ -7,7 +7,9 @@ import type {
   JobSettings,
   ScanResult,
   DiscoveredJob,
-  DiscoveredJobStatus
+  DiscoveredJobStatus,
+  Resume,
+  TailoredResume
 } from './types';
 
 const CONDUCTOR_API_URL = process.env.CONDUCTOR_API_URL || process.env.NEXT_PUBLIC_CONDUCTOR_API_URL;
@@ -259,6 +261,90 @@ export async function updateJobStatus(
   return conductorFetch<void>(
     `/api/jobs/discovered/${jobId}`,
     { method: 'PATCH', body: JSON.stringify({ status }) },
+    sessionToken
+  );
+}
+
+// Resume operations
+export async function getResumes(sessionToken: string): Promise<ConductorResponse<Resume[]>> {
+  return conductorFetch<Resume[]>('/api/jobs/resumes', { method: 'GET' }, sessionToken);
+}
+
+export async function getResume(sessionToken: string, resumeId: string): Promise<ConductorResponse<Resume>> {
+  return conductorFetch<Resume>(`/api/jobs/resumes/${resumeId}`, { method: 'GET' }, sessionToken);
+}
+
+export async function createResume(
+  sessionToken: string,
+  resume: Omit<Resume, 'id' | 'userId' | 'createdAt' | 'updatedAt'>
+): Promise<ConductorResponse<Resume>> {
+  return conductorFetch<Resume>(
+    '/api/jobs/resumes',
+    { method: 'POST', body: JSON.stringify(resume) },
+    sessionToken
+  );
+}
+
+export async function updateResume(
+  sessionToken: string,
+  resumeId: string,
+  updates: Partial<Resume>
+): Promise<ConductorResponse<Resume>> {
+  return conductorFetch<Resume>(
+    `/api/jobs/resumes/${resumeId}`,
+    { method: 'PUT', body: JSON.stringify(updates) },
+    sessionToken
+  );
+}
+
+export async function deleteResume(
+  sessionToken: string,
+  resumeId: string
+): Promise<ConductorResponse<{ success: boolean }>> {
+  return conductorFetch<{ success: boolean }>(
+    `/api/jobs/resumes/${resumeId}`,
+    { method: 'DELETE' },
+    sessionToken
+  );
+}
+
+export async function uploadResumePdf(
+  sessionToken: string,
+  file: File,
+  name: string
+): Promise<ConductorResponse<Resume>> {
+  const url = `${CONDUCTOR_API_URL}/api/jobs/resumes/upload`;
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('name', name);
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${sessionToken}` },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      return { error: errorData.error || `HTTP ${response.status}` };
+    }
+
+    const data = await response.json();
+    return { data };
+  } catch (error) {
+    return { error: `Network error: ${error instanceof Error ? error.message : 'Unknown'}` };
+  }
+}
+
+export async function tailorResume(
+  sessionToken: string,
+  baseResumeId: string,
+  jobId: string
+): Promise<ConductorResponse<TailoredResume>> {
+  return conductorFetch<TailoredResume>(
+    '/api/jobs/tailor-resume',
+    { method: 'POST', body: JSON.stringify({ baseResumeId, jobId }) },
     sessionToken
   );
 }
