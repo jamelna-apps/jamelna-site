@@ -83,6 +83,12 @@ export interface Job {
   lastActivity: string;
   createdAt: string;
   updatedAt: string;
+  // Calendar integration fields
+  interviewDate?: string;
+  interviewCalendarEventId?: string;
+  applicationDeadline?: string;
+  deadlineCalendarEventId?: string;
+  lastInterviewDate?: string;
 }
 
 export interface Application {
