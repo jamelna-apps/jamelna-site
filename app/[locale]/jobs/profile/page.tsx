@@ -7,6 +7,7 @@ import { useJobsAuth } from '@/lib/jobs/auth-context';
 import { getProfile, updateProfile } from '@/lib/jobs/conductor-client';
 import type { JobProfile } from '@/lib/jobs/types';
 import ImportProfileWizard from '@/components/jobs/ImportProfileWizard';
+import ResumeLibrary from '@/components/jobs/ResumeLibrary';
 
 const inputStyle = { background: 'rgba(56, 56, 58, 0.5)', border: '1px solid rgba(56, 56, 58, 0.8)' };
 
@@ -150,6 +151,11 @@ function ProfileContent() {
         >
           Upload Resume / Add LinkedIn
         </button>
+      </section>
+
+      {/* Resume Library Section */}
+      <section className="glass-card p-6">
+        <ResumeLibrary />
       </section>
 
       {message && (
