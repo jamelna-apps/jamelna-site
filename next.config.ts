@@ -38,7 +38,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline'", // Tailwind requires unsafe-inline
               "img-src 'self' data: https:",
               "font-src 'self' data:",
-              "connect-src 'self' https://*.googleapis.com https://*.firebaseapp.com https://conductor-jamelna-apps.vercel.app", // Firebase + Conductor API
+              "connect-src 'self' https://*.googleapis.com https://*.firebaseapp.com https://conductor.jamelna.com", // Firebase + Conductor API
               "frame-src https://accounts.google.com https://*.firebaseapp.com", // Google OAuth popup
               "frame-ancestors 'none'",
             ].join('; '),
