@@ -9,7 +9,8 @@ import type {
   DiscoveredJob,
   DiscoveredJobStatus,
   Resume,
-  TailoredResume
+  TailoredResume,
+  CompanyResearch
 } from './types';
 
 const CONDUCTOR_API_URL = process.env.CONDUCTOR_API_URL || process.env.NEXT_PUBLIC_CONDUCTOR_API_URL;
@@ -345,6 +346,19 @@ export async function tailorResume(
   return conductorFetch<TailoredResume>(
     '/api/jobs/tailor-resume',
     { method: 'POST', body: JSON.stringify({ baseResumeId, jobId }) },
+    sessionToken
+  );
+}
+
+// Company research
+export async function researchCompany(
+  sessionToken: string,
+  company: string,
+  jobId?: string
+): Promise<ConductorResponse<CompanyResearch>> {
+  return conductorFetch<CompanyResearch>(
+    '/api/jobs/research',
+    { method: 'POST', body: JSON.stringify({ company, jobId }) },
     sessionToken
   );
 }

@@ -151,6 +151,22 @@ export interface TailoredResume {
   createdAt: string;
 }
 
+export interface CompanyResearch {
+  id: string;
+  companyName: string;
+  research: {
+    overview: string;
+    salary: string | null;
+    culture: string | null;
+    interviews: string | null;
+  };
+  sources: Array<{ url: string; title: string }>;
+  linkedJobIds: string[];
+  createdAt: string;
+  updatedAt: string;
+  fromCache?: boolean;
+}
+
 export interface JobSettings {
   digestTime: string;
   digestEmail: string;
