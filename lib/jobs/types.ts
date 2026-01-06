@@ -114,6 +114,43 @@ export interface Application {
   updatedAt: string;
 }
 
+export interface Resume {
+  id: string;
+  userId: string;
+  name: string;
+  content: {
+    summary: string;
+    experience: Array<{
+      title: string;
+      company: string;
+      startDate: string;
+      endDate?: string;
+      highlights: string[];
+    }>;
+    education: Array<{
+      degree: string;
+      institution: string;
+      year: number;
+    }>;
+    skills: string[];
+  };
+  pdfUrl?: string;
+  isDefault: boolean;
+  sourceType: 'uploaded' | 'generated' | 'tailored';
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface TailoredResume {
+  id: string;
+  baseResumeId: string;
+  jobId: string;
+  content: Resume['content'];
+  pdfUrl?: string;
+  changes: string[];
+  createdAt: string;
+}
+
 export interface JobSettings {
   digestTime: string;
   digestEmail: string;
