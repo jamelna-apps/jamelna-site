@@ -398,8 +398,11 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 };
 
 // Lesson Card Component
-const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => (
-  <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6 hover:border-violet-500/30 transition-colors">
+const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: number; projectId: string }) => (
+  <div
+    id={`${projectId}-lesson-${index + 1}`}
+    className="bg-zinc-800 border border-zinc-700 rounded-lg p-6 hover:border-violet-500/30 transition-colors scroll-mt-24"
+  >
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0 w-10 h-10 bg-secret text-white rounded-full flex items-center justify-center font-bold">
         {index + 1}
@@ -622,7 +625,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <h4 className="text-lg font-semibold text-white mb-4">Lesson Plans</h4>
             <div className="space-y-4">
               {project.lessons.map((lesson, i) => (
-                <LessonCard key={i} lesson={lesson} index={i} />
+                <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />
               ))}
             </div>
           </div>

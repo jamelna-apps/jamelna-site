@@ -202,10 +202,10 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 };
 
 // Lesson Card Component
-const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => {
+const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: number; projectId: string }) => {
   const [expanded, setExpanded] = React.useState(false);
   return (
-    <div className="bg-zinc-800 border border-zinc-700 rounded-lg overflow-hidden">
+    <div id={`${projectId}-lesson-${index + 1}`} className="bg-zinc-800 border border-zinc-700 rounded-lg overflow-hidden scroll-mt-24">
       <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-zinc-700 transition-colors">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-rose-500/20 rounded-lg flex items-center justify-center text-rose-400 font-bold text-sm">{index + 1}</div>
@@ -273,7 +273,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           <div className="bg-zinc-950 rounded-lg p-4"><h5 className="font-medium text-rose-300 mb-2">Required Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.materials.required.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
           <div className="bg-zinc-950 rounded-lg p-4"><h5 className="font-medium text-rose-300 mb-2">Optional Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.materials.optional.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
         </div>
-        <div><h4 className="font-semibold text-white mb-3">Lessons</h4><div className="space-y-3">{project.lessons.map((lesson, i) => <LessonCard key={i} lesson={lesson} index={i} />)}</div></div>
+        <div><h4 className="font-semibold text-white mb-3">Lessons</h4><div className="space-y-3">{project.lessons.map((lesson, i) => <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />)}</div></div>
         <div className="bg-zinc-950 rounded-lg p-4"><h4 className="font-semibold text-white mb-3">Assessment</h4><div className="grid md:grid-cols-2 gap-4"><div><h5 className="font-medium text-rose-300 mb-2">Formative Assessment</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.assessment.formative.map((a, i) => <li key={i}>{a}</li>)}</ul></div><div><h5 className="font-medium text-rose-300 mb-2">Summative Assessment</h5><p className="text-sm text-zinc-400">{project.assessment.summative}</p></div></div></div>
         <div><h4 className="font-semibold text-white mb-3">Real-World Connections</h4><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}</ul></div>
       </div>

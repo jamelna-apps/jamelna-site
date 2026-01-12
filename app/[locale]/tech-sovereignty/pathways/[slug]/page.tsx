@@ -9,6 +9,7 @@ import {
   getPathwayProgress,
   toggleStepCompletion,
   getCompletedCount,
+  trackRefToUrl,
 } from '@/lib/sovereignty-progress';
 import { notFound } from 'next/navigation';
 
@@ -69,11 +70,13 @@ interface StepCardProps {
   isCompleted: boolean;
   onToggle: () => void;
   color: keyof typeof colorClasses;
+  locale: string;
 }
 
-function StepCard({ step, index, isCompleted, onToggle, color }: StepCardProps) {
+function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCardProps) {
   const colors = colorClasses[color];
   const typeInfo = typeLabels[step.type];
+  const lessonInfo = trackRefToUrl(step.trackRef, locale);
 
   return (
     <div
@@ -113,6 +116,22 @@ function StepCard({ step, index, isCompleted, onToggle, color }: StepCardProps) 
         </div>
 
         <p className="text-zinc-400 text-sm mb-4">{step.description}</p>
+
+        {/* Lesson Link */}
+        {lessonInfo && (
+          <Link
+            href={lessonInfo.url}
+            className={`inline-flex items-center gap-2 text-sm ${colors.text} hover:underline mb-4`}
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            Go to {lessonInfo.trackName} - Project {lessonInfo.projectId.replace('project-', '')}, Lesson {lessonInfo.lessonNum}
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </Link>
+        )}
 
         {/* Checkpoint */}
         <div className={`bg-zinc-900/50 rounded-lg p-4 border ${isCompleted ? colors.border : 'border-zinc-700'}`}>
@@ -268,6 +287,7 @@ export default function PathwayPage() {
                   isCompleted={completedSteps.includes(step.id)}
                   onToggle={() => handleToggle(step.id)}
                   color={pathway.color}
+                  locale={locale}
                 />
               ))}
             </div>

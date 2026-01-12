@@ -274,11 +274,14 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 };
 
 // Lesson Card Component
-const LessonCard = ({ lesson, index }: { lesson: Lesson; index: number }) => {
+const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: number; projectId: string }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <div className="bg-zinc-800 border border-zinc-700 rounded-lg overflow-hidden">
+    <div
+      id={`${projectId}-lesson-${index + 1}`}
+      className="bg-zinc-800 border border-zinc-700 rounded-lg overflow-hidden scroll-mt-24"
+    >
       <button
         onClick={() => setExpanded(!expanded)}
         className="w-full p-4 flex items-center justify-between text-left hover:bg-zinc-700 transition-colors"
@@ -435,7 +438,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <h4 className="font-semibold text-white mb-3">Lessons</h4>
             <div className="space-y-3">
               {project.lessons.map((lesson, i) => (
-                <LessonCard key={i} lesson={lesson} index={i} />
+                <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />
               ))}
             </div>
           </div>

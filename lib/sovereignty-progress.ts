@@ -127,3 +127,47 @@ export function usePathwayProgress(pathwaySlug: string) {
     count: () => getCompletedCount(pathwaySlug),
   };
 }
+
+// Track reference to URL mapping
+// trackRef format: "track.project#.lesson#" e.g., "networking.project1.lesson1"
+export function trackRefToUrl(trackRef: string, locale: string): { url: string; trackName: string; projectId: string; lessonNum: number } | null {
+  const parts = trackRef.split('.');
+  if (parts.length < 2) return null;
+
+  const track = parts[0];
+  const projectPart = parts[1]; // e.g., "project1"
+  const lessonPart = parts[2]; // e.g., "lesson1"
+
+  // Extract project number and convert to project ID format
+  const projectMatch = projectPart.match(/project(\d+)/);
+  if (!projectMatch) return null;
+
+  const projectNum = parseInt(projectMatch[1], 10);
+  const projectId = `project-${projectNum}`;
+
+  // Extract lesson number (1-indexed)
+  const lessonNum = lessonPart ? parseInt(lessonPart.replace('lesson', ''), 10) : 1;
+
+  // Build URL with lesson anchor (includes project ID for uniqueness)
+  // Format: project-1-lesson-1
+  const anchor = lessonPart ? `${projectId}-lesson-${lessonNum}` : projectId;
+  const url = `/${locale}/tech-sovereignty/${track}#${anchor}`;
+
+  // Track display names
+  const trackNames: Record<string, string> = {
+    networking: 'Networking',
+    'self-hosted': 'Self-Hosted',
+    'ai-llm': 'AI/LLM',
+    'app-dev': 'App Dev',
+    'linux-foss': 'Linux/FOSS',
+    'digital-rights': 'Digital Rights',
+    community: 'Community',
+  };
+
+  return {
+    url,
+    trackName: trackNames[track] || track,
+    projectId,
+    lessonNum,
+  };
+}
