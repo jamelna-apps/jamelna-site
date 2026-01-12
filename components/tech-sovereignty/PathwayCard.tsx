@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
 
 export interface PathwayCardProps {
   slug: string;
@@ -79,14 +78,13 @@ export function PathwayCard({
   icon,
   locale,
 }: PathwayCardProps) {
-  const router = useRouter();
   const colors = colorClasses[color];
   const progressPercent = totalCheckpoints > 0 ? (completedCheckpoints / totalCheckpoints) * 100 : 0;
   const hasStarted = completedCheckpoints > 0;
   const href = `/${locale}/tech-sovereignty/pathways/${slug}`;
 
   const handleClick = () => {
-    router.push(href);
+    window.location.href = href;
   };
 
   return (
