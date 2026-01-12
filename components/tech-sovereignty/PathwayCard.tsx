@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export interface PathwayCardProps {
   slug: string;
@@ -79,14 +79,22 @@ export function PathwayCard({
   icon,
   locale,
 }: PathwayCardProps) {
+  const router = useRouter();
   const colors = colorClasses[color];
   const progressPercent = totalCheckpoints > 0 ? (completedCheckpoints / totalCheckpoints) * 100 : 0;
   const hasStarted = completedCheckpoints > 0;
 
+  const handleClick = () => {
+    router.push(`/${locale}/tech-sovereignty/pathways/${slug}`);
+  };
+
   return (
-    <Link
-      href={`/${locale}/tech-sovereignty/pathways/${slug}`}
-      className={`block bg-zinc-800 border ${colors.border} rounded-xl p-6 transition-all hover:shadow-lg group`}
+    <div
+      onClick={handleClick}
+      role="link"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && handleClick()}
+      className={`block bg-zinc-800 border ${colors.border} rounded-xl p-6 transition-all hover:shadow-lg group cursor-pointer`}
     >
       {/* Header */}
       <div className="flex items-start gap-4 mb-4">
@@ -162,7 +170,7 @@ export function PathwayCard({
           </svg>
         </span>
       </div>
-    </Link>
+    </div>
   );
 }
 
