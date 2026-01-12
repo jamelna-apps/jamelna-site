@@ -624,6 +624,172 @@
         "description": "We're building a network of communities committed to tech sovereignty. Get in touch to be part of the founding cohort.",
         "button": "Get in Touch"
       }
+    },
+    "modeSelector": {
+      "title": "How would you like to learn?",
+      "educator": {
+        "title": "I'm Teaching",
+        "description": "Access structured curriculum with lesson plans, assessments, and materials designed for classroom use.",
+        "feature1": "UDL-aligned lesson plans",
+        "feature2": "Grade band organization",
+        "feature3": "Assessment resources"
+      },
+      "learner": {
+        "title": "I'm Learning",
+        "description": "Follow goal-based pathways with clear outcomes. Track your progress with checkpoints as you build real skills.",
+        "feature1": "Goal-oriented paths",
+        "feature2": "Hands-on projects",
+        "feature3": "Progress tracking"
+      }
+    },
+    "pathways": {
+      "title": "Learning Pathways",
+      "subtitle": "Goal-oriented paths to tech independence. Choose what you want to achieve and follow a structured journey to get there.",
+      "backToSovereignty": "Back to Tech Sovereignty",
+      "allPathways": "All Pathways",
+      "progress": "{completed} of {total} checkpoints",
+      "completed": "Completed!",
+      "nextStep": "Next: Step {step}",
+      "yourJourney": "Your Journey",
+      "whatYouWillAchieve": "What you'll achieve",
+      "howItWorks": {
+        "title": "How Pathways Work",
+        "step1": {
+          "title": "Choose Your Goal",
+          "description": "Select a pathway based on what you want to achieve. Each has a clear outcome."
+        },
+        "step2": {
+          "title": "Follow the Steps",
+          "description": "Work through lessons and projects at your own pace. Each step builds on the last."
+        },
+        "step3": {
+          "title": "Mark Your Progress",
+          "description": "Complete checkpoints to verify you've actually done the work. Your progress is saved locally."
+        }
+      },
+      "preferCurriculum": {
+        "title": "Prefer Structured Curriculum?",
+        "description": "If you're an educator or prefer to browse by topic, check out our full curriculum with lesson plans and assessments.",
+        "cta": "View Full Curriculum"
+      },
+      "completion": {
+        "title": "Pathway Complete!",
+        "message": "Congratulations! You've completed all checkpoints in this pathway.",
+        "exploreMore": "Explore More Pathways",
+        "browseCurriculum": "Browse Full Curriculum"
+      },
+      "stepTypes": {
+        "quickWin": "Quick Win",
+        "lesson": "Lesson",
+        "project": "Project"
+      },
+      "checkpoint": "Checkpoint",
+      "secureNetwork": {
+        "title": "Secure My Home Network",
+        "description": "Take control of your home network security and privacy",
+        "longDescription": "Learn to understand, secure, and optimize your home network. By the end, you'll have a network you fully understand and control.",
+        "outcome": "A secured home network with DNS filtering, device monitoring, and privacy protections"
+      },
+      "ownYourData": {
+        "title": "Own Your Data",
+        "description": "Replace cloud services with self-hosted alternatives you control",
+        "longDescription": "Break free from Google Drive, Dropbox, and other cloud services. Host your own files, photos, and documents on hardware you own.",
+        "outcome": "Your own cloud storage running on your hardware, accessible from anywhere"
+      },
+      "stopTracking": {
+        "title": "Stop Tracking Me",
+        "description": "Block trackers, protect your privacy, and take back control",
+        "longDescription": "Understand how companies track you online and implement practical solutions to protect your privacy across all your devices.",
+        "outcome": "Network-wide ad blocking, browser privacy, and reduced digital footprint"
+      }
+    },
+    "quickWins": {
+      "title": "Quick Wins",
+      "subtitle": "Get a taste of tech sovereignty with these starter projects. Each one gives you immediate, tangible results.",
+      "badge": "30-45 minutes each",
+      "startNow": "Start Now"
+    },
+    "trackMap": {
+      "title": "Learning Map",
+      "subtitle": "See how all the tracks connect and find your path to tech independence. Click any track to explore its curriculum, or select a suggested path to see the recommended sequence.",
+      "sequences": {
+        "title": "Suggested Learning Sequences",
+        "sovereignty": {
+          "title": "Full Sovereignty",
+          "description": "The complete journey from understanding your rights to running your own infrastructure."
+        },
+        "developer": {
+          "title": "Developer Path",
+          "description": "Focus on building applications that serve communities and reflect shared values."
+        },
+        "aiPath": {
+          "title": "AI Independence",
+          "description": "Run powerful AI models locally without sending your data to corporate clouds."
+        }
+      },
+      "legend": {
+        "recommended": "Recommended",
+        "optional": "Optional"
+      },
+      "startHere": "Start with Digital Rights",
+      "allTracks": "All Tracks",
+      "readyToStart": "Ready to Start?",
+      "choosePathway": "Choose a goal-based pathway for guided learning, or dive into any track that interests you."
+    },
+    "educatorHub": {
+      "title": "Educator Resources by Grade Band",
+      "subtitle": "Access UDL-aligned lesson plans organized by grade level. Each lesson includes learning objectives, materials, and optional assessments.",
+      "allGrades": "All Grades",
+      "gradeBands": {
+        "elementary": {
+          "label": "Elementary",
+          "ageRange": "K-5 (Ages 5-11)",
+          "description": "Foundational concepts through exploration and play"
+        },
+        "middle": {
+          "label": "Middle School",
+          "ageRange": "6-8 (Ages 11-14)",
+          "description": "Hands-on projects building technical foundations"
+        },
+        "high": {
+          "label": "High School",
+          "ageRange": "9-12 (Ages 14-18)",
+          "description": "Advanced projects with real-world applications"
+        }
+      },
+      "lessons": "lessons",
+      "assessment": "Assessment",
+      "udl": {
+        "title": "Universal Design for Learning (UDL)",
+        "description": "All lessons are designed with UDL principles: multiple means of engagement, representation, and action/expression. Each includes adaptations for diverse learners.",
+        "features": {
+          "entryPoints": "Multiple entry points",
+          "assessment": "Flexible assessment",
+          "scaffolded": "Scaffolded support",
+          "responsive": "Culturally responsive"
+        }
+      },
+      "downloads": {
+        "scopeSequence": {
+          "title": "Scope & Sequence",
+          "description": "Full curriculum overview PDF"
+        },
+        "rubrics": {
+          "title": "Assessment Rubrics",
+          "description": "Standards-aligned rubrics"
+        },
+        "materials": {
+          "title": "Materials List",
+          "description": "Hardware & software needs"
+        }
+      }
+    },
+    "crossLinks": {
+      "title": "Learning Connections",
+      "partOfPathways": "Part of these pathways",
+      "prerequisites": "Recommended Prerequisites",
+      "continueWith": "Continue Learning",
+      "viewMap": "View learning map"
     }
   },
   "k12CSEducation": {

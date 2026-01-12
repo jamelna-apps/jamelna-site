@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
+import { PathwayCrossLinks } from '@/components/tech-sovereignty/PathwayCrossLinks';
 
 // Core Pedagogical Principle Component
 const CorePrinciple = () => (
@@ -7716,6 +7717,11 @@ export default function NetworkingCurriculum() {
           </div>
         </div>
       </section>
+
+      {/* Learning Connections */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <PathwayCrossLinks currentTrack="networking" locale={locale} />
+      </div>
 
       {/* Track Overview */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

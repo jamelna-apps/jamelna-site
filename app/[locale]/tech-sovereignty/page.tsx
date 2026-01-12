@@ -1,9 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
+import { ModeSelector } from '@/components/tech-sovereignty/ModeSelector';
+import { PathwayCard } from '@/components/tech-sovereignty/PathwayCard';
+import { QuickWinCard } from '@/components/tech-sovereignty/QuickWinCard';
+import { EducatorHub } from '@/components/tech-sovereignty/EducatorHub';
+import { getAllPathways } from '@/data/pathways';
+import { quickWins } from '@/data/quick-wins';
+import { getCompletedCount } from '@/lib/sovereignty-progress';
 
 // Project Card Component
 interface Project {
@@ -152,6 +159,34 @@ function TrackSection({ icon, title, description, projects, color, trackLink, tr
 export default function TechSovereigntyPage() {
   const t = useTranslations('techSovereignty');
   const locale = useLocale();
+  const [selectedMode, setSelectedMode] = useState<'educator' | 'learner' | null>(null);
+  const [pathwayProgress, setPathwayProgress] = useState<Record<string, number>>({});
+  const curriculumRef = useRef<HTMLDivElement>(null);
+  const pathwaysRef = useRef<HTMLDivElement>(null);
+
+  // Load progress from localStorage on mount
+  useEffect(() => {
+    const pathways = getAllPathways();
+    const progress: Record<string, number> = {};
+    pathways.forEach((pathway) => {
+      progress[pathway.slug] = getCompletedCount(pathway.slug);
+    });
+    setPathwayProgress(progress);
+  }, []);
+
+  const handleModeSelect = (mode: 'educator' | 'learner') => {
+    setSelectedMode(mode);
+    // Smooth scroll to the appropriate section
+    setTimeout(() => {
+      if (mode === 'educator' && curriculumRef.current) {
+        curriculumRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (mode === 'learner' && pathwaysRef.current) {
+        pathwaysRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
+  const pathways = getAllPathways();
 
   // Track data
   const networkingProjects: Project[] = [
@@ -321,12 +356,177 @@ export default function TechSovereigntyPage() {
         </div>
       </section>
 
-      {/* Project Roadmap / Curriculum */}
-      <section id="curriculum" className="py-20 px-4 bg-zinc-900">
+      {/* Mode Selector - Start Here */}
+      <section id="start" className="py-16 px-4 bg-zinc-900 border-t border-zinc-800">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-            {t('curriculum.title')}
-          </h2>
+          <ModeSelector onSelect={handleModeSelect} />
+        </div>
+      </section>
+
+      {/* Quick Wins Section */}
+      <section id="quick-wins" className="py-16 px-4 bg-zinc-950">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-block bg-green-500/20 text-green-300 text-xs px-3 py-1 rounded-full font-medium mb-4">
+              30-45 minutes each
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Quick Wins
+            </h2>
+            <p className="text-lg text-zinc-300 max-w-2xl mx-auto">
+              Get a taste of tech sovereignty with these starter projects. Each one gives you immediate, tangible results.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {quickWins.slice(0, 6).map((qw) => {
+              const colorMap: Record<string, 'sky' | 'violet' | 'amber' | 'green' | 'orange' | 'rose'> = {
+                networking: 'sky',
+                'self-hosted': 'violet',
+                'ai-llm': 'orange',
+                'digital-rights': 'amber',
+                'linux-foss': 'green',
+                community: 'rose',
+                'app-dev': 'sky',
+              };
+              const iconMap: Record<string, React.ReactNode> = {
+                networking: (
+                  <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                ),
+                'self-hosted': (
+                  <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  </svg>
+                ),
+                'ai-llm': (
+                  <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                ),
+                'digital-rights': (
+                  <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                ),
+                'linux-foss': (
+                  <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                ),
+                community: (
+                  <svg className="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                ),
+              };
+
+              return (
+                <QuickWinCard
+                  key={qw.id}
+                  quickWin={{
+                    ...qw,
+                    link: `/${locale}${qw.link}`,
+                  }}
+                  color={colorMap[qw.track] || 'sky'}
+                  icon={iconMap[qw.track]}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Pathways Section - For Self-Learners */}
+      <section
+        ref={pathwaysRef}
+        id="pathways"
+        className={`py-20 px-4 bg-zinc-950 transition-all duration-500 ${
+          selectedMode === 'learner' ? 'ring-2 ring-sky-500/30 ring-inset' : ''
+        }`}
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Goal-Based Learning Paths
+            </h2>
+            {selectedMode === 'learner' && (
+              <span className="bg-sky-500/20 text-sky-300 text-xs px-3 py-1 rounded-full font-medium">
+                Recommended for you
+              </span>
+            )}
+          </div>
+          <p className="text-lg text-zinc-300 max-w-3xl mb-12">
+            Choose a goal and follow a structured path to achieve it. Each pathway includes hands-on checkpoints to verify your progress.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {pathways.map((pathway) => (
+              <PathwayCard
+                key={pathway.slug}
+                slug={pathway.slug}
+                title={pathway.title}
+                description={pathway.description}
+                outcome={pathway.outcome}
+                timeEstimate={pathway.timeEstimate}
+                tracks={pathway.tracks}
+                totalCheckpoints={pathway.steps.length}
+                completedCheckpoints={pathwayProgress[pathway.slug] || 0}
+                color={pathway.color}
+                locale={locale}
+                icon={
+                  pathway.slug === 'secure-network' ? (
+                    <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  ) : pathway.slug === 'own-your-data' ? (
+                    <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                    </svg>
+                  ) : (
+                    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                    </svg>
+                  )
+                }
+              />
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href={`/${locale}/tech-sovereignty/pathways`}
+              className="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-medium transition-colors"
+            >
+              View all pathways
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Roadmap / Curriculum - For Educators */}
+      <section
+        ref={curriculumRef}
+        id="curriculum"
+        className={`py-20 px-4 bg-zinc-900 transition-all duration-500 ${
+          selectedMode === 'educator' ? 'ring-2 ring-violet-500/30 ring-inset' : ''
+        }`}
+      >
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
+              {t('curriculum.title')}
+            </h2>
+            {selectedMode === 'educator' && (
+              <span className="mt-2 bg-violet-500/20 text-violet-300 text-xs px-3 py-1 rounded-full font-medium">
+                Recommended for you
+              </span>
+            )}
+          </div>
           <p className="text-lg text-zinc-300 text-center max-w-3xl mx-auto mb-12">
             {t('curriculum.description')}
           </p>
@@ -510,7 +710,7 @@ export default function TechSovereigntyPage() {
       {/* For Educators */}
       <section id="educators" className="py-20 px-4 bg-zinc-950">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 {t('educators.title')}
@@ -561,6 +761,9 @@ export default function TechSovereigntyPage() {
               </ul>
             </div>
           </div>
+
+          {/* Educator Hub - Grade Band Resources */}
+          <EducatorHub locale={locale} />
         </div>
       </section>
 
