@@ -440,8 +440,8 @@
           "duration": "3-4 weeks"
         },
         "project3": {
-          "title": "Creating a Mesh Network",
-          "description": "Build a resilient mesh network that doesn't depend on centralized infrastructure. Connect neighbors and share resources.",
+          "title": "Creating a Mesh Network with Meshtastic",
+          "description": "Build a resilient off-grid mesh network using Meshtastic and LoRa devices. Communicate without internet, cell towers, or centralized infrastructure.",
           "difficulty": "Intermediate",
           "duration": "4-6 weeks"
         },
@@ -578,7 +578,8 @@
       "networking": {
         "openwrt": "Open-source router firmware giving you full control of your network",
         "pihole": "Network-wide ad blocking and DNS privacy",
-        "wireguard": "Modern, fast VPN protocol for secure connections"
+        "wireguard": "Modern, fast VPN protocol for secure connections",
+        "meshtastic": "Open-source, off-grid mesh networking for decentralized communication without infrastructure"
       },
       "selfHosting": {
         "nextcloud": "Self-hosted file storage, calendar, contacts, and collaboration",
@@ -599,7 +600,9 @@
       "hardware": {
         "raspberrypi": "Affordable single-board computer for servers and projects",
         "pine64": "Open-source hardware: phones, laptops, and single-board computers",
-        "librerouter": "Open hardware router designed for community networks"
+        "librerouter": "Open hardware router designed for community networks",
+        "tbeam": "ESP32-based LoRa device with GPS, ideal for Meshtastic mesh networks",
+        "heltec": "Compact ESP32 LoRa board for building Meshtastic nodes"
       }
     },
     "educators": {

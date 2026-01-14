@@ -610,8 +610,8 @@
           "duration": "3-4 semanas"
         },
         "project3": {
-          "title": "Criar uma Rede Mesh",
-          "description": "Construa uma rede mesh resiliente que não depende de infraestrutura centralizada. Conecte vizinhos e partilhe recursos.",
+          "title": "Criar uma Rede Mesh com Meshtastic",
+          "description": "Construa uma rede mesh resiliente off-grid usando Meshtastic e dispositivos LoRa. Comunique sem internet, torres de telemóvel ou infraestrutura centralizada.",
           "difficulty": "Intermédio",
           "duration": "4-6 semanas"
         },
@@ -742,7 +742,8 @@
       "networking": {
         "openwrt": "Firmware de router de código aberto que lhe dá controlo total da sua rede",
         "pihole": "Bloqueio de anúncios a nível de rede e privacidade DNS",
-        "wireguard": "Protocolo VPN moderno e rápido para ligações seguras"
+        "wireguard": "Protocolo VPN moderno e rápido para ligações seguras",
+        "meshtastic": "Rede mesh de código aberto e off-grid para comunicação descentralizada sem infraestrutura"
       },
       "selfHosting": {
         "nextcloud": "Armazenamento de ficheiros auto-hospedado, calendário, contactos e colaboração",
@@ -763,7 +764,9 @@
       "hardware": {
         "raspberrypi": "Computador de placa única acessível para servidores e projetos",
         "pine64": "Hardware de código aberto: telefones, portáteis e computadores de placa única",
-        "librerouter": "Router de hardware aberto desenhado para redes comunitárias"
+        "librerouter": "Router de hardware aberto desenhado para redes comunitárias",
+        "tbeam": "Dispositivo LoRa baseado em ESP32 com GPS, ideal para redes mesh Meshtastic",
+        "heltec": "Placa LoRa ESP32 compacta para construir nós Meshtastic"
       }
     },
     "educators": {

@@ -610,8 +610,8 @@
           "duration": "3-4 Wochen"
         },
         "project3": {
-          "title": "Ein Mesh-Netzwerk Erstellen",
-          "description": "Bauen Sie ein widerstandsfähiges Mesh-Netzwerk, das nicht von zentralisierter Infrastruktur abhängt. Verbinden Sie Nachbarn und teilen Sie Ressourcen.",
+          "title": "Ein Mesh-Netzwerk mit Meshtastic Erstellen",
+          "description": "Bauen Sie ein widerstandsfähiges Off-Grid-Mesh-Netzwerk mit Meshtastic und LoRa-Geräten. Kommunizieren Sie ohne Internet, Mobilfunkmasten oder zentralisierte Infrastruktur.",
           "difficulty": "Fortgeschritten",
           "duration": "4-6 Wochen"
         },
@@ -742,7 +742,8 @@
       "networking": {
         "openwrt": "Open-Source-Router-Firmware, die Ihnen volle Kontrolle über Ihr Netzwerk gibt",
         "pihole": "Netzwerkweite Werbeblockierung und DNS-Datenschutz",
-        "wireguard": "Modernes, schnelles VPN-Protokoll für sichere Verbindungen"
+        "wireguard": "Modernes, schnelles VPN-Protokoll für sichere Verbindungen",
+        "meshtastic": "Open-Source-Off-Grid-Mesh-Netzwerk für dezentrale Kommunikation ohne Infrastruktur"
       },
       "selfHosting": {
         "nextcloud": "Selbst gehosteter Dateispeicher, Kalender, Kontakte und Zusammenarbeit",
@@ -763,7 +764,9 @@
       "hardware": {
         "raspberrypi": "Erschwinglicher Einplatinencomputer für Server und Projekte",
         "pine64": "Open-Source-Hardware: Telefone, Laptops und Einplatinencomputer",
-        "librerouter": "Open-Hardware-Router für Gemeinschaftsnetzwerke"
+        "librerouter": "Open-Hardware-Router für Gemeinschaftsnetzwerke",
+        "tbeam": "ESP32-basiertes LoRa-Gerät mit GPS, ideal für Meshtastic-Mesh-Netzwerke",
+        "heltec": "Kompaktes ESP32-LoRa-Board zum Aufbau von Meshtastic-Knoten"
       }
     },
     "educators": {

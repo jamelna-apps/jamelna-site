@@ -610,8 +610,8 @@
           "duration": "3-4周"
         },
         "project3": {
-          "title": "创建网状网络",
-          "description": "构建不依赖集中式基础设施的弹性网状网络。连接邻居并共享资源。",
+          "title": "使用Meshtastic创建网状网络",
+          "description": "使用Meshtastic和LoRa设备构建弹性离网网状网络。无需互联网、手机信号塔或集中式基础设施即可通信。",
           "difficulty": "中级",
           "duration": "4-6周"
         },
@@ -742,7 +742,8 @@
       "networking": {
         "openwrt": "开源路由器固件，让您完全控制您的网络",
         "pihole": "全网广告拦截和DNS隐私保护",
-        "wireguard": "用于安全连接的现代快速VPN协议"
+        "wireguard": "用于安全连接的现代快速VPN协议",
+        "meshtastic": "开源离网网状网络，用于无需基础设施的去中心化通信"
       },
       "selfHosting": {
         "nextcloud": "自托管文件存储、日历、联系人和协作",
@@ -763,7 +764,9 @@
       "hardware": {
         "raspberrypi": "经济实惠的单板计算机，适用于服务器和项目",
         "pine64": "开源硬件：手机、笔记本电脑和单板计算机",
-        "librerouter": "为社区网络设计的开放硬件路由器"
+        "librerouter": "为社区网络设计的开放硬件路由器",
+        "tbeam": "基于ESP32的LoRa设备，带GPS，非常适合Meshtastic网状网络",
+        "heltec": "紧凑型ESP32 LoRa板，用于构建Meshtastic节点"
       }
     },
     "educators": {

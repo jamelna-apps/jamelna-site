@@ -208,6 +208,7 @@ export default function TechSovereigntyPage() {
     { name: 'OpenWRT', description: t('tools.networking.openwrt'), url: 'https://openwrt.org' },
     { name: 'Pi-hole', description: t('tools.networking.pihole'), url: 'https://pi-hole.net' },
     { name: 'WireGuard', description: t('tools.networking.wireguard'), url: 'https://www.wireguard.com' },
+    { name: 'Meshtastic', description: t('tools.networking.meshtastic'), url: 'https://meshtastic.org' },
   ];
 
   const selfHostingTools: Tool[] = [
@@ -233,6 +234,8 @@ export default function TechSovereigntyPage() {
     { name: 'Raspberry Pi', description: t('tools.hardware.raspberrypi'), url: 'https://www.raspberrypi.org' },
     { name: 'Pine64', description: t('tools.hardware.pine64'), url: 'https://pine64.org' },
     { name: 'LibreRouter', description: t('tools.hardware.librerouter'), url: 'https://librerouter.org' },
+    { name: 'LILYGO T-Beam', description: t('tools.hardware.tbeam'), url: 'https://www.lilygo.cc/products/t-beam-v1-1-esp32-lora-module' },
+    { name: 'Heltec LoRa', description: t('tools.hardware.heltec'), url: 'https://heltec.org/project/wifi-lora-32-v3/' },
   ];
 
   return (
