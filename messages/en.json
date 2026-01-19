@@ -40,7 +40,11 @@
       "projects": {
         "gyst": {
           "title": "GYST",
-          "subtitle": "AI-Powered Style & Wardrobe App"
+          "subtitle": "Wardrobe Manager & Local Resale"
+        },
+        "coachdesk": {
+          "title": "CoachDesk",
+          "subtitle": "K-12 Instructional Coaching Platform"
         },
         "codetale": {
           "title": "CodeTale",
@@ -163,23 +167,53 @@
         "role": "Founder & Developer",
         "organization": "Independent Project",
         "timeline": "2024 - Present",
-        "challenge": "Build a mobile app that reimagines how people manage their wardrobe while actively supporting local economies, environmental sustainability, and secondhand markets - proving that technology can drive meaningful change in consumer behavior.",
+        "challenge": "Build a mobile app that helps people manage their closet, sell locally, and dress sustainably - proving that technology can drive meaningful change in consumer behavior while supporting local economies.",
         "whatIDid": [
-          "Designed and developed full-stack React Native mobile application with AI-powered style recommendations",
-          "Built SwapMeet marketplace enabling peer-to-peer clothing trades and sales within local communities",
+          "Designed and developed full-stack React Native mobile application with five core features: Style (wardrobe management), SwapMeet (P2P marketplace), GYST Hub (daily styling), ThriftShop (local discovery), and Insights (analytics)",
+          "Built SwapMeet marketplace enabling peer-to-peer clothing trades and sales within local communities with local-only pickup to reduce carbon footprint",
           "Created ThriftShop integration connecting users to local secondhand stores with location-based discovery",
-          "Implemented local-only transactions (no shipping) to reduce carbon footprint and support neighborhood economies",
-          "Developed proximity-based filtering to prioritize nearby sellers and shops",
-          "Integrated Claude AI for personalized outfit suggestions that maximize use of existing wardrobe items",
-          "Built gamification system rewarding sustainable choices and secondhand purchases"
+          "Integrated Claude AI for personalized outfit suggestions based on weather, occasion, and wardrobe contents",
+          "Implemented subscription model (GYST+) with RevenueCat for unlimited AI features and reduced marketplace fees",
+          "Developed wardrobe analytics dashboard showing usage patterns, cost-per-wear metrics, and sustainability impact",
+          "Built capsule wardrobe feature for travel and seasonal planning"
         ],
-        "impact": "Created a platform grounded in the philosophy that sustainable fashion should strengthen local communities, not just reduce waste. By designing technology that makes secondhand shopping convenient and social, GYST demonstrates how apps can shift consumer behavior toward environmentally conscious choices while keeping money circulating in local economies.",
-        "skills": "React Native, Expo, Firebase, Claude AI integration, geolocation services, peer-to-peer marketplace design, sustainable tech architecture, UI/UX design",
+        "impact": "Created a platform grounded in the philosophy that sustainable fashion should strengthen local communities, not just reduce waste. GYST demonstrates how apps can shift consumer behavior toward environmentally conscious choices while keeping money circulating in local economies. Currently preparing for App Store release.",
+        "skills": "React Native, Expo, Firebase, Claude AI integration, RevenueCat subscriptions, geolocation services, peer-to-peer marketplace design, sustainable tech architecture, UI/UX design",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
-        ]
+        ],
+        "appStoreLinks": {
+          "ios": "Coming soon",
+          "privacy": "/gyst/privacy",
+          "terms": "/gyst/terms"
+        }
+      },
+      {
+        "title": "CoachDesk",
+        "role": "Founder & Developer",
+        "organization": "Independent Project",
+        "timeline": "2025 - Present",
+        "challenge": "Build a platform that helps K-12 instructional coaches manage their work supporting multiple teachers across schools and districts, with built-in privacy controls and offline support for the realities of school environments.",
+        "whatIDid": [
+          "Designed and developed full-stack Next.js web application with role-based access for coaches, teachers, and administrators",
+          "Built comprehensive data model supporting district/school/teacher hierarchies, coaching cycles, goals, check-ins, and lesson plans",
+          "Implemented privacy-first architecture with visibility flags (coach-only, shared, admin-visible) and FERPA/COPPA compliance considerations",
+          "Created teacher invite system with secure token-based onboarding",
+          "Integrated Cloudflare R2 for artifact storage with presigned URLs",
+          "Designed warm, approachable UI with terracotta brand palette suited for education professionals",
+          "Built responsive dashboard views for tracking coaching relationships and teacher progress",
+          "Deployed to Vercel with PostgreSQL database via Prisma ORM"
+        ],
+        "impact": "Created a purpose-built tool for instructional coaches who currently rely on spreadsheets and scattered documents. CoachDesk centralizes teacher tracking, artifacts, and reporting while respecting the trust-based nature of coaching relationships through thoughtful privacy controls.",
+        "skills": "Next.js, React, TypeScript, PostgreSQL, Prisma, NextAuth.js, Cloudflare R2, Tailwind CSS, role-based access control, privacy-first architecture",
+        "images": [
+          "/images/screenshots/coachdesk/home.png",
+          "/images/screenshots/coachdesk/features.png",
+          "/images/screenshots/coachdesk/login.png"
+        ],
+        "website": "https://getcoachdesk.com"
       },
       {
         "title": "CodeTale",
