@@ -179,6 +179,7 @@
         ],
         "impact": "Created a platform grounded in the philosophy that sustainable fashion should strengthen local communities, not just reduce waste. GYST demonstrates how apps can shift consumer behavior toward environmentally conscious choices while keeping money circulating in local economies. Currently preparing for App Store release.",
         "skills": "React Native, Expo, Firebase, Claude AI integration, RevenueCat subscriptions, geolocation services, peer-to-peer marketplace design, sustainable tech architecture, UI/UX design",
+        "website": "http://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
@@ -375,7 +376,64 @@
     "educationValue": "B.A. Liberal Arts & Sciences, Creative Writing\nNew School University",
     "contact": "Contact",
     "linkedin": "LinkedIn",
-    "cta": "Let's Talk"
+    "cta": "Let's Talk",
+    "experienceTitle": "Experience",
+    "experience": {
+      "ncstate": {
+        "title": "Research Scholar",
+        "org": "NC State University, Friday Institute for Educational Innovation",
+        "dates": "Mar 2025 - Present",
+        "description": "Leading product and project management for SceneCraft, an AI-powered educational storytelling platform. Aligning research, design, and stakeholder collaboration to create data-informed learning solutions serving K-12 students and educators."
+      },
+      "csforall": {
+        "title": "SCRIPT Program Leader",
+        "org": "CSforALL",
+        "dates": "Apr 2023 - Dec 2024",
+        "description": "Directed national implementation of the SCRIPT initiative, helping 50+ US school districts build comprehensive K-12 computer science education plans. Managed partnerships with Microsoft, Northrop Grumman, and other industry leaders."
+      },
+      "cornellDirector": {
+        "title": "Director, K-12 Coaching Initiatives",
+        "org": "Cornell Tech",
+        "dates": "Nov 2021 - Apr 2023",
+        "description": "Designed the CS Coaching Toolkit and Card Deck, now used nationally. Facilitated workshops for NYC DOE, Louisiana, and South Carolina. Advised universities and districts on CS program integration."
+      },
+      "cornellResident": {
+        "title": "Teacher-in-Residence",
+        "org": "Cornell Tech",
+        "dates": "Sep 2019 - Nov 2021",
+        "description": "Bridged academic research and classroom practice. Collaborated with researchers on educational technology projects and contributed practitioner perspective to curriculum development initiatives."
+      },
+      "nycdoe": {
+        "title": "Computer Science Education Manager",
+        "org": "NYC Department of Education",
+        "dates": "Aug 2016 - Aug 2019",
+        "description": "Led CS4All implementation across 200+ Manhattan schools as part of the nation's largest CS equity initiative. Trained 500+ educators and built partnerships with industry and community organizations."
+      },
+      "expanded": {
+        "title": "STEM Manager",
+        "org": "ExpandED Schools",
+        "dates": "Aug 2015 - Aug 2016",
+        "description": "Managed STEM programming across afterschool programs serving NYC students. Developed curriculum frameworks and provided professional development for program staff."
+      },
+      "nyasPm": {
+        "title": "Program Manager, Global STEM Alliance",
+        "org": "New York Academy of Sciences",
+        "dates": "Nov 2014 - Jul 2015",
+        "description": "Managed international STEM education initiatives connecting students with scientists worldwide. Coordinated virtual mentorship programs and global STEM challenges."
+      },
+      "nyasCoord": {
+        "title": "Program Coordinator, Afterschool STEM Mentoring",
+        "org": "New York Academy of Sciences",
+        "dates": "Aug 2013 - Nov 2014",
+        "description": "Coordinated afterschool STEM mentoring programs pairing scientists with underserved youth. Managed volunteer recruitment, training, and program logistics."
+      },
+      "lsc": {
+        "title": "Museum Educator & Program Developer",
+        "org": "Liberty Science Center",
+        "dates": "2009 - 2013",
+        "description": "Developed and delivered science education programming for diverse audiences. Created hands-on exhibits and facilitated learning experiences that sparked curiosity in visitors of all ages."
+      }
+    }
   },
   "contact": {
     "title": "Contact",
@@ -832,7 +890,7 @@
     "targetAudience": "For school leaders, district administrators, and CS education champions",
     "hero": {
       "ctaPrimary": "Explore Curricula",
-      "ctaSecondary": "AI Implementation Planner"
+      "ctaSecondary": "Build Scope & Sequence"
     },
     "implementation": {
       "title": "Implementation Support",
@@ -960,51 +1018,23 @@
         "answer": "Requirements vary by curriculum. CS Unplugged requires no computers. Scratch runs on Chromebooks and tablets. Some high school courses benefit from 1:1 devices. Check each curriculum's technical requirements."
       }
     },
-    "aiPlanner": {
-      "title": "AI Planning Assistant",
-      "subtitle": "Design your K-12 CS education program with AI-powered guidance",
-      "cardTitle": "AI Implementation Planner",
-      "cardDescription": "Answer a few questions about your context and get a customized implementation roadmap with curriculum recommendations.",
-      "welcome": {
-        "title": "Welcome to the AI Planning Assistant",
-        "description": "I can help you create a comprehensive K-12 CS education plan tailored to your district. Ask me about curriculum recommendations, scope and sequence, or standards alignment."
-      },
-      "chat": {
-        "placeholder": "Ask about K-12 CS curriculum planning...",
-        "placeholderWithDistrict": "Ask about CS curriculum for {district}...",
-        "clearChat": "Clear chat",
-        "sendMessage": "Send message"
-      },
-      "sources": {
-        "title": "Sources",
-        "csta": "CSTA Standard",
-        "statePolicy": "State Policy",
-        "curriculum": "Curriculum",
-        "scopeSequence": "Scope & Sequence"
-      },
-      "suggestedPrompts": {
-        "scopeSequence": "Create a complete K-12 scope and sequence for CS education aligned with our state standards.",
-        "curriculum": "What free CS curricula would you recommend for our grade levels and pathways?",
-        "csta": "How can we align our CS program with CSTA standards across all grade bands?",
-        "implementation": "Help us create a phased implementation plan for launching CS education in our district."
-      },
-      "labels": {
-        "scopeSequence": "K-12 Scope & Sequence",
-        "curriculum": "Curriculum Recommendations",
-        "csta": "CSTA Standards Alignment",
-        "implementation": "Implementation Roadmap"
-      },
-      "errors": {
-        "generic": "An error occurred. Please try again.",
-        "networkError": "Unable to connect. Please check your internet connection."
-      }
+    "scopeSequence": {
+      "title": "Build Your Scope & Sequence",
+      "subtitle": "Select a pathway focus to see recommended curricula for each grade band",
+      "foundation": "Foundation for All Pathways",
+      "foundationDescription": "Computational Thinking and Data Science skills are woven throughout every pathway, building essential skills from elementary through high school.",
+      "selectPathway": "Select Your Pathway Focus",
+      "elementary": "Elementary (K-5)",
+      "middle": "Middle School (6-8)",
+      "high": "High School (9-12)",
+      "coreCurricula": "Core Curricula",
+      "pathwayCurricula": "Pathway-Specific",
+      "skills": "Key Skills"
     },
     "cta": {
       "title": "Ready to Get Started?",
-      "description": "Use our AI-powered planner to create a customized implementation roadmap for your school or district.",
-      "cardTitle": "AI Implementation Planner",
-      "cardDescription": "Get personalized recommendations based on your school's unique context and goals.",
-      "button": "Start Planning"
+      "description": "Select a pathway above to explore recommended curricula for your school's CS education program.",
+      "button": "Explore Curricula"
     }
   }
 }

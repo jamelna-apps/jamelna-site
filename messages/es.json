@@ -175,6 +175,7 @@
         ],
         "impact": "Creé una plataforma fundamentada en la filosofía de que la moda sostenible debe fortalecer las comunidades locales, no solo reducir residuos. Al diseñar tecnología que hace que las compras de segunda mano sean convenientes y sociales, GYST demuestra cómo las apps pueden cambiar el comportamiento del consumidor hacia elecciones medioambientalmente conscientes mientras mantienen el dinero circulando en las economías locales.",
         "skills": "React Native, Expo, Firebase, integración de Claude AI, servicios de geolocalización, diseño de mercado peer-to-peer, arquitectura de tecnología sostenible, diseño UI/UX",
+        "website": "http://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
@@ -341,7 +342,64 @@
     "educationValue": "B.A. Artes y Ciencias Liberales, Escritura Creativa\nNew School University",
     "contact": "Contacto",
     "linkedin": "LinkedIn",
-    "cta": "Hablemos"
+    "cta": "Hablemos",
+    "experienceTitle": "Experiencia",
+    "experience": {
+      "ncstate": {
+        "title": "Research Scholar",
+        "org": "NC State University, Friday Institute for Educational Innovation",
+        "dates": "Mar 2025 - Presente",
+        "description": "Liderando la gestión de producto y proyecto para SceneCraft, una plataforma educativa de narración impulsada por IA. Alineando investigación, diseño y colaboración con stakeholders para crear soluciones de aprendizaje informadas por datos para estudiantes y educadores K-12."
+      },
+      "csforall": {
+        "title": "Director del Programa SCRIPT",
+        "org": "CSforALL",
+        "dates": "Abr 2023 - Dic 2024",
+        "description": "Dirigí la implementación nacional de la iniciativa SCRIPT, ayudando a más de 50 distritos escolares de EE.UU. a construir planes integrales de educación en informática K-12. Gestioné alianzas con Microsoft, Northrop Grumman y otros líderes de la industria."
+      },
+      "cornellDirector": {
+        "title": "Director, Iniciativas de Coaching K-12",
+        "org": "Cornell Tech",
+        "dates": "Nov 2021 - Abr 2023",
+        "description": "Diseñé el CS Coaching Toolkit y Card Deck, ahora utilizados a nivel nacional. Facilité talleres para NYC DOE, Louisiana y Carolina del Sur. Asesoré a universidades y distritos sobre integración de programas de informática."
+      },
+      "cornellResident": {
+        "title": "Teacher-in-Residence",
+        "org": "Cornell Tech",
+        "dates": "Sep 2019 - Nov 2021",
+        "description": "Conecté la investigación académica con la práctica en el aula. Colaboré con investigadores en proyectos de tecnología educativa y aporté perspectiva de profesional a iniciativas de desarrollo curricular."
+      },
+      "nycdoe": {
+        "title": "Gerente de Educación en Informática",
+        "org": "Departamento de Educación de NYC",
+        "dates": "Ago 2016 - Ago 2019",
+        "description": "Lideré la implementación de CS4All en más de 200 escuelas de Manhattan como parte de la iniciativa de equidad en informática más grande de la nación. Formé a más de 500 educadores y construí alianzas con la industria y organizaciones comunitarias."
+      },
+      "expanded": {
+        "title": "Gerente STEM",
+        "org": "ExpandED Schools",
+        "dates": "Ago 2015 - Ago 2016",
+        "description": "Gestioné programación STEM en programas extraescolares sirviendo a estudiantes de NYC. Desarrollé marcos curriculares y proporcioné desarrollo profesional para el personal de programas."
+      },
+      "nyasPm": {
+        "title": "Gerente de Programa, Global STEM Alliance",
+        "org": "New York Academy of Sciences",
+        "dates": "Nov 2014 - Jul 2015",
+        "description": "Gestioné iniciativas internacionales de educación STEM conectando estudiantes con científicos de todo el mundo. Coordiné programas de mentoría virtual y desafíos STEM globales."
+      },
+      "nyasCoord": {
+        "title": "Coordinador de Programa, Mentoría STEM Extraescolar",
+        "org": "New York Academy of Sciences",
+        "dates": "Ago 2013 - Nov 2014",
+        "description": "Coordiné programas de mentoría STEM extraescolar emparejando científicos con jóvenes de comunidades desatendidas. Gestioné reclutamiento de voluntarios, capacitación y logística de programas."
+      },
+      "lsc": {
+        "title": "Educador de Museo y Desarrollador de Programas",
+        "org": "Liberty Science Center",
+        "dates": "2009 - 2013",
+        "description": "Desarrollé e impartí programación de educación científica para audiencias diversas. Creé exhibiciones interactivas y facilité experiencias de aprendizaje que despertaron la curiosidad en visitantes de todas las edades."
+      }
+    }
   },
   "contact": {
     "title": "Contacto",
@@ -399,14 +457,16 @@
     "title": "Recursos de Educación en Informática K-12",
     "subtitle": "Un repositorio completo de currículos gratuitos y de código abierto para líderes de escuelas y distritos.",
     "targetAudience": "Para líderes de escuelas y distritos que construyen o expanden programas de informática",
+    "hero": {
+      "ctaPrimary": "Explorar Currículos",
+      "ctaSecondary": "Construir Alcance y Secuencia"
+    },
     "sectionNav": {
       "curriculum": "Currículos",
-      "districtProfile": "Perfil del Distrito",
-      "aiPlanner": "Planificador IA",
+      "scopeSequence": "Alcance y Secuencia",
       "whyUse": "Por Qué Usarlo",
       "standards": "Estándares",
-      "faq": "Preguntas Frecuentes",
-      "comingSoon": "Próximamente"
+      "faq": "Preguntas Frecuentes"
     },
     "gradeLevels": {
       "elementary": "Primaria (K-5)",
@@ -516,42 +576,23 @@
         "answer": "Los requisitos varían según el currículo. CS Unplugged no requiere computadoras. Scratch funciona en Chromebooks y tabletas. Algunos cursos de bachillerato se benefician de dispositivos 1:1. Consulta los requisitos técnicos de cada currículo."
       }
     },
-    "aiPlanner": {
-      "title": "Asistente de Planificación con IA",
-      "subtitle": "Diseña tu programa de educación K-12 en informática con orientación impulsada por IA",
-      "welcome": {
-        "title": "Bienvenido al Asistente de Planificación con IA",
-        "description": "Puedo ayudarte a crear un plan integral de educación K-12 en informática adaptado a tu distrito. Pregúntame sobre recomendaciones de currículo, secuencia y alcance, o alineación con estándares."
-      },
-      "chat": {
-        "placeholder": "Pregunta sobre planificación de currículo K-12 en informática...",
-        "placeholderWithDistrict": "Pregunta sobre currículo de informática para {district}...",
-        "clearChat": "Limpiar chat",
-        "sendMessage": "Enviar mensaje"
-      },
-      "sources": {
-        "title": "Fuentes",
-        "csta": "Estándar CSTA",
-        "statePolicy": "Política Estatal",
-        "curriculum": "Currículo",
-        "scopeSequence": "Alcance y Secuencia"
-      },
-      "suggestedPrompts": {
-        "scopeSequence": "Crea un alcance y secuencia K-12 completo para educación en informática alineado con nuestros estándares estatales.",
-        "curriculum": "¿Qué currículos gratuitos de informática recomendarías para nuestros niveles de grado y trayectorias?",
-        "csta": "¿Cómo podemos alinear nuestro programa de informática con los estándares CSTA en todos los niveles?",
-        "implementation": "Ayúdanos a crear un plan de implementación por fases para lanzar la educación en informática en nuestro distrito."
-      },
-      "labels": {
-        "scopeSequence": "Alcance y Secuencia K-12",
-        "curriculum": "Recomendaciones de Currículo",
-        "csta": "Alineación con Estándares CSTA",
-        "implementation": "Hoja de Ruta de Implementación"
-      },
-      "errors": {
-        "generic": "Ocurrió un error. Por favor intenta de nuevo.",
-        "networkError": "No se pudo conectar. Por favor verifica tu conexión a internet."
-      }
+    "scopeSequence": {
+      "title": "Construye tu Alcance y Secuencia",
+      "subtitle": "Selecciona una trayectoria para ver currículos recomendados para cada nivel escolar",
+      "foundation": "Fundamentos para Todas las Trayectorias",
+      "foundationDescription": "Las habilidades de Pensamiento Computacional y Ciencia de Datos están entretejidas en cada trayectoria, desarrollando competencias esenciales desde primaria hasta bachillerato.",
+      "selectPathway": "Selecciona Tu Trayectoria",
+      "elementary": "Primaria (K-5)",
+      "middle": "Secundaria (6-8)",
+      "high": "Bachillerato (9-12)",
+      "coreCurricula": "Currículos Principales",
+      "pathwayCurricula": "Específicos de Trayectoria",
+      "skills": "Habilidades Clave"
+    },
+    "cta": {
+      "title": "¿Listo para Empezar?",
+      "description": "Selecciona una trayectoria arriba para explorar los currículos recomendados para el programa de informática de tu escuela.",
+      "button": "Explorar Currículos"
     }
   },
   "techSovereignty": {

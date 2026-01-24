@@ -175,6 +175,7 @@
         ],
         "impact": "Criei uma plataforma fundamentada na filosofia de que a moda sustentável deve fortalecer as comunidades locais, não apenas reduzir desperdício. Ao desenhar tecnologia que torna as compras em segunda mão convenientes e sociais, GYST demonstra como as apps podem mudar o comportamento do consumidor para escolhas ambientalmente conscientes enquanto mantêm o dinheiro a circular nas economias locais.",
         "skills": "React Native, Expo, Firebase, integração Claude AI, serviços de geolocalização, design de mercado peer-to-peer, arquitetura de tecnologia sustentável, design UI/UX",
+        "website": "http://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",

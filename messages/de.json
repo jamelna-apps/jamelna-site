@@ -175,6 +175,7 @@
         ],
         "impact": "Erstellung einer Plattform, die auf der Philosophie basiert, dass nachhaltige Mode lokale Gemeinschaften stärken sollte, nicht nur Abfall reduzieren. Durch die Gestaltung von Technologie, die Second-Hand-Shopping bequem und sozial macht, zeigt GYST, wie Apps das Konsumverhalten in Richtung umweltbewusster Entscheidungen lenken können, während das Geld in lokalen Wirtschaften zirkuliert.",
         "skills": "React Native, Expo, Firebase, Claude AI Integration, Geolokalisierungsdienste, Peer-to-Peer Marktplatz-Design, nachhaltige Tech-Architektur, UI/UX Design",
+        "website": "http://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",

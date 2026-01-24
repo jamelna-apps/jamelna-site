@@ -175,6 +175,7 @@
         ],
         "impact": "创建了一个基于这一理念的平台：可持续时尚应该加强本地社区，而不仅仅是减少浪费。通过设计使二手购物变得便捷和社交化的技术，GYST展示了应用程序如何将消费者行为转向环保选择，同时让资金在本地经济中流通。",
         "skills": "React Native、Expo、Firebase、Claude AI集成、地理定位服务、点对点市场设计、可持续技术架构、UI/UX设计",
+        "website": "http://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",

@@ -8,6 +8,18 @@ export default function AboutPage() {
   const t = useTranslations('about');
   const locale = useLocale();
 
+  const experiences = [
+    { key: 'ncstate' },
+    { key: 'csforall' },
+    { key: 'cornellDirector' },
+    { key: 'cornellResident' },
+    { key: 'nycdoe' },
+    { key: 'expanded' },
+    { key: 'nyasPm' },
+    { key: 'nyasCoord' },
+    { key: 'lsc' },
+  ];
+
   return (
     <main className="min-h-screen bg-zinc-900 pt-16">
       {/* Hero Section */}
@@ -55,6 +67,36 @@ export default function AboutPage() {
             <p className="text-lg text-zinc-300 leading-relaxed">
               {t('p9')}
             </p>
+          </div>
+
+          {/* Experience / CV Section */}
+          <div className="border-t border-zinc-800 pt-12 mb-12">
+            <h2 className="text-2xl font-display font-bold text-white mb-8">
+              <span className="text-orange-400">//</span> {t('experienceTitle')}
+            </h2>
+            <div className="space-y-8">
+              {experiences.map((exp) => (
+                <div key={exp.key} className="relative pl-6 border-l-2 border-zinc-700 hover:border-violet-500 transition-colors">
+                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-800 border-2 border-zinc-600"></div>
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-2">
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">
+                        {t(`experience.${exp.key}.title`)}
+                      </h3>
+                      <p className="text-violet-400 font-medium">
+                        {t(`experience.${exp.key}.org`)}
+                      </p>
+                    </div>
+                    <p className="text-sm text-zinc-500 font-mono md:text-right whitespace-nowrap">
+                      {t(`experience.${exp.key}.dates`)}
+                    </p>
+                  </div>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    {t(`experience.${exp.key}.description`)}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Quick Facts */}
