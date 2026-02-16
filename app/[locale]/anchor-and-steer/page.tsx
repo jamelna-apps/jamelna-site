@@ -20,10 +20,11 @@ const dimensions = [
     title: 'Shared Mental Model',
     subtitle: 'Transparency that teaches, not just tells',
     color: colors.S,
+    designThinking: 'Empathize — See through each other\'s lens',
     description:
       'The AI and teacher need to operate from a common understanding of what\'s happening in the classroom. The AI surfaces its reasoning and confidence levels transparently, and teachers can inspect, question, and correct the AI\'s understanding of student states.',
     keyInsight:
-      'When anchored in practice, this helps teachers learn from the AI\'s perspective. The AI\'s reasoning should be pedagogically educative for the teacher, not just legible.',
+      'In design thinking terms, this is mutual empathy made structural. The teacher empathizes with the AI\'s perspective (its confidence, its reasoning) and the AI is designed to empathize with the teacher\'s context (their classroom, their students, their constraints). When anchored in practice, the AI\'s reasoning should be pedagogically educative for the teacher, not just legible.',
     example:
       '"I recommended this problem set because 7 students struggled with fraction comparison on Tuesday\'s quiz. My confidence is moderate — three of those students may have been affected by the timed format rather than conceptual misunderstanding."',
   },
@@ -32,10 +33,11 @@ const dimensions = [
     title: 'Teacher-Set Guardrails',
     subtitle: 'The policy layer teachers author themselves',
     color: colors.T,
+    designThinking: 'Define — Articulate constraints as design values',
     description:
       'Teachers define the boundaries within which the AI operates autonomously. This includes scope controls (what can the AI do without asking?), pedagogical preferences (when should the AI intervene?), and content boundaries (what materials can the AI draw from?).',
     keyInsight:
-      'When anchored in practice, configuring the AI becomes an exercise in professional reflection — articulating your pedagogical philosophy is itself valuable professional development.',
+      'In design thinking, constraints fuel creativity. Here, the teacher\'s pedagogical constraints become the AI\'s operating parameters. Configuring the AI becomes an exercise in professional reflection — articulating your pedagogical philosophy is itself valuable professional development.',
     example:
       'A teacher who values productive struggle configures: "Wait at least 3 attempts before offering scaffolding. Never give direct answers — always use guiding questions. Allow students to select their own problem difficulty."',
   },
@@ -44,10 +46,11 @@ const dimensions = [
     title: 'Escalation Pathways',
     subtitle: 'Knowing when to hand off, not just hand over',
     color: colors.E1,
+    designThinking: 'Prototype — Design the handoff, not just the handout',
     description:
       'Not everything should be automated. The framework needs clearly designed moments where the AI hands off to the teacher: uncertainty escalation, emotional and social escalation, and pedagogical judgment calls.',
     keyInsight:
-      'The critical design question is about friction — making escalation lightweight enough that it actually happens, but visible enough that teachers feel informed.',
+      'Like prototyping in design thinking, escalation pathways must be tested and refined through real use. The critical design question is about friction — making escalation lightweight enough that it actually happens, but visible enough that teachers feel informed. These are designed seams, not failures.',
     example:
       '"Flagging: Maria has submitted and deleted her response three times in the last 5 minutes. Her error pattern doesn\'t match a clear misconception — this might be a confidence issue rather than a knowledge gap. Routing to you for a check-in."',
   },
@@ -56,10 +59,11 @@ const dimensions = [
     title: 'Evolving Delegation',
     subtitle: 'Trust that deepens — and stays reversible',
     color: colors.E2,
+    designThinking: 'Iterate — Trust as a design material',
     description:
       'Trust between teacher and AI should deepen over time. Start with high oversight and low autonomy. As the teacher validates the AI\'s judgment, they can gradually expand its scope. Critically, delegation must be reversible.',
     keyInsight:
-      'When anchored, you only delegate tasks where the teacher genuinely doesn\'t need the practice — not outsourcing the very activities that build professional skill.',
+      'Design thinking is iterative by nature — you ship, observe, adjust, repeat. Evolving delegation applies this same principle to trust. You never "finish" designing the human-AI relationship; you only delegate tasks where the teacher genuinely doesn\'t need the practice — not outsourcing the very activities that build professional skill.',
     example:
       'September: AI suggests differentiated homework, teacher reviews each recommendation. November: Teacher has approved 90% — system asks, "Would you like me to assign these automatically and flag only exceptions?" January: Teacher pulls back to review mode for two weeks.',
   },
@@ -68,10 +72,11 @@ const dimensions = [
     title: 'Reflective Feedback Loops',
     subtitle: 'Learning that flows both ways',
     color: colors.R,
+    designThinking: 'Test — Every interaction is a learning signal',
     description:
       'The system generates opportunities for the teacher to reflect on and learn from the AI\'s data — and vice versa. Weekly digests surface patterns. Every teacher override is training signal. Structured moments invite annotation.',
     keyInsight:
-      'When anchored, these loops shift from "did the AI get it right" to "what did I learn about my students and my practice from this interaction."',
+      'In design thinking, testing isn\'t a final gate — it\'s a continuous practice. Every teacher override, every dismissed suggestion, every moment of surprise is data that flows both ways. When anchored, these loops shift from "did the AI get it right" to "what did I learn about my students and my practice from this interaction."',
     example:
       '"Weekly insight: Students who attempted the optional challenge problem before the quiz scored 23% higher on related questions. 14 of your 28 students attempted it. Would you like to explore making it a recommended warm-up?"',
   },
@@ -117,19 +122,21 @@ const failureModes = [
 ];
 
 const anchorCardFields = [
+  { field: 'How Might We...', prompt: 'Frame the teacher\'s need as a "How might we..." question. E.g., "How might we help teachers give timely writing feedback across 150 students without sacrificing quality?"' },
   { field: 'Teacher Skill Enhanced', prompt: 'What specific professional skill does this feature enhance — not replace?' },
+  { field: 'Observed Workaround', prompt: 'How are teachers solving this now? What did you learn from watching them? Why is their current approach inadequate?' },
+  { field: 'Evidence of Demand', prompt: 'What evidence do we have that teachers actually want this solved — not that we think they should? (Interviews, observations, co-design sessions?)' },
   { field: 'Time & Cognitive Load Reclaimed', prompt: 'What time or mental energy does this free up, and what does the teacher reinvest it in?' },
-  { field: 'Current Workaround', prompt: 'How are teachers solving this now? Why is their current approach inadequate?' },
-  { field: 'Evidence of Demand', prompt: 'What evidence do we have that teachers actually want this solved — not that we think they should?' },
-  { field: 'Capability After Removal', prompt: 'Is the teacher more capable without the tool after having used it for a year?' },
+  { field: 'Capability After Removal', prompt: 'Is the teacher more capable without the tool after having used it for a year? Does the design build skill or create dependency?' },
 ];
 
 const researchConnections = [
-  { dimension: 'Anchor', color: colors.anchor, sources: ['TPACK Framework — Technological Pedagogical Content Knowledge'] },
-  { dimension: 'S — Shared Mental Model', color: colors.S, sources: ['Endsley\'s Situational Awareness — shared mental models and team cognition'] },
-  { dimension: 'T — Guardrails', color: colors.T, sources: ['Dillenbourg\'s Orchestration — teacher coordination of complex activity', 'Kapur\'s Productive Failure — when struggle is beneficial'] },
-  { dimension: 'E — Escalation & Delegation', color: colors.E1, sources: ['Lee & See on Trust in Automation', 'Shneiderman\'s Human-Centered AI (HCAI)', 'Sheridan & Verplank\'s Levels of Automation'] },
-  { dimension: 'R — Reflective Loops', color: colors.R, sources: ['Schön\'s Reflective Practice', 'LATUX Workflow — learning analytics with teacher validation'] },
+  { dimension: 'Design Thinking Foundations', color: '#e5a03b', sources: ['Stanford d.school — Empathize, Define, Ideate, Prototype, Test', 'Tim Brown (IDEO) — human-centered design as innovation method', 'Participatory Design — users as co-designers, not just informants'] },
+  { dimension: 'Anchor', color: colors.anchor, sources: ['TPACK Framework — Technological Pedagogical Content Knowledge', 'Design Thinking: Empathize & Define — grounding solutions in observed human needs'] },
+  { dimension: 'S — Shared Mental Model', color: colors.S, sources: ['Endsley\'s Situational Awareness — shared mental models and team cognition', 'Empathy Maps — structured tools for understanding user perspectives'] },
+  { dimension: 'T — Guardrails', color: colors.T, sources: ['Dillenbourg\'s Orchestration — teacher coordination of complex activity', 'Kapur\'s Productive Failure — when struggle is beneficial', 'Constraint-Driven Design — how limitations focus creative problem-solving'] },
+  { dimension: 'E — Escalation & Delegation', color: colors.E1, sources: ['Lee & See on Trust in Automation', 'Shneiderman\'s Human-Centered AI (HCAI)', 'Sheridan & Verplank\'s Levels of Automation', 'Rapid Prototyping — testing handoff points before scaling'] },
+  { dimension: 'R — Reflective Loops', color: colors.R, sources: ['Schön\'s Reflective Practice', 'LATUX Workflow — learning analytics with teacher validation', 'Design Thinking: Test & Iterate — continuous learning from user feedback'] },
 ];
 
 const useCases = [
@@ -163,7 +170,7 @@ export default function AnchorAndSteerPage() {
           style={{ background: 'radial-gradient(circle, rgba(123, 94, 167, 0.4), transparent)' }} />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <p className="text-sm uppercase tracking-widest text-[#2c5f8a] mb-4 font-medium">A Teacher-in-the-Loop Design Framework</p>
+          <p className="text-sm uppercase tracking-widest text-[#2c5f8a] mb-4 font-medium">A Human-Centered Design Framework for AI in Education</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Anchor <span className="text-[#2c5f8a]">&</span> STEER
           </h1>
@@ -190,14 +197,83 @@ export default function AnchorAndSteerPage() {
               The result is a landscape of impressive technical demos that teachers don&apos;t use — tools that automate the wrong things, create dependency instead of capability, and treat educators as passive recipients of algorithmic decisions about their students.
             </p>
             <p>
-              The Anchor & STEER framework offers a different approach. It begins by grounding every AI feature in the real, felt needs of teaching practice. Then it provides five design dimensions for shaping how AI and teachers work together — with the teacher always in the loop, always in control, and always growing more skilled through the interaction.
+              The Anchor & STEER framework offers a different approach — one rooted in design thinking. It begins where human-centered design begins: with empathy. Observe teachers. Understand their real constraints. Define the problem from their perspective. Only then do you ideate, prototype, and test AI features — with the teacher always in the loop, always in control, and always growing more skilled through the interaction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Rooted in Design Thinking */}
+      <section className="py-16 px-4 bg-zinc-900">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 text-center">Rooted in Design Thinking</h2>
+          <p className="text-zinc-400 text-center mb-10 max-w-2xl mx-auto">
+            Anchor & STEER applies the principles of human-centered design to the specific challenge of AI-teacher collaboration. Each layer maps to a design thinking mindset.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Design Thinking → Anchor mapping */}
+            <div className="rounded-xl p-6 space-y-4" style={{ background: `${colors.anchor}15`, border: `1px solid ${colors.anchor}40` }}>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style={{ background: colors.anchor }}>A</div>
+                <div>
+                  <h3 className="font-semibold text-white">ANCHOR = Empathize + Define</h3>
+                  <p className="text-xs text-zinc-500">Before you build, understand</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-[#e5a03b] text-sm font-bold shrink-0">Empathize</span>
+                  <p className="text-sm text-zinc-400">Shadow teachers. Observe their workarounds. Understand what 150 essays on a Sunday night actually feels like — not what you imagine it feels like.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#e5a03b] text-sm font-bold shrink-0">Define</span>
+                  <p className="text-sm text-zinc-400">Frame the problem from the teacher&apos;s perspective. &ldquo;How might we help teachers give timely, personalized writing feedback without sacrificing their weekends?&rdquo;</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Design Thinking → STEER mapping */}
+            <div className="rounded-xl p-6 space-y-4" style={{ background: 'rgba(45, 125, 154, 0.08)', border: '1px solid rgba(45, 125, 154, 0.25)' }}>
+              <div className="flex items-center gap-3">
+                <div className="flex gap-0.5">
+                  {['S','T','E','E','R'].map((l, i) => (
+                    <div key={i} className="w-6 h-6 rounded flex items-center justify-center text-white font-bold text-xs" style={{ background: [colors.S, colors.T, colors.E1, colors.E2, colors.R][i] }}>{l}</div>
+                  ))}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white">STEER = Ideate + Prototype + Test</h3>
+                  <p className="text-xs text-zinc-500">Design the collaboration, then keep learning</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="text-[#e5a03b] text-sm font-bold shrink-0">Ideate</span>
+                  <p className="text-sm text-zinc-400">Explore how the AI and teacher might share mental models, set guardrails, and handle the moments the AI should step back.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#e5a03b] text-sm font-bold shrink-0">Prototype</span>
+                  <p className="text-sm text-zinc-400">Design escalation pathways and delegation arcs. Test them with real teachers before scaling.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#e5a03b] text-sm font-bold shrink-0">Test</span>
+                  <p className="text-sm text-zinc-400">Build reflective feedback loops so every interaction teaches the system and the teacher. Iterate continuously.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Key insight */}
+          <div className="mt-8 rounded-xl p-5 text-center" style={{ background: 'rgba(229, 160, 59, 0.08)', border: '1px solid rgba(229, 160, 59, 0.2)' }}>
+            <p className="text-sm text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+              <strong className="text-[#e5a03b]">The key difference:</strong> Design thinking typically empathizes with <em>end users</em>. Anchor & STEER insists you empathize with <em>teachers</em> — because in AI EdTech, the teacher is the designer of the learning experience, not a passive intermediary. Skip the teacher, and you&apos;ve skipped empathy.
             </p>
           </div>
         </div>
       </section>
 
       {/* Failure Modes */}
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-16 px-4 bg-zinc-950">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Common Failure Modes</h2>
           <div className="grid md:grid-cols-3 gap-4">
@@ -316,6 +392,9 @@ export default function AnchorAndSteerPage() {
 
                 {expandedDimension === i && (
                   <div className="px-5 pb-5 space-y-4" style={{ borderLeft: `4px solid ${d.color}` }}>
+                    <div className="inline-block px-2.5 py-1 rounded-full text-xs font-medium" style={{ background: 'rgba(229, 160, 59, 0.12)', color: '#e5a03b', border: '1px solid rgba(229, 160, 59, 0.25)' }}>
+                      {d.designThinking}
+                    </div>
                     <p className="text-zinc-300 text-sm leading-relaxed">{d.description}</p>
                     <p className="text-zinc-400 text-sm italic">{d.keyInsight}</p>
                     <div className="rounded-lg p-4" style={{ background: `${d.color}10`, border: `1px solid ${d.color}20` }}>
