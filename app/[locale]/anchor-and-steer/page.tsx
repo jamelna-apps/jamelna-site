@@ -124,19 +124,19 @@ const anchorQuestions = [
     number: '03',
     question: 'Does using this tool make the teacher more skilled over time, or more dependent?',
     detail:
-      'A well-designed AI tool should be like a great teaching coach — it helps you see things you wouldn\'t have seen, and over time you internalize some of those patterns. A poorly designed one creates learned helplessness.',
+      'A well-designed AI tool should be like a great teaching coach — it helps you see things you wouldn\'t have seen, and over time you internalize some of those patterns. A poorly designed one risks creating learned helplessness.',
   },
 ];
 
 const failureModes = [
   {
     mode: 'Steer Without Anchoring',
-    description: 'Builds impressive AI that teachers don\'t use. The technology is sophisticated, but it doesn\'t solve a real problem or it solves it in a way that doesn\'t fit actual practice.',
+    description: 'Can result in impressive AI that teachers don\'t adopt. The technology may be sophisticated, but if it doesn\'t address a felt need or fit actual practice, it sits unused.',
     type: 'failure' as const,
   },
   {
     mode: 'Anchor Without Steering',
-    description: 'Understands the problem deeply but designs clumsy human-AI interaction. Teachers trust the intent but can\'t work with the tool efficiently day-to-day.',
+    description: 'Understands the problem deeply but designs clumsy human-AI interaction. Teachers may trust the intent but struggle to work with the tool efficiently day-to-day.',
     type: 'failure' as const,
   },
   {
@@ -219,13 +219,13 @@ export default function AnchorAndSteerPage() {
           </h2>
           <div className="reveal space-y-4 text-zinc-300 leading-relaxed stagger-1">
             <p>
-              Too much AI-powered education technology begins with &ldquo;what can AI do?&rdquo; rather than &ldquo;what do teachers actually need to be better at, and where are they bottlenecked?&rdquo;
+              A common pattern in AI-powered education technology is starting with &ldquo;what can AI do?&rdquo; rather than &ldquo;what do teachers actually need to be better at, and where are they bottlenecked?&rdquo;
             </p>
             <p>
-              The result is a landscape of impressive technical demos that teachers don&apos;t use — tools that automate the wrong things, create dependency instead of capability, and treat educators as passive recipients of algorithmic decisions about their students.
+              When this happens, the risk is building tools that look impressive in demos but struggle to find traction in real classrooms — tools that may automate the wrong things, create dependency instead of capability, or position educators as passive recipients of algorithmic decisions about their students.
             </p>
             <p>
-              The Anchor &amp; STEER framework offers a different approach — one rooted in design thinking. It begins where human-centered design begins: with empathy. Observe teachers. Understand their real constraints. Define the problem from their perspective. Only then do you ideate, prototype, and test AI features — with the teacher always in the loop, always in control, and always growing more skilled through the interaction.
+              The Anchor &amp; STEER framework proposes an alternative starting point — one rooted in design thinking. It begins where human-centered design begins: with empathy. Observe teachers. Understand their real constraints. Define the problem from their perspective. Then ideate, prototype, and test AI features — with the teacher in the loop, in control, and growing more skilled through the interaction.
             </p>
           </div>
         </div>
@@ -296,7 +296,7 @@ export default function AnchorAndSteerPage() {
           {/* Key insight */}
           <div className="reveal mt-8 bg-zinc-800 border border-zinc-700 rounded-lg p-5 text-center stagger-3">
             <p className="text-sm text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-              <strong className="text-orange-400">The key difference:</strong> Design thinking typically empathizes with <em>end users</em>. Anchor &amp; STEER insists you empathize with <em>teachers</em> — because in AI EdTech, the teacher is the designer of the learning experience, not a passive intermediary.
+              <strong className="text-orange-400">The key difference:</strong> Design thinking typically empathizes with <em>end users</em>. Anchor &amp; STEER asks you to empathize with <em>teachers</em> — because in AI EdTech, the teacher should be understood as the designer of the learning experience, not treated as a passive intermediary.
             </p>
           </div>
         </div>
@@ -487,7 +487,7 @@ export default function AnchorAndSteerPage() {
           </div>
 
           <p className="reveal text-zinc-500 text-sm italic max-w-xl mx-auto stagger-3">
-            Resist the urge to STEER before you&apos;ve anchored. That&apos;s the message the edtech industry needs most — because so much AI-powered product development skips straight to &ldquo;look what the AI can do&rdquo; without ever grounding in &ldquo;but should it.&rdquo;
+            Resist the urge to STEER before you&apos;ve anchored. This may be the most important discipline the framework asks of product teams — because it can be tempting to skip straight to &ldquo;look what the AI can do&rdquo; without first grounding in &ldquo;but should it.&rdquo;
           </p>
         </div>
       </section>
@@ -500,10 +500,10 @@ export default function AnchorAndSteerPage() {
           </h2>
           <div className="reveal grid md:grid-cols-2 gap-4 stagger-1">
             {[
-              { title: 'On Transparency', text: 'The interface shouldn\'t bury the AI\'s logic. The biggest trust-killer in edtech is a black box. Teachers should understand why in under 10 seconds.' },
+              { title: 'On Transparency', text: 'The interface shouldn\'t bury the AI\'s logic. One of the fastest ways to lose teacher trust is a black box. Teachers should be able to understand why in under 10 seconds.' },
               { title: 'On Defaults', text: 'Defaults are pedagogical choices. If the AI defaults to giving hints quickly, that embodies a philosophy. Defaults must be intentional, documented, and overridable.' },
               { title: 'On Equity', text: 'Teacher-in-the-loop means the AI doesn\'t silently create different learning experiences for different students without the teacher knowing. Differential treatment should always be visible and endorsed.' },
-              { title: 'On Time', text: 'The biggest constraint teachers face. If oversight burden is too high, teachers will either rubber-stamp everything or disengage — both defeat the purpose.' },
+              { title: 'On Time', text: 'One of the biggest constraints teachers face. If oversight burden is too high, teachers may end up rubber-stamping everything or disengaging — both of which defeat the purpose.' },
             ].map((item, i) => (
               <div key={i} className="bg-zinc-800 border border-zinc-700 rounded-lg p-5">
                 <h3 className="font-display font-semibold text-white mb-2">{item.title}</h3>
