@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "Pioneiro em Educação AI",
-        "description": "Desde a gestão da SceneCraft (plataforma de narrativa com AI) até à formação de mais de 500 professores no uso responsável de AI, traduzo AI de ponta em impacto prático na sala de aula."
+        "description": "Desde a gestão da SceneCraft (plataforma de narrativa com AI) até à formação de mais de 500 professores em STEM, Ciência da Computação, Pensamento Computacional e uso responsável de AI, traduzo AI de ponta em impacto prático na sala de aula."
       },
       "systemsDesigner": {
         "title": "Designer de Sistemas",
@@ -113,7 +113,7 @@
         "Precisa de frameworks para uso ético de AI em ambientes K-12"
       ],
       "whatIBring": [
-        "Atualmente a gerir o SceneCraft, uma plataforma de aprendizagem baseada em LLM na NC State",
+        "Atualmente a gerir o SceneCraft, uma plataforma de aprendizagem baseada em LLM na NC State como parte do EngageAI Institute financiado pela NSF",
         "Desenhei frameworks AI com o professor no controlo e engenharia de prompts para educadores",
         "Formei mais de 500 professores em tecnologia educativa e pensamento computacional",
         "Compreensão profunda do que torna as ferramentas AI realmente úteis para professores vs. software esquecido"
@@ -260,6 +260,8 @@
         "role": "Research Scholar e Gestor de Produto",
         "organization": "NC State University, Friday Institute for Educational Innovation",
         "timeline": "Março 2025 - Presente",
+        "funding": "EngageAI Institute financiado pela NSF",
+        "fundingUrl": "https://engageai.org",
         "challenge": "Construir uma plataforma de narrativa baseada em AI que ajude os alunos a aprender através de narrativas, mantendo os professores no controlo dos resultados educativos.",
         "whatIDid": [
           "Sirvo como gestor de produto e projeto para plataforma LLM baseada em Unity",

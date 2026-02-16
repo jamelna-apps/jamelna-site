@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "AI Education Pioneer",
-        "description": "From managing SceneCraft (AI storytelling platform) to training 500+ teachers in responsible AI use, I translate cutting-edge AI into practical classroom impact."
+        "description": "From managing SceneCraft (AI storytelling platform) to training 500+ teachers in STEM, Computer Science, Computational Thinking, and responsible AI use, I translate cutting-edge AI into practical classroom impact."
       },
       "systemsDesigner": {
         "title": "Systems Designer",
@@ -117,7 +117,7 @@
         "You need frameworks for ethical AI use in K-12 settings"
       ],
       "whatIBring": [
-        "Currently managing SceneCraft, an LLM-powered learning platform at NC State",
+        "Currently managing SceneCraft, an LLM-powered learning platform at NC State as part of the NSF-funded EngageAI Institute",
         "Designed teacher-in-the-loop AI frameworks and prompt engineering for educators",
         "Trained 500+ teachers in educational technology and computational thinking",
         "Deep understanding of what makes AI tools actually useful for teachers vs. shelfware"
@@ -294,6 +294,8 @@
         "role": "Research Scholar & Product Manager",
         "organization": "NC State University, Friday Institute for Educational Innovation",
         "timeline": "March 2025 - Present",
+        "funding": "NSF-funded EngageAI Institute",
+        "fundingUrl": "https://engageai.org",
         "challenge": "Build an AI-driven storytelling platform that helps students learn through narrative while keeping teachers in control of educational outcomes.",
         "whatIDid": [
           "Serve as product and project manager for Unity-based LLM platform",
@@ -383,7 +385,7 @@
         "title": "Research Scholar",
         "org": "NC State University, Friday Institute for Educational Innovation",
         "dates": "Mar 2025 - Present",
-        "description": "Leading product and project management for SceneCraft, an AI-powered educational storytelling platform. Aligning research, design, and stakeholder collaboration to create data-informed learning solutions serving K-12 students and educators."
+        "description": "Leading product and project management for SceneCraft, an AI-powered educational storytelling platform, as part of the NSF-funded EngageAI Institute. Aligning research, design, and stakeholder collaboration to create data-informed learning solutions serving K-12 students and educators."
       },
       "csforall": {
         "title": "SCRIPT Program Leader",

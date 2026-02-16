@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "人工智能教育先驱",
-        "description": "从管理SceneCraft（人工智能叙事平台）到培训500多名教师负责任地使用人工智能，我将前沿人工智能转化为实际的课堂影响。"
+        "description": "从管理SceneCraft（人工智能叙事平台）到培训500多名教师的STEM、计算机科学、计算思维和负责任的人工智能使用，我将前沿人工智能转化为实际的课堂影响。"
       },
       "systemsDesigner": {
         "title": "系统设计师",
@@ -113,7 +113,7 @@
         "您需要K-12环境中道德人工智能使用的框架"
       ],
       "whatIBring": [
-        "目前在北卡罗来纳州立大学管理SceneCraft，这是一个基于LLM的学习平台",
+        "目前在北卡罗来纳州立大学管理SceneCraft，这是一个基于LLM的学习平台，作为NSF资助的EngageAI Institute的一部分",
         "设计了教师主导的人工智能框架和教育工作者的提示工程",
         "培训了500多名教师的教育技术和计算思维",
         "深刻理解什么使人工智能工具对教师真正有用，而不是被束之高阁"
@@ -260,6 +260,8 @@
         "role": "研究学者兼产品经理",
         "organization": "北卡罗来纳州立大学Friday Institute教育创新中心",
         "timeline": "2025年3月至今",
+        "funding": "NSF资助的EngageAI Institute",
+        "fundingUrl": "https://engageai.org",
         "challenge": "构建一个人工智能驱动的叙事平台，帮助学生通过叙事学习，同时让教师掌控教育成果。",
         "whatIDid": [
           "担任基于Unity的LLM平台的产品和项目经理",

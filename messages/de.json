@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "KI-Bildungspionier",
-        "description": "Von der Leitung von SceneCraft (KI-Storytelling-Plattform) bis zur Schulung von über 500 Lehrkräften im verantwortungsvollen Einsatz von KI übersetze ich modernste KI in praktische Auswirkungen im Klassenzimmer."
+        "description": "Von der Leitung von SceneCraft (KI-Storytelling-Plattform) bis zur Schulung von über 500 Lehrkräften in MINT, Informatik, Computational Thinking und verantwortungsvollem Einsatz von KI übersetze ich modernste KI in praktische Auswirkungen im Klassenzimmer."
       },
       "systemsDesigner": {
         "title": "Systemdesigner",
@@ -113,7 +113,7 @@
         "Sie benötigen Frameworks für den ethischen Einsatz von KI in K-12-Umgebungen"
       ],
       "whatIBring": [
-        "Derzeit Leitung von SceneCraft, einer LLM-gestützten Lernplattform an der NC State",
+        "Derzeit Leitung von SceneCraft, einer LLM-gestützten Lernplattform an der NC State als Teil des NSF-geförderten EngageAI Institute",
         "Entwurf von KI-Frameworks mit Lehrern im Zentrum und Prompt-Engineering für Pädagogen",
         "Schulung von über 500 Lehrern in Bildungstechnologie und rechnerischem Denken",
         "Tiefes Verständnis dafür, was KI-Tools für Lehrer tatsächlich nützlich macht"
@@ -260,6 +260,8 @@
         "role": "Research Scholar & Produktmanager",
         "organization": "NC State University, Friday Institute for Educational Innovation",
         "timeline": "März 2025 - Heute",
+        "funding": "NSF-gefördertes EngageAI Institute",
+        "fundingUrl": "https://engageai.org",
         "challenge": "Aufbau einer KI-gesteuerten Storytelling-Plattform, die Schülern hilft, durch Narrative zu lernen, während Lehrkräfte die Kontrolle über Bildungsergebnisse behalten.",
         "whatIDid": [
           "Leitung als Produkt- und Projektmanager für Unity-basierte LLM-Plattform",

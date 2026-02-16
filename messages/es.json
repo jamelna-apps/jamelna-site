@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "Pionero en IA Educativa",
-        "description": "Desde la gestión de SceneCraft (plataforma de narración con IA) hasta la formación de más de 500 profesores en el uso responsable de IA, traduzco la IA de vanguardia en impacto práctico en el aula."
+        "description": "Desde la gestión de SceneCraft (plataforma de narración con IA) hasta la formación de más de 500 profesores en STEM, Ciencias de la Computación, Pensamiento Computacional y uso responsable de IA, traduzco la IA de vanguardia en impacto práctico en el aula."
       },
       "systemsDesigner": {
         "title": "Diseñador de Sistemas",
@@ -113,7 +113,7 @@
         "Necesitas marcos para el uso ético de la IA en entornos K-12"
       ],
       "whatIBring": [
-        "Actualmente gestionando SceneCraft, una plataforma de aprendizaje impulsada por LLM en NC State",
+        "Actualmente gestionando SceneCraft, una plataforma de aprendizaje impulsada por LLM en NC State como parte del EngageAI Institute financiado por la NSF",
         "Diseñé marcos de IA con el profesor en el centro e ingeniería de prompts para educadores",
         "Formé a más de 500 profesores en tecnología educativa y pensamiento computacional",
         "Comprensión profunda de qué hace que las herramientas de IA sean realmente útiles para los profesores vs. software sin uso"
@@ -260,6 +260,8 @@
         "role": "Research Scholar y Product Manager",
         "organization": "NC State University, Friday Institute for Educational Innovation",
         "timeline": "Marzo 2025 - Presente",
+        "funding": "EngageAI Institute financiado por la NSF",
+        "fundingUrl": "https://engageai.org",
         "challenge": "Construir una plataforma de narración impulsada por IA que ayude a los estudiantes a aprender mediante narrativas mientras mantiene a los profesores en control de los resultados educativos.",
         "whatIDid": [
           "Sirvo como gestor de producto y proyecto para plataforma LLM basada en Unity",
@@ -349,7 +351,7 @@
         "title": "Research Scholar",
         "org": "NC State University, Friday Institute for Educational Innovation",
         "dates": "Mar 2025 - Presente",
-        "description": "Liderando la gestión de producto y proyecto para SceneCraft, una plataforma educativa de narración impulsada por IA. Alineando investigación, diseño y colaboración con stakeholders para crear soluciones de aprendizaje informadas por datos para estudiantes y educadores K-12."
+        "description": "Liderando la gestión de producto y proyecto para SceneCraft, una plataforma educativa de narración impulsada por IA, como parte del EngageAI Institute financiado por la NSF. Alineando investigación, diseño y colaboración con stakeholders para crear soluciones de aprendizaje informadas por datos para estudiantes y educadores K-12."
       },
       "csforall": {
         "title": "Director del Programa SCRIPT",
