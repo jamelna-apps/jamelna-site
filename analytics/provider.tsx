@@ -9,7 +9,7 @@ interface AnalyticsProviderProps {
   children: React.ReactNode
 }
 
-export function AnalyticsProvider({ projectId, children }: AnalyticsProviderProps): JSX.Element {
+export function AnalyticsProvider({ projectId, children }: AnalyticsProviderProps): React.ReactNode {
   const pathname = usePathname()
   const lastPath = useRef<string>('')
 
