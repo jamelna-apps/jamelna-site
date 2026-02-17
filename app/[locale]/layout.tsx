@@ -5,6 +5,7 @@ import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { locales } from '@/i18n';
+import { AnalyticsProvider } from '@/analytics';
 import "../globals.css";
 
 // Display font - bold and geometric for headlines
@@ -83,14 +84,16 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="antialiased bg-deep text-white font-body">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <a href="#main-content" className="skip-link">
-            Skip to main content
-          </a>
-          <Navigation />
-          <main id="main-content" className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
+          <AnalyticsProvider projectId="jamelna">
+            <a href="#main-content" className="skip-link">
+              Skip to main content
+            </a>
+            <Navigation />
+            <main id="main-content" className="min-h-screen">
+              {children}
+            </main>
+            <Footer />
+          </AnalyticsProvider>
         </NextIntlClientProvider>
       </body>
     </html>
