@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "AI Education Pioneer",
-        "description": "From managing SceneCraft (AI storytelling platform) to training 500+ teachers in STEM, Computer Science, Computational Thinking, and responsible AI use, I translate cutting-edge AI into practical classroom impact."
+        "description": "From building AI-powered learning platforms to training 500+ teachers in STEM, Computer Science, Computational Thinking, and responsible AI use, I translate cutting-edge AI into practical classroom impact."
       },
       "systemsDesigner": {
         "title": "Systems Designer",
@@ -53,10 +53,6 @@
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "Goal Tracking Platform"
-        },
-        "scenecraft": {
-          "title": "SceneCraft",
-          "subtitle": "AI-Powered Learning Platform"
         },
         "script": {
           "title": "SCRIPT",

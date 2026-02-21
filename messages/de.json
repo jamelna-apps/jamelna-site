@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "KI-Bildungspionier",
-        "description": "Von der Leitung von SceneCraft (KI-Storytelling-Plattform) bis zur Schulung von über 500 Lehrkräften in MINT, Informatik, Computational Thinking und verantwortungsvollem Einsatz von KI übersetze ich modernste KI in praktische Auswirkungen im Klassenzimmer."
+        "description": "Von der Entwicklung KI-gestützter Lernplattformen bis zur Schulung von über 500 Lehrkräften in MINT, Informatik, Computational Thinking und verantwortungsvollem Einsatz von KI übersetze ich modernste KI in praktische Auswirkungen im Klassenzimmer."
       },
       "systemsDesigner": {
         "title": "Systemdesigner",
@@ -49,10 +49,6 @@
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "Zielverfolgungsplattform"
-        },
-        "scenecraft": {
-          "title": "SceneCraft",
-          "subtitle": "KI-gestützte Lernplattform"
         },
         "script": {
           "title": "SCRIPT",

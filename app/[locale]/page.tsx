@@ -68,7 +68,6 @@ export default function Home() {
   const projects = [
     { key: 'gyst', anchor: 'gyst-get-your-style-together' },
     { key: 'smartiegoals', anchor: 'smartiegoals-org' },
-    { key: 'scenecraft', anchor: 'scenecraft' },
     { key: 'script', anchor: 'script' },
     { key: 'cs4all', anchor: 'nyc-cs4all' },
     { key: 'coaching', anchor: 'cs-coaching-toolkit' },

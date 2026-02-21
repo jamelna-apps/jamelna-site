@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "人工智能教育先驱",
-        "description": "从管理SceneCraft（人工智能叙事平台）到培训500多名教师的STEM、计算机科学、计算思维和负责任的人工智能使用，我将前沿人工智能转化为实际的课堂影响。"
+        "description": "从构建人工智能学习平台到培训500多名教师的STEM、计算机科学、计算思维和负责任的人工智能使用，我将前沿人工智能转化为实际的课堂影响。"
       },
       "systemsDesigner": {
         "title": "系统设计师",
@@ -49,10 +49,6 @@
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "目标跟踪平台"
-        },
-        "scenecraft": {
-          "title": "SceneCraft",
-          "subtitle": "人工智能学习平台"
         },
         "script": {
           "title": "SCRIPT",

@@ -26,7 +26,7 @@
       },
       "aiPioneer": {
         "title": "Pioneiro em Educação AI",
-        "description": "Desde a gestão da SceneCraft (plataforma de narrativa com AI) até à formação de mais de 500 professores em STEM, Ciência da Computação, Pensamento Computacional e uso responsável de AI, traduzo AI de ponta em impacto prático na sala de aula."
+        "description": "Desde a criação de plataformas de aprendizagem com AI até à formação de mais de 500 professores em STEM, Ciência da Computação, Pensamento Computacional e uso responsável de AI, traduzo AI de ponta em impacto prático na sala de aula."
       },
       "systemsDesigner": {
         "title": "Designer de Sistemas",
@@ -49,10 +49,6 @@
         "smartiegoals": {
           "title": "SMARTIEgoals",
           "subtitle": "Plataforma de Acompanhamento de Objetivos"
-        },
-        "scenecraft": {
-          "title": "SceneCraft",
-          "subtitle": "Plataforma de Aprendizagem com AI"
         },
         "script": {
           "title": "SCRIPT",
