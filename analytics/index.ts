@@ -1,3 +1,5 @@
 export { AnalyticsProvider } from './provider'
 export { handleAnalytics } from './api-route'
-export type { AnalyticsEvent, AnalyticsSession, AnalyticsPayload, GeoData } from './types'
+export { handleCspReport } from './csp-route'
+export { handleSecurityEvent } from './security-events-route'
+export type { AnalyticsEvent, AnalyticsSession, AnalyticsPayload, GeoData, SecuritySignals, SecurityEvent, SecurityEventType, SecuritySeverity } from './types'

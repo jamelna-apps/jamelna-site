@@ -51,4 +51,27 @@ export interface AnalyticsPayload {
   screenHeight: number
   language: string
   timezone: string
+  security?: SecuritySignals
+}
+
+// Security monitoring types
+
+export interface SecuritySignals {
+  isBot: boolean
+  webdriver: boolean
+  pluginCount: number
+  hasChrome: boolean
+  screenConsistent: boolean
+  touchSupport: boolean
+}
+
+export type SecurityEventType = 'path_probe' | 'attack_pattern' | 'bot_detected' | 'csp_violation' | 'client_error' | 'rate_limit'
+export type SecuritySeverity = 'low' | 'medium' | 'high' | 'critical'
+
+export interface SecurityEvent {
+  type: SecurityEventType
+  severity: SecuritySeverity
+  detail: string
+  fingerprint?: string
+  path?: string
 }

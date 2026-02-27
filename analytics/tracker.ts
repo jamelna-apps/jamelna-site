@@ -1,6 +1,7 @@
 'use client'
 
 import type { AnalyticsPayload } from './types'
+import { collectSecuritySignals } from './security'
 
 let sessionId: string | null = null
 
@@ -63,6 +64,9 @@ export async function trackPageview(projectId: string, path: string): Promise<vo
     const { browser, os, deviceType } = parseUA()
     const fingerprint = await generateFingerprint()
 
+    let security
+    try { security = collectSecuritySignals() } catch { /* silent */ }
+
     const payload: AnalyticsPayload = {
       sessionId: getSessionId(),
       fingerprint,
@@ -74,7 +78,8 @@ export async function trackPageview(projectId: string, path: string): Promise<vo
       screenWidth: screen.width,
       screenHeight: screen.height,
       language: navigator.language,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      security
     }
 
     // Use sendBeacon for reliability, fall back to fetch
