@@ -1,5 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { createServerClient } from '@supabase/ssr';
+import { blockProbes } from '@/analytics/middleware';
 import { locales, defaultLocale } from './i18n';
 
 const intlMiddleware = createMiddleware({
@@ -14,6 +15,10 @@ const intlMiddleware = createMiddleware({
 });
 
 export async function proxy(request: Request) {
+  // Block known probe paths at the edge
+  const blocked = blockProbes(request as any);
+  if (blocked) return blocked;
+
   // Create a response from the intl middleware
   const response = intlMiddleware(request as Parameters<typeof intlMiddleware>[0]);
 
