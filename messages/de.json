@@ -61,6 +61,14 @@
         "coaching": {
           "title": "CS Coaching Toolkit",
           "subtitle": "Nationale Ressource"
+        },
+        "foreverybomb": {
+          "title": "ForEveryBomb",
+          "subtitle": "Kriegskosten-Tracker"
+        },
+        "earthsim": {
+          "title": "Earth Simulator",
+          "subtitle": "Konzeptkunst-Installation"
         }
       }
     },
@@ -68,7 +76,8 @@
       "title": "Lassen Sie Uns Zusammenarbeiten",
       "description": "Ob Sie ein EdTech-Unternehmen sind, das neue Märkte navigiert, eine Schule, die innovative Tools implementiert, oder eine Organisation, die Partnerschaften zwischen Gemeinschaften aufbaut – ich bringe praktische Erfahrung in der Verbindung verschiedener Interessengruppen und einen kollaborativen Ansatz mit.",
       "button": "Kontakt Aufnehmen"
-    }
+    },
+    "coreExpertise": "Kernkompetenzen"
   },
   "footer": {
     "tagline": "Bildungstechnologie-Berater",
@@ -77,7 +86,8 @@
     "connect": "Verbinden",
     "aboutSite": "Über Diese Website",
     "siteDescription": "Erstellt mit Next.js, React und Tailwind CSS unter Verwendung von KI-gestützter Entwicklung (Claude CLI). Diese Website selbst demonstriert meinen Ansatz zur Nutzung von KI-Tools für praktische Ergebnisse.",
-    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. Alle Rechte vorbehalten."
+    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzerklärung"
   },
   "services": {
     "title": "Dienstleistungen",
@@ -159,24 +169,49 @@
         "role": "Gründer & Entwickler",
         "organization": "Unabhängiges Projekt",
         "timeline": "2024 - Heute",
-        "challenge": "Entwicklung einer mobilen App, die neu definiert, wie Menschen ihre Garderobe verwalten, während sie aktiv lokale Wirtschaften, ökologische Nachhaltigkeit und Second-Hand-Märkte unterstützen - und beweist, dass Technologie bedeutsame Veränderungen im Konsumverhalten bewirken kann.",
+        "challenge": "Eine kostenlose mobile App entwickeln, die Menschen hilft, ihren Kleiderschrank zu digitalisieren, KI-gestützte Outfit-Vorschläge zu erhalten und lokal über einen Peer-to-Peer-Marktplatz zu verkaufen — und dabei zeigt, dass Technologie nachhaltige Mode vorantreiben und gleichzeitig lokale Wirtschaften stärken kann.",
         "whatIDid": [
-          "Entwurf und Entwicklung einer Full-Stack React Native Mobile-Anwendung mit KI-gestützten Stilempfehlungen",
-          "Aufbau des SwapMeet-Marktplatzes für Peer-to-Peer Kleidungstausch und -verkauf innerhalb lokaler Gemeinschaften",
-          "Erstellung der ThriftShop-Integration zur Verbindung von Nutzern mit lokalen Second-Hand-Läden durch standortbasierte Entdeckung",
-          "Implementierung von nur-lokalen Transaktionen (kein Versand) zur Reduzierung des CO2-Fußabdrucks und Unterstützung der Nachbarschaftswirtschaft",
-          "Entwicklung von nähebasierter Filterung zur Priorisierung nahegelegener Verkäufer und Geschäfte",
-          "Integration von Claude AI für personalisierte Outfit-Vorschläge, die die Nutzung vorhandener Kleidungsstücke maximieren",
-          "Aufbau eines Gamification-Systems, das nachhaltige Entscheidungen und Second-Hand-Käufe belohnt"
+          "Full-Stack React Native Mobile-Anwendung mit Kernfunktionen entwickelt: Garderobenverwaltung, KI-Outfit-Vorschläge, SwapMeet-Marktplatz und Garderobe-Analytik",
+          "SwapMeet-Marktplatz mit Peer-to-Peer-Kleidungsverkäufen, QR-verifizierten lokalen Treffen, einer Pauschalgebühr von 8% und ohne Versand aufgebaut — Verkäufer behalten 92%",
+          "Gemini AI für personalisierte Outfit-Vorschläge basierend auf Wetter, Anlass und Garderobeninhalt integriert",
+          "Garderobe-Analytik-Dashboard mit Nutzungsmustern, Kosten-pro-Nutzung-Metriken, Lückenerkennung und Nachhaltigkeitsauswirkung entwickelt",
+          "Kapselgarderobe-Funktion für Reise- und Saisonplanung entwickelt",
+          "Als komplett kostenlose App ohne Abonnements oder Paywalls in den iOS- und Android-Stores veröffentlicht"
         ],
-        "impact": "Erstellung einer Plattform, die auf der Philosophie basiert, dass nachhaltige Mode lokale Gemeinschaften stärken sollte, nicht nur Abfall reduzieren. Durch die Gestaltung von Technologie, die Second-Hand-Shopping bequem und sozial macht, zeigt GYST, wie Apps das Konsumverhalten in Richtung umweltbewusster Entscheidungen lenken können, während das Geld in lokalen Wirtschaften zirkuliert.",
-        "skills": "React Native, Expo, Firebase, Claude AI Integration, Geolokalisierungsdienste, Peer-to-Peer Marktplatz-Design, nachhaltige Tech-Architektur, UI/UX Design",
-        "website": "http://gyst.store",
+        "impact": "Eine Plattform geschaffen, die auf der Philosophie basiert, dass nachhaltige Mode lokale Gemeinschaften stärken sollte, nicht nur Abfall reduzieren. GYST zeigt, wie Apps das Konsumverhalten in Richtung umweltbewusster Entscheidungen lenken können, während das Geld in lokalen Wirtschaften zirkuliert. Verfügbar im iOS- und Android-Store.",
+        "skills": "React Native, Expo, Firebase, Gemini AI Integration, Geolokalisierungsdienste, Peer-to-Peer Marktplatz-Design, QR-Code-Verifizierung, nachhaltige Tech-Architektur, UI/UX Design",
+        "website": "https://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
-        ]
+        ],
+        "category": "products"
+      },
+      {
+        "title": "CoachDesk",
+        "role": "Gründer & Entwickler",
+        "organization": "Unabhängiges Projekt",
+        "timeline": "2025 - Heute",
+        "challenge": "Einen kostenlosen Arbeitsbereich für K-12-Lehrbeauftragte entwickeln, in dem sie Lehrerbeziehungen verwalten, Ziele verfolgen, Artefakte sammeln und schulübergreifend koordinieren können — mit Datenschutzkontrollen, die dem vertrauensbasierten Wesen des Coachings gerecht werden.",
+        "whatIDid": [
+          "Full-Stack Next.js-Webanwendung mit rollenbasierter Zugriffskontrolle für Coaches, Lehrkräfte und Administratoren entworfen und entwickelt",
+          "Umfassendes Datenmodell aufgebaut, das Bezirks-/Schul-/Lehrerhierarchien, Coaching-Zyklen, Ziele, Check-ins und Notizen unterstützt",
+          "Privacy-First-Architektur implementiert: Lehrkräfte steuern, was Administratoren sehen, mit Sichtbarkeitsindikatoren und FERPA/COPPA-Konformität",
+          "Lehrer-Einladungssystem mit sicherem tokenbasiertem Onboarding erstellt",
+          "Artefaktsammelsystem für Fotos, Dokumente und Schülerarbeiten mit automatischer Organisation aufgebaut",
+          "Warme, zugängliche Benutzeroberfläche mit Terrakotta-Farbpalette für Bildungsfachleute gestaltet",
+          "Kostenloses Kontingent gestartet, das bis zu 10 Lehrkräfte, 500 Artefakte und unbegrenzte Ziele und Check-ins unterstützt — ohne Kreditkarte"
+        ],
+        "impact": "Ein zweckorientiertes Tool für Lehrbeauftragte geschaffen, die derzeit auf Tabellenkalkulationen und verstreute Dokumente angewiesen sind. CoachDesk zentralisiert Lehrerverfolgung, Artefakte und Berichte und respektiert dabei durch transparente Datenschutzkontrollen die vertrauensbasierte Natur von Coaching-Beziehungen. Kostenlos für einzelne Coaches.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, rollenbasierte Zugriffskontrolle, Privacy-First-Architektur, Artefaktverwaltung, Bildungstechnologie",
+        "images": [
+          "/images/screenshots/coachdesk/home.png",
+          "/images/screenshots/coachdesk/features.png",
+          "/images/screenshots/coachdesk/login.png"
+        ],
+        "website": "https://getcoachdesk.com",
+        "category": "products"
       },
       {
         "title": "CodeTale",
@@ -201,30 +236,33 @@
           "/images/screenshots/codetale/create.png",
           "/images/screenshots/codetale/learn.png"
         ],
-        "website": "https://codetale.jamelna.com"
+        "website": "https://codetale.jamelna.com",
+        "category": "products"
       },
       {
         "title": "SMARTIEgoals.org",
         "role": "Gründer & Entwickler",
         "organization": "Unabhängiges Projekt",
         "timeline": "2024 - Heute",
-        "challenge": "Entwicklung einer Zielverfolgungsplattform, die Nutzern hilft, persönliche und berufliche Ziele durch strukturierte Meilensteine und Fortschrittsverfolgung zu setzen, zu überwachen und zu erreichen.",
+        "challenge": "Eine kostenlose KI-gestützte Zielsetzungsplattform mit dem SMARTIE-Framework entwickeln — Ziele, die Spezifisch, Messbar, Erreichbar, Relevant, Zeitgebunden, Inklusiv und Gerecht sind — mit sofortigem KI-Coaching und visueller Fortschrittsverfolgung.",
         "whatIDid": [
-          "Entwicklung einer Next.js-Webanwendung mit moderner React-Architektur",
-          "Design eines Zielhierarchiesystems mit Hauptzielen und Untermeilensteinen",
-          "Implementierung der Fortschrittsverfolgung mit visuellen Indikatoren und Abschlussprozentsätzen",
-          "Erstellung einer responsiven Benutzeroberfläche mit Tailwind CSS für optimale Nutzererfahrung",
-          "Integration von Authentifizierung und Datenpersistenz",
-          "Entwicklung eines Dashboards für umfassende Zielübersicht"
+          "Next.js-Webanwendung mit KI-Ziel-Coach auf Basis von Gemini entwickelt, der Nutzern durch natürliche Konversation beim Strukturieren von Zielen hilft",
+          "Das SMARTIE-Framework konzipiert, das traditionelle SMART-Ziele um Inklusions- und Gerechtigkeitsdimensionen erweitert",
+          "Sofortigen Zielgenerator auf der Startseite erstellt — kein Login erforderlich, KI strukturiert beliebige Ziele in Sekunden",
+          "Visuelle Fortschrittsverfolgung mit Diagrammen, Abschlussprozentsätzen und Meilensteinübersichten implementiert",
+          "Intelligente Analytik entwickelt, die personalisierte Einblicke in Zielmuster und Erfolgstrends liefert",
+          "Google-, Apple- und E-Mail-Authentifizierung mit Firebase integriert",
+          "Als komplett kostenlose Anwendung mit unbegrenzten Zielen und ohne Kreditkarte bereitgestellt"
         ],
-        "impact": "Schaffung eines zugänglichen Tools für Zielmanagement, das ehrgeizige Ziele in umsetzbare Schritte unterteilt und langfristige Erfolge erreichbarer macht.",
-        "skills": "Next.js, React, TypeScript, Tailwind CSS, Responsive Design, Full-Stack-Entwicklung, Datenmodellierung",
+        "impact": "Ein KI-gestütztes Coaching-Tool geschaffen, das strukturiertes Zielesetzen für alle zugänglich macht. Durch die Erweiterung des SMART-Frameworks um Gerechtigkeits- und Inklusionsdimensionen ermutigt SMARTIEgoals Nutzer, Ziele zu setzen, die nicht nur ihnen selbst, sondern auch ihren Gemeinschaften zugutekommen.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Firebase, Gemini AI Integration, Authentifizierung (Google/Apple/E-Mail), Datenvisualisierung, Zielwissenschaftsmethodik",
         "images": [
           "/images/screenshots/smartiegoals/home.png",
           "/images/screenshots/smartiegoals/dashboard.png",
           "/images/screenshots/smartiegoals/goal-detail.png"
         ],
-        "website": "https://smartiegoals.org"
+        "website": "https://smartiegoals.org",
+        "category": "products"
       },
       {
         "title": "Spread Your Ashes",
@@ -246,10 +284,59 @@
         "images": [
           "/images/screenshots/spread-your-ashes/home.png",
           "/images/screenshots/spread-your-ashes/explore.png",
-          "/images/screenshots/spread-your-ashes/gallery.png",
-          "/images/screenshots/spread-your-ashes/about.png"
+          "/images/screenshots/spread-your-ashes/gallery.png"
         ],
-        "website": "https://spreadyourashes.com"
+        "website": "https://spreadyourashes.com",
+        "category": "creative"
+      },
+      {
+        "title": "ForEveryBomb",
+        "role": "Ersteller & Entwickler",
+        "organization": "Unabhängiges Projekt",
+        "timeline": "2026 - Heute",
+        "challenge": "Erstellung eines Echtzeit-Trackers zur Visualisierung der Kosten US-amerikanischer Militäroperationen, der abstrakte Verteidigungsausgaben durch Pro-Kopf-Aufschlüsselungen, Live-Zähler und kontextuelle Vergleiche mit Sozialprogrammen greifbar macht.",
+        "whatIDid": [
+          "Next.js-Webanwendung mit Echtzeit-Ausgabenzähler entwickelt, der alle 5 Minuten aus verifiziertem Journalismus aktualisiert wird",
+          "Automatisierte tägliche Datenpipeline mit Vercel Cron Jobs aufgebaut, um Ausgabenereignisse zu verfolgen, zu kategorisieren und zu aggregieren",
+          "Claude AI-gestützten Nachrichten-Checker zur Identifizierung und Kategorisierung neuer Militärausgabenberichte implementiert",
+          "Opportunitätskostenrechner mit Bundesstaatsfilterung erstellt, der zeigt, was das Geld hätte finanzieren können: Lehrergehälter, Wohnungen, Gesundheitsversorgung, Schulmahlzeiten",
+          "Ausgabenaufschlüsselung nach Kategorie (Munition, Operationen, Sonstiges) mit tagesgenauem Hauptbuch aufgebaut, das Quelljournalismus zitiert",
+          "Eigene Analytik- und Sicherheitsüberwachungs-Pipeline entwickelt",
+          "Mit benutzerdefinierter Domain und automatisierten täglichen Updates in Produktion bereitgestellt"
+        ],
+        "impact": "Eine zugängliche Datenvisualisierung geschaffen, die abstrakte Militärausgaben in persönliche, nachvollziehbare Zahlen verwandelt. Indem gezeigt wird, was die täglichen Ausgaben in Bildung, Wohnraum und Gesundheit hätten finanzieren können — nach Bundesstaat filterbar — macht das Projekt Fiskalpolitik greifbar und lädt zu bürgerschaftlichem Engagement ein.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Firebase, Vercel Cron, Claude AI Integration, Echtzeit-Datenvisualisierung, automatisierte Datenpipelines",
+        "images": [
+          "/images/screenshots/foreverybomb/home.png",
+          "/images/screenshots/foreverybomb/counter.png",
+          "/images/screenshots/foreverybomb/timeline.png"
+        ],
+        "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Earth Simulation Control Panel",
+        "role": "Schöpfer & Entwickler",
+        "organization": "Konzeptkunst-Projekt",
+        "timeline": "2026 - Heute",
+        "challenge": "Erstellung eines konzeptuellen Kunstwerks, das die Frage erforscht: Wie würde die Steuerungskonsole aussehen, wenn die Erde eine Simulation wäre? Ein Einzelseiten-Erlebnis im Stil eines geheimen Regierungsterminals, das alle 'Einstellungen' zeigt, die unsere aktuelle Realität erzeugen.",
+        "whatIDid": [
+          "Entwurf und Bau einer brutalistischen Terminal-Oberfläche mit CRT-Scanline-Effekten, Geheimhaltungsstempeln und Operatorprotokollen",
+          "Erstellung von 8 interaktiven Kontrollabschnitten zu physikalischen Konstanten, geologischem Klima, biologischen Parametern, Zivilisationseinstellungen, geopolitischer Konfiguration, sozialen Parametern, Ressourcenverteilung und Simulationsmetadaten",
+          "Aufbau von Echtzeit-Datenvisualisierungen einschließlich einer Braille-Zeichen-Weltkarte, die aus Natural Earth-Vektoren gerastert wurde, Live-Bevölkerungs- und CO₂-Ticker, Ressourcenverbrauchsanzeigen und Vermögensverteilungsbalken",
+          "Implementierung interaktiver Steuerungen mit Vorhängeschloss-Mechanik und Konsequenzmeldungen bei Parameteränderungen",
+          "Verfassen dunkel-humorvoller Operatorprotokolleinträge in der Stimme außerirdischer Simulationsadministratoren",
+          "Entwicklung zusammenklappbarer Abschnitte mit fixierter Navigation für das dichte Einzelseiten-Layout"
+        ],
+        "impact": "Erstellung eines immersiven digitalen Kunsterlebnisses, das die vertraute Sprache von Steuerungskonsolen und Geheimdokumenten nutzt, um unsere Sicht auf die Welt neu zu rahmen. Durch die Darstellung realer Erddaten als 'Simulationsparameter' lädt das Projekt zur Reflexion über die willkürliche, fragile und manchmal absurde Natur unserer planetaren Konfiguration ein.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Unicode-Braille-Visualisierung, Echtzeit-Datenanimation, CRT/Terminal-UI-Design, kreatives Schreiben, Konzeptkunst",
+        "images": [
+          "/images/screenshots/earth-simulator/home.png",
+          "/images/screenshots/earth-simulator/telemetry.png",
+          "/images/screenshots/earth-simulator/controls.png"
+        ],
+        "website": "https://earth.jamelna.com",
+        "category": "creative"
       },
       {
         "title": "SceneCraft",
@@ -267,7 +354,8 @@
           "Verwaltung der Entwicklungs-Roadmap mit Ziel von 25.000 Schülernutzern bis 2026"
         ],
         "impact": "Aufbau eines Pädagogen-Netzwerks, das von Pilot-Schulen zu landesweiter Einführung skaliert. Entwicklung verantwortungsvoller KI-Frameworks, die jetzt die staatliche KI-Bildungs-Roadmap von North Carolina informieren.",
-        "skills": "KI-Produktentwicklung, LLM-Design, Nutzerforschung, Funktionsübergreifende Führung, Frameworks für verantwortungsvolle KI"
+        "skills": "KI-Produktentwicklung, LLM-Design, Nutzerforschung, Funktionsübergreifende Führung, Frameworks für verantwortungsvolle KI",
+        "category": "professional"
       },
       {
         "title": "SCRIPT",
@@ -283,7 +371,8 @@
           "Entwicklung datengesteuerter Evaluierungsinstrumente zur Verfolgung des Bezirksfortschritts"
         ],
         "impact": "Über 50 Schulbezirke in den USA nutzten das SCRIPT-Framework zur Erstellung gerechtigkeitsorientierter Informatik-Pläne. Schulung von über 30 Facilitators, die jetzt Bezirke landesweit unterstützen.",
-        "skills": "Framework-Design, Nationale Programmskalierung, Partnerschaftsmanagement, Facilitator-Schulung, Datensysteme"
+        "skills": "Framework-Design, Nationale Programmskalierung, Partnerschaftsmanagement, Facilitator-Schulung, Datensysteme",
+        "category": "professional"
       },
       {
         "title": "NYC CS4All",
@@ -299,7 +388,8 @@
           "Leitung von Gerechtigkeitsinitiativen zur Erhöhung der Beteiligung von Mädchen und Schülern of Color"
         ],
         "impact": "Tausende von Schülern, die zuvor keinen Zugang zu Informatik-Bildung hatten, erhielten Wege zur Informatik. Schaffung eines nachhaltigen Modells für bezirksweite Informatik-Integration.",
-        "skills": "Großflächiges Programmmanagement, Berufliche Weiterentwicklung für Lehrkräfte, Gerechtigkeitsorientiertes Design, Stakeholder-Management"
+        "skills": "Großflächiges Programmmanagement, Berufliche Weiterentwicklung für Lehrkräfte, Gerechtigkeitsorientiertes Design, Stakeholder-Management",
+        "category": "professional"
       },
       {
         "title": "CS Coaching Toolkit",
@@ -315,9 +405,16 @@
           "Beratung von Universitäten und Bezirken zur Informatik-Programmintegration"
         ],
         "impact": "Toolkit landesweit als Schlüsselressource für Informatik-Coaches übernommen. Beeinflussung der Coaching-Praxis in mehreren Bundesstaaten und Bezirken.",
-        "skills": "Ressourcenentwicklung, Framework-Design, Berufsbildungsdesign, Mehrstaatliche Partnerschaften"
+        "skills": "Ressourcenentwicklung, Framework-Design, Berufsbildungsdesign, Mehrstaatliche Partnerschaften",
+        "category": "professional"
       }
-    ]
+    ],
+    "sectionProfessional": "Berufserfahrung",
+    "sectionProfessionalDesc": "Positionen, in denen ich Programme leitete, Teams führte und Politik im großen Maßstab gestaltete.",
+    "sectionProducts": "Produkte, die ich entwickelt habe",
+    "sectionProductsDesc": "Unabhängige Apps und Tools — entworfen, entwickelt und veröffentlicht.",
+    "sectionCreative": "Kreative Projekte",
+    "sectionCreativeDesc": "Kunst und konzeptionelle Arbeiten, die Technologie, Erinnerung und Bedeutung erforschen."
   },
   "about": {
     "title": "Über Mich",
@@ -788,5 +885,52 @@
         "button": "Kontakt Aufnehmen"
       }
     }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: März 2026",
+    "intro": "Diese Website ist ein persönliches Beratungsportfolio und ein K-12-Informatik-Bildungswerkzeug. Diese Richtlinie erklärt, welche Daten erhoben werden, wie sie verwendet werden und welche Rechte Sie als Besucher haben. Wir halten es einfach und erheben nur, was wirklich notwendig ist.",
+    "collectTitle": "Was Wir Erheben",
+    "collectAnalyticsLabel": "Analyse",
+    "collectAnalytics": "Wir erheben grundlegende, anonymisierte Seitenbesuchsdaten, wie besuchte Seiten, Referenzquelle und allgemeine geografische Region. Diesen Aufzeichnungen sind keine personenbezogenen Daten zugeordnet. Die Daten werden in unserer eigenen Firestore-Datenbank gespeichert und nicht an eine dritte Analyseplattform weitergegeben.",
+    "collectAILabel": "KI-Gespräche (K-12-Tool)",
+    "collectAI": "Wenn Sie das K-12-Lehrplanplanungstool verwenden, werden Ihre Eingaben (Schulbezirkskontext, Klassenstufen, Ziele) an die Claude-API von Anthropic gesendet, um einen Lehrplan zu erstellen. Diese Eingaben werden in Echtzeit verarbeitet und nach der Rückgabe der Antwort nicht auf unseren Servern gespeichert.",
+    "collectContactLabel": "Kontaktformular",
+    "collectContact": "Wenn Sie das Kontaktformular absenden, erheben wir Ihren Namen, Ihre E-Mail-Adresse und Ihre Nachricht. Diese Informationen werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet.",
+    "useTitle": "Wie Wir Es Verwenden",
+    "useIntro": "Die auf dieser Website erhobenen Daten werden nur für folgende Zwecke verwendet:",
+    "use1": "Verstehen, wie Besucher die Website navigieren, um Inhalte und Benutzerfreundlichkeit zu verbessern",
+    "use2": "Echtzeit-Erstellung von KI-gestützten Lehrplänen für K-12-Lehrkräfte",
+    "use3": "Beantwortung von Anfragen, die über das Kontaktformular eingereicht werden",
+    "use4": "Erkennung und Verhinderung von missbräuchlichem oder bösartigem Datenverkehr",
+    "thirdPartyTitle": "Drittanbieter-Dienste",
+    "thirdPartyIntro": "Diese Website nutzt folgende Drittanbieter-Dienste. Jeder hat seine eigene Datenschutzrichtlinie, die unten verlinkt ist.",
+    "tpAnthropicLabel": "Anthropic (Claude KI)",
+    "tpAnthropic": "Betreibt das K-12-Lehrplanplanungstool. Eingaben werden zur Verarbeitung an die Anthropic-API gesendet. Anthropic kann Daten gemäß seinen Nutzungsrichtlinien aufbewahren.",
+    "tpFirebaseLabel": "Firebase / Firestore (Google)",
+    "tpFirebase": "Wird zur Speicherung anonymisierter Analysedaten verwendet. Daten werden in der Google Cloud-Infrastruktur unter dem Firebase-Projekt von jamelna.com gespeichert.",
+    "tpSupabaseLabel": "Supabase",
+    "tpSupabase": "Wird als Datenspeicher für bestimmte Website-Funktionen verwendet. Supabase speichert Daten auf AWS-Infrastruktur in den USA.",
+    "tpSanityLabel": "Sanity",
+    "tpSanity": "Wird als Content-Management-System für Website-Inhalte verwendet. Sanity speichert Inhaltsdaten in seiner Cloud-Infrastruktur.",
+    "tpVercelLabel": "Vercel",
+    "tpVercel": "Wird zum Hosten und Bereitstellen dieser Website verwendet. Vercel kann Anfrage-Metadaten (IP-Adressen, User Agents) aus Sicherheits- und Leistungsgründen protokollieren.",
+    "cookiesTitle": "Cookies",
+    "cookiesIntro": "Diese Website verwendet eine minimale Anzahl von Cookies:",
+    "cookie1": "Sitzungs-Cookie — behält den Zustand während eines einzelnen Besuchs bei. Wird beim Schließen des Browsers gelöscht.",
+    "cookie2": "Sprach-Cookie — speichert Ihre Sprachpräferenz für zukünftige Besuche.",
+    "cookiesNote": "Wir verwenden keine Werbe-Cookies, Tracking-Pixel oder sonstige websiteübergreifende Tracking-Technologien.",
+    "retentionTitle": "Datenspeicherung",
+    "retention1": "Anonymisierte Analysedaten werden bis zu 12 Monate aufbewahrt und dann gelöscht. Kontaktformular-Einsendungen werden nur so lange aufbewahrt, wie für die Beantwortung Ihrer Anfrage erforderlich.",
+    "retention2": "KI-Gesprächseingaben, die an das K-12-Tool gesendet werden, werden nach der Verarbeitung nicht gespeichert. Auf unseren Servern werden keine Sitzungsdaten der Lehrplanung aufbewahrt.",
+    "rightsTitle": "Ihre Rechte",
+    "rightsIntro": "Wenn Sie sich in der EU oder einer anderen Jurisdiktion mit Datenschutzgesetzen befinden, haben Sie folgende Rechte:",
+    "right1": "Auskunft — Anforderung einer Kopie der personenbezogenen Daten, die wir über Sie besitzen",
+    "right2": "Löschung — Anforderung der Löschung Ihrer Daten",
+    "right3": "Berichtigung — Anforderung der Korrektur ungenauer Daten",
+    "right4": "Datenübertragbarkeit — Anforderung Ihrer Daten in einem portablen Format",
+    "right5": "Widerspruch — Widerspruch gegen bestimmte Verwendungen Ihrer Daten",
+    "contactTitle": "Fragen?",
+    "contactText": "Bei Fragen zu dieser Datenschutzerklärung oder wenn Sie Ihre Datenschutzrechte ausüben möchten, wenden Sie sich an:"
   }
 }

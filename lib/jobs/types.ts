@@ -89,6 +89,42 @@ export interface Job {
   applicationDeadline?: string;
   deadlineCalendarEventId?: string;
   lastInterviewDate?: string;
+  applicationData?: ApplicationData;
+}
+
+export interface TimelineEvent {
+  status: JobStatus;
+  timestamp: string;
+  notes?: string;
+}
+
+export interface FollowUp {
+  id: string;
+  date: string;
+  type: 'email' | 'call' | 'message';
+  notes: string;
+  createdAt: string;
+}
+
+export interface InterviewNote {
+  id: string;
+  date: string;
+  type: 'phone' | 'video' | 'onsite' | 'technical';
+  notes: string;
+  interviewers?: string[];
+  createdAt: string;
+}
+
+export interface ApplicationData {
+  appliedDate: string;
+  submittedVia: 'company_site' | 'linkedin' | 'email' | 'other';
+  resumeId?: string;
+  resumeName?: string;
+  coverLetter?: string;
+  notes?: string;
+  timeline: TimelineEvent[];
+  followUps: FollowUp[];
+  interviewNotes: InterviewNote[];
 }
 
 export interface Application {

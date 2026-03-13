@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { getAllPathways, type Pathway } from '@/data/pathways';
+import { getAllPathways } from '@/data/pathways';
 
 interface PathwayCrossLinksProps {
   currentTrack: string;

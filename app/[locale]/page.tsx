@@ -66,11 +66,12 @@ export default function Home() {
   ];
 
   const projects = [
-    { key: 'gyst', anchor: 'gyst-get-your-style-together' },
-    { key: 'smartiegoals', anchor: 'smartiegoals-org' },
     { key: 'script', anchor: 'script' },
     { key: 'cs4all', anchor: 'nyc-cs4all' },
-    { key: 'coaching', anchor: 'cs-coaching-toolkit' },
+    { key: 'gyst', anchor: 'gyst-get-your-style-together' },
+    { key: 'coachdesk', anchor: 'coachdesk' },
+    { key: 'smartiegoals', anchor: 'smartiegoals-org' },
+    { key: 'codetale', anchor: 'codetale' },
   ];
 
   return (
@@ -88,7 +89,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="reveal text-4xl md:text-5xl font-display font-bold text-white mb-16 -ml-4 md:-ml-8">
-            <span className="text-orange-400">/</span> Core Expertise
+            <span className="text-orange-400">/</span> {t('coreExpertise')}
           </h2>
 
           {/* Asymmetric grid */}

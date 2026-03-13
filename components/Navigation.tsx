@@ -35,7 +35,7 @@ const Navigation = () => {
     { href: `/${locale}`, label: t('home') },
     { href: `/${locale}/services`, label: t('services') },
     { href: `/${locale}/work`, label: t('work') },
-    { href: `/${locale}/k12-cs-education`, label: 'K12 CSED' },
+    { href: `/${locale}/k12-cs-education`, label: t('k12cs') },
     { href: `/${locale}/photography`, label: t('photography') },
     { href: `/${locale}/about`, label: t('about') },
     { href: `/${locale}/contact`, label: t('contact') },

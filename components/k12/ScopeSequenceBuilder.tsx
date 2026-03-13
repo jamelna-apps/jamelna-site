@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { k12Pathways, gradeBandLabels, type GradeBand, type PathwayIcon, type K12Pathway } from '@/data/k12-pathways';
+import { k12Pathways, gradeBandLabels, type GradeBand, type PathwayIcon } from '@/data/k12-pathways';
 import { curricula, type Curriculum } from '@/data/curricula';
 
 interface ScopeSequenceBuilderProps {

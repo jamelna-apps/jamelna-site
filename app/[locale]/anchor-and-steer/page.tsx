@@ -179,14 +179,6 @@ export default function AnchorAndSteerPage() {
 
   return (
     <main ref={containerRef} className="min-h-screen bg-zinc-900 pt-16">
-      {/* Draft Banner */}
-      <div className="bg-zinc-800/60 border-b border-zinc-700">
-        <div className="max-w-5xl mx-auto px-4 py-2 flex items-center gap-3">
-          <span className="text-xs font-mono font-medium text-orange-400 uppercase tracking-wider">Draft</span>
-          <span className="text-zinc-500 text-sm">This page is a work in progress and not yet published.</span>
-        </div>
-      </div>
-
       {/* Hero */}
       <section className="relative py-12 md:py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-zinc-900 to-zinc-950" />

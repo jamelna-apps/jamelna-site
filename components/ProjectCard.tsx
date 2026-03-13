@@ -8,6 +8,8 @@ interface ProjectCardProps {
   role: string;
   organization: string;
   timeline: string;
+  funding?: string;
+  fundingUrl?: string;
   challenge: string;
   whatIDid: string[];
   impact: string;
@@ -20,6 +22,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   role,
   organization,
   timeline,
+  funding,
+  fundingUrl,
   challenge,
   whatIDid,
   impact,
@@ -54,6 +58,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
         <p className="text-lg text-text-secondary">{organization}</p>
+        {funding && (
+          <p className="text-sm text-text-muted mt-1">
+            {fundingUrl ? (
+              <a href={fundingUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+                {funding} ↗
+              </a>
+            ) : (
+              funding
+            )}
+          </p>
+        )}
       </div>
 
       {/* Screenshot Gallery */}

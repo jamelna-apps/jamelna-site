@@ -16,9 +16,9 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Import data sources
-import { cstaStandards, generateCSTARAGDocuments } from '../data/rag/csta-standards';
-import { statePolicies, generateStatePolicyRAGDocuments } from '../data/rag/state-policies';
-import { curriculaEnhanced, generateCurriculumRAGDocuments } from '../data/rag/curricula-enhanced';
+import { generateCSTARAGDocuments } from '../data/rag/csta-standards';
+import { generateStatePolicyRAGDocuments } from '../data/rag/state-policies';
+import { generateCurriculumRAGDocuments } from '../data/rag/curricula-enhanced';
 
 // Types
 interface RAGDocument {

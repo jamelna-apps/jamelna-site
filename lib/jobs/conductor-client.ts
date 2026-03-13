@@ -4,6 +4,7 @@ import type {
   JobProfile,
   Job,
   Application,
+  ApplicationData,
   JobSettings,
   ScanResult,
   DiscoveredJob,
@@ -199,6 +200,69 @@ export async function createApplication(
   return conductorFetch<Application>(
     '/api/jobs/applications',
     { method: 'POST', body: JSON.stringify({ jobId, coverLetter }) },
+    sessionToken
+  );
+}
+
+// Application tracking
+export async function markJobAsApplied(
+  sessionToken: string,
+  jobId: string,
+  data: {
+    appliedDate: string;
+    submittedVia: ApplicationData['submittedVia'];
+    resumeId?: string;
+    resumeName?: string;
+    coverLetter?: string;
+    notes?: string;
+  }
+): Promise<ConductorResponse<Job>> {
+  const applicationData: ApplicationData = {
+    appliedDate: data.appliedDate,
+    submittedVia: data.submittedVia,
+    resumeId: data.resumeId,
+    resumeName: data.resumeName,
+    coverLetter: data.coverLetter,
+    notes: data.notes,
+    timeline: [],
+    followUps: [],
+    interviewNotes: [],
+  };
+
+  return conductorFetch<Job>(
+    `/api/jobs/${jobId}`,
+    {
+      method: 'PUT',
+      body: JSON.stringify({
+        status: 'applied',
+        appliedDate: data.appliedDate,
+        applicationData,
+      }),
+    },
+    sessionToken
+  );
+}
+
+export async function addFollowUp(
+  sessionToken: string,
+  jobId: string,
+  followUp: { date: string; type: string; notes: string }
+): Promise<ConductorResponse<Job>> {
+  return conductorFetch<Job>(
+    `/api/jobs/${jobId}/follow-up`,
+    { method: 'POST', body: JSON.stringify(followUp) },
+    sessionToken
+  );
+}
+
+export async function addInterviewNote(
+  sessionToken: string,
+  jobId: string,
+  note: { date: string; type: string; notes: string; interviewers?: string[] }
+): Promise<ConductorResponse<Job>> {
+  return conductorFetch<Job>(
+    `/api/jobs/${jobId}/interview-notes`,
+    { method: 'POST', body: JSON.stringify(note) },
     sessionToken
   );
 }

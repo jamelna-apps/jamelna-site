@@ -8,6 +8,7 @@ import { useJobsAuth } from '@/lib/jobs/auth-context';
 const navItems = [
   { href: '/jobs', label: 'Dashboard', icon: '📊' },
   { href: '/jobs/all', label: 'All Jobs', icon: '💼' },
+  { href: '/jobs/applications', label: 'Applications', icon: '📋' },
   { href: '/jobs/profile', label: 'Profile', icon: '👤' },
   { href: '/jobs/settings', label: 'Settings', icon: '⚙️' },
 ];

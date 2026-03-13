@@ -61,6 +61,14 @@
         "coaching": {
           "title": "CS Coaching Toolkit",
           "subtitle": "Recurso Nacional"
+        },
+        "foreverybomb": {
+          "title": "ForEveryBomb",
+          "subtitle": "Rastreador de Costes de Guerra"
+        },
+        "earthsim": {
+          "title": "Earth Simulator",
+          "subtitle": "Instalación de Arte Conceptual"
         }
       }
     },
@@ -68,7 +76,8 @@
       "title": "Trabajemos Juntos",
       "description": "Ya sea que seas una empresa EdTech navegando nuevos mercados, una escuela implementando herramientas innovadoras o una organización construyendo alianzas entre comunidades, aporto experiencia práctica en conectar diversos actores y un enfoque colaborativo.",
       "button": "Ponerse en Contacto"
-    }
+    },
+    "coreExpertise": "Experiencia Principal"
   },
   "footer": {
     "tagline": "Consultor de Tecnología Educativa",
@@ -77,7 +86,8 @@
     "connect": "Conectar",
     "aboutSite": "Sobre Este Sitio",
     "siteDescription": "Construido con Next.js, React y Tailwind CSS utilizando desarrollo asistido por IA (Claude CLI). Este sitio en sí mismo demuestra mi enfoque para aprovechar las herramientas de IA para resultados prácticos.",
-    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. Todos los derechos reservados."
+    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad"
   },
   "services": {
     "title": "Servicios",
@@ -159,24 +169,49 @@
         "role": "Fundador y Desarrollador",
         "organization": "Proyecto Independiente",
         "timeline": "2024 - Presente",
-        "challenge": "Crear una aplicación móvil que reimagina cómo las personas gestionan su vestuario mientras apoyan activamente las economías locales, la sostenibilidad ambiental y los mercados de segunda mano - demostrando que la tecnología puede impulsar cambios significativos en el comportamiento del consumidor.",
+        "challenge": "Crear una app móvil gratuita que ayuda a las personas a digitalizar su armario, obtener sugerencias de outfits impulsadas por IA y vender localmente a través de un mercado peer-to-peer — demostrando que la tecnología puede impulsar la moda sostenible mientras apoya las economías locales.",
         "whatIDid": [
-          "Diseñé y desarrollé una aplicación móvil full-stack con React Native con recomendaciones de estilo impulsadas por IA",
-          "Construí el mercado SwapMeet permitiendo intercambios y ventas de ropa entre usuarios dentro de comunidades locales",
-          "Creé integración con ThriftShop conectando usuarios con tiendas de segunda mano locales mediante descubrimiento basado en ubicación",
-          "Implementé transacciones solo locales (sin envíos) para reducir la huella de carbono y apoyar las economías de barrio",
-          "Desarrollé filtrado basado en proximidad para priorizar vendedores y tiendas cercanas",
-          "Integré Claude AI para sugerencias de conjuntos personalizadas que maximizan el uso de las prendas existentes",
-          "Construí un sistema de gamificación que recompensa las elecciones sostenibles y las compras de segunda mano"
+          "Diseñé y desarrollé una aplicación móvil full-stack con React Native con funciones principales: gestión del armario, sugerencias de outfits con IA, mercado SwapMeet y analíticas del armario",
+          "Construí el mercado SwapMeet con ventas de ropa peer-to-peer, encuentros locales verificados por QR, comisión fija del 8% y sin envíos — los vendedores se quedan con el 92%",
+          "Integré Gemini AI para sugerencias de outfits personalizadas según el clima, la ocasión y el contenido del armario",
+          "Desarrollé panel de analíticas del armario con patrones de uso, métricas de coste por uso, detección de carencias e impacto de sostenibilidad",
+          "Construí función de armario cápsula para viajes y planificación estacional",
+          "Publiqué en las tiendas de iOS y Android como app completamente gratuita sin suscripciones ni paywalls"
         ],
-        "impact": "Creé una plataforma fundamentada en la filosofía de que la moda sostenible debe fortalecer las comunidades locales, no solo reducir residuos. Al diseñar tecnología que hace que las compras de segunda mano sean convenientes y sociales, GYST demuestra cómo las apps pueden cambiar el comportamiento del consumidor hacia elecciones medioambientalmente conscientes mientras mantienen el dinero circulando en las economías locales.",
-        "skills": "React Native, Expo, Firebase, integración de Claude AI, servicios de geolocalización, diseño de mercado peer-to-peer, arquitectura de tecnología sostenible, diseño UI/UX",
-        "website": "http://gyst.store",
+        "impact": "Creé una plataforma fundamentada en la filosofía de que la moda sostenible debe fortalecer las comunidades locales, no solo reducir residuos. GYST demuestra cómo las apps pueden cambiar el comportamiento del consumidor hacia elecciones medioambientalmente conscientes mientras mantienen el dinero circulando en las economías locales. Disponible en iOS y Android.",
+        "skills": "React Native, Expo, Firebase, integración de Gemini AI, servicios de geolocalización, diseño de mercado peer-to-peer, verificación por QR, arquitectura de tecnología sostenible, diseño UI/UX",
+        "website": "https://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
-        ]
+        ],
+        "category": "products"
+      },
+      {
+        "title": "CoachDesk",
+        "role": "Fundador y Desarrollador",
+        "organization": "Proyecto Independiente",
+        "timeline": "2025 - Presente",
+        "challenge": "Crear un espacio de trabajo gratuito para coaches instruccionales de K-12 donde puedan gestionar relaciones con docentes, hacer seguimiento de objetivos, recopilar evidencias y coordinar entre escuelas — con controles de privacidad que respetan la naturaleza de confianza del coaching.",
+        "whatIDid": [
+          "Diseñé y desarrollé una aplicación web full-stack en Next.js con control de acceso por roles para coaches, docentes y administradores",
+          "Construí un modelo de datos completo que admite jerarquías de distrito/escuela/docente, ciclos de coaching, objetivos, seguimientos y notas",
+          "Implementé arquitectura con privacidad como prioridad: los docentes controlan lo que ven los administradores, con indicadores de visibilidad y cumplimiento de FERPA/COPPA",
+          "Creé sistema de invitación de docentes con incorporación segura mediante token",
+          "Construí sistema de recopilación de evidencias para fotos, documentos y trabajos de estudiantes con organización automática",
+          "Diseñé una interfaz cálida y accesible con una paleta de color terracota pensada para profesionales de la educación",
+          "Lancé una versión gratuita que admite hasta 10 docentes, 500 evidencias y objetivos y seguimientos ilimitados — sin tarjeta de crédito"
+        ],
+        "impact": "Creé una herramienta específica para coaches instruccionales que actualmente dependen de hojas de cálculo y documentos dispersos. CoachDesk centraliza el seguimiento de docentes, evidencias e informes, respetando la naturaleza de confianza de las relaciones de coaching mediante controles de privacidad transparentes. Gratuita para coaches individuales.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, control de acceso por roles, arquitectura con privacidad como prioridad, gestión de evidencias, tecnología educativa",
+        "images": [
+          "/images/screenshots/coachdesk/home.png",
+          "/images/screenshots/coachdesk/features.png",
+          "/images/screenshots/coachdesk/login.png"
+        ],
+        "website": "https://getcoachdesk.com",
+        "category": "products"
       },
       {
         "title": "CodeTale",
@@ -201,30 +236,33 @@
           "/images/screenshots/codetale/create.png",
           "/images/screenshots/codetale/learn.png"
         ],
-        "website": "https://codetale.jamelna.com"
+        "website": "https://codetale.jamelna.com",
+        "category": "products"
       },
       {
         "title": "SMARTIEgoals.org",
         "role": "Fundador y Desarrollador",
         "organization": "Proyecto Independiente",
         "timeline": "2024 - Presente",
-        "challenge": "Desarrollar una plataforma de seguimiento de objetivos que ayude a los usuarios a establecer, monitorear y alcanzar metas personales y profesionales mediante hitos estructurados y seguimiento del progreso.",
+        "challenge": "Crear una plataforma gratuita de establecimiento de objetivos impulsada por IA con el marco SMARTIE — objetivos Específicos, Medibles, Alcanzables, Relevantes, con Tiempo definido, Inclusivos y Equitativos — con coaching de IA instantáneo y seguimiento visual del progreso.",
         "whatIDid": [
-          "Construí una aplicación web Next.js con arquitectura React moderna",
-          "Diseñé un sistema de jerarquía de objetivos que apoya metas principales y sub-hitos",
-          "Implementé seguimiento del progreso con indicadores visuales y porcentajes de finalización",
-          "Creé una interfaz responsive con Tailwind CSS para una experiencia de usuario óptima",
-          "Integré autenticación y persistencia de datos",
-          "Desarrollé un panel de control para una visión integral de objetivos"
+          "Construí una aplicación web Next.js con un coach de objetivos de IA impulsado por Gemini que ayuda a los usuarios a estructurar sus metas mediante conversación natural",
+          "Diseñé el marco SMARTIE, que extiende los objetivos SMART tradicionales con dimensiones de Inclusión y Equidad",
+          "Creé un generador de objetivos instantáneo en la página principal — sin necesidad de registrarse, la IA estructura cualquier meta en segundos",
+          "Implementé seguimiento visual del progreso con gráficos, porcentajes de completación y desglose de hitos",
+          "Construí analíticas inteligentes que proporcionan información personalizada sobre patrones de objetivos y tendencias de logro",
+          "Integré autenticación con Google, Apple y correo electrónico mediante Firebase",
+          "Desplegué como app completamente gratuita con objetivos ilimitados y sin tarjeta de crédito"
         ],
-        "impact": "Creé una herramienta accesible para la gestión de objetivos que descompone objetivos ambiciosos en pasos accionables, haciendo que el logro a largo plazo sea más alcanzable.",
-        "skills": "Next.js, React, TypeScript, Tailwind CSS, diseño responsive, desarrollo full-stack, modelado de datos",
+        "impact": "Creé una herramienta de coaching por IA que hace que el establecimiento estructurado de objetivos sea accesible para todos. Al extender el marco SMART con dimensiones de equidad e inclusión, SMARTIEgoals anima a los usuarios a plantearse objetivos que no solo les beneficien a ellos mismos, sino también a sus comunidades.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Firebase, integración de Gemini AI, autenticación (Google/Apple/correo), visualización de datos, metodología de ciencia de objetivos",
         "images": [
           "/images/screenshots/smartiegoals/home.png",
           "/images/screenshots/smartiegoals/dashboard.png",
           "/images/screenshots/smartiegoals/goal-detail.png"
         ],
-        "website": "https://smartiegoals.org"
+        "website": "https://smartiegoals.org",
+        "category": "products"
       },
       {
         "title": "Spread Your Ashes",
@@ -246,10 +284,59 @@
         "images": [
           "/images/screenshots/spread-your-ashes/home.png",
           "/images/screenshots/spread-your-ashes/explore.png",
-          "/images/screenshots/spread-your-ashes/gallery.png",
-          "/images/screenshots/spread-your-ashes/about.png"
+          "/images/screenshots/spread-your-ashes/gallery.png"
         ],
-        "website": "https://spreadyourashes.com"
+        "website": "https://spreadyourashes.com",
+        "category": "creative"
+      },
+      {
+        "title": "ForEveryBomb",
+        "role": "Creador y Desarrollador",
+        "organization": "Proyecto Independiente",
+        "timeline": "2026 - Presente",
+        "challenge": "Construir un rastreador en tiempo real que visualiza el coste de las operaciones militares de EE.UU., haciendo tangible el gasto abstracto en defensa mediante desgloses per cápita, contadores en vivo y comparaciones contextuales con programas sociales.",
+        "whatIDid": [
+          "Diseñé y desarrollé una aplicación web Next.js con contador de gasto en tiempo real actualizándose cada 5 minutos a partir de periodismo verificado",
+          "Construí un pipeline automatizado de datos diarios usando cron jobs de Vercel para rastrear, categorizar y agregar eventos de gasto",
+          "Implementé un verificador de noticias impulsado por Claude AI para identificar y categorizar nuevos informes de gasto militar",
+          "Creé una calculadora de coste de oportunidad con filtrado por estado que muestra en qué podría haberse invertido el dinero: salarios de profesores, viviendas, atención sanitaria, almuerzos escolares",
+          "Construí un desglose del gasto por categoría (municiones, operaciones, otros) con un libro de registro día a día que cita el periodismo de fuente",
+          "Desarrollé un pipeline propio de analíticas y monitorización de seguridad",
+          "Desplegué en producción con dominio personalizado y actualizaciones diarias automatizadas"
+        ],
+        "impact": "Creé una visualización de datos accesible que transforma cifras abstractas de gasto militar en números personales y cercanos. Al mostrar lo que podría haberse financiado cada día en educación, vivienda y salud —filtrable por estado— el proyecto hace tangible la política fiscal e invita a la participación cívica.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Firebase, Vercel Cron, integración de Claude AI, visualización de datos en tiempo real, pipelines de datos automatizados",
+        "images": [
+          "/images/screenshots/foreverybomb/home.png",
+          "/images/screenshots/foreverybomb/counter.png",
+          "/images/screenshots/foreverybomb/timeline.png"
+        ],
+        "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Earth Simulation Control Panel",
+        "role": "Creador y Desarrollador",
+        "organization": "Proyecto de Arte Conceptual",
+        "timeline": "2026 - Presente",
+        "challenge": "Crear una pieza de arte conceptual que explore la pregunta: ¿Cómo sería el panel de control si la Tierra fuera una simulación? Una experiencia de página única estilizada como un terminal gubernamental clasificado que muestra todos los 'ajustes' que producen nuestra realidad actual.",
+        "whatIDid": [
+          "Diseñé y construí una interfaz de terminal brutalista con efectos de líneas de escaneo CRT, sellos de clasificación y registros de operador",
+          "Creé 8 secciones de control interactivas que cubren constantes físicas, clima geológico, parámetros biológicos, configuración de civilización, configuración geopolítica, parámetros sociales, asignación de recursos y metadatos de simulación",
+          "Construí visualizaciones de datos en tiempo real incluyendo un mapa mundial en caracteres braille rasterizado a partir de vectores Natural Earth, tickers en vivo de población y CO₂, medidores de agotamiento de recursos y barra de distribución de riqueza",
+          "Implementé controles interactivos con mecánica de desbloqueo por candado y mensajes de consecuencias activados por cambios de parámetros",
+          "Escribí entradas de registro de operador con humor negro adoptando la voz de administradores alienígenas de simulación",
+          "Desarrollé secciones colapsables con navegación fija para el denso diseño de página única"
+        ],
+        "impact": "Creé una experiencia de arte digital inmersiva que usa el lenguaje familiar de paneles de control y documentos clasificados para replantear cómo vemos nuestro mundo. Al presentar datos reales de la Tierra como 'parámetros de simulación', el proyecto invita a reflexionar sobre la naturaleza arbitraria, frágil y a veces absurda de nuestra configuración planetaria.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, visualización Unicode braille, animación de datos en tiempo real, diseño de interfaz CRT/terminal, escritura creativa, arte conceptual",
+        "images": [
+          "/images/screenshots/earth-simulator/home.png",
+          "/images/screenshots/earth-simulator/telemetry.png",
+          "/images/screenshots/earth-simulator/controls.png"
+        ],
+        "website": "https://earth.jamelna.com",
+        "category": "creative"
       },
       {
         "title": "SceneCraft",
@@ -267,7 +354,8 @@
           "Gestiono la hoja de ruta de desarrollo hacia 25,000 usuarios estudiantes para 2026"
         ],
         "impact": "Creé una red de educadores escalando desde escuelas piloto hacia adopción estatal. Desarrollé marcos de IA responsable que ahora informan la hoja de ruta estatal de educación en IA de Carolina del Norte.",
-        "skills": "Desarrollo de productos de IA, diseño LLM, investigación de usuarios, liderazgo multifuncional, marcos de IA responsable"
+        "skills": "Desarrollo de productos de IA, diseño LLM, investigación de usuarios, liderazgo multifuncional, marcos de IA responsable",
+        "category": "professional"
       },
       {
         "title": "SCRIPT",
@@ -283,7 +371,8 @@
           "Desarrollé herramientas de evaluación basadas en datos para seguir el progreso de los distritos"
         ],
         "impact": "Más de 50 distritos escolares en EE.UU. utilizaron el marco SCRIPT para crear planes de informática centrados en la equidad. Formé a más de 30 facilitadores que ahora apoyan a distritos a nivel nacional.",
-        "skills": "Diseño de marcos, escalado de programas nacionales, gestión de asociaciones, formación de facilitadores, sistemas de datos"
+        "skills": "Diseño de marcos, escalado de programas nacionales, gestión de asociaciones, formación de facilitadores, sistemas de datos",
+        "category": "professional"
       },
       {
         "title": "NYC CS4All",
@@ -299,7 +388,8 @@
           "Lideré iniciativas de equidad aumentando la participación de niñas y estudiantes de color"
         ],
         "impact": "Miles de estudiantes que nunca habían accedido a educación en informática obtuvieron vías hacia la computación. Creé un modelo sostenible para la integración de informática a nivel de distrito.",
-        "skills": "Gestión de programas a gran escala, desarrollo profesional docente, diseño centrado en equidad, gestión de stakeholders"
+        "skills": "Gestión de programas a gran escala, desarrollo profesional docente, diseño centrado en equidad, gestión de stakeholders",
+        "category": "professional"
       },
       {
         "title": "CS Coaching Toolkit",
@@ -315,9 +405,16 @@
           "Asesoré a universidades y distritos sobre integración de programas de informática"
         ],
         "impact": "El Toolkit fue adoptado a nivel nacional como recurso clave para coaches de informática. Influyó en la práctica de coaching en múltiples estados y distritos.",
-        "skills": "Desarrollo de recursos, diseño de marcos, diseño de desarrollo profesional, asociaciones multi-estatales"
+        "skills": "Desarrollo de recursos, diseño de marcos, diseño de desarrollo profesional, asociaciones multi-estatales",
+        "category": "professional"
       }
-    ]
+    ],
+    "sectionProfessional": "Experiencia Profesional",
+    "sectionProfessionalDesc": "Roles donde lideré programas, gestioné equipos y definí políticas a escala.",
+    "sectionProducts": "Productos que he Creado",
+    "sectionProductsDesc": "Aplicaciones y herramientas independientes — diseñadas, desarrolladas y publicadas.",
+    "sectionCreative": "Proyectos Creativos",
+    "sectionCreativeDesc": "Arte y trabajo conceptual explorando tecnología, memoria y significado."
   },
   "about": {
     "title": "Sobre Mí",
@@ -817,5 +914,52 @@
         "button": "Ponerse en Contacto"
       }
     }
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: marzo de 2026",
+    "intro": "Este sitio es un portafolio personal de consultoría y una herramienta educativa de informática K-12. Esta política explica qué datos se recopilan, cómo se utilizan y cuáles son tus derechos como visitante. Mantenemos las cosas simples y solo recopilamos lo estrictamente necesario.",
+    "collectTitle": "Qué Recopilamos",
+    "collectAnalyticsLabel": "Analítica",
+    "collectAnalytics": "Recopilamos datos básicos y anonimizados sobre las visitas a las páginas, como qué páginas se visitan, la fuente de referencia y la región geográfica general. No se asocia ninguna información de identificación personal a estos registros. Los datos se almacenan en nuestra propia base de datos Firestore, no en una plataforma de analítica de terceros.",
+    "collectAILabel": "Conversaciones con IA (Herramienta K-12)",
+    "collectAI": "Cuando usas la herramienta de planificación curricular K-12, tus entradas (contexto del distrito, niveles de grado, objetivos) se envían a la API Claude de Anthropic para generar un plan curricular. Estas entradas se procesan en tiempo real y no se almacenan en nuestros servidores una vez devuelta la respuesta.",
+    "collectContactLabel": "Formulario de Contacto",
+    "collectContact": "Si envías el formulario de contacto, recopilamos tu nombre, dirección de correo electrónico y mensaje. Esta información se usa únicamente para responder a tu consulta.",
+    "useTitle": "Cómo Lo Usamos",
+    "useIntro": "Los datos recopilados en este sitio se utilizan solo para los siguientes fines:",
+    "use1": "Entender cómo los visitantes navegan por el sitio para mejorar el contenido y la usabilidad",
+    "use2": "Generar planes curriculares con IA en tiempo real para educadores K-12",
+    "use3": "Responder a consultas enviadas a través del formulario de contacto",
+    "use4": "Detectar y prevenir tráfico abusivo o malicioso",
+    "thirdPartyTitle": "Servicios de Terceros",
+    "thirdPartyIntro": "Este sitio utiliza los siguientes servicios de terceros. Cada uno tiene su propia política de privacidad enlazada a continuación.",
+    "tpAnthropicLabel": "Anthropic (Claude AI)",
+    "tpAnthropic": "Impulsa la herramienta de planificación curricular K-12. Las entradas se envían a la API de Anthropic para su procesamiento. Anthropic puede retener datos según sus políticas de uso.",
+    "tpFirebaseLabel": "Firebase / Firestore (Google)",
+    "tpFirebase": "Se utiliza para almacenar datos de analítica anonimizados. Los datos se almacenan en la infraestructura de Google Cloud bajo el proyecto Firebase de jamelna.com.",
+    "tpSupabaseLabel": "Supabase",
+    "tpSupabase": "Se utiliza como almacén de datos para ciertas funciones del sitio. Supabase almacena los datos en infraestructura de AWS en EE. UU.",
+    "tpSanityLabel": "Sanity",
+    "tpSanity": "Se utiliza como sistema de gestión de contenidos. Sanity almacena los datos de contenido en su infraestructura en la nube.",
+    "tpVercelLabel": "Vercel",
+    "tpVercel": "Se utiliza para alojar y desplegar este sitio web. Vercel puede registrar metadatos de solicitudes (direcciones IP, agentes de usuario) por motivos de seguridad y rendimiento.",
+    "cookiesTitle": "Cookies",
+    "cookiesIntro": "Este sitio utiliza un número mínimo de cookies:",
+    "cookie1": "Cookie de sesión — mantiene el estado durante una única visita. Se elimina al cerrar el navegador.",
+    "cookie2": "Cookie de idioma — recuerda tu preferencia de idioma entre visitas.",
+    "cookiesNote": "No utilizamos cookies publicitarias, píxeles de seguimiento ni ninguna tecnología de rastreo entre sitios.",
+    "retentionTitle": "Retención de Datos",
+    "retention1": "Los datos de analítica anonimizados se conservan durante un máximo de 12 meses y luego se eliminan. Los envíos del formulario de contacto se conservan solo el tiempo necesario para responder a tu consulta.",
+    "retention2": "Las entradas enviadas a la herramienta K-12 no se almacenan tras el procesamiento. No se conserva ningún dato de sesión de planificación curricular en nuestros servidores.",
+    "rightsTitle": "Tus Derechos",
+    "rightsIntro": "Si te encuentras en la UE u otra jurisdicción con leyes de protección de datos, tienes los siguientes derechos:",
+    "right1": "Acceso — solicitar una copia de cualquier dato personal que tengamos sobre ti",
+    "right2": "Eliminación — solicitar que se eliminen tus datos",
+    "right3": "Corrección — solicitar que se corrijan los datos inexactos",
+    "right4": "Portabilidad — solicitar tus datos en un formato portátil",
+    "right5": "Oposición — oponerte a ciertos usos de tus datos",
+    "contactTitle": "¿Preguntas?",
+    "contactText": "Si tienes alguna pregunta sobre esta política de privacidad o deseas ejercer tus derechos sobre los datos, contáctanos en:"
   }
 }

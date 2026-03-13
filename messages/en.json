@@ -65,6 +65,14 @@
         "coaching": {
           "title": "CS Coaching Toolkit",
           "subtitle": "National Resource"
+        },
+        "foreverybomb": {
+          "title": "ForEveryBomb",
+          "subtitle": "War Cost Tracker"
+        },
+        "earthsim": {
+          "title": "Earth Simulator",
+          "subtitle": "Conceptual Art Installation"
         }
       }
     },
@@ -72,7 +80,8 @@
       "title": "Let's Work Together",
       "description": "Whether you're an EdTech company navigating new markets, a school implementing innovative tools, or an organization building partnerships across communities, I bring practical experience in connecting diverse stakeholders and a collaborative approach.",
       "button": "Get in Touch"
-    }
+    },
+    "coreExpertise": "Core Expertise"
   },
   "footer": {
     "tagline": "Education Technology Consultant",
@@ -81,7 +90,8 @@
     "connect": "Connect",
     "aboutSite": "About This Site",
     "siteDescription": "Built with Next.js, React, and Tailwind CSS using AI-assisted development (Claude CLI). This site itself demonstrates my approach to leveraging AI tools for practical outcomes.",
-    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. All rights reserved."
+    "copyright": "© 2026 Joe Alexander Meléndez-Naharro. All rights reserved.",
+    "privacy": "Privacy Policy"
   },
   "services": {
     "title": "Services",
@@ -163,19 +173,18 @@
         "role": "Founder & Developer",
         "organization": "Independent Project",
         "timeline": "2024 - Present",
-        "challenge": "Build a mobile app that helps people manage their closet, sell locally, and dress sustainably - proving that technology can drive meaningful change in consumer behavior while supporting local economies.",
+        "challenge": "Build a free mobile app that helps people digitize their closet, get AI-powered outfit suggestions, and sell locally through a peer-to-peer marketplace — proving that technology can drive sustainable fashion while supporting local economies.",
         "whatIDid": [
-          "Designed and developed full-stack React Native mobile application with five core features: Style (wardrobe management), SwapMeet (P2P marketplace), GYST Hub (daily styling), ThriftShop (local discovery), and Insights (analytics)",
-          "Built SwapMeet marketplace enabling peer-to-peer clothing trades and sales within local communities with local-only pickup to reduce carbon footprint",
-          "Created ThriftShop integration connecting users to local secondhand stores with location-based discovery",
-          "Integrated Claude AI for personalized outfit suggestions based on weather, occasion, and wardrobe contents",
-          "Implemented subscription model (GYST+) with RevenueCat for unlimited AI features and reduced marketplace fees",
-          "Developed wardrobe analytics dashboard showing usage patterns, cost-per-wear metrics, and sustainability impact",
-          "Built capsule wardrobe feature for travel and seasonal planning"
+          "Designed and developed full-stack React Native mobile application with core features: wardrobe management, AI outfit suggestions, SwapMeet marketplace, and wardrobe analytics",
+          "Built SwapMeet marketplace enabling peer-to-peer clothing sales with QR-verified local meetups, a flat 8% fee, and no shipping — sellers keep 92%",
+          "Integrated Gemini AI for personalized outfit suggestions based on weather, occasion, and wardrobe contents",
+          "Developed wardrobe analytics dashboard showing usage patterns, cost-per-wear metrics, gap detection, and sustainability impact",
+          "Built capsule wardrobe feature for travel and seasonal planning",
+          "Shipped to iOS and Android app stores as a completely free app with no subscriptions or paywalls"
         ],
-        "impact": "Created a platform grounded in the philosophy that sustainable fashion should strengthen local communities, not just reduce waste. GYST demonstrates how apps can shift consumer behavior toward environmentally conscious choices while keeping money circulating in local economies. Currently preparing for App Store release.",
-        "skills": "React Native, Expo, Firebase, Claude AI integration, RevenueCat subscriptions, geolocation services, peer-to-peer marketplace design, sustainable tech architecture, UI/UX design",
-        "website": "http://gyst.store",
+        "impact": "Created a platform grounded in the philosophy that sustainable fashion should strengthen local communities, not just reduce waste. GYST demonstrates how apps can shift consumer behavior toward environmentally conscious choices while keeping money circulating in local economies. Live on iOS and Android.",
+        "skills": "React Native, Expo, Firebase, Gemini AI integration, geolocation services, peer-to-peer marketplace design, QR code verification, sustainable tech architecture, UI/UX design",
+        "website": "https://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
@@ -185,32 +194,33 @@
           "ios": "Coming soon",
           "privacy": "/gyst/privacy",
           "terms": "/gyst/terms"
-        }
+        },
+        "category": "products"
       },
       {
         "title": "CoachDesk",
         "role": "Founder & Developer",
         "organization": "Independent Project",
         "timeline": "2025 - Present",
-        "challenge": "Build a platform that helps K-12 instructional coaches manage their work supporting multiple teachers across schools and districts, with built-in privacy controls and offline support for the realities of school environments.",
+        "challenge": "Build a free workspace for K-12 instructional coaches to manage teacher relationships, track goals, collect artifacts, and coordinate across schools — with privacy controls that respect the trust-based nature of coaching.",
         "whatIDid": [
           "Designed and developed full-stack Next.js web application with role-based access for coaches, teachers, and administrators",
-          "Built comprehensive data model supporting district/school/teacher hierarchies, coaching cycles, goals, check-ins, and lesson plans",
-          "Implemented privacy-first architecture with visibility flags (coach-only, shared, admin-visible) and FERPA/COPPA compliance considerations",
+          "Built comprehensive data model supporting district/school/teacher hierarchies, coaching cycles, goals, check-ins, and notes",
+          "Implemented privacy-first architecture where teachers control what admins see, with visibility flags and FERPA/COPPA compliance",
           "Created teacher invite system with secure token-based onboarding",
-          "Integrated Cloudflare R2 for artifact storage with presigned URLs",
+          "Built artifact collection system for photos, documents, and student work with automatic organization",
           "Designed warm, approachable UI with terracotta brand palette suited for education professionals",
-          "Built responsive dashboard views for tracking coaching relationships and teacher progress",
-          "Deployed to Vercel with PostgreSQL database via Prisma ORM"
+          "Launched free tier supporting up to 10 teachers, 500 artifacts, and unlimited goals and check-ins — no credit card required"
         ],
-        "impact": "Created a purpose-built tool for instructional coaches who currently rely on spreadsheets and scattered documents. CoachDesk centralizes teacher tracking, artifacts, and reporting while respecting the trust-based nature of coaching relationships through thoughtful privacy controls.",
-        "skills": "Next.js, React, TypeScript, PostgreSQL, Prisma, NextAuth.js, Cloudflare R2, Tailwind CSS, role-based access control, privacy-first architecture",
+        "impact": "Created a purpose-built tool for instructional coaches who currently rely on spreadsheets and scattered documents. CoachDesk centralizes teacher tracking, artifacts, and reporting while respecting the trust-based nature of coaching relationships through transparent privacy controls. Free for individual coaches.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, role-based access control, privacy-first architecture, artifact management, education technology",
         "images": [
           "/images/screenshots/coachdesk/home.png",
           "/images/screenshots/coachdesk/features.png",
           "/images/screenshots/coachdesk/login.png"
         ],
-        "website": "https://getcoachdesk.com"
+        "website": "https://getcoachdesk.com",
+        "category": "products"
       },
       {
         "title": "CodeTale",
@@ -235,30 +245,33 @@
           "/images/screenshots/codetale/create.png",
           "/images/screenshots/codetale/learn.png"
         ],
-        "website": "https://codetale.jamelna.com"
+        "website": "https://codetale.jamelna.com",
+        "category": "products"
       },
       {
         "title": "SMARTIEgoals.org",
         "role": "Founder & Developer",
         "organization": "Independent Project",
         "timeline": "2024 - Present",
-        "challenge": "Develop a goal-tracking platform that helps users set, monitor, and achieve personal and professional goals through structured milestones and progress tracking.",
+        "challenge": "Build a free AI-powered goal-setting platform using the SMARTIE framework — goals that are Specific, Measurable, Achievable, Relevant, Time-bound, Inclusive, and Equitable — with instant AI coaching and visual progress tracking.",
         "whatIDid": [
-          "Built Next.js web application with modern React architecture",
-          "Designed goal hierarchy system supporting main goals and sub-milestones",
-          "Implemented progress tracking with visual indicators and completion percentages",
-          "Created responsive UI with Tailwind CSS for optimal user experience",
-          "Integrated authentication and data persistence",
-          "Developed dashboard for comprehensive goal overview"
+          "Built Next.js web application with AI goal coach powered by Gemini that helps users structure goals through natural conversation",
+          "Designed the SMARTIE framework extending traditional SMART goals with Inclusive and Equitable dimensions",
+          "Created instant goal generator on the homepage — no login required, AI structures any goal in seconds",
+          "Implemented visual progress tracking with charts, completion percentages, and milestone breakdowns",
+          "Built smart analytics providing personalized insights on goal patterns and achievement trends",
+          "Integrated Google, Apple, and email authentication with Firebase",
+          "Deployed as completely free with unlimited goals and no credit card required"
         ],
-        "impact": "Created an accessible tool for goal management that breaks down ambitious objectives into actionable steps, making long-term achievement more attainable.",
-        "skills": "Next.js, React, TypeScript, Tailwind CSS, responsive design, full-stack development, data modeling",
+        "impact": "Created an AI-powered coaching tool that makes structured goal-setting accessible to everyone. By extending the SMART framework with equity and inclusion dimensions, SMARTIEgoals encourages users to set objectives that benefit not just themselves but their broader communities.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Firebase, Gemini AI integration, authentication (Google/Apple/email), data visualization, goal science methodology",
         "images": [
           "/images/screenshots/smartiegoals/home.png",
           "/images/screenshots/smartiegoals/dashboard.png",
           "/images/screenshots/smartiegoals/goal-detail.png"
         ],
-        "website": "https://smartiegoals.org"
+        "website": "https://smartiegoals.org",
+        "category": "products"
       },
       {
         "title": "Spread Your Ashes",
@@ -280,10 +293,59 @@
         "images": [
           "/images/screenshots/spread-your-ashes/home.png",
           "/images/screenshots/spread-your-ashes/explore.png",
-          "/images/screenshots/spread-your-ashes/gallery.png",
-          "/images/screenshots/spread-your-ashes/about.png"
+          "/images/screenshots/spread-your-ashes/gallery.png"
         ],
-        "website": "https://spreadyourashes.com"
+        "website": "https://spreadyourashes.com",
+        "category": "creative"
+      },
+      {
+        "title": "ForEveryBomb",
+        "role": "Creator & Developer",
+        "organization": "Independent Project",
+        "timeline": "2026 - Present",
+        "challenge": "Build a real-time tracker visualizing the cost of US military operations, making abstract defense spending tangible through per-capita breakdowns, live counters, and contextual comparisons to social programs.",
+        "whatIDid": [
+          "Designed and developed Next.js web application with real-time spending counter updating every 5 minutes from sourced journalism",
+          "Built automated daily data pipeline using Vercel cron jobs to track, categorize, and aggregate spending events",
+          "Implemented Claude AI-powered news checker to identify and categorize new military spending reports",
+          "Created opportunity cost calculator with state-by-state filtering showing what the money could have funded — teacher salaries, homes, healthcare, school lunches",
+          "Built spending breakdown by category (munitions, operations, other) with day-by-day ledger citing source journalism",
+          "Developed first-party analytics and security monitoring pipeline",
+          "Deployed to production with custom domain and automated daily updates"
+        ],
+        "impact": "Created an accessible data visualization that transforms abstract military spending into personal, relatable numbers. By showing what each day's spending could have funded in education, housing, and healthcare — filterable by state — the project makes fiscal policy tangible and invites civic engagement.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Firebase, Vercel Cron, Claude AI integration, real-time data visualization, automated data pipelines",
+        "images": [
+          "/images/screenshots/foreverybomb/home.png",
+          "/images/screenshots/foreverybomb/counter.png",
+          "/images/screenshots/foreverybomb/timeline.png"
+        ],
+        "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Earth Simulation Control Panel",
+        "role": "Creator & Developer",
+        "organization": "Conceptual Art Project",
+        "timeline": "2026 - Present",
+        "challenge": "Create a conceptual art piece exploring the question: What would the control panel look like if Earth were a simulation? A single-page experience styled as a classified government terminal displaying all the 'settings' that produce our current reality.",
+        "whatIDid": [
+          "Designed and built a brutalist terminal interface with CRT scanline effects, classification stamps, and operator logs",
+          "Created 8 interactive control sections covering physical constants, geological climate, biological parameters, civilization settings, geopolitical configuration, social parameters, resource allocation, and simulation metadata",
+          "Built real-time data visualizations including a braille-character world map rasterized from Natural Earth vectors, live population and CO2 tickers, resource depletion gauges, and wealth distribution bar",
+          "Implemented interactive controls with padlock unlock mechanics and consequence messages triggered by parameter changes",
+          "Wrote darkly humorous operator log entries adopting the voice of alien simulation administrators",
+          "Developed collapsible sections with sticky navigation for the dense single-page layout"
+        ],
+        "impact": "Created an immersive digital art experience that uses the familiar language of control panels and classified documents to reframe how we see our world. By presenting real Earth data as 'simulation parameters,' the project invites reflection on the arbitrary, fragile, and sometimes absurd nature of our planetary configuration.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Unicode braille visualization, real-time data animation, CRT/terminal UI design, creative writing, conceptual art",
+        "images": [
+          "/images/screenshots/earth-simulator/home.png",
+          "/images/screenshots/earth-simulator/telemetry.png",
+          "/images/screenshots/earth-simulator/controls.png"
+        ],
+        "website": "https://earth.jamelna.com",
+        "category": "creative"
       },
       {
         "title": "SceneCraft",
@@ -301,7 +363,8 @@
           "Manage development roadmap toward 25,000 student users by 2026"
         ],
         "impact": "Created educator network scaling from pilot schools toward statewide adoption. Developed responsible AI frameworks now informing NC's state AI education roadmap.",
-        "skills": "AI product development, LLM design, user research, cross-functional leadership, responsible AI frameworks"
+        "skills": "AI product development, LLM design, user research, cross-functional leadership, responsible AI frameworks",
+        "category": "professional"
       },
       {
         "title": "SCRIPT",
@@ -317,7 +380,8 @@
           "Developed data-driven evaluation tools to track district progress"
         ],
         "impact": "50+ school districts across the US used SCRIPT framework to create equity-focused CS plans. Trained 30+ facilitators who now support districts nationwide.",
-        "skills": "Framework design, national program scaling, partnership management, facilitator training, data systems"
+        "skills": "Framework design, national program scaling, partnership management, facilitator training, data systems",
+        "category": "professional"
       },
       {
         "title": "NYC CS4All",
@@ -333,7 +397,8 @@
           "Led equity initiatives increasing participation of girls and students of color"
         ],
         "impact": "Thousands of students who had never accessed CS education gained pathways to computing. Created sustainable model for district-wide CS integration.",
-        "skills": "Large-scale program management, teacher professional development, equity-focused design, stakeholder management"
+        "skills": "Large-scale program management, teacher professional development, equity-focused design, stakeholder management",
+        "category": "professional"
       },
       {
         "title": "CS Coaching Toolkit",
@@ -349,9 +414,16 @@
           "Advised universities and districts on CS program integration"
         ],
         "impact": "Toolkit adopted nationally as key resource for CS coaches. Influenced coaching practice across multiple states and districts.",
-        "skills": "Resource development, framework design, professional development design, multi-state partnerships"
+        "skills": "Resource development, framework design, professional development design, multi-state partnerships",
+        "category": "professional"
       }
-    ]
+    ],
+    "sectionProfessional": "Professional Experience",
+    "sectionProfessionalDesc": "Roles where I led programs, managed teams, and shaped policy at scale.",
+    "sectionProducts": "Products I've Built",
+    "sectionProductsDesc": "Independent apps and tools — designed, built, and shipped.",
+    "sectionCreative": "Creative Projects",
+    "sectionCreativeDesc": "Art and conceptual work exploring technology, memory, and meaning."
   },
   "about": {
     "title": "About",
@@ -1034,5 +1106,52 @@
       "description": "Select a pathway above to explore recommended curricula for your school's CS education program.",
       "button": "Explore Curricula"
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "intro": "This site is a personal consulting portfolio and K-12 computer science education tool. This policy explains what data is collected, how it is used, and your rights as a visitor. We keep things simple and only collect what is genuinely needed.",
+    "collectTitle": "What We Collect",
+    "collectAnalyticsLabel": "Analytics",
+    "collectAnalytics": "We collect basic, anonymized page visit data such as which pages are visited, referral source, and general geographic region. No personally identifiable information is attached to these records. Data is stored in our own Firestore database rather than a third-party analytics platform.",
+    "collectAILabel": "AI Conversations (K-12 Tool)",
+    "collectAI": "When you use the K-12 CS curriculum planning tool, your inputs (district context, grade levels, goals) are sent to Anthropic's Claude API to generate a curriculum plan. These inputs are processed in real time and are not stored on our servers after the response is returned.",
+    "collectContactLabel": "Contact Form",
+    "collectContact": "If you submit the contact form, we collect your name, email address, and message. This information is used solely to respond to your inquiry.",
+    "useTitle": "How We Use It",
+    "useIntro": "Data collected on this site is used only for the following purposes:",
+    "use1": "Understanding how visitors navigate the site to improve content and usability",
+    "use2": "Generating AI-powered curriculum plans in real time for K-12 educators",
+    "use3": "Responding to inquiries submitted through the contact form",
+    "use4": "Detecting and preventing abusive or malicious traffic",
+    "thirdPartyTitle": "Third-Party Services",
+    "thirdPartyIntro": "This site uses the following third-party services. Each has its own privacy policy linked below.",
+    "tpAnthropicLabel": "Anthropic (Claude AI)",
+    "tpAnthropic": "Powers the K-12 curriculum planning tool. Inputs are sent to Anthropic's API for processing. Anthropic may retain data per their usage policies.",
+    "tpFirebaseLabel": "Firebase / Firestore (Google)",
+    "tpFirebase": "Used to store anonymized analytics data. Data is stored in Google Cloud infrastructure under the jamelna.com Firebase project.",
+    "tpSupabaseLabel": "Supabase",
+    "tpSupabase": "Used as a data store for certain site features. Supabase stores data on AWS infrastructure in the US.",
+    "tpSanityLabel": "Sanity",
+    "tpSanity": "Used as the content management system for site content. Sanity stores content data on their cloud infrastructure.",
+    "tpVercelLabel": "Vercel",
+    "tpVercel": "Used to host and deploy this website. Vercel may log request metadata (IP addresses, user agents) for security and performance purposes.",
+    "cookiesTitle": "Cookies",
+    "cookiesIntro": "This site uses a minimal number of cookies:",
+    "cookie1": "Session cookie — keeps you logged in or maintains state during a single visit. Deleted when you close your browser.",
+    "cookie2": "Locale cookie — remembers your language preference across visits.",
+    "cookiesNote": "We do not use advertising cookies, tracking pixels, or any cross-site tracking technologies.",
+    "retentionTitle": "Data Retention",
+    "retention1": "Anonymized analytics data is retained for up to 12 months and then deleted. Contact form submissions are retained only as long as needed to respond to your inquiry.",
+    "retention2": "AI conversation inputs sent to the K-12 tool are not stored after processing. No curriculum planning session data is retained on our servers.",
+    "rightsTitle": "Your Rights",
+    "rightsIntro": "If you are located in the EU or another jurisdiction with data protection laws, you have the following rights:",
+    "right1": "Access — request a copy of any personal data we hold about you",
+    "right2": "Deletion — request that your data be deleted",
+    "right3": "Correction — request that inaccurate data be corrected",
+    "right4": "Portability — request your data in a portable format",
+    "right5": "Objection — object to certain uses of your data",
+    "contactTitle": "Questions?",
+    "contactText": "If you have any questions about this privacy policy or want to exercise your data rights, reach out at:"
   }
 }

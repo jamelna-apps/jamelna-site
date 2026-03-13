@@ -5,6 +5,7 @@ import { useState } from 'react';
 import type { Job, JobStatus } from '@/lib/jobs/types';
 import { useJobsAuth } from '@/lib/jobs/auth-context';
 import { updateJob, generateCoverLetter } from '@/lib/jobs/conductor-client';
+import ApplyJobModal from './ApplyJobModal';
 
 interface JobCardProps {
   job: Job;
@@ -29,9 +30,15 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
   const [generatingLetter, setGeneratingLetter] = useState(false);
   const [coverLetter, setCoverLetter] = useState<string | null>(null);
   const [updatingStatus, setUpdatingStatus] = useState(false);
+  const [showApplyModal, setShowApplyModal] = useState(false);
 
   const handleStatusChange = async (newStatus: JobStatus) => {
     if (!sessionToken) return;
+    // If changing to 'applied' and not already applied, open the modal
+    if (newStatus === 'applied' && !['applied', 'interviewing', 'offer'].includes(job.status)) {
+      setShowApplyModal(true);
+      return;
+    }
     setUpdatingStatus(true);
     await updateJob(sessionToken, job.id, { status: newStatus });
     setUpdatingStatus(false);
@@ -156,6 +163,16 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
               {generatingLetter ? 'Generating...' : 'Generate Cover Letter'}
             </button>
 
+            {!['applied', 'interviewing', 'offer'].includes(job.status) && (
+              <button
+                onClick={() => setShowApplyModal(true)}
+                className="px-3 py-1.5 text-sm rounded font-medium transition-colors"
+                style={{ background: 'rgba(139, 92, 246, 0.2)', color: '#a78bfa', border: '1px solid rgba(139, 92, 246, 0.3)' }}
+              >
+                Mark as Applied
+              </button>
+            )}
+
             <a
               href={job.sourceUrl}
               target="_blank"
@@ -183,6 +200,14 @@ export default function JobCard({ job, onUpdate, expanded = false }: JobCardProp
               <option value="withdrawn">Withdrawn</option>
             </select>
           </div>
+
+          {/* Apply Job Modal */}
+          <ApplyJobModal
+            isOpen={showApplyModal}
+            onClose={() => setShowApplyModal(false)}
+            job={job}
+            onApplied={onUpdate}
+          />
         </div>
       )}
     </div>

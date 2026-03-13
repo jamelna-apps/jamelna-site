@@ -61,6 +61,14 @@
         "coaching": {
           "title": "CS Coaching Toolkit",
           "subtitle": "国家资源"
+        },
+        "foreverybomb": {
+          "title": "ForEveryBomb",
+          "subtitle": "战争成本跟踪器"
+        },
+        "earthsim": {
+          "title": "Earth Simulator",
+          "subtitle": "概念艺术装置"
         }
       }
     },
@@ -68,7 +76,8 @@
       "title": "让我们一起合作",
       "description": "无论您是探索新市场的教育科技公司、实施创新工具的学校，还是在社区之间建立合作伙伴关系的组织，我都能带来连接不同利益相关者的实践经验和协作方法。",
       "button": "联系我"
-    }
+    },
+    "coreExpertise": "核心专长"
   },
   "footer": {
     "tagline": "教育技术顾问",
@@ -77,7 +86,8 @@
     "connect": "联系",
     "aboutSite": "关于本网站",
     "siteDescription": "使用Next.js、React和Tailwind CSS，通过人工智能辅助开发（Claude CLI）构建。本网站本身展示了我利用人工智能工具实现实际成果的方法。",
-    "copyright": "© 2026 Joe Alexander Meléndez-Naharro。保留所有权利。"
+    "copyright": "© 2026 Joe Alexander Meléndez-Naharro。保留所有权利。",
+    "privacy": "隐私政策"
   },
   "services": {
     "title": "服务",
@@ -159,24 +169,49 @@
         "role": "创始人兼开发者",
         "organization": "独立项目",
         "timeline": "2024年至今",
-        "challenge": "构建一款重新定义人们管理衣橱方式的移动应用，同时积极支持本地经济、环境可持续性和二手市场——证明技术可以推动消费者行为的有意义改变。",
+        "challenge": "打造一款免费移动应用，帮助用户数字化管理衣橱、获取AI驱动的穿搭建议，并通过点对点市场在本地销售——证明技术可以推动可持续时尚，同时支持本地经济。",
         "whatIDid": [
-          "设计和开发全栈React Native移动应用程序，配备AI驱动的风格推荐",
-          "构建SwapMeet市场，支持本地社区内的点对点服装交换和销售",
-          "创建ThriftShop集成，通过基于位置的发现将用户与本地二手店连接",
-          "实施仅限本地交易（无运输）以减少碳足迹并支持邻里经济",
-          "开发基于距离的筛选功能，优先显示附近的卖家和商店",
-          "集成Claude AI提供个性化服装搭配建议，最大化利用现有衣橱物品",
-          "构建游戏化系统，奖励可持续选择和二手购买"
+          "设计和开发全栈React Native移动应用，核心功能包括：衣橱管理、AI穿搭建议、SwapMeet市场和衣橱分析",
+          "构建SwapMeet市场，支持点对点服装销售，QR码验证线下交易，固定8%佣金，无需邮寄——卖家保留92%",
+          "集成Gemini AI，根据天气、场合和衣橱内容提供个性化穿搭建议",
+          "开发衣橱分析仪表盘，展示使用规律、每次穿着成本、缺口检测和可持续影响",
+          "构建胶囊衣橱功能，用于旅行和季节性规划",
+          "以完全免费、无订阅、无付费墙的方式上架iOS和Android应用商店"
         ],
-        "impact": "创建了一个基于这一理念的平台：可持续时尚应该加强本地社区，而不仅仅是减少浪费。通过设计使二手购物变得便捷和社交化的技术，GYST展示了应用程序如何将消费者行为转向环保选择，同时让资金在本地经济中流通。",
-        "skills": "React Native、Expo、Firebase、Claude AI集成、地理定位服务、点对点市场设计、可持续技术架构、UI/UX设计",
-        "website": "http://gyst.store",
+        "impact": "创建了一个基于这一理念的平台：可持续时尚应该加强本地社区，而不仅仅是减少浪费。GYST展示了应用程序如何将消费者行为转向环保选择，同时让资金在本地经济中流通。已在iOS和Android平台上线。",
+        "skills": "React Native、Expo、Firebase、Gemini AI集成、地理定位服务、点对点市场设计、QR码验证、可持续技术架构、UI/UX设计",
+        "website": "https://gyst.store",
         "images": [
           "/images/screenshots/gyst/home.png",
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
-        ]
+        ],
+        "category": "products"
+      },
+      {
+        "title": "CoachDesk",
+        "role": "创始人兼开发者",
+        "organization": "独立项目",
+        "timeline": "2025年至今",
+        "challenge": "为K-12教学教练打造一个免费工作区，用于管理师生关系、追踪目标、收集教学证据并跨校协调——通过尊重教练信任关系的隐私控制机制来实现这一目标。",
+        "whatIDid": [
+          "设计并开发了全栈Next.js网络应用，为教练、教师和管理员提供基于角色的访问控制",
+          "构建了完整的数据模型，支持学区/学校/教师层级结构、教练周期、目标、检查记录和备注",
+          "实现了隐私优先架构：教师控制管理员可见内容，配备可见性标记并符合FERPA/COPPA规范",
+          "创建了基于安全令牌的教师邀请和入职系统",
+          "构建了照片、文档和学生作品的证据收集系统，支持自动整理",
+          "设计了温暖、亲切的界面，采用赤陶色调，适合教育工作者使用",
+          "推出免费版本，支持最多10名教师、500件证据以及无限目标和检查记录——无需信用卡"
+        ],
+        "impact": "为目前依赖电子表格和零散文档的教学教练创建了专用工具。CoachDesk集中管理教师追踪、证据和报告，同时通过透明的隐私控制尊重教练关系的信任本质。个人教练免费使用。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、基于角色的访问控制、隐私优先架构、证据管理、教育技术",
+        "images": [
+          "/images/screenshots/coachdesk/home.png",
+          "/images/screenshots/coachdesk/features.png",
+          "/images/screenshots/coachdesk/login.png"
+        ],
+        "website": "https://getcoachdesk.com",
+        "category": "products"
       },
       {
         "title": "CodeTale",
@@ -201,30 +236,33 @@
           "/images/screenshots/codetale/create.png",
           "/images/screenshots/codetale/learn.png"
         ],
-        "website": "https://codetale.jamelna.com"
+        "website": "https://codetale.jamelna.com",
+        "category": "products"
       },
       {
         "title": "SMARTIEgoals.org",
         "role": "创始人兼开发者",
         "organization": "独立项目",
         "timeline": "2024年至今",
-        "challenge": "开发一个目标跟踪平台，帮助用户通过结构化的里程碑和进度跟踪来设定、监控和实现个人和职业目标。",
+        "challenge": "打造一个免费的AI驱动目标设定平台，采用SMARTIE框架——即具体、可衡量、可实现、相关、有时限、包容和公平的目标——配备即时AI辅导和可视化进度追踪。",
         "whatIDid": [
-          "使用现代React架构构建Next.js网络应用程序",
-          "设计支持主要目标和子里程碑的目标层次系统",
-          "实施带有视觉指示器和完成百分比的进度跟踪",
-          "使用Tailwind CSS创建响应式UI以获得最佳用户体验",
-          "集成身份验证和数据持久化",
-          "开发用于全面目标概览的仪表板"
+          "构建Next.js网络应用，集成Gemini AI目标教练，通过自然对话帮助用户构建目标",
+          "设计SMARTIE框架，在传统SMART目标基础上新增包容性和公平性维度",
+          "在首页创建即时目标生成器——无需注册，AI几秒内即可将任何目标结构化",
+          "实施可视化进度追踪，包含图表、完成百分比和里程碑分解",
+          "构建智能分析功能，提供目标模式和成就趋势的个性化洞察",
+          "通过Firebase集成Google、Apple和邮箱身份验证",
+          "以完全免费的方式部署，支持无限目标，无需信用卡"
         ],
-        "impact": "创建了一个易于访问的目标管理工具，将雄心勃勃的目标分解为可操作的步骤，使长期成就更容易实现。",
-        "skills": "Next.js、React、TypeScript、Tailwind CSS、响应式设计、全栈开发、数据建模",
+        "impact": "创建了一个AI驱动的辅导工具，让结构化目标设定人人可及。通过在SMART框架中加入公平和包容维度，SMARTIEgoals鼓励用户设定不仅惠及自身、也能惠及更广泛社区的目标。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、Firebase、Gemini AI集成、身份验证（Google/Apple/邮箱）、数据可视化、目标科学方法论",
         "images": [
           "/images/screenshots/smartiegoals/home.png",
           "/images/screenshots/smartiegoals/dashboard.png",
           "/images/screenshots/smartiegoals/goal-detail.png"
         ],
-        "website": "https://smartiegoals.org"
+        "website": "https://smartiegoals.org",
+        "category": "products"
       },
       {
         "title": "Spread Your Ashes",
@@ -246,10 +284,59 @@
         "images": [
           "/images/screenshots/spread-your-ashes/home.png",
           "/images/screenshots/spread-your-ashes/explore.png",
-          "/images/screenshots/spread-your-ashes/gallery.png",
-          "/images/screenshots/spread-your-ashes/about.png"
+          "/images/screenshots/spread-your-ashes/gallery.png"
         ],
-        "website": "https://spreadyourashes.com"
+        "website": "https://spreadyourashes.com",
+        "category": "creative"
+      },
+      {
+        "title": "ForEveryBomb",
+        "role": "创建者兼开发者",
+        "organization": "独立项目",
+        "timeline": "2026年至今",
+        "challenge": "构建一个实时跟踪器，可视化美国军事行动的成本，通过人均分摊、实时计数器和与社会项目的对比，将抽象的国防开支变得具体可感。",
+        "whatIDid": [
+          "设计和开发Next.js网络应用，配备每5分钟从来源新闻更新的实时支出计数器",
+          "使用Vercel定时任务构建自动化每日数据管道，用于追踪、分类和汇总支出事件",
+          "实施Claude AI驱动的新闻检查器，用于识别和分类新的军事支出报告",
+          "创建机会成本计算器，支持按州筛选，展示这笔钱本可资助什么——教师工资、住房、医疗、学校午餐",
+          "构建按类别分类的支出明细（弹药、行动、其他），并附有逐日账簿，引用来源新闻",
+          "开发自有的分析和安全监控管道",
+          "使用自定义域名和自动化每日更新部署到生产环境"
+        ],
+        "impact": "创建了一个易于理解的数据可视化工具，将抽象的军事支出数据转化为个人化、可感知的数字。通过展示每天的支出在教育、住房和医疗方面本可资助什么——支持按州筛选——该项目使财政政策变得具体，并邀请公民参与。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、Firebase、Vercel Cron、Claude AI集成、实时数据可视化、自动化数据管道",
+        "images": [
+          "/images/screenshots/foreverybomb/home.png",
+          "/images/screenshots/foreverybomb/counter.png",
+          "/images/screenshots/foreverybomb/timeline.png"
+        ],
+        "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Earth Simulation Control Panel",
+        "role": "创建者兼开发者",
+        "organization": "概念艺术项目",
+        "timeline": "2026年至今",
+        "challenge": "创建一件概念艺术作品，探索这样一个问题：如果地球是一个模拟，控制面板会是什么样的？一个单页体验，设计成机密政府终端的风格，展示产生我们当前现实的所有'设置'。",
+        "whatIDid": [
+          "设计和构建了粗犷主义终端界面，配备CRT扫描线效果、密级印章和操作员日志",
+          "创建了8个互动控制部分，涵盖物理常数、地质气候、生物参数、文明设置、地缘政治配置、社会参数、资源分配和模拟元数据",
+          "构建了实时数据可视化，包括从Natural Earth矢量栅格化的盲文字符世界地图、实时人口和CO₂计数器、资源消耗仪表和财富分配条形图",
+          "实施了带锁定解锁机制的交互式控件和参数更改触发的后果消息",
+          "撰写了以外星模拟管理员口吻的暗黑幽默操作员日志",
+          "开发了可折叠部分和固定导航，适用于密集的单页布局"
+        ],
+        "impact": "创建了一个沉浸式数字艺术体验，使用控制面板和机密文件的熟悉语言来重新审视我们看待世界的方式。通过将真实的地球数据呈现为'模拟参数'，该项目邀请人们反思我们星球配置的任意性、脆弱性和有时荒谬的本质。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、Unicode盲文可视化、实时数据动画、CRT/终端UI设计、创意写作、概念艺术",
+        "images": [
+          "/images/screenshots/earth-simulator/home.png",
+          "/images/screenshots/earth-simulator/telemetry.png",
+          "/images/screenshots/earth-simulator/controls.png"
+        ],
+        "website": "https://earth.jamelna.com",
+        "category": "creative"
       },
       {
         "title": "SceneCraft",
@@ -267,7 +354,8 @@
           "管理开发路线图，到2026年服务25000名学生用户"
         ],
         "impact": "创建教育工作者网络，从试点学校扩展到全州采用。开发的负责任人工智能框架现在为北卡罗来纳州的州级人工智能教育路线图提供信息。",
-        "skills": "人工智能产品开发、LLM设计、用户研究、跨职能领导、负责任的人工智能框架"
+        "skills": "人工智能产品开发、LLM设计、用户研究、跨职能领导、负责任的人工智能框架",
+        "category": "professional"
       },
       {
         "title": "SCRIPT",
@@ -283,7 +371,8 @@
           "开发数据驱动的评估工具以跟踪学区进度"
         ],
         "impact": "全美50多个学区使用SCRIPT框架创建以公平为重点的计算机科学计划。培训了30多名辅导员，现在为全国学区提供支持。",
-        "skills": "框架设计、全国项目扩展、合作伙伴关系管理、辅导员培训、数据系统"
+        "skills": "框架设计、全国项目扩展、合作伙伴关系管理、辅导员培训、数据系统",
+        "category": "professional"
       },
       {
         "title": "NYC CS4All",
@@ -299,7 +388,8 @@
           "领导公平倡议，提高女生和有色人种学生的参与度"
         ],
         "impact": "数千名从未接触过计算机科学教育的学生获得了通往计算领域的途径。为全区计算机科学整合创建了可持续模式。",
-        "skills": "大规模项目管理、教师专业发展、以公平为重点的设计、利益相关者管理"
+        "skills": "大规模项目管理、教师专业发展、以公平为重点的设计、利益相关者管理",
+        "category": "professional"
       },
       {
         "title": "CS Coaching Toolkit",
@@ -315,9 +405,16 @@
           "为大学和学区的计算机科学项目整合提供咨询"
         ],
         "impact": "工具包在全国范围内被采用为计算机科学辅导员的关键资源。影响了多个州和学区的辅导实践。",
-        "skills": "资源开发、框架设计、专业发展设计、多州合作伙伴关系"
+        "skills": "资源开发、框架设计、专业发展设计、多州合作伙伴关系",
+        "category": "professional"
       }
-    ]
+    ],
+    "sectionProfessional": "专业经验",
+    "sectionProfessionalDesc": "我领导项目、管理团队并大规模制定政策的角色。",
+    "sectionProducts": "我构建的产品",
+    "sectionProductsDesc": "独立应用和工具——设计、开发和发布。",
+    "sectionCreative": "创意项目",
+    "sectionCreativeDesc": "探索技术、记忆和意义的艺术与概念性作品。"
   },
   "about": {
     "title": "关于我",
@@ -788,5 +885,52 @@
         "button": "联系我们"
       }
     }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2026年3月",
+    "intro": "本网站是个人咨询作品集和K-12计算机科学教育工具。本政策说明收集哪些数据、如何使用以及您作为访客的权利。我们力求简单，仅收集真正必要的信息。",
+    "collectTitle": "我们收集的内容",
+    "collectAnalyticsLabel": "分析数据",
+    "collectAnalytics": "我们收集基本的匿名页面访问数据，例如访问了哪些页面、引荐来源和大致地理区域。这些记录不附带任何个人身份信息。数据存储在我们自己的Firestore数据库中，而非第三方分析平台。",
+    "collectAILabel": "AI对话（K-12工具）",
+    "collectAI": "当您使用K-12课程规划工具时，您的输入（学区背景、年级、目标）会发送至Anthropic的Claude API以生成课程计划。这些输入实时处理，响应返回后不会存储在我们的服务器上。",
+    "collectContactLabel": "联系表单",
+    "collectContact": "如果您提交联系表单，我们将收集您的姓名、电子邮件地址和留言。这些信息仅用于回复您的咨询。",
+    "useTitle": "我们如何使用",
+    "useIntro": "本网站收集的数据仅用于以下目的：",
+    "use1": "了解访客如何浏览网站，以改善内容和可用性",
+    "use2": "为K-12教育工作者实时生成AI课程计划",
+    "use3": "回复通过联系表单提交的咨询",
+    "use4": "检测和防止滥用或恶意流量",
+    "thirdPartyTitle": "第三方服务",
+    "thirdPartyIntro": "本网站使用以下第三方服务，每项服务均有其自己的隐私政策，链接如下。",
+    "tpAnthropicLabel": "Anthropic（Claude AI）",
+    "tpAnthropic": "驱动K-12课程规划工具。输入内容发送至Anthropic API进行处理。Anthropic可能根据其使用政策保留数据。",
+    "tpFirebaseLabel": "Firebase / Firestore（Google）",
+    "tpFirebase": "用于存储匿名分析数据。数据存储在Google Cloud基础设施的jamelna.com Firebase项目下。",
+    "tpSupabaseLabel": "Supabase",
+    "tpSupabase": "用作某些网站功能的数据存储。Supabase将数据存储在美国的AWS基础设施上。",
+    "tpSanityLabel": "Sanity",
+    "tpSanity": "用作网站内容的内容管理系统。Sanity将内容数据存储在其云基础设施中。",
+    "tpVercelLabel": "Vercel",
+    "tpVercel": "用于托管和部署本网站。Vercel出于安全和性能目的可能记录请求元数据（IP地址、用户代理）。",
+    "cookiesTitle": "Cookie",
+    "cookiesIntro": "本网站使用最少量的Cookie：",
+    "cookie1": "会话Cookie——在单次访问期间维持状态，关闭浏览器后删除。",
+    "cookie2": "语言Cookie——记住您在不同访问之间的语言偏好。",
+    "cookiesNote": "我们不使用广告Cookie、跟踪像素或任何跨站点跟踪技术。",
+    "retentionTitle": "数据保留",
+    "retention1": "匿名分析数据最多保留12个月后删除。联系表单提交内容仅在回复您的咨询所需的时间内保留。",
+    "retention2": "发送至K-12工具的AI对话输入在处理后不会存储。我们的服务器上不保留任何课程规划会话数据。",
+    "rightsTitle": "您的权利",
+    "rightsIntro": "如果您位于欧盟或其他有数据保护法的司法管辖区，您享有以下权利：",
+    "right1": "访问权——请求获取我们持有的您的个人数据副本",
+    "right2": "删除权——请求删除您的数据",
+    "right3": "更正权——请求更正不准确的数据",
+    "right4": "数据可携带权——以可移植格式请求您的数据",
+    "right5": "反对权——反对对您数据的某些使用",
+    "contactTitle": "有疑问？",
+    "contactText": "如果您对本隐私政策有任何疑问或希望行使数据权利，请联系我们："
   }
 }

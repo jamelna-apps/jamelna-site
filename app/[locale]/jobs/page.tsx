@@ -240,11 +240,11 @@ function DashboardContent() {
           <p className="text-sm text-[#636366]">Improve your match accuracy</p>
         </Link>
         <Link
-          href={`/${locale}/jobs/all?status=applied`}
+          href={`/${locale}/jobs/applications`}
           className="glass-card p-4"
         >
           <h3 className="font-medium text-white">Track Applications</h3>
-          <p className="text-sm text-[#636366]">View applied jobs</p>
+          <p className="text-sm text-[#636366]">View your application pipeline</p>
         </Link>
       </div>
 

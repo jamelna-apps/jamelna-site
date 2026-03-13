@@ -49,7 +49,7 @@ const Footer = () => {
                 { href: `/${locale}`, label: nav('home') },
                 { href: `/${locale}/services`, label: nav('services') },
                 { href: `/${locale}/work`, label: nav('work') },
-                { href: `/${locale}/k12-cs-education`, label: 'K12 CSED' },
+                { href: `/${locale}/k12-cs-education`, label: nav('k12cs') },
                 { href: `/${locale}/photography`, label: nav('photography') },
                 { href: `/${locale}/about`, label: nav('about') },
                 { href: `/${locale}/contact`, label: nav('contact') },
@@ -98,7 +98,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://github.com/joemelendez"
+                  href="https://github.com/jamelna-apps"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-secondary hover:text-primary transition-colors text-sm inline-flex items-center gap-2"
@@ -119,9 +119,17 @@ const Footer = () => {
             <p className="text-text-muted/60 text-xs text-center md:text-left leading-relaxed">
               {t('siteDescription')}
             </p>
-            <p className="text-text-muted/40 text-xs">
-              {t('copyright')}
-            </p>
+            <div className="flex items-center gap-4">
+              <Link
+                href={`/${locale}/privacy`}
+                className="text-text-muted/40 hover:text-text-muted text-xs transition-colors"
+              >
+                {t('privacy')}
+              </Link>
+              <p className="text-text-muted/40 text-xs">
+                © {new Date().getFullYear()} Joe Alexander Meléndez-Naharro. All rights reserved.
+              </p>
+            </div>
           </div>
           {/* Easter egg hint */}
           <p className="text-center text-text-muted/10 text-xs mt-8 select-none">
