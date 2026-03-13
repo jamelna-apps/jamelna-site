@@ -33,7 +33,6 @@ const Navigation = () => {
 
   const navLinks = [
     { href: `/${locale}`, label: t('home') },
-    { href: `/${locale}/services`, label: t('services') },
     { href: `/${locale}/work`, label: t('work') },
     { href: `/${locale}/k12-cs-education`, label: t('k12cs') },
     { href: `/${locale}/photography`, label: t('photography') },

@@ -47,7 +47,6 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { href: `/${locale}`, label: nav('home') },
-                { href: `/${locale}/services`, label: nav('services') },
                 { href: `/${locale}/work`, label: nav('work') },
                 { href: `/${locale}/k12-cs-education`, label: nav('k12cs') },
                 { href: `/${locale}/photography`, label: nav('photography') },
