@@ -22,21 +22,21 @@
   "home": {
     "valueProps": {
       "bridgeBuilder": {
-        "title": "Innovation Strategy",
-        "description": "I don't chase trends — I evaluate them. Which emerging technologies actually improve outcomes? How do you pilot responsibly? How do you scale without leaving schools behind? I've built the frameworks that answer these questions at district and national scale."
+        "title": "Estrategia de Innovación",
+        "description": "No persigo tendencias — las evalúo. ¿Qué tecnologías emergentes mejoran realmente los resultados? ¿Cómo se hace un piloto de manera responsable? ¿Cómo se escala sin dejar atrás a las escuelas? He construido los marcos que responden estas preguntas a nivel de distrito y nacional."
       },
       "aiPioneer": {
-        "title": "Emerging Tech Implementation",
-        "description": "AI-powered curriculum tools. Computational thinking frameworks. Data literacy programs. Responsible technology practices. I've designed and deployed programs across 200+ schools, training 500+ educators to integrate technologies that didn't exist when they got their teaching degrees."
+        "title": "Implementación de Tecnología Emergente",
+        "description": "Herramientas curriculares con IA. Marcos de pensamiento computacional. Programas de alfabetización de datos. Prácticas tecnológicas responsables. He diseñado e implementado programas en más de 200 escuelas, formando a más de 500 educadores para integrar tecnologías que no existían cuando obtuvieron sus títulos de enseñanza."
       },
       "systemsDesigner": {
-        "title": "Systems & Scale",
-        "description": "Led the national SCRIPT framework for CS education. Managed NYC's CS4All rollout across 200+ schools. Built products used by thousands. I know how to take a promising idea from pilot to city-wide implementation — and what breaks when you try."
+        "title": "Sistemas y Escala",
+        "description": "Lideré el marco nacional SCRIPT para la educación en informática. Gestioné el despliegue de CS4All de NYC en más de 200 escuelas. Construí productos utilizados por miles. Sé cómo llevar una idea prometedora de piloto a implementación a toda la ciudad — y qué falla cuando lo intentas."
       }
     },
     "featuredWork": {
       "title": "Proyectos Destacados",
-      "description": "National frameworks, district-scale programs, and products built from the ground up.",
+      "description": "Marcos nacionales, programas a escala de distrito y productos construidos desde cero.",
       "viewAll": "Ver Todos los Proyectos",
       "projects": {
         "gyst": {
@@ -78,32 +78,32 @@
       }
     },
     "cta": {
-      "title": "Ready to Move Forward?",
-      "description": "Whether you're evaluating AI tools, designing a district technology roadmap, or building something from scratch — I'd love to hear what you're working on.",
-      "button": "Start a Conversation"
+      "title": "¿Listo para Avanzar?",
+      "description": "Ya sea que estés evaluando herramientas de IA, diseñando una hoja de ruta tecnológica para tu distrito o construyendo algo desde cero — me encantaría escuchar en qué estás trabajando.",
+      "button": "Iniciar una Conversación"
     },
     "coreExpertise": "Do",
     "photography": {
-      "title": "Through the Lens",
+      "title": "A Través del Objetivo",
       "subtitle": "Street photography across three continents.",
-      "viewAll": "View all galleries"
+      "viewAll": "Ver todas las galerías"
     },
     "metrics": {
       "schools": {
         "number": "200+",
-        "label": "Schools Impacted"
+        "label": "Escuelas Impactadas"
       },
       "educators": {
         "number": "500+",
-        "label": "Educators Trained"
+        "label": "Educadores Formados"
       },
       "students": {
         "number": "25K+",
-        "label": "Students Reached"
+        "label": "Estudiantes Alcanzados"
       },
       "nsfFunded": {
         "number": "NSF",
-        "label": "Funded Research"
+        "label": "Investigación Financiada"
       }
     }
   },
@@ -470,7 +470,7 @@
     "experienceTitle": "Experiencia",
     "experience": {
       "ncstate": {
-        "title": "Research Scholar",
+        "title": "Investigador Académico",
         "org": "NC State University, Friday Institute for Educational Innovation",
         "dates": "Mar 2025 - Presente",
         "description": "Liderando la gestión de producto y proyecto para SceneCraft, una plataforma educativa de narración impulsada por IA, como parte del EngageAI Institute financiado por la NSF. Alineando investigación, diseño y colaboración con stakeholders para crear soluciones de aprendizaje informadas por datos para estudiantes y educadores K-12."
@@ -488,7 +488,7 @@
         "description": "Diseñé el CS Coaching Toolkit y Card Deck, ahora utilizados a nivel nacional. Facilité talleres para NYC DOE, Louisiana y Carolina del Sur. Asesoré a universidades y distritos sobre integración de programas de informática."
       },
       "cornellResident": {
-        "title": "Teacher-in-Residence",
+        "title": "Profesor en Residencia",
         "org": "Cornell Tech",
         "dates": "Sep 2019 - Nov 2021",
         "description": "Conecté la investigación académica con la práctica en el aula. Colaboré con investigadores en proyectos de tecnología educativa y aporté perspectiva de profesional a iniciativas de desarrollo curricular."
@@ -524,73 +524,73 @@
         "description": "Desarrollé e impartí programación de educación científica para audiencias diversas. Creé exhibiciones interactivas y facilité experiencias de aprendizaje que despertaron la curiosidad en visitantes de todas las edades."
       }
     },
-    "linkedinButton": "View Full Profile on LinkedIn",
-    "metricsTitle": "By the Numbers",
+    "linkedinButton": "Ver Perfil Completo en LinkedIn",
+    "metricsTitle": "En Cifras",
     "metrics": {
       "schools": {
         "number": "200+",
-        "label": "Schools Impacted"
+        "label": "Escuelas Impactadas"
       },
       "educators": {
         "number": "500+",
-        "label": "Educators Trained"
+        "label": "Educadores Formados"
       },
       "students": {
         "number": "25K+",
-        "label": "Students Reached"
+        "label": "Estudiantes Alcanzados"
       },
       "years": {
         "number": "15+",
-        "label": "Years in Education"
+        "label": "Años en Educación"
       },
       "nsfFunded": {
         "number": "NSF",
-        "label": "Funded Research"
+        "label": "Investigación Financiada"
       }
     },
-    "skillsTitle": "Core Skills",
+    "skillsTitle": "Habilidades Principales",
     "skills": {
       "strategy": {
-        "title": "Strategy",
-        "items": "Innovation roadmaps, pilot design, emerging tech evaluation, scaling frameworks"
+        "title": "Estrategia",
+        "items": "Hojas de ruta de innovación, diseño de pilotos, evaluación de tecnología emergente, marcos de escalado"
       },
       "technical": {
-        "title": "Technical",
-        "items": "JavaScript, TypeScript, React, Next.js, React Native, Python, AI/ML integration"
+        "title": "Técnico",
+        "items": "JavaScript, TypeScript, React, Next.js, React Native, Python, integración de IA/ML"
       },
       "education": {
-        "title": "Education",
-        "items": "Curriculum design, CSTA standards, UDL, professional development, equity-centered design"
+        "title": "Educación",
+        "items": "Diseño curricular, estándares CSTA, DUA, desarrollo profesional, diseño centrado en la equidad"
       },
       "leadership": {
-        "title": "Leadership",
-        "items": "Program management, cross-functional teams, stakeholder alignment, multi-state partnerships"
+        "title": "Liderazgo",
+        "items": "Gestión de programas, equipos multifuncionales, alineación de stakeholders, asociaciones multi-estatales"
       }
     },
-    "photographyLink": "I'm also a photographer",
-    "photographyLinkCta": "View my galleries",
-    "contactCta": "Interested in working together?",
-    "contactCtaButton": "Get in touch"
+    "photographyLink": "También soy fotógrafo",
+    "photographyLinkCta": "Ver mis galerías",
+    "contactCta": "¿Interesado en trabajar juntos?",
+    "contactCtaButton": "Contactar"
   },
   "contact": {
-    "title": "Contact",
-    "description": "Whether you're exploring how we might work together or just want to connect about education and technology, I'd love to hear from you.",
+    "title": "Contacto",
+    "description": "Ya sea que estés explorando cómo podríamos trabajar juntos o simplemente quieras conectar sobre educación y tecnología, me encantaría escucharte.",
     "opportunities": {
-      "title": "Open to Opportunities",
-      "description": "I'm open to full-time, contract, and advisory roles across education technology, innovation strategy, and product leadership. Remote-friendly, based in the US with strong ties to Spain and Europe.",
-      "cta": "Send Email",
+      "title": "Abierto a Oportunidades",
+      "description": "Estoy abierto a roles a tiempo completo, por contrato y de asesoramiento en tecnología educativa, estrategia de innovación y liderazgo de producto. Trabajo remoto, con base en EE.UU. y fuertes vínculos con España y Europa.",
+      "cta": "Enviar Email",
       "email": "joe@jamelna.com"
     },
     "consulting": {
-      "title": "Consulting & Advisory",
-      "description": "I also take on select consulting engagements — from EdTech market strategy to AI implementation in schools. If you have a specific project in mind, I'd love to hear about it.",
-      "cta": "Send Email"
+      "title": "Consultoría y Asesoramiento",
+      "description": "También acepto proyectos de consultoría selectos — desde estrategia de mercado EdTech hasta implementación de IA en escuelas. Si tienes un proyecto específico en mente, me encantaría escuchar más.",
+      "cta": "Enviar Email"
     },
     "connect": {
-      "title": "Get in Touch",
+      "title": "Ponerse en Contacto",
       "email": "joe@jamelna.com",
       "linkedin": "linkedin.com/in/joeamelendez",
-      "location": "Durham, NC — open to remote, hybrid, US or Spain-based opportunities"
+      "location": "Durham, NC — abierto a oportunidades remotas, híbridas, en EE.UU. o en España"
     }
   },
   "photography": {
@@ -995,59 +995,59 @@
     },
     "resilience": {
       "hero": {
-        "title": "Digital Resilience Toolkit",
-        "subtitle": "Practical tools to protect yourself, your community, and your data.",
-        "description": "When governments threaten civil liberties, technology becomes both weapon and shield. This toolkit gives you concrete steps—from 5-minute fixes to community-scale infrastructure—to build communication systems that can't be silenced and preserve information that can't be erased.",
-        "backLink": "Tech Sovereignty",
-        "eyebrow": "Digital Resilience",
-        "statActions": "Actions",
-        "statPillars": "Pillars",
-        "statTiers": "Tiers"
+        "title": "Kit de Resiliencia Digital",
+        "subtitle": "Herramientas prácticas para protegerte a ti, a tu comunidad y a tus datos.",
+        "description": "Cuando los gobiernos amenazan las libertades civiles, la tecnología se convierte en arma y escudo a la vez. Este kit te ofrece pasos concretos — desde soluciones de 5 minutos hasta infraestructura a escala comunitaria — para construir sistemas de comunicación que no puedan silenciarse y preservar información que no pueda borrarse.",
+        "backLink": "Soberanía Tech",
+        "eyebrow": "Resiliencia Digital",
+        "statActions": "Acciones",
+        "statPillars": "Pilares",
+        "statTiers": "Niveles"
       },
-      "showAllTiers": "Show All",
-      "clearFilter": "Clear filter",
-      "backToSovereignty": "← Tech Sovereignty",
-      "ifOnlyOneThingLabel": "If you only do one thing",
-      "noActionsForFilter": "No actions match this filter. Try a different tier or clear your selection.",
-      "viewRelatedTrack": "Explore related curriculum →",
-      "viewActions": "View actions",
+      "showAllTiers": "Ver Todos",
+      "clearFilter": "Quitar filtro",
+      "backToSovereignty": "← Soberanía Tech",
+      "ifOnlyOneThingLabel": "Si solo haces una cosa",
+      "noActionsForFilter": "Ninguna acción coincide con este filtro. Prueba un nivel diferente o quita el filtro.",
+      "viewRelatedTrack": "Explorar currículo relacionado →",
+      "viewActions": "Ver acciones",
       "pillarsOverview": {
-        "title": "Five Pillars of Digital Resilience",
-        "description": "Each pillar addresses a critical aspect of building independent, surveillance-resistant systems."
+        "title": "Cinco Pilares de la Resiliencia Digital",
+        "description": "Cada pilar aborda un aspecto crítico para construir sistemas independientes y resistentes a la vigilancia."
       },
       "tiers": {
         "1": {
-          "title": "Protect Yourself Now",
-          "subtitle": "30 minutes to significantly safer",
-          "audience": "For everyone — no technical background needed"
+          "title": "Protégete Ahora",
+          "subtitle": "30 minutos para ser significativamente más seguro",
+          "audience": "Para todos — no se necesita conocimiento técnico"
         },
         "2": {
-          "title": "Build Secure Systems",
-          "subtitle": "Hours to days of setup",
-          "audience": "For groups and organizers with some technical comfort"
+          "title": "Construye Sistemas Seguros",
+          "subtitle": "Horas o días de configuración",
+          "audience": "Para grupos y organizadores con cierta comodidad técnica"
         },
         "3": {
-          "title": "Create Resilient Networks",
-          "subtitle": "Days to weeks of sustained work",
-          "audience": "For technical builders and system administrators"
+          "title": "Crea Redes Resilientes",
+          "subtitle": "Días o semanas de trabajo sostenido",
+          "audience": "Para constructores técnicos y administradores de sistemas"
         },
-        "sectionTitle": "Choose your depth",
-        "sectionDescription": "Filter by how much time and technical skill you can invest."
+        "sectionTitle": "Elige tu nivel de profundidad",
+        "sectionDescription": "Filtra según el tiempo y las habilidades técnicas que puedes invertir."
       },
       "contexts": {
-        "sectionTitle": "What's your situation?",
-        "sectionDescription": "Select your context to prioritize the most relevant actions.",
+        "sectionTitle": "¿Cuál es tu situación?",
+        "sectionDescription": "Selecciona tu contexto para priorizar las acciones más relevantes.",
         "concerned": {
-          "title": "Concerned About Privacy",
-          "description": "You want to reduce your digital footprint and protect personal data"
+          "title": "Preocupado por la Privacidad",
+          "description": "Quieres reducir tu huella digital y proteger tus datos personales"
         },
         "active": {
-          "title": "Facing Active Threats",
-          "description": "You or your community face surveillance, harassment, or targeted attacks"
+          "title": "Ante Amenazas Activas",
+          "description": "Tú o tu comunidad enfrentáis vigilancia, acoso o ataques dirigidos"
         },
         "immediate": {
-          "title": "At Immediate Risk",
-          "description": "You need to secure communications and protect evidence right now"
+          "title": "En Riesgo Inmediato",
+          "description": "Necesitas asegurar las comunicaciones y proteger evidencias ahora mismo"
         }
       },
       "pillars": {
@@ -1671,34 +1671,34 @@
         }
       },
       "toolDirectory": {
-        "title": "Tool Directory",
-        "subtitle": "Every tool recommended in this toolkit, organized for quick reference.",
-        "description": "Every tool recommended in this toolkit, organized for quick reference.",
-        "noTools": "No tools found for this filter.",
-        "filterAll": "All Tools",
-        "platformLabel": "Platforms",
-        "fossLabel": "Open Source",
-        "replacesLabel": "Replaces"
+        "title": "Directorio de Herramientas",
+        "subtitle": "Cada herramienta recomendada en este kit, organizada para consulta rápida.",
+        "description": "Cada herramienta recomendada en este kit, organizada para consulta rápida.",
+        "noTools": "No se encontraron herramientas para este filtro.",
+        "filterAll": "Todas las Herramientas",
+        "platformLabel": "Plataformas",
+        "fossLabel": "Código Abierto",
+        "replacesLabel": "Reemplaza"
       },
       "crossLinks": {
-        "title": "Go Deeper",
-        "description": "These tech sovereignty tracks provide detailed curriculum for the skills referenced in this toolkit.",
-        "explore": "Explore →",
+        "title": "Profundiza",
+        "description": "Estas pistas de soberanía tecnológica ofrecen currículo detallado para las habilidades referenciadas en este kit.",
+        "explore": "Explorar →",
         "networking": {
-          "title": "Networking Fundamentals",
-          "description": "Understand how networks work so you can build your own"
+          "title": "Fundamentos de Redes",
+          "description": "Entiende cómo funcionan las redes para poder construir las tuyas"
         },
         "selfHosted": {
-          "title": "Self-Hosted Services",
-          "description": "Detailed guides for running your own infrastructure"
+          "title": "Servicios Autoalojados",
+          "description": "Guías detalladas para gestionar tu propia infraestructura"
         },
         "digitalRights": {
-          "title": "Digital Rights",
-          "description": "Understand the legal landscape and your protections"
+          "title": "Derechos Digitales",
+          "description": "Comprende el marco legal y tus protecciones"
         },
         "community": {
-          "title": "Community Building",
-          "description": "Organizational skills for collective action"
+          "title": "Construcción de Comunidad",
+          "description": "Habilidades organizativas para la acción colectiva"
         }
       }
     },
@@ -1888,7 +1888,7 @@
     "use4": "Detectar y prevenir tráfico abusivo o malicioso",
     "thirdPartyTitle": "Servicios de Terceros",
     "thirdPartyIntro": "Este sitio utiliza los siguientes servicios de terceros. Cada uno tiene su propia política de privacidad enlazada a continuación.",
-    "tpAnthropicLabel": "Anthropic (Claude AI)",
+    "tpAnthropicLabel": "Anthropic (Claude IA)",
     "tpAnthropic": "Impulsa la herramienta de planificación curricular K-12. Las entradas se envían a la API de Anthropic para su procesamiento. Anthropic puede retener datos según sus políticas de uso.",
     "tpFirebaseLabel": "Firebase / Firestore (Google)",
     "tpFirebase": "Se utiliza para almacenar datos de analítica anonimizados. Los datos se almacenan en la infraestructura de Google Cloud bajo el proyecto Firebase de jamelna.com.",

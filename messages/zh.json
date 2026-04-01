@@ -22,21 +22,21 @@
   "home": {
     "valueProps": {
       "bridgeBuilder": {
-        "title": "Innovation Strategy",
-        "description": "I don't chase trends — I evaluate them. Which emerging technologies actually improve outcomes? How do you pilot responsibly? How do you scale without leaving schools behind? I've built the frameworks that answer these questions at district and national scale."
+        "title": "创新战略",
+        "description": "我不追逐趋势——我评估它们。哪些新兴技术真正能改善教育成果？如何负责任地开展试点？如何在不落下任何学校的情况下扩大规模？我已建立了能在学区和全国层面回答这些问题的框架。"
       },
       "aiPioneer": {
-        "title": "Emerging Tech Implementation",
-        "description": "AI-powered curriculum tools. Computational thinking frameworks. Data literacy programs. Responsible technology practices. I've designed and deployed programs across 200+ schools, training 500+ educators to integrate technologies that didn't exist when they got their teaching degrees."
+        "title": "新兴技术实施",
+        "description": "人工智能驱动的课程工具。计算思维框架。数据素养项目。负责任的技术实践。我在200多所学校设计并部署了项目，培训了500多名教育工作者，帮助他们整合那些在他们获得教师资格证时还不存在的技术。"
       },
       "systemsDesigner": {
-        "title": "Systems & Scale",
-        "description": "Led the national SCRIPT framework for CS education. Managed NYC's CS4All rollout across 200+ schools. Built products used by thousands. I know how to take a promising idea from pilot to city-wide implementation — and what breaks when you try."
+        "title": "系统与规模",
+        "description": "我主导了计算机科学教育的国家SCRIPT框架。管理NYC CS4All在200多所学校的推广。构建了被数千人使用的产品。我知道如何将一个有前景的想法从试点推进到全市实施——以及在尝试过程中会出现什么问题。"
       }
     },
     "featuredWork": {
       "title": "精选项目",
-      "description": "National frameworks, district-scale programs, and products built from the ground up.",
+      "description": "国家框架、学区级项目以及从零开始构建的产品。",
       "viewAll": "查看所有项目",
       "projects": {
         "gyst": {
@@ -78,32 +78,32 @@
       }
     },
     "cta": {
-      "title": "Ready to Move Forward?",
-      "description": "Whether you're evaluating AI tools, designing a district technology roadmap, or building something from scratch — I'd love to hear what you're working on.",
-      "button": "Start a Conversation"
+      "title": "准备好向前迈进了吗？",
+      "description": "无论您是在评估人工智能工具、设计学区技术路线图，还是从零开始构建某项目——我很乐意了解您正在做什么。",
+      "button": "开启对话"
     },
     "coreExpertise": "Do",
     "photography": {
-      "title": "Through the Lens",
+      "title": "镜头背后",
       "subtitle": "Street photography across three continents.",
-      "viewAll": "View all galleries"
+      "viewAll": "查看所有画廊"
     },
     "metrics": {
       "schools": {
         "number": "200+",
-        "label": "Schools Impacted"
+        "label": "服务学校数"
       },
       "educators": {
         "number": "500+",
-        "label": "Educators Trained"
+        "label": "培训教育者"
       },
       "students": {
         "number": "25K+",
-        "label": "Students Reached"
+        "label": "覆盖学生数"
       },
       "nsfFunded": {
         "number": "NSF",
-        "label": "Funded Research"
+        "label": "资助研究"
       }
     }
   },
@@ -467,53 +467,53 @@
     "contact": "联系",
     "linkedin": "LinkedIn",
     "cta": "让我们谈谈",
-    "linkedinButton": "View Full Profile on LinkedIn",
-    "metricsTitle": "By the Numbers",
+    "linkedinButton": "查看LinkedIn完整档案",
+    "metricsTitle": "数字成就",
     "metrics": {
       "schools": {
         "number": "200+",
-        "label": "Schools Impacted"
+        "label": "服务学校数"
       },
       "educators": {
         "number": "500+",
-        "label": "Educators Trained"
+        "label": "培训教育者"
       },
       "students": {
         "number": "25K+",
-        "label": "Students Reached"
+        "label": "覆盖学生数"
       },
       "years": {
         "number": "15+",
-        "label": "Years in Education"
+        "label": "从教年数"
       },
       "nsfFunded": {
         "number": "NSF",
-        "label": "Funded Research"
+        "label": "资助研究"
       }
     },
-    "skillsTitle": "Core Skills",
+    "skillsTitle": "核心技能",
     "skills": {
       "strategy": {
-        "title": "Strategy",
-        "items": "Innovation roadmaps, pilot design, emerging tech evaluation, scaling frameworks"
+        "title": "战略",
+        "items": "创新路线图、试点设计、新兴技术评估、规模化框架"
       },
       "technical": {
-        "title": "Technical",
-        "items": "JavaScript, TypeScript, React, Next.js, React Native, Python, AI/ML integration"
+        "title": "技术",
+        "items": "JavaScript、TypeScript、React、Next.js、React Native、Python、AI/ML集成"
       },
       "education": {
-        "title": "Education",
-        "items": "Curriculum design, CSTA standards, UDL, professional development, equity-centered design"
+        "title": "教育",
+        "items": "课程设计、CSTA标准、UDL、专业发展、以公平为中心的设计"
       },
       "leadership": {
-        "title": "Leadership",
-        "items": "Program management, cross-functional teams, stakeholder alignment, multi-state partnerships"
+        "title": "领导力",
+        "items": "项目管理、跨职能团队、利益相关方协调、跨州合作"
       }
     },
-    "photographyLink": "I'm also a photographer",
-    "photographyLinkCta": "View my galleries",
-    "contactCta": "Interested in working together?",
-    "contactCtaButton": "Get in touch",
+    "photographyLink": "我也是一位摄影师",
+    "photographyLinkCta": "查看我的画廊",
+    "contactCta": "有意合作？",
+    "contactCtaButton": "立即联系",
     "experienceTitle": "工作经历",
     "experience": {
       "ncstate": {
@@ -573,24 +573,24 @@
     }
   },
   "contact": {
-    "title": "Contact",
-    "description": "Whether you're exploring how we might work together or just want to connect about education and technology, I'd love to hear from you.",
+    "title": "联系",
+    "description": "无论您是在探索我们可能的合作方式，还是只想就教育和技术进行交流，我都很期待听到您的声音。",
     "opportunities": {
-      "title": "Open to Opportunities",
-      "description": "I'm open to full-time, contract, and advisory roles across education technology, innovation strategy, and product leadership. Remote-friendly, based in the US with strong ties to Spain and Europe.",
-      "cta": "Send Email",
+      "title": "开放合作机会",
+      "description": "我对教育技术、创新战略和产品领导力领域的全职、合同和顾问职位持开放态度。支持远程工作，总部位于美国，与西班牙和欧洲有密切联系。",
+      "cta": "发送邮件",
       "email": "joe@jamelna.com"
     },
     "consulting": {
-      "title": "Consulting & Advisory",
-      "description": "I also take on select consulting engagements — from EdTech market strategy to AI implementation in schools. If you have a specific project in mind, I'd love to hear about it.",
-      "cta": "Send Email"
+      "title": "咨询与顾问",
+      "description": "我也接受精选咨询项目——从EdTech市场战略到学校人工智能实施。如果您有特定项目，我很乐意听取详情。",
+      "cta": "发送邮件"
     },
     "connect": {
-      "title": "Get in Touch",
+      "title": "联系我",
       "email": "joe@jamelna.com",
       "linkedin": "linkedin.com/in/joeamelendez",
-      "location": "Durham, NC — open to remote, hybrid, US or Spain-based opportunities"
+      "location": "北卡罗来纳州达勒姆——开放远程、混合、美国或西班牙的工作机会"
     }
   },
   "photography": {
@@ -1042,59 +1042,59 @@
     },
     "resilience": {
       "hero": {
-        "title": "Digital Resilience Toolkit",
-        "subtitle": "Practical tools to protect yourself, your community, and your data.",
-        "description": "When governments threaten civil liberties, technology becomes both weapon and shield. This toolkit gives you concrete steps—from 5-minute fixes to community-scale infrastructure—to build communication systems that can't be silenced and preserve information that can't be erased.",
-        "backLink": "Tech Sovereignty",
-        "eyebrow": "Digital Resilience",
-        "statActions": "Actions",
-        "statPillars": "Pillars",
-        "statTiers": "Tiers"
+        "title": "数字韧性工具包",
+        "subtitle": "保护您自身、社区和数据的实用工具。",
+        "description": "当政府威胁公民自由时，技术既是武器也是盾牌。本工具包为您提供具体步骤——从5分钟的快速修复到社区级基础设施——以构建无法被封堵的通信系统，并保存无法被抹去的信息。",
+        "backLink": "技术主权",
+        "eyebrow": "数字韧性",
+        "statActions": "行动",
+        "statPillars": "支柱",
+        "statTiers": "层级"
       },
-      "showAllTiers": "Show All",
-      "clearFilter": "Clear filter",
-      "backToSovereignty": "← Tech Sovereignty",
-      "ifOnlyOneThingLabel": "If you only do one thing",
-      "noActionsForFilter": "No actions match this filter. Try a different tier or clear your selection.",
-      "viewRelatedTrack": "Explore related curriculum →",
-      "viewActions": "View actions",
+      "showAllTiers": "显示全部",
+      "clearFilter": "清除筛选",
+      "backToSovereignty": "← 技术主权",
+      "ifOnlyOneThingLabel": "如果只做一件事",
+      "noActionsForFilter": "没有符合此筛选条件的行动。请尝试不同层级或清除筛选。",
+      "viewRelatedTrack": "探索相关课程 →",
+      "viewActions": "查看行动",
       "pillarsOverview": {
-        "title": "Five Pillars of Digital Resilience",
-        "description": "Each pillar addresses a critical aspect of building independent, surveillance-resistant systems."
+        "title": "数字韧性的五大支柱",
+        "description": "每个支柱都针对构建独立、抗监控系统的关键方面。"
       },
       "tiers": {
         "1": {
-          "title": "Protect Yourself Now",
-          "subtitle": "30 minutes to significantly safer",
-          "audience": "For everyone — no technical background needed"
+          "title": "立即保护自己",
+          "subtitle": "30分钟显著提升安全性",
+          "audience": "适合所有人——无需技术背景"
         },
         "2": {
-          "title": "Build Secure Systems",
-          "subtitle": "Hours to days of setup",
-          "audience": "For groups and organizers with some technical comfort"
+          "title": "构建安全系统",
+          "subtitle": "数小时至数天的配置",
+          "audience": "适合有一定技术基础的团体和组织者"
         },
         "3": {
-          "title": "Create Resilient Networks",
-          "subtitle": "Days to weeks of sustained work",
-          "audience": "For technical builders and system administrators"
+          "title": "创建韧性网络",
+          "subtitle": "数天至数周的持续工作",
+          "audience": "适合技术开发者和系统管理员"
         },
-        "sectionTitle": "Choose your depth",
-        "sectionDescription": "Filter by how much time and technical skill you can invest."
+        "sectionTitle": "选择您的深度",
+        "sectionDescription": "按您可投入的时间和技术能力筛选。"
       },
       "contexts": {
-        "sectionTitle": "What's your situation?",
-        "sectionDescription": "Select your context to prioritize the most relevant actions.",
+        "sectionTitle": "您的情况是什么？",
+        "sectionDescription": "选择您的情境以优先显示最相关的行动。",
         "concerned": {
-          "title": "Concerned About Privacy",
-          "description": "You want to reduce your digital footprint and protect personal data"
+          "title": "关注隐私安全",
+          "description": "您希望减少数字足迹并保护个人数据"
         },
         "active": {
-          "title": "Facing Active Threats",
-          "description": "You or your community face surveillance, harassment, or targeted attacks"
+          "title": "面临主动威胁",
+          "description": "您或您的社区正面临监控、骚扰或定向攻击"
         },
         "immediate": {
-          "title": "At Immediate Risk",
-          "description": "You need to secure communications and protect evidence right now"
+          "title": "处于即时危险中",
+          "description": "您现在需要立即保护通信安全和保存证据"
         }
       },
       "pillars": {
@@ -1718,34 +1718,34 @@
         }
       },
       "toolDirectory": {
-        "title": "Tool Directory",
-        "subtitle": "Every tool recommended in this toolkit, organized for quick reference.",
-        "description": "Every tool recommended in this toolkit, organized for quick reference.",
-        "noTools": "No tools found for this filter.",
-        "filterAll": "All Tools",
-        "platformLabel": "Platforms",
-        "fossLabel": "Open Source",
-        "replacesLabel": "Replaces"
+        "title": "工具目录",
+        "subtitle": "本工具包推荐的所有工具，按类组织便于快速查阅。",
+        "description": "本工具包推荐的所有工具，按类组织便于快速查阅。",
+        "noTools": "未找到符合此筛选条件的工具。",
+        "filterAll": "所有工具",
+        "platformLabel": "平台",
+        "fossLabel": "开源",
+        "replacesLabel": "替代"
       },
       "crossLinks": {
-        "title": "Go Deeper",
-        "description": "These tech sovereignty tracks provide detailed curriculum for the skills referenced in this toolkit.",
-        "explore": "Explore →",
+        "title": "深入了解",
+        "description": "这些技术主权课程模块为本工具包中提及的技能提供详细课程。",
+        "explore": "探索 →",
         "networking": {
-          "title": "Networking Fundamentals",
-          "description": "Understand how networks work so you can build your own"
+          "title": "网络基础",
+          "description": "了解网络的工作原理，以便构建自己的网络"
         },
         "selfHosted": {
-          "title": "Self-Hosted Services",
-          "description": "Detailed guides for running your own infrastructure"
+          "title": "自托管服务",
+          "description": "运行自有基础设施的详细指南"
         },
         "digitalRights": {
-          "title": "Digital Rights",
-          "description": "Understand the legal landscape and your protections"
+          "title": "数字权利",
+          "description": "了解法律框架及您的权利保护"
         },
         "community": {
-          "title": "Community Building",
-          "description": "Organizational skills for collective action"
+          "title": "社区建设",
+          "description": "集体行动的组织技能"
         }
       }
     },
