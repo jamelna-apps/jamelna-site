@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div className="reveal-fade flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             {/* Photo with sci-fi frame — transparent PNG floats over orbital rings */}
             <div className="lg:w-1/3 flex-shrink-0">
-              <div className="relative group py-8">
+              <div className="relative group py-6 px-2 lg:px-0">
 
                 {/* Orbital ring 1 — slow rotation */}
                 <div className="absolute top-1/2 left-1/2 w-[110%] aspect-square animate-orbit pointer-events-none">
@@ -84,11 +84,18 @@ export default function AboutPage() {
                 {/* Glow backdrop behind the transparent photo */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 rounded-full bg-terra/8 blur-3xl group-hover:bg-terra/15 transition-all duration-1000 pointer-events-none" />
 
-                {/* HUD corner brackets */}
-                <div className="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
-                <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
-                <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-2 border-l-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
-                <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-2 border-r-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
+                {/* HUD corner brackets — flush to photo edges */}
+                <div className="absolute top-0 left-0 w-10 h-10 border-t-2 border-l-2 border-terra/50 group-hover:border-terra/80 transition-colors duration-500 z-20" />
+                <div className="absolute top-0 right-0 w-10 h-10 border-t-2 border-r-2 border-terra/50 group-hover:border-terra/80 transition-colors duration-500 z-20" />
+                <div className="absolute bottom-0 left-0 w-10 h-10 border-b-2 border-l-2 border-terra/50 group-hover:border-terra/80 transition-colors duration-500 z-20" />
+                <div className="absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-terra/50 group-hover:border-terra/80 transition-colors duration-500 z-20" />
+
+                {/* Horizontal edge lines — connecting brackets along top and bottom */}
+                <div className="absolute top-0 left-10 right-10 h-px bg-gradient-to-r from-terra/30 via-terra/10 to-terra/30 z-20" />
+                <div className="absolute bottom-0 left-10 right-10 h-px bg-gradient-to-r from-terra/30 via-terra/10 to-terra/30 z-20" />
+                {/* Vertical edge lines */}
+                <div className="absolute left-0 top-10 bottom-10 w-px bg-gradient-to-b from-terra/30 via-terra/10 to-terra/30 z-20" />
+                <div className="absolute right-0 top-10 bottom-10 w-px bg-gradient-to-b from-terra/30 via-terra/10 to-terra/30 z-20" />
 
                 {/* Scanning line */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
