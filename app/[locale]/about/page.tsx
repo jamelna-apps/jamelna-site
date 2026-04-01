@@ -29,8 +29,10 @@ export default function AboutPage() {
           style={{ background: 'radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent)' }} />
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-            <span className="text-violet-400">/</span> {t('title')}
+          <hr className="heading-rule" />
+          <h1 className="text-display-section font-display text-text-heading mb-6">
+            <span className="font-light">About</span>{' '}
+            <span className="font-extrabold">{t('title')}</span>
           </h1>
         </div>
       </section>
@@ -71,8 +73,10 @@ export default function AboutPage() {
 
           {/* Experience / CV Section */}
           <div className="border-t border-canvas-border pt-12 mb-12">
-            <h2 className="text-2xl font-display font-bold text-text-heading mb-8">
-              <span className="text-terra">//</span> {t('experienceTitle')}
+            <hr className="heading-rule" />
+            <h2 className="text-display-section font-display text-text-heading mb-8">
+              <span className="font-light">Experience</span>{' '}
+              <span className="font-extrabold">{t('experienceTitle')}</span>
             </h2>
             <div className="space-y-8">
               {experiences.map((exp) => (

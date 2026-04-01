@@ -93,7 +93,7 @@ export default function Home() {
           <div className="reveal-fade mb-16">
             <hr className="heading-rule" />
             <h2 className="text-display-section font-display text-text-heading">
-              <span className="font-light">Core</span>{' '}
+              <span className="font-light">What I</span>{' '}
               <span className="font-extrabold">{t('coreExpertise')}</span>
             </h2>
           </div>

@@ -24,11 +24,11 @@ interface Project {
 function SectionHeader({ title, description }: { title: string; description: string }) {
   return (
     <div className="mb-10">
-      <h2 className="text-2xl md:text-3xl font-display font-bold text-text-heading mb-2">
+      <hr className="heading-rule" />
+      <h2 className="text-display-section font-display font-extrabold text-text-heading mb-2">
         {title}
       </h2>
       <p className="text-text-secondary text-lg">{description}</p>
-      <div className="w-16 h-0.5 bg-terra mt-4" />
     </div>
   );
 }
@@ -72,8 +72,10 @@ export default function WorkPage() {
           style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent)' }} />
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-            <span className="text-ink">/</span> {t('title')}
+          <hr className="heading-rule" />
+          <h1 className="text-display-section font-display text-text-heading mb-6">
+            <span className="font-light">Selected</span>{' '}
+            <span className="font-extrabold">{t('title')}</span>
           </h1>
           <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
             {t('description')}

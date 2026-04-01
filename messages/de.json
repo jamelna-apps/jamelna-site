@@ -12,30 +12,31 @@
   },
   "hero": {
     "name": "Joe Alexander Meléndez-Naharro",
-    "tagline": "Gemeinschaften und Ideen in der Bildung verbinden",
-    "description": "Über 15 Jahre Erfahrung in der Entwicklung von Programmen, die MINT, Informatik und KI-Bildung für alle Schüler zugänglich machen.\n\nDerzeit in Durham, North Carolina ansässig, verbinde ich verschiedene Interessengruppen und baue Brücken zwischen Forschung und Praxis, Politik und Umsetzung, Innovation und Gerechtigkeit.",
-    "ctaPrimary": "Mit Mir Arbeiten",
-    "ctaSecondary": "Meine Arbeit Ansehen",
-    "yearsExperience": "Jahre Erfahrung"
+    "roleLabel": "Emerging Technology Strategist · K12 Innovation Leader",
+    "tagline": "I Help Schools Navigate What's Next",
+    "description": "From AI to immersive learning to data-driven instruction — I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
+    "ctaPrimary": "Let's Talk",
+    "ctaSecondary": "See My Work",
+    "yearsExperience": "15+"
   },
   "home": {
     "valueProps": {
       "bridgeBuilder": {
-        "title": "Brückenbauer",
-        "description": "Ich verbinde verschiedene Gemeinschaften und Ökosysteme - von Klassenlehrern bis zu Bezirksleitern, von Forschungsinstitutionen bis zu EdTech-Unternehmen, von US-amerikanischen bis zu internationalen Märkten. Ich übersetze zwischen Welten und baue Vertrauen und gemeinsames Verständnis zwischen Interessengruppen auf."
+        "title": "Innovation Strategy",
+        "description": "I don't chase trends — I evaluate them. Which emerging technologies actually improve outcomes? How do you pilot responsibly? How do you scale without leaving schools behind? I've built the frameworks that answer these questions at district and national scale."
       },
       "aiPioneer": {
-        "title": "KI-Bildungspionier",
-        "description": "Von der Entwicklung KI-gestützter Lernplattformen bis zur Schulung von über 500 Lehrkräften in MINT, Informatik, Computational Thinking und verantwortungsvollem Einsatz von KI übersetze ich modernste KI in praktische Auswirkungen im Klassenzimmer."
+        "title": "Emerging Tech Implementation",
+        "description": "AI-powered curriculum tools. Computational thinking frameworks. Data literacy programs. Responsible technology practices. I've designed and deployed programs across 200+ schools, training 500+ educators to integrate technologies that didn't exist when they got their teaching degrees."
       },
       "systemsDesigner": {
-        "title": "Systemdesigner",
-        "description": "Ich habe nationale Frameworks (SCRIPT), bezirksweite Initiativen (NYC CS4All: 200+ Schulen) geleitet und Programme von Grund auf aufgebaut, die Zehntausende von Schülern erreichen."
+        "title": "Systems & Scale",
+        "description": "Led the national SCRIPT framework for CS education. Managed NYC's CS4All rollout across 200+ schools. Built products used by thousands. I know how to take a promising idea from pilot to city-wide implementation — and what breaks when you try."
       }
     },
     "featuredWork": {
       "title": "Ausgewählte Projekte",
-      "description": "Über 15 Jahre habe ich Initiativen von praktischen Klassenzimmerprogrammen bis hin zu nationalen Frameworks geleitet.",
+      "description": "National frameworks, district-scale programs, and products built from the ground up.",
       "viewAll": "Alle Projekte Ansehen",
       "projects": {
         "gyst": {
@@ -73,11 +74,16 @@
       }
     },
     "cta": {
-      "title": "Lassen Sie Uns Zusammenarbeiten",
-      "description": "Ob Sie ein EdTech-Unternehmen sind, das neue Märkte navigiert, eine Schule, die innovative Tools implementiert, oder eine Organisation, die Partnerschaften zwischen Gemeinschaften aufbaut – ich bringe praktische Erfahrung in der Verbindung verschiedener Interessengruppen und einen kollaborativen Ansatz mit.",
-      "button": "Kontakt Aufnehmen"
+      "title": "Ready to Move Forward?",
+      "description": "Whether you're evaluating AI tools, designing a district technology roadmap, or building something from scratch — I'd love to hear what you're working on.",
+      "button": "Start a Conversation"
     },
-    "coreExpertise": "Kernkompetenzen"
+    "coreExpertise": "Do",
+    "photography": {
+      "title": "Through the Lens",
+      "subtitle": "Street photography across three continents.",
+      "viewAll": "View all galleries"
+    }
   },
   "footer": {
     "tagline": "Bildungstechnologie-Berater",

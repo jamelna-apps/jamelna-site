@@ -15,8 +15,10 @@ export default function ContactPage() {
           style={{ background: 'radial-gradient(circle, rgba(249, 115, 22, 0.4), transparent)' }} />
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-            <span className="text-terra">/</span> {t('title')}
+          <hr className="heading-rule" />
+          <h1 className="text-display-section font-display text-text-heading mb-6">
+            <span className="font-light">Get in</span>{' '}
+            <span className="font-extrabold">{t('title')}</span>
           </h1>
           <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
             {t('description')}
@@ -29,9 +31,10 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto">
           {/* Consulting Inquiries */}
           <div className="border-t border-canvas-border pt-12 mb-16">
+            <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-terra"></div>
-              <h2 className="text-2xl font-display font-bold text-text-heading">
+              <h2 className="text-display-section font-display font-extrabold text-text-heading">
                 {t('consultingTitle')}
               </h2>
             </div>
@@ -74,9 +77,10 @@ export default function ContactPage() {
 
           {/* Employment Opportunities */}
           <div className="border-t border-canvas-border pt-12 mb-16">
+            <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-ink"></div>
-              <h2 className="text-2xl font-display font-bold text-text-heading">
+              <h2 className="text-display-section font-display font-extrabold text-text-heading">
                 {t('employmentTitle')}
               </h2>
             </div>
@@ -102,9 +106,10 @@ export default function ContactPage() {
 
           {/* General Inquiries */}
           <div className="border-t border-canvas-border pt-12 mb-16">
+            <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-terra"></div>
-              <h2 className="text-2xl font-display font-bold text-text-heading">
+              <h2 className="text-display-section font-display font-extrabold text-text-heading">
                 {t('generalTitle')}
               </h2>
             </div>
@@ -137,9 +142,10 @@ export default function ContactPage() {
 
           {/* Location & Availability */}
           <div className="border-t border-canvas-border pt-12">
+            <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-ink"></div>
-              <h2 className="text-2xl font-display font-bold text-text-heading">
+              <h2 className="text-display-section font-display font-extrabold text-text-heading">
                 {t('locationTitle')}
               </h2>
             </div>

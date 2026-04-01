@@ -124,7 +124,7 @@ const Hero = () => {
       {/* Photo filmstrip background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-canvas-deep/75 z-10" />
+        <div className="absolute inset-0 bg-canvas-deep/88 z-10" />
 
         {/* Scrolling filmstrip */}
         <div

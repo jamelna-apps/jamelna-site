@@ -12,30 +12,31 @@
   },
   "hero": {
     "name": "Joe Alexander Meléndez-Naharro",
-    "tagline": "Conectando Comunidades e Ideias na Educação",
-    "description": "Mais de 15 anos a criar programas que tornam a educação STEM, CS e AI acessível a todos os alunos.\n\nAtualmente baseado em Durham, NC, a conectar diversos intervenientes e a construir pontes entre investigação e prática, política e implementação, inovação e equidade.",
-    "ctaPrimary": "Trabalhe Comigo",
-    "ctaSecondary": "Ver o Meu Trabalho",
-    "yearsExperience": "Anos de Experiência"
+    "roleLabel": "Emerging Technology Strategist · K12 Innovation Leader",
+    "tagline": "I Help Schools Navigate What's Next",
+    "description": "From AI to immersive learning to data-driven instruction — I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
+    "ctaPrimary": "Let's Talk",
+    "ctaSecondary": "See My Work",
+    "yearsExperience": "15+"
   },
   "home": {
     "valueProps": {
       "bridgeBuilder": {
-        "title": "Construtor de Pontes",
-        "description": "Conecto comunidades e ecossistemas diversos - desde professores de sala de aula a líderes distritais, desde instituições de investigação a empresas EdTech, desde mercados dos EUA a mercados internacionais. Traduzo entre mundos, construindo confiança e entendimento partilhado entre grupos de intervenientes."
+        "title": "Innovation Strategy",
+        "description": "I don't chase trends — I evaluate them. Which emerging technologies actually improve outcomes? How do you pilot responsibly? How do you scale without leaving schools behind? I've built the frameworks that answer these questions at district and national scale."
       },
       "aiPioneer": {
-        "title": "Pioneiro em Educação AI",
-        "description": "Desde a criação de plataformas de aprendizagem com AI até à formação de mais de 500 professores em STEM, Ciência da Computação, Pensamento Computacional e uso responsável de AI, traduzo AI de ponta em impacto prático na sala de aula."
+        "title": "Emerging Tech Implementation",
+        "description": "AI-powered curriculum tools. Computational thinking frameworks. Data literacy programs. Responsible technology practices. I've designed and deployed programs across 200+ schools, training 500+ educators to integrate technologies that didn't exist when they got their teaching degrees."
       },
       "systemsDesigner": {
-        "title": "Designer de Sistemas",
-        "description": "Liderei frameworks nacionais (SCRIPT), iniciativas distritais (NYC CS4All: mais de 200 escolas), e construí programas do zero que servem dezenas de milhares de alunos."
+        "title": "Systems & Scale",
+        "description": "Led the national SCRIPT framework for CS education. Managed NYC's CS4All rollout across 200+ schools. Built products used by thousands. I know how to take a promising idea from pilot to city-wide implementation — and what breaks when you try."
       }
     },
     "featuredWork": {
       "title": "Trabalho Selecionado",
-      "description": "Ao longo de 15 anos, liderei iniciativas desde programas práticos em sala de aula até frameworks nacionais.",
+      "description": "National frameworks, district-scale programs, and products built from the ground up.",
       "viewAll": "Ver Todo o Trabalho",
       "projects": {
         "gyst": {
@@ -73,11 +74,16 @@
       }
     },
     "cta": {
-      "title": "Vamos Trabalhar Juntos",
-      "description": "Quer seja uma empresa EdTech a navegar novos mercados, uma escola a implementar ferramentas inovadoras, ou uma organização a construir parcerias entre comunidades, trago experiência prática em conectar diversos intervenientes e uma abordagem colaborativa.",
-      "button": "Entre em Contacto"
+      "title": "Ready to Move Forward?",
+      "description": "Whether you're evaluating AI tools, designing a district technology roadmap, or building something from scratch — I'd love to hear what you're working on.",
+      "button": "Start a Conversation"
     },
-    "coreExpertise": "Competências Principais"
+    "coreExpertise": "Do",
+    "photography": {
+      "title": "Through the Lens",
+      "subtitle": "Street photography across three continents.",
+      "viewAll": "View all galleries"
+    }
   },
   "footer": {
     "tagline": "Consultor de Tecnologia Educativa",

@@ -12,30 +12,31 @@
   },
   "hero": {
     "name": "Joe Alexander Meléndez-Naharro",
-    "tagline": "Bridging Communities and Ideas in Education",
-    "description": "15+ years designing programs that make STEM, CS, and AI education accessible to all students.\n\nCurrently based in Durham, NC, connecting diverse stakeholders and building bridges between research and practice, policy and implementation, innovation and equity.",
-    "ctaPrimary": "Work With Me",
-    "ctaSecondary": "View My Work",
-    "yearsExperience": "Years Experience"
+    "roleLabel": "Emerging Technology Strategist · K12 Innovation Leader",
+    "tagline": "I Help Schools Navigate What's Next",
+    "description": "From AI to immersive learning to data-driven instruction — I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
+    "ctaPrimary": "Let's Talk",
+    "ctaSecondary": "See My Work",
+    "yearsExperience": "15+"
   },
   "home": {
     "valueProps": {
       "bridgeBuilder": {
-        "title": "Bridge Builder",
-        "description": "I connect diverse communities and ecosystems - from classroom teachers to district leaders, from research institutions to EdTech companies, from US to international markets. I translate between worlds, building trust and shared understanding across stakeholder groups."
+        "title": "Innovation Strategy",
+        "description": "I don't chase trends — I evaluate them. Which emerging technologies actually improve outcomes? How do you pilot responsibly? How do you scale without leaving schools behind? I've built the frameworks that answer these questions at district and national scale."
       },
       "aiPioneer": {
-        "title": "AI Education Pioneer",
-        "description": "From building AI-powered learning platforms to training 500+ teachers in STEM, Computer Science, Computational Thinking, and responsible AI use, I translate cutting-edge AI into practical classroom impact."
+        "title": "Emerging Tech Implementation",
+        "description": "AI-powered curriculum tools. Computational thinking frameworks. Data literacy programs. Responsible technology practices. I've designed and deployed programs across 200+ schools, training 500+ educators to integrate technologies that didn't exist when they got their teaching degrees."
       },
       "systemsDesigner": {
-        "title": "Systems Designer",
-        "description": "I've led national frameworks (SCRIPT), district-wide initiatives (NYC CS4All: 200+ schools), and built programs from scratch that serve tens of thousands of students."
+        "title": "Systems & Scale",
+        "description": "Led the national SCRIPT framework for CS education. Managed NYC's CS4All rollout across 200+ schools. Built products used by thousands. I know how to take a promising idea from pilot to city-wide implementation — and what breaks when you try."
       }
     },
     "featuredWork": {
       "title": "Selected Work",
-      "description": "Over 15 years, I've led initiatives from hands-on classroom programs to national frameworks.",
+      "description": "National frameworks, district-scale programs, and products built from the ground up.",
       "viewAll": "See All Work",
       "projects": {
         "gyst": {
@@ -77,11 +78,16 @@
       }
     },
     "cta": {
-      "title": "Let's Work Together",
-      "description": "Whether you're an EdTech company navigating new markets, a school implementing innovative tools, or an organization building partnerships across communities, I bring practical experience in connecting diverse stakeholders and a collaborative approach.",
-      "button": "Get in Touch"
+      "title": "Ready to Move Forward?",
+      "description": "Whether you're evaluating AI tools, designing a district technology roadmap, or building something from scratch — I'd love to hear what you're working on.",
+      "button": "Start a Conversation"
     },
-    "coreExpertise": "Core Expertise"
+    "coreExpertise": "Do",
+    "photography": {
+      "title": "Through the Lens",
+      "subtitle": "Street photography across three continents.",
+      "viewAll": "View all galleries"
+    }
   },
   "footer": {
     "tagline": "Education Technology Consultant",

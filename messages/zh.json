@@ -12,30 +12,31 @@
   },
   "hero": {
     "name": "Joe Alexander Meléndez-Naharro",
-    "tagline": "在教育领域架起社区与思想的桥梁",
-    "description": "超过15年的经验，致力于设计让所有学生都能接触到STEM、计算机科学和人工智能教育的项目。\n\n现居北卡罗来纳州达勒姆，连接不同的利益相关者，在研究与实践、政策与实施、创新与公平之间架起桥梁。",
-    "ctaPrimary": "与我合作",
-    "ctaSecondary": "查看我的作品",
-    "yearsExperience": "年经验"
+    "roleLabel": "Emerging Technology Strategist · K12 Innovation Leader",
+    "tagline": "I Help Schools Navigate What's Next",
+    "description": "From AI to immersive learning to data-driven instruction — I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
+    "ctaPrimary": "Let's Talk",
+    "ctaSecondary": "See My Work",
+    "yearsExperience": "15+"
   },
   "home": {
     "valueProps": {
       "bridgeBuilder": {
-        "title": "桥梁建设者",
-        "description": "我连接不同的社区和生态系统——从课堂教师到地区领导者，从研究机构到教育科技公司，从美国市场到国际市场。我在不同世界之间进行翻译，在利益相关者群体之间建立信任和共同理解。"
+        "title": "Innovation Strategy",
+        "description": "I don't chase trends — I evaluate them. Which emerging technologies actually improve outcomes? How do you pilot responsibly? How do you scale without leaving schools behind? I've built the frameworks that answer these questions at district and national scale."
       },
       "aiPioneer": {
-        "title": "人工智能教育先驱",
-        "description": "从构建人工智能学习平台到培训500多名教师的STEM、计算机科学、计算思维和负责任的人工智能使用，我将前沿人工智能转化为实际的课堂影响。"
+        "title": "Emerging Tech Implementation",
+        "description": "AI-powered curriculum tools. Computational thinking frameworks. Data literacy programs. Responsible technology practices. I've designed and deployed programs across 200+ schools, training 500+ educators to integrate technologies that didn't exist when they got their teaching degrees."
       },
       "systemsDesigner": {
-        "title": "系统设计师",
-        "description": "我领导过国家框架（SCRIPT）、全区倡议（纽约市CS4All：200多所学校），并从零开始构建服务数万名学生的项目。"
+        "title": "Systems & Scale",
+        "description": "Led the national SCRIPT framework for CS education. Managed NYC's CS4All rollout across 200+ schools. Built products used by thousands. I know how to take a promising idea from pilot to city-wide implementation — and what breaks when you try."
       }
     },
     "featuredWork": {
       "title": "精选项目",
-      "description": "超过15年来，我领导的倡议从实践课堂项目到国家框架。",
+      "description": "National frameworks, district-scale programs, and products built from the ground up.",
       "viewAll": "查看所有项目",
       "projects": {
         "gyst": {
@@ -73,11 +74,16 @@
       }
     },
     "cta": {
-      "title": "让我们一起合作",
-      "description": "无论您是探索新市场的教育科技公司、实施创新工具的学校，还是在社区之间建立合作伙伴关系的组织，我都能带来连接不同利益相关者的实践经验和协作方法。",
-      "button": "联系我"
+      "title": "Ready to Move Forward?",
+      "description": "Whether you're evaluating AI tools, designing a district technology roadmap, or building something from scratch — I'd love to hear what you're working on.",
+      "button": "Start a Conversation"
     },
-    "coreExpertise": "核心专长"
+    "coreExpertise": "Do",
+    "photography": {
+      "title": "Through the Lens",
+      "subtitle": "Street photography across three continents.",
+      "viewAll": "View all galleries"
+    }
   },
   "footer": {
     "tagline": "教育技术顾问",
