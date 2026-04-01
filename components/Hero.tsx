@@ -40,6 +40,17 @@ const NAME_WORD_GROUPS: WordGroup[] = [
   },
 ];
 
+const FILMSTRIP_PHOTOS = [
+  { src: '/photos/bridge.webp' },
+  { src: '/photos/once-upon-a-time-in-new-york/3-DSCF2638.webp' },
+  { src: '/photos/open-world/1-_DSF4181.webp' },
+  { src: '/photos/out-there-somewhere/6-DSCF6005.webp' },
+  { src: '/photos/once-upon-a-time-in-new-york/17-DSCF4663.webp' },
+  { src: '/photos/open-world/22-DSCF5809.webp' },
+  { src: '/photos/out-there-somewhere/18-DSCF6572.webp' },
+  { src: '/photos/once-upon-a-time-in-new-york/35-DSCF8855.webp' },
+];
+
 const Hero = () => {
   const t = useTranslations('hero');
   const locale = useLocale();
@@ -51,6 +62,7 @@ const Hero = () => {
   const [letterFeedback, setLetterFeedback] = useState<number | null>(null);
   const [isNameHovered, setIsNameHovered] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [filmstripPaused, setFilmstripPaused] = useState(false);
 
   // Check for reduced motion preference
   useEffect(() => {
@@ -104,18 +116,42 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-deep">
-      {/* Animated gradient background (GYST-inspired warm + blue accents) */}
-      <div
-        className="absolute inset-0 opacity-60"
-        style={{
-          background: 'radial-gradient(ellipse at 30% 20%, rgba(143, 168, 200, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(201, 112, 77, 0.1) 0%, transparent 50%)',
-        }}
-      />
+    <section
+      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-canvas-deep"
+      onMouseEnter={() => setFilmstripPaused(true)}
+      onMouseLeave={() => setFilmstripPaused(false)}
+    >
+      {/* Photo filmstrip background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-canvas-deep/75 z-10" />
+
+        {/* Scrolling filmstrip */}
+        <div
+          className={`flex h-full ${prefersReducedMotion ? '' : 'animate-filmstrip'}`}
+          style={{
+            width: '200%',
+            animationPlayState: filmstripPaused ? 'paused' : 'running',
+          }}
+        >
+          {/* Duplicate photos for seamless loop */}
+          {[...FILMSTRIP_PHOTOS, ...FILMSTRIP_PHOTOS].map((photo, i) => (
+            <div key={i} className="h-full flex-shrink-0" style={{ width: `${100 / FILMSTRIP_PHOTOS.length}%` }}>
+              <img
+                src={photo.src}
+                alt=""
+                className="w-full h-full object-cover"
+                loading={i < 4 ? 'eager' : 'lazy'}
+                aria-hidden="true"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Portal animation overlay */}
       {showPortal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-deep">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-canvas-deep">
           <div className="relative">
             {/* Portal rings */}
             <div className="absolute inset-0 animate-ping">
@@ -141,6 +177,15 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+        {/* Role label */}
+        <p className={`
+          text-center font-mono text-display-label uppercase tracking-[0.15em] text-text-muted mb-6
+          transition-all duration-1000 delay-200
+          ${animationStarted ? 'opacity-100' : 'opacity-0'}
+        `}>
+          {t('roleLabel', { defaultValue: 'Educator / Designer / Manager / Photographer' })}
+        </p>
+
         {/* Name display */}
         <h1 className="text-center mb-8">
           {/* Screen reader accessible full name */}
@@ -178,14 +223,14 @@ const Hero = () => {
                         className={`
                           cursor-pointer select-none inline-block
                           transition-all duration-300
-                          ${isClicked ? 'text-accent scale-110' : 'glow-text-animated'}
+                          ${isClicked ? 'text-terra scale-110' : 'text-terra'}
                           ${showFeedback ? 'scale-125' : ''}
                           ${isNextInSequence ? 'hover:scale-110' : ''}
                         `}
                         style={{
                           animationDelay: `${(part.jamelnaIndex || 0) * 0.3}s`,
                           textShadow: isClicked
-                            ? '0 0 30px rgba(0, 168, 255, 0.8), 0 0 60px rgba(0, 168, 255, 0.5)'
+                            ? '0 0 30px rgba(196, 112, 63, 0.8), 0 0 60px rgba(196, 112, 63, 0.5)'
                             : undefined,
                         }}
                         role="button"
@@ -247,7 +292,7 @@ const Hero = () => {
         {/* Tagline */}
         <p
           className={`
-            text-center text-xl md:text-2xl lg:text-3xl text-text-muted font-body
+            text-center text-xl md:text-2xl lg:text-3xl text-text-secondary font-body
             max-w-3xl mx-auto mb-12
             transition-all duration-1000 delay-500
             ${animationStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
@@ -284,12 +329,7 @@ const Hero = () => {
           </a>
           <a
             href={`/${locale}/work`}
-            className="
-              px-6 py-3 rounded-lg font-semibold text-center
-              border border-primary/50 text-primary
-              hover:bg-primary/10 hover:border-primary
-              transition-all duration-300
-            "
+            className="btn-ghost text-center"
           >
             {t('ctaSecondary')}
           </a>
@@ -300,27 +340,15 @@ const Hero = () => {
       <button
         onClick={scrollToContent}
         className={`
-          absolute bottom-8 left-1/2 -translate-x-1/2
-          text-text-muted hover:text-accent
+          absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2
+          text-text-muted hover:text-terra
           transition-all duration-1000 delay-1500
           ${animationStarted ? 'opacity-100' : 'opacity-0'}
-          animate-bounce
         `}
         aria-label="Scroll to content"
       >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
+        <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
+        <span className="w-px bg-current animate-grow-line" />
       </button>
 
       {/* Hidden hint for easter egg (very subtle) */}

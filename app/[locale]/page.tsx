@@ -3,6 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
+import PhotoBreak from '@/components/PhotoBreak';
+import PhotoTeaser from '@/components/PhotoTeaser';
 import { useTranslations, useLocale } from 'next-intl';
 
 // Scroll reveal hook
@@ -21,7 +23,7 @@ function useScrollReveal() {
       { threshold: 0.1 }
     );
 
-    const elements = ref.current?.querySelectorAll('.reveal');
+    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade');
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -75,88 +77,106 @@ export default function Home() {
   ];
 
   return (
-    <div ref={containerRef} className="bg-zinc-900">
-      {/* Hero Section - Keep original styling */}
+    <div ref={containerRef} className="bg-canvas">
+      {/* Hero Section */}
       <Hero />
 
-      {/* Core Expertise Section */}
-      <section className="py-24 bg-zinc-950 relative overflow-hidden">
-        {/* Subtle gradient accent */}
-        <div
-          className="absolute top-0 left-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent)' }}
-        />
+      {/* Core Expertise */}
+      <section className="py-16 lg:py-24 bg-canvas-deep relative overflow-hidden">
+        {/* Oversized section number watermark */}
+        <div className="absolute top-0 right-0 section-number text-text-primary select-none" aria-hidden="true">
+          01
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="reveal text-4xl md:text-5xl font-display font-bold text-white mb-16 -ml-4 md:-ml-8">
-            <span className="text-orange-400">/</span> {t('coreExpertise')}
-          </h2>
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          {/* Section heading — mixed weight, terra rule */}
+          <div className="reveal-fade mb-16">
+            <hr className="heading-rule" />
+            <h2 className="text-display-section font-display text-text-heading">
+              <span className="font-light">Core</span>{' '}
+              <span className="font-extrabold">{t('coreExpertise')}</span>
+            </h2>
+          </div>
 
-          {/* Asymmetric grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {/* Large card */}
-            <div className="reveal lg:col-span-7 bg-zinc-800 border border-zinc-700 rounded-lg p-8 hover:border-orange-500/50 transition-colors stagger-1">
-              <div className="text-orange-400 mb-4">{expertiseItems[0].icon}</div>
-              <h3 className="text-2xl font-display font-bold text-white mb-4">
+          {/* Offset card layout */}
+          <div className="flex flex-col gap-6 lg:gap-4">
+            {/* Card 1 — flush left, wide */}
+            <div className="reveal-fade stagger-1 bg-canvas-raised border border-canvas-border rounded-lg p-8 lg:w-[65%] hover:border-l-2 hover:border-l-terra transition-all">
+              <div className="text-terra mb-4">{expertiseItems[0].icon}</div>
+              <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
                 {expertiseItems[0].title}
               </h3>
-              <p className="text-zinc-300 text-lg leading-relaxed">
+              <p className="text-text-secondary text-lg leading-relaxed">
                 {expertiseItems[0].desc}
               </p>
             </div>
 
-            {/* Stacked smaller cards */}
-            <div className="lg:col-span-5 flex flex-col gap-6">
-              {expertiseItems.slice(1).map((item, i) => (
-                <div
-                  key={i}
-                  className={`reveal bg-zinc-800 border border-zinc-700 rounded-lg p-6 hover:border-blue-500/50 transition-colors stagger-${i + 2}`}
-                >
-                  <div className="text-blue-400 mb-3">{item.icon}</div>
-                  <h3 className="text-xl font-display font-bold text-white mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-zinc-400 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
+            {/* Card 2 — offset right */}
+            <div className="reveal-fade stagger-2 bg-canvas-raised border border-canvas-border rounded-lg p-8 lg:w-[55%] lg:ml-auto lg:-mt-4 hover:border-l-2 hover:border-l-terra transition-all">
+              <div className="text-ink mb-4">{expertiseItems[1].icon}</div>
+              <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
+                {expertiseItems[1].title}
+              </h3>
+              <p className="text-text-secondary leading-relaxed">
+                {expertiseItems[1].desc}
+              </p>
+            </div>
+
+            {/* Card 3 — centered */}
+            <div className="reveal-fade stagger-3 bg-canvas-raised border border-canvas-border rounded-lg p-8 lg:w-[60%] lg:mx-auto lg:-mt-4 hover:border-l-2 hover:border-l-terra transition-all">
+              <div className="text-ink mb-4">{expertiseItems[2].icon}</div>
+              <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
+                {expertiseItems[2].title}
+              </h3>
+              <p className="text-text-secondary leading-relaxed">
+                {expertiseItems[2].desc}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Work Section */}
-      <section className="py-24 bg-zinc-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="reveal mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white -ml-4 md:-ml-8 lg:-ml-16">
-              <span className="text-blue-400">/</span> {t('featuredWork.title')}
+      {/* Photo Break */}
+      <PhotoBreak
+        src="/photos/once-upon-a-time-in-new-york/30-DSCF8639.webp"
+        alt="Street photography in New York City"
+        position="center 40%"
+      />
+
+      {/* Featured Work — Cream Section */}
+      <section className="section-cream py-20 lg:py-32 relative overflow-hidden">
+        {/* Oversized section number */}
+        <div className="absolute top-0 right-0 section-number select-none" aria-hidden="true" style={{ color: '#E0D9CE' }}>
+          02
+        </div>
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="reveal-fade mb-16">
+            <hr className="heading-rule" />
+            <h2 className="text-display-section font-display">
+              <span className="font-light">Selected</span>{' '}
+              <span className="font-extrabold">{t('featuredWork.title')}</span>
             </h2>
-            <p className="text-xl text-zinc-400 mt-4 max-w-2xl">
+            <p className="text-lg mt-4 max-w-2xl" style={{ color: '#6E6860' }}>
               {t('featuredWork.description')}
             </p>
           </div>
 
-          {/* Masonry-style grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {/* Project cards — 2 column on desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {projects.map((project, index) => (
               <Link
                 key={index}
                 href={`/${locale}/work#${project.anchor}`}
-                className={`
-                  reveal bg-zinc-800 border border-zinc-700 rounded-lg p-6 group
-                  hover:border-orange-500/50 transition-colors
-                  stagger-${(index % 5) + 1}
-                  ${index === 0 ? 'md:col-span-2 lg:col-span-1' : ''}
-                `}
+                className="reveal-fade bg-white border border-[#E0D9CE] rounded-lg p-6 group hover:border-terra transition-colors"
+                style={{ transitionDelay: `${index * 0.08}s` }}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <span className="text-xs font-mono text-zinc-500">
+                  <span className="text-sm font-mono" style={{ color: '#B5AFA5' }}>
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <svg
-                    className="w-5 h-5 text-zinc-500 group-hover:text-orange-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    className="w-5 h-5 text-[#B5AFA5] group-hover:text-terra group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -164,25 +184,20 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-display font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
+                <h3 className="text-xl font-display font-bold mb-2 group-hover:text-terra transition-colors" style={{ color: '#1A1816' }}>
                   {t(`featuredWork.projects.${project.key}.title`)}
                 </h3>
-                <p className="text-zinc-400 text-sm">
+                <p className="text-base" style={{ color: '#6E6860' }}>
                   {t(`featuredWork.projects.${project.key}.subtitle`)}
                 </p>
               </Link>
             ))}
           </div>
 
-          <div className="reveal text-center">
+          <div className="reveal-fade">
             <Link
               href={`/${locale}/work`}
-              className="
-                inline-flex items-center gap-2 px-6 py-3 rounded-lg
-                border border-blue-500/50 text-blue-400 font-semibold
-                hover:bg-blue-500/10 hover:border-blue-400
-                transition-all duration-300
-              "
+              className="link-underline text-terra font-semibold inline-flex items-center gap-2 text-lg"
             >
               {t('featuredWork.viewAll')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -193,27 +208,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 bg-zinc-950 relative overflow-hidden">
-        {/* Spotlight effect */}
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{
-            background: 'radial-gradient(ellipse at center, rgba(249, 115, 22, 0.2), transparent 60%)',
-          }}
-        />
+      {/* Photography Teaser */}
+      <PhotoTeaser />
 
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-            {t('cta.title')}
-          </h2>
-          <p className="reveal text-xl text-zinc-400 mb-12 stagger-1">
+      {/* CTA Section */}
+      <section className="py-24 lg:py-40 bg-canvas-deep relative overflow-hidden">
+        {/* Blurred photo texture background */}
+        <div className="absolute inset-0">
+          <img
+            src="/photos/open-world/24-DSCF5915.webp"
+            alt=""
+            className="w-full h-full object-cover blur-[50px] opacity-20 saturate-50"
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-canvas-deep/60" />
+        </div>
+
+        <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
+          <div className="reveal-fade">
+            <h2 className="text-display-section font-display font-extrabold text-text-heading mb-6">
+              {t('cta.title')}
+            </h2>
+          </div>
+          <p className="reveal-fade stagger-1 text-xl text-text-secondary mb-12">
             {t('cta.description')}
           </p>
-          <div className="reveal stagger-2">
+          <div className="reveal-fade stagger-2">
             <Link
               href={`/${locale}/contact`}
-              className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors text-lg"
+              className="btn-terra inline-flex items-center justify-center px-8 py-4 text-lg rounded-lg"
             >
               {t('cta.button')}
             </Link>
