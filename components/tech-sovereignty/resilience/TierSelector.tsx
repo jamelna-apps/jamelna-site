@@ -68,10 +68,10 @@ export function TierSelector({ activeTier, onSelect }: TierSelectorProps) {
             <button
               key={tier}
               onClick={() => onSelect(isActive ? null : tier)}
-              className={`group text-left rounded-xl border-2 p-5 transition-all focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-900 ${
+              className={`group text-left rounded-xl border-2 p-5 transition-all focus:outline-none focus:ring-2 focus:ring-canvas-border focus:ring-offset-2 focus:ring-offset-canvas ${
                 isActive
                   ? `${c.activeBorder} ${c.activeBg}`
-                  : `${c.border} bg-zinc-800 hover:${c.activeBorder} hover:bg-zinc-800/70`
+                  : `${c.border} bg-canvas-raised hover:${c.activeBorder} hover:bg-canvas-raised/70`
               }`}
               aria-pressed={isActive}
             >
@@ -81,16 +81,16 @@ export function TierSelector({ activeTier, onSelect }: TierSelectorProps) {
               <div className={`text-xs font-semibold uppercase tracking-wide mb-1 ${c.text}`}>
                 Tier {tier}
               </div>
-              <h3 className="font-bold text-white text-lg mb-1">
+              <h3 className="font-bold text-text-heading text-lg mb-1">
                 {t(`resilience.tiers.${tier}.title`)}
               </h3>
-              <p className="text-zinc-400 text-base mb-3">
+              <p className="text-text-secondary text-base mb-3">
                 {t(`resilience.tiers.${tier}.subtitle`)}
               </p>
               <span className={`inline-block text-sm px-2.5 py-1 rounded-full font-medium ${
                 isActive
                   ? `${c.iconBg} ${c.text}`
-                  : 'bg-zinc-700/60 text-zinc-400'
+                  : 'bg-canvas-border/60 text-text-secondary'
               }`}>
                 {t(`resilience.tiers.${tier}.audience`)}
               </span>
@@ -104,7 +104,7 @@ export function TierSelector({ activeTier, onSelect }: TierSelectorProps) {
         <div className="flex justify-center">
           <button
             onClick={() => onSelect(null)}
-            className="text-sm text-zinc-400 hover:text-white transition-colors underline underline-offset-2"
+            className="text-sm text-text-secondary hover:text-text-heading transition-colors underline underline-offset-2"
           >
             {t('resilience.showAllTiers')}
           </button>

@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className="glass-card overflow-hidden mb-12">
       {/* Header */}
-      <div className="bg-deep-card border-b border-deep-border px-8 py-6">
+      <div className="bg-canvas-raised border-b border-canvas-border px-8 py-6">
         <h2 className="text-2xl font-display font-bold text-text-heading">
           {title}
         </h2>
@@ -66,7 +66,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
 
         {/* Recent Example */}
-        <div className="mb-8 bg-deep-card border border-deep-border rounded-lg p-6">
+        <div className="mb-8 bg-canvas-raised border border-canvas-border rounded-lg p-6">
           <h3 className="text-lg font-bold text-text-heading mb-3">
             {t('recentExample')}
           </h3>
@@ -75,13 +75,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
         {/* Deliverables, Timeline */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-deep-card border border-deep-border rounded-lg p-4">
+          <div className="bg-canvas-raised border border-canvas-border rounded-lg p-4">
             <h4 className="text-sm font-bold text-warm uppercase mb-2 tracking-wider font-mono">
               {t('deliverables')}
             </h4>
             <p className="text-text-secondary">{deliverables}</p>
           </div>
-          <div className="bg-deep-card border border-deep-border rounded-lg p-4">
+          <div className="bg-canvas-raised border border-canvas-border rounded-lg p-4">
             <h4 className="text-sm font-bold text-warm uppercase mb-2 tracking-wider font-mono">
               {t('timeline')}
             </h4>

@@ -14,14 +14,14 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
   };
 
   return (
-    <div className="bg-zinc-900 border border-zinc-700 rounded-lg overflow-hidden hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10 transition-all">
+    <div className="bg-canvas border border-canvas-border rounded-lg overflow-hidden hover:border-terra/50 hover:shadow-lg hover:shadow-orange-500/10 transition-all">
       <div className="p-6">
         {/* Header */}
         <div className="mb-4">
           <h3 className="text-lg font-bold text-white mb-1">
             {curriculum.name}
           </h3>
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-text-secondary">
             {curriculum.organization}
           </p>
         </div>
@@ -39,7 +39,7 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
         </div>
 
         {/* Description */}
-        <p className="text-zinc-400 text-sm mb-4 line-clamp-3">
+        <p className="text-text-secondary text-sm mb-4 line-clamp-3">
           {curriculum.description}
         </p>
 
@@ -57,7 +57,7 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
 
         {/* Standards Alignment */}
         {curriculum.hasStandardsAlignment && curriculum.standardsNotes && (
-          <p className="text-xs text-zinc-500 mb-4">
+          <p className="text-xs text-text-muted mb-4">
             {curriculum.standardsNotes}
           </p>
         )}
@@ -67,7 +67,7 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
           href={curriculum.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium text-sm transition-colors"
+          className="inline-flex items-center text-terra hover:text-orange-300 font-medium text-sm transition-colors"
         >
           Visit Resource
           <svg

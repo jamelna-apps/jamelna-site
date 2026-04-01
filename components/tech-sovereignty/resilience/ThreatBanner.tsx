@@ -22,13 +22,13 @@ const contextConfig: {
 }[] = [
   {
     id: 'concerned',
-    border: 'border-zinc-600',
-    activeBorder: 'border-zinc-400',
-    activeBg: 'bg-zinc-700/30',
-    iconBg: 'bg-zinc-700/60',
-    iconText: 'text-zinc-300',
-    text: 'text-zinc-300',
-    glowShadow: 'shadow-zinc-500/20',
+    border: 'border-canvas-border',
+    activeBorder: 'border-text-secondary',
+    activeBg: 'bg-canvas-border/30',
+    iconBg: 'bg-canvas-border/60',
+    iconText: 'text-text-secondary',
+    text: 'text-text-secondary',
+    glowShadow: 'shadow-canvas-border/20',
   },
   {
     id: 'active',
@@ -85,10 +85,10 @@ export function ThreatBanner({ activeContext, onSelect }: ThreatBannerProps) {
               key={ctx.id}
               onClick={() => onSelect(isActive ? null : ctx.id)}
               aria-pressed={isActive}
-              className={`group text-left rounded-xl border-2 px-4 py-3.5 transition-all focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-900 ${
+              className={`group text-left rounded-xl border-2 px-4 py-3.5 transition-all focus:outline-none focus:ring-2 focus:ring-canvas-border focus:ring-offset-2 focus:ring-offset-canvas ${
                 isActive
                   ? `${ctx.activeBorder} ${ctx.activeBg} shadow-lg ${ctx.glowShadow}`
-                  : `${ctx.border} bg-zinc-800 hover:${ctx.activeBorder} hover:bg-zinc-800/70`
+                  : `${ctx.border} bg-canvas-raised hover:${ctx.activeBorder} hover:bg-canvas-raised/70`
               }`}
             >
               <div className="flex items-start gap-3">
@@ -96,10 +96,10 @@ export function ThreatBanner({ activeContext, onSelect }: ThreatBannerProps) {
                   {contextIcons[ctx.id]}
                 </div>
                 <div className="min-w-0">
-                  <h4 className={`font-semibold text-base leading-tight mb-1 ${isActive ? ctx.text : 'text-white'}`}>
+                  <h4 className={`font-semibold text-base leading-tight mb-1 ${isActive ? ctx.text : 'text-text-heading'}`}>
                     {t(`resilience.contexts.${ctx.id}.title`)}
                   </h4>
-                  <p className="text-sm text-zinc-400 leading-snug">
+                  <p className="text-sm text-text-secondary leading-snug">
                     {t(`resilience.contexts.${ctx.id}.description`)}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export function ThreatBanner({ activeContext, onSelect }: ThreatBannerProps) {
         <div className="flex justify-end">
           <button
             onClick={() => onSelect(null)}
-            className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors flex items-center gap-1"
+            className="text-sm text-text-muted hover:text-text-secondary transition-colors flex items-center gap-1"
           >
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

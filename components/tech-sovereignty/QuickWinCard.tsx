@@ -71,7 +71,7 @@ export function QuickWinCard({ quickWin, color, icon }: QuickWinCardProps) {
   return (
     <Link
       href={quickWin.link}
-      className={`block bg-zinc-800 border ${colors.border} ${colors.hoverBorder} rounded-xl p-5 transition-all hover:shadow-lg group`}
+      className={`block bg-canvas-raised border ${colors.border} ${colors.hoverBorder} rounded-xl p-5 transition-all hover:shadow-lg group`}
     >
       <div className="flex items-start gap-4">
         <div className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -82,24 +82,24 @@ export function QuickWinCard({ quickWin, color, icon }: QuickWinCardProps) {
             <span className={`text-xs px-2 py-0.5 rounded-full ${colors.badge} font-medium`}>
               {quickWin.duration}
             </span>
-            <span className="text-xs text-zinc-500">{quickWin.trackTitle}</span>
+            <span className="text-xs text-text-muted">{quickWin.trackTitle}</span>
           </div>
-          <h3 className="font-semibold text-white text-lg mb-1 group-hover:text-violet-300 transition-colors">
+          <h3 className="font-semibold text-text-heading text-lg mb-1 group-hover:text-violet-300 transition-colors">
             {quickWin.title}
           </h3>
-          <p className="text-zinc-400 text-base mb-3 line-clamp-2">
+          <p className="text-text-secondary text-base mb-3 line-clamp-2">
             {quickWin.description}
           </p>
           <div className="flex items-center gap-2 text-sm">
             <svg className={`w-4 h-4 ${colors.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
-            <span className="text-zinc-300">{quickWin.outcome}</span>
+            <span className="text-text-secondary">{quickWin.outcome}</span>
           </div>
         </div>
       </div>
-      <div className="mt-4 pt-3 border-t border-zinc-700 flex items-center justify-between">
-        <span className="text-xs text-zinc-500">Quick Win</span>
+      <div className="mt-4 pt-3 border-t border-canvas-border flex items-center justify-between">
+        <span className="text-xs text-text-muted">Quick Win</span>
         <span className={`text-xs ${colors.text} font-medium flex items-center gap-1 group-hover:gap-2 transition-all`}>
           Start Now
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -37,18 +37,18 @@ export default function PhotographyPage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-zinc-900 pt-16">
+      <main className="min-h-screen bg-canvas pt-16">
         {/* Hero Section */}
         <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-zinc-900 to-zinc-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-canvas to-canvas-deep"></div>
           <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
             style={{ background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4), transparent)' }} />
 
           <div className="max-w-5xl mx-auto text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
               <span className="text-emerald-400">/</span> {t('title')}
             </h1>
-            <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
               Loading galleries...
             </p>
           </div>
@@ -59,33 +59,33 @@ export default function PhotographyPage() {
 
   if (galleries.length === 0) {
     return (
-      <main className="min-h-screen bg-zinc-900 pt-16">
+      <main className="min-h-screen bg-canvas pt-16">
         {/* Hero Section */}
         <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-zinc-900 to-zinc-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-canvas to-canvas-deep"></div>
           <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
             style={{ background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4), transparent)' }} />
 
           <div className="max-w-5xl mx-auto text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
               <span className="text-emerald-400">/</span> {t('title')}
             </h1>
-            <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
               {t('description')}
             </p>
           </div>
         </section>
 
         {/* Getting Started */}
-        <section className="py-12 px-4 bg-zinc-950">
+        <section className="py-12 px-4 bg-canvas-deep">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-8">
-              <h2 className="text-xl font-display font-bold text-white mb-4">Getting Started</h2>
-              <p className="text-sm text-zinc-400 mb-4">
-                To add photography galleries, create folders in <code className="bg-zinc-900 px-2 py-1 rounded text-emerald-400">public/photos/</code>
+            <div className="bg-canvas-raised border border-canvas-border rounded-lg p-8">
+              <h2 className="text-xl font-display font-bold text-text-heading mb-4">Getting Started</h2>
+              <p className="text-sm text-text-secondary mb-4">
+                To add photography galleries, create folders in <code className="bg-canvas px-2 py-1 rounded text-emerald-400">public/photos/</code>
               </p>
-              <ol className="list-decimal list-inside space-y-2 text-sm text-zinc-400">
-                <li>Create a folder in <code className="bg-zinc-900 px-1 rounded text-emerald-400">public/photos/</code> (e.g., <code className="bg-zinc-900 px-1 rounded text-emerald-400">my-gallery</code>)</li>
+              <ol className="list-decimal list-inside space-y-2 text-sm text-text-secondary">
+                <li>Create a folder in <code className="bg-canvas px-1 rounded text-emerald-400">public/photos/</code> (e.g., <code className="bg-canvas px-1 rounded text-emerald-400">my-gallery</code>)</li>
                 <li>Add your photos to that folder (supports .jpg, .jpeg, .png, .webp, .gif)</li>
                 <li>Refresh this page to see your gallery!</li>
               </ol>
@@ -97,31 +97,31 @@ export default function PhotographyPage() {
   }
 
   return (
-    <main className="min-h-screen bg-zinc-900 pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-zinc-900 to-zinc-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-canvas to-canvas-deep"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4), transparent)' }} />
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
             <span className="text-emerald-400">/</span> {t('title')}
           </h1>
-          <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
             {t('description')}
           </p>
         </div>
       </section>
 
       {/* Galleries */}
-      <section className="py-12 px-4 bg-zinc-950">
+      <section className="py-12 px-4 bg-canvas-deep">
         <div className="max-w-6xl mx-auto space-y-20">
           {galleries.map((gallery) => (
             <div key={gallery.id}>
-              <h2 className="text-3xl font-display font-bold text-white mb-4">{gallery.name}</h2>
+              <h2 className="text-3xl font-display font-bold text-text-heading mb-4">{gallery.name}</h2>
               {gallery.description && (
-                <p className="text-lg text-zinc-400 mb-8">{gallery.description}</p>
+                <p className="text-lg text-text-secondary mb-8">{gallery.description}</p>
               )}
 
               {/* Photo Grid */}
@@ -130,7 +130,7 @@ export default function PhotographyPage() {
                   <button
                     key={index}
                     onClick={() => openLightbox(gallery, index)}
-                    className="aspect-square bg-zinc-800 rounded-lg overflow-hidden group cursor-pointer border border-zinc-700 hover:border-emerald-500/50 transition-colors"
+                    className="aspect-square bg-canvas-raised rounded-lg overflow-hidden group cursor-pointer border border-canvas-border hover:border-emerald-500/50 transition-colors"
                     onContextMenu={(e) => e.preventDefault()}
                     onDragStart={(e) => e.preventDefault()}
                   >

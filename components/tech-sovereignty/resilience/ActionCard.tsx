@@ -139,7 +139,7 @@ export function ActionCard({
 
   return (
     <div
-      className={`bg-zinc-800 border ${colors.border} ${colors.hoverBorder} rounded-xl transition-all hover:shadow-lg`}
+      className={`bg-canvas-raised border ${colors.border} ${colors.hoverBorder} rounded-xl transition-all hover:shadow-lg`}
     >
       {/* Collapsed header — always visible */}
       <button
@@ -160,13 +160,13 @@ export function ActionCard({
             </div>
 
             {/* Title */}
-            <h3 className="font-semibold text-white text-lg mb-1">
+            <h3 className="font-semibold text-text-heading text-lg mb-1">
               {t(`${baseKey}.title`)}
             </h3>
 
             {/* Protects one-liner */}
-            <p className="text-sm text-zinc-500 mb-3">
-              <span className="text-zinc-400 font-medium">Protects: </span>
+            <p className="text-sm text-text-muted mb-3">
+              <span className="text-text-secondary font-medium">Protects: </span>
               {t(`${baseKey}.protects`)}
             </p>
 
@@ -175,7 +175,7 @@ export function ActionCard({
               {tools.map((tool) => (
                 <span
                   key={tool.name}
-                  className="text-sm bg-zinc-700/60 text-zinc-300 px-2 py-0.5 rounded"
+                  className="text-sm bg-canvas-border/60 text-text-secondary px-2 py-0.5 rounded"
                 >
                   {tool.name}
                 </span>
@@ -196,9 +196,9 @@ export function ActionCard({
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${expanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <div className="px-5 pb-5 border-t border-zinc-700/60 pt-4 space-y-5">
+        <div className="px-5 pb-5 border-t border-canvas-border/60 pt-4 space-y-5">
           {/* Description */}
-          <p className="text-zinc-300 text-base leading-relaxed">
+          <p className="text-text-secondary text-base leading-relaxed">
             {t(`${baseKey}.description`)}
           </p>
 
@@ -214,7 +214,7 @@ export function ActionCard({
                     <span className={`flex-shrink-0 w-7 h-7 ${colors.bg} ${colors.text} rounded-full flex items-center justify-center text-sm font-bold`}>
                       {i + 1}
                     </span>
-                    <span className="text-zinc-300 text-base pt-0.5 leading-relaxed">
+                    <span className="text-text-secondary text-base pt-0.5 leading-relaxed">
                       {t(`${baseKey}.steps.${i}`)}
                     </span>
                   </li>
@@ -233,7 +233,7 @@ export function ActionCard({
                 {tools.map((tool) => (
                   <div
                     key={tool.name}
-                    className="flex items-center justify-between bg-zinc-900/50 rounded-lg px-3 py-2"
+                    className="flex items-center justify-between bg-canvas-deep/50 rounded-lg px-3 py-2"
                   >
                     <div className="flex items-center gap-2 min-w-0">
                       <a
@@ -246,7 +246,7 @@ export function ActionCard({
                         {tool.name}
                       </a>
                       {tool.replaces && (
-                        <span className="text-sm text-zinc-500 hidden sm:inline">
+                        <span className="text-sm text-text-muted hidden sm:inline">
                           replaces {tool.replaces}
                         </span>
                       )}
@@ -257,7 +257,7 @@ export function ActionCard({
                       )}
                     </div>
                     {/* Platform icons */}
-                    <div className="flex items-center gap-1 text-zinc-500 flex-shrink-0">
+                    <div className="flex items-center gap-1 text-text-muted flex-shrink-0">
                       {tool.platforms.map((platform) => (
                         <span key={platform} title={platform}>
                           {platformIcons[platform.toLowerCase()] ?? (

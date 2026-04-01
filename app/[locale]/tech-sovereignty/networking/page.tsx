@@ -9,7 +9,7 @@ import { PathwayCrossLinks } from '@/components/tech-sovereignty/PathwayCrossLin
 
 // Core Pedagogical Principle Component
 const CorePrinciple = () => (
-  <div className="bg-zinc-800 border border-violet-500/30 rounded-xl p-6 mb-8">
+  <div className="bg-canvas-raised border border-violet-500/30 rounded-xl p-6 mb-8">
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0 w-12 h-12 bg-violet-500/30 rounded-xl flex items-center justify-center">
         <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -18,23 +18,23 @@ const CorePrinciple = () => (
       </div>
       <div>
         <h3 className="text-lg font-bold text-white mb-2">Core Pedagogical Principle: Understanding Over Memorization</h3>
-        <p className="text-zinc-300 mb-3">
+        <p className="text-text-secondary mb-3">
           Every lesson in this curriculum prioritizes <strong>deep conceptual understanding</strong> over surface-level skills.
           Students should never just &quot;make it work&quot;—they must understand <em>why</em> it works, <em>what</em> is happening
           at each step, and <em>how</em> the hardware and software interact.
         </p>
         <div className="grid md:grid-cols-3 gap-4 mt-4">
-          <div className="bg-zinc-800 rounded-lg p-4 border border-violet-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
             <h4 className="font-semibold text-violet-300 mb-1">Ask &quot;Why?&quot;</h4>
-            <p className="text-sm text-zinc-500">Every configuration choice should be explainable. If a student can&apos;t explain why a setting exists, they haven&apos;t learned it.</p>
+            <p className="text-sm text-text-muted">Every configuration choice should be explainable. If a student can&apos;t explain why a setting exists, they haven&apos;t learned it.</p>
           </div>
-          <div className="bg-zinc-800 rounded-lg p-4 border border-violet-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
             <h4 className="font-semibold text-violet-300 mb-1">Trace the Path</h4>
-            <p className="text-sm text-zinc-500">Students should be able to follow data from source to destination, understanding what happens at each step and in each device.</p>
+            <p className="text-sm text-text-muted">Students should be able to follow data from source to destination, understanding what happens at each step and in each device.</p>
           </div>
-          <div className="bg-zinc-800 rounded-lg p-4 border border-violet-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
             <h4 className="font-semibold text-violet-300 mb-1">Predict & Verify</h4>
-            <p className="text-sm text-zinc-500">Before making changes, students predict what will happen. Understanding means being able to predict outcomes.</p>
+            <p className="text-sm text-text-muted">Before making changes, students predict what will happen. Understanding means being able to predict outcomes.</p>
           </div>
         </div>
       </div>
@@ -138,10 +138,10 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <div className="bg-zinc-950 border border-violet-500/30 rounded-lg overflow-hidden">
+    <div className="bg-canvas-deep border border-violet-500/30 rounded-lg overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full p-4 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors"
+        className="w-full p-4 flex items-center justify-between text-left hover:bg-canvas-raised transition-colors"
       >
         <div className="flex items-center gap-2">
           <svg className="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,7 +162,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
       {expanded && (
         <div className="px-4 pb-4 space-y-4">
           {/* Engagement */}
-          <div className="bg-zinc-800 rounded-lg p-4 border border-sky-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-sky-500/20">
             <h6 className="text-sm font-semibold text-violet-300 mb-3 flex items-center gap-2">
               <span className="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs">1</span>
               Multiple Means of Engagement
@@ -170,8 +170,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Choice & Autonomy</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Choice & Autonomy</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.choiceAndAutonomy.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-violet-400/60">•</span>
@@ -181,8 +181,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 </ul>
               </div>
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Relevance & Authenticity</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Relevance & Authenticity</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.relevanceAndAuthenticity.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-violet-400/60">•</span>
@@ -192,8 +192,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 </ul>
               </div>
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Self-Regulation</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Self-Regulation</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.selfRegulation.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-violet-400/60">•</span>
@@ -206,7 +206,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
           </div>
 
           {/* Representation */}
-          <div className="bg-zinc-800 rounded-lg p-4 border border-secondary/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-secondary/20">
             <h6 className="text-sm font-semibold text-sky-400 mb-3 flex items-center gap-2">
               <span className="w-6 h-6 bg-sky-500/20 rounded-full flex items-center justify-center text-xs">2</span>
               Multiple Means of Representation
@@ -214,8 +214,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Multiple Formats</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Multiple Formats</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.representation.multipleFormats.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-sky-400/60">•</span>
@@ -225,8 +225,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 </ul>
               </div>
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Vocabulary Support</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Vocabulary Support</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.representation.vocabularySupport.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-sky-400/60">•</span>
@@ -236,8 +236,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 </ul>
               </div>
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Background Knowledge</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Background Knowledge</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.representation.backgroundKnowledge.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-sky-400/60">•</span>
@@ -250,7 +250,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
           </div>
 
           {/* Action & Expression */}
-          <div className="bg-zinc-800 rounded-lg p-4 border border-violet-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
             <h6 className="text-sm font-semibold text-purple-300 mb-3 flex items-center gap-2">
               <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-xs">3</span>
               Multiple Means of Action & Expression
@@ -258,8 +258,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Physical Options</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Physical Options</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.physicalOptions.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-purple-300">•</span>
@@ -269,8 +269,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 </ul>
               </div>
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Expression Options</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Expression Options</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.expressionOptions.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-purple-300">•</span>
@@ -280,8 +280,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 </ul>
               </div>
               <div>
-                <p className="font-medium text-zinc-300 mb-1">Executive Function Support</p>
-                <ul className="text-zinc-500 space-y-0.5">
+                <p className="font-medium text-text-secondary mb-1">Executive Function Support</p>
+                <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.executiveFunctionSupport.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
                       <span className="text-purple-300">•</span>
@@ -303,10 +303,10 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
   const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <div className="border border-zinc-700 rounded-lg overflow-hidden">
+    <div className="border border-canvas-border rounded-lg overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full p-4 bg-zinc-950 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors"
+        className="w-full p-4 bg-canvas-deep flex items-center justify-between text-left hover:bg-canvas-raised transition-colors"
       >
         <div className="flex items-center gap-3">
           <span className="flex-shrink-0 w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
@@ -314,7 +314,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           </span>
           <div>
             <h6 className="font-semibold text-white">{activity.title}</h6>
-            <p className="text-xs text-zinc-500">{activity.duration}</p>
+            <p className="text-xs text-text-muted">{activity.duration}</p>
           </div>
         </div>
         <svg
@@ -328,10 +328,10 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
       </button>
 
       {expanded && (
-        <div className="p-4 bg-zinc-800 space-y-4">
+        <div className="p-4 bg-canvas-raised space-y-4">
           {/* Overview */}
-          <div className="bg-zinc-950 rounded-lg p-3">
-            <p className="text-sm text-zinc-300">{activity.overview}</p>
+          <div className="bg-canvas-deep rounded-lg p-3">
+            <p className="text-sm text-text-secondary">{activity.overview}</p>
           </div>
 
           {/* Video Resources (if available) */}
@@ -351,7 +351,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                     href={video.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block bg-zinc-800 rounded p-2 hover:bg-orange-500/20 transition-colors border border-orange-500/30"
+                    className="block bg-canvas-raised rounded p-2 hover:bg-orange-500/20 transition-colors border border-orange-500/30"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div>
@@ -383,9 +383,9 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                     {i + 1}
                   </div>
                   <div className="flex-1">
-                    <p className="text-sm text-zinc-300">{step.instruction}</p>
+                    <p className="text-sm text-text-secondary">{step.instruction}</p>
                     {step.duration && (
-                      <span className="inline-block mt-1 text-xs text-zinc-500 bg-zinc-950 px-2 py-0.5 rounded">
+                      <span className="inline-block mt-1 text-xs text-text-muted bg-canvas-deep px-2 py-0.5 rounded">
                         {step.duration}
                       </span>
                     )}
@@ -438,10 +438,10 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: number; projectId: string }) => (
   <div
     id={`${projectId}-lesson-${index + 1}`}
-    className="bg-zinc-800 border border-zinc-700 rounded-lg p-6 hover:shadow-md transition-shadow scroll-mt-24"
+    className="bg-canvas-raised border border-canvas-border rounded-lg p-6 hover:shadow-md transition-shadow scroll-mt-24"
   >
     <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-10 h-10 bg-zinc-950 text-white rounded-full flex items-center justify-center font-bold">
+      <div className="flex-shrink-0 w-10 h-10 bg-canvas-deep text-white rounded-full flex items-center justify-center font-bold">
         {index + 1}
       </div>
       <div className="flex-1">
@@ -457,7 +457,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
             }`}>
               {lesson.gradeBand === '6-8' ? 'Grades 6-8' : lesson.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
             </span>
-            <span className="text-sm text-zinc-500 bg-zinc-950 px-2 py-1 rounded">{lesson.duration}</span>
+            <span className="text-sm text-text-muted bg-canvas-deep px-2 py-1 rounded">{lesson.duration}</span>
           </div>
         </div>
 
@@ -487,8 +487,8 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           {lesson.udl && <UDLSection udl={lesson.udl} />}
 
           <div>
-            <h5 className="text-sm font-medium text-zinc-300 mb-1">Learning Objectives</h5>
-            <ul className="text-sm text-zinc-500 space-y-1">
+            <h5 className="text-sm font-medium text-text-secondary mb-1">Learning Objectives</h5>
+            <ul className="text-sm text-text-muted space-y-1">
               {lesson.objectives.map((obj, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">&#10003;</span>
@@ -501,7 +501,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           {/* Detailed Activities (if available) */}
           {lesson.detailedActivities && lesson.detailedActivities.length > 0 ? (
             <div>
-              <h5 className="text-sm font-medium text-zinc-300 mb-3 flex items-center gap-2">
+              <h5 className="text-sm font-medium text-text-secondary mb-3 flex items-center gap-2">
                 <svg className="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
@@ -515,8 +515,8 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
             </div>
           ) : (
             <div>
-              <h5 className="text-sm font-medium text-zinc-300 mb-1">Activities</h5>
-              <ul className="text-sm text-zinc-500 space-y-1">
+              <h5 className="text-sm font-medium text-text-secondary mb-1">Activities</h5>
+              <ul className="text-sm text-text-muted space-y-1">
                 {lesson.activities.map((activity, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <span className="text-sky-400">&#8226;</span>
@@ -528,10 +528,10 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           )}
 
           <div>
-            <h5 className="text-sm font-medium text-zinc-300 mb-1">Materials Needed</h5>
+            <h5 className="text-sm font-medium text-text-secondary mb-1">Materials Needed</h5>
             <div className="flex flex-wrap gap-2">
               {lesson.materials.map((material, i) => (
-                <span key={i} className="text-xs bg-zinc-950 text-zinc-500 px-2 py-1 rounded">
+                <span key={i} className="text-xs bg-canvas-deep text-text-muted px-2 py-1 rounded">
                   {material}
                 </span>
               ))}
@@ -552,17 +552,17 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
   };
 
   return (
-    <div id={project.id} className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden scroll-mt-24">
+    <div id={project.id} className="bg-canvas-raised border border-canvas-border rounded-xl overflow-hidden scroll-mt-24">
       {/* Project Header */}
       <button
         onClick={onToggle}
-        className="w-full p-6 text-left hover:bg-zinc-950 transition-colors"
+        className="w-full p-6 text-left hover:bg-canvas-deep transition-colors"
       >
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 flex-wrap">
               <h3 className="text-xl font-bold text-white">{project.title}</h3>
-              <span className={`text-xs px-2 py-1 rounded-full ${difficultyColors[project.difficulty] || 'bg-zinc-950 text-zinc-300'}`}>
+              <span className={`text-xs px-2 py-1 rounded-full ${difficultyColors[project.difficulty] || 'bg-canvas-deep text-text-secondary'}`}>
                 {project.difficulty}
               </span>
               <span className={`text-xs px-2 py-1 rounded-full font-medium ${
@@ -574,13 +574,13 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
               }`}>
                 {project.gradeBand === '6-8' ? 'Grades 6-8' : project.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
               </span>
-              <span className="text-xs px-2 py-1 rounded-full bg-zinc-950 text-white">
+              <span className="text-xs px-2 py-1 rounded-full bg-canvas-deep text-white">
                 {project.duration}
               </span>
             </div>
-            <p className="text-zinc-500">{project.description}</p>
+            <p className="text-text-muted">{project.description}</p>
           </div>
-          <div className="ml-4 text-zinc-500">
+          <div className="ml-4 text-text-muted">
             <svg
               className={`w-6 h-6 transform transition-transform ${isExpanded ? 'rotate-180' : ''}`}
               fill="none"
@@ -595,20 +595,20 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="border-t border-zinc-700 p-6 space-y-8">
+        <div className="border-t border-canvas-border p-6 space-y-8">
           {/* Overview */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-3">Project Overview</h4>
-            <p className="text-zinc-500 leading-relaxed">{project.overview}</p>
+            <p className="text-text-muted leading-relaxed">{project.overview}</p>
           </div>
 
           {/* Learning Objectives */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-3">Learning Objectives</h4>
-            <p className="text-sm text-zinc-500 mb-2">By the end of this project, students will be able to:</p>
+            <p className="text-sm text-text-muted mb-2">By the end of this project, students will be able to:</p>
             <ul className="space-y-2">
               {project.learningObjectives.map((objective, i) => (
-                <li key={i} className="flex items-start gap-3 text-zinc-500">
+                <li key={i} className="flex items-start gap-3 text-text-muted">
                   <span className="flex-shrink-0 w-6 h-6 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm font-medium">
                     {i + 1}
                   </span>
@@ -623,8 +623,8 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <h4 className="text-lg font-semibold text-white mb-3">Prerequisites</h4>
             <ul className="space-y-1">
               {project.prerequisites.map((prereq, i) => (
-                <li key={i} className="flex items-center gap-2 text-zinc-500">
-                  <span className="text-zinc-500">&#8226;</span>
+                <li key={i} className="flex items-center gap-2 text-text-muted">
+                  <span className="text-text-muted">&#8226;</span>
                   {prereq}
                 </li>
               ))}
@@ -637,7 +637,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
               <h4 className="text-lg font-semibold text-white mb-3">Required Materials</h4>
               <ul className="space-y-2">
                 {project.materials.required.map((material, i) => (
-                  <li key={i} className="flex items-center gap-2 text-zinc-500">
+                  <li key={i} className="flex items-center gap-2 text-text-muted">
                     <span className="text-green-500">&#10003;</span>
                     {material}
                   </li>
@@ -648,8 +648,8 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
               <h4 className="text-lg font-semibold text-white mb-3">Optional Materials</h4>
               <ul className="space-y-2">
                 {project.materials.optional.map((material, i) => (
-                  <li key={i} className="flex items-center gap-2 text-zinc-500">
-                    <span className="text-zinc-500">&#9675;</span>
+                  <li key={i} className="flex items-center gap-2 text-text-muted">
+                    <span className="text-text-muted">&#9675;</span>
                     {material}
                   </li>
                 ))}
@@ -668,23 +668,23 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           </div>
 
           {/* Assessment */}
-          <div className="bg-zinc-950 rounded-lg p-6">
+          <div className="bg-canvas-deep rounded-lg p-6">
             <h4 className="text-lg font-semibold text-white mb-4">Assessment</h4>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h5 className="font-medium text-zinc-300 mb-2">Formative Assessment (Ongoing)</h5>
+                <h5 className="font-medium text-text-secondary mb-2">Formative Assessment (Ongoing)</h5>
                 <ul className="space-y-1">
                   {project.assessment.formative.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-zinc-500">
-                      <span className="text-zinc-500">&#8226;</span>
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-muted">
+                      <span className="text-text-muted">&#8226;</span>
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h5 className="font-medium text-zinc-300 mb-2">Summative Assessment (Final)</h5>
-                <p className="text-sm text-zinc-500">{project.assessment.summative}</p>
+                <h5 className="font-medium text-text-secondary mb-2">Summative Assessment (Final)</h5>
+                <p className="text-sm text-text-muted">{project.assessment.summative}</p>
               </div>
             </div>
           </div>
@@ -692,10 +692,10 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           {/* Extensions */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-3">Extensions & Challenges</h4>
-            <p className="text-sm text-zinc-500 mb-2">For students who finish early or want to go deeper:</p>
+            <p className="text-sm text-text-muted mb-2">For students who finish early or want to go deeper:</p>
             <ul className="space-y-2">
               {project.extensions.map((ext, i) => (
-                <li key={i} className="flex items-start gap-2 text-zinc-500">
+                <li key={i} className="flex items-start gap-2 text-text-muted">
                   <span className="text-purple-500">&#9733;</span>
                   {ext}
                 </li>
@@ -708,7 +708,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <h4 className="text-lg font-semibold text-white mb-3">Real-World Connections</h4>
             <ul className="space-y-2">
               {project.realWorldConnections.map((connection, i) => (
-                <li key={i} className="flex items-start gap-2 text-zinc-300">
+                <li key={i} className="flex items-start gap-2 text-text-secondary">
                   <span className="text-sky-400">&#8594;</span>
                   {connection}
                 </li>
@@ -7669,13 +7669,13 @@ export default function NetworkingCurriculum() {
   ];
 
   return (
-    <div className="min-h-screen bg-zinc-900 pt-16">
+    <div className="min-h-screen bg-canvas pt-16">
       {/* Breadcrumb Navigation */}
-      <div className="bg-zinc-950 border-b border-zinc-700">
+      <div className="bg-canvas-deep border-b border-canvas-border">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center text-sm text-zinc-400 hover:text-sky-400 transition-colors"
+            className="inline-flex items-center text-sm text-text-secondary hover:text-sky-400 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -7693,28 +7693,28 @@ export default function NetworkingCurriculum() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex items-center gap-3 mb-4">
-            <span className="bg-sky-500 text-zinc-900 text-sm px-3 py-1 rounded-full font-medium">Track A</span>
-            <span className="bg-zinc-800 text-zinc-300 text-sm px-3 py-1 rounded-full border border-zinc-700">4 Projects</span>
+            <span className="bg-sky-500 text-canvas-deep text-sm px-3 py-1 rounded-full font-medium">Track A</span>
+            <span className="bg-canvas-raised text-text-secondary text-sm px-3 py-1 rounded-full border border-canvas-border">4 Projects</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t('tracks.networking.title')}
           </h1>
-          <p className="text-xl text-zinc-300 max-w-3xl mb-8">
+          <p className="text-xl text-text-secondary max-w-3xl mb-8">
             {t('tracks.networking.description')}
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <div className="bg-zinc-800 px-4 py-2 rounded-lg border border-zinc-700">
-              <span className="text-zinc-500 text-sm">Duration</span>
+            <div className="bg-canvas-raised px-4 py-2 rounded-lg border border-canvas-border">
+              <span className="text-text-muted text-sm">Duration</span>
               <p className="font-semibold text-white">17-23 weeks total</p>
             </div>
-            <div className="bg-zinc-800 px-4 py-2 rounded-lg border border-zinc-700">
-              <span className="text-zinc-500 text-sm">Skill Level</span>
+            <div className="bg-canvas-raised px-4 py-2 rounded-lg border border-canvas-border">
+              <span className="text-text-muted text-sm">Skill Level</span>
               <p className="font-semibold text-white">Beginner to Advanced</p>
             </div>
-            <div className="bg-zinc-800 px-4 py-2 rounded-lg border border-zinc-700">
-              <span className="text-zinc-500 text-sm">Projects</span>
+            <div className="bg-canvas-raised px-4 py-2 rounded-lg border border-canvas-border">
+              <span className="text-text-muted text-sm">Projects</span>
               <p className="font-semibold text-white">4 hands-on projects</p>
             </div>
           </div>
@@ -7728,9 +7728,9 @@ export default function NetworkingCurriculum() {
 
       {/* Track Overview */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-zinc-800 rounded-xl border border-zinc-700 p-8 mb-12">
+        <div className="bg-canvas-raised rounded-xl border border-canvas-border p-8 mb-12">
           <h2 className="text-2xl font-bold text-white mb-4">Track Overview</h2>
-          <p className="text-zinc-300 mb-6 leading-relaxed">
+          <p className="text-text-secondary mb-6 leading-relaxed">
             The Networking Fundamentals track takes students from zero networking knowledge to designing
             community-scale internet infrastructure. Students will build real networks, analyze real
             traffic, and develop proposals that could actually be implemented in their communities.
@@ -7739,7 +7739,7 @@ export default function NetworkingCurriculum() {
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="font-semibold text-white mb-2">What You&apos;ll Learn</h3>
-              <ul className="space-y-2 text-zinc-300">
+              <ul className="space-y-2 text-text-secondary">
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">&#10003;</span>
                   How data travels across networks and the internet
@@ -7764,7 +7764,7 @@ export default function NetworkingCurriculum() {
             </div>
             <div>
               <h3 className="font-semibold text-white mb-2">Why This Matters</h3>
-              <ul className="space-y-2 text-zinc-300">
+              <ul className="space-y-2 text-text-secondary">
                 <li className="flex items-start gap-2">
                   <span className="text-sky-400 mt-1">&#8594;</span>
                   Understanding networks is foundational to all tech sovereignty work
@@ -7805,7 +7805,7 @@ export default function NetworkingCurriculum() {
         {/* Educator Notes */}
         <div className="mt-12 bg-amber-500/10 rounded-xl border border-amber-500/30 p-8">
           <h2 className="text-2xl font-bold text-white mb-4">Notes for Educators</h2>
-          <div className="space-y-4 text-zinc-300">
+          <div className="space-y-4 text-text-secondary">
             <p>
               <strong>Pacing:</strong> The suggested durations are flexible. Some groups may move faster or slower
               depending on prior experience and available time. It&apos;s better to ensure understanding than to rush
@@ -7833,16 +7833,16 @@ export default function NetworkingCurriculum() {
         </div>
 
         {/* Community Network Resources */}
-        <div className="mt-12 bg-zinc-800 rounded-xl border border-sky-500/30 p-8">
+        <div className="mt-12 bg-canvas-raised rounded-xl border border-sky-500/30 p-8">
           <h2 className="text-2xl font-bold text-white mb-2">Community Network Resources</h2>
-          <p className="text-zinc-300 mb-6">
+          <p className="text-text-secondary mb-6">
             Learn from real-world community networks and access comprehensive guides for building your own.
             These resources inspired this curriculum and provide practical guidance for implementation.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* NYC Mesh */}
-            <div className="bg-zinc-800 rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-sky-500/20 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7851,7 +7851,7 @@ export default function NetworkingCurriculum() {
                 </div>
                 <h3 className="font-bold text-white">NYC Mesh</h3>
               </div>
-              <p className="text-sm text-zinc-500 mb-3">
+              <p className="text-sm text-text-muted mb-3">
                 New York City&apos;s community-owned network. Volunteer-driven, neutral, private. See how they install, organize, and sustain a real mesh network.
               </p>
               <div className="space-y-2">
@@ -7892,7 +7892,7 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Internet Society DIY Toolkit */}
-            <div className="bg-zinc-800 rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-sky-500/20 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7901,7 +7901,7 @@ export default function NetworkingCurriculum() {
                 </div>
                 <h3 className="font-bold text-white">ISOC DIY Toolkit</h3>
               </div>
-              <p className="text-sm text-zinc-500 mb-3">
+              <p className="text-sm text-text-muted mb-3">
                 The Internet Society&apos;s 10-step guide for building community networks. Covers community engagement, sustainability, governance, and technical setup.
               </p>
               <div className="space-y-2">
@@ -7931,7 +7931,7 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Community Network Manual */}
-            <div className="bg-zinc-800 rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7940,7 +7940,7 @@ export default function NetworkingCurriculum() {
                 </div>
                 <h3 className="font-bold text-white">Technical Manuals</h3>
               </div>
-              <p className="text-sm text-zinc-500 mb-3">
+              <p className="text-sm text-text-muted mb-3">
                 In-depth technical guides covering LibreRouter, MAZI Toolkit, and community LTE. Published by UN IGF&apos;s Dynamic Coalition on Community Connectivity.
               </p>
               <div className="space-y-2">
@@ -7970,7 +7970,7 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Other Community Networks */}
-            <div className="bg-zinc-800 rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7979,7 +7979,7 @@ export default function NetworkingCurriculum() {
                 </div>
                 <h3 className="font-bold text-white">Global Networks</h3>
               </div>
-              <p className="text-sm text-zinc-500 mb-3">
+              <p className="text-sm text-text-muted mb-3">
                 Learn from successful community networks around the world. Each has unique lessons about governance, technology, and sustainability.
               </p>
               <div className="space-y-2">
@@ -8020,7 +8020,7 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Technical Resources */}
-            <div className="bg-zinc-800 rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8030,7 +8030,7 @@ export default function NetworkingCurriculum() {
                 </div>
                 <h3 className="font-bold text-white">Technical Tools</h3>
               </div>
-              <p className="text-sm text-zinc-500 mb-3">
+              <p className="text-sm text-text-muted mb-3">
                 Open-source firmware, mesh protocols, and tools for building your own network infrastructure.
               </p>
               <div className="space-y-2">
@@ -8071,7 +8071,7 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Books & Reading */}
-            <div className="bg-zinc-800 rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8080,7 +8080,7 @@ export default function NetworkingCurriculum() {
                 </div>
                 <h3 className="font-bold text-white">Further Reading</h3>
               </div>
-              <p className="text-sm text-zinc-500 mb-3">
+              <p className="text-sm text-text-muted mb-3">
                 Books and comprehensive guides for deep learning about wireless networking and community-built infrastructure.
               </p>
               <div className="space-y-2">
@@ -8113,23 +8113,23 @@ export default function NetworkingCurriculum() {
           {/* Call to Action */}
           <div className="mt-8 bg-sky-500/20 rounded-lg p-6 text-center">
             <h3 className="text-lg font-bold text-white mb-2">Ready to Build?</h3>
-            <p className="text-sm text-zinc-300 mb-4">
+            <p className="text-sm text-text-secondary mb-4">
               Start with the curriculum above, then connect with existing community networks to learn from their experience.
               Remember NYC Mesh&apos;s core principle: <em>&quot;Installing is the main activity of a community network. Everything else you do should be about enabling more installs.&quot;</em>
             </p>
           </div>
 
           {/* Credits & Acknowledgments */}
-          <div className="mt-8 bg-zinc-950 rounded-lg p-6 border border-zinc-700">
+          <div className="mt-8 bg-canvas-deep rounded-lg p-6 border border-canvas-border">
             <h3 className="text-lg font-bold text-white mb-4">Acknowledgments & Credits</h3>
-            <p className="text-sm text-zinc-500 mb-4">
+            <p className="text-sm text-text-muted mb-4">
               This curriculum was developed using open resources, documentation, and lessons learned from community networks around the world.
               We gratefully acknowledge the following organizations whose work has informed and inspired these materials:
             </p>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <div>
                 <h4 className="font-semibold text-white mb-2">Community Networks</h4>
-                <ul className="space-y-1 text-zinc-500">
+                <ul className="space-y-1 text-text-muted">
                   <li>
                     <a href="https://www.nycmesh.net" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">NYC Mesh</a>
                     {' '}- Documentation, install guides, and community organizing practices
@@ -8158,7 +8158,7 @@ export default function NetworkingCurriculum() {
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-2">Educational Resources</h4>
-                <ul className="space-y-1 text-zinc-500">
+                <ul className="space-y-1 text-text-muted">
                   <li>
                     <a href="https://www.internetsociety.org/resources/community-network-diy-toolkit/" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">Internet Society</a>
                     {' '}- Community Network DIY Toolkit and training materials
@@ -8182,7 +8182,7 @@ export default function NetworkingCurriculum() {
                 </ul>
               </div>
             </div>
-            <p className="text-xs text-zinc-500 mt-4 border-t border-zinc-700 pt-4">
+            <p className="text-xs text-text-muted mt-4 border-t border-canvas-border pt-4">
               This curriculum is offered as an open educational resource. The lesson structures, activities, and pedagogical approaches
               are inspired by Universal Design for Learning (UDL) principles and best practices in project-based STEM education.
               We encourage educators to adapt these materials for their local contexts and to share improvements with the broader community.
@@ -8194,7 +8194,7 @@ export default function NetworkingCurriculum() {
         <div className="mt-12 flex justify-between items-center">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center text-zinc-500 hover:text-white transition-colors"
+            className="inline-flex items-center text-text-muted hover:text-white transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -8203,7 +8203,7 @@ export default function NetworkingCurriculum() {
           </Link>
           <Link
             href={`/${locale}/tech-sovereignty/self-hosted`}
-            className="inline-flex items-center bg-sky-500 text-zinc-900 px-6 py-3 rounded-lg hover:bg-sky-400 transition-colors font-semibold"
+            className="inline-flex items-center bg-sky-500 text-canvas-deep px-6 py-3 rounded-lg hover:bg-sky-400 transition-colors font-semibold"
           >
             Next: Self-Hosted Services
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

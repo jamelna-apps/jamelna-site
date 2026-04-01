@@ -80,14 +80,14 @@ function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCar
 
   return (
     <div
-      className={`relative bg-zinc-800 border ${
-        isCompleted ? colors.border : 'border-zinc-700'
+      className={`relative bg-canvas-raised border ${
+        isCompleted ? colors.border : 'border-canvas-border'
       } rounded-xl p-6 transition-all ${isCompleted ? 'opacity-90' : ''}`}
     >
       {/* Step number */}
       <div
         className={`absolute -left-3 top-6 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-          isCompleted ? `${colors.bg} ${colors.text}` : 'bg-zinc-700 text-zinc-400'
+          isCompleted ? `${colors.bg} ${colors.text}` : 'bg-canvas-border text-text-secondary'
         }`}
       >
         {isCompleted ? (
@@ -107,15 +107,15 @@ function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCar
               <span className={`text-xs px-2 py-0.5 rounded-full ${typeInfo.bg} ${typeInfo.text}`}>
                 {typeInfo.label}
               </span>
-              <span className="text-xs text-zinc-500">{step.duration}</span>
+              <span className="text-xs text-text-muted">{step.duration}</span>
             </div>
-            <h3 className={`text-lg font-semibold ${isCompleted ? 'text-zinc-400 line-through' : 'text-white'}`}>
+            <h3 className={`text-lg font-semibold ${isCompleted ? 'text-text-secondary line-through' : 'text-white'}`}>
               {step.title}
             </h3>
           </div>
         </div>
 
-        <p className="text-zinc-400 text-sm mb-4">{step.description}</p>
+        <p className="text-text-secondary text-sm mb-4">{step.description}</p>
 
         {/* Lesson Link */}
         {lessonInfo && (
@@ -134,14 +134,14 @@ function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCar
         )}
 
         {/* Checkpoint */}
-        <div className={`bg-zinc-900/50 rounded-lg p-4 border ${isCompleted ? colors.border : 'border-zinc-700'}`}>
+        <div className={`bg-canvas-deep/50 rounded-lg p-4 border ${isCompleted ? colors.border : 'border-canvas-border'}`}>
           <div className="flex items-start gap-3">
             <button
               onClick={onToggle}
               className={`mt-0.5 w-5 h-5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-all ${
                 isCompleted
                   ? `${colors.bg} ${colors.border} ${colors.text}`
-                  : 'border-zinc-600 hover:border-zinc-500'
+                  : 'border-canvas-border hover:border-text-muted'
               }`}
             >
               {isCompleted && (
@@ -151,8 +151,8 @@ function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCar
               )}
             </button>
             <div>
-              <p className="text-xs text-zinc-500 mb-1">Checkpoint:</p>
-              <p className={`text-sm ${isCompleted ? 'text-zinc-500 line-through' : 'text-zinc-300'}`}>
+              <p className="text-xs text-text-muted mb-1">Checkpoint:</p>
+              <p className={`text-sm ${isCompleted ? 'text-text-muted line-through' : 'text-text-secondary'}`}>
                 {step.checkpoint}
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function PathwayPage() {
   const nextStepIndex = pathway.steps.findIndex((step) => !completedSteps.includes(step.id));
 
   return (
-    <main className="min-h-screen bg-zinc-900 pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 px-4 overflow-hidden">
         <div className={`absolute inset-0 bg-gradient-to-br from-${pathway.color}-500/10 via-zinc-900 to-zinc-950`}></div>
@@ -201,7 +201,7 @@ export default function PathwayPage() {
         <div className="max-w-4xl mx-auto relative z-10">
           <Link
             href={`/${locale}/tech-sovereignty/pathways`}
-            className="inline-flex items-center gap-2 text-zinc-400 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-text-secondary hover:text-white mb-6 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -213,12 +213,12 @@ export default function PathwayPage() {
             {pathway.title}
           </h1>
 
-          <p className="text-lg text-zinc-300 mb-6 max-w-3xl">
+          <p className="text-lg text-text-secondary mb-6 max-w-3xl">
             {pathway.longDescription}
           </p>
 
           {/* Progress bar */}
-          <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700">
+          <div className="bg-canvas-raised rounded-xl p-6 border border-canvas-border">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-3">
                 <span className={`text-sm font-medium ${colors.text}`}>
@@ -230,9 +230,9 @@ export default function PathwayPage() {
                   </span>
                 )}
               </div>
-              <span className="text-sm text-zinc-500">{pathway.timeEstimate}</span>
+              <span className="text-sm text-text-muted">{pathway.timeEstimate}</span>
             </div>
-            <div className="h-2 bg-zinc-700 rounded-full overflow-hidden">
+            <div className="h-2 bg-canvas-border rounded-full overflow-hidden">
               <div
                 className={`h-full ${colors.progress} rounded-full transition-all duration-500`}
                 style={{ width: `${progressPercent}%` }}
@@ -243,9 +243,9 @@ export default function PathwayPage() {
       </section>
 
       {/* Outcome */}
-      <section className="py-8 px-4 bg-zinc-950">
+      <section className="py-8 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <div className={`bg-zinc-800 border ${colors.border} rounded-xl p-6`}>
+          <div className={`bg-canvas-raised border ${colors.border} rounded-xl p-6`}>
             <div className="flex items-start gap-4">
               <div className={`w-10 h-10 ${colors.bg} rounded-lg flex items-center justify-center flex-shrink-0`}>
                 <svg className={`w-5 h-5 ${colors.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,7 +253,7 @@ export default function PathwayPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-zinc-400 mb-1">What you&apos;ll achieve</h3>
+                <h3 className="text-sm font-medium text-text-secondary mb-1">What you&apos;ll achieve</h3>
                 <p className="text-lg text-white">{pathway.outcome}</p>
               </div>
             </div>
@@ -262,12 +262,12 @@ export default function PathwayPage() {
       </section>
 
       {/* Steps */}
-      <section className="py-12 px-4 bg-zinc-900">
+      <section className="py-12 px-4 bg-canvas">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold text-white">Your Journey</h2>
             {nextStepIndex !== -1 && (
-              <span className="text-sm text-zinc-400">
+              <span className="text-sm text-text-secondary">
                 Next: Step {nextStepIndex + 1}
               </span>
             )}
@@ -276,7 +276,7 @@ export default function PathwayPage() {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-zinc-700 ml-[11px]" />
+            <div className="absolute left-0 top-0 bottom-0 w-px bg-canvas-border ml-[11px]" />
 
             <div className="space-y-6">
               {pathway.steps.map((step, index) => (
@@ -297,7 +297,7 @@ export default function PathwayPage() {
 
       {/* Next Steps */}
       {completedSteps.length === pathway.steps.length && (
-        <section className="py-12 px-4 bg-zinc-950">
+        <section className="py-12 px-4 bg-canvas-deep">
           <div className="max-w-4xl mx-auto text-center">
             <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -305,7 +305,7 @@ export default function PathwayPage() {
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">Pathway Complete!</h2>
-            <p className="text-zinc-400 mb-8">
+            <p className="text-text-secondary mb-8">
               Congratulations! You&apos;ve completed all checkpoints in this pathway.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -317,7 +317,7 @@ export default function PathwayPage() {
               </Link>
               <Link
                 href={`/${locale}/tech-sovereignty#curriculum`}
-                className="inline-flex items-center justify-center gap-2 border border-zinc-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-zinc-800 transition-colors"
+                className="inline-flex items-center justify-center gap-2 border border-canvas-border text-text-heading px-6 py-3 rounded-lg font-semibold hover:bg-canvas-raised transition-colors"
               >
                 Browse Full Curriculum
               </Link>

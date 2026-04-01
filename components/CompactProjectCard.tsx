@@ -28,7 +28,7 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
     <div className="glass-card p-6 flex flex-col h-full">
       {/* Image */}
       {images && images.length > 0 && (
-        <div className="relative aspect-video rounded-lg overflow-hidden border border-deep-border mb-4">
+        <div className="relative aspect-video rounded-lg overflow-hidden border border-canvas-border mb-4">
           <Image
             src={images[0]}
             alt={title}
@@ -40,7 +40,7 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
 
       {/* Title & Timeline */}
       <div className="mb-3">
-        <h3 className="text-xl font-display font-bold text-white mb-1">{title}</h3>
+        <h3 className="text-xl font-display font-bold text-text-heading mb-1">{title}</h3>
         <p className="text-sm text-text-muted">{timeline}</p>
       </div>
 
@@ -52,7 +52,7 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
       {/* Skills tags */}
       <div className="flex flex-wrap gap-1.5 mb-4">
         {skills.split(',').slice(0, 4).map((skill, i) => (
-          <span key={i} className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-text-muted border border-deep-border">
+          <span key={i} className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-text-muted border border-canvas-border">
             {skill.trim()}
           </span>
         ))}

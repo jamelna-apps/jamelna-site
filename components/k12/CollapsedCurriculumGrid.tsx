@@ -92,16 +92,16 @@ const CollapsedCurriculumGrid: React.FC<CollapsedCurriculumGridProps> = ({
   const getColorClasses = (color: string, isExpanded: boolean) => {
     const colorMap: Record<string, { border: string; bg: string; text: string; hoverBorder: string }> = {
       orange: {
-        border: isExpanded ? 'border-orange-500/60' : 'border-orange-500/30',
+        border: isExpanded ? 'border-terra/60' : 'border-terra/30',
         bg: 'bg-orange-500/20',
-        text: 'text-orange-400',
-        hoverBorder: 'hover:border-orange-500/60',
+        text: 'text-terra',
+        hoverBorder: 'hover:border-terra/60',
       },
       blue: {
-        border: isExpanded ? 'border-blue-500/60' : 'border-blue-500/30',
+        border: isExpanded ? 'border-ink/60' : 'border-ink/30',
         bg: 'bg-blue-500/20',
-        text: 'text-blue-400',
-        hoverBorder: 'hover:border-blue-500/60',
+        text: 'text-ink',
+        hoverBorder: 'hover:border-ink/60',
       },
       violet: {
         border: isExpanded ? 'border-violet-500/60' : 'border-violet-500/30',
@@ -130,11 +130,11 @@ const CollapsedCurriculumGrid: React.FC<CollapsedCurriculumGridProps> = ({
         return (
           <div
             key={group.key}
-            className={`bg-zinc-800 border ${colors.border} rounded-xl overflow-hidden transition-all ${colors.hoverBorder}`}
+            className={`bg-canvas-raised border ${colors.border} rounded-xl overflow-hidden transition-all ${colors.hoverBorder}`}
           >
             <button
               onClick={() => toggleGroup(group.key)}
-              className="w-full px-6 py-5 flex items-center justify-between hover:bg-zinc-700/50 transition-colors"
+              className="w-full px-6 py-5 flex items-center justify-between hover:bg-canvas-border/50 transition-colors"
             >
               <div className="flex items-center gap-4">
                 <div className={`w-12 h-12 ${colors.bg} rounded-lg flex items-center justify-center ${colors.text}`}>
@@ -144,13 +144,13 @@ const CollapsedCurriculumGrid: React.FC<CollapsedCurriculumGridProps> = ({
                   <h3 className="text-lg font-semibold text-white">
                     {group.label}
                   </h3>
-                  <p className="text-sm text-zinc-500">
+                  <p className="text-sm text-text-muted">
                     {group.curricula.length} {group.curricula.length === 1 ? 'curriculum' : 'curricula'}
                   </p>
                 </div>
               </div>
               <svg
-                className={`w-5 h-5 text-zinc-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                className={`w-5 h-5 text-text-muted transition-transform ${isExpanded ? 'rotate-180' : ''}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

@@ -8,7 +8,7 @@ interface PageWrapperProps {
 
 const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
   return (
-    <section className="min-h-screen relative overflow-hidden py-24 bg-deep">
+    <section className="min-h-screen relative overflow-hidden py-24 bg-canvas-deep">
       {/* Gradient background accents */}
       <div
         className="absolute top-0 left-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"

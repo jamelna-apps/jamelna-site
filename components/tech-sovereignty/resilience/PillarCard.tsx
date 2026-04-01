@@ -78,7 +78,7 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
   return (
     <button
       onClick={handleClick}
-      className={`group w-full text-left bg-zinc-800 border ${colors.border} ${colors.hoverBorder} rounded-xl p-5 transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-900`}
+      className={`group w-full text-left bg-canvas-raised border ${colors.border} ${colors.hoverBorder} rounded-xl p-5 transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-canvas-border focus:ring-offset-2 focus:ring-offset-canvas`}
     >
       {/* Icon + title row */}
       <div className="flex items-start gap-4 mb-3">
@@ -87,7 +87,7 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h3 className="font-bold text-white text-lg leading-tight">
+            <h3 className="font-bold text-text-heading text-lg leading-tight">
               {t(`resilience.pillars.${pillarKey}.title`)}
             </h3>
           </div>
@@ -99,21 +99,21 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
       </div>
 
       {/* Description */}
-      <p className="text-zinc-400 text-base mb-4 line-clamp-2">
+      <p className="text-text-secondary text-base mb-4 line-clamp-2">
         {t(`resilience.pillars.${pillarKey}.description`)}
       </p>
 
       {/* Priority callout */}
-      <div className={`${colors.callout} bg-zinc-900/40 rounded-r-lg py-2.5 pr-3`}>
-        <p className="text-sm text-zinc-500 mb-0.5">If you only do one thing:</p>
-        <p className="text-base text-zinc-300">
+      <div className={`${colors.callout} bg-canvas-deep/40 rounded-r-lg py-2.5 pr-3`}>
+        <p className="text-sm text-text-muted mb-0.5">If you only do one thing:</p>
+        <p className="text-base text-text-secondary">
           {t(`resilience.pillars.${pillarKey}.priority`)}
         </p>
       </div>
 
       {/* Scroll cue */}
-      <div className="mt-4 pt-3 border-t border-zinc-700 flex items-center justify-between">
-        <span className="text-sm text-zinc-500">{t('resilience.viewActions')}</span>
+      <div className="mt-4 pt-3 border-t border-canvas-border flex items-center justify-between">
+        <span className="text-sm text-text-muted">{t('resilience.viewActions')}</span>
         <span className={`text-sm ${colors.text} flex items-center gap-1 group-hover:gap-2 transition-all`}>
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

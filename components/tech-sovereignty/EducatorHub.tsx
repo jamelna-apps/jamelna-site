@@ -89,10 +89,10 @@ export function EducatorHub({ locale }: EducatorHubProps) {
     <div className="w-full">
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-text-heading mb-3">
           Educator Resources by Grade Band
         </h2>
-        <p className="text-zinc-400 max-w-2xl mx-auto">
+        <p className="text-text-secondary max-w-2xl mx-auto">
           Access UDL-aligned lesson plans organized by grade level. Each lesson includes learning objectives, materials, and optional assessments.
         </p>
       </div>
@@ -104,7 +104,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedBand === 'all'
               ? 'bg-violet-500 text-white'
-              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+              : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
           All Grades
@@ -116,7 +116,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               selectedBand === band.id
                 ? `${colorClasses[band.color].bg} ${colorClasses[band.color].text} ring-1 ring-${band.color}-500/50`
-                : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+                : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
             }`}
           >
             {band.label}
@@ -129,14 +129,14 @@ export function EducatorHub({ locale }: EducatorHubProps) {
         {filteredBands.map((band) => {
           const colors = colorClasses[band.color];
           return (
-            <div key={band.id} className={`bg-zinc-800 border ${colors.border} rounded-xl p-6`}>
+            <div key={band.id} className={`bg-canvas-raised border ${colors.border} rounded-xl p-6`}>
               <div className="flex items-start justify-between mb-4 flex-wrap gap-3">
                 <div>
                   <div className="flex items-center gap-3 mb-1">
                     <h3 className={`text-xl font-semibold ${colors.text}`}>{band.label}</h3>
-                    <span className="text-xs text-zinc-500">{band.ageRange}</span>
+                    <span className="text-xs text-text-muted">{band.ageRange}</span>
                   </div>
-                  <p className="text-sm text-zinc-400">{band.description}</p>
+                  <p className="text-sm text-text-secondary">{band.description}</p>
                 </div>
                 <span className={`text-xs px-3 py-1 rounded-full ${colors.pill}`}>
                   {band.lessons.length} lessons
@@ -148,14 +148,14 @@ export function EducatorHub({ locale }: EducatorHubProps) {
                   <Link
                     key={idx}
                     href={lesson.link}
-                    className="group bg-zinc-900/50 border border-zinc-700 hover:border-zinc-600 rounded-lg p-4 transition-all"
+                    className="group bg-canvas-deep/50 border border-canvas-border hover:border-canvas-border/60 rounded-lg p-4 transition-all"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-medium text-white text-sm group-hover:text-violet-300 transition-colors mb-1">
+                        <h4 className="font-medium text-text-heading text-sm group-hover:text-violet-300 transition-colors mb-1">
                           {lesson.title}
                         </h4>
-                        <div className="flex items-center gap-3 text-xs text-zinc-500">
+                        <div className="flex items-center gap-3 text-xs text-text-muted">
                           <span>{lesson.track}</span>
                           <span>·</span>
                           <span>{lesson.duration}</span>
@@ -167,7 +167,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
                             Assessment
                           </span>
                         )}
-                        <svg className="w-4 h-4 text-zinc-500 group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-text-muted group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
@@ -181,7 +181,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
       </div>
 
       {/* UDL Info */}
-      <div className="mt-8 bg-zinc-900/50 border border-zinc-700 rounded-xl p-6">
+      <div className="mt-8 bg-canvas-deep/50 border border-canvas-border rounded-xl p-6">
         <div className="flex items-start gap-4">
           <div className="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
             <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,15 +189,15 @@ export function EducatorHub({ locale }: EducatorHubProps) {
             </svg>
           </div>
           <div>
-            <h4 className="font-semibold text-white mb-1">Universal Design for Learning (UDL)</h4>
-            <p className="text-sm text-zinc-400 mb-3">
+            <h4 className="font-semibold text-text-heading mb-1">Universal Design for Learning (UDL)</h4>
+            <p className="text-sm text-text-secondary mb-3">
               All lessons are designed with UDL principles: multiple means of engagement, representation, and action/expression. Each includes adaptations for diverse learners.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Multiple entry points</span>
-              <span className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Flexible assessment</span>
-              <span className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Scaffolded support</span>
-              <span className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded">Culturally responsive</span>
+              <span className="text-xs bg-canvas-raised text-text-secondary px-2 py-1 rounded">Multiple entry points</span>
+              <span className="text-xs bg-canvas-raised text-text-secondary px-2 py-1 rounded">Flexible assessment</span>
+              <span className="text-xs bg-canvas-raised text-text-secondary px-2 py-1 rounded">Scaffolded support</span>
+              <span className="text-xs bg-canvas-raised text-text-secondary px-2 py-1 rounded">Culturally responsive</span>
             </div>
           </div>
         </div>
@@ -205,32 +205,32 @@ export function EducatorHub({ locale }: EducatorHubProps) {
 
       {/* Download Section */}
       <div className="mt-6 grid md:grid-cols-3 gap-4">
-        <button className="bg-zinc-800 border border-zinc-700 hover:border-zinc-600 rounded-lg p-4 text-left transition-all group">
+        <button className="bg-canvas-raised border border-canvas-border hover:border-canvas-border/60 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
-            <svg className="w-5 h-5 text-zinc-400 group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-text-secondary group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            <span className="font-medium text-white text-sm">Scope & Sequence</span>
+            <span className="font-medium text-text-heading text-sm">Scope & Sequence</span>
           </div>
-          <p className="text-sm text-zinc-500">Full curriculum overview PDF</p>
+          <p className="text-sm text-text-muted">Full curriculum overview PDF</p>
         </button>
-        <button className="bg-zinc-800 border border-zinc-700 hover:border-zinc-600 rounded-lg p-4 text-left transition-all group">
+        <button className="bg-canvas-raised border border-canvas-border hover:border-canvas-border/60 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
-            <svg className="w-5 h-5 text-zinc-400 group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-text-secondary group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
             </svg>
-            <span className="font-medium text-white text-sm">Assessment Rubrics</span>
+            <span className="font-medium text-text-heading text-sm">Assessment Rubrics</span>
           </div>
-          <p className="text-sm text-zinc-500">Standards-aligned rubrics</p>
+          <p className="text-sm text-text-muted">Standards-aligned rubrics</p>
         </button>
-        <button className="bg-zinc-800 border border-zinc-700 hover:border-zinc-600 rounded-lg p-4 text-left transition-all group">
+        <button className="bg-canvas-raised border border-canvas-border hover:border-canvas-border/60 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
-            <svg className="w-5 h-5 text-zinc-400 group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-text-secondary group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            <span className="font-medium text-white text-sm">Materials List</span>
+            <span className="font-medium text-text-heading text-sm">Materials List</span>
           </div>
-          <p className="text-sm text-zinc-500">Hardware & software needs</p>
+          <p className="text-sm text-text-muted">Hardware & software needs</p>
         </button>
       </div>
     </div>

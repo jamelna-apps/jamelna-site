@@ -142,7 +142,7 @@ export function PlanViewer({ plan, showRawContent = false, onEdit, onExport }: P
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-3 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${
                 activeTab === tab.id
-                  ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                  ? 'border-ink text-blue-600 dark:text-ink'
                   : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300'
               }`}
             >
@@ -171,7 +171,7 @@ export function PlanViewer({ plan, showRawContent = false, onEdit, onExport }: P
             {/* Quick Stats */}
             <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                <div className="text-2xl font-bold text-blue-600 dark:text-ink">
                   {plan.scopeSequence?.length || 0}
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">Grade Bands</div>
@@ -189,7 +189,7 @@ export function PlanViewer({ plan, showRawContent = false, onEdit, onExport }: P
                 <div className="text-sm text-gray-500 dark:text-gray-400">Phases</div>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                <div className="text-2xl font-bold text-orange-600 dark:text-terra">
                   {plan.professionalDevelopment?.essential?.length || 0}
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">PD Items</div>
@@ -208,7 +208,7 @@ export function PlanViewer({ plan, showRawContent = false, onEdit, onExport }: P
                       <h4 className="font-medium text-blue-800 dark:text-blue-300 mb-2">Essential Training</h4>
                       <ul className="space-y-1">
                         {plan.professionalDevelopment.essential.slice(0, 3).map((item, i) => (
-                          <li key={i} className="text-sm text-blue-700 dark:text-blue-400 flex items-start gap-2">
+                          <li key={i} className="text-sm text-blue-700 dark:text-ink flex items-start gap-2">
                             <span>•</span>
                             <span>{item}</span>
                           </li>
@@ -298,7 +298,7 @@ export function PlanViewer({ plan, showRawContent = false, onEdit, onExport }: P
                           href={curriculumUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline inline-flex items-center gap-1"
+                          className="font-medium text-blue-600 dark:text-ink hover:text-blue-800 dark:hover:text-blue-300 hover:underline inline-flex items-center gap-1"
                         >
                           {rec.name}
                           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -356,7 +356,7 @@ export function PlanViewer({ plan, showRawContent = false, onEdit, onExport }: P
                         href={curriculumUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                        className="inline-flex items-center gap-1.5 text-xs text-blue-600 dark:text-ink hover:text-blue-800 dark:hover:text-blue-300"
                       >
                         <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />

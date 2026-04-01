@@ -86,7 +86,7 @@ export function PathwayCard({
   return (
     <a
       href={href}
-      className={`block bg-zinc-800 border ${colors.border} rounded-xl p-6 transition-all hover:shadow-lg group cursor-pointer no-underline`}
+      className={`block bg-canvas-raised border ${colors.border} rounded-xl p-6 transition-all hover:shadow-lg group cursor-pointer no-underline`}
     >
       {/* Header */}
       <div className="flex items-start gap-4 mb-4">
@@ -94,21 +94,21 @@ export function PathwayCard({
           {icon}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-bold text-white mb-1 group-hover:text-white/90">
+          <h3 className="text-lg font-bold text-text-heading mb-1 group-hover:text-text-heading/90">
             {title}
           </h3>
-          <p className="text-zinc-400 text-base line-clamp-2">{description}</p>
+          <p className="text-text-secondary text-base line-clamp-2">{description}</p>
         </div>
       </div>
 
       {/* Outcome */}
-      <div className="bg-zinc-900/50 rounded-lg p-3 mb-4">
-        <p className="text-xs text-zinc-500 mb-1">What you&apos;ll achieve:</p>
-        <p className="text-base text-zinc-300">{outcome}</p>
+      <div className="bg-canvas-deep/50 rounded-lg p-3 mb-4">
+        <p className="text-xs text-text-muted mb-1">What you&apos;ll achieve:</p>
+        <p className="text-base text-text-secondary">{outcome}</p>
       </div>
 
       {/* Meta */}
-      <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-500 mb-4">
+      <div className="flex flex-wrap items-center gap-4 text-xs text-text-muted mb-4">
         <span className="flex items-center gap-1">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -128,7 +128,7 @@ export function PathwayCard({
         {tracks.map((track) => (
           <span
             key={track}
-            className="text-xs bg-zinc-700/50 text-zinc-300 px-2 py-1 rounded"
+            className="text-xs bg-canvas-border/50 text-text-secondary px-2 py-1 rounded"
           >
             {trackLabels[track] || track}
           </span>
@@ -138,14 +138,14 @@ export function PathwayCard({
       {/* Progress Bar */}
       <div className="space-y-2">
         <div className="flex justify-between text-xs">
-          <span className={hasStarted ? colors.text : 'text-zinc-500'}>
+          <span className={hasStarted ? colors.text : 'text-text-muted'}>
             {hasStarted ? `${completedCheckpoints}/${totalCheckpoints} completed` : 'Not started'}
           </span>
           {hasStarted && (
             <span className={colors.text}>{Math.round(progressPercent)}%</span>
           )}
         </div>
-        <div className="h-1.5 bg-zinc-700 rounded-full overflow-hidden">
+        <div className="h-1.5 bg-canvas-border rounded-full overflow-hidden">
           <div
             className={`h-full ${colors.progress} rounded-full transition-all duration-300`}
             style={{ width: `${progressPercent}%` }}
@@ -154,7 +154,7 @@ export function PathwayCard({
       </div>
 
       {/* CTA */}
-      <div className="mt-4 pt-4 border-t border-zinc-700">
+      <div className="mt-4 pt-4 border-t border-canvas-border">
         <span className={`text-sm ${colors.text} font-medium flex items-center gap-1 group-hover:gap-2 transition-all`}>
           {hasStarted ? 'Continue Learning' : 'Start Pathway'}
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

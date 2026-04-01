@@ -84,7 +84,7 @@ export function ChatInput({
 
       {/* Input Area */}
       <div className="p-4">
-        <div className="flex items-end gap-2 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 focus-within:border-blue-500 dark:focus-within:border-blue-400 transition-colors">
+        <div className="flex items-end gap-2 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 focus-within:border-ink dark:focus-within:border-blue-400 transition-colors">
           <textarea
             ref={textareaRef}
             value={input}

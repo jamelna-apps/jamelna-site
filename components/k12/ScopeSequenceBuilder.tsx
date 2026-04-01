@@ -67,8 +67,8 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
   const colorClasses: Record<string, { bg: string; border: string; text: string; badge: string; activeBg: string }> = {
     violet: { bg: 'bg-violet-500/20', border: 'border-violet-500/50', text: 'text-violet-400', badge: 'bg-violet-500/20 text-violet-300', activeBg: 'bg-violet-500/10' },
     emerald: { bg: 'bg-emerald-500/20', border: 'border-emerald-500/50', text: 'text-emerald-400', badge: 'bg-emerald-500/20 text-emerald-300', activeBg: 'bg-emerald-500/10' },
-    orange: { bg: 'bg-orange-500/20', border: 'border-orange-500/50', text: 'text-orange-400', badge: 'bg-orange-500/20 text-orange-300', activeBg: 'bg-orange-500/10' },
-    blue: { bg: 'bg-blue-500/20', border: 'border-blue-500/50', text: 'text-blue-400', badge: 'bg-blue-500/20 text-blue-300', activeBg: 'bg-blue-500/10' },
+    orange: { bg: 'bg-orange-500/20', border: 'border-terra/50', text: 'text-terra', badge: 'bg-orange-500/20 text-orange-300', activeBg: 'bg-orange-500/10' },
+    blue: { bg: 'bg-blue-500/20', border: 'border-ink/50', text: 'text-ink', badge: 'bg-blue-500/20 text-blue-300', activeBg: 'bg-blue-500/10' },
     cyan: { bg: 'bg-cyan-500/20', border: 'border-cyan-500/50', text: 'text-cyan-400', badge: 'bg-cyan-500/20 text-cyan-300', activeBg: 'bg-cyan-500/10' },
   };
 
@@ -92,7 +92,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
             className={`flex items-center justify-between p-3 rounded-lg transition-all group ${
               isPathway
                 ? `${getColors(currentPathway.color).activeBg} hover:${getColors(currentPathway.color).bg}`
-                : 'bg-zinc-800/50 hover:bg-zinc-700/50'
+                : 'bg-canvas-raised/50 hover:bg-canvas-border/50'
             }`}
           >
             <div className="flex-1 min-w-0">
@@ -102,9 +102,9 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
                   <span className="text-xs px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400">Free</span>
                 )}
               </div>
-              <span className="text-xs text-zinc-500">{curriculum.organization}</span>
+              <span className="text-xs text-text-muted">{curriculum.organization}</span>
             </div>
-            <ExternalLinkIcon className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors flex-shrink-0 ml-2" />
+            <ExternalLinkIcon className="w-4 h-4 text-text-muted group-hover:text-text-secondary transition-colors flex-shrink-0 ml-2" />
           </a>
         ))}
       </div>
@@ -116,7 +116,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
     const colors = getColors(currentPathway.color);
 
     return (
-      <div className="bg-zinc-800/50 rounded-xl p-6 border border-zinc-700 hover:border-zinc-600 transition-colors">
+      <div className="bg-canvas-raised/50 rounded-xl p-6 border border-canvas-border hover:border-canvas-border transition-colors">
         <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <span className={`w-2 h-2 rounded-full ${colors.bg}`} />
           {gradeBandLabels[gradeBand]}
@@ -125,8 +125,8 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
         <div className="space-y-5">
           {/* Core Curricula */}
           <div>
-            <h5 className="text-sm font-medium text-zinc-400 mb-2 flex items-center gap-2">
-              <span className="w-4 h-0.5 bg-zinc-600 rounded" />
+            <h5 className="text-sm font-medium text-text-secondary mb-2 flex items-center gap-2">
+              <span className="w-4 h-0.5 bg-canvas-border rounded" />
               {t('scopeSequence.coreCurricula')}
             </h5>
             {renderCurriculumList(gradeData.core)}
@@ -143,7 +143,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
 
           {/* Key Skills */}
           <div>
-            <h5 className="text-sm font-medium text-zinc-400 mb-2 flex items-center gap-2">
+            <h5 className="text-sm font-medium text-text-secondary mb-2 flex items-center gap-2">
               <LightbulbIcon className="w-4 h-4" />
               {t('scopeSequence.skills')}
             </h5>
@@ -167,7 +167,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           {t('scopeSequence.title')}
         </h2>
-        <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
+        <p className="text-lg text-text-secondary max-w-3xl mx-auto">
           {t('scopeSequence.subtitle')}
         </p>
       </div>
@@ -182,7 +182,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
             <h3 className="text-lg font-semibold text-amber-300 mb-2">
               {t('scopeSequence.foundation')}
             </h3>
-            <p className="text-sm text-zinc-300">
+            <p className="text-sm text-text-secondary">
               {t('scopeSequence.foundationDescription')}
             </p>
           </div>
@@ -191,7 +191,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
 
       {/* Pathway Selector */}
       <div className="mb-8">
-        <h3 className="text-sm font-medium text-zinc-400 mb-4">{t('scopeSequence.selectPathway')}</h3>
+        <h3 className="text-sm font-medium text-text-secondary mb-4">{t('scopeSequence.selectPathway')}</h3>
         <div className="flex flex-wrap gap-3">
           {k12Pathways.map((pathway) => {
             const colors = getColors(pathway.color);
@@ -205,7 +205,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
                 className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all ${
                   isSelected
                     ? `${colors.bg} ${colors.border} border-2 ${colors.text}`
-                    : 'bg-zinc-800 border-2 border-zinc-700 text-zinc-300 hover:border-zinc-600 hover:text-white'
+                    : 'bg-canvas-raised border-2 border-canvas-border text-text-secondary hover:border-canvas-border hover:text-white'
                 }`}
               >
                 <IconComponent className="w-5 h-5" />
@@ -225,7 +225,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
               <IconComponent className={`w-6 h-6 ${getColors(currentPathway.color).text}`} />
               <div>
                 <h3 className="font-semibold text-white">{currentPathway.name}</h3>
-                <p className="text-sm text-zinc-300">{currentPathway.description}</p>
+                <p className="text-sm text-text-secondary">{currentPathway.description}</p>
               </div>
             </div>
           </div>
@@ -242,10 +242,10 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
       </div>
 
       {/* Legend */}
-      <div className="mt-8 pt-6 border-t border-zinc-700">
-        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-zinc-400">
+      <div className="mt-8 pt-6 border-t border-canvas-border">
+        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-text-secondary">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded bg-zinc-700" />
+            <span className="w-3 h-3 rounded bg-canvas-border" />
             <span>{t('scopeSequence.coreCurricula')}</span>
           </div>
           <div className="flex items-center gap-2">

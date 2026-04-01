@@ -315,7 +315,7 @@ export function AIChatPanel({
           <div className="flex flex-col items-center justify-center h-full text-center px-4">
             <div className="w-16 h-16 mb-4 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
               <svg
-                className="w-8 h-8 text-blue-600 dark:text-blue-400"
+                className="w-8 h-8 text-blue-600 dark:text-ink"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

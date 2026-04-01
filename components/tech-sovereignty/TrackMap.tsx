@@ -170,7 +170,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedSequence === 'sovereignty'
               ? 'bg-violet-500 text-white'
-              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+              : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
           Full Sovereignty Path
@@ -180,7 +180,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedSequence === 'developer'
               ? 'bg-sky-500 text-white'
-              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+              : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
           Developer Path
@@ -190,7 +190,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedSequence === 'aiPath'
               ? 'bg-orange-500 text-white'
-              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+              : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
           AI Independence Path
@@ -198,7 +198,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       </div>
 
       {/* Map Container */}
-      <div className="relative w-full aspect-[4/3] md:aspect-[16/9] bg-zinc-900/50 rounded-xl border border-zinc-700 overflow-hidden">
+      <div className="relative w-full aspect-[4/3] md:aspect-[16/9] bg-canvas-deep/50 rounded-xl border border-canvas-border overflow-hidden">
         {/* SVG for connections */}
         <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
           <defs>
@@ -210,7 +210,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
               refY="3.5"
               orient="auto"
             >
-              <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" className="text-zinc-600" />
+              <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" className="text-canvas-border" />
             </marker>
             <marker
               id="arrowhead-highlighted"
@@ -261,27 +261,27 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
             >
               <div
                 className={`${track.bgColor} ${
-                  highlighted ? track.borderColor : 'border-zinc-700'
+                  highlighted ? track.borderColor : 'border-canvas-border'
                 } border-2 rounded-xl p-3 md:p-4 text-center min-w-[100px] md:min-w-[130px] hover:shadow-lg transition-all ${
                   highlighted ? 'shadow-lg' : ''
                 }`}
               >
                 <h4 className={`font-semibold text-xs md:text-sm ${track.color}`}>{track.title}</h4>
-                <p className="text-zinc-400 text-[10px] md:text-xs mt-0.5">{track.subtitle}</p>
+                <p className="text-text-secondary text-[10px] md:text-xs mt-0.5">{track.subtitle}</p>
               </div>
             </Link>
           );
         })}
 
         {/* Legend */}
-        <div className="absolute bottom-3 left-3 bg-zinc-800/90 rounded-lg p-2 md:p-3 text-xs">
+        <div className="absolute bottom-3 left-3 bg-canvas-raised/90 rounded-lg p-2 md:p-3 text-xs">
           <div className="flex items-center gap-2 mb-1">
-            <div className="w-6 h-0.5 bg-zinc-500"></div>
-            <span className="text-zinc-400">Recommended</span>
+            <div className="w-6 h-0.5 bg-text-muted"></div>
+            <span className="text-text-secondary">Recommended</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-0.5 bg-zinc-500 border-dashed border-t-2 border-zinc-500"></div>
-            <span className="text-zinc-400">Optional</span>
+            <div className="w-6 h-0.5 bg-text-muted border-dashed border-t-2 border-text-muted"></div>
+            <span className="text-text-secondary">Optional</span>
           </div>
         </div>
 
@@ -293,11 +293,11 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
 
       {/* Sequence Description */}
       {selectedSequence && (
-        <div className="mt-4 bg-zinc-800 rounded-lg p-4 border border-zinc-700">
+        <div className="mt-4 bg-canvas-raised rounded-lg p-4 border border-canvas-border">
           {selectedSequence === 'sovereignty' && (
             <div>
               <h4 className="font-semibold text-violet-400 mb-2">Full Sovereignty Path</h4>
-              <p className="text-zinc-300 text-sm">
+              <p className="text-text-secondary text-sm">
                 The complete journey to tech independence. Start by understanding your digital rights,
                 build foundational Linux skills, master networking, deploy your own services, then
                 share knowledge with your community.
@@ -307,7 +307,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           {selectedSequence === 'developer' && (
             <div>
               <h4 className="font-semibold text-sky-400 mb-2">Developer Path</h4>
-              <p className="text-zinc-300 text-sm">
+              <p className="text-text-secondary text-sm">
                 Focus on building applications that serve your community. Learn the foundations of
                 open source development, then create tools and platforms that reflect community values.
               </p>
@@ -316,7 +316,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           {selectedSequence === 'aiPath' && (
             <div>
               <h4 className="font-semibold text-orange-400 mb-2">AI Independence Path</h4>
-              <p className="text-zinc-300 text-sm">
+              <p className="text-text-secondary text-sm">
                 Run powerful AI models on your own hardware. Build the infrastructure foundation, then
                 deploy and customize AI tools that keep your data private and under your control.
               </p>

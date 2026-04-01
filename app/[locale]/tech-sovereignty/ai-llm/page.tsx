@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation';
 
 // Core Pedagogical Principle Component
 const CorePrinciple = () => (
-  <div className="bg-zinc-800 border border-orange-500/30 rounded-xl p-6 mb-8">
+  <div className="bg-canvas-raised border border-orange-500/30 rounded-xl p-6 mb-8">
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
         <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -16,23 +16,23 @@ const CorePrinciple = () => (
       </div>
       <div>
         <h3 className="text-lg font-bold text-white mb-2">Core Pedagogical Principle: Understanding Over Magic</h3>
-        <p className="text-zinc-300 mb-3">
+        <p className="text-text-secondary mb-3">
           AI isn&apos;t magic—it&apos;s <strong className="text-white">mathematics and data</strong>. Students learn how these systems actually work,
           their <strong className="text-white">capabilities and limitations</strong>, and how to run them <strong className="text-white">locally</strong> without
           depending on cloud services or surrendering their data.
         </p>
         <div className="grid md:grid-cols-3 gap-4 mt-4">
-          <div className="bg-zinc-950 rounded-lg p-4 border border-zinc-700">
+          <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
             <h4 className="font-semibold text-orange-300 mb-1">Demystify AI</h4>
-            <p className="text-sm text-zinc-500">Understand what&apos;s actually happening when AI generates text, images, or makes predictions.</p>
+            <p className="text-sm text-text-muted">Understand what&apos;s actually happening when AI generates text, images, or makes predictions.</p>
           </div>
-          <div className="bg-zinc-950 rounded-lg p-4 border border-zinc-700">
+          <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
             <h4 className="font-semibold text-orange-300 mb-1">Run Locally</h4>
-            <p className="text-sm text-zinc-500">Keep your data private by running AI models on your own hardware—no cloud required.</p>
+            <p className="text-sm text-text-muted">Keep your data private by running AI models on your own hardware—no cloud required.</p>
           </div>
-          <div className="bg-zinc-950 rounded-lg p-4 border border-zinc-700">
+          <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
             <h4 className="font-semibold text-orange-300 mb-1">Think Critically</h4>
-            <p className="text-sm text-zinc-500">Recognize AI limitations, biases, and appropriate use cases. Know when not to use AI.</p>
+            <p className="text-sm text-text-muted">Recognize AI limitations, biases, and appropriate use cases. Know when not to use AI.</p>
           </div>
         </div>
       </div>
@@ -103,51 +103,51 @@ interface Project {
 const UDLSection = ({ udl }: { udl: UDLFramework }) => {
   const [expanded, setExpanded] = React.useState(false);
   return (
-    <div className="bg-zinc-950 border border-orange-500/30 rounded-lg overflow-hidden">
-      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors">
+    <div className="bg-canvas-deep border border-orange-500/30 rounded-lg overflow-hidden">
+      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-canvas-raised transition-colors">
         <div className="flex items-center gap-2">
           <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
           <span className="font-semibold text-orange-300">Universal Design for Learning (UDL) Supports</span>
         </div>
-        <svg className={`w-5 h-5 text-zinc-500 transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className={`w-5 h-5 text-text-muted transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {expanded && (
         <div className="px-4 pb-4 space-y-4">
-          <div className="bg-zinc-800 rounded-lg p-4 border border-orange-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-orange-500/20">
             <h6 className="text-sm font-semibold text-orange-300 mb-3 flex items-center gap-2">
               <span className="w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center text-xs">1</span>
-              Multiple Means of Engagement <span className="text-xs font-normal text-zinc-500">(The &quot;Why&quot;)</span>
+              Multiple Means of Engagement <span className="text-xs font-normal text-text-muted">(The &quot;Why&quot;)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
-              <div><p className="font-medium text-zinc-300 mb-1">Choice & Autonomy</p><ul className="text-zinc-500 space-y-0.5">{udl.engagement.choiceAndAutonomy.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-orange-400">•</span>{item}</li>)}</ul></div>
-              <div><p className="font-medium text-zinc-300 mb-1">Relevance</p><ul className="text-zinc-500 space-y-0.5">{udl.engagement.relevanceAndAuthenticity.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-orange-400">•</span>{item}</li>)}</ul></div>
-              <div><p className="font-medium text-zinc-300 mb-1">Self-Regulation</p><ul className="text-zinc-500 space-y-0.5">{udl.engagement.selfRegulation.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-orange-400">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Choice & Autonomy</p><ul className="text-text-muted space-y-0.5">{udl.engagement.choiceAndAutonomy.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-orange-400">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Relevance</p><ul className="text-text-muted space-y-0.5">{udl.engagement.relevanceAndAuthenticity.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-orange-400">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Self-Regulation</p><ul className="text-text-muted space-y-0.5">{udl.engagement.selfRegulation.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-orange-400">•</span>{item}</li>)}</ul></div>
             </div>
           </div>
-          <div className="bg-zinc-800 rounded-lg p-4 border border-sky-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-sky-500/20">
             <h6 className="text-sm font-semibold text-sky-400 mb-3 flex items-center gap-2">
               <span className="w-6 h-6 bg-sky-500/20 rounded-full flex items-center justify-center text-xs">2</span>
-              Multiple Means of Representation <span className="text-xs font-normal text-zinc-500">(The &quot;What&quot;)</span>
+              Multiple Means of Representation <span className="text-xs font-normal text-text-muted">(The &quot;What&quot;)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
-              <div><p className="font-medium text-zinc-300 mb-1">Multiple Formats</p><ul className="text-zinc-500 space-y-0.5">{udl.representation.multipleFormats.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-sky-400">•</span>{item}</li>)}</ul></div>
-              <div><p className="font-medium text-zinc-300 mb-1">Vocabulary Support</p><ul className="text-zinc-500 space-y-0.5">{udl.representation.vocabularySupport.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-sky-400">•</span>{item}</li>)}</ul></div>
-              <div><p className="font-medium text-zinc-300 mb-1">Background Knowledge</p><ul className="text-zinc-500 space-y-0.5">{udl.representation.backgroundKnowledge.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-sky-400">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Multiple Formats</p><ul className="text-text-muted space-y-0.5">{udl.representation.multipleFormats.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-sky-400">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Vocabulary Support</p><ul className="text-text-muted space-y-0.5">{udl.representation.vocabularySupport.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-sky-400">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Background Knowledge</p><ul className="text-text-muted space-y-0.5">{udl.representation.backgroundKnowledge.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-sky-400">•</span>{item}</li>)}</ul></div>
             </div>
           </div>
-          <div className="bg-zinc-800 rounded-lg p-4 border border-purple-500/20">
+          <div className="bg-canvas-raised rounded-lg p-4 border border-purple-500/20">
             <h6 className="text-sm font-semibold text-purple-300 mb-3 flex items-center gap-2">
               <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-xs">3</span>
-              Multiple Means of Action & Expression <span className="text-xs font-normal text-zinc-500">(The &quot;How&quot;)</span>
+              Multiple Means of Action & Expression <span className="text-xs font-normal text-text-muted">(The &quot;How&quot;)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
-              <div><p className="font-medium text-zinc-300 mb-1">Physical Options</p><ul className="text-zinc-500 space-y-0.5">{udl.actionExpression.physicalOptions.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-purple-300">•</span>{item}</li>)}</ul></div>
-              <div><p className="font-medium text-zinc-300 mb-1">Expression Options</p><ul className="text-zinc-500 space-y-0.5">{udl.actionExpression.expressionOptions.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-purple-300">•</span>{item}</li>)}</ul></div>
-              <div><p className="font-medium text-zinc-300 mb-1">Executive Function</p><ul className="text-zinc-500 space-y-0.5">{udl.actionExpression.executiveFunctionSupport.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-purple-300">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Physical Options</p><ul className="text-text-muted space-y-0.5">{udl.actionExpression.physicalOptions.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-purple-300">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Expression Options</p><ul className="text-text-muted space-y-0.5">{udl.actionExpression.expressionOptions.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-purple-300">•</span>{item}</li>)}</ul></div>
+              <div><p className="font-medium text-text-secondary mb-1">Executive Function</p><ul className="text-text-muted space-y-0.5">{udl.actionExpression.executiveFunctionSupport.map((item, i) => <li key={i} className="flex items-start gap-1"><span className="text-purple-300">•</span>{item}</li>)}</ul></div>
             </div>
           </div>
         </div>
@@ -160,19 +160,19 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
 const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity; index: number }) => {
   const [expanded, setExpanded] = React.useState(false);
   return (
-    <div className="border border-zinc-700 rounded-lg overflow-hidden">
-      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 bg-zinc-950 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors">
+    <div className="border border-canvas-border rounded-lg overflow-hidden">
+      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 bg-canvas-deep flex items-center justify-between text-left hover:bg-canvas-raised transition-colors">
         <div className="flex items-center gap-3">
           <span className="flex-shrink-0 w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold">{index + 1}</span>
-          <div><h6 className="font-semibold text-white">{activity.title}</h6><p className="text-xs text-zinc-500">{activity.duration}</p></div>
+          <div><h6 className="font-semibold text-white">{activity.title}</h6><p className="text-xs text-text-muted">{activity.duration}</p></div>
         </div>
         <svg className={`w-5 h-5 text-orange-400 transform transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {expanded && (
-        <div className="p-4 bg-zinc-800 space-y-4">
-          <div className="bg-zinc-950 rounded-lg p-3"><p className="text-sm text-zinc-300">{activity.overview}</p></div>
+        <div className="p-4 bg-canvas-raised space-y-4">
+          <div className="bg-canvas-deep rounded-lg p-3"><p className="text-sm text-text-secondary">{activity.overview}</p></div>
           {activity.videoResources && activity.videoResources.length > 0 && (
             <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
               <h6 className="text-sm font-semibold text-red-300 mb-2 flex items-center gap-2">
@@ -180,7 +180,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                 Video Resources
               </h6>
               <div className="space-y-2">{activity.videoResources.map((video, i) => (
-                <a key={i} href={video.url} target="_blank" rel="noopener noreferrer" className="block bg-zinc-800 rounded p-2 hover:bg-red-500/20 transition-colors border border-red-500/30">
+                <a key={i} href={video.url} target="_blank" rel="noopener noreferrer" className="block bg-canvas-raised rounded p-2 hover:bg-red-500/20 transition-colors border border-red-500/30">
                   <div className="flex items-start justify-between gap-2"><div><p className="text-sm font-medium text-red-300">{video.title}</p><p className="text-xs text-red-300">{video.description}</p></div><span className="flex-shrink-0 text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded">{video.duration}</span></div>
                 </a>
               ))}</div>
@@ -195,8 +195,8 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
               <div key={i} className="flex gap-3">
                 <div className="flex-shrink-0 w-6 h-6 bg-orange-500/20 text-orange-400 rounded-full flex items-center justify-center text-xs font-bold">{i + 1}</div>
                 <div className="flex-1">
-                  <p className="text-sm text-zinc-300">{step.instruction}</p>
-                  {step.duration && <span className="inline-block mt-1 text-xs text-zinc-500 bg-zinc-950 px-2 py-0.5 rounded">{step.duration}</span>}
+                  <p className="text-sm text-text-secondary">{step.instruction}</p>
+                  {step.duration && <span className="inline-block mt-1 text-xs text-text-muted bg-canvas-deep px-2 py-0.5 rounded">{step.duration}</span>}
                   {step.teacherNotes && <div className="mt-2 bg-amber-500/10 border-l-2 border-amber-400 pl-3 py-1"><p className="text-xs text-amber-300"><span className="font-semibold">Teacher Note:</span> {step.teacherNotes}</p></div>}
                 </div>
               </div>
@@ -224,13 +224,13 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: number; projectId: string }) => {
   const [expanded, setExpanded] = React.useState(false);
   return (
-    <div id={`${projectId}-lesson-${index + 1}`} className="bg-zinc-800 border border-zinc-700 rounded-lg overflow-hidden scroll-mt-24">
-      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-zinc-700 transition-colors">
+    <div id={`${projectId}-lesson-${index + 1}`} className="bg-canvas-raised border border-canvas-border rounded-lg overflow-hidden scroll-mt-24">
+      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-canvas-border transition-colors">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-zinc-950 text-white rounded-full flex items-center justify-center font-bold">{index + 1}</div>
+          <div className="w-10 h-10 bg-canvas-deep text-white rounded-full flex items-center justify-center font-bold">{index + 1}</div>
           <div>
             <h4 className="font-semibold text-white">{lesson.title}</h4>
-            <div className="flex items-center gap-3 text-sm text-zinc-500">
+            <div className="flex items-center gap-3 text-sm text-text-muted">
               <span>{lesson.duration}</span>
               <span className={`text-xs px-2 py-1 rounded font-medium ${lesson.gradeBand === '6-8' ? 'bg-orange-500/20 text-orange-300' : lesson.gradeBand === '9-12' ? 'bg-sky-500/20 text-sky-400' : 'bg-purple-500/20 text-purple-300'}`}>
                 {lesson.gradeBand === '6-8' ? 'Grades 6-8' : lesson.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
@@ -238,12 +238,12 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
             </div>
           </div>
         </div>
-        <svg className={`w-5 h-5 text-zinc-500 transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className={`w-5 h-5 text-text-muted transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {expanded && (
-        <div className="p-4 border-t border-zinc-700 space-y-4">
+        <div className="p-4 border-t border-canvas-border space-y-4">
           {lesson.conceptualUnderstanding && lesson.conceptualUnderstanding.length > 0 && (
             <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-lg p-4">
               <h5 className="text-sm font-semibold text-indigo-300 mb-2 flex items-center gap-2">
@@ -255,19 +255,19 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
             </div>
           )}
           {lesson.udl && <UDLSection udl={lesson.udl} />}
-          <div><h5 className="text-sm font-medium text-zinc-300 mb-1">Learning Objectives</h5><ul className="text-sm text-zinc-500 space-y-1">{lesson.objectives.map((obj, i) => <li key={i} className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span>{obj}</li>)}</ul></div>
+          <div><h5 className="text-sm font-medium text-text-secondary mb-1">Learning Objectives</h5><ul className="text-sm text-text-muted space-y-1">{lesson.objectives.map((obj, i) => <li key={i} className="flex items-start gap-2"><span className="text-green-500 mt-1">✓</span>{obj}</li>)}</ul></div>
           {lesson.detailedActivities && lesson.detailedActivities.length > 0 ? (
             <div>
-              <h5 className="text-sm font-medium text-zinc-300 mb-3 flex items-center gap-2">
+              <h5 className="text-sm font-medium text-text-secondary mb-3 flex items-center gap-2">
                 <svg className="w-4 h-4 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
                 Detailed Activities
               </h5>
               <div className="space-y-3">{lesson.detailedActivities.map((activity, i) => <DetailedActivityCard key={i} activity={activity} index={i} />)}</div>
             </div>
           ) : (
-            <div><h5 className="font-medium text-orange-300 mb-2">Activities</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{lesson.activities.map((activity, i) => <li key={i}>{activity}</li>)}</ul></div>
+            <div><h5 className="font-medium text-orange-300 mb-2">Activities</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{lesson.activities.map((activity, i) => <li key={i}>{activity}</li>)}</ul></div>
           )}
-          <div><h5 className="font-medium text-orange-300 mb-2">Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{lesson.materials.map((material, i) => <li key={i}>{material}</li>)}</ul></div>
+          <div><h5 className="font-medium text-orange-300 mb-2">Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{lesson.materials.map((material, i) => <li key={i}>{material}</li>)}</ul></div>
         </div>
       )}
     </div>
@@ -276,36 +276,36 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
 
 // Project Section Component
 const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; isExpanded: boolean; onToggle: () => void }) => (
-  <div id={project.id} className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden scroll-mt-24">
-    <button onClick={onToggle} className="w-full p-6 flex items-center justify-between text-left hover:bg-zinc-700 transition-colors">
+  <div id={project.id} className="bg-canvas-raised border border-canvas-border rounded-xl overflow-hidden scroll-mt-24">
+    <button onClick={onToggle} className="w-full p-6 flex items-center justify-between text-left hover:bg-canvas-border transition-colors">
       <div className="flex-1">
         <div className="flex items-center gap-3 mb-2">
           <h3 className="text-xl font-bold text-white">{project.title}</h3>
           <span className={`text-xs px-2 py-1 rounded-full ${project.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-300' : project.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-300' : 'bg-red-500/20 text-red-300'}`}>{project.difficulty}</span>
         </div>
-        <p className="text-zinc-400 text-sm">{project.description}</p>
-        <div className="flex items-center gap-4 mt-2 text-sm text-zinc-500">
+        <p className="text-text-secondary text-sm">{project.description}</p>
+        <div className="flex items-center gap-4 mt-2 text-sm text-text-muted">
           <span>{project.duration}</span>
           <span>Grades {project.gradeBand}</span>
           <span>{project.lessons.length} lessons</span>
         </div>
       </div>
-      <svg className={`w-6 h-6 text-zinc-500 transition-transform ml-4 ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className={`w-6 h-6 text-text-muted transition-transform ml-4 ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
     </button>
     {isExpanded && (
-      <div className="p-6 border-t border-zinc-700 space-y-6">
-        <div className="bg-zinc-950 rounded-lg p-4"><h4 className="font-semibold text-white mb-2">Project Overview</h4><p className="text-zinc-400 text-sm">{project.overview}</p></div>
-        <div><h4 className="font-semibold text-white mb-3">Learning Objectives</h4><ul className="grid md:grid-cols-2 gap-2">{project.learningObjectives.map((obj, i) => (<li key={i} className="flex items-start gap-2 text-sm text-zinc-400"><svg className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{obj}</li>))}</ul></div>
-        {project.prerequisites.length > 0 && <div><h4 className="font-semibold text-white mb-3">Prerequisites</h4><ul className="flex flex-wrap gap-2">{project.prerequisites.map((prereq, i) => <li key={i} className="text-xs px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full">{prereq}</li>)}</ul></div>}
+      <div className="p-6 border-t border-canvas-border space-y-6">
+        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-white mb-2">Project Overview</h4><p className="text-text-secondary text-sm">{project.overview}</p></div>
+        <div><h4 className="font-semibold text-white mb-3">Learning Objectives</h4><ul className="grid md:grid-cols-2 gap-2">{project.learningObjectives.map((obj, i) => (<li key={i} className="flex items-start gap-2 text-sm text-text-secondary"><svg className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{obj}</li>))}</ul></div>
+        {project.prerequisites.length > 0 && <div><h4 className="font-semibold text-white mb-3">Prerequisites</h4><ul className="flex flex-wrap gap-2">{project.prerequisites.map((prereq, i) => <li key={i} className="text-xs px-3 py-1 bg-canvas-border text-text-secondary rounded-full">{prereq}</li>)}</ul></div>}
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-zinc-950 rounded-lg p-4"><h5 className="font-medium text-orange-300 mb-2">Required Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.materials.required.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
-          <div className="bg-zinc-950 rounded-lg p-4"><h5 className="font-medium text-orange-300 mb-2">Optional Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.materials.optional.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
+          <div className="bg-canvas-deep rounded-lg p-4"><h5 className="font-medium text-orange-300 mb-2">Required Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.materials.required.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
+          <div className="bg-canvas-deep rounded-lg p-4"><h5 className="font-medium text-orange-300 mb-2">Optional Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.materials.optional.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
         </div>
         <div><h4 className="font-semibold text-white mb-3">Lessons</h4><div className="space-y-3">{project.lessons.map((lesson, i) => <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />)}</div></div>
-        <div className="bg-zinc-950 rounded-lg p-4"><h4 className="font-semibold text-white mb-3">Assessment</h4><div className="grid md:grid-cols-2 gap-4"><div><h5 className="font-medium text-orange-300 mb-2">Formative Assessment</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.assessment.formative.map((a, i) => <li key={i}>{a}</li>)}</ul></div><div><h5 className="font-medium text-orange-300 mb-2">Summative Assessment</h5><p className="text-sm text-zinc-400">{project.assessment.summative}</p></div></div></div>
-        <div><h4 className="font-semibold text-white mb-3">Real-World Connections</h4><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}</ul></div>
+        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-white mb-3">Assessment</h4><div className="grid md:grid-cols-2 gap-4"><div><h5 className="font-medium text-orange-300 mb-2">Formative Assessment</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.assessment.formative.map((a, i) => <li key={i}>{a}</li>)}</ul></div><div><h5 className="font-medium text-orange-300 mb-2">Summative Assessment</h5><p className="text-sm text-text-secondary">{project.assessment.summative}</p></div></div></div>
+        <div><h4 className="font-semibold text-white mb-3">Real-World Connections</h4><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}</ul></div>
       </div>
     )}
   </div>
@@ -1821,10 +1821,10 @@ export default function AILLMPage() {
   }, [projectParam]);
 
   return (
-    <main className="min-h-screen bg-zinc-900 pt-16">
-      <div className="bg-zinc-950 border-b border-zinc-700">
+    <main className="min-h-screen bg-canvas pt-16">
+      <div className="bg-canvas-deep border-b border-canvas-border">
         <div className="max-w-6xl mx-auto px-4 py-4">
-          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center text-sm text-zinc-500 hover:text-orange-400 transition-colors">
+          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center text-sm text-text-muted hover:text-orange-400 transition-colors">
             <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             Back to All Tracks
           </Link>
@@ -1849,13 +1849,13 @@ export default function AILLMPage() {
         <div className="space-y-6">{projects.map((project) => (<ProjectSection key={project.id} project={project} isExpanded={expandedProject === project.id} onToggle={() => setExpandedProject(expandedProject === project.id ? null : project.id)} />))}</div>
       </div>
 
-      <div className="bg-zinc-950 border-t border-zinc-700">
+      <div className="bg-canvas-deep border-t border-canvas-border">
         <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between">
-          <Link href={`/${locale}/tech-sovereignty/self-hosted`} className="text-zinc-500 hover:text-orange-400 transition-colors flex items-center gap-1">
+          <Link href={`/${locale}/tech-sovereignty/self-hosted`} className="text-text-muted hover:text-orange-400 transition-colors flex items-center gap-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             Previous: Self-Hosted
           </Link>
-          <Link href={`/${locale}/tech-sovereignty/app-dev`} className="text-zinc-500 hover:text-orange-400 transition-colors flex items-center gap-1">
+          <Link href={`/${locale}/tech-sovereignty/app-dev`} className="text-text-muted hover:text-orange-400 transition-colors flex items-center gap-1">
             Next: App Development
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </Link>

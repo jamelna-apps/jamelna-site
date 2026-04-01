@@ -93,7 +93,7 @@ export function ToolRecommendation({
   const colors = colorClasses[color];
 
   return (
-    <div className={`bg-zinc-800 border ${colors.border} ${colors.hoverBorder} rounded-lg px-4 py-3 transition-all`}>
+    <div className={`bg-canvas-raised border ${colors.border} ${colors.hoverBorder} rounded-lg px-4 py-3 transition-all`}>
       <div className="flex items-start justify-between gap-2">
         {/* Left: name + replaces */}
         <div className="min-w-0 flex-1">
@@ -106,7 +106,7 @@ export function ToolRecommendation({
             {name}
           </a>
           {replaces && (
-            <p className="text-sm text-zinc-500 mt-0.5 truncate">
+            <p className="text-sm text-text-muted mt-0.5 truncate">
               replaces {replaces}
             </p>
           )}
@@ -119,7 +119,7 @@ export function ToolRecommendation({
               FOSS
             </span>
           )}
-          <div className="flex items-center gap-1 text-zinc-500">
+          <div className="flex items-center gap-1 text-text-muted">
             {platforms.map((platform) => (
               <span key={platform} title={platform} className="flex items-center">
                 {platformIcons[platform.toLowerCase()] ?? (

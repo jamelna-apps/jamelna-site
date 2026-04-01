@@ -132,7 +132,7 @@ export function PlanExporter({
       {/* Export Options */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         {/* PDF Export */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 p-6 hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
+        <div className="bg-white dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 p-6 hover:border-ink dark:hover:border-blue-400 transition-colors">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-lg bg-red-100 dark:bg-red-900/30 flex items-center justify-center flex-shrink-0">
               <svg className="w-6 h-6 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -177,7 +177,7 @@ export function PlanExporter({
         </div>
 
         {/* Markdown Export */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 p-6 hover:border-blue-500 dark:hover:border-blue-400 transition-colors">
+        <div className="bg-white dark:bg-gray-900 rounded-lg border-2 border-gray-200 dark:border-gray-700 p-6 hover:border-ink dark:hover:border-blue-400 transition-colors">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center flex-shrink-0">
               <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -283,7 +283,7 @@ export function PlanExporter({
           {/* Quick Stats */}
           <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+              <div className="text-3xl font-bold text-blue-600 dark:text-ink">
                 {plan.scopeSequence?.length || 0}
               </div>
               <div className="text-sm text-gray-500 dark:text-gray-400">

@@ -24,11 +24,11 @@ interface Project {
 function SectionHeader({ title, description }: { title: string; description: string }) {
   return (
     <div className="mb-10">
-      <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
+      <h2 className="text-2xl md:text-3xl font-display font-bold text-text-heading mb-2">
         {title}
       </h2>
       <p className="text-text-secondary text-lg">{description}</p>
-      <div className="w-16 h-0.5 bg-orange-500 mt-4" />
+      <div className="w-16 h-0.5 bg-terra mt-4" />
     </div>
   );
 }
@@ -64,24 +64,24 @@ export default function WorkPage() {
   );
 
   return (
-    <main className="min-h-screen bg-zinc-900 pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-zinc-900 to-zinc-950"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-canvas to-canvas-deep"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent)' }} />
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-            <span className="text-blue-400">/</span> {t('title')}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
+            <span className="text-ink">/</span> {t('title')}
           </h1>
-          <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
             {t('description')}
           </p>
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-zinc-950">
+      <section className="py-12 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
 
           {/* Professional Experience */}
@@ -96,8 +96,8 @@ export default function WorkPage() {
                 return (
                   <div key={index} id={projectId} className="scroll-mt-20">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-1 h-12 bg-orange-500"></div>
-                      <h3 className="text-3xl font-display font-bold text-white">
+                      <div className="w-1 h-12 bg-terra"></div>
+                      <h3 className="text-3xl font-display font-bold text-text-heading">
                         {project.title}
                       </h3>
                     </div>
@@ -121,7 +121,7 @@ export default function WorkPage() {
                   <div key={index} id={projectId} className="scroll-mt-20">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-1 h-12 bg-primary"></div>
-                      <h3 className="text-3xl font-display font-bold text-white">
+                      <h3 className="text-3xl font-display font-bold text-text-heading">
                         {project.title}
                       </h3>
                     </div>

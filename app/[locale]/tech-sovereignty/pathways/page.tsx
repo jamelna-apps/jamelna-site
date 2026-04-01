@@ -41,7 +41,7 @@ export default function PathwaysPage() {
   }, [pathways]);
 
   return (
-    <main className="min-h-screen bg-zinc-900 pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-zinc-900 to-zinc-950"></div>
@@ -51,7 +51,7 @@ export default function PathwaysPage() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center gap-2 text-zinc-400 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-text-secondary hover:text-white mb-6 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -62,14 +62,14 @@ export default function PathwaysPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
             Learning Pathways
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-zinc-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
             Goal-oriented paths to tech independence. Choose what you want to achieve and follow a structured journey to get there.
           </p>
         </div>
       </section>
 
       {/* Pathways Grid */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pathways.map((pathway) => (
@@ -93,7 +93,7 @@ export default function PathwaysPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-16 px-4 bg-canvas">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
             How Pathways Work
@@ -105,7 +105,7 @@ export default function PathwaysPage() {
                 <span className="text-xl font-bold text-sky-400">1</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Choose Your Goal</h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-text-secondary text-sm">
                 Select a pathway based on what you want to achieve. Each has a clear outcome.
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function PathwaysPage() {
                 <span className="text-xl font-bold text-violet-400">2</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Follow the Steps</h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-text-secondary text-sm">
                 Work through lessons and projects at your own pace. Each step builds on the last.
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function PathwaysPage() {
                 <span className="text-xl font-bold text-green-400">3</span>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Mark Your Progress</h3>
-              <p className="text-zinc-400 text-sm">
+              <p className="text-text-secondary text-sm">
                 Complete checkpoints to verify you&apos;ve actually done the work. Your progress is saved locally.
               </p>
             </div>
@@ -134,12 +134,12 @@ export default function PathwaysPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Prefer Structured Curriculum?
           </h2>
-          <p className="text-zinc-400 mb-8">
+          <p className="text-text-secondary mb-8">
             If you&apos;re an educator or prefer to browse by topic, check out our full curriculum with lesson plans and assessments.
           </p>
           <Link

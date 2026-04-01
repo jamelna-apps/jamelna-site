@@ -96,7 +96,7 @@ export function ScopeSequenceTable({ entries, editable = false, onUpdate }: Scop
                                 onUpdate(newEntries);
                               }
                             }}
-                            className="flex-1 bg-transparent border-b border-transparent hover:border-gray-300 focus:border-blue-500 focus:outline-none"
+                            className="flex-1 bg-transparent border-b border-transparent hover:border-gray-300 focus:border-ink focus:outline-none"
                           />
                         ) : (
                           <span>{comp}</span>

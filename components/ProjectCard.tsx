@@ -78,7 +78,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-video rounded-lg overflow-hidden border border-deep-border hover:border-primary/50 transition-colors group cursor-pointer"
+                className="relative aspect-video rounded-lg overflow-hidden border border-canvas-border hover:border-terra/50 transition-colors group cursor-pointer"
               >
                 <Image
                   src={image}
@@ -116,7 +116,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* The Impact */}
-      <div className="mb-6 bg-deep-card border border-deep-border rounded-lg p-6">
+      <div className="mb-6 bg-canvas-raised border border-canvas-border rounded-lg p-6">
         <h4 className="text-lg font-bold text-text-heading mb-3">
           {t('impact')}
         </h4>

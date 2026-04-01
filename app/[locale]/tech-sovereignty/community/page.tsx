@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation';
 
 // Core Pedagogical Principle Component
 const CorePrinciple = () => (
-  <div className="bg-zinc-800 border border-rose-500/30 rounded-xl p-6 mb-8">
+  <div className="bg-canvas-raised border border-rose-500/30 rounded-xl p-6 mb-8">
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0 w-12 h-12 bg-rose-500/20 rounded-xl flex items-center justify-center">
         <svg className="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -16,23 +16,23 @@ const CorePrinciple = () => (
       </div>
       <div>
         <h3 className="text-lg font-bold text-white mb-2">Core Pedagogical Principle: Technology Serves Community</h3>
-        <p className="text-zinc-300 mb-3">
+        <p className="text-text-secondary mb-3">
           Technology is only meaningful when it <strong className="text-white">strengthens communities</strong>. Students learn to assess community needs,
           build <strong className="text-white">inclusive tech programs</strong>, create <strong className="text-white">support networks</strong>, and develop
           governance models that ensure technology serves everyone—not just the technically savvy.
         </p>
         <div className="grid md:grid-cols-3 gap-4 mt-4">
-          <div className="bg-zinc-950 rounded-lg p-4 border border-zinc-700">
+          <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
             <h4 className="font-semibold text-rose-300 mb-1">Assess Needs</h4>
-            <p className="text-sm text-zinc-500">Understand what your community actually needs—not what tech companies want to sell.</p>
+            <p className="text-sm text-text-muted">Understand what your community actually needs—not what tech companies want to sell.</p>
           </div>
-          <div className="bg-zinc-950 rounded-lg p-4 border border-zinc-700">
+          <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
             <h4 className="font-semibold text-rose-300 mb-1">Include Everyone</h4>
-            <p className="text-sm text-zinc-500">Build programs that reach all community members regardless of age, ability, or background.</p>
+            <p className="text-sm text-text-muted">Build programs that reach all community members regardless of age, ability, or background.</p>
           </div>
-          <div className="bg-zinc-950 rounded-lg p-4 border border-zinc-700">
+          <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
             <h4 className="font-semibold text-rose-300 mb-1">Sustain Together</h4>
-            <p className="text-sm text-zinc-500">Create governance structures that keep technology accountable to community needs.</p>
+            <p className="text-sm text-text-muted">Create governance structures that keep technology accountable to community needs.</p>
           </div>
         </div>
       </div>
@@ -106,23 +106,23 @@ interface Project {
 const UDLSection = ({ udl }: { udl: UDLFramework }) => {
   const [expanded, setExpanded] = React.useState(false);
   return (
-    <div className="bg-zinc-950 border border-rose-500/30 rounded-lg overflow-hidden">
-      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors">
+    <div className="bg-canvas-deep border border-rose-500/30 rounded-lg overflow-hidden">
+      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-canvas-raised transition-colors">
         <div className="flex items-center gap-2">
           <svg className="w-5 h-5 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
           <span className="font-semibold text-rose-300">Universal Design for Learning (UDL) Supports</span>
         </div>
-        <svg className={`w-5 h-5 text-zinc-500 transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className={`w-5 h-5 text-text-muted transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {expanded && (
-        <div className="p-4 border-t border-zinc-700 grid md:grid-cols-3 gap-4">
-          <div><h5 className="font-medium text-rose-300 mb-2">Engagement</h5><ul className="list-disc list-inside text-sm text-zinc-400">{udl.engagement.choiceAndAutonomy.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
-          <div><h5 className="font-medium text-rose-300 mb-2">Representation</h5><ul className="list-disc list-inside text-sm text-zinc-400">{udl.representation.multipleFormats.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
-          <div><h5 className="font-medium text-rose-300 mb-2">Action & Expression</h5><ul className="list-disc list-inside text-sm text-zinc-400">{udl.actionExpression.expressionOptions.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
+        <div className="p-4 border-t border-canvas-border grid md:grid-cols-3 gap-4">
+          <div><h5 className="font-medium text-rose-300 mb-2">Engagement</h5><ul className="list-disc list-inside text-sm text-text-secondary">{udl.engagement.choiceAndAutonomy.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
+          <div><h5 className="font-medium text-rose-300 mb-2">Representation</h5><ul className="list-disc list-inside text-sm text-text-secondary">{udl.representation.multipleFormats.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
+          <div><h5 className="font-medium text-rose-300 mb-2">Action & Expression</h5><ul className="list-disc list-inside text-sm text-text-secondary">{udl.actionExpression.expressionOptions.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
         </div>
       )}
     </div>
@@ -133,30 +133,30 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
 const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity; index: number }) => {
   const [expanded, setExpanded] = React.useState(false);
   return (
-    <div className="bg-zinc-950 border border-zinc-700 rounded-lg overflow-hidden">
-      <button onClick={() => setExpanded(!expanded)} className="w-full p-3 flex items-center justify-between text-left hover:bg-zinc-800 transition-colors">
+    <div className="bg-canvas-deep border border-canvas-border rounded-lg overflow-hidden">
+      <button onClick={() => setExpanded(!expanded)} className="w-full p-3 flex items-center justify-between text-left hover:bg-canvas-raised transition-colors">
         <div className="flex items-center gap-3">
           <div className="w-6 h-6 bg-rose-500/20 rounded-full flex items-center justify-center text-rose-400 text-xs font-bold">{index + 1}</div>
           <div>
             <h6 className="text-sm font-medium text-white">{activity.title}</h6>
-            <span className="text-xs text-zinc-500">{activity.duration}</span>
+            <span className="text-xs text-text-muted">{activity.duration}</span>
           </div>
         </div>
-        <svg className={`w-4 h-4 text-zinc-500 transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className={`w-4 h-4 text-text-muted transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {expanded && (
-        <div className="p-3 border-t border-zinc-700 space-y-3">
-          <p className="text-xs text-zinc-400 italic">{activity.overview}</p>
+        <div className="p-3 border-t border-canvas-border space-y-3">
+          <p className="text-xs text-text-secondary italic">{activity.overview}</p>
           {activity.videoResources && activity.videoResources.length > 0 && (
             <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
               <h6 className="text-xs font-semibold text-red-300 mb-2">Video Resources</h6>
               <div className="space-y-2">
                 {activity.videoResources.map((video, i) => (
-                  <a key={i} href={video.url} target="_blank" rel="noopener noreferrer" className="block bg-zinc-900 rounded p-2 hover:bg-zinc-800 transition-colors">
-                    <div className="flex items-center justify-between"><span className="text-xs text-red-300 font-medium">{video.title}</span><span className="text-xs text-zinc-500">{video.duration}</span></div>
-                    <p className="text-xs text-zinc-500 mt-1">{video.description}</p>
+                  <a key={i} href={video.url} target="_blank" rel="noopener noreferrer" className="block bg-canvas rounded p-2 hover:bg-canvas-raised transition-colors">
+                    <div className="flex items-center justify-between"><span className="text-xs text-red-300 font-medium">{video.title}</span><span className="text-xs text-text-muted">{video.duration}</span></div>
+                    <p className="text-xs text-text-muted mt-1">{video.description}</p>
                   </a>
                 ))}
               </div>
@@ -165,12 +165,12 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           <div className="space-y-2">
             <h6 className="text-xs font-semibold text-rose-300">Step-by-Step Instructions</h6>
             {activity.steps.map((step, i) => (
-              <div key={i} className="bg-zinc-900 rounded p-2">
+              <div key={i} className="bg-canvas rounded p-2">
                 <div className="flex items-start gap-2">
                   <span className="text-xs text-rose-400 font-bold">{i + 1}.</span>
                   <div className="flex-1">
-                    <p className="text-xs text-zinc-300">{step.instruction}</p>
-                    {step.duration && <span className="text-xs text-zinc-500">({step.duration})</span>}
+                    <p className="text-xs text-text-secondary">{step.instruction}</p>
+                    {step.duration && <span className="text-xs text-text-muted">({step.duration})</span>}
                     {step.teacherNotes && <p className="text-xs text-rose-400 mt-1 italic">💡 {step.teacherNotes}</p>}
                   </div>
                 </div>
@@ -205,26 +205,26 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: number; projectId: string }) => {
   const [expanded, setExpanded] = React.useState(false);
   return (
-    <div id={`${projectId}-lesson-${index + 1}`} className="bg-zinc-800 border border-zinc-700 rounded-lg overflow-hidden scroll-mt-24">
-      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-zinc-700 transition-colors">
+    <div id={`${projectId}-lesson-${index + 1}`} className="bg-canvas-raised border border-canvas-border rounded-lg overflow-hidden scroll-mt-24">
+      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center justify-between text-left hover:bg-canvas-border transition-colors">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-rose-500/20 rounded-lg flex items-center justify-center text-rose-400 font-bold text-sm">{index + 1}</div>
           <div>
             <h4 className="font-semibold text-white">{lesson.title}</h4>
-            <div className="flex items-center gap-3 text-sm text-zinc-500">
+            <div className="flex items-center gap-3 text-sm text-text-muted">
               <span>{lesson.duration}</span>
-              <span className="text-xs px-2 py-0.5 bg-zinc-700 rounded">Grades {lesson.gradeBand}</span>
+              <span className="text-xs px-2 py-0.5 bg-canvas-border rounded">Grades {lesson.gradeBand}</span>
             </div>
           </div>
         </div>
-        <svg className={`w-5 h-5 text-zinc-500 transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className={`w-5 h-5 text-text-muted transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {expanded && (
-        <div className="p-4 border-t border-zinc-700 space-y-4">
-          <div><h5 className="font-medium text-rose-300 mb-2">Learning Objectives</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{lesson.objectives.map((obj, i) => <li key={i}>{obj}</li>)}</ul></div>
-          <div><h5 className="font-medium text-rose-300 mb-2">Conceptual Understanding</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{lesson.conceptualUnderstanding.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
+        <div className="p-4 border-t border-canvas-border space-y-4">
+          <div><h5 className="font-medium text-rose-300 mb-2">Learning Objectives</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{lesson.objectives.map((obj, i) => <li key={i}>{obj}</li>)}</ul></div>
+          <div><h5 className="font-medium text-rose-300 mb-2">Conceptual Understanding</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{lesson.conceptualUnderstanding.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
           {lesson.detailedActivities && lesson.detailedActivities.length > 0 ? (
             <div>
               <h5 className="font-medium text-rose-300 mb-3 flex items-center gap-2">
@@ -234,9 +234,9 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
               <div className="space-y-3">{lesson.detailedActivities.map((activity, i) => <DetailedActivityCard key={i} activity={activity} index={i} />)}</div>
             </div>
           ) : (
-            <div><h5 className="font-medium text-rose-300 mb-2">Activities</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{lesson.activities.map((activity, i) => <li key={i}>{activity}</li>)}</ul></div>
+            <div><h5 className="font-medium text-rose-300 mb-2">Activities</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{lesson.activities.map((activity, i) => <li key={i}>{activity}</li>)}</ul></div>
           )}
-          <div><h5 className="font-medium text-rose-300 mb-2">Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{lesson.materials.map((material, i) => <li key={i}>{material}</li>)}</ul></div>
+          <div><h5 className="font-medium text-rose-300 mb-2">Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{lesson.materials.map((material, i) => <li key={i}>{material}</li>)}</ul></div>
           {lesson.udl && <UDLSection udl={lesson.udl} />}
         </div>
       )}
@@ -246,36 +246,36 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
 
 // Project Section Component
 const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; isExpanded: boolean; onToggle: () => void }) => (
-  <div id={project.id} className="bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden scroll-mt-24">
-    <button onClick={onToggle} className="w-full p-6 flex items-center justify-between text-left hover:bg-zinc-700 transition-colors">
+  <div id={project.id} className="bg-canvas-raised border border-canvas-border rounded-xl overflow-hidden scroll-mt-24">
+    <button onClick={onToggle} className="w-full p-6 flex items-center justify-between text-left hover:bg-canvas-border transition-colors">
       <div className="flex-1">
         <div className="flex items-center gap-3 mb-2">
           <h3 className="text-xl font-bold text-white">{project.title}</h3>
           <span className={`text-xs px-2 py-1 rounded-full ${project.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-300' : project.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-300' : 'bg-red-500/20 text-red-300'}`}>{project.difficulty}</span>
         </div>
-        <p className="text-zinc-400 text-sm">{project.description}</p>
-        <div className="flex items-center gap-4 mt-2 text-sm text-zinc-500">
+        <p className="text-text-secondary text-sm">{project.description}</p>
+        <div className="flex items-center gap-4 mt-2 text-sm text-text-muted">
           <span>{project.duration}</span>
           <span>Grades {project.gradeBand}</span>
           <span>{project.lessons.length} lessons</span>
         </div>
       </div>
-      <svg className={`w-6 h-6 text-zinc-500 transition-transform ml-4 ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className={`w-6 h-6 text-text-muted transition-transform ml-4 ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
     </button>
     {isExpanded && (
-      <div className="p-6 border-t border-zinc-700 space-y-6">
-        <div className="bg-zinc-950 rounded-lg p-4"><h4 className="font-semibold text-white mb-2">Project Overview</h4><p className="text-zinc-400 text-sm">{project.overview}</p></div>
-        <div><h4 className="font-semibold text-white mb-3">Learning Objectives</h4><ul className="grid md:grid-cols-2 gap-2">{project.learningObjectives.map((obj, i) => (<li key={i} className="flex items-start gap-2 text-sm text-zinc-400"><svg className="w-4 h-4 text-rose-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{obj}</li>))}</ul></div>
-        {project.prerequisites.length > 0 && <div><h4 className="font-semibold text-white mb-3">Prerequisites</h4><ul className="flex flex-wrap gap-2">{project.prerequisites.map((prereq, i) => <li key={i} className="text-xs px-3 py-1 bg-zinc-700 text-zinc-300 rounded-full">{prereq}</li>)}</ul></div>}
+      <div className="p-6 border-t border-canvas-border space-y-6">
+        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-white mb-2">Project Overview</h4><p className="text-text-secondary text-sm">{project.overview}</p></div>
+        <div><h4 className="font-semibold text-white mb-3">Learning Objectives</h4><ul className="grid md:grid-cols-2 gap-2">{project.learningObjectives.map((obj, i) => (<li key={i} className="flex items-start gap-2 text-sm text-text-secondary"><svg className="w-4 h-4 text-rose-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{obj}</li>))}</ul></div>
+        {project.prerequisites.length > 0 && <div><h4 className="font-semibold text-white mb-3">Prerequisites</h4><ul className="flex flex-wrap gap-2">{project.prerequisites.map((prereq, i) => <li key={i} className="text-xs px-3 py-1 bg-canvas-border text-text-secondary rounded-full">{prereq}</li>)}</ul></div>}
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-zinc-950 rounded-lg p-4"><h5 className="font-medium text-rose-300 mb-2">Required Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.materials.required.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
-          <div className="bg-zinc-950 rounded-lg p-4"><h5 className="font-medium text-rose-300 mb-2">Optional Materials</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.materials.optional.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
+          <div className="bg-canvas-deep rounded-lg p-4"><h5 className="font-medium text-rose-300 mb-2">Required Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.materials.required.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
+          <div className="bg-canvas-deep rounded-lg p-4"><h5 className="font-medium text-rose-300 mb-2">Optional Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.materials.optional.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
         </div>
         <div><h4 className="font-semibold text-white mb-3">Lessons</h4><div className="space-y-3">{project.lessons.map((lesson, i) => <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />)}</div></div>
-        <div className="bg-zinc-950 rounded-lg p-4"><h4 className="font-semibold text-white mb-3">Assessment</h4><div className="grid md:grid-cols-2 gap-4"><div><h5 className="font-medium text-rose-300 mb-2">Formative Assessment</h5><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.assessment.formative.map((a, i) => <li key={i}>{a}</li>)}</ul></div><div><h5 className="font-medium text-rose-300 mb-2">Summative Assessment</h5><p className="text-sm text-zinc-400">{project.assessment.summative}</p></div></div></div>
-        <div><h4 className="font-semibold text-white mb-3">Real-World Connections</h4><ul className="list-disc list-inside text-sm text-zinc-400 space-y-1">{project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}</ul></div>
+        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-white mb-3">Assessment</h4><div className="grid md:grid-cols-2 gap-4"><div><h5 className="font-medium text-rose-300 mb-2">Formative Assessment</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.assessment.formative.map((a, i) => <li key={i}>{a}</li>)}</ul></div><div><h5 className="font-medium text-rose-300 mb-2">Summative Assessment</h5><p className="text-sm text-text-secondary">{project.assessment.summative}</p></div></div></div>
+        <div><h4 className="font-semibold text-white mb-3">Real-World Connections</h4><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}</ul></div>
       </div>
     )}
   </div>
@@ -1424,10 +1424,10 @@ export default function CommunityBuildingPage() {
   }, [projectParam]);
 
   return (
-    <main className="min-h-screen bg-zinc-900 pt-16">
-      <div className="bg-zinc-950 border-b border-zinc-700">
+    <main className="min-h-screen bg-canvas pt-16">
+      <div className="bg-canvas-deep border-b border-canvas-border">
         <div className="max-w-6xl mx-auto px-4 py-4">
-          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center text-sm text-zinc-500 hover:text-rose-400 transition-colors">
+          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center text-sm text-text-muted hover:text-rose-400 transition-colors">
             <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             Back to All Tracks
           </Link>
@@ -1452,13 +1452,13 @@ export default function CommunityBuildingPage() {
         <div className="space-y-6">{projects.map((project) => (<ProjectSection key={project.id} project={project} isExpanded={expandedProject === project.id} onToggle={() => setExpandedProject(expandedProject === project.id ? null : project.id)} />))}</div>
       </div>
 
-      <div className="bg-zinc-950 border-t border-zinc-700">
+      <div className="bg-canvas-deep border-t border-canvas-border">
         <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between">
-          <Link href={`/${locale}/tech-sovereignty/digital-rights`} className="text-zinc-500 hover:text-rose-400 transition-colors flex items-center gap-1">
+          <Link href={`/${locale}/tech-sovereignty/digital-rights`} className="text-text-muted hover:text-rose-400 transition-colors flex items-center gap-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             Previous: Digital Rights
           </Link>
-          <Link href={`/${locale}/tech-sovereignty`} className="text-zinc-500 hover:text-rose-400 transition-colors flex items-center gap-1">
+          <Link href={`/${locale}/tech-sovereignty`} className="text-text-muted hover:text-rose-400 transition-colors flex items-center gap-1">
             All Tracks
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </Link>

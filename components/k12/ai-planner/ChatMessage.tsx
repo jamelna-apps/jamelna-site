@@ -50,7 +50,7 @@ function ChatMessageComponent({ message, isStreaming = false }: ChatMessageProps
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`underline ${isUser ? 'text-blue-200 hover:text-white' : 'text-blue-600 dark:text-blue-400 hover:underline'}`}
+                    className={`underline ${isUser ? 'text-blue-200 hover:text-white' : 'text-blue-600 dark:text-ink hover:underline'}`}
                   >
                     {children}
                   </a>
