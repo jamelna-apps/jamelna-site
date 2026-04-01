@@ -87,10 +87,10 @@ export function QuickWinCard({ quickWin, color, icon }: QuickWinCardProps) {
           <h3 className="font-semibold text-white text-lg mb-1 group-hover:text-violet-300 transition-colors">
             {quickWin.title}
           </h3>
-          <p className="text-zinc-400 text-sm mb-3 line-clamp-2">
+          <p className="text-zinc-400 text-base mb-3 line-clamp-2">
             {quickWin.description}
           </p>
-          <div className="flex items-center gap-2 text-xs">
+          <div className="flex items-center gap-2 text-sm">
             <svg className={`w-4 h-4 ${colors.text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>

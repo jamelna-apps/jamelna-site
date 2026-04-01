@@ -97,14 +97,14 @@ export function PathwayCard({
           <h3 className="text-lg font-bold text-white mb-1 group-hover:text-white/90">
             {title}
           </h3>
-          <p className="text-zinc-400 text-sm line-clamp-2">{description}</p>
+          <p className="text-zinc-400 text-base line-clamp-2">{description}</p>
         </div>
       </div>
 
       {/* Outcome */}
       <div className="bg-zinc-900/50 rounded-lg p-3 mb-4">
         <p className="text-xs text-zinc-500 mb-1">What you&apos;ll achieve:</p>
-        <p className="text-sm text-zinc-300">{outcome}</p>
+        <p className="text-base text-zinc-300">{outcome}</p>
       </div>
 
       {/* Meta */}

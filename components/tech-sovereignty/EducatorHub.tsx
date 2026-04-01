@@ -212,7 +212,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
             </svg>
             <span className="font-medium text-white text-sm">Scope & Sequence</span>
           </div>
-          <p className="text-xs text-zinc-500">Full curriculum overview PDF</p>
+          <p className="text-sm text-zinc-500">Full curriculum overview PDF</p>
         </button>
         <button className="bg-zinc-800 border border-zinc-700 hover:border-zinc-600 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
@@ -221,7 +221,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
             </svg>
             <span className="font-medium text-white text-sm">Assessment Rubrics</span>
           </div>
-          <p className="text-xs text-zinc-500">Standards-aligned rubrics</p>
+          <p className="text-sm text-zinc-500">Standards-aligned rubrics</p>
         </button>
         <button className="bg-zinc-800 border border-zinc-700 hover:border-zinc-600 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
@@ -230,7 +230,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
             </svg>
             <span className="font-medium text-white text-sm">Materials List</span>
           </div>
-          <p className="text-xs text-zinc-500">Hardware & software needs</p>
+          <p className="text-sm text-zinc-500">Hardware & software needs</p>
         </button>
       </div>
     </div>

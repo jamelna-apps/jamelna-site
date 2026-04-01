@@ -37,7 +37,7 @@ function ProjectCard({ project }: { project: Project }) {
           {isAvailable ? 'Available' : 'Coming Soon'}
         </span>
       </div>
-      <p className="text-zinc-300 text-sm mb-3 line-clamp-2">{project.description}</p>
+      <p className="text-zinc-300 text-base mb-3 line-clamp-2">{project.description}</p>
       <div className="flex gap-4 text-xs text-zinc-500">
         <span className="flex items-center gap-1">
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,8 +98,8 @@ function ToolCard({ tool }: { tool: Tool }) {
       rel="noopener noreferrer"
       className="block bg-zinc-800 border border-zinc-700 rounded-lg p-4 hover:border-violet-500/50 hover:shadow-sm hover:shadow-violet-500/10 transition-all"
     >
-      <h4 className="font-semibold text-white text-sm mb-1">{tool.name}</h4>
-      <p className="text-zinc-300 text-xs">{tool.description}</p>
+      <h4 className="font-semibold text-white text-base mb-1">{tool.name}</h4>
+      <p className="text-zinc-300 text-sm">{tool.description}</p>
     </a>
   );
 }
@@ -327,7 +327,7 @@ export default function TechSovereigntyPage() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{t('why.problem.title')}</h3>
-              <p className="text-zinc-300 text-sm">{t('why.problem.description')}</p>
+              <p className="text-zinc-300 text-base">{t('why.problem.description')}</p>
             </div>
 
             {/* Vision */}
@@ -339,7 +339,7 @@ export default function TechSovereigntyPage() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{t('why.vision.title')}</h3>
-              <p className="text-zinc-300 text-sm">{t('why.vision.description')}</p>
+              <p className="text-zinc-300 text-base">{t('why.vision.description')}</p>
             </div>
 
             {/* Benefit */}
@@ -350,7 +350,7 @@ export default function TechSovereigntyPage() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{t('why.benefit.title')}</h3>
-              <p className="text-zinc-300 text-sm">{t('why.benefit.description')}</p>
+              <p className="text-zinc-300 text-base">{t('why.benefit.description')}</p>
             </div>
           </div>
         </div>

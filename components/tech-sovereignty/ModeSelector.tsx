@@ -30,7 +30,7 @@ export function ModeSelector({ onSelect }: ModeSelectorProps) {
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-violet-300 transition-colors">
             I&apos;m Teaching
           </h3>
-          <p className="text-zinc-400 text-sm mb-4">
+          <p className="text-zinc-400 text-base mb-4">
             Structured curriculum with lesson plans, assessments, and UDL supports for your classroom
           </p>
           <div className="flex flex-wrap gap-2">
@@ -54,7 +54,7 @@ export function ModeSelector({ onSelect }: ModeSelectorProps) {
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">
             I&apos;m Learning
           </h3>
-          <p className="text-zinc-400 text-sm mb-4">
+          <p className="text-zinc-400 text-base mb-4">
             Goal-based paths with hands-on projects. &quot;I want to...&quot; approach with quick wins and checkpoints
           </p>
           <div className="flex flex-wrap gap-2">
