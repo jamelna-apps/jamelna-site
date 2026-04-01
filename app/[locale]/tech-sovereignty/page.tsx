@@ -356,6 +356,38 @@ export default function TechSovereigntyPage() {
         </div>
       </section>
 
+      {/* Digital Resilience Toolkit Banner */}
+      <section className="py-12 px-4 bg-zinc-900 border-t border-zinc-800">
+        <div className="max-w-5xl mx-auto">
+          <Link
+            href={`/${locale}/tech-sovereignty/resilience`}
+            className="block bg-zinc-800 border-2 border-red-500/30 hover:border-red-500/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-red-500/10 group"
+          >
+            <div className="flex items-start gap-6">
+              <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/30 transition-colors">
+                <svg className="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-300 transition-colors">
+                  Digital Resilience Toolkit
+                </h3>
+                <p className="text-zinc-300 text-sm mb-3">
+                  Practical tools and step-by-step guides to protect yourself, your community, and your data. From 5-minute fixes to community-scale infrastructure.
+                </p>
+                <span className="text-sm text-red-400 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Open Toolkit
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Mode Selector - Start Here */}
       <section id="start" className="py-16 px-4 bg-zinc-900 border-t border-zinc-800">
         <div className="max-w-5xl mx-auto">

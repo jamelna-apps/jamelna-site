@@ -884,6 +884,678 @@
         "description": "我们正在建立一个致力于技术主权的社区网络。联系我们成为创始群体的一员。",
         "button": "联系我们"
       }
+    },
+    "resilience": {
+      "hero": {
+        "title": "Digital Resilience Toolkit",
+        "subtitle": "Practical tools to protect yourself, your community, and your data.",
+        "description": "When governments threaten civil liberties, technology becomes both weapon and shield. This toolkit gives you concrete steps—from 5-minute fixes to community-scale infrastructure—to build communication systems that can't be silenced and preserve information that can't be erased."
+      },
+      "showAllTiers": "Show All",
+      "clearFilter": "Clear filter",
+      "backToSovereignty": "← Tech Sovereignty",
+      "tiers": {
+        "1": {
+          "title": "Protect Yourself Now",
+          "subtitle": "30 minutes to significantly safer",
+          "audience": "For everyone — no technical background needed"
+        },
+        "2": {
+          "title": "Build Secure Systems",
+          "subtitle": "Hours to days of setup",
+          "audience": "For groups and organizers with some technical comfort"
+        },
+        "3": {
+          "title": "Create Resilient Networks",
+          "subtitle": "Days to weeks of sustained work",
+          "audience": "For technical builders and system administrators"
+        }
+      },
+      "contexts": {
+        "concerned": {
+          "title": "Concerned About Privacy",
+          "description": "You want to reduce your digital footprint and protect personal data"
+        },
+        "active": {
+          "title": "Facing Active Threats",
+          "description": "You or your community face surveillance, harassment, or targeted attacks"
+        },
+        "immediate": {
+          "title": "At Immediate Risk",
+          "description": "You need to secure communications and protect evidence right now"
+        }
+      },
+      "pillars": {
+        "secureCommunication": {
+          "title": "Secure Communication",
+          "description": "Encrypted messaging, anonymous browsing, and censorship-resistant channels. Talk freely without being monitored.",
+          "priority": "Install Signal and enable disappearing messages. It takes 5 minutes and protects every conversation from that point forward.",
+          "actions": {
+            "signal-setup": {
+              "title": "Install Signal",
+              "description": "End-to-end encrypted messaging that even Signal's own servers can't read. Replaces SMS, iMessage, and WhatsApp for sensitive conversations.",
+              "protects": "Protects message content from interception and server-side surveillance",
+              "steps": {
+                "0": "Download Signal from your app store (iOS or Android) or signal.org for desktop",
+                "1": "Register with your phone number — this is required but Signal doesn't store your contacts",
+                "2": "Go to Settings → Privacy → Disappearing Messages and set a default timer (1 week recommended)",
+                "3": "Invite your key contacts to install Signal — it only works when both sides use it",
+                "4": "Verify safety numbers with critical contacts by scanning QR codes in person"
+              }
+            },
+            "protonmail-setup": {
+              "title": "Switch to Encrypted Email",
+              "description": "ProtonMail encrypts your email at rest and in transit. Based in Switzerland with strong privacy laws.",
+              "protects": "Protects email content from provider access and government data requests",
+              "steps": {
+                "0": "Go to proton.me and create a free account",
+                "1": "Set up two-factor authentication immediately in Settings → Security",
+                "2": "Install the Proton Mail app on your phone",
+                "3": "Begin forwarding important accounts to your new address",
+                "4": "For maximum security, email other Proton users — that enables full end-to-end encryption"
+              }
+            },
+            "disappearing-messages": {
+              "title": "Enable Auto-Delete Everywhere",
+              "description": "Configure all messaging apps to automatically delete messages after a set period.",
+              "protects": "Reduces exposure if a device is seized or compromised",
+              "steps": {
+                "0": "Signal: Settings → Privacy → Disappearing Messages → set timer",
+                "1": "WhatsApp: Settings → Privacy → Default Message Timer",
+                "2": "Telegram: Use Secret Chats only (regular chats are NOT end-to-end encrypted)",
+                "3": "Review and delete old message history in all apps"
+              }
+            },
+            "matrix-server": {
+              "title": "Set Up Encrypted Group Chat",
+              "description": "Deploy a Matrix server with Element for self-hosted, encrypted group communication that you fully control.",
+              "protects": "Gives your group a communication platform that no company or government can shut down",
+              "steps": {
+                "0": "Choose a server: VPS (recommended) or Raspberry Pi for local-only",
+                "1": "Install Matrix Synapse following the official quickstart guide",
+                "2": "Configure SSL/TLS with Let's Encrypt for encrypted connections",
+                "3": "Create user accounts for your group — avoid using real names as usernames",
+                "4": "Install Element app on all member devices and connect to your server",
+                "5": "Enable end-to-end encryption in room settings for all rooms",
+                "6": "Set up key backup so members don't lose message history on new devices"
+              }
+            },
+            "tor-browser": {
+              "title": "Browse Anonymously with Tor",
+              "description": "Route your web traffic through multiple encrypted layers so no one can trace your browsing back to you.",
+              "protects": "Prevents ISPs, networks, and websites from identifying you or tracking your location",
+              "steps": {
+                "0": "Download Tor Browser from torproject.org — verify the download signature",
+                "1": "Run Tor Browser — it connects automatically. If censored, use bridge relays",
+                "2": "Never maximize the window — browser fingerprinting uses window size",
+                "3": "Don't log into personal accounts through Tor — it defeats anonymity",
+                "4": "For censored regions: Settings → Connection → use obfs4 or Snowflake bridges"
+              }
+            },
+            "pgp-email": {
+              "title": "PGP Encrypted Email",
+              "description": "Add military-grade encryption to any email service using public key cryptography.",
+              "protects": "Ensures only your intended recipient can read the message, regardless of email provider",
+              "steps": {
+                "0": "Install GPG: Kleopatra (Windows), GPG Suite (Mac), or gnupg (Linux)",
+                "1": "Generate a key pair: choose RSA 4096-bit, set a strong passphrase",
+                "2": "Export your public key and share it with contacts (or upload to a keyserver)",
+                "3": "Import your contacts' public keys",
+                "4": "Compose encrypted emails using your email client's PGP plugin",
+                "5": "Back up your private key securely — losing it means losing access to all encrypted mail"
+              }
+            },
+            "briar-mesh": {
+              "title": "Peer-to-Peer Messaging Without Internet",
+              "description": "Briar connects directly via Bluetooth, WiFi, or Tor — no internet, no servers, no infrastructure needed.",
+              "protects": "Enables communication when internet is shut down or heavily monitored",
+              "steps": {
+                "0": "Install Briar from F-Droid (recommended) or Google Play on Android",
+                "1": "Create your account — it's stored only on your device, no server",
+                "2": "Add contacts by meeting in person and scanning QR codes — this is the only way",
+                "3": "For nearby communication: enable Bluetooth and WiFi in Briar settings",
+                "4": "Messages sync whenever you're in range or both online via Tor"
+              }
+            },
+            "mesh-comms": {
+              "title": "Build a Mesh Communication Network",
+              "description": "Create a radio mesh network using Meshtastic and LoRa devices that works without internet or cell towers.",
+              "protects": "Provides communication infrastructure that's independent of all existing networks",
+              "steps": {
+                "0": "Purchase Meshtastic-compatible LoRa devices (LILYGO T-Beam or Heltec V3 recommended)",
+                "1": "Flash Meshtastic firmware using the web flasher at flasher.meshtastic.org",
+                "2": "Configure your device: set region, channel name, and encryption key",
+                "3": "Install the Meshtastic app on your phone and connect via Bluetooth",
+                "4": "Distribute devices to your network — each node extends range by relaying messages",
+                "5": "Place nodes at high points for maximum coverage (windows, rooftops)",
+                "6": "Test range and adjust antenna positioning — typical range is 1-10km per hop"
+              }
+            },
+            "onion-service": {
+              "title": "Host an Uncensorable Service",
+              "description": "Run a Tor hidden service (.onion) that can't be blocked, seized, or traced back to you.",
+              "protects": "Creates a communication or publishing platform that resists all forms of censorship",
+              "steps": {
+                "0": "Set up a Linux server (can be a Raspberry Pi) in a secure location",
+                "1": "Install Tor: sudo apt install tor",
+                "2": "Configure a hidden service in /etc/tor/torrc",
+                "3": "Set up the service you want to host (web server, chat, file sharing)",
+                "4": "Restrict the service to only listen on localhost",
+                "5": "Share the .onion address only through secure channels",
+                "6": "Harden the server: disable unnecessary services, configure firewall, enable automatic updates"
+              }
+            }
+          }
+        },
+        "dataPreservation": {
+          "title": "Data Preservation",
+          "description": "Encrypted backups, distributed storage, and evidence preservation. Ensure critical information survives any attempt to destroy it.",
+          "priority": "Encrypt your most important files with Cryptomator right now. It takes 20 minutes and makes your data unreadable if your device is seized.",
+          "actions": {
+            "encrypted-backup": {
+              "title": "Encrypt Your Files",
+              "description": "Use Cryptomator to create encrypted vaults that work with any cloud storage. Even if your cloud is compromised, files stay protected.",
+              "protects": "Makes files unreadable without your password, even if storage is seized or breached",
+              "steps": {
+                "0": "Download Cryptomator from cryptomator.org (desktop) or your app store (mobile)",
+                "1": "Create a new vault — choose a location in your cloud storage folder (Dropbox, Google Drive, etc.)",
+                "2": "Set a strong passphrase — at least 20 characters, mix of words and symbols",
+                "3": "Move your sensitive files into the unlocked vault",
+                "4": "Files are encrypted automatically — lock the vault when not in use"
+              }
+            },
+            "backup-321": {
+              "title": "3-2-1 Backup Strategy",
+              "description": "Keep 3 copies of important data, on 2 different media types, with 1 copy offsite. The minimum viable backup plan.",
+              "protects": "Ensures data survives device failure, theft, seizure, or natural disaster",
+              "steps": {
+                "0": "Identify your critical files: documents, photos, evidence, contacts, credentials",
+                "1": "Copy 1: Keep originals on your primary device",
+                "2": "Copy 2: External drive or USB — encrypt with VeraCrypt or Cryptomator",
+                "3": "Copy 3: Encrypted cloud backup OR give an encrypted drive to a trusted person in another location",
+                "4": "Test restoring from each backup at least once",
+                "5": "Set a calendar reminder to update backups weekly"
+              }
+            },
+            "evidence-capture": {
+              "title": "Capture Evidence with Proof",
+              "description": "Document events with cryptographic proof of time, location, and authenticity using ProofMode.",
+              "protects": "Creates verifiable evidence that can withstand legal scrutiny and proves it hasn't been tampered with",
+              "steps": {
+                "0": "Install ProofMode from Google Play or F-Droid on Android",
+                "1": "Enable it — it runs in the background and adds cryptographic signatures to every photo/video",
+                "2": "When documenting: capture steadily, include context (street signs, landmarks, timestamps)",
+                "3": "Export proof bundles — they include hash signatures, GPS data, and device info",
+                "4": "Send proof bundles to multiple trusted recipients immediately"
+              }
+            },
+            "veracrypt-volume": {
+              "title": "Create Hidden Encrypted Volumes",
+              "description": "VeraCrypt creates encrypted containers with a hidden volume feature — you can have a decoy password and a real one.",
+              "protects": "Provides plausible deniability — even under coercion, the hidden volume is undetectable",
+              "steps": {
+                "0": "Download VeraCrypt from veracrypt.fr — verify the PGP signature",
+                "1": "Create a new volume: choose 'Create an encrypted file container'",
+                "2": "Select 'Hidden VeraCrypt volume' for plausible deniability",
+                "3": "Set up the outer (decoy) volume with a simple password and harmless files",
+                "4": "Set up the inner (real) volume with a strong passphrase and your sensitive files",
+                "5": "The outer password opens the decoy — the inner password opens the real data",
+                "6": "Never mount both volumes simultaneously — it can damage the hidden volume"
+              }
+            },
+            "ipfs-pin": {
+              "title": "Distribute Files on IPFS",
+              "description": "Pin files to IPFS so they're distributed across multiple nodes. No single server to seize or shut down.",
+              "protects": "Makes data virtually impossible to delete — as long as one node has it, it exists",
+              "steps": {
+                "0": "Install IPFS Desktop from github.com/ipfs/ipfs-desktop",
+                "1": "Start your IPFS node — it joins the global network automatically",
+                "2": "Add files: drag into IPFS Desktop or use 'ipfs add' command",
+                "3": "Share the CID (Content Identifier) — this is the permanent address of your file",
+                "4": "Ask trusted allies to pin your CID on their nodes: ipfs pin add <CID>",
+                "5": "Consider using a pinning service (Pinata, web3.storage) for persistence"
+              }
+            },
+            "chain-of-custody": {
+              "title": "Document Chain of Custody",
+              "description": "Maintain proper documentation of who handled evidence and when, so it holds up in legal proceedings.",
+              "protects": "Ensures evidence is admissible and credible in courts or international tribunals",
+              "steps": {
+                "0": "Record: who captured it, when, where, what device, what conditions",
+                "1": "Hash the original file immediately: sha256sum filename > filename.sha256",
+                "2": "Document every transfer: who sent it, who received it, when, through what channel",
+                "3": "Store the hash separately from the file — publish it if possible (tweet it, email it to multiple people)",
+                "4": "Never edit originals — work only on copies and document which is which"
+              }
+            },
+            "securedrop-deploy": {
+              "title": "Deploy SecureDrop",
+              "description": "Set up an anonymous document submission system used by major newsrooms worldwide.",
+              "protects": "Allows sources to submit documents without revealing their identity, even to you",
+              "steps": {
+                "0": "Review hardware requirements: 3 dedicated machines (admin, journalist, server)",
+                "1": "Follow the SecureDrop installation guide at docs.securedrop.org",
+                "2": "Configure Tor hidden services for the source and journalist interfaces",
+                "3": "Generate GPG keys for document encryption",
+                "4": "Test the full workflow: submit a document, retrieve it, decrypt it",
+                "5": "Share the .onion source URL through secure channels only",
+                "6": "Maintain regular security updates and key rotation"
+              }
+            },
+            "air-gapped-archive": {
+              "title": "Air-Gapped Archival System",
+              "description": "Create a computer that has never and will never connect to any network, dedicated to storing sensitive archives.",
+              "protects": "Makes remote access or exfiltration physically impossible — data only moves via physical media",
+              "steps": {
+                "0": "Obtain a dedicated laptop — remove or disable WiFi and Bluetooth hardware",
+                "1": "Install Tails OS from a verified USB — it leaves no trace on the hard drive",
+                "2": "Create encrypted persistent storage on a separate USB drive",
+                "3": "Transfer files using a dedicated USB drive — scan it on an intermediary machine first",
+                "4": "Store the archive machine and USB drives in a physically secure location",
+                "5": "Document access procedures — who can access, under what circumstances"
+              }
+            },
+            "distributed-evidence": {
+              "title": "Distributed Evidence Network",
+              "description": "Build a network of trusted nodes that collectively preserve and verify evidence that no single point of failure can destroy.",
+              "protects": "Creates a resilient archive that survives raids, seizures, and targeted destruction",
+              "steps": {
+                "0": "Identify 5+ trusted individuals or organizations willing to host evidence nodes",
+                "1": "Set up IPFS nodes at each location with pinning agreements",
+                "2": "Establish encryption: each node gets a GPG key, evidence is encrypted before distribution",
+                "3": "Create a hash registry — a shared, append-only log of all evidence hashes",
+                "4": "Distribute encrypted evidence across all nodes with geographic diversity",
+                "5": "Test recovery: verify any 3 nodes can reconstruct the full archive",
+                "6": "Establish regular verification: nodes periodically confirm they still hold all pinned content"
+              }
+            }
+          }
+        },
+        "infrastructureIndependence": {
+          "title": "Infrastructure Independence",
+          "description": "Self-hosted services, mesh networks, and local-first software. Build systems that work even when the internet doesn't.",
+          "priority": "Switch to Standard Notes or Joplin for your notes right now. Your thoughts shouldn't live on someone else's server.",
+          "actions": {
+            "local-first-apps": {
+              "title": "Switch to Local-First Apps",
+              "description": "Replace cloud-dependent apps with ones that store data on your device first. Works offline, syncs when possible.",
+              "protects": "Ensures access to your data even without internet, and keeps it off corporate servers",
+              "steps": {
+                "0": "Install Standard Notes (standardnotes.com) — replaces Google Keep, Apple Notes",
+                "1": "Install Joplin (joplinapp.org) — replaces Evernote, OneNote, with Markdown support",
+                "2": "Export your existing notes from cloud services",
+                "3": "Import into your new local-first apps",
+                "4": "Set up encrypted sync between devices if needed (Joplin supports Nextcloud, Dropbox, OneDrive)"
+              }
+            },
+            "vpn-setup": {
+              "title": "Set Up a Trustworthy VPN",
+              "description": "Mullvad VPN accepts cash payment, requires no email, and has been independently audited. They can't identify you even if compelled.",
+              "protects": "Hides your internet traffic from your ISP, network operator, and local surveillance",
+              "steps": {
+                "0": "Go to mullvad.net — generate an account number (no email required)",
+                "1": "Pay with cash, cryptocurrency, or card — cash is most anonymous",
+                "2": "Download the Mullvad app for your platform",
+                "3": "Enter your account number and connect",
+                "4": "Enable kill switch: if VPN drops, all internet stops — prevents accidental exposure"
+              }
+            },
+            "dns-privacy": {
+              "title": "Privacy-Respecting DNS",
+              "description": "Your DNS queries reveal every website you visit. Switch to encrypted DNS to stop your ISP from logging your browsing.",
+              "protects": "Prevents ISPs and network operators from seeing which websites you visit",
+              "steps": {
+                "0": "On your router: change DNS servers to 9.9.9.9 (Quad9) or 1.1.1.1 (Cloudflare)",
+                "1": "Better: enable DNS-over-HTTPS (DoH) in your browser settings",
+                "2": "Firefox: Settings → Privacy → DNS over HTTPS → enable with Quad9 or Cloudflare",
+                "3": "For whole-network protection: configure DoH on your router if supported"
+              }
+            },
+            "nextcloud-deploy": {
+              "title": "Self-Host Cloud Storage",
+              "description": "Run your own Nextcloud server — full replacement for Google Drive, Calendar, Contacts, and more.",
+              "protects": "Keeps all your files, contacts, and calendar on hardware you control",
+              "steps": {
+                "0": "Choose hosting: VPS ($5-10/month), Raspberry Pi (one-time cost), or old PC",
+                "1": "Install Nextcloud using the official snap package or Docker container",
+                "2": "Configure HTTPS with Let's Encrypt",
+                "3": "Install mobile and desktop sync clients on all your devices",
+                "4": "Migrate data: upload files, import contacts (vCard), import calendar (iCal)",
+                "5": "Enable server-side encryption in Nextcloud settings",
+                "6": "Set up automated backups of the Nextcloud data directory and database"
+              }
+            },
+            "wireguard-vpn": {
+              "title": "Run Your Own VPN",
+              "description": "Deploy WireGuard on a VPS you control. No VPN provider to trust — you own the whole tunnel.",
+              "protects": "Full control over your VPN — no provider logs, no third-party trust required",
+              "steps": {
+                "0": "Get a VPS in a privacy-friendly jurisdiction ($5/month from any provider)",
+                "1": "Install WireGuard: sudo apt install wireguard",
+                "2": "Generate server and client keys: wg genkey | tee privatekey | wg pubkey > publickey",
+                "3": "Configure the server interface (/etc/wireguard/wg0.conf)",
+                "4": "Configure client devices with the server's public key and endpoint",
+                "5": "Enable IP forwarding and set up iptables NAT rules",
+                "6": "Start the tunnel: sudo wg-quick up wg0"
+              }
+            },
+            "community-dns": {
+              "title": "Community DNS with Ad Blocking",
+              "description": "Deploy Pi-hole as a network-wide DNS sinkhole that blocks ads, trackers, and malware for everyone on your network.",
+              "protects": "Blocks tracking and data collection at the network level for all connected devices",
+              "steps": {
+                "0": "Get a Raspberry Pi or use any Linux machine on your network",
+                "1": "Install Pi-hole: curl -sSL https://install.pi-hole.net | bash",
+                "2": "Point your router's DHCP DNS settings to the Pi-hole's IP address",
+                "3": "Add community blocklists for ads, trackers, and malware domains",
+                "4": "Monitor the dashboard — you'll see how much tracking was happening",
+                "5": "Share DNS access with neighbors to extend protection"
+              }
+            },
+            "mesh-network": {
+              "title": "Build a Community Mesh Network",
+              "description": "Create a local network that connects buildings and neighborhoods without relying on any ISP.",
+              "protects": "Provides communication infrastructure that operates independently of commercial internet",
+              "steps": {
+                "0": "Survey your area: identify buildings with line-of-sight to each other",
+                "1": "Acquire mesh-capable routers (LibreRouter, Ubiquiti, or any OpenWRT-compatible device)",
+                "2": "Flash OpenWRT firmware and install mesh networking packages",
+                "3": "Configure mesh protocol (Batman-adv or 802.11s)",
+                "4": "Install directional antennas for building-to-building links",
+                "5": "Set up local services: DNS, file sharing, messaging on the mesh",
+                "6": "Add internet gateways if desired — multiple uplinks for redundancy",
+                "7": "Document the network and train community members to maintain it"
+              }
+            },
+            "local-isp": {
+              "title": "Start a Community ISP",
+              "description": "Form a cooperative to provide internet access to your community, independent of corporate ISPs.",
+              "protects": "Gives your community control over its own internet access and policies",
+              "steps": {
+                "0": "Research local regulations for community networks and ISPs",
+                "1": "Form a cooperative or nonprofit entity",
+                "2": "Survey community interest and gather commitments",
+                "3": "Acquire upstream bandwidth from a regional provider or internet exchange",
+                "4": "Design the distribution network (fiber, wireless, or hybrid)",
+                "5": "Install backbone infrastructure and customer connections",
+                "6": "Set up governance: community board, transparent policies, privacy commitments"
+              }
+            },
+            "offgrid-compute": {
+              "title": "Off-Grid Compute Nodes",
+              "description": "Set up computing infrastructure that runs on solar power and connects via mesh — fully independent of the grid.",
+              "protects": "Ensures computing capability survives power outages, grid shutdowns, and infrastructure attacks",
+              "steps": {
+                "0": "Acquire low-power hardware: Raspberry Pi 4/5 or similar SBC",
+                "1": "Set up solar panel (100W) + charge controller + battery (enough for 24/7 operation)",
+                "2": "Install a minimal Linux server with essential services",
+                "3": "Connect to mesh network or Meshtastic for communication",
+                "4": "Deploy critical services: file storage, messaging relay, DNS",
+                "5": "Weatherproof the installation for outdoor or semi-outdoor deployment"
+              }
+            }
+          }
+        },
+        "operationalSecurity": {
+          "title": "Operational Security",
+          "description": "Threat modeling, device hardening, and identity compartmentalization. Understand what you're protecting and from whom.",
+          "priority": "Complete the threat model worksheet. Everything else depends on knowing who you're protecting against and what they can do.",
+          "actions": {
+            "threat-model": {
+              "title": "Create Your Threat Model",
+              "description": "A structured exercise to identify what you're protecting, from whom, and what happens if you fail. Every security decision flows from this.",
+              "protects": "Prevents wasting effort on the wrong threats and missing the real ones",
+              "steps": {
+                "0": "List your assets: what data, communications, and activities need protection?",
+                "1": "List your adversaries: who specifically wants access? (government agencies, hackers, employers, partners)",
+                "2": "Assess capabilities: what can each adversary actually do? (subpoena records, deploy malware, physical surveillance)",
+                "3": "Identify vulnerabilities: where are you currently exposed?",
+                "4": "Prioritize: what's the most likely threat? What has the worst consequences?",
+                "5": "Choose your tools based on your actual threat model — not paranoia, not complacency"
+              }
+            },
+            "device-security": {
+              "title": "Lock Down Your Devices",
+              "description": "Harden your phone and computer with settings changes that take minutes but dramatically reduce your attack surface.",
+              "protects": "Reduces what can be extracted if a device is seized, stolen, or infected",
+              "steps": {
+                "0": "Enable full-disk encryption (FileVault on Mac, BitLocker on Windows, default on modern iOS/Android)",
+                "1": "Set a strong passcode — 6+ digits on phone, passphrase on computer. Disable biometrics for border crossings",
+                "2": "Enable automatic updates on all devices",
+                "3": "Review app permissions: revoke camera, microphone, location for apps that don't need them",
+                "4": "Disable USB accessories when locked (iOS: Settings → Face ID → USB Accessories off)",
+                "5": "Set auto-lock to 1 minute or less"
+              }
+            },
+            "metadata-awareness": {
+              "title": "Understand Metadata Exposure",
+              "description": "Message content may be encrypted, but metadata — who, when, where, how often — tells its own story. Learn what you're leaking.",
+              "protects": "Helps you understand that encryption alone isn't enough — patterns reveal relationships and activities",
+              "steps": {
+                "0": "Check a photo's metadata: right-click → Properties (Windows) or use ExifTool. See GPS coordinates, device info, timestamps",
+                "1": "Understand call metadata: your phone company logs every number you call, when, and for how long",
+                "2": "Review location services: Settings → Privacy → Location — see which apps track you",
+                "3": "Check Google's record: myactivity.google.com shows everything Google logged",
+                "4": "Strip photo metadata before sharing: use ExifTool or a metadata removal app"
+              }
+            },
+            "tails-usb": {
+              "title": "Boot Tails for Amnesic Computing",
+              "description": "Tails is a portable OS that runs from USB, routes everything through Tor, and leaves zero trace on the computer.",
+              "protects": "Leaves no forensic evidence on the host computer — perfect for sensitive work on shared or seized machines",
+              "steps": {
+                "0": "Download Tails from tails.net — verify the download using the provided verification tool",
+                "1": "Flash to USB drive (8GB minimum) using balenaEtcher or the Tails installer",
+                "2": "Boot from USB: restart computer, press F12/F2/Option to select boot device",
+                "3": "Configure persistent storage if needed — encrypted with a passphrase",
+                "4": "All internet traffic goes through Tor automatically — no configuration needed",
+                "5": "When done, remove USB and restart — the computer has no record of your session"
+              }
+            },
+            "compartmentalization": {
+              "title": "Compartmentalize Identities",
+              "description": "Separate your digital identities so compromising one doesn't reveal the others. Different browsers, accounts, devices for different roles.",
+              "protects": "Prevents a single compromise from unraveling all your activities and connections",
+              "steps": {
+                "0": "Map your roles: personal, professional, activist, anonymous — each gets separate treatment",
+                "1": "Use different browsers for different roles (Firefox for personal, Tor for anonymous, Brave for professional)",
+                "2": "Create separate email addresses for each role — different providers",
+                "3": "Never cross-contaminate: don't log into a personal account from an anonymous browser",
+                "4": "Consider separate devices for high-risk activities",
+                "5": "Use different VPN servers or Tor for different identities"
+              }
+            },
+            "burner-practices": {
+              "title": "Use Burner Devices Safely",
+              "description": "How to acquire and use prepaid phones without connecting them to your real identity.",
+              "protects": "Provides a communication channel that can't be traced back to you",
+              "steps": {
+                "0": "Buy a prepaid phone with cash at a store away from your usual area — no ID required in most states",
+                "1": "Buy a prepaid SIM with cash separately",
+                "2": "Activate the phone away from your home and regular locations",
+                "3": "Never connect to your home WiFi or use near your regular devices",
+                "4": "Never contact your regular contacts from the burner or vice versa",
+                "5": "Keep the burner powered off and battery removed when not actively in use"
+              }
+            },
+            "advanced-opsec": {
+              "title": "Advanced Operational Security",
+              "description": "Techniques for resisting traffic analysis, timing correlation, and behavioral pattern detection by sophisticated adversaries.",
+              "protects": "Defends against state-level surveillance that analyzes patterns rather than content",
+              "steps": {
+                "0": "Vary your timing: don't establish predictable patterns for sensitive activities",
+                "1": "Use cover traffic: mix sensitive communications with routine ones",
+                "2": "Understand timing correlation: if you post anonymously while your real IP is active, patterns emerge",
+                "3": "Use Tor with Tails for high-sensitivity work — never from your home network",
+                "4": "Assume your phone is a tracking device — leave it behind for sensitive meetings",
+                "5": "Practice information compartmentalization: different people know different pieces, no one knows everything"
+              }
+            },
+            "surveillance-countermeasures": {
+              "title": "Surveillance Countermeasures",
+              "description": "Detect and counter both digital and physical surveillance. Know when you're being watched and what to do about it.",
+              "protects": "Provides awareness and response capabilities against active surveillance operations",
+              "steps": {
+                "0": "Install Haven (guardianproject.info/apps/haven) on an old Android phone as a physical security device",
+                "1": "Haven uses camera, microphone, and accelerometer to detect intrusion and alert you",
+                "2": "Check for unknown devices on your network regularly (use Fing or nmap)",
+                "3": "Be aware of IMSI catchers (Stingrays): sudden signal drops + reconnection, unusual signal strength",
+                "4": "For meetings: leave phones in another room or in a Faraday bag",
+                "5": "Establish distress signals with trusted contacts — a code word that means 'I'm compromised'"
+              }
+            },
+            "travel-security": {
+              "title": "Secure Devices for Travel",
+              "description": "Prepare your devices for border crossings and travel to hostile environments where they may be searched or seized.",
+              "protects": "Limits exposure during border searches and device seizures while traveling",
+              "steps": {
+                "0": "Back up everything, then wipe sensitive data from travel devices",
+                "1": "Use a travel-only device if possible — minimal apps, no sensitive data",
+                "2": "Store sensitive data in encrypted cloud storage — download at destination, not at border",
+                "3": "Disable biometrics before crossing borders (police can compel fingerprint, not passcode in the US)",
+                "4": "Know your rights: in the US, you can refuse to unlock devices at the border, but they can seize them",
+                "5": "After crossing: change passwords used on any device that was out of your sight"
+              }
+            }
+          }
+        },
+        "communityOrganizing": {
+          "title": "Community Organizing",
+          "description": "Secure coordination, trust networks, and resilient organizational structures. Technology serves the movement, not the other way around.",
+          "priority": "Set up a Signal group with your core team and establish check-in protocols. Organization starts with reliable communication.",
+          "actions": {
+            "secure-group-chat": {
+              "title": "Set Up Secure Group Communication",
+              "description": "Create a Signal group for your organization with proper settings for security and usability.",
+              "protects": "Gives your group an encrypted, reliable communication channel that's easy for everyone to use",
+              "steps": {
+                "0": "Have all members install Signal and verify it's working",
+                "1": "Create the group — give it a non-descriptive name",
+                "2": "Enable disappearing messages (set timer based on your threat model)",
+                "3": "Set group permissions: only admins can add members or edit group info",
+                "4": "Establish group norms: what's discussed here, what isn't, when to use it"
+              }
+            },
+            "comm-tree": {
+              "title": "Build a Communication Tree",
+              "description": "Create a structured communication cascade so critical information reaches everyone quickly, even if some channels fail.",
+              "protects": "Ensures information flow continues even if leaders are arrested or communications disrupted",
+              "steps": {
+                "0": "Map your organization into clusters of 3-5 people",
+                "1": "Assign each cluster a primary and backup contact person",
+                "2": "Create the tree: leadership contacts cluster leads, cluster leads contact members",
+                "3": "Establish multiple channels: Signal primary, phone call backup, in-person failsafe",
+                "4": "Practice the tree: run drills to test how long information takes to cascade",
+                "5": "Update regularly as people's situations change"
+              }
+            },
+            "emergency-protocol": {
+              "title": "Emergency Contact Protocols",
+              "description": "Pre-establish what happens when someone is arrested, goes missing, or communications are compromised.",
+              "protects": "Enables coordinated response when things go wrong, instead of panic and confusion",
+              "steps": {
+                "0": "Create a buddy system: everyone has a check-in partner",
+                "1": "Set check-in schedule: daily or event-based — missed check-in triggers protocol",
+                "2": "Establish a legal support hotline: have a lawyer's number everyone has memorized",
+                "3": "Create a 'duress' signal: a code word in normal conversation that means 'I'm compromised'",
+                "4": "Document the protocol and ensure everyone has a physical copy"
+              }
+            },
+            "decentralized-coord": {
+              "title": "Decentralized Coordination Tools",
+              "description": "Set up self-hosted collaboration tools so your coordination doesn't depend on Google, Microsoft, or any company.",
+              "protects": "Prevents service shutdowns, subpoenas, or corporate policy changes from disrupting your work",
+              "steps": {
+                "0": "Deploy CryptPad (cryptpad.org) — encrypted documents, spreadsheets, and forms",
+                "1": "Set up OnlyOffice or Nextcloud Office for document collaboration",
+                "2": "Use Jitsi Meet for video calls instead of Zoom (meet.jit.si or self-host)",
+                "3": "Migrate shared documents off Google Docs and Dropbox",
+                "4": "Train all members on the new tools — adoption requires support, not just access",
+                "5": "Establish backup access: ensure multiple people can administer each service"
+              }
+            },
+            "trust-network": {
+              "title": "Build a Trust Network",
+              "description": "Establish verified trust relationships so you know who you're communicating with and can vouch for new members.",
+              "protects": "Prevents infiltration and impersonation by verifying identity through human relationships",
+              "steps": {
+                "0": "Verify core members in person — exchange Signal safety numbers, PGP keys",
+                "1": "Establish a vouching system: new members need 2+ existing members to vouch",
+                "2": "Share sensitive information on a need-to-know basis — not everyone needs everything",
+                "3": "Regular key verification: periodically re-verify safety numbers and keys",
+                "4": "Create a secure onboarding process for new members that includes tool setup"
+              }
+            },
+            "secure-meetings": {
+              "title": "Conduct Secure Meetings",
+              "description": "Hold meetings that are secure both physically and digitally — from choosing locations to managing devices.",
+              "protects": "Prevents surveillance of your meetings and protects attendee identities",
+              "steps": {
+                "0": "Choose locations without surveillance cameras and with multiple exits",
+                "1": "All attendees leave phones in a separate room or Faraday bags",
+                "2": "For virtual meetings: use Jitsi Meet with a new room name each time, no accounts required",
+                "3": "Don't take notes on connected devices — use paper, photograph later if needed",
+                "4": "Vary meeting times, locations, and routes to prevent pattern analysis"
+              }
+            },
+            "cell-structure": {
+              "title": "Cell-Structure Organizing",
+              "description": "Organize in small, independent cells where each group knows only what it needs to. Compromise of one doesn't expose all.",
+              "protects": "Limits damage from infiltration, arrests, or compromised communications to a single cell",
+              "steps": {
+                "0": "Divide your organization into cells of 3-7 people with specific functions",
+                "1": "Each cell has one liaison who communicates with the coordination layer",
+                "2": "Cells don't know each other's members — only liaisons have cross-cell contact",
+                "3": "Use separate communication channels for each cell",
+                "4": "If a cell is compromised: other cells continue operating independently",
+                "5": "Regularly rotate liaison roles to prevent single points of failure"
+              }
+            },
+            "distributed-leadership": {
+              "title": "Distributed Leadership",
+              "description": "Build leadership systems where no single person's arrest or absence can stop the movement.",
+              "protects": "Ensures organizational continuity when leaders are targeted, arrested, or incapacitated",
+              "steps": {
+                "0": "Cross-train: every critical function should be performable by at least 3 people",
+                "1": "Document processes: how-to guides for every organizational function, stored securely",
+                "2": "Rotate responsibilities regularly so experience is distributed",
+                "3": "Establish succession protocols: if a leader is arrested, who steps up automatically?",
+                "4": "Maintain encrypted, distributed copies of critical organizational documents",
+                "5": "Practice operating without key leaders — run exercises where leaders are 'removed'"
+              }
+            },
+            "counter-infiltration": {
+              "title": "Counter-Infiltration Awareness",
+              "description": "Recognize the signs of infiltration and build organizational practices that limit the damage infiltrators can do.",
+              "protects": "Protects the organization from agents provocateurs, informants, and surveillance operatives",
+              "steps": {
+                "0": "Know the patterns: infiltrators often push for illegal actions, create conflict, or gather personal information",
+                "1": "Vet new members through the trust network — require vouching, take time",
+                "2": "Compartmentalize information: no one person should know everything",
+                "3": "Be wary of anyone who asks excessive questions about other members or operations",
+                "4": "If you suspect infiltration: don't confront — limit the suspect's access and consult legal counsel",
+                "5": "Remember: the goal isn't paranoia, it's proportional caution based on your threat model"
+              }
+            }
+          }
+        }
+      },
+      "toolDirectory": {
+        "title": "Tool Directory",
+        "subtitle": "Every tool recommended in this toolkit, organized for quick reference.",
+        "filterAll": "All Tools",
+        "platformLabel": "Platforms",
+        "fossLabel": "Open Source",
+        "replacesLabel": "Replaces"
+      },
+      "crossLinks": {
+        "title": "Go Deeper",
+        "subtitle": "These tech sovereignty tracks provide detailed curriculum for the skills referenced in this toolkit.",
+        "networking": "Networking fundamentals — understand how networks work so you can build your own",
+        "selfHosted": "Self-hosted services — detailed guides for running your own infrastructure",
+        "digitalRights": "Digital rights — understand the legal landscape and your protections",
+        "community": "Community building — organizational skills for collective action"
+      }
     }
   },
   "privacy": {
