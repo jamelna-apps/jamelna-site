@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import CompactProjectCard from '@/components/CompactProjectCard';
+import PhotoBreak from '@/components/PhotoBreak';
 import { useTranslations } from 'next-intl';
 
 interface Project {
@@ -21,9 +22,29 @@ interface Project {
   category: string;
 }
 
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+}
+
 function SectionHeader({ title, description }: { title: string; description: string }) {
   return (
-    <div className="mb-10">
+    <div className="mb-10 reveal-slide-left">
       <hr className="heading-rule" />
       <h2 className="text-display-section font-display font-extrabold text-text-heading mb-2">
         {title}
@@ -49,6 +70,7 @@ function sortByPreference(projects: Project[], order: string[]): Project[] {
 export default function WorkPage() {
   const t = useTranslations('work');
   const projects = t.raw('projects') as Project[];
+  const containerRef = useScrollReveal();
 
   const professional = sortByPreference(
     projects.filter(p => p.category === 'professional'),
@@ -64,16 +86,16 @@ export default function WorkPage() {
   );
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas pt-16" ref={containerRef}>
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
-          <h1 className="text-display-section font-display text-text-heading mb-4">
+          <h1 className="text-display-section font-display text-text-heading mb-4 reveal-slide-left">
             <span className="font-light">Selected</span>{' '}
             <span className="font-extrabold">{t('title')}</span>
           </h1>
-          <p className="text-xl text-text-secondary max-w-2xl">
+          <p className="text-xl text-text-secondary max-w-2xl reveal-fade">
             {t('description')}
           </p>
         </div>
@@ -92,7 +114,12 @@ export default function WorkPage() {
               {professional.map((project, index) => {
                 const projectId = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                 return (
-                  <div key={index} id={projectId} className="scroll-mt-20">
+                  <div
+                    key={index}
+                    id={projectId}
+                    className="scroll-mt-20 reveal-fade"
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-1 h-12 bg-terra"></div>
                       <h3 className="text-3xl font-display font-bold text-text-heading">
@@ -106,6 +133,16 @@ export default function WorkPage() {
             </div>
           </div>
 
+          {/* Photo break between Professional and Products */}
+          <div className="mb-20 -mx-4">
+            <PhotoBreak
+              src="/photos/open-world/22-DSCF5809.webp"
+              alt="Travel photography"
+              position="center"
+              height="25vh"
+            />
+          </div>
+
           {/* Products I've Built */}
           <div className="mb-20" id="products">
             <SectionHeader
@@ -116,7 +153,12 @@ export default function WorkPage() {
               {products.map((project, index) => {
                 const projectId = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
                 return (
-                  <div key={index} id={projectId} className="scroll-mt-20">
+                  <div
+                    key={index}
+                    id={projectId}
+                    className="scroll-mt-20 reveal-fade"
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-1 h-12 bg-ink"></div>
                       <h3 className="text-3xl font-display font-bold text-text-heading">
@@ -138,7 +180,13 @@ export default function WorkPage() {
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {creative.map((project, index) => (
-                <CompactProjectCard key={index} {...project} />
+                <div
+                  key={index}
+                  className="reveal-fade"
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <CompactProjectCard {...project} />
+                </div>
               ))}
             </div>
           </div>

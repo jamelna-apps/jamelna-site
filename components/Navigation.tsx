@@ -10,6 +10,7 @@ const Navigation = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
@@ -63,6 +64,11 @@ const Navigation = () => {
       const viewportHeight = window.innerHeight;
 
       setIsScrolled(scrollY > 50);
+
+      // Calculate scroll progress
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+      setScrollProgress(Math.min(progress, 100));
 
       // On homepage, show nav after scrolling past hero
       if (isHomePage) {
@@ -133,7 +139,7 @@ const Navigation = () => {
       <nav
         aria-label="Main navigation"
         className={`
-          fixed top-0 left-0 right-0 z-50
+          relative fixed top-0 left-0 right-0 z-50
           transition-all duration-500
           ${shouldShowNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
           ${isScrolled || isMenuOpen ? 'bg-canvas-deep/98 border-b border-canvas-border' : 'bg-transparent'}
@@ -290,6 +296,15 @@ const Navigation = () => {
               </div>
             </div>
           </div>
+        )}
+
+        {/* Scroll progress bar */}
+        {isScrolled && (
+          <div
+            className="scroll-progress"
+            style={{ width: `${scrollProgress}%` }}
+            aria-hidden="true"
+          />
         )}
       </nav>
     </>
