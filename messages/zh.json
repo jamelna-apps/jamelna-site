@@ -70,6 +70,10 @@
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "概念艺术装置"
+        },
+        "coachdesk": {
+          "title": "CoachDesk",
+          "subtitle": "K-12教学辅导平台"
         }
       }
     },
@@ -210,7 +214,12 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ],
-        "category": "products"
+        "category": "products",
+        "appStoreLinks": {
+          "ios": "即将推出",
+          "privacy": "/gyst/privacy",
+          "terms": "/gyst/terms"
+        }
       },
       {
         "title": "CoachDesk",
@@ -504,7 +513,64 @@
     "photographyLink": "I'm also a photographer",
     "photographyLinkCta": "View my galleries",
     "contactCta": "Interested in working together?",
-    "contactCtaButton": "Get in touch"
+    "contactCtaButton": "Get in touch",
+    "experienceTitle": "工作经历",
+    "experience": {
+      "ncstate": {
+        "title": "研究学者",
+        "org": "NC State University, Friday Institute for Educational Innovation",
+        "dates": "2025年3月 - 至今",
+        "description": "作为NSF资助的EngageAI Institute的一部分，主导SceneCraft（一个人工智能驱动的教育叙事平台）的产品和项目管理。协调研究、设计和利益相关者合作，为K-12学生和教育者创建数据驱动的学习解决方案。"
+      },
+      "csforall": {
+        "title": "SCRIPT项目负责人",
+        "org": "CSforALL",
+        "dates": "2023年4月 - 2024年12月",
+        "description": "主导SCRIPT倡议的全国实施，帮助50多个美国学区制定全面的K-12计算机科学教育计划。管理与微软、诺斯罗普·格鲁曼等行业领袖的合作关系。"
+      },
+      "cornellDirector": {
+        "title": "K-12辅导项目主任",
+        "org": "Cornell Tech",
+        "dates": "2021年11月 - 2023年4月",
+        "description": "开发了现在全国使用的CS辅导工具包和卡片组。为NYC DOE、路易斯安那州和南卡罗来纳州举办研讨会。为大学和学区提供CS项目整合建议。"
+      },
+      "cornellResident": {
+        "title": "驻校教师",
+        "org": "Cornell Tech",
+        "dates": "2019年9月 - 2021年11月",
+        "description": "连接学术研究与课堂实践。与研究人员在教育技术项目上合作，为课程开发提供实践者视角。"
+      },
+      "nycdoe": {
+        "title": "计算机科学教育经理",
+        "org": "NYC Department of Education",
+        "dates": "2016年8月 - 2019年8月",
+        "description": "作为全国最大CS公平倡议的一部分，主导200多所曼哈顿学校的CS4All实施。培训了500多名教育工作者，并与行业和社区组织建立合作关系。"
+      },
+      "expanded": {
+        "title": "STEM经理",
+        "org": "ExpandED Schools",
+        "dates": "2015年8月 - 2016年8月",
+        "description": "管理为纽约市学生服务的课外项目的STEM课程。开发课程框架，为项目工作人员提供专业发展培训。"
+      },
+      "nyasPm": {
+        "title": "项目经理，全球STEM联盟",
+        "org": "New York Academy of Sciences",
+        "dates": "2014年11月 - 2015年7月",
+        "description": "管理国际STEM教育倡议，将学生与全球科学家联系起来。协调虚拟导师计划和全球STEM挑战赛。"
+      },
+      "nyasCoord": {
+        "title": "项目协调员，课外STEM导师计划",
+        "org": "New York Academy of Sciences",
+        "dates": "2013年8月 - 2014年11月",
+        "description": "协调课外STEM导师计划，将科学家与弱势青少年配对。管理志愿者招募、培训和项目后勤。"
+      },
+      "lsc": {
+        "title": "博物馆教育工作者和项目开发者",
+        "org": "Liberty Science Center",
+        "dates": "2009 - 2013",
+        "description": "为多元化受众开发和提供科学教育项目。创建互动展览，促进激发各年龄段参观者好奇心的学习体验。"
+      }
+    }
   },
   "contact": {
     "title": "Contact",
@@ -602,7 +668,11 @@
       "resourcesPlaceholder": "描述您的预算、技术设备和可用人员...",
       "submit": "提交档案",
       "successTitle": "档案已提交！",
-      "successMessage": "感谢您分享学区信息。我们将很快与您联系，提供个性化推荐。"
+      "successMessage": "感谢您分享学区信息。我们将很快与您联系，提供个性化推荐。",
+      "city": "城市",
+      "cityPlaceholder": "输入您的城市",
+      "shortDescription": "完成简短评估，获取量身定制的课程和实施建议。",
+      "startButton": "开始评估"
     },
     "comingSoon": {
       "title": "AI规划助手即将推出",
@@ -629,7 +699,8 @@
       "comprehensive": {
         "title": "K-12全覆盖",
         "description": "从幼儿园的ScratchJr到高中的AP计算机科学。"
-      }
+      },
+      "intro": "将计算机科学带入您学校所需的一切。"
     },
     "standards": {
       "title": "州标准对齐",
@@ -711,6 +782,32 @@
         "generic": "发生错误。请重试。",
         "networkError": "网络错误。请检查您的连接并重试。"
       }
+    },
+    "hero": {
+      "ctaPrimary": "探索课程",
+      "ctaSecondary": "制定范围与顺序"
+    },
+    "implementation": {
+      "title": "实施支持",
+      "description": "获得个性化指导，将计算机科学教育带入您的学校或学区。"
+    },
+    "scopeSequence": {
+      "title": "制定您的范围与顺序",
+      "subtitle": "选择一个路径方向，查看每个年级段的推荐课程",
+      "foundation": "所有路径的基础",
+      "foundationDescription": "计算思维和数据科学技能贯穿每个路径，从小学到高中培养基本技能。",
+      "selectPathway": "选择您的路径方向",
+      "elementary": "小学 (K-5)",
+      "middle": "初中 (6-8)",
+      "high": "高中 (9-12)",
+      "coreCurricula": "核心课程",
+      "pathwayCurricula": "路径专项课程",
+      "skills": "关键技能"
+    },
+    "cta": {
+      "title": "准备好开始了吗？",
+      "description": "在上方选择一个路径，探索为您学校计算机科学教育项目推荐的课程。",
+      "button": "探索课程"
     }
   },
   "techSovereignty": {
@@ -874,6 +971,12 @@
           "description": "探索社区所有技术的治理模式、融资策略和组织结构。",
           "difficulty": "高级",
           "duration": "持续进行"
+        },
+        "project4": {
+          "title": "协作技术治理",
+          "description": "制定使技术对社区需求负责的治理结构——政策、决策和伦理。",
+          "difficulty": "高级",
+          "duration": "5-6周"
         }
       }
     },
@@ -1645,6 +1748,172 @@
           "description": "Organizational skills for collective action"
         }
       }
+    },
+    "modeSelector": {
+      "title": "您希望如何学习？",
+      "educator": {
+        "title": "我是教育者",
+        "description": "访问结构化课程，包含为课堂使用设计的教案、评估和材料。",
+        "feature1": "符合UDL原则的教案",
+        "feature2": "年级段组织",
+        "feature3": "评估资源"
+      },
+      "learner": {
+        "title": "我在学习",
+        "description": "遵循基于目标的路径，结果清晰。在建立真实技能的过程中通过检查点追踪进度。",
+        "feature1": "目标导向路径",
+        "feature2": "实践项目",
+        "feature3": "进度追踪"
+      }
+    },
+    "pathways": {
+      "title": "学习路径",
+      "subtitle": "通向技术独立的目标导向路径。选择您想实现的目标，遵循结构化旅程到达那里。",
+      "backToSovereignty": "返回技术主权",
+      "allPathways": "所有路径",
+      "progress": "{completed} / {total} 个检查点",
+      "completed": "已完成！",
+      "nextStep": "下一步：第{step}步",
+      "yourJourney": "您的旅程",
+      "whatYouWillAchieve": "您将实现的目标",
+      "howItWorks": {
+        "title": "路径如何运作",
+        "step1": {
+          "title": "选择您的目标",
+          "description": "根据您想实现的目标选择一条路径。每条路径都有明确的结果。"
+        },
+        "step2": {
+          "title": "按步骤进行",
+          "description": "按照自己的节奏完成课程和项目。每一步都建立在上一步的基础上。"
+        },
+        "step3": {
+          "title": "标记您的进度",
+          "description": "完成检查点以验证您确实完成了工作。您的进度保存在本地。"
+        }
+      },
+      "preferCurriculum": {
+        "title": "更喜欢结构化课程？",
+        "description": "如果您是教育者或更喜欢按主题浏览，请查看我们包含教案和评估的完整课程。",
+        "cta": "查看完整课程"
+      },
+      "completion": {
+        "title": "路径完成！",
+        "message": "恭喜！您已完成该路径的所有检查点。",
+        "exploreMore": "探索更多路径",
+        "browseCurriculum": "浏览完整课程"
+      },
+      "stepTypes": {
+        "quickWin": "快速胜利",
+        "lesson": "课程",
+        "project": "项目"
+      },
+      "checkpoint": "检查点",
+      "secureNetwork": {
+        "title": "保护我的家庭网络",
+        "description": "掌控您家庭网络的安全和隐私",
+        "longDescription": "学习了解、保护和优化您的家庭网络。最终，您将拥有一个完全理解和控制的网络。",
+        "outcome": "具有DNS过滤、设备监控和隐私保护的安全家庭网络"
+      },
+      "ownYourData": {
+        "title": "拥有您的数据",
+        "description": "用您控制的自托管替代方案替换云服务",
+        "longDescription": "摆脱Google Drive、Dropbox和其他云服务。在您拥有的硬件上托管您自己的文件、照片和文档。",
+        "outcome": "您自己的云存储在您的硬件上运行，可从任何地方访问"
+      },
+      "stopTracking": {
+        "title": "停止追踪我",
+        "description": "屏蔽追踪器，保护您的隐私，夺回控制权",
+        "longDescription": "了解公司如何在线追踪您，并在所有设备上实施切实可行的隐私保护解决方案。",
+        "outcome": "全网广告屏蔽、浏览器隐私保护和减少数字足迹"
+      }
+    },
+    "quickWins": {
+      "title": "快速胜利",
+      "subtitle": "通过这些入门项目体验技术主权。每一个都能带来即时、切实的成果。",
+      "badge": "每个30-45分钟",
+      "startNow": "立即开始"
+    },
+    "trackMap": {
+      "title": "学习地图",
+      "subtitle": "了解所有课程轨道如何连接，找到通向技术独立的路径。点击任何轨道探索其课程，或选择建议路径查看推荐顺序。",
+      "sequences": {
+        "title": "建议学习顺序",
+        "sovereignty": {
+          "title": "完整主权",
+          "description": "从了解您的权利到运行自己的基础设施的完整旅程。"
+        },
+        "developer": {
+          "title": "开发者路径",
+          "description": "专注于构建服务社区并反映共同价值观的应用程序。"
+        },
+        "aiPath": {
+          "title": "AI独立",
+          "description": "在本地运行强大的AI模型，无需将数据发送到企业云端。"
+        }
+      },
+      "legend": {
+        "recommended": "推荐",
+        "optional": "可选"
+      },
+      "startHere": "从数字权利开始",
+      "allTracks": "所有轨道",
+      "readyToStart": "准备好开始了吗？",
+      "choosePathway": "选择基于目标的路径进行引导学习，或深入探索您感兴趣的任何轨道。"
+    },
+    "educatorHub": {
+      "title": "按年级段划分的教育者资源",
+      "subtitle": "访问按年级整理的符合UDL原则的教案。每节课包含学习目标、材料和可选评估。",
+      "allGrades": "所有年级",
+      "gradeBands": {
+        "elementary": {
+          "label": "小学",
+          "ageRange": "K-5（5-11岁）",
+          "description": "通过探索和游戏学习基础概念"
+        },
+        "middle": {
+          "label": "初中",
+          "ageRange": "6-8（11-14岁）",
+          "description": "建立技术基础的实践项目"
+        },
+        "high": {
+          "label": "高中",
+          "ageRange": "9-12（14-18岁）",
+          "description": "具有现实应用的高级项目"
+        }
+      },
+      "lessons": "课程",
+      "assessment": "评估",
+      "udl": {
+        "title": "通用学习设计（UDL）",
+        "description": "所有课程都按UDL原则设计：多种参与方式、表征方式和行动/表达方式。每节课都包含针对多样化学习者的适应性内容。",
+        "features": {
+          "entryPoints": "多个切入点",
+          "assessment": "灵活评估",
+          "scaffolded": "分层支持",
+          "responsive": "文化响应性"
+        }
+      },
+      "downloads": {
+        "scopeSequence": {
+          "title": "范围与顺序",
+          "description": "完整课程概述PDF"
+        },
+        "rubrics": {
+          "title": "评估标准",
+          "description": "与标准对齐的评估标准"
+        },
+        "materials": {
+          "title": "材料清单",
+          "description": "硬件和软件需求"
+        }
+      }
+    },
+    "crossLinks": {
+      "title": "学习联系",
+      "partOfPathways": "属于这些路径",
+      "prerequisites": "推荐前提条件",
+      "continueWith": "继续学习",
+      "viewMap": "查看学习地图"
     }
   },
   "privacy": {

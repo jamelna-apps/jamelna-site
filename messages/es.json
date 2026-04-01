@@ -70,6 +70,10 @@
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "Instalación de Arte Conceptual"
+        },
+        "coachdesk": {
+          "title": "CoachDesk",
+          "subtitle": "Plataforma de Coaching Instruccional K-12"
         }
       }
     },
@@ -210,7 +214,12 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ],
-        "category": "products"
+        "category": "products",
+        "appStoreLinks": {
+          "ios": "Próximamente",
+          "privacy": "/gyst/privacy",
+          "terms": "/gyst/terms"
+        }
       },
       {
         "title": "CoachDesk",
@@ -613,7 +622,10 @@
       "scopeSequence": "Alcance y Secuencia",
       "whyUse": "Por Qué Usarlo",
       "standards": "Estándares",
-      "faq": "Preguntas Frecuentes"
+      "faq": "Preguntas Frecuentes",
+      "aiPlanner": "Planificador IA",
+      "comingSoon": "Próximamente",
+      "districtProfile": "Perfil del Distrito"
     },
     "gradeLevels": {
       "elementary": "Primaria (K-5)",
@@ -661,7 +673,11 @@
       "resourcesPlaceholder": "Describe tu presupuesto, tecnología y personal disponible...",
       "submit": "Enviar Perfil",
       "successTitle": "¡Perfil Enviado!",
-      "successMessage": "Gracias por compartir información sobre tu distrito. Pronto nos pondremos en contacto con recomendaciones personalizadas."
+      "successMessage": "Gracias por compartir información sobre tu distrito. Pronto nos pondremos en contacto con recomendaciones personalizadas.",
+      "city": "Ciudad",
+      "cityPlaceholder": "Ingresa tu ciudad",
+      "shortDescription": "Completa una breve evaluación para recibir recomendaciones personalizadas de currículo e implementación.",
+      "startButton": "Iniciar Evaluación"
     },
     "comingSoon": {
       "title": "Asistente de Planificación con IA Próximamente",
@@ -688,7 +704,8 @@
       "comprehensive": {
         "title": "Cobertura K-12",
         "description": "Desde ScratchJr para jardín de infantes hasta AP Computer Science para estudiantes de bachillerato."
-      }
+      },
+      "intro": "Todo lo que necesitas para llevar informática a tu escuela."
     },
     "standards": {
       "title": "Alineación con Estándares Estatales",
@@ -740,6 +757,10 @@
       "title": "¿Listo para Empezar?",
       "description": "Selecciona una trayectoria arriba para explorar los currículos recomendados para el programa de informática de tu escuela.",
       "button": "Explorar Currículos"
+    },
+    "implementation": {
+      "title": "Apoyo a la Implementación",
+      "description": "Obtén orientación personalizada para llevar la educación en informática a tu escuela o distrito."
     }
   },
   "techSovereignty": {
@@ -903,6 +924,12 @@
           "description": "Explora modelos de gobernanza, estrategias de financiación y estructuras organizativas para tecnología de propiedad comunitaria.",
           "difficulty": "Avanzado",
           "duration": "Continuo"
+        },
+        "project4": {
+          "title": "Gobernanza Tecnológica Colaborativa",
+          "description": "Desarrolla estructuras de gobernanza que mantengan la tecnología responsable ante las necesidades de la comunidad: políticas, toma de decisiones y ética.",
+          "difficulty": "Avanzado",
+          "duration": "5-6 semanas"
         }
       }
     },
@@ -1674,6 +1701,172 @@
           "description": "Organizational skills for collective action"
         }
       }
+    },
+    "modeSelector": {
+      "title": "¿Cómo te gustaría aprender?",
+      "educator": {
+        "title": "Soy Docente",
+        "description": "Accede a un currículo estructurado con planes de lección, evaluaciones y materiales diseñados para uso en el aula.",
+        "feature1": "Planes de lección alineados con UDL",
+        "feature2": "Organización por banda de grado",
+        "feature3": "Recursos de evaluación"
+      },
+      "learner": {
+        "title": "Soy Estudiante",
+        "description": "Sigue rutas basadas en objetivos con resultados claros. Sigue tu progreso con puntos de control mientras desarrollas habilidades reales.",
+        "feature1": "Rutas orientadas a objetivos",
+        "feature2": "Proyectos prácticos",
+        "feature3": "Seguimiento del progreso"
+      }
+    },
+    "pathways": {
+      "title": "Rutas de Aprendizaje",
+      "subtitle": "Rutas orientadas a objetivos hacia la independencia tecnológica. Elige lo que quieres lograr y sigue un recorrido estructurado para llegar.",
+      "backToSovereignty": "Volver a Soberanía Tech",
+      "allPathways": "Todas las Rutas",
+      "progress": "{completed} de {total} puntos de control",
+      "completed": "¡Completado!",
+      "nextStep": "Siguiente: Paso {step}",
+      "yourJourney": "Tu Recorrido",
+      "whatYouWillAchieve": "Lo que lograrás",
+      "howItWorks": {
+        "title": "Cómo Funcionan las Rutas",
+        "step1": {
+          "title": "Elige Tu Objetivo",
+          "description": "Selecciona una ruta según lo que quieres lograr. Cada una tiene un resultado claro."
+        },
+        "step2": {
+          "title": "Sigue los Pasos",
+          "description": "Trabaja en lecciones y proyectos a tu propio ritmo. Cada paso se basa en el anterior."
+        },
+        "step3": {
+          "title": "Marca Tu Progreso",
+          "description": "Completa puntos de control para verificar que realmente has hecho el trabajo. Tu progreso se guarda localmente."
+        }
+      },
+      "preferCurriculum": {
+        "title": "¿Prefieres un Currículo Estructurado?",
+        "description": "Si eres docente o prefieres navegar por tema, consulta nuestro currículo completo con planes de lección y evaluaciones.",
+        "cta": "Ver Currículo Completo"
+      },
+      "completion": {
+        "title": "¡Ruta Completada!",
+        "message": "¡Felicitaciones! Has completado todos los puntos de control de esta ruta.",
+        "exploreMore": "Explorar Más Rutas",
+        "browseCurriculum": "Ver Currículo Completo"
+      },
+      "stepTypes": {
+        "quickWin": "Victoria Rápida",
+        "lesson": "Lección",
+        "project": "Proyecto"
+      },
+      "checkpoint": "Punto de Control",
+      "secureNetwork": {
+        "title": "Asegurar Mi Red Doméstica",
+        "description": "Toma el control de la seguridad y privacidad de tu red doméstica",
+        "longDescription": "Aprende a entender, asegurar y optimizar tu red doméstica. Al final, tendrás una red que comprendes y controlas totalmente.",
+        "outcome": "Una red doméstica asegurada con filtrado DNS, monitoreo de dispositivos y protecciones de privacidad"
+      },
+      "ownYourData": {
+        "title": "Ser Dueño de Tus Datos",
+        "description": "Reemplaza los servicios en la nube con alternativas autoalojadas que tú controlas",
+        "longDescription": "Libérate de Google Drive, Dropbox y otros servicios en la nube. Aloja tus propios archivos, fotos y documentos en hardware que te pertenece.",
+        "outcome": "Tu propio almacenamiento en la nube funcionando en tu hardware, accesible desde cualquier lugar"
+      },
+      "stopTracking": {
+        "title": "Dejar de Ser Rastreado",
+        "description": "Bloquea rastreadores, protege tu privacidad y recupera el control",
+        "longDescription": "Entiende cómo las empresas te rastrean en línea e implementa soluciones prácticas para proteger tu privacidad en todos tus dispositivos.",
+        "outcome": "Bloqueo de anuncios en toda la red, privacidad del navegador y huella digital reducida"
+      }
+    },
+    "quickWins": {
+      "title": "Victorias Rápidas",
+      "subtitle": "Prueba la soberanía tecnológica con estos proyectos iniciales. Cada uno te da resultados inmediatos y tangibles.",
+      "badge": "30-45 minutos cada uno",
+      "startNow": "Empezar Ahora"
+    },
+    "trackMap": {
+      "title": "Mapa de Aprendizaje",
+      "subtitle": "Ve cómo se conectan todas las pistas y encuentra tu camino hacia la independencia tecnológica. Haz clic en cualquier pista para explorar su currículo, o selecciona una ruta sugerida para ver la secuencia recomendada.",
+      "sequences": {
+        "title": "Secuencias de Aprendizaje Sugeridas",
+        "sovereignty": {
+          "title": "Soberanía Completa",
+          "description": "El recorrido completo desde entender tus derechos hasta gestionar tu propia infraestructura."
+        },
+        "developer": {
+          "title": "Ruta de Desarrollador",
+          "description": "Enfocada en construir aplicaciones que sirvan a las comunidades y reflejen valores compartidos."
+        },
+        "aiPath": {
+          "title": "Independencia en IA",
+          "description": "Ejecuta modelos de IA potentes localmente sin enviar tus datos a la nube corporativa."
+        }
+      },
+      "legend": {
+        "recommended": "Recomendado",
+        "optional": "Opcional"
+      },
+      "startHere": "Empieza con Derechos Digitales",
+      "allTracks": "Todas las Pistas",
+      "readyToStart": "¿Listo para Empezar?",
+      "choosePathway": "Elige una ruta basada en objetivos para aprendizaje guiado, o sumérgete en cualquier pista que te interese."
+    },
+    "educatorHub": {
+      "title": "Recursos para Docentes por Banda de Grado",
+      "subtitle": "Accede a planes de lección alineados con UDL organizados por nivel de grado. Cada lección incluye objetivos de aprendizaje, materiales y evaluaciones opcionales.",
+      "allGrades": "Todos los Grados",
+      "gradeBands": {
+        "elementary": {
+          "label": "Primaria",
+          "ageRange": "K-5 (Edades 5-11)",
+          "description": "Conceptos fundamentales mediante exploración y juego"
+        },
+        "middle": {
+          "label": "Secundaria",
+          "ageRange": "6-8 (Edades 11-14)",
+          "description": "Proyectos prácticos que construyen bases técnicas"
+        },
+        "high": {
+          "label": "Bachillerato",
+          "ageRange": "9-12 (Edades 14-18)",
+          "description": "Proyectos avanzados con aplicaciones del mundo real"
+        }
+      },
+      "lessons": "lecciones",
+      "assessment": "Evaluación",
+      "udl": {
+        "title": "Diseño Universal para el Aprendizaje (UDL)",
+        "description": "Todas las lecciones están diseñadas con principios UDL: múltiples medios de participación, representación y acción/expresión. Cada una incluye adaptaciones para estudiantes diversos.",
+        "features": {
+          "entryPoints": "Múltiples puntos de entrada",
+          "assessment": "Evaluación flexible",
+          "scaffolded": "Apoyo escalonado",
+          "responsive": "Culturalmente receptivo"
+        }
+      },
+      "downloads": {
+        "scopeSequence": {
+          "title": "Alcance y Secuencia",
+          "description": "PDF con resumen completo del currículo"
+        },
+        "rubrics": {
+          "title": "Rúbricas de Evaluación",
+          "description": "Rúbricas alineadas con los estándares"
+        },
+        "materials": {
+          "title": "Lista de Materiales",
+          "description": "Necesidades de hardware y software"
+        }
+      }
+    },
+    "crossLinks": {
+      "title": "Conexiones de Aprendizaje",
+      "partOfPathways": "Parte de estas rutas",
+      "prerequisites": "Prerequisitos Recomendados",
+      "continueWith": "Continuar Aprendiendo",
+      "viewMap": "Ver mapa de aprendizaje"
     }
   },
   "privacy": {

@@ -70,6 +70,10 @@
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "Instalação de Arte Conceptual"
+        },
+        "coachdesk": {
+          "title": "CoachDesk",
+          "subtitle": "Plataforma de Coaching Instrucional K-12"
         }
       }
     },
@@ -210,7 +214,12 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ],
-        "category": "products"
+        "category": "products",
+        "appStoreLinks": {
+          "ios": "Em breve",
+          "privacy": "/gyst/privacy",
+          "terms": "/gyst/terms"
+        }
       },
       {
         "title": "CoachDesk",
@@ -504,7 +513,64 @@
     "photographyLink": "I'm also a photographer",
     "photographyLinkCta": "View my galleries",
     "contactCta": "Interested in working together?",
-    "contactCtaButton": "Get in touch"
+    "contactCtaButton": "Get in touch",
+    "experienceTitle": "Experiência",
+    "experience": {
+      "ncstate": {
+        "title": "Research Scholar",
+        "org": "NC State University, Friday Institute for Educational Innovation",
+        "dates": "Mar 2025 - Presente",
+        "description": "A liderar gestão de produto e projeto para SceneCraft, uma plataforma educativa de narrativa baseada em IA, como parte do EngageAI Institute financiado pela NSF. A alinhar investigação, design e colaboração com stakeholders para criar soluções de aprendizagem informadas por dados para alunos e educadores K-12."
+      },
+      "csforall": {
+        "title": "Líder do Programa SCRIPT",
+        "org": "CSforALL",
+        "dates": "Abr 2023 - Dez 2024",
+        "description": "Dirigi a implementação nacional da iniciativa SCRIPT, ajudando mais de 50 distritos escolares dos EUA a construir planos abrangentes de educação em CS K-12. Geri parcerias com Microsoft, Northrop Grumman e outros líderes do setor."
+      },
+      "cornellDirector": {
+        "title": "Diretor, Iniciativas de Coaching K-12",
+        "org": "Cornell Tech",
+        "dates": "Nov 2021 - Abr 2023",
+        "description": "Desenvolvi o CS Coaching Toolkit e Card Deck, agora utilizados a nível nacional. Facilitei workshops para NYC DOE, Louisiana e South Carolina. Assessorei universidades e distritos sobre integração de programas de CS."
+      },
+      "cornellResident": {
+        "title": "Professor-em-Residência",
+        "org": "Cornell Tech",
+        "dates": "Set 2019 - Nov 2021",
+        "description": "Fiz a ponte entre investigação académica e prática letiva. Colaborei com investigadores em projetos de tecnologia educativa e contribuí com perspetiva de profissional para iniciativas de desenvolvimento curricular."
+      },
+      "nycdoe": {
+        "title": "Gestor de Educação em Informática",
+        "org": "NYC Department of Education",
+        "dates": "Ago 2016 - Ago 2019",
+        "description": "Liderei a implementação CS4All em mais de 200 escolas em Manhattan como parte da maior iniciativa de equidade em CS do país. Formei mais de 500 educadores e construí parcerias com a indústria e organizações comunitárias."
+      },
+      "expanded": {
+        "title": "Gestor STEM",
+        "org": "ExpandED Schools",
+        "dates": "Ago 2015 - Ago 2016",
+        "description": "Geri programação STEM em programas extracurriculares para alunos de NYC. Desenvolvi frameworks curriculares e proporcionei desenvolvimento profissional para staff de programas."
+      },
+      "nyasPm": {
+        "title": "Gestor de Programa, Global STEM Alliance",
+        "org": "New York Academy of Sciences",
+        "dates": "Nov 2014 - Jul 2015",
+        "description": "Geri iniciativas internacionais de educação STEM conectando alunos com cientistas em todo o mundo. Coordenei programas de mentoria virtual e desafios STEM globais."
+      },
+      "nyasCoord": {
+        "title": "Coordenador de Programa, Mentoria STEM Extracurricular",
+        "org": "New York Academy of Sciences",
+        "dates": "Ago 2013 - Nov 2014",
+        "description": "Coordenei programas de mentoria STEM extracurricular emparelhando cientistas com jovens de comunidades carenciadas. Geri recrutamento de voluntários, formação e logística de programas."
+      },
+      "lsc": {
+        "title": "Educador de Museu & Desenvolvedor de Programas",
+        "org": "Liberty Science Center",
+        "dates": "2009 - 2013",
+        "description": "Desenvolvi e ministrei programas de educação científica para públicos diversos. Criei exposições interativas e facilitei experiências de aprendizagem que despertaram a curiosidade em visitantes de todas as idades."
+      }
+    }
   },
   "contact": {
     "title": "Contact",
@@ -602,7 +668,11 @@
       "resourcesPlaceholder": "Descreva o seu orçamento, tecnologia e pessoal disponível...",
       "submit": "Enviar Perfil",
       "successTitle": "Perfil Enviado!",
-      "successMessage": "Obrigado por partilhar informações sobre o seu distrito. Entraremos em contacto em breve com recomendações personalizadas."
+      "successMessage": "Obrigado por partilhar informações sobre o seu distrito. Entraremos em contacto em breve com recomendações personalizadas.",
+      "city": "Cidade",
+      "cityPlaceholder": "Introduza a sua cidade",
+      "shortDescription": "Complete uma breve avaliação para receber recomendações personalizadas de currículo e implementação.",
+      "startButton": "Iniciar Avaliação"
     },
     "comingSoon": {
       "title": "Assistente de Planeamento com IA Em Breve",
@@ -629,7 +699,8 @@
       "comprehensive": {
         "title": "Cobertura K-12",
         "description": "Desde ScratchJr para jardim de infância até AP Computer Science para alunos do ensino secundário."
-      }
+      },
+      "intro": "Tudo o que precisa para levar a informática à sua escola."
     },
     "standards": {
       "title": "Alinhamento com Padrões Estaduais",
@@ -711,6 +782,32 @@
         "generic": "Ocorreu um erro. Por favor, tente novamente.",
         "networkError": "Erro de rede. Por favor, verifique a sua ligação e tente novamente."
       }
+    },
+    "hero": {
+      "ctaPrimary": "Explorar Currículos",
+      "ctaSecondary": "Construir Âmbito e Sequência"
+    },
+    "implementation": {
+      "title": "Apoio à Implementação",
+      "description": "Obtenha orientação personalizada para implementar a educação em CS na sua escola ou distrito."
+    },
+    "scopeSequence": {
+      "title": "Construa o Seu Âmbito e Sequência",
+      "subtitle": "Selecione um percurso para ver currículos recomendados para cada nível de escolaridade",
+      "foundation": "Base para Todos os Percursos",
+      "foundationDescription": "As competências de Pensamento Computacional e Ciência de Dados estão integradas em todos os percursos, desenvolvendo competências essenciais desde o ensino básico ao secundário.",
+      "selectPathway": "Selecione o Seu Percurso",
+      "elementary": "1.º Ciclo (K-5)",
+      "middle": "2.º e 3.º Ciclos (6-8)",
+      "high": "Ensino Secundário (9-12)",
+      "coreCurricula": "Currículos Nucleares",
+      "pathwayCurricula": "Específicos do Percurso",
+      "skills": "Competências Chave"
+    },
+    "cta": {
+      "title": "Pronto para Começar?",
+      "description": "Selecione um percurso acima para explorar currículos recomendados para o programa de CS da sua escola.",
+      "button": "Explorar Currículos"
     }
   },
   "techSovereignty": {
@@ -874,6 +971,12 @@
           "description": "Explore modelos de governança, estratégias de financiamento e estruturas organizacionais para tecnologia de propriedade comunitária.",
           "difficulty": "Avançado",
           "duration": "Contínuo"
+        },
+        "project4": {
+          "title": "Governação Tecnológica Colaborativa",
+          "description": "Desenvolva estruturas de governação que mantenham a tecnologia responsável perante as necessidades da comunidade — políticas, tomada de decisão e ética.",
+          "difficulty": "Avançado",
+          "duration": "5-6 semanas"
         }
       }
     },
@@ -1645,6 +1748,172 @@
           "description": "Organizational skills for collective action"
         }
       }
+    },
+    "modeSelector": {
+      "title": "Como gostaria de aprender?",
+      "educator": {
+        "title": "Sou Educador",
+        "description": "Aceda a currículo estruturado com planos de aula, avaliações e materiais concebidos para uso em sala de aula.",
+        "feature1": "Planos de aula alinhados com UDL",
+        "feature2": "Organização por ciclo de ensino",
+        "feature3": "Recursos de avaliação"
+      },
+      "learner": {
+        "title": "Estou a Aprender",
+        "description": "Siga percursos baseados em objetivos com resultados claros. Acompanhe o seu progresso com pontos de verificação enquanto desenvolve competências reais.",
+        "feature1": "Percursos orientados por objetivos",
+        "feature2": "Projetos práticos",
+        "feature3": "Acompanhamento do progresso"
+      }
+    },
+    "pathways": {
+      "title": "Percursos de Aprendizagem",
+      "subtitle": "Percursos orientados por objetivos para a independência tecnológica. Escolha o que quer alcançar e siga um trajeto estruturado para chegar lá.",
+      "backToSovereignty": "Voltar à Soberania Tech",
+      "allPathways": "Todos os Percursos",
+      "progress": "{completed} de {total} pontos de verificação",
+      "completed": "Concluído!",
+      "nextStep": "Próximo: Passo {step}",
+      "yourJourney": "O Seu Percurso",
+      "whatYouWillAchieve": "O que irá alcançar",
+      "howItWorks": {
+        "title": "Como Funcionam os Percursos",
+        "step1": {
+          "title": "Escolha o Seu Objetivo",
+          "description": "Selecione um percurso com base no que quer alcançar. Cada um tem um resultado claro."
+        },
+        "step2": {
+          "title": "Siga os Passos",
+          "description": "Trabalhe nas lições e projetos ao seu próprio ritmo. Cada passo baseia-se no anterior."
+        },
+        "step3": {
+          "title": "Marque o Seu Progresso",
+          "description": "Complete pontos de verificação para confirmar que realmente fez o trabalho. O seu progresso é guardado localmente."
+        }
+      },
+      "preferCurriculum": {
+        "title": "Prefere Currículo Estruturado?",
+        "description": "Se é educador ou prefere navegar por tema, consulte o nosso currículo completo com planos de aula e avaliações.",
+        "cta": "Ver Currículo Completo"
+      },
+      "completion": {
+        "title": "Percurso Concluído!",
+        "message": "Parabéns! Concluiu todos os pontos de verificação neste percurso.",
+        "exploreMore": "Explorar Mais Percursos",
+        "browseCurriculum": "Consultar Currículo Completo"
+      },
+      "stepTypes": {
+        "quickWin": "Vitória Rápida",
+        "lesson": "Lição",
+        "project": "Projeto"
+      },
+      "checkpoint": "Ponto de Verificação",
+      "secureNetwork": {
+        "title": "Proteger a Minha Rede Doméstica",
+        "description": "Tome o controlo da segurança e privacidade da sua rede doméstica",
+        "longDescription": "Aprenda a compreender, proteger e otimizar a sua rede doméstica. No final, terá uma rede que compreende e controla totalmente.",
+        "outcome": "Uma rede doméstica protegida com filtragem DNS, monitorização de dispositivos e proteções de privacidade"
+      },
+      "ownYourData": {
+        "title": "Ser Dono dos Seus Dados",
+        "description": "Substitua serviços na nuvem por alternativas auto-alojadas que controla",
+        "longDescription": "Liberte-se do Google Drive, Dropbox e outros serviços na nuvem. Aloje os seus próprios ficheiros, fotos e documentos em hardware que lhe pertence.",
+        "outcome": "O seu próprio armazenamento na nuvem a correr no seu hardware, acessível a partir de qualquer lugar"
+      },
+      "stopTracking": {
+        "title": "Parar de Ser Rastreado",
+        "description": "Bloqueie rastreadores, proteja a sua privacidade e retome o controlo",
+        "longDescription": "Compreenda como as empresas o rastreiam online e implemente soluções práticas para proteger a sua privacidade em todos os seus dispositivos.",
+        "outcome": "Bloqueio de anúncios em toda a rede, privacidade do browser e pegada digital reduzida"
+      }
+    },
+    "quickWins": {
+      "title": "Vitórias Rápidas",
+      "subtitle": "Experimente a soberania tecnológica com estes projetos iniciais. Cada um fornece resultados imediatos e tangíveis.",
+      "badge": "30-45 minutos cada",
+      "startNow": "Começar Agora"
+    },
+    "trackMap": {
+      "title": "Mapa de Aprendizagem",
+      "subtitle": "Veja como todas as faixas se conectam e encontre o seu caminho para a independência tecnológica. Clique em qualquer faixa para explorar o seu currículo, ou selecione um percurso sugerido para ver a sequência recomendada.",
+      "sequences": {
+        "title": "Sequências de Aprendizagem Sugeridas",
+        "sovereignty": {
+          "title": "Soberania Completa",
+          "description": "O percurso completo desde compreender os seus direitos até gerir a sua própria infraestrutura."
+        },
+        "developer": {
+          "title": "Percurso de Programador",
+          "description": "Foco na criação de aplicações que servem comunidades e refletem valores partilhados."
+        },
+        "aiPath": {
+          "title": "Independência em IA",
+          "description": "Execute modelos de IA poderosos localmente sem enviar os seus dados para nuvens corporativas."
+        }
+      },
+      "legend": {
+        "recommended": "Recomendado",
+        "optional": "Opcional"
+      },
+      "startHere": "Comece com Direitos Digitais",
+      "allTracks": "Todas as Faixas",
+      "readyToStart": "Pronto para Começar?",
+      "choosePathway": "Escolha um percurso baseado em objetivos para aprendizagem guiada, ou mergulhe em qualquer faixa que lhe interesse."
+    },
+    "educatorHub": {
+      "title": "Recursos para Educadores por Ciclo de Ensino",
+      "subtitle": "Aceda a planos de aula alinhados com UDL organizados por nível de escolaridade. Cada lição inclui objetivos de aprendizagem, materiais e avaliações opcionais.",
+      "allGrades": "Todos os Ciclos",
+      "gradeBands": {
+        "elementary": {
+          "label": "1.º Ciclo",
+          "ageRange": "K-5 (Idades 5-11)",
+          "description": "Conceitos fundamentais através da exploração e do jogo"
+        },
+        "middle": {
+          "label": "2.º e 3.º Ciclos",
+          "ageRange": "6-8 (Idades 11-14)",
+          "description": "Projetos práticos que constroem bases técnicas"
+        },
+        "high": {
+          "label": "Ensino Secundário",
+          "ageRange": "9-12 (Idades 14-18)",
+          "description": "Projetos avançados com aplicações no mundo real"
+        }
+      },
+      "lessons": "lições",
+      "assessment": "Avaliação",
+      "udl": {
+        "title": "Universal Design for Learning (UDL)",
+        "description": "Todas as lições são concebidas com princípios UDL: múltiplos meios de envolvimento, representação e ação/expressão. Cada uma inclui adaptações para alunos com necessidades diversas.",
+        "features": {
+          "entryPoints": "Múltiplos pontos de entrada",
+          "assessment": "Avaliação flexível",
+          "scaffolded": "Suporte graduado",
+          "responsive": "Culturalmente responsivo"
+        }
+      },
+      "downloads": {
+        "scopeSequence": {
+          "title": "Âmbito e Sequência",
+          "description": "PDF com visão geral completa do currículo"
+        },
+        "rubrics": {
+          "title": "Rubricas de Avaliação",
+          "description": "Rubricas alinhadas com os padrões"
+        },
+        "materials": {
+          "title": "Lista de Materiais",
+          "description": "Necessidades de hardware e software"
+        }
+      }
+    },
+    "crossLinks": {
+      "title": "Ligações de Aprendizagem",
+      "partOfPathways": "Parte destes percursos",
+      "prerequisites": "Pré-requisitos Recomendados",
+      "continueWith": "Continuar a Aprender",
+      "viewMap": "Ver mapa de aprendizagem"
     }
   },
   "privacy": {

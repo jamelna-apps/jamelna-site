@@ -70,6 +70,10 @@
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "Konzeptkunst-Installation"
+        },
+        "coachdesk": {
+          "title": "CoachDesk",
+          "subtitle": "K-12 Instruktions-Coaching-Plattform"
         }
       }
     },
@@ -210,7 +214,12 @@
           "/images/screenshots/gyst/outfits.png",
           "/images/screenshots/gyst/insights.png"
         ],
-        "category": "products"
+        "category": "products",
+        "appStoreLinks": {
+          "ios": "Demnächst verfügbar",
+          "privacy": "/gyst/privacy",
+          "terms": "/gyst/terms"
+        }
       },
       {
         "title": "CoachDesk",
@@ -504,7 +513,64 @@
     "photographyLink": "I'm also a photographer",
     "photographyLinkCta": "View my galleries",
     "contactCta": "Interested in working together?",
-    "contactCtaButton": "Get in touch"
+    "contactCtaButton": "Get in touch",
+    "experienceTitle": "Berufserfahrung",
+    "experience": {
+      "ncstate": {
+        "title": "Research Scholar",
+        "org": "NC State University, Friday Institute for Educational Innovation",
+        "dates": "Mrz 2025 - Heute",
+        "description": "Leitung von Produkt- und Projektmanagement für SceneCraft, eine KI-gestützte Bildungs-Storytelling-Plattform, als Teil des NSF-geförderten EngageAI Institute. Ausrichtung von Forschung, Design und Stakeholder-Zusammenarbeit zur Schaffung datengesteuerter Lernlösungen für K-12-Schüler und Lehrkräfte."
+      },
+      "csforall": {
+        "title": "SCRIPT-Programmleiter",
+        "org": "CSforALL",
+        "dates": "Apr 2023 - Dez 2024",
+        "description": "Leitung der nationalen Implementierung der SCRIPT-Initiative, die über 50 US-Schulbezirken hilft, umfassende K-12-Informatik-Bildungspläne zu entwickeln. Verwaltung von Partnerschaften mit Microsoft, Northrop Grumman und anderen Branchenführern."
+      },
+      "cornellDirector": {
+        "title": "Direktor, K-12 Coaching-Initiativen",
+        "org": "Cornell Tech",
+        "dates": "Nov 2021 - Apr 2023",
+        "description": "Entwicklung des CS Coaching Toolkit und Card Deck, die jetzt national eingesetzt werden. Durchführung von Workshops für NYC DOE, Louisiana und South Carolina. Beratung von Universitäten und Bezirken zur Informatik-Programmintegration."
+      },
+      "cornellResident": {
+        "title": "Teacher-in-Residence",
+        "org": "Cornell Tech",
+        "dates": "Sep 2019 - Nov 2021",
+        "description": "Verbindung von akademischer Forschung und Unterrichtspraxis. Zusammenarbeit mit Forschern an Bildungstechnologie-Projekten und Einbringen von Praktikerperspektiven in Lehrplanentwicklungsinitiativen."
+      },
+      "nycdoe": {
+        "title": "Manager für Informatik-Bildung",
+        "org": "NYC Department of Education",
+        "dates": "Aug 2016 - Aug 2019",
+        "description": "Leitung der CS4All-Implementierung an über 200 Schulen in Manhattan als Teil der größten Informatik-Gerechtigkeitsinitiative des Landes. Schulung von über 500 Lehrkräften und Aufbau von Partnerschaften mit Industrie und Gemeinschaftsorganisationen."
+      },
+      "expanded": {
+        "title": "MINT-Manager",
+        "org": "ExpandED Schools",
+        "dates": "Aug 2015 - Aug 2016",
+        "description": "Verwaltung von MINT-Programmen in außerschulischen Programmen für NYC-Schüler. Entwicklung von Lehrplanrahmen und Bereitstellung von beruflicher Entwicklung für Programmmitarbeiter."
+      },
+      "nyasPm": {
+        "title": "Programmmanager, Global STEM Alliance",
+        "org": "New York Academy of Sciences",
+        "dates": "Nov 2014 - Jul 2015",
+        "description": "Verwaltung internationaler MINT-Bildungsinitiativen zur Verbindung von Schülern mit Wissenschaftlern weltweit. Koordination virtueller Mentoring-Programme und globaler MINT-Herausforderungen."
+      },
+      "nyasCoord": {
+        "title": "Programmkoordinator, Außerschulisches MINT-Mentoring",
+        "org": "New York Academy of Sciences",
+        "dates": "Aug 2013 - Nov 2014",
+        "description": "Koordination außerschulischer MINT-Mentoring-Programme, die Wissenschaftler mit benachteiligten Jugendlichen zusammenbringen. Verwaltung von Freiwilligenrekrutierung, Schulung und Programmlogistik."
+      },
+      "lsc": {
+        "title": "Museumspädagoge & Programmentwickler",
+        "org": "Liberty Science Center",
+        "dates": "2009 - 2013",
+        "description": "Entwicklung und Durchführung von Wissenschaftspädagogik-Programmen für vielfältige Zielgruppen. Erstellung von interaktiven Exponaten und Ermöglichung von Lernerfahrungen, die die Neugier bei Besuchern aller Altersgruppen weckten."
+      }
+    }
   },
   "contact": {
     "title": "Contact",
@@ -602,7 +668,11 @@
       "resourcesPlaceholder": "Beschreiben Sie Ihr Budget, Ihre Technologie und verfügbares Personal...",
       "submit": "Profil Einreichen",
       "successTitle": "Profil Eingereicht!",
-      "successMessage": "Vielen Dank für die Informationen über Ihren Bezirk. Wir werden Sie bald mit personalisierten Empfehlungen kontaktieren."
+      "successMessage": "Vielen Dank für die Informationen über Ihren Bezirk. Wir werden Sie bald mit personalisierten Empfehlungen kontaktieren.",
+      "city": "Stadt",
+      "cityPlaceholder": "Geben Sie Ihre Stadt ein",
+      "shortDescription": "Füllen Sie eine kurze Bewertung aus, um maßgeschneiderte Lehrplan- und Implementierungsempfehlungen zu erhalten.",
+      "startButton": "Bewertung Starten"
     },
     "comingSoon": {
       "title": "KI-Planungsassistent Kommt Bald",
@@ -629,7 +699,8 @@
       "comprehensive": {
         "title": "K-12 Abdeckung",
         "description": "Von ScratchJr für den Kindergarten bis AP Computer Science für Oberstufenschüler."
-      }
+      },
+      "intro": "Alles, was Sie brauchen, um Informatik in Ihre Schule zu bringen."
     },
     "standards": {
       "title": "Ausrichtung an Staatlichen Standards",
@@ -711,6 +782,32 @@
         "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
         "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
       }
+    },
+    "hero": {
+      "ctaPrimary": "Lehrpläne Erkunden",
+      "ctaSecondary": "Umfang & Reihenfolge Erstellen"
+    },
+    "implementation": {
+      "title": "Implementierungsunterstützung",
+      "description": "Erhalten Sie persönliche Beratung für die Einführung von Informatik-Bildung in Ihrer Schule oder Ihrem Bezirk."
+    },
+    "scopeSequence": {
+      "title": "Ihren Umfang & Reihenfolge Erstellen",
+      "subtitle": "Wählen Sie einen Schwerpunkt, um empfohlene Lehrpläne für jede Klassenstufe zu sehen",
+      "foundation": "Grundlage für Alle Lernpfade",
+      "foundationDescription": "Rechnerisches Denken und Datenwissenschaft sind in jeden Lernpfad eingebettet und bauen wesentliche Fähigkeiten von der Grundschule bis zur Oberstufe auf.",
+      "selectPathway": "Wählen Sie Ihren Schwerpunkt",
+      "elementary": "Grundschule (K-5)",
+      "middle": "Mittelstufe (6-8)",
+      "high": "Oberstufe (9-12)",
+      "coreCurricula": "Kernlehrpläne",
+      "pathwayCurricula": "Lernpfad-spezifisch",
+      "skills": "Schlüsselkompetenzen"
+    },
+    "cta": {
+      "title": "Bereit Loszulegen?",
+      "description": "Wählen Sie oben einen Lernpfad, um empfohlene Lehrpläne für das Informatik-Bildungsprogramm Ihrer Schule zu erkunden.",
+      "button": "Lehrpläne Erkunden"
     }
   },
   "techSovereignty": {
@@ -874,6 +971,12 @@
           "description": "Erkunden Sie Governance-Modelle, Finanzierungsstrategien und Organisationsstrukturen für gemeinschaftseigene Technologie.",
           "difficulty": "Experte",
           "duration": "Fortlaufend"
+        },
+        "project4": {
+          "title": "Kollaborative Technologie-Governance",
+          "description": "Entwicklung von Governance-Strukturen, die Technologie gegenüber den Bedürfnissen der Gemeinschaft verantwortlich halten — Richtlinien, Entscheidungsfindung und Ethik.",
+          "difficulty": "Experte",
+          "duration": "5-6 Wochen"
         }
       }
     },
@@ -1645,6 +1748,172 @@
           "description": "Organizational skills for collective action"
         }
       }
+    },
+    "modeSelector": {
+      "title": "Wie möchten Sie lernen?",
+      "educator": {
+        "title": "Ich Unterrichte",
+        "description": "Zugang zu strukturiertem Lehrplan mit Unterrichtsplänen, Bewertungen und Materialien für den Unterrichtseinsatz.",
+        "feature1": "UDL-konforme Unterrichtspläne",
+        "feature2": "Klassenstufenorganisation",
+        "feature3": "Bewertungsressourcen"
+      },
+      "learner": {
+        "title": "Ich Lerne",
+        "description": "Folgen Sie zielorientierten Lernpfaden mit klaren Ergebnissen. Verfolgen Sie Ihren Fortschritt mit Checkpoints beim Aufbau echter Fähigkeiten.",
+        "feature1": "Zielorientierte Pfade",
+        "feature2": "Praxisprojekte",
+        "feature3": "Fortschrittsverfolgung"
+      }
+    },
+    "pathways": {
+      "title": "Lernpfade",
+      "subtitle": "Zielorientierte Pfade zur technologischen Unabhängigkeit. Wählen Sie, was Sie erreichen möchten, und folgen Sie einem strukturierten Weg dorthin.",
+      "backToSovereignty": "Zurück zur Tech-Souveränität",
+      "allPathways": "Alle Lernpfade",
+      "progress": "{completed} von {total} Checkpoints",
+      "completed": "Abgeschlossen!",
+      "nextStep": "Weiter: Schritt {step}",
+      "yourJourney": "Ihr Lernweg",
+      "whatYouWillAchieve": "Was Sie erreichen werden",
+      "howItWorks": {
+        "title": "So Funktionieren Lernpfade",
+        "step1": {
+          "title": "Ziel Wählen",
+          "description": "Wählen Sie einen Lernpfad basierend auf dem, was Sie erreichen möchten. Jeder hat ein klares Ergebnis."
+        },
+        "step2": {
+          "title": "Den Schritten Folgen",
+          "description": "Arbeiten Sie Lektionen und Projekte in Ihrem eigenen Tempo durch. Jeder Schritt baut auf dem letzten auf."
+        },
+        "step3": {
+          "title": "Fortschritt Markieren",
+          "description": "Vervollständigen Sie Checkpoints, um zu überprüfen, dass Sie die Arbeit wirklich erledigt haben. Ihr Fortschritt wird lokal gespeichert."
+        }
+      },
+      "preferCurriculum": {
+        "title": "Strukturierten Lehrplan Bevorzugt?",
+        "description": "Wenn Sie Pädagoge sind oder lieber nach Themen stöbern, schauen Sie sich unseren vollständigen Lehrplan mit Unterrichtsplänen und Bewertungen an.",
+        "cta": "Vollständigen Lehrplan Ansehen"
+      },
+      "completion": {
+        "title": "Lernpfad Abgeschlossen!",
+        "message": "Herzlichen Glückwunsch! Sie haben alle Checkpoints in diesem Lernpfad abgeschlossen.",
+        "exploreMore": "Weitere Lernpfade Erkunden",
+        "browseCurriculum": "Vollständigen Lehrplan Durchsuchen"
+      },
+      "stepTypes": {
+        "quickWin": "Schneller Erfolg",
+        "lesson": "Lektion",
+        "project": "Projekt"
+      },
+      "checkpoint": "Checkpoint",
+      "secureNetwork": {
+        "title": "Mein Heimnetzwerk Sichern",
+        "description": "Übernehmen Sie die Kontrolle über die Sicherheit und Privatsphäre Ihres Heimnetzwerks",
+        "longDescription": "Lernen Sie, Ihr Heimnetzwerk zu verstehen, zu sichern und zu optimieren. Am Ende haben Sie ein Netzwerk, das Sie vollständig verstehen und kontrollieren.",
+        "outcome": "Ein gesichertes Heimnetzwerk mit DNS-Filterung, Gerätemonitoring und Datenschutzschutzmaßnahmen"
+      },
+      "ownYourData": {
+        "title": "Eigene Daten Besitzen",
+        "description": "Ersetzen Sie Cloud-Dienste durch selbst gehostete Alternativen, die Sie kontrollieren",
+        "longDescription": "Befreien Sie sich von Google Drive, Dropbox und anderen Cloud-Diensten. Hosten Sie Ihre eigenen Dateien, Fotos und Dokumente auf Hardware, die Ihnen gehört.",
+        "outcome": "Eigener Cloud-Speicher auf Ihrer Hardware, von überall zugänglich"
+      },
+      "stopTracking": {
+        "title": "Tracking Stoppen",
+        "description": "Tracker blockieren, Privatsphäre schützen und die Kontrolle zurückgewinnen",
+        "longDescription": "Verstehen Sie, wie Unternehmen Sie online verfolgen, und implementieren Sie praktische Lösungen zum Schutz Ihrer Privatsphäre auf allen Ihren Geräten.",
+        "outcome": "Netzwerkweite Werbeblockierung, Browser-Datenschutz und reduzierter digitaler Fußabdruck"
+      }
+    },
+    "quickWins": {
+      "title": "Schnelle Erfolge",
+      "subtitle": "Erhalten Sie einen Vorgeschmack auf Tech-Souveränität mit diesen Starterprojekten. Jedes liefert sofortige, greifbare Ergebnisse.",
+      "badge": "30-45 Minuten je Projekt",
+      "startNow": "Jetzt Starten"
+    },
+    "trackMap": {
+      "title": "Lernkarte",
+      "subtitle": "Sehen Sie, wie alle Tracks zusammenhängen, und finden Sie Ihren Weg zur technologischen Unabhängigkeit. Klicken Sie auf einen Track, um seinen Lehrplan zu erkunden, oder wählen Sie einen vorgeschlagenen Pfad, um die empfohlene Reihenfolge zu sehen.",
+      "sequences": {
+        "title": "Vorgeschlagene Lernsequenzen",
+        "sovereignty": {
+          "title": "Vollständige Souveränität",
+          "description": "Die vollständige Reise vom Verstehen Ihrer Rechte bis zum Betrieb eigener Infrastruktur."
+        },
+        "developer": {
+          "title": "Entwicklerpfad",
+          "description": "Schwerpunkt auf dem Aufbau von Anwendungen, die Gemeinschaften dienen und gemeinsame Werte widerspiegeln."
+        },
+        "aiPath": {
+          "title": "KI-Unabhängigkeit",
+          "description": "Leistungsstarke KI-Modelle lokal betreiben, ohne Daten an Unternehmens-Clouds zu senden."
+        }
+      },
+      "legend": {
+        "recommended": "Empfohlen",
+        "optional": "Optional"
+      },
+      "startHere": "Mit Digitalen Rechten Beginnen",
+      "allTracks": "Alle Tracks",
+      "readyToStart": "Bereit zum Starten?",
+      "choosePathway": "Wählen Sie einen zielorientierten Lernpfad für geführtes Lernen oder tauchen Sie in jeden Track ein, der Sie interessiert."
+    },
+    "educatorHub": {
+      "title": "Lehrerressourcen nach Klassenstufe",
+      "subtitle": "Greifen Sie auf UDL-konforme Unterrichtspläne zu, die nach Klassenstufe organisiert sind. Jede Lektion enthält Lernziele, Materialien und optionale Bewertungen.",
+      "allGrades": "Alle Klassenstufen",
+      "gradeBands": {
+        "elementary": {
+          "label": "Grundschule",
+          "ageRange": "K-5 (Alter 5-11)",
+          "description": "Grundkonzepte durch Erkundung und Spiel"
+        },
+        "middle": {
+          "label": "Mittelstufe",
+          "ageRange": "6-8 (Alter 11-14)",
+          "description": "Praktische Projekte zum Aufbau technischer Grundlagen"
+        },
+        "high": {
+          "label": "Oberstufe",
+          "ageRange": "9-12 (Alter 14-18)",
+          "description": "Fortgeschrittene Projekte mit realen Anwendungen"
+        }
+      },
+      "lessons": "Lektionen",
+      "assessment": "Bewertung",
+      "udl": {
+        "title": "Universal Design for Learning (UDL)",
+        "description": "Alle Lektionen sind nach UDL-Prinzipien gestaltet: mehrere Mittel zur Beteiligung, Repräsentation und Handlung/Ausdruck. Jede enthält Anpassungen für vielfältige Lernende.",
+        "features": {
+          "entryPoints": "Mehrere Einstiegspunkte",
+          "assessment": "Flexible Bewertung",
+          "scaffolded": "Gestufte Unterstützung",
+          "responsive": "Kulturell responsiv"
+        }
+      },
+      "downloads": {
+        "scopeSequence": {
+          "title": "Umfang & Reihenfolge",
+          "description": "Vollständige Lehrplanübersicht als PDF"
+        },
+        "rubrics": {
+          "title": "Bewertungsrubriken",
+          "description": "Standardkonforme Rubriken"
+        },
+        "materials": {
+          "title": "Materialliste",
+          "description": "Hardware- und Softwareanforderungen"
+        }
+      }
+    },
+    "crossLinks": {
+      "title": "Lernverbindungen",
+      "partOfPathways": "Teil dieser Lernpfade",
+      "prerequisites": "Empfohlene Voraussetzungen",
+      "continueWith": "Weiter Lernen",
+      "viewMap": "Lernkarte ansehen"
     }
   },
   "privacy": {
