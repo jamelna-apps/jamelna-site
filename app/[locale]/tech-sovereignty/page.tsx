@@ -11,7 +11,6 @@ import { EducatorHub } from '@/components/tech-sovereignty/EducatorHub';
 import { getAllPathways } from '@/data/pathways';
 import { quickWins } from '@/data/quick-wins';
 import { getCompletedCount } from '@/lib/sovereignty-progress';
-import PhotoBreak from '@/components/PhotoBreak';
 
 // Scroll reveal hook
 function useScrollReveal() {
@@ -182,20 +181,17 @@ export default function TechSovereigntyPage() {
   const t = useTranslations('techSovereignty');
   const locale = useLocale();
   const [selectedMode, setSelectedMode] = useState<'educator' | 'learner' | null>(null);
-  const [pathwayProgress, setPathwayProgress] = useState<Record<string, number>>({});
-  const curriculumRef = useRef<HTMLDivElement>(null);
-  const pathwaysRef = useRef<HTMLDivElement>(null);
-  const containerRef = useScrollReveal();
-
-  // Load progress from localStorage on mount
-  useEffect(() => {
+  const [pathwayProgress] = useState<Record<string, number>>(() => {
     const pathways = getAllPathways();
     const progress: Record<string, number> = {};
     pathways.forEach((pathway) => {
       progress[pathway.slug] = getCompletedCount(pathway.slug);
     });
-    setPathwayProgress(progress);
-  }, []);
+    return progress;
+  });
+  const curriculumRef = useRef<HTMLDivElement>(null);
+  const pathwaysRef = useRef<HTMLDivElement>(null);
+  const containerRef = useScrollReveal();
 
   const handleModeSelect = (mode: 'educator' | 'learner') => {
     setSelectedMode(mode);

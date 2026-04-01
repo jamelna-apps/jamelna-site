@@ -16,8 +16,8 @@ interface CompactProjectCardProps {
 
 const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
   title,
-  role,
-  organization,
+  role: _role,
+  organization: _organization,
   timeline,
   challenge,
   skills,

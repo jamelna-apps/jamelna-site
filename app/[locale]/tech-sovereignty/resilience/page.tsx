@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import PhotoBreak from '@/components/PhotoBreak';
 
 // Scroll reveal hook
 function useScrollReveal() {
