@@ -133,15 +133,6 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Photo break between Professional and Products */}
-          <div className="mb-20 -mx-4">
-            <PhotoBreak
-              src="/photos/once-upon-a-time-in-new-york/16-DSCF4610.webp"
-              alt="Travel photography"
-              position="center"
-              height="25vh"
-            />
-          </div>
 
           {/* Products I've Built */}
           <div className="mb-20" id="products">
