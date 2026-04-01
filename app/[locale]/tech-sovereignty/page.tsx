@@ -373,12 +373,8 @@ export default function TechSovereigntyPage() {
         </div>
       </section>
 
-      {/* Photo Break */}
-      <PhotoBreak
-        src="/photos/bridge.webp"
-        alt="Digital infrastructure and connectivity"
-        position="center 60%"
-        height="25vh"
+      {/* Spacer between sections */}
+      <div className="h-px bg-canvas-border"
       />
 
       {/* Digital Resilience Toolkit Banner */}

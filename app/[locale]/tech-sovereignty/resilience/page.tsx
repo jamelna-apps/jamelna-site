@@ -393,13 +393,6 @@ export default function ResiliencePage() {
         </div>
       </section>
 
-      {/* Photo Break */}
-      <PhotoBreak
-        src="/photos/bridge.webp"
-        alt="Digital infrastructure — resilience through independence"
-        position="center 50%"
-        height="22vh"
-      />
 
       <div className="max-w-6xl mx-auto px-6 pb-24 space-y-20">
 
