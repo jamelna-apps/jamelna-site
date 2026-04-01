@@ -365,21 +365,21 @@ export default function ResiliencePage() {
           <div className="flex flex-wrap gap-6 mt-10">
             <div className="text-center">
               <div className="text-3xl font-black text-white">{resilienceActions.length}</div>
-              <div className="text-xs text-zinc-500 uppercase tracking-wide mt-0.5">
+              <div className="text-sm text-zinc-500 uppercase tracking-wide mt-0.5">
                 {t('resilience.hero.statActions')}
               </div>
             </div>
             <div className="w-px bg-zinc-700 self-stretch" />
             <div className="text-center">
               <div className="text-3xl font-black text-white">5</div>
-              <div className="text-xs text-zinc-500 uppercase tracking-wide mt-0.5">
+              <div className="text-sm text-zinc-500 uppercase tracking-wide mt-0.5">
                 {t('resilience.hero.statPillars')}
               </div>
             </div>
             <div className="w-px bg-zinc-700 self-stretch" />
             <div className="text-center">
               <div className="text-3xl font-black text-white">3</div>
-              <div className="text-xs text-zinc-500 uppercase tracking-wide mt-0.5">
+              <div className="text-sm text-zinc-500 uppercase tracking-wide mt-0.5">
                 {t('resilience.hero.statTiers')}
               </div>
             </div>
@@ -392,10 +392,10 @@ export default function ResiliencePage() {
         {/* ── Threat Context Selector ────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-xl font-bold text-white mb-1">
+            <h2 className="text-2xl font-bold text-white mb-2">
               {t('resilience.contexts.sectionTitle')}
             </h2>
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-base">
               {t('resilience.contexts.sectionDescription')}
             </p>
           </div>
@@ -405,10 +405,10 @@ export default function ResiliencePage() {
         {/* ── Tier Selector ──────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-xl font-bold text-white mb-1">
+            <h2 className="text-2xl font-bold text-white mb-2">
               {t('resilience.tiers.sectionTitle')}
             </h2>
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-base">
               {t('resilience.tiers.sectionDescription')}
             </p>
           </div>
@@ -418,10 +418,10 @@ export default function ResiliencePage() {
         {/* ── Pillar Overview Grid ───────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-xl font-bold text-white mb-1">
+            <h2 className="text-2xl font-bold text-white mb-2">
               {t('resilience.pillarsOverview.title')}
             </h2>
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-base">
               {t('resilience.pillarsOverview.description')}
             </p>
           </div>
@@ -466,10 +466,10 @@ export default function ResiliencePage() {
 
               {/* "If you only do one thing" callout */}
               <div className={`${colors.callout} rounded-r-xl px-5 py-4 mb-8`}>
-                <p className={`text-xs font-semibold uppercase tracking-wide ${colors.text} mb-1`}>
+                <p className={`text-sm font-semibold uppercase tracking-wide ${colors.text} mb-1`}>
                   {t('resilience.ifOnlyOneThingLabel')}
                 </p>
-                <p className="text-zinc-200 text-sm font-medium">
+                <p className="text-zinc-200 text-base font-medium">
                   {t(`resilience.pillars.${pillarKeyMap[config.id]}.priority`)}
                 </p>
               </div>
@@ -507,7 +507,7 @@ export default function ResiliencePage() {
             <h2 className="text-2xl font-bold text-white mb-2">
               {t('resilience.toolDirectory.title')}
             </h2>
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-base">
               {t('resilience.toolDirectory.description')}
             </p>
           </div>
@@ -569,10 +569,10 @@ export default function ResiliencePage() {
         {/* ── Cross-links ────────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-xl font-bold text-white mb-1">
+            <h2 className="text-2xl font-bold text-white mb-2">
               {t('resilience.crossLinks.title')}
             </h2>
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-base">
               {t('resilience.crossLinks.description')}
             </p>
           </div>
@@ -589,14 +589,14 @@ export default function ResiliencePage() {
                     {icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white text-sm mb-1">
+                    <h3 className="font-semibold text-white text-base mb-1">
                       {t(`resilience.crossLinks.${crossLinkKeyMap[slug]}.title`)}
                     </h3>
-                    <p className="text-xs text-zinc-400 line-clamp-2">
+                    <p className="text-sm text-zinc-400 line-clamp-2">
                       {t(`resilience.crossLinks.${crossLinkKeyMap[slug]}.description`)}
                     </p>
                   </div>
-                  <div className={`mt-auto pt-2 border-t border-zinc-700 flex items-center gap-1 text-xs ${c.text} group-hover:gap-2 transition-all`}>
+                  <div className={`mt-auto pt-2 border-t border-zinc-700 flex items-center gap-1 text-sm ${c.text} group-hover:gap-2 transition-all`}>
                     {t('resilience.crossLinks.explore')}
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

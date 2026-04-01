@@ -93,7 +93,7 @@ export function ToolRecommendation({
   const colors = colorClasses[color];
 
   return (
-    <div className={`bg-zinc-800 border ${colors.border} ${colors.hoverBorder} rounded-lg px-3 py-2.5 transition-all`}>
+    <div className={`bg-zinc-800 border ${colors.border} ${colors.hoverBorder} rounded-lg px-4 py-3 transition-all`}>
       <div className="flex items-start justify-between gap-2">
         {/* Left: name + replaces */}
         <div className="min-w-0 flex-1">
@@ -101,12 +101,12 @@ export function ToolRecommendation({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-sm font-semibold ${colors.text} hover:underline block leading-tight truncate`}
+            className={`text-base font-semibold ${colors.text} hover:underline block leading-tight truncate`}
           >
             {name}
           </a>
           {replaces && (
-            <p className="text-xs text-zinc-500 mt-0.5 truncate">
+            <p className="text-sm text-zinc-500 mt-0.5 truncate">
               replaces {replaces}
             </p>
           )}

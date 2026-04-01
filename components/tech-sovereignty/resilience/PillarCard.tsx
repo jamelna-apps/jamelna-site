@@ -87,7 +87,7 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h3 className="font-bold text-white text-base leading-tight">
+            <h3 className="font-bold text-white text-lg leading-tight">
               {t(`resilience.pillars.${pillarKey}.title`)}
             </h3>
           </div>
@@ -99,22 +99,22 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
       </div>
 
       {/* Description */}
-      <p className="text-zinc-400 text-sm mb-4 line-clamp-2">
+      <p className="text-zinc-400 text-base mb-4 line-clamp-2">
         {t(`resilience.pillars.${pillarKey}.description`)}
       </p>
 
       {/* Priority callout */}
-      <div className={`${colors.callout} bg-zinc-900/40 rounded-r-lg py-2 pr-3`}>
-        <p className="text-xs text-zinc-500 mb-0.5">If you only do one thing:</p>
-        <p className="text-sm text-zinc-300">
+      <div className={`${colors.callout} bg-zinc-900/40 rounded-r-lg py-2.5 pr-3`}>
+        <p className="text-sm text-zinc-500 mb-0.5">If you only do one thing:</p>
+        <p className="text-base text-zinc-300">
           {t(`resilience.pillars.${pillarKey}.priority`)}
         </p>
       </div>
 
       {/* Scroll cue */}
       <div className="mt-4 pt-3 border-t border-zinc-700 flex items-center justify-between">
-        <span className="text-xs text-zinc-500">{t('resilience.viewActions')}</span>
-        <span className={`text-xs ${colors.text} flex items-center gap-1 group-hover:gap-2 transition-all`}>
+        <span className="text-sm text-zinc-500">{t('resilience.viewActions')}</span>
+        <span className={`text-sm ${colors.text} flex items-center gap-1 group-hover:gap-2 transition-all`}>
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>

@@ -96,10 +96,10 @@ export function ThreatBanner({ activeContext, onSelect }: ThreatBannerProps) {
                   {contextIcons[ctx.id]}
                 </div>
                 <div className="min-w-0">
-                  <h4 className={`font-semibold text-sm leading-tight mb-1 ${isActive ? ctx.text : 'text-white'}`}>
+                  <h4 className={`font-semibold text-base leading-tight mb-1 ${isActive ? ctx.text : 'text-white'}`}>
                     {t(`resilience.contexts.${ctx.id}.title`)}
                   </h4>
-                  <p className="text-xs text-zinc-400 leading-snug">
+                  <p className="text-sm text-zinc-400 leading-snug">
                     {t(`resilience.contexts.${ctx.id}.description`)}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export function ThreatBanner({ activeContext, onSelect }: ThreatBannerProps) {
         <div className="flex justify-end">
           <button
             onClick={() => onSelect(null)}
-            className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors flex items-center gap-1"
+            className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors flex items-center gap-1"
           >
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

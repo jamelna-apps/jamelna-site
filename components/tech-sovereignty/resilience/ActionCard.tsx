@@ -160,12 +160,12 @@ export function ActionCard({
             </div>
 
             {/* Title */}
-            <h3 className="font-semibold text-white text-base mb-1">
+            <h3 className="font-semibold text-white text-lg mb-1">
               {t(`${baseKey}.title`)}
             </h3>
 
             {/* Protects one-liner */}
-            <p className="text-xs text-zinc-500 mb-3">
+            <p className="text-sm text-zinc-500 mb-3">
               <span className="text-zinc-400 font-medium">Protects: </span>
               {t(`${baseKey}.protects`)}
             </p>
@@ -175,7 +175,7 @@ export function ActionCard({
               {tools.map((tool) => (
                 <span
                   key={tool.name}
-                  className="text-xs bg-zinc-700/60 text-zinc-300 px-2 py-0.5 rounded"
+                  className="text-sm bg-zinc-700/60 text-zinc-300 px-2 py-0.5 rounded"
                 >
                   {tool.name}
                 </span>
@@ -198,23 +198,23 @@ export function ActionCard({
       >
         <div className="px-5 pb-5 border-t border-zinc-700/60 pt-4 space-y-5">
           {/* Description */}
-          <p className="text-zinc-300 text-sm">
+          <p className="text-zinc-300 text-base leading-relaxed">
             {t(`${baseKey}.description`)}
           </p>
 
           {/* Step-by-step instructions */}
           {stepCount > 0 && (
             <div>
-              <h4 className={`text-xs font-semibold uppercase tracking-wide ${colors.text} mb-3`}>
+              <h4 className={`text-sm font-semibold uppercase tracking-wide ${colors.text} mb-3`}>
                 Steps
               </h4>
-              <ol className="space-y-2">
+              <ol className="space-y-3">
                 {Array.from({ length: stepCount }, (_, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className={`flex-shrink-0 w-6 h-6 ${colors.bg} ${colors.text} rounded-full flex items-center justify-center text-xs font-bold`}>
+                    <span className={`flex-shrink-0 w-7 h-7 ${colors.bg} ${colors.text} rounded-full flex items-center justify-center text-sm font-bold`}>
                       {i + 1}
                     </span>
-                    <span className="text-zinc-300 text-sm pt-0.5">
+                    <span className="text-zinc-300 text-base pt-0.5 leading-relaxed">
                       {t(`${baseKey}.steps.${i}`)}
                     </span>
                   </li>
@@ -226,7 +226,7 @@ export function ActionCard({
           {/* Tools */}
           {tools.length > 0 && (
             <div>
-              <h4 className={`text-xs font-semibold uppercase tracking-wide ${colors.text} mb-3`}>
+              <h4 className={`text-sm font-semibold uppercase tracking-wide ${colors.text} mb-3`}>
                 Tools
               </h4>
               <div className="space-y-2">
@@ -240,13 +240,13 @@ export function ActionCard({
                         href={tool.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`text-sm font-medium ${colors.text} hover:underline`}
+                        className={`text-base font-medium ${colors.text} hover:underline`}
                         onClick={(e) => e.stopPropagation()}
                       >
                         {tool.name}
                       </a>
                       {tool.replaces && (
-                        <span className="text-xs text-zinc-500 hidden sm:inline">
+                        <span className="text-sm text-zinc-500 hidden sm:inline">
                           replaces {tool.replaces}
                         </span>
                       )}
@@ -277,7 +277,7 @@ export function ActionCard({
             <div className="pt-1">
               <a
                 href={`/${locale}/tech-sovereignty/${relatedTrack}`}
-                className={`inline-flex items-center gap-1.5 text-sm ${colors.text} hover:underline`}
+                className={`inline-flex items-center gap-1.5 text-base ${colors.text} hover:underline`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

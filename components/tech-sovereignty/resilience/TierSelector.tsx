@@ -81,13 +81,13 @@ export function TierSelector({ activeTier, onSelect }: TierSelectorProps) {
               <div className={`text-xs font-semibold uppercase tracking-wide mb-1 ${c.text}`}>
                 Tier {tier}
               </div>
-              <h3 className="font-bold text-white text-base mb-1">
+              <h3 className="font-bold text-white text-lg mb-1">
                 {t(`resilience.tiers.${tier}.title`)}
               </h3>
-              <p className="text-zinc-400 text-sm mb-3">
+              <p className="text-zinc-400 text-base mb-3">
                 {t(`resilience.tiers.${tier}.subtitle`)}
               </p>
-              <span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${
+              <span className={`inline-block text-sm px-2.5 py-1 rounded-full font-medium ${
                 isActive
                   ? `${c.iconBg} ${c.text}`
                   : 'bg-zinc-700/60 text-zinc-400'
