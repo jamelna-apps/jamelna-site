@@ -458,6 +458,40 @@ textarea:focus-visible {
 .stagger-7 { transition-delay: 0.56s; }
 .stagger-8 { transition-delay: 0.64s; }
 
+/* ── Sci-fi profile frame ─────────────────────────────────────────────────── */
+
+/* Scanning line animation */
+@keyframes scan {
+  0% { top: -2px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.animate-scan {
+  animation: scan 3s ease-in-out infinite;
+}
+
+/* Orbital ring rotation */
+@keyframes orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit 15s linear infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scan { animation: none; opacity: 0; }
+  .animate-orbit { animation: none; }
+  .animate-orbit-reverse { animation: none; }
+}
+
 /* ── Typography utilities ─────────────────────────────────────────────────── */
 
 /* Section number watermark */

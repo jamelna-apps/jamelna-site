@@ -63,17 +63,67 @@ export default function AboutPage() {
       <section className="bg-canvas-deep">
         <div className="max-w-5xl mx-auto px-6 py-16 lg:py-24">
           <div className="reveal-fade flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-            {/* Photo */}
+            {/* Photo with sci-fi frame — transparent PNG floats over orbital rings */}
             <div className="lg:w-1/3 flex-shrink-0">
-              <div className="relative overflow-hidden rounded-lg">
-                <Image
-                  src="/images/profile/joe.png"
-                  alt="Joe Alexander Meléndez-Naharro"
-                  width={600}
-                  height={750}
-                  className="w-full object-cover"
-                  priority
-                />
+              <div className="relative group py-8">
+
+                {/* Orbital ring 1 — slow rotation */}
+                <div className="absolute top-1/2 left-1/2 w-[110%] aspect-square animate-orbit pointer-events-none">
+                  <svg viewBox="0 0 200 200" className="w-full h-full">
+                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="currentColor" strokeWidth="0.3" className="text-terra/20" strokeDasharray="4 8" />
+                  </svg>
+                </div>
+
+                {/* Orbital ring 2 — tilted, reverse */}
+                <div className="absolute top-1/2 left-1/2 w-[130%] aspect-square animate-orbit-reverse pointer-events-none" style={{ transform: 'translate(-50%, -50%) rotate(0deg)' }}>
+                  <svg viewBox="0 0 200 200" className="w-full h-full" style={{ transform: 'rotateX(60deg)' }}>
+                    <ellipse cx="100" cy="100" rx="95" ry="95" fill="none" stroke="currentColor" strokeWidth="0.4" className="text-ink/20" strokeDasharray="2 12" />
+                  </svg>
+                </div>
+
+                {/* Glow backdrop behind the transparent photo */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 rounded-full bg-terra/8 blur-3xl group-hover:bg-terra/15 transition-all duration-1000 pointer-events-none" />
+
+                {/* HUD corner brackets */}
+                <div className="absolute -top-1 -left-1 w-8 h-8 border-t-2 border-l-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
+                <div className="absolute -top-1 -right-1 w-8 h-8 border-t-2 border-r-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
+                <div className="absolute -bottom-1 -left-1 w-8 h-8 border-b-2 border-l-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
+                <div className="absolute -bottom-1 -right-1 w-8 h-8 border-b-2 border-r-2 border-terra/40 group-hover:border-terra/70 transition-colors duration-500" />
+
+                {/* Scanning line */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+                  <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-terra/30 to-transparent animate-scan" />
+                </div>
+
+                {/* Data readout — top */}
+                <div className="absolute -top-4 left-10 flex items-center gap-2 z-10">
+                  <div className="w-1.5 h-1.5 rounded-full bg-terra animate-pulse" />
+                  <span className="font-mono text-[10px] text-terra/60 uppercase tracking-widest">sys.profile.active</span>
+                </div>
+
+                {/* Data readout — bottom */}
+                <div className="absolute -bottom-4 right-2 z-10">
+                  <span className="font-mono text-[10px] text-text-muted/40 tracking-wider">35.99°N 78.90°W</span>
+                </div>
+
+                {/* Side data bar — audio spectrum style */}
+                <div className="absolute -left-5 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-1 items-center">
+                  {[...Array(8)].map((_, i) => (
+                    <div key={i} className="w-1 rounded-full bg-terra/20 group-hover:bg-terra/50 transition-all duration-500" style={{ height: `${6 + Math.sin(i * 0.8) * 5}px`, transitionDelay: `${i * 60}ms` }} />
+                  ))}
+                </div>
+
+                {/* The photo — transparent PNG floats over everything */}
+                <div className="relative z-10">
+                  <Image
+                    src="/images/profile/joe.png"
+                    alt="Joe Alexander Meléndez-Naharro"
+                    width={600}
+                    height={750}
+                    className="w-full drop-shadow-[0_0_30px_rgba(196,112,63,0.15)] group-hover:drop-shadow-[0_0_40px_rgba(196,112,63,0.25)] transition-all duration-700"
+                    priority
+                  />
+                </div>
               </div>
             </div>
             {/* First bio paragraphs */}
