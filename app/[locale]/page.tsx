@@ -140,7 +140,7 @@ export default function Home() {
       <section className="py-12 bg-canvas">
         <div className="max-w-6xl mx-auto px-6">
           <div className="reveal-fade flex flex-wrap justify-center gap-12 md:gap-16">
-            {(['schools', 'educators', 'students', 'nsfFunded'] as const).map((key) => (
+            {(['schools', 'educators', 'students'] as const).map((key) => (
               <div key={key} className="text-center">
                 <div className="text-3xl md:text-4xl font-display font-extrabold text-text-heading">
                   {t(`metrics.${key}.number`)}
