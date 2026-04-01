@@ -53,10 +53,20 @@ const colorClasses = {
   },
 };
 
+// Pillar key map (kebab-case IDs → camelCase translation keys)
+const pillarKeyMap: Record<string, string> = {
+  'secure-communication': 'secureCommunication',
+  'data-preservation': 'dataPreservation',
+  'infrastructure-independence': 'infrastructureIndependence',
+  'operational-security': 'operationalSecurity',
+  'community-organizing': 'communityOrganizing',
+};
+
 export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarCardProps) {
   const t = useTranslations('techSovereignty');
   const colors = colorClasses[accentColor];
   const anchorId = `pillar-${pillarId}`;
+  const pillarKey = pillarKeyMap[pillarId] ?? pillarId;
 
   const handleClick = () => {
     const el = document.getElementById(anchorId);
@@ -78,7 +88,7 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
             <h3 className="font-bold text-white text-base leading-tight">
-              {t(`resilience.pillars.${pillarId}.title`)}
+              {t(`resilience.pillars.${pillarKey}.title`)}
             </h3>
           </div>
           {/* Action count badge */}
@@ -90,14 +100,14 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
 
       {/* Description */}
       <p className="text-zinc-400 text-sm mb-4 line-clamp-2">
-        {t(`resilience.pillars.${pillarId}.description`)}
+        {t(`resilience.pillars.${pillarKey}.description`)}
       </p>
 
       {/* Priority callout */}
       <div className={`${colors.callout} bg-zinc-900/40 rounded-r-lg py-2 pr-3`}>
         <p className="text-xs text-zinc-500 mb-0.5">If you only do one thing:</p>
         <p className="text-sm text-zinc-300">
-          {t(`resilience.pillars.${pillarId}.priority`)}
+          {t(`resilience.pillars.${pillarKey}.priority`)}
         </p>
       </div>
 

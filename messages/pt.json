@@ -889,11 +889,24 @@
       "hero": {
         "title": "Digital Resilience Toolkit",
         "subtitle": "Practical tools to protect yourself, your community, and your data.",
-        "description": "When governments threaten civil liberties, technology becomes both weapon and shield. This toolkit gives you concrete steps—from 5-minute fixes to community-scale infrastructure—to build communication systems that can't be silenced and preserve information that can't be erased."
+        "description": "When governments threaten civil liberties, technology becomes both weapon and shield. This toolkit gives you concrete steps—from 5-minute fixes to community-scale infrastructure—to build communication systems that can't be silenced and preserve information that can't be erased.",
+        "backLink": "Tech Sovereignty",
+        "eyebrow": "Digital Resilience",
+        "statActions": "Actions",
+        "statPillars": "Pillars",
+        "statTiers": "Tiers"
       },
       "showAllTiers": "Show All",
       "clearFilter": "Clear filter",
       "backToSovereignty": "← Tech Sovereignty",
+      "ifOnlyOneThingLabel": "If you only do one thing",
+      "noActionsForFilter": "No actions match this filter. Try a different tier or clear your selection.",
+      "viewRelatedTrack": "Explore related curriculum →",
+      "viewActions": "View actions",
+      "pillarsOverview": {
+        "title": "Five Pillars of Digital Resilience",
+        "description": "Each pillar addresses a critical aspect of building independent, surveillance-resistant systems."
+      },
       "tiers": {
         "1": {
           "title": "Protect Yourself Now",
@@ -909,9 +922,13 @@
           "title": "Create Resilient Networks",
           "subtitle": "Days to weeks of sustained work",
           "audience": "For technical builders and system administrators"
-        }
+        },
+        "sectionTitle": "Choose your depth",
+        "sectionDescription": "Filter by how much time and technical skill you can invest."
       },
       "contexts": {
+        "sectionTitle": "What's your situation?",
+        "sectionDescription": "Select your context to prioritize the most relevant actions.",
         "concerned": {
           "title": "Concerned About Privacy",
           "description": "You want to reduce your digital footprint and protect personal data"
@@ -928,6 +945,7 @@
       "pillars": {
         "secureCommunication": {
           "title": "Secure Communication",
+          "shortTitle": "Communication",
           "description": "Encrypted messaging, anonymous browsing, and censorship-resistant channels. Talk freely without being monitored.",
           "priority": "Install Signal and enable disappearing messages. It takes 5 minutes and protects every conversation from that point forward.",
           "actions": {
@@ -1049,6 +1067,7 @@
         },
         "dataPreservation": {
           "title": "Data Preservation",
+          "shortTitle": "Data",
           "description": "Encrypted backups, distributed storage, and evidence preservation. Ensure critical information survives any attempt to destroy it.",
           "priority": "Encrypt your most important files with Cryptomator right now. It takes 20 minutes and makes your data unreadable if your device is seized.",
           "actions": {
@@ -1173,6 +1192,7 @@
         },
         "infrastructureIndependence": {
           "title": "Infrastructure Independence",
+          "shortTitle": "Infrastructure",
           "description": "Self-hosted services, mesh networks, and local-first software. Build systems that work even when the internet doesn't.",
           "priority": "Switch to Standard Notes or Joplin for your notes right now. Your thoughts shouldn't live on someone else's server.",
           "actions": {
@@ -1298,6 +1318,7 @@
         },
         "operationalSecurity": {
           "title": "Operational Security",
+          "shortTitle": "OpSec",
           "description": "Threat modeling, device hardening, and identity compartmentalization. Understand what you're protecting and from whom.",
           "priority": "Complete the threat model worksheet. Everything else depends on knowing who you're protecting against and what they can do.",
           "actions": {
@@ -1421,6 +1442,7 @@
         },
         "communityOrganizing": {
           "title": "Community Organizing",
+          "shortTitle": "Organizing",
           "description": "Secure coordination, trust networks, and resilient organizational structures. Technology serves the movement, not the other way around.",
           "priority": "Set up a Signal group with your core team and establish check-in protocols. Organization starts with reliable communication.",
           "actions": {
@@ -1543,6 +1565,8 @@
       "toolDirectory": {
         "title": "Tool Directory",
         "subtitle": "Every tool recommended in this toolkit, organized for quick reference.",
+        "description": "Every tool recommended in this toolkit, organized for quick reference.",
+        "noTools": "No tools found for this filter.",
         "filterAll": "All Tools",
         "platformLabel": "Platforms",
         "fossLabel": "Open Source",
@@ -1550,11 +1574,24 @@
       },
       "crossLinks": {
         "title": "Go Deeper",
-        "subtitle": "These tech sovereignty tracks provide detailed curriculum for the skills referenced in this toolkit.",
-        "networking": "Networking fundamentals — understand how networks work so you can build your own",
-        "selfHosted": "Self-hosted services — detailed guides for running your own infrastructure",
-        "digitalRights": "Digital rights — understand the legal landscape and your protections",
-        "community": "Community building — organizational skills for collective action"
+        "description": "These tech sovereignty tracks provide detailed curriculum for the skills referenced in this toolkit.",
+        "explore": "Explore →",
+        "networking": {
+          "title": "Networking Fundamentals",
+          "description": "Understand how networks work so you can build your own"
+        },
+        "selfHosted": {
+          "title": "Self-Hosted Services",
+          "description": "Detailed guides for running your own infrastructure"
+        },
+        "digitalRights": {
+          "title": "Digital Rights",
+          "description": "Understand the legal landscape and your protections"
+        },
+        "community": {
+          "title": "Community Building",
+          "description": "Organizational skills for collective action"
+        }
       }
     }
   },

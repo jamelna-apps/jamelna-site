@@ -204,6 +204,25 @@ const pillarColorMap = {
   },
 };
 
+// ─── Pillar key map (kebab-case IDs → camelCase translation keys) ─────────────
+
+const pillarKeyMap: Record<string, string> = {
+  'secure-communication': 'secureCommunication',
+  'data-preservation': 'dataPreservation',
+  'infrastructure-independence': 'infrastructureIndependence',
+  'operational-security': 'operationalSecurity',
+  'community-organizing': 'communityOrganizing',
+};
+
+// ─── Cross-link slug map (kebab-case slugs → camelCase translation keys) ─────
+
+const crossLinkKeyMap: Record<string, string> = {
+  'networking': 'networking',
+  'self-hosted': 'selfHosted',
+  'digital-rights': 'digitalRights',
+  'community': 'community',
+};
+
 // ─── Filtering helpers ────────────────────────────────────────────────────────
 
 type ThreatContext = 'concerned' | 'active' | 'immediate' | null;
@@ -437,10 +456,10 @@ export default function ResiliencePage() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-white">
-                    {t(`resilience.pillars.${config.id}.title`)}
+                    {t(`resilience.pillars.${pillarKeyMap[config.id]}.title`)}
                   </h2>
                   <p className="text-zinc-400 text-sm mt-0.5">
-                    {t(`resilience.pillars.${config.id}.description`)}
+                    {t(`resilience.pillars.${pillarKeyMap[config.id]}.description`)}
                   </p>
                 </div>
               </div>
@@ -451,7 +470,7 @@ export default function ResiliencePage() {
                   {t('resilience.ifOnlyOneThingLabel')}
                 </p>
                 <p className="text-zinc-200 text-sm font-medium">
-                  {t(`resilience.pillars.${config.id}.priority`)}
+                  {t(`resilience.pillars.${pillarKeyMap[config.id]}.priority`)}
                 </p>
               </div>
 
@@ -519,7 +538,7 @@ export default function ResiliencePage() {
                       : 'border-zinc-700 text-zinc-400 hover:text-white hover:border-zinc-500 bg-zinc-800'
                   }`}
                 >
-                  {t(`resilience.pillars.${config.id}.shortTitle`)}
+                  {t(`resilience.pillars.${pillarKeyMap[config.id]}.shortTitle`)}
                 </button>
               );
             })}
@@ -571,10 +590,10 @@ export default function ResiliencePage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-white text-sm mb-1">
-                      {t(`resilience.crossLinks.${slug}.title`)}
+                      {t(`resilience.crossLinks.${crossLinkKeyMap[slug]}.title`)}
                     </h3>
                     <p className="text-xs text-zinc-400 line-clamp-2">
-                      {t(`resilience.crossLinks.${slug}.description`)}
+                      {t(`resilience.crossLinks.${crossLinkKeyMap[slug]}.description`)}
                     </p>
                   </div>
                   <div className={`mt-auto pt-2 border-t border-zinc-700 flex items-center gap-1 text-xs ${c.text} group-hover:gap-2 transition-all`}>

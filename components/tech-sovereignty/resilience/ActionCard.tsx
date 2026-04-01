@@ -61,6 +61,15 @@ const colorClasses = {
   },
 };
 
+// Pillar key map (kebab-case IDs → camelCase translation keys)
+const pillarKeyMap: Record<string, string> = {
+  'secure-communication': 'secureCommunication',
+  'data-preservation': 'dataPreservation',
+  'infrastructure-independence': 'infrastructureIndependence',
+  'operational-security': 'operationalSecurity',
+  'community-organizing': 'communityOrganizing',
+};
+
 const tierConfig = {
   1: {
     label: 'Immediate',
@@ -125,7 +134,8 @@ export function ActionCard({
   const colors = colorClasses[color];
   const tierInfo = tierConfig[tier];
 
-  const baseKey = `resilience.pillars.${pillar}.actions.${actionId}`;
+  const pillarKey = pillarKeyMap[pillar] ?? pillar;
+  const baseKey = `resilience.pillars.${pillarKey}.actions.${actionId}`;
 
   return (
     <div
@@ -266,7 +276,7 @@ export function ActionCard({
           {relatedTrack && (
             <div className="pt-1">
               <a
-                href={`/${locale}/tech-sovereignty/pathways/${relatedTrack}`}
+                href={`/${locale}/tech-sovereignty/${relatedTrack}`}
                 className={`inline-flex items-center gap-1.5 text-sm ${colors.text} hover:underline`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
