@@ -157,9 +157,9 @@ export default function Home() {
       {/* Photo Break */}
       <div className="diagonal-top diagonal-bottom -my-8 relative z-20">
         <PhotoBreak
-          src="/photos/once-upon-a-time-in-new-york/30-DSCF8639.webp"
-          alt="Street photography in New York City"
-          position="center 40%"
+          src="/photos/once-upon-a-time-in-new-york/43-DSCF9240.webp"
+          alt="New York City skyline at sunset"
+          position="center 60%"
           height="40vh"
         />
       </div>
