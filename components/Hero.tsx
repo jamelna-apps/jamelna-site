@@ -161,6 +161,15 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+        {/* Full name */}
+        <h2 className={`
+          text-center font-display font-extrabold text-text-heading text-3xl sm:text-4xl md:text-5xl tracking-tight mb-3
+          transition-all duration-1000 delay-100
+          ${animationStarted ? 'opacity-100' : 'opacity-0'}
+        `}>
+          {t('name', { defaultValue: 'Joe Alexander Meléndez-Naharro' })}
+        </h2>
+
         {/* Role label */}
         <p className={`
           text-center font-mono text-display-label uppercase tracking-[0.15em] text-text-muted mb-6
