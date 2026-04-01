@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div className="reveal-fade flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             {/* Photo with sci-fi frame — transparent PNG floats over orbital rings */}
             <div className="lg:w-1/3 flex-shrink-0">
-              <div className="relative group py-6 px-2 lg:px-0">
+              <div className="relative group">
 
                 {/* Orbital ring 1 — slow rotation */}
                 <div className="absolute top-1/2 left-1/2 w-[110%] aspect-square animate-orbit pointer-events-none">
@@ -102,14 +102,14 @@ export default function AboutPage() {
                   <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-terra/30 to-transparent animate-scan" />
                 </div>
 
-                {/* Data readout — top */}
-                <div className="absolute -top-4 left-10 flex items-center gap-2 z-10">
+                {/* Data readout — top inside frame */}
+                <div className="absolute top-2 left-12 flex items-center gap-2 z-20">
                   <div className="w-1.5 h-1.5 rounded-full bg-terra animate-pulse" />
                   <span className="font-mono text-[10px] text-terra/60 uppercase tracking-widest">sys.profile.active</span>
                 </div>
 
-                {/* Data readout — bottom */}
-                <div className="absolute -bottom-4 right-2 z-10">
+                {/* Data readout — bottom inside frame */}
+                <div className="absolute bottom-2 right-3 z-20">
                   <span className="font-mono text-[10px] text-text-muted/40 tracking-wider">35.99°N 78.90°W</span>
                 </div>
 
