@@ -67,6 +67,10 @@
           "title": "ForEveryBomb",
           "subtitle": "战争成本跟踪器"
         },
+        "terra04": {
+          "title": "Terra-04 Daily",
+          "subtitle": "来自更美好世界的新闻"
+        },
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "概念艺术装置"
@@ -345,6 +349,30 @@
           "/images/screenshots/foreverybomb/timeline.png"
         ],
         "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Terra-04 Daily",
+        "role": "创建者兼开发者",
+        "organization": "独立项目",
+        "timeline": "2026年至今",
+        "challenge": "构建一份来自平行地球的新闻出版物，在那个世界里，同理心推动着人类的进步——利用AI重新想象现实世界的头条新闻，将其呈现为一个选择合作而非冲突的世界中的样貌。",
+        "whatIDid": [
+          "设计和开发了具有经典编辑排版和响应式布局的报纸风格Next.js网站",
+          "构建了自动化周刊发布管道：选取真实头条新闻，然后由Claude AI从平行地球（Terra-04）的视角改写每篇报道，在那个世界里，人类始终选择对话而非暴力",
+          "实施了带有分类、搜索和按时间顺序浏览的文章存档",
+          "为每种模式创建了具有报纸适宜美学的明暗模式",
+          "构建了「关于」页面，解释Terra-04概念及每期背后的创作方法论",
+          "使用自定义域名、分析功能和安全监控部署上线"
+        ],
+        "impact": "创建了一个创意写作和推测性小说项目，以新闻报道为媒介探索反事实历史。每期周刊取材真实事件，探问：如果世界以同理心回应，会发生什么？结果是一个不断增长的充满希望的替代叙事档案库。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、Claude AI、编辑设计、推测性小说、自动化内容管道",
+        "images": [
+          "/images/screenshots/fakenews/home.png",
+          "/images/screenshots/fakenews/article.png",
+          "/images/screenshots/fakenews/archive.png"
+        ],
+        "website": "https://fakenews.jamelna.com",
         "category": "creative"
       },
       {

@@ -67,6 +67,10 @@
           "title": "ForEveryBomb",
           "subtitle": "Kriegskosten-Tracker"
         },
+        "terra04": {
+          "title": "Terra-04 Daily",
+          "subtitle": "Nachrichten aus einer besseren Welt"
+        },
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "Konzeptkunst-Installation"
@@ -345,6 +349,30 @@
           "/images/screenshots/foreverybomb/timeline.png"
         ],
         "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Terra-04 Daily",
+        "role": "Ersteller & Entwickler",
+        "organization": "Unabhängiges Projekt",
+        "timeline": "2026 - Heute",
+        "challenge": "Eine Nachrichtenpublikation von einer parallelen Erde aufbauen, auf der Empathie den menschlichen Fortschritt antreibt — mithilfe von KI reale Schlagzeilen so umschreiben, wie sie in einer Welt aussehen würden, die Zusammenarbeit statt Konflikt gewählt hat.",
+        "whatIDid": [
+          "Next.js-Site im Zeitungsstil mit klassischer Redaktionstypografie und responsivem Layout entworfen und entwickelt",
+          "Automatisierte wöchentliche Veröffentlichungspipeline aufgebaut: Echte Schlagzeilen werden ausgewählt, dann schreibt Claude AI jede Geschichte aus der Perspektive einer parallelen Erde (Terra-04) um, auf der die Menschheit konsequent Dialog statt Gewalt gewählt hat",
+          "Artikelarchiv mit Kategorisierung, Suche und chronologischem Durchsuchen implementiert",
+          "Hell-/Dunkel-Modus mit zeitungsgerechter Ästhetik für jeden Modus erstellt",
+          "Über-Seite aufgebaut, die das Terra-04-Konzept und die kreative Methodik hinter jeder Ausgabe erklärt",
+          "Mit eigener Domain, Analytik und Sicherheitsüberwachung bereitgestellt"
+        ],
+        "impact": "Ein kreatives Schreib- und spekulatives Fiktionsprojekt geschaffen, das Journalismus als Medium nutzt, um kontrafaktische Geschichte zu erkunden. Jede Wochenausgabe nimmt reale Ereignisse und fragt: Was wäre gewesen, wenn die Welt mit Empathie reagiert hätte? Das Ergebnis ist ein wachsendes Archiv hoffnungsvoller Alternativnarrative.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Claude AI, Redaktionsdesign, spekulative Fiktion, automatisierte Inhaltspipelines",
+        "images": [
+          "/images/screenshots/fakenews/home.png",
+          "/images/screenshots/fakenews/article.png",
+          "/images/screenshots/fakenews/archive.png"
+        ],
+        "website": "https://fakenews.jamelna.com",
         "category": "creative"
       },
       {

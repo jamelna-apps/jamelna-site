@@ -67,6 +67,10 @@
           "title": "ForEveryBomb",
           "subtitle": "Rastreador de Custos de Guerra"
         },
+        "terra04": {
+          "title": "Terra-04 Daily",
+          "subtitle": "Notícias de um Mundo Melhor"
+        },
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "Instalação de Arte Conceptual"
@@ -345,6 +349,30 @@
           "/images/screenshots/foreverybomb/timeline.png"
         ],
         "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Terra-04 Daily",
+        "role": "Criador e Programador",
+        "organization": "Projeto Independente",
+        "timeline": "2026 - Presente",
+        "challenge": "Construir uma publicação jornalística de uma Terra paralela onde a empatia impulsiona o progresso humano — usando IA para reimaginar títulos do mundo real tal como seriam numa mundo que escolheu a cooperação em vez do conflito.",
+        "whatIDid": [
+          "Desenhei e desenvolvi um site Next.js de estilo jornalístico com tipografia editorial clássica e layout responsivo",
+          "Construí um pipeline de publicação semanal automatizado: são selecionados títulos reais e Claude AI reescreve cada história na perspetiva de uma Terra paralela (Terra-04) onde a humanidade escolheu consistentemente o diálogo em vez da violência",
+          "Implementei arquivo de artigos com categorização, pesquisa e navegação cronológica",
+          "Criei modo claro/escuro com estética adequada a jornal para cada modo",
+          "Construí página Sobre explicando o conceito de Terra-04 e a metodologia criativa por detrás de cada edição",
+          "Implementei em produção com domínio personalizado, análises e monitorização de segurança"
+        ],
+        "impact": "Criei um projeto de escrita criativa e ficção especulativa que usa o jornalismo como meio para explorar história contrafactual. Cada edição semanal pega em eventos reais e pergunta: e se o mundo tivesse respondido com empatia? O resultado é um arquivo crescente de narrativas alternativas cheias de esperança.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Claude AI, design editorial, ficção especulativa, pipelines de conteúdo automatizados",
+        "images": [
+          "/images/screenshots/fakenews/home.png",
+          "/images/screenshots/fakenews/article.png",
+          "/images/screenshots/fakenews/archive.png"
+        ],
+        "website": "https://fakenews.jamelna.com",
         "category": "creative"
       },
       {

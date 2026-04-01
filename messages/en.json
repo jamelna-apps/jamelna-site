@@ -71,6 +71,10 @@
           "title": "ForEveryBomb",
           "subtitle": "War Cost Tracker"
         },
+        "terra04": {
+          "title": "Terra-04 Daily",
+          "subtitle": "News from a Better World"
+        },
         "earthsim": {
           "title": "Earth Simulator",
           "subtitle": "Conceptual Art Installation"
@@ -333,6 +337,30 @@
           "/images/screenshots/foreverybomb/timeline.png"
         ],
         "website": "https://foreverybomb.com",
+        "category": "creative"
+      },
+      {
+        "title": "Terra-04 Daily",
+        "role": "Creator & Developer",
+        "organization": "Independent Project",
+        "timeline": "2026 - Present",
+        "challenge": "Build a news publication from a parallel Earth where empathy drives human progress — using AI to reimagine real-world headlines as they might read in a world that chose cooperation over conflict.",
+        "whatIDid": [
+          "Designed and developed a newspaper-style Next.js site with classic editorial typography and responsive layout",
+          "Built an automated weekly publishing pipeline: real headlines are selected, then Claude AI rewrites each story from the perspective of a parallel Earth (Terra-04) where humanity consistently chose dialogue over violence",
+          "Implemented article archive with categorization, search, and chronological browsing",
+          "Created light/dark mode with newspaper-appropriate aesthetics for each",
+          "Built About page explaining the Terra-04 concept and the creative methodology behind each issue",
+          "Deployed with custom domain, analytics, and security monitoring"
+        ],
+        "impact": "Created a creative writing and speculative fiction project that uses journalism as a medium to explore counterfactual history. Each weekly issue takes real events and asks: what if the world had responded with empathy instead? The result is a growing archive of hopeful alternative narratives.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Claude AI, editorial design, speculative fiction, automated content pipelines",
+        "images": [
+          "/images/screenshots/fakenews/home.png",
+          "/images/screenshots/fakenews/article.png",
+          "/images/screenshots/fakenews/archive.png"
+        ],
+        "website": "https://fakenews.jamelna.com",
         "category": "creative"
       },
       {
