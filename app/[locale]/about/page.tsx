@@ -132,6 +132,25 @@ export default function AboutPage() {
                   />
                 </div>
               </div>
+
+              {/* By the Numbers — below profile photo on desktop */}
+              <div className="hidden lg:block mt-10">
+                <h3 className="text-sm font-mono text-terra uppercase tracking-wider mb-6">
+                  {t('metricsTitle')}
+                </h3>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                  {['schools', 'educators', 'students', 'years', 'nsfFunded'].map((key) => (
+                    <div key={key}>
+                      <div className="text-2xl font-display font-extrabold text-text-heading">
+                        {t(`metrics.${key}.number`)}
+                      </div>
+                      <div className="text-xs text-text-muted mt-0.5">
+                        {t(`metrics.${key}.label`)}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
             {/* First bio paragraphs */}
             <div className="lg:w-2/3 space-y-6 text-text-secondary text-lg leading-relaxed">
@@ -156,16 +175,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Metrics strip */}
-      <section className="py-16 bg-canvas-deep">
+      {/* Metrics strip — mobile only (shown inline on desktop) */}
+      <section className="py-16 bg-canvas-deep lg:hidden">
         <div className="max-w-5xl mx-auto px-6">
           <h3 className="reveal-slide-left text-sm font-mono text-terra uppercase tracking-wider mb-8">
             {t('metricsTitle')}
           </h3>
-          <div className="reveal-fade grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="reveal-fade grid grid-cols-2 gap-8">
             {['schools', 'educators', 'students', 'years', 'nsfFunded'].map((key) => (
               <div key={key}>
-                <div className="text-3xl md:text-4xl font-display font-extrabold text-text-heading">
+                <div className="text-3xl font-display font-extrabold text-text-heading">
                   {t(`metrics.${key}.number`)}
                 </div>
                 <div className="text-sm text-text-muted mt-1">
