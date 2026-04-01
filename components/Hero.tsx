@@ -108,14 +108,28 @@ const Hero = () => {
     <section
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-canvas-deep"
     >
-      {/* Blurred photo texture background */}
+      {/* Photo strip background — visible at edges, dark center band for text */}
       <div className="absolute inset-0">
-        <img
-          src="/photos/bridge.webp"
-          alt=""
-          className="w-full h-full object-cover blur-[60px] opacity-[0.12] saturate-50 scale-110"
-          aria-hidden="true"
-        />
+        {/* Photo mosaic grid */}
+        <div className="absolute inset-0 grid grid-cols-4 gap-1 opacity-40">
+          {[
+            '/photos/bridge.webp',
+            '/photos/once-upon-a-time-in-new-york/3-DSCF2638.webp',
+            '/photos/open-world/1-_DSF4181.webp',
+            '/photos/out-there-somewhere/6-DSCF6005.webp',
+          ].map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt=""
+              className="w-full h-full object-cover"
+              loading={i < 2 ? 'eager' : 'lazy'}
+              aria-hidden="true"
+            />
+          ))}
+        </div>
+        {/* Dark vignette: heavy in center for text readability, lighter at edges for photo visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-canvas-deep/70 via-canvas-deep/95 to-canvas-deep/70" />
       </div>
 
       {/* Portal animation overlay */}

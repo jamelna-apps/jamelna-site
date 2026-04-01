@@ -76,10 +76,10 @@ export default function PhotographyPage() {
             <div className="bg-canvas-raised border border-canvas-border rounded-lg p-8">
               <h2 className="text-xl font-display font-bold text-text-heading mb-4">Getting Started</h2>
               <p className="text-sm text-text-secondary mb-4">
-                To add photography galleries, create folders in <code className="bg-canvas px-2 py-1 rounded text-emerald-400">public/photos/</code>
+                To add photography galleries, create folders in <code className="bg-canvas px-2 py-1 rounded text-terra">public/photos/</code>
               </p>
               <ol className="list-decimal list-inside space-y-2 text-sm text-text-secondary">
-                <li>Create a folder in <code className="bg-canvas px-1 rounded text-emerald-400">public/photos/</code> (e.g., <code className="bg-canvas px-1 rounded text-emerald-400">my-gallery</code>)</li>
+                <li>Create a folder in <code className="bg-canvas px-1 rounded text-terra">public/photos/</code> (e.g., <code className="bg-canvas px-1 rounded text-terra">my-gallery</code>)</li>
                 <li>Add your photos to that folder (supports .jpg, .jpeg, .png, .webp, .gif)</li>
                 <li>Refresh this page to see your gallery!</li>
               </ol>
@@ -121,7 +121,7 @@ export default function PhotographyPage() {
                   <button
                     key={index}
                     onClick={() => openLightbox(gallery, index)}
-                    className="aspect-square bg-canvas-raised rounded-lg overflow-hidden group cursor-pointer border border-canvas-border hover:border-emerald-500/50 transition-colors"
+                    className="aspect-square bg-canvas-raised rounded-lg overflow-hidden group cursor-pointer border border-canvas-border hover:border-terra/50 transition-colors"
                     onContextMenu={(e) => e.preventDefault()}
                     onDragStart={(e) => e.preventDefault()}
                   >

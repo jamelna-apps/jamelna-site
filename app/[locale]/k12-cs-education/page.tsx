@@ -85,7 +85,7 @@ export default function K12CSEducation() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-canvas-raised border border-terra/30 rounded-xl p-6 hover:border-terra/60 transition-colors">
-              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-terra/20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-terra" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -95,7 +95,7 @@ export default function K12CSEducation() {
             </div>
 
             <div className="bg-canvas-raised border border-ink/30 rounded-xl p-6 hover:border-ink/60 transition-colors">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-ink/20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -104,9 +104,9 @@ export default function K12CSEducation() {
               <p className="text-text-secondary text-sm">{t('valueProps.vetted.description')}</p>
             </div>
 
-            <div className="bg-canvas-raised border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-500/60 transition-colors">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-canvas-raised border border-terra/30 rounded-xl p-6 hover:border-terra/60 transition-colors">
+              <div className="w-12 h-12 bg-terra/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
               </div>
@@ -114,9 +114,9 @@ export default function K12CSEducation() {
               <p className="text-text-secondary text-sm">{t('valueProps.aligned.description')}</p>
             </div>
 
-            <div className="bg-canvas-raised border border-violet-500/30 rounded-xl p-6 hover:border-violet-500/60 transition-colors">
-              <div className="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-canvas-raised border border-ink/30 rounded-xl p-6 hover:border-ink/60 transition-colors">
+              <div className="w-12 h-12 bg-ink/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-ink-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M12 14l9-5-9-5-9 5 9 5z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
                 </svg>
@@ -135,14 +135,14 @@ export default function K12CSEducation() {
           <p className="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12">{t('standards.description')}</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-canvas-raised border border-ink/30 rounded-xl p-6 hover:border-ink/60 transition-colors">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-ink/20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{t('standards.csta.title')}</h3>
               <p className="text-text-secondary text-sm mb-4">{t('standards.csta.description')}</p>
-              <a href="https://csteachers.org/k12standards/" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-blue-300 text-sm font-medium inline-flex items-center gap-1 transition-colors">
+              <a href="https://csteachers.org/k12standards/" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-light text-sm font-medium inline-flex items-center gap-1 transition-colors">
                 {t('standards.csta.link')}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -150,14 +150,14 @@ export default function K12CSEducation() {
               </a>
             </div>
             <div className="bg-canvas-raised border border-terra/30 rounded-xl p-6 hover:border-terra/60 transition-colors">
-              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-terra/20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-terra" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{t('standards.states.title')}</h3>
               <p className="text-text-secondary text-sm mb-4">{t('standards.states.description')}</p>
-              <a href="https://advocacy.code.org/stateofcs" target="_blank" rel="noopener noreferrer" className="text-terra hover:text-orange-300 text-sm font-medium inline-flex items-center gap-1 transition-colors">
+              <a href="https://advocacy.code.org/stateofcs" target="_blank" rel="noopener noreferrer" className="text-terra hover:text-terra-light text-sm font-medium inline-flex items-center gap-1 transition-colors">
                 {t('standards.states.link')}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

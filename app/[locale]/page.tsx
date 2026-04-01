@@ -146,7 +146,7 @@ export default function Home() {
       {/* Featured Work — Cream Section */}
       <section className="section-cream py-20 lg:py-32 relative overflow-hidden">
         {/* Oversized section number */}
-        <div className="absolute top-0 right-0 section-number select-none" aria-hidden="true" style={{ color: '#E0D9CE' }}>
+        <div className="absolute top-0 right-0 section-number select-none text-canvas-border" aria-hidden="true">
           02
         </div>
 
@@ -157,7 +157,7 @@ export default function Home() {
               <span className="font-light">Selected</span>{' '}
               <span className="font-extrabold">{t('featuredWork.title')}</span>
             </h2>
-            <p className="text-lg mt-4 max-w-2xl" style={{ color: '#6E6860' }}>
+            <p className="text-lg mt-4 max-w-2xl text-text-muted">
               {t('featuredWork.description')}
             </p>
           </div>
@@ -168,15 +168,15 @@ export default function Home() {
               <Link
                 key={index}
                 href={`/${locale}/work#${project.anchor}`}
-                className="reveal-fade bg-white border border-[#E0D9CE] rounded-lg p-6 group hover:border-terra transition-colors"
+                className="reveal-fade bg-white border border-canvas-border rounded-lg p-6 group hover:border-terra transition-colors"
                 style={{ transitionDelay: `${index * 0.08}s` }}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <span className="text-sm font-mono" style={{ color: '#B5AFA5' }}>
+                  <span className="text-sm font-mono text-text-secondary">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <svg
-                    className="w-5 h-5 text-[#B5AFA5] group-hover:text-terra group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    className="w-5 h-5 text-text-secondary group-hover:text-terra group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -184,10 +184,10 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-display font-bold mb-2 group-hover:text-terra transition-colors" style={{ color: '#1A1816' }}>
+                <h3 className="text-xl font-display font-bold mb-2 group-hover:text-terra transition-colors text-canvas-deep">
                   {t(`featuredWork.projects.${project.key}.title`)}
                 </h3>
-                <p className="text-base" style={{ color: '#6E6860' }}>
+                <p className="text-base text-text-muted">
                   {t(`featuredWork.projects.${project.key}.subtitle`)}
                 </p>
               </Link>

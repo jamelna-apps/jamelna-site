@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <strong className="text-text-heading">{t('consultingStep1')}</strong> {t('consultingStep1At')}{' '}
                 <a
                   href="mailto:joe@jamelna.com"
-                  className="text-terra hover:text-orange-300 transition-colors"
+                  className="text-terra hover:text-terra-light transition-colors"
                 >
                   joe@jamelna.com
                 </a>{' '}
@@ -92,7 +92,7 @@ export default function ContactPage() {
               {t('employmentEmail')}{' '}
               <a
                 href="mailto:joe@jamelna.com?subject=Employment Opportunity"
-                className="text-ink hover:text-blue-300 transition-colors"
+                className="text-ink hover:text-ink-light transition-colors"
               >
                 joe@jamelna.com
               </a>{' '}
@@ -117,7 +117,7 @@ export default function ContactPage() {
                 <strong className="text-terra">{t('email')}</strong>{' '}
                 <a
                   href="mailto:joe@jamelna.com"
-                  className="text-terra hover:text-orange-300 transition-colors"
+                  className="text-terra hover:text-terra-light transition-colors"
                 >
                   joe@jamelna.com
                 </a>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                   href="https://linkedin.com/in/joeamelendez"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-terra hover:text-orange-300 transition-colors"
+                  className="text-terra hover:text-terra-light transition-colors"
                 >
                   linkedin.com/in/joeamelendez
                 </a>

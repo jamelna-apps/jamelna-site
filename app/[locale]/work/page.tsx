@@ -118,7 +118,7 @@ export default function WorkPage() {
                 return (
                   <div key={index} id={projectId} className="scroll-mt-20">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-1 h-12 bg-primary"></div>
+                      <div className="w-1 h-12 bg-ink"></div>
                       <h3 className="text-3xl font-display font-bold text-text-heading">
                         {project.title}
                       </h3>

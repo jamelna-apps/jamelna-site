@@ -37,12 +37,8 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-canvas to-canvas-deep"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(249, 115, 22, 0.4), transparent)' }} />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
+      <section className="py-12 md:py-20 px-4 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
             <span className="text-terra">/</span> {t('title')}
           </h1>

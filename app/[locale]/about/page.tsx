@@ -75,14 +75,14 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-8">
               {experiences.map((exp) => (
-                <div key={exp.key} className="relative pl-6 border-l-2 border-canvas-border hover:border-violet-500 transition-colors">
+                <div key={exp.key} className="relative pl-6 border-l-2 border-canvas-border hover:border-terra transition-colors">
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-canvas-raised border-2 border-canvas-border"></div>
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-2">
                     <div>
                       <h3 className="text-lg font-semibold text-text-heading">
                         {t(`experience.${exp.key}.title`)}
                       </h3>
-                      <p className="text-violet-400 font-medium">
+                      <p className="text-terra font-medium">
                         {t(`experience.${exp.key}.org`)}
                       </p>
                     </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-sm font-mono font-medium text-terra mb-1 uppercase tracking-wider">{t('contact')}</p>
-                  <a href="mailto:joe@jamelna.com" className="text-violet-400 hover:text-violet-300 transition-colors">
+                  <a href="mailto:joe@jamelna.com" className="text-terra hover:text-terra-light transition-colors">
                     joe@jamelna.com
                   </a>
                 </div>
@@ -132,7 +132,7 @@ export default function AboutPage() {
                     href="https://linkedin.com/in/joeamelendez"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-violet-400 hover:text-violet-300 transition-colors"
+                    className="text-terra hover:text-terra-light transition-colors"
                   >
                     linkedin.com/in/joeamelendez
                   </a>
