@@ -30,30 +30,25 @@ export default function K12CSEducation() {
   return (
     <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-zinc-900 to-zinc-950"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(249, 115, 22, 0.4), transparent)' }} />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(251, 146, 60, 0.3), transparent)' }} />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-            <span className="text-terra">/</span> {t('title')}
+      <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
+          <hr className="heading-rule" />
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+            {t('title')}
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-2xl mb-4">
             {t('subtitle')}
           </p>
-          <p className="text-lg text-text-muted mb-10 max-w-2xl mx-auto">
+          <p className="text-lg text-text-muted max-w-2xl mb-8">
             {t('targetAudience')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#curriculum" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 transition-colors">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#curriculum" className="bg-terra text-white px-8 py-3 rounded-lg font-semibold hover:bg-terra-dark transition-colors inline-flex items-center justify-center">
               {t('hero.ctaPrimary')}
             </a>
             <a
               href="#scope-sequence"
-              className="border border-terra/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500/10 transition-colors inline-flex items-center justify-center gap-2"
+              className="border border-terra/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-terra/10 transition-colors inline-flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -207,7 +202,7 @@ export default function K12CSEducation() {
           <p className="text-lg text-text-secondary max-w-3xl mx-auto mb-8">
             {t('cta.description')}
           </p>
-          <a href="#scope-sequence" className="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 transition-colors">
+          <a href="#scope-sequence" className="inline-block bg-terra text-white px-8 py-4 rounded-lg font-semibold hover:bg-terra-dark transition-colors">
             {t('cta.button')}
           </a>
         </div>

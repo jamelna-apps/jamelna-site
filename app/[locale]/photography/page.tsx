@@ -39,16 +39,13 @@ export default function PhotographyPage() {
     return (
       <main className="min-h-screen bg-canvas pt-16">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-canvas to-canvas-deep"></div>
-          <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4), transparent)' }} />
-
-          <div className="max-w-5xl mx-auto text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-              <span className="text-emerald-400">/</span> {t('title')}
+        <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+          <div className="max-w-5xl mx-auto">
+            <hr className="heading-rule" />
+            <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+              {t('title')}
             </h1>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-text-secondary max-w-2xl">
               Loading galleries...
             </p>
           </div>
@@ -61,16 +58,13 @@ export default function PhotographyPage() {
     return (
       <main className="min-h-screen bg-canvas pt-16">
         {/* Hero Section */}
-        <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-canvas to-canvas-deep"></div>
-          <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-            style={{ background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4), transparent)' }} />
-
-          <div className="max-w-5xl mx-auto text-center relative z-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-              <span className="text-emerald-400">/</span> {t('title')}
+        <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+          <div className="max-w-5xl mx-auto">
+            <hr className="heading-rule" />
+            <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+              {t('title')}
             </h1>
-            <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-text-secondary max-w-2xl">
               {t('description')}
             </p>
           </div>
@@ -99,16 +93,13 @@ export default function PhotographyPage() {
   return (
     <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-canvas to-canvas-deep"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4), transparent)' }} />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-            <span className="text-emerald-400">/</span> {t('title')}
+      <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
+          <hr className="heading-rule" />
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+            {t('title')}
           </h1>
-          <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-2xl">
             {t('description')}
           </p>
         </div>

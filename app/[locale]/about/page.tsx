@@ -23,16 +23,11 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-canvas to-canvas-deep"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent)' }} />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
+      <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
-          <h1 className="text-display-section font-display text-text-heading mb-6">
-            <span className="font-light">About</span>{' '}
-            <span className="font-extrabold">{t('title')}</span>
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+            {t('title')}
           </h1>
         </div>
       </section>
