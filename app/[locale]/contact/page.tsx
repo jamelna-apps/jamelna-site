@@ -1,32 +1,61 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import PhotoBreak from '@/components/PhotoBreak';
+
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+}
 
 export default function ContactPage() {
   const t = useTranslations('contact');
+  const containerRef = useScrollReveal();
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas pt-16" ref={containerRef}>
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
-          <h1 className="text-display-section font-display text-text-heading mb-4">
+          <h1 className="text-display-section font-display text-text-heading mb-4 reveal-slide-left">
             <span className="font-light">Get in</span>{' '}
             <span className="font-extrabold">{t('title')}</span>
           </h1>
-          <p className="text-xl text-text-secondary max-w-2xl">
+          <p className="text-xl text-text-secondary max-w-2xl reveal-fade">
             {t('description')}
           </p>
         </div>
       </section>
 
+      <PhotoBreak
+        src="/photos/out-there-somewhere/23-DSCF0272.webp"
+        alt=""
+        position="center"
+        height="20vh"
+      />
+
       {/* Content */}
       <section className="py-12 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
           {/* Consulting Inquiries */}
-          <div className="border-t border-canvas-border pt-12 mb-16">
+          <div className="border-t border-canvas-border pt-12 mb-16 reveal-fade" style={{ transitionDelay: '0s' }}>
             <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-terra"></div>
@@ -72,7 +101,7 @@ export default function ContactPage() {
           </div>
 
           {/* Employment Opportunities */}
-          <div className="border-t border-canvas-border pt-12 mb-16">
+          <div className="border-t border-canvas-border pt-12 mb-16 reveal-fade" style={{ transitionDelay: '0.1s' }}>
             <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-ink"></div>
@@ -101,7 +130,7 @@ export default function ContactPage() {
           </div>
 
           {/* General Inquiries */}
-          <div className="border-t border-canvas-border pt-12 mb-16">
+          <div className="border-t border-canvas-border pt-12 mb-16 reveal-fade" style={{ transitionDelay: '0.2s' }}>
             <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-terra"></div>
@@ -137,7 +166,7 @@ export default function ContactPage() {
           </div>
 
           {/* Location & Availability */}
-          <div className="border-t border-canvas-border pt-12">
+          <div className="border-t border-canvas-border pt-12 reveal-fade" style={{ transitionDelay: '0.3s' }}>
             <hr className="heading-rule" />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-ink"></div>

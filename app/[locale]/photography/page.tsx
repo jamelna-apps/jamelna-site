@@ -1,10 +1,30 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Lightbox from '@/components/Lightbox';
 import { useTranslations } from 'next-intl';
 import { Gallery } from '@/lib/photos';
+
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+}
 
 export default function PhotographyPage() {
   const t = useTranslations('photography');
@@ -12,6 +32,7 @@ export default function PhotographyPage() {
   const [selectedGallery, setSelectedGallery] = useState<Gallery | null>(null);
   const [lightboxIndex, setLightboxIndex] = useState<number>(0);
   const [loading, setLoading] = useState(true);
+  const containerRef = useScrollReveal();
 
   React.useEffect(() => {
     fetch('/api/galleries')
@@ -91,12 +112,12 @@ export default function PhotographyPage() {
   }
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas pt-16" ref={containerRef}>
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
-          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4 reveal-slide-left">
             {t('title')}
           </h1>
           <p className="text-xl text-text-secondary max-w-2xl">
@@ -110,7 +131,7 @@ export default function PhotographyPage() {
         <div className="max-w-6xl mx-auto space-y-20">
           {galleries.map((gallery) => (
             <div key={gallery.id}>
-              <h2 className="text-3xl font-display font-bold text-text-heading mb-4">{gallery.name}</h2>
+              <h2 className="text-3xl font-display font-bold text-text-heading mb-4 reveal-slide-left">{gallery.name}</h2>
               {gallery.description && (
                 <p className="text-lg text-text-secondary mb-8">{gallery.description}</p>
               )}
@@ -121,7 +142,8 @@ export default function PhotographyPage() {
                   <button
                     key={index}
                     onClick={() => openLightbox(gallery, index)}
-                    className="aspect-square bg-canvas-raised rounded-lg overflow-hidden group cursor-pointer border border-canvas-border hover:border-terra/50 transition-colors"
+                    className="aspect-square bg-canvas-raised rounded-lg overflow-hidden group cursor-pointer border border-canvas-border hover:border-terra/50 transition-colors reveal-fade"
+                    style={{ transitionDelay: `${(index % 8) * 0.06}s` }}
                     onContextMenu={(e) => e.preventDefault()}
                     onDragStart={(e) => e.preventDefault()}
                   >
