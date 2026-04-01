@@ -178,38 +178,33 @@ export default function AnchorAndSteerPage() {
   const containerRef = useScrollReveal();
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-zinc-900 pt-16">
+    <main ref={containerRef} className="min-h-screen bg-canvas pt-16">
       {/* Hero */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-zinc-900 to-zinc-950" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(44, 95, 138, 0.5), transparent)' }} />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(123, 94, 167, 0.4), transparent)' }} />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <p className="reveal text-sm uppercase tracking-widest text-blue-400 mb-4 font-mono">
+      <section className="pt-20 pb-12 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
+          <hr className="heading-rule" />
+          <p className="reveal text-sm uppercase tracking-widest text-terra mb-4 font-mono">
             A Human-Centered Design Framework for AI in Education
           </p>
-          <h1 className="reveal text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 stagger-1">
-            <span className="text-blue-400">/</span> Anchor <span className="text-zinc-500">&amp;</span> STEER
+          <h1 className="reveal text-display-section font-display font-extrabold text-text-heading mb-6 stagger-1">
+            Anchor &amp; STEER
           </h1>
-          <p className="reveal text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed mb-4 stagger-2">
+          <p className="reveal text-lg text-text-secondary max-w-2xl leading-relaxed mb-4 stagger-2">
             AI in education should extend a teacher&apos;s reach, judgment, and pedagogical intent — never bypass it.
           </p>
-          <p className="reveal text-sm text-zinc-500 stagger-3">
+          <p className="reveal text-sm text-text-muted stagger-3">
             By Joe Alexander Mel&eacute;ndez-Naharro
           </p>
         </div>
       </section>
 
       {/* The Problem */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-6">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-6">
             The Problem
           </h2>
-          <div className="reveal space-y-4 text-zinc-300 leading-relaxed stagger-1">
+          <div className="reveal space-y-4 text-text-secondary leading-relaxed stagger-1">
             <p>
               A common pattern in AI-powered education technology is starting with &ldquo;what can AI do?&rdquo; rather than &ldquo;what do teachers actually need to be better at, and where are they bottlenecked?&rdquo;
             </p>
@@ -224,80 +219,80 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* Rooted in Design Thinking */}
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-3 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3 text-center">
             Rooted in Design Thinking
           </h2>
-          <p className="reveal text-zinc-400 text-center mb-10 max-w-2xl mx-auto stagger-1">
+          <p className="reveal text-text-muted text-center mb-10 max-w-2xl mx-auto stagger-1">
             Each layer of the framework maps to a design thinking mindset — grounding AI-teacher collaboration in human-centered principles.
           </p>
 
           <div className="reveal grid md:grid-cols-2 gap-6 stagger-2">
             {/* Anchor = Empathize + Define */}
-            <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6 space-y-4">
+            <div className="bg-canvas-elevated border border-canvas-border rounded-lg p-6 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style={{ background: fc.anchor }}>A</div>
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center text-text-heading font-bold text-sm" style={{ background: fc.anchor }}>A</div>
                 <div>
-                  <h3 className="font-display font-semibold text-white">ANCHOR = Empathize + Define</h3>
-                  <p className="text-xs text-zinc-500">Before you build, understand</p>
+                  <h3 className="font-display font-semibold text-text-heading">ANCHOR = Empathize + Define</h3>
+                  <p className="text-xs text-text-muted">Before you build, understand</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <span className="text-orange-400 text-sm font-semibold shrink-0">Empathize</span>
-                  <p className="text-sm text-zinc-400">Shadow teachers. Observe their workarounds. Understand what 150 essays on a Sunday night actually feels like.</p>
+                  <span className="text-terra text-sm font-semibold shrink-0">Empathize</span>
+                  <p className="text-sm text-text-muted">Shadow teachers. Observe their workarounds. Understand what 150 essays on a Sunday night actually feels like.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-orange-400 text-sm font-semibold shrink-0">Define</span>
-                  <p className="text-sm text-zinc-400">Frame the problem from the teacher&apos;s perspective. &ldquo;How might we help teachers give timely, personalized writing feedback without sacrificing their weekends?&rdquo;</p>
+                  <span className="text-terra text-sm font-semibold shrink-0">Define</span>
+                  <p className="text-sm text-text-muted">Frame the problem from the teacher&apos;s perspective. &ldquo;How might we help teachers give timely, personalized writing feedback without sacrificing their weekends?&rdquo;</p>
                 </div>
               </div>
             </div>
 
             {/* STEER = Ideate + Prototype + Test */}
-            <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6 space-y-4">
+            <div className="bg-canvas-elevated border border-canvas-border rounded-lg p-6 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="flex gap-0.5">
                   {['S','T','E','E','R'].map((l, i) => (
-                    <div key={i} className="w-6 h-6 rounded flex items-center justify-center text-white font-bold text-xs" style={{ background: [fc.S, fc.T, fc.E1, fc.E2, fc.R][i] }}>{l}</div>
+                    <div key={i} className="w-6 h-6 rounded flex items-center justify-center text-text-heading font-bold text-xs" style={{ background: [fc.S, fc.T, fc.E1, fc.E2, fc.R][i] }}>{l}</div>
                   ))}
                 </div>
                 <div>
-                  <h3 className="font-display font-semibold text-white">STEER = Ideate + Prototype + Test</h3>
-                  <p className="text-xs text-zinc-500">Design the collaboration, then keep learning</p>
+                  <h3 className="font-display font-semibold text-text-heading">STEER = Ideate + Prototype + Test</h3>
+                  <p className="text-xs text-text-muted">Design the collaboration, then keep learning</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <span className="text-orange-400 text-sm font-semibold shrink-0">Ideate</span>
-                  <p className="text-sm text-zinc-400">Explore how the AI and teacher might share mental models, set guardrails, and handle moments the AI should step back.</p>
+                  <span className="text-terra text-sm font-semibold shrink-0">Ideate</span>
+                  <p className="text-sm text-text-muted">Explore how the AI and teacher might share mental models, set guardrails, and handle moments the AI should step back.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-orange-400 text-sm font-semibold shrink-0">Prototype</span>
-                  <p className="text-sm text-zinc-400">Design escalation pathways and delegation arcs. Test them with real teachers before scaling.</p>
+                  <span className="text-terra text-sm font-semibold shrink-0">Prototype</span>
+                  <p className="text-sm text-text-muted">Design escalation pathways and delegation arcs. Test them with real teachers before scaling.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="text-orange-400 text-sm font-semibold shrink-0">Test</span>
-                  <p className="text-sm text-zinc-400">Build reflective feedback loops so every interaction teaches the system and the teacher. Iterate continuously.</p>
+                  <span className="text-terra text-sm font-semibold shrink-0">Test</span>
+                  <p className="text-sm text-text-muted">Build reflective feedback loops so every interaction teaches the system and the teacher. Iterate continuously.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Key insight */}
-          <div className="reveal mt-8 bg-zinc-800 border border-zinc-700 rounded-lg p-5 text-center stagger-3">
-            <p className="text-sm text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-              <strong className="text-orange-400">The key difference:</strong> Design thinking typically empathizes with <em>end users</em>. Anchor &amp; STEER asks you to empathize with <em>teachers</em> — because in AI EdTech, the teacher should be understood as the designer of the learning experience, not treated as a passive intermediary.
+          <div className="reveal mt-8 bg-canvas-elevated border border-canvas-border rounded-lg p-5 text-center stagger-3">
+            <p className="text-sm text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              <strong className="text-terra">The key difference:</strong> Design thinking typically empathizes with <em>end users</em>. Anchor &amp; STEER asks you to empathize with <em>teachers</em> — because in AI EdTech, the teacher should be understood as the designer of the learning experience, not treated as a passive intermediary.
             </p>
           </div>
         </div>
       </section>
 
       {/* Common Failure Modes */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-8 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-8 text-center">
             Common Failure Modes
           </h2>
           <div className="reveal grid md:grid-cols-3 gap-4 stagger-1">
@@ -318,7 +313,7 @@ export default function AnchorAndSteerPage() {
                     {fm.mode}
                   </h3>
                 </div>
-                <p className="text-sm text-zinc-400 leading-relaxed">{fm.description}</p>
+                <p className="text-sm text-text-muted leading-relaxed">{fm.description}</p>
               </div>
             ))}
           </div>
@@ -326,9 +321,9 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* Framework Structure Diagram */}
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-10 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-10 text-center">
             Framework Structure
           </h2>
 
@@ -341,16 +336,16 @@ export default function AnchorAndSteerPage() {
                 style={{ background: `${d.color}15`, borderTop: `3px solid ${d.color}` }}
               >
                 <span className="text-2xl md:text-3xl font-bold" style={{ color: d.color }}>{d.letter}</span>
-                <p className="text-xs text-zinc-500 mt-1 hidden md:block leading-tight">{d.title}</p>
+                <p className="text-xs text-text-muted mt-1 hidden md:block leading-tight">{d.title}</p>
               </div>
             ))}
           </div>
-          <div className="text-center text-xs text-zinc-500 uppercase tracking-widest mb-4 font-mono">Design Layer</div>
+          <div className="text-center text-xs text-text-muted uppercase tracking-widest mb-4 font-mono">Design Layer</div>
 
           {/* Anchor Foundation */}
           <div className="reveal rounded-lg p-6 text-center stagger-2" style={{ background: `${fc.anchor}20`, border: `1px solid ${fc.anchor}40` }}>
             <p className="text-sm uppercase tracking-widest mb-2 font-mono" style={{ color: fc.anchorMid }}>Anchor — Foundation Layer</p>
-            <p className="text-zinc-300 text-sm max-w-lg mx-auto">
+            <p className="text-text-secondary text-sm max-w-lg mx-auto">
               Ground every AI feature in real teacher needs. Does it enhance a professional skill? Does it solve a felt problem? Does it build capability, not dependency?
             </p>
           </div>
@@ -358,25 +353,25 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* ANCHOR: Ground Before You Build */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto">
           <div className="reveal flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold" style={{ background: fc.anchor }}>A</div>
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-white">ANCHOR: Ground Before You Build</h2>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center text-text-heading font-bold" style={{ background: fc.anchor }}>A</div>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-text-heading">ANCHOR: Ground Before You Build</h2>
           </div>
-          <p className="reveal text-zinc-400 mb-8 stagger-1">
+          <p className="reveal text-text-muted mb-8 stagger-1">
             Before applying STEER, every AI feature must pass a threshold test. Think of it in nautical terms — a ship that only steers drifts without purpose. You anchor to understand your position, then steer with intention.
           </p>
 
-          <h3 className="reveal text-xl font-display font-semibold text-white mb-6 stagger-2">The Three Anchor Questions</h3>
+          <h3 className="reveal text-xl font-display font-semibold text-text-heading mb-6 stagger-2">The Three Anchor Questions</h3>
           <div className="space-y-4">
             {anchorQuestions.map((q, i) => (
               <div key={q.number} className={`reveal rounded-lg p-5 stagger-${i + 2}`} style={{ background: `${fc.anchor}10`, borderLeft: `3px solid ${fc.anchorMid}` }}>
                 <div className="flex items-start gap-3">
                   <span className="text-lg font-bold font-mono" style={{ color: fc.anchorMid }}>{q.number}</span>
                   <div>
-                    <p className="font-medium text-white mb-2">{q.question}</p>
-                    <p className="text-sm text-zinc-400 leading-relaxed">{q.detail}</p>
+                    <p className="font-medium text-text-heading mb-2">{q.question}</p>
+                    <p className="text-sm text-text-muted leading-relaxed">{q.detail}</p>
                   </div>
                 </div>
               </div>
@@ -384,12 +379,12 @@ export default function AnchorAndSteerPage() {
           </div>
 
           {/* Critical Distinction */}
-          <div className="reveal mt-8 bg-zinc-800 border border-zinc-700 rounded-lg p-6">
-            <h4 className="font-display font-semibold text-orange-400 mb-3">The Critical Distinction</h4>
-            <p className="text-sm text-zinc-300 mb-2">
+          <div className="reveal mt-8 bg-canvas-elevated border border-canvas-border rounded-lg p-6">
+            <h4 className="font-display font-semibold text-terra mb-3">The Critical Distinction</h4>
+            <p className="text-sm text-text-secondary mb-2">
               An AI that says <em>&ldquo;Student X is struggling with fractions&rdquo;</em> <strong className="text-red-400">replaces</strong> teacher judgment.
             </p>
-            <p className="text-sm text-zinc-300">
+            <p className="text-sm text-text-secondary">
               An AI that says <em>&ldquo;Here&apos;s the pattern in Student X&apos;s errors — they&apos;re consistently treating the numerator and denominator as independent numbers. Here&apos;s a diagnostic task you could try&rdquo;</em> <strong className="text-emerald-400">sharpens</strong> it.
             </p>
           </div>
@@ -397,32 +392,32 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* STEER Dimensions */}
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-3 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3 text-center">
             STEER: Five Dimensions of Teacher-AI Collaboration
           </h2>
-          <p className="reveal text-zinc-400 text-center mb-10 stagger-1">
+          <p className="reveal text-text-muted text-center mb-10 stagger-1">
             Once value is anchored, design the interaction. Each dimension shapes a different facet of how the AI and teacher work together.
           </p>
 
           <div className="space-y-3">
             {dimensions.map((d, i) => (
-              <div key={i} className={`reveal rounded-lg overflow-hidden border border-zinc-700 stagger-${(i % 3) + 1}`}>
+              <div key={i} className={`reveal rounded-lg overflow-hidden border border-canvas-border stagger-${(i % 3) + 1}`}>
                 <button
                   onClick={() => setExpandedDimension(expandedDimension === i ? null : i)}
-                  className="w-full p-5 flex items-center gap-4 text-left hover:bg-zinc-800/50 transition-colors"
+                  className="w-full p-5 flex items-center gap-4 text-left hover:bg-canvas-elevated/50 transition-colors"
                   style={{ borderLeft: `4px solid ${d.color}` }}
                 >
                   <span className="text-3xl font-bold shrink-0" style={{ color: d.color }}>{d.letter}</span>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-display font-semibold text-white">{d.title}</h3>
-                    <p className="text-sm text-zinc-500">{d.subtitle}</p>
+                    <h3 className="font-display font-semibold text-text-heading">{d.title}</h3>
+                    <p className="text-sm text-text-muted">{d.subtitle}</p>
                   </div>
                   <div className="flex items-center gap-2 shrink-0">
-                    <span className="hidden sm:inline-block text-xs font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">{d.designThinking}</span>
+                    <span className="hidden sm:inline-block text-xs font-mono px-2 py-0.5 rounded bg-canvas-elevated text-text-muted">{d.designThinking}</span>
                     <svg
-                      className={`w-4 h-4 text-zinc-500 transition-transform ${expandedDimension === i ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 text-text-muted transition-transform ${expandedDimension === i ? 'rotate-180' : ''}`}
                       fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -431,12 +426,12 @@ export default function AnchorAndSteerPage() {
                 </button>
 
                 {expandedDimension === i && (
-                  <div className="px-5 pb-5 space-y-4 bg-zinc-800/30" style={{ borderLeft: `4px solid ${d.color}` }}>
-                    <p className="text-zinc-300 text-sm leading-relaxed">{d.description}</p>
-                    <p className="text-zinc-400 text-sm italic border-l-2 border-zinc-600 pl-3">{d.keyInsight}</p>
-                    <div className="rounded-lg p-4 bg-zinc-800/60 border border-zinc-700">
+                  <div className="px-5 pb-5 space-y-4 bg-canvas-elevated/30" style={{ borderLeft: `4px solid ${d.color}` }}>
+                    <p className="text-text-secondary text-sm leading-relaxed">{d.description}</p>
+                    <p className="text-text-muted text-sm italic border-l-2 border-canvas-border pl-3">{d.keyInsight}</p>
+                    <div className="rounded-lg p-4 bg-canvas-elevated/60 border border-canvas-border">
                       <p className="text-xs uppercase tracking-wider mb-2 font-mono" style={{ color: d.color }}>In Practice</p>
-                      <p className="text-sm text-zinc-300 leading-relaxed">{d.example}</p>
+                      <p className="text-sm text-text-secondary leading-relaxed">{d.example}</p>
                     </div>
                   </div>
                 )}
@@ -447,47 +442,47 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* The Continuous Cycle */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-4">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-4">
             The Continuous Cycle
           </h2>
-          <p className="reveal text-zinc-400 mb-10 stagger-1">
+          <p className="reveal text-text-muted mb-10 stagger-1">
             The framework isn&apos;t linear — it&apos;s cyclical. You anchor before a new feature. You re-anchor when user research reveals you&apos;ve drifted from real needs.
           </p>
 
           {/* Cycle Diagram */}
           <div className="reveal flex items-center justify-center gap-4 md:gap-8 mb-10 stagger-2">
-            <div className="rounded-lg p-4 md:p-6 text-center bg-zinc-800 border border-zinc-700" style={{ borderTop: `3px solid ${fc.anchorMid}` }}>
-              <p className="font-display font-bold text-white text-sm md:text-base">ANCHOR</p>
-              <p className="text-xs text-zinc-500 mt-1">Identify real needs</p>
+            <div className="rounded-lg p-4 md:p-6 text-center bg-canvas-elevated border border-canvas-border" style={{ borderTop: `3px solid ${fc.anchorMid}` }}>
+              <p className="font-display font-bold text-text-heading text-sm md:text-base">ANCHOR</p>
+              <p className="text-xs text-text-muted mt-1">Identify real needs</p>
             </div>
-            <svg className="w-6 h-6 text-zinc-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-text-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-            <div className="rounded-lg p-4 md:p-6 text-center bg-zinc-800 border border-zinc-700" style={{ borderTop: `3px solid ${fc.S}` }}>
-              <p className="font-display font-bold text-white text-sm md:text-base">STEER</p>
-              <p className="text-xs text-zinc-500 mt-1">Design &amp; build</p>
+            <div className="rounded-lg p-4 md:p-6 text-center bg-canvas-elevated border border-canvas-border" style={{ borderTop: `3px solid ${fc.S}` }}>
+              <p className="font-display font-bold text-text-heading text-sm md:text-base">STEER</p>
+              <p className="text-xs text-text-muted mt-1">Design &amp; build</p>
             </div>
-            <svg className="w-6 h-6 text-zinc-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-text-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-            <div className="rounded-lg p-4 md:p-6 text-center bg-zinc-800 border border-zinc-700" style={{ borderTop: `3px solid ${fc.R}` }}>
-              <p className="font-display font-bold text-white text-sm md:text-base">RE-ANCHOR</p>
-              <p className="text-xs text-zinc-500 mt-1">Validate &amp; refine</p>
+            <div className="rounded-lg p-4 md:p-6 text-center bg-canvas-elevated border border-canvas-border" style={{ borderTop: `3px solid ${fc.R}` }}>
+              <p className="font-display font-bold text-text-heading text-sm md:text-base">RE-ANCHOR</p>
+              <p className="text-xs text-text-muted mt-1">Validate &amp; refine</p>
             </div>
           </div>
 
-          <p className="reveal text-zinc-500 text-sm italic max-w-xl mx-auto stagger-3">
+          <p className="reveal text-text-muted text-sm italic max-w-xl mx-auto stagger-3">
             Resist the urge to STEER before you&apos;ve anchored. This may be the most important discipline the framework asks of product teams — because it can be tempting to skip straight to &ldquo;look what the AI can do&rdquo; without first grounding in &ldquo;but should it.&rdquo;
           </p>
         </div>
       </section>
 
       {/* Design Implications */}
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-8">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-8">
             Design Implications
           </h2>
           <div className="reveal grid md:grid-cols-2 gap-4 stagger-1">
@@ -497,9 +492,9 @@ export default function AnchorAndSteerPage() {
               { title: 'On Equity', text: 'Teacher-in-the-loop means the AI doesn\'t silently create different learning experiences for different students without the teacher knowing. Differential treatment should always be visible and endorsed.' },
               { title: 'On Time', text: 'One of the biggest constraints teachers face. If oversight burden is too high, teachers may end up rubber-stamping everything or disengaging — both of which defeat the purpose.' },
             ].map((item, i) => (
-              <div key={i} className="bg-zinc-800 border border-zinc-700 rounded-lg p-5">
-                <h3 className="font-display font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">{item.text}</p>
+              <div key={i} className="bg-canvas-elevated border border-canvas-border rounded-lg p-5">
+                <h3 className="font-display font-semibold text-text-heading mb-2">{item.title}</h3>
+                <p className="text-sm text-text-muted leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
@@ -507,18 +502,18 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* The Anchor Card */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-3">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3">
             The Anchor Card
           </h2>
-          <p className="reveal text-zinc-400 mb-8 stagger-1">A feature validation template. Fill this in before writing a single line of code.</p>
+          <p className="reveal text-text-muted mb-8 stagger-1">A feature validation template. Fill this in before writing a single line of code.</p>
 
-          <div className="reveal rounded-lg p-6 space-y-4 bg-zinc-800/50 border-2 border-dashed border-zinc-600 stagger-2">
+          <div className="reveal rounded-lg p-6 space-y-4 bg-canvas-elevated/50 border-2 border-dashed border-canvas-border stagger-2">
             {anchorCardFields.map((f, i) => (
               <div key={i}>
-                <label className="text-sm font-mono font-medium text-blue-400">{f.field}</label>
-                <div className="mt-1 rounded-lg px-4 py-3 text-sm text-zinc-500 italic bg-zinc-900/50 border border-zinc-700" style={{ minHeight: '44px' }}>
+                <label className="text-sm font-mono font-medium text-terra">{f.field}</label>
+                <div className="mt-1 rounded-lg px-4 py-3 text-sm text-text-muted italic bg-canvas-deep/50 border border-canvas-border" style={{ minHeight: '44px' }}>
                   {f.prompt}
                 </div>
               </div>
@@ -528,18 +523,18 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* Research Connections */}
-      <section className="py-16 px-4 bg-zinc-900">
+      <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-8">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-8">
             Research Connections
           </h2>
           <div className="reveal grid md:grid-cols-2 gap-4 stagger-1">
             {researchConnections.map((rc, i) => (
-              <div key={i} className="bg-zinc-800 border border-zinc-700 rounded-lg p-4" style={{ borderLeft: `3px solid ${rc.color}` }}>
+              <div key={i} className="bg-canvas-elevated border border-canvas-border rounded-lg p-4" style={{ borderLeft: `3px solid ${rc.color}` }}>
                 <p className="text-sm font-display font-semibold mb-2" style={{ color: rc.color }}>{rc.dimension}</p>
                 <ul className="space-y-1">
                   {rc.sources.map((s, j) => (
-                    <li key={j} className="text-xs text-zinc-400 leading-relaxed">{s}</li>
+                    <li key={j} className="text-xs text-text-muted leading-relaxed">{s}</li>
                   ))}
                 </ul>
               </div>
@@ -549,16 +544,16 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* How to Use This Framework */}
-      <section className="py-16 px-4 bg-zinc-950">
+      <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-white mb-8">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-8">
             How to Use This Framework
           </h2>
           <div className="reveal grid md:grid-cols-2 gap-4 stagger-1">
             {useCases.map((uc, i) => (
-              <div key={i} className="bg-zinc-800 border border-zinc-700 rounded-lg p-5">
-                <h3 className="font-display font-semibold text-white mb-2">{uc.title}</h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">{uc.description}</p>
+              <div key={i} className="bg-canvas-elevated border border-canvas-border rounded-lg p-5">
+                <h3 className="font-display font-semibold text-text-heading mb-2">{uc.title}</h3>
+                <p className="text-sm text-text-muted leading-relaxed">{uc.description}</p>
               </div>
             ))}
           </div>
@@ -566,13 +561,13 @@ export default function AnchorAndSteerPage() {
       </section>
 
       {/* Footer Attribution */}
-      <section className="py-12 px-4 bg-zinc-950 border-t border-zinc-800">
+      <section className="py-12 px-4 bg-canvas border-t border-canvas-border">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-zinc-500 text-sm">
+          <p className="text-text-muted text-sm">
             This framework is shared for the benefit of the education community.<br />
             If you use or adapt it, please attribute accordingly.
           </p>
-          <p className="text-zinc-400 mt-4 font-display font-medium">
+          <p className="text-text-muted mt-4 font-display font-medium">
             Anchor &amp; STEER — By Joe Alexander Mel&eacute;ndez-Naharro
           </p>
         </div>

@@ -88,7 +88,7 @@ export default function WorkPage() {
   return (
     <main className="min-h-screen bg-canvas pt-16" ref={containerRef}>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+      <section className="pt-20 pb-12 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
           <h1 className="text-display-section font-display text-text-heading mb-4 reveal-slide-left">

@@ -292,7 +292,7 @@ export default function TechSovereigntyPage() {
   return (
     <main ref={containerRef} className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+      <section className="pt-20 pb-12 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
           <h1 className="reveal-slide-left text-display-section font-display font-extrabold text-text-heading mb-4">
