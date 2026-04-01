@@ -37,23 +37,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
 
   const titles = {
-    en: "Joe Alexander Meléndez-Naharro | EdTech Consultant",
-    es: "Joe Alexander Meléndez-Naharro | Consultor EdTech",
-    de: "Joe Alexander Meléndez-Naharro | EdTech Berater",
-    zh: "Joe Alexander Meléndez-Naharro | 教育科技顾问"
+    en: "Joe Alexander Meléndez-Naharro | Emerging Technology Strategist",
+    es: "Joe Alexander Meléndez-Naharro | Estratega de Tecnología Emergente",
+    de: "Joe Alexander Meléndez-Naharro | Stratege für neue Technologien",
+    zh: "Joe Alexander Meléndez-Naharro | 新兴技术战略师"
   };
 
   const descriptions = {
-    en: "Education technology consultant specializing in AI in education, computer science programs, and bridging US-Spanish EdTech markets. 15+ years experience.",
-    es: "Consultor de tecnología educativa especializado en IA en educación, programas de informática y conexión de mercados EdTech entre EE.UU. y España. Más de 15 años de experiencia.",
-    de: "EdTech-Berater spezialisiert auf KI in der Bildung, Informatikprogramme und Verbindung von US-spanischen EdTech-Märkten. 15+ Jahre Erfahrung.",
-    zh: "教育技术顾问，专注于教育人工智能、计算机科学项目以及连接美国和西班牙教育科技市场。15年以上经验。"
+    en: "Emerging technology strategist specializing in K-12 innovation, AI in education, and scaling emerging tech programs. 15+ years evaluating, piloting, and implementing technologies that move the needle for students.",
+    es: "Estratega de tecnología emergente especializado en innovación K-12, IA en educación y escalado de programas de tecnología emergente. Más de 15 años de experiencia.",
+    de: "Stratege für neue Technologien, spezialisiert auf K-12-Innovation, KI in der Bildung und Skalierung von Technologieprogrammen. Über 15 Jahre Erfahrung.",
+    zh: "新兴技术战略师，专注于K-12创新、教育人工智能以及扩展新兴技术项目。15年以上经验。"
   };
 
   return {
     title: titles[locale as keyof typeof titles] || titles.en,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
-    keywords: "EdTech consultant, AI in education, computer science education, Spanish EdTech, education technology, bilingual consultant",
+    keywords: "emerging technology strategist, K-12 innovation, AI in education, computer science education, education technology, bilingual",
     authors: [{ name: "Joe Alexander Meléndez-Naharro" }],
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.en,
