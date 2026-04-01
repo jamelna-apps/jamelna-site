@@ -302,6 +302,162 @@ textarea:focus-visible {
 .stagger-4 { transition-delay: 0.32s; }
 .stagger-5 { transition-delay: 0.40s; }
 
+/* ── Advanced reveals ─────────────────────────────────────────────────── */
+
+/* Mask reveal — colored bar wipes across, revealing content */
+.reveal-mask {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal-mask::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--terra);
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
+}
+
+.reveal-mask.visible {
+  opacity: 1;
+}
+
+.reveal-mask.visible::after {
+  transform: scaleX(0);
+}
+
+/* Slide from left */
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right */
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Depth & overlap ──────────────────────────────────────────────────── */
+
+/* Section that overlaps the previous one */
+.overlap-up {
+  margin-top: -4rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .overlap-up {
+    margin-top: -6rem;
+  }
+}
+
+/* Diagonal section divider */
+.diagonal-top {
+  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+}
+
+.diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+}
+
+/* Parallax photo strip */
+.parallax-photo {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-photo {
+    background-attachment: scroll;
+  }
+}
+
+/* On mobile/touch devices, fixed attachment doesn't work well */
+@supports not (background-attachment: fixed) {
+  .parallax-photo {
+    background-attachment: scroll;
+  }
+}
+
+/* ── Card micro-interactions ──────────────────────────────────────────── */
+
+/* Card with alive hover — icon shifts up, arrow shifts right */
+.card-alive {
+  background: var(--canvas-raised);
+  border: 1px solid var(--canvas-border);
+  border-radius: 0.75rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.card-alive:hover {
+  border-color: var(--terra);
+  background: #2A2826;
+}
+
+.card-alive:hover .card-icon {
+  transform: translateY(-3px);
+}
+
+.card-alive:hover .card-arrow {
+  transform: translate(4px, -4px);
+}
+
+.card-alive .card-icon,
+.card-alive .card-arrow {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Photo treatments ─────────────────────────────────────────────────── */
+
+.photo-grayscale {
+  filter: grayscale(1);
+  transition: filter 0.8s ease;
+}
+
+.photo-grayscale:hover {
+  filter: grayscale(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-grayscale {
+    filter: grayscale(0);
+  }
+}
+
+/* ── Scroll progress bar ──────────────────────────────────────────────── */
+
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--terra);
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* Extended stagger system */
+.stagger-6 { transition-delay: 0.48s; }
+.stagger-7 { transition-delay: 0.56s; }
+.stagger-8 { transition-delay: 0.64s; }
+
 /* ── Typography utilities ─────────────────────────────────────────────────── */
 
 /* Section number watermark */
@@ -384,5 +540,17 @@ textarea:focus-visible {
 
   .reveal-fade {
     opacity: 1;
+  }
+
+  .reveal-mask {
+    opacity: 1;
+  }
+  .reveal-mask::after {
+    transform: scaleX(0);
+  }
+  .reveal-slide-left,
+  .reveal-slide-right {
+    opacity: 1;
+    transform: none;
   }
 }

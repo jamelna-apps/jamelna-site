@@ -20,10 +20,10 @@ function useScrollReveal() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 }
     );
 
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade');
+    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -82,15 +82,15 @@ export default function Home() {
       <Hero />
 
       {/* Core Expertise */}
-      <section className="py-16 lg:py-24 bg-canvas-deep relative overflow-hidden">
+      <section className="pt-4 lg:pt-8 pb-16 lg:pb-24 bg-canvas-deep relative overflow-hidden overlap-up">
         {/* Oversized section number watermark */}
-        <div className="absolute top-0 right-0 section-number text-text-primary select-none" aria-hidden="true">
+        <div className="absolute top-4 right-6 section-number text-text-primary select-none" aria-hidden="true" style={{ opacity: 0.06 }}>
           01
         </div>
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           {/* Section heading — mixed weight, terra rule */}
-          <div className="reveal-fade mb-16">
+          <div className="reveal-slide-left mb-16">
             <hr className="heading-rule" />
             <h2 className="text-display-section font-display text-text-heading">
               <span className="font-light">What I</span>{' '}
@@ -101,8 +101,8 @@ export default function Home() {
           {/* Offset card layout */}
           <div className="flex flex-col gap-6 lg:gap-4">
             {/* Card 1 — flush left, wide */}
-            <div className="reveal-fade stagger-1 bg-canvas-raised border border-canvas-border rounded-lg p-8 lg:w-[65%] hover:border-l-2 hover:border-l-terra transition-all">
-              <div className="text-terra mb-4">{expertiseItems[0].icon}</div>
+            <div className="reveal-slide-left stagger-1 card-alive p-8 lg:w-[65%]">
+              <div className="text-terra mb-4 card-icon">{expertiseItems[0].icon}</div>
               <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
                 {expertiseItems[0].title}
               </h3>
@@ -112,7 +112,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 — offset right */}
-            <div className="reveal-fade stagger-2 bg-canvas-raised border border-canvas-border rounded-lg p-8 lg:w-[55%] lg:ml-auto lg:-mt-4 hover:border-l-2 hover:border-l-terra transition-all">
+            <div className="reveal-slide-right stagger-2 card-alive p-8 lg:w-[55%] lg:ml-auto lg:-mt-4">
               <div className="text-ink mb-4">{expertiseItems[1].icon}</div>
               <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
                 {expertiseItems[1].title}
@@ -123,7 +123,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 — centered */}
-            <div className="reveal-fade stagger-3 bg-canvas-raised border border-canvas-border rounded-lg p-8 lg:w-[60%] lg:mx-auto lg:-mt-4 hover:border-l-2 hover:border-l-terra transition-all">
+            <div className="reveal-slide-left stagger-3 card-alive p-8 lg:w-[60%] lg:mx-auto lg:-mt-4">
               <div className="text-ink mb-4">{expertiseItems[2].icon}</div>
               <h3 className="text-2xl font-display font-bold text-text-heading mb-4">
                 {expertiseItems[2].title}
@@ -137,21 +137,24 @@ export default function Home() {
       </section>
 
       {/* Photo Break */}
-      <PhotoBreak
-        src="/photos/once-upon-a-time-in-new-york/30-DSCF8639.webp"
-        alt="Street photography in New York City"
-        position="center 40%"
-      />
+      <div className="diagonal-top diagonal-bottom -my-8 relative z-20">
+        <PhotoBreak
+          src="/photos/once-upon-a-time-in-new-york/30-DSCF8639.webp"
+          alt="Street photography in New York City"
+          position="center 40%"
+          height="40vh"
+        />
+      </div>
 
       {/* Featured Work — Cream Section */}
       <section className="section-cream py-20 lg:py-32 relative overflow-hidden">
         {/* Oversized section number */}
-        <div className="absolute top-0 right-0 section-number select-none text-canvas-border" aria-hidden="true">
+        <div className="absolute top-4 right-6 section-number select-none text-canvas-border" aria-hidden="true" style={{ opacity: 0.08 }}>
           02
         </div>
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="reveal-fade mb-16">
+          <div className="reveal-mask mb-16">
             <hr className="heading-rule" />
             <h2 className="text-display-section font-display">
               <span className="font-light">Selected</span>{' '}
@@ -168,7 +171,7 @@ export default function Home() {
               <Link
                 key={index}
                 href={`/${locale}/work#${project.anchor}`}
-                className="reveal-fade bg-white border border-canvas-border rounded-lg p-6 group hover:border-terra transition-colors"
+                className="reveal-fade bg-white border border-canvas-border rounded-lg p-6 group hover:border-terra hover:shadow-lg hover:shadow-terra/5 transition-all"
                 style={{ transitionDelay: `${index * 0.08}s` }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -176,7 +179,7 @@ export default function Home() {
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <svg
-                    className="w-5 h-5 text-text-secondary group-hover:text-terra group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    className="w-5 h-5 text-text-secondary group-hover:text-terra group-hover:translate-x-1 group-hover:-translate-y-1 card-arrow transition-all"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -226,7 +229,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
-          <div className="reveal-fade">
+          <div className="reveal-slide-right">
             <h2 className="text-display-section font-display font-extrabold text-text-heading mb-6">
               {t('cta.title')}
             </h2>

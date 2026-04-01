@@ -106,12 +106,12 @@ const Hero = () => {
 
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-canvas-deep"
+      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-canvas-deep group"
     >
       {/* Photo strip background — visible at edges, dark center band for text */}
       <div className="absolute inset-0">
         {/* Photo mosaic grid */}
-        <div className="absolute inset-0 grid grid-cols-4 gap-1 opacity-40">
+        <div className="absolute inset-0 grid grid-cols-4 gap-1 opacity-30 grayscale group-hover:grayscale-0 transition-all duration-1000">
           {[
             '/photos/bridge.webp',
             '/photos/once-upon-a-time-in-new-york/3-DSCF2638.webp',
@@ -178,11 +178,13 @@ const Hero = () => {
           <span
             aria-hidden="true"
             className={`
-              block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
-              font-display font-bold tracking-tight cursor-pointer
+              block text-[12vw] sm:text-[11vw] md:text-[10vw] lg:text-[9vw]
+              leading-[0.85] tracking-tighter
+              font-display font-bold cursor-pointer
               ${prefersReducedMotion ? '' : 'transition-opacity duration-1000'}
               ${animationStarted || prefersReducedMotion ? 'opacity-100' : 'opacity-0'}
             `}
+            style={{ textShadow: '0 2px 20px rgba(18,17,15,0.6)' }}
             onMouseEnter={() => setIsNameHovered(true)}
             onMouseLeave={() => setIsNameHovered(false)}
             onFocus={() => setIsNameHovered(true)}
@@ -276,10 +278,11 @@ const Hero = () => {
         <p
           className={`
             text-center text-xl md:text-2xl lg:text-3xl text-text-secondary font-body
-            max-w-3xl mx-auto mb-12
+            max-w-4xl mx-auto mb-12
             transition-all duration-1000 delay-500
             ${animationStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
           `}
+          style={{ textShadow: '0 1px 10px rgba(18,17,15,0.5)' }}
         >
           {t('tagline', { defaultValue: 'Bridging Communities and Ideas in Education' })}
         </p>
