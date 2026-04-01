@@ -1,37 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark theme colors (GYST-inspired) */
-  --background: #1C1C1E;
-  --background-darker: #0a0a0f;
-  --foreground: #FFFFFF;
-  --foreground-secondary: #D1D1D6;
-  --foreground-muted: #636366;
+  /* Canvas system (warm near-black) */
+  --canvas: #1A1816;
+  --canvas-deep: #12110F;
+  --canvas-raised: #242220;
+  --canvas-border: #3A3633;
+  --canvas-cream: #F5F0E8;
 
-  /* Primary - Glaucous Blue (from GYST) */
-  --primary: #8FA8C8;
-  --primary-light: #9BB5D4;
-  --primary-dark: #6082B6;
-  --primary-glow: rgba(143, 168, 200, 0.4);
+  /* Terra accent (burnt sienna) */
+  --terra: #C4703F;
+  --terra-light: #D4896A;
+  --terra-dark: #A85A2A;
 
-  /* Accent - Electric Blue (site identity) */
-  --accent: #00a8ff;
-  --accent-cyan: #00d4ff;
-  --accent-glow: rgba(0, 168, 255, 0.4);
+  /* Ink accent (desaturated teal-blue) */
+  --ink: #3D5A6E;
+  --ink-light: #5A7A8E;
 
-  /* Warm accent - Rust/Burnt Orange (from GYST) */
-  --warm: #C9704D;
-  --warm-light: #D4896A;
-  --warm-dark: #B7410E;
-  --warm-glow: rgba(201, 112, 77, 0.4);
+  /* Text system (warm, not pure white) */
+  --text-primary: #EDE8E0;
+  --text-secondary: #B5AFA5;
+  --text-muted: #6E6860;
+  --text-heading: #F5F0E8;
 
-  /* Secret room accent */
+  /* Secret room accent (keep) */
   --secret: #8b5cf6;
-  --secret-glow: rgba(139, 92, 246, 0.4);
-
-  /* Highlight colors */
-  --gold: #FFD700;
-  --turquoise: #40E0D0;
 }
 
 html {
@@ -39,13 +32,13 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--canvas);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle background texture */
+/* Subtle film grain texture */
 body::before {
   content: '';
   position: fixed;
@@ -54,34 +47,34 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.02;
+  opacity: 0.015;
   pointer-events: none;
   z-index: -1;
 }
 
-/* Selection color */
+/* Selection color — terra warm */
 ::selection {
-  background: rgba(0, 168, 255, 0.3);
-  color: #fafafa;
+  background: rgba(196, 112, 63, 0.3);
+  color: var(--text-heading);
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1C1C1E;
+  background: var(--canvas);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #38383A;
-  border-radius: 4px;
+  background: var(--canvas-border);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  background: var(--terra);
 }
 
 /* Accessibility: Skip to content link */
@@ -89,8 +82,8 @@ body::before {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #00a8ff;
-  color: #0a0a0f;
+  background: var(--terra);
+  color: var(--canvas-deep);
   padding: 0.5rem 1rem;
   text-decoration: none;
   z-index: 100;
@@ -101,155 +94,196 @@ body::before {
   top: 0;
 }
 
-/* Accessibility: Enhanced focus indicators */
+/* Accessibility: Focus indicators — terra accent */
 *:focus-visible {
-  outline: 2px solid #00a8ff;
+  outline: 2px solid var(--terra);
   outline-offset: 2px;
   border-radius: 0.25rem;
 }
 
-/* Accessibility: Ensure focus is visible on interactive elements */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #00a8ff;
+  outline: 2px solid var(--terra);
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(0, 168, 255, 0.2);
+  box-shadow: 0 0 0 4px rgba(196, 112, 63, 0.15);
 }
 
-/* Dark glass card effect (GYST-inspired) */
+/* ── Card styles ──────────────────────────────────────────────────────────── */
+
+/* Editorial card — replaces glass-card */
+.card {
+  background: var(--canvas-raised);
+  border: 1px solid var(--canvas-border);
+  border-radius: 0.75rem;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  background: #2A2826;
+  border-color: var(--terra);
+  border-left-width: 2px;
+}
+
+/* Keep glass-card class for backward compatibility during Phase 4 migration */
 .glass-card {
-  background: rgba(44, 44, 46, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(56, 56, 58, 0.5);
+  background: var(--canvas-raised);
+  border: 1px solid var(--canvas-border);
   border-radius: 1rem;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background 0.3s ease;
 }
 
 .glass-card:hover {
-  background: rgba(44, 44, 46, 0.9);
-  border-color: var(--warm-glow);
-  box-shadow: 0 0 30px var(--warm-glow);
-  transform: translateY(-2px);
+  background: #2A2826;
+  border-color: var(--terra);
 }
 
-/* Glass card with primary accent */
 .glass-card-primary:hover {
-  border-color: var(--primary-glow);
-  box-shadow: 0 0 30px var(--primary-glow);
+  border-color: var(--ink);
 }
 
-/* Glow text effect */
-.glow-text {
-  color: #00a8ff;
-  text-shadow:
-    0 0 10px rgba(0, 168, 255, 0.5),
-    0 0 20px rgba(0, 168, 255, 0.3),
-    0 0 40px rgba(0, 168, 255, 0.2);
-}
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
 
-/* Animated glow text */
-.glow-text-animated {
-  animation: letter-glow 3s ease-in-out infinite;
-}
-
-@keyframes letter-glow {
-  0%, 100% {
-    color: #00a8ff;
-    text-shadow:
-      0 0 10px rgba(0, 168, 255, 0.5),
-      0 0 20px rgba(0, 168, 255, 0.3);
-  }
-  50% {
-    color: #00d4ff;
-    text-shadow:
-      0 0 20px rgba(0, 212, 255, 0.7),
-      0 0 40px rgba(0, 168, 255, 0.5);
-  }
-}
-
-/* Gradient border effect */
-.gradient-border {
+/* Primary button — terra solid */
+.btn-terra {
   position: relative;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, #00a8ff, #00d4ff, #8b5cf6);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gradient-border:hover::before {
-  opacity: 1;
-}
-
-/* Button glow effect - Electric Blue */
-.btn-glow {
-  position: relative;
-  background: var(--accent);
-  color: #0a0a0f;
+  background: var(--terra);
+  color: var(--canvas-deep);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.btn-terra:hover {
+  background: var(--terra-light);
+}
+
+/* Ghost button — text only with underline */
+.btn-ghost {
+  position: relative;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 500;
+  padding: 0.75rem 0;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.btn-ghost::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--terra);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-ghost:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-ghost:hover {
+  color: var(--terra-light);
+}
+
+/* Backward compatibility buttons */
+.btn-glow {
+  position: relative;
+  background: var(--terra);
+  color: var(--canvas-deep);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
 }
 
 .btn-glow:hover {
-  background: var(--accent-cyan);
-  box-shadow: 0 0 30px var(--accent-glow);
-  transform: translateY(-1px);
+  background: var(--terra-light);
 }
 
-/* Warm button - Rust/Orange (GYST-inspired) */
 .btn-warm {
   position: relative;
-  background: var(--warm);
+  background: var(--terra);
   color: #FFFFFF;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .btn-warm:hover {
-  background: var(--warm-light);
-  box-shadow: 0 0 30px var(--warm-glow);
-  transform: translateY(-1px);
+  background: var(--terra-light);
 }
 
-/* Primary button - Glaucous Blue (GYST-inspired) */
 .btn-primary {
   position: relative;
-  background: var(--primary);
-  color: #1C1C1E;
+  background: var(--ink);
+  color: var(--text-primary);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .btn-primary:hover {
-  background: var(--primary-light);
-  box-shadow: 0 0 30px var(--primary-glow);
-  transform: translateY(-1px);
+  background: var(--ink-light);
 }
 
-/* Scroll reveal animations */
+/* ── Links ────────────────────────────────────────────────────────────────── */
+
+/* Growing underline link */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--terra);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Scroll reveals ───────────────────────────────────────────────────────── */
+
+/* Clip reveal — editorial, not template */
+.reveal-clip {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-clip.visible {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Fade reveal — opacity only, no translateY */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.reveal-fade.visible {
+  opacity: 1;
+}
+
+/* Keep old reveal class for backward compatibility during migration */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -262,13 +296,75 @@ textarea:focus-visible {
 }
 
 /* Staggered animation delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+.stagger-1 { transition-delay: 0.08s; }
+.stagger-2 { transition-delay: 0.16s; }
+.stagger-3 { transition-delay: 0.24s; }
+.stagger-4 { transition-delay: 0.32s; }
+.stagger-5 { transition-delay: 0.40s; }
 
-/* Reduced motion */
+/* ── Typography utilities ─────────────────────────────────────────────────── */
+
+/* Section number watermark */
+.section-number {
+  font-family: var(--font-mono);
+  font-size: clamp(8rem, 15vw, 16rem);
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.03;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Rotated sidebar label (desktop only) */
+@media (min-width: 1024px) {
+  .sidebar-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+}
+
+/* Terra horizontal rule (replaces / prefix on headings) */
+.heading-rule {
+  width: 40px;
+  height: 2px;
+  background: var(--terra);
+  border: none;
+  margin-bottom: 1rem;
+}
+
+/* ── Cream section utilities ──────────────────────────────────────────────── */
+
+.section-cream {
+  background: var(--canvas-cream);
+  color: #1A1816;
+}
+
+.section-cream h1,
+.section-cream h2,
+.section-cream h3 {
+  color: #12110F;
+}
+
+.section-cream p {
+  color: #3A3633;
+}
+
+.section-cream .card {
+  background: #FFFFFF;
+  border-color: #E0D9CE;
+}
+
+.section-cream .card:hover {
+  border-color: var(--terra);
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────────────── */
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -280,5 +376,13 @@ textarea:focus-visible {
 
   html {
     scroll-behavior: auto;
+  }
+
+  .reveal-clip {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .reveal-fade {
+    opacity: 1;
   }
 }

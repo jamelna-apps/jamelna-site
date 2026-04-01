@@ -82,7 +82,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="antialiased bg-deep text-white font-body">
+      <body className="antialiased bg-canvas text-text-primary font-body">
         <NextIntlClientProvider messages={messages} locale={locale}>
           <AnalyticsProvider projectId="jamelna">
             <a href="#main-content" className="skip-link">
