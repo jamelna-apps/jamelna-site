@@ -82,7 +82,60 @@ export default function AboutPage() {
               <p>{t('p2')}</p>
               <p>{t('p3')}</p>
               <p>{t('p4')}</p>
+              <a
+                href="https://linkedin.com/in/joeamelendez"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-terra inline-flex items-center gap-2 px-6 py-3 rounded-lg text-base mt-6"
+              >
+                {t('linkedinButton')}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Metrics strip */}
+      <section className="py-16 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto px-6">
+          <h3 className="reveal-slide-left text-sm font-mono text-terra uppercase tracking-wider mb-8">
+            {t('metricsTitle')}
+          </h3>
+          <div className="reveal-fade grid grid-cols-2 md:grid-cols-5 gap-8">
+            {['schools', 'educators', 'students', 'years', 'nsfFunded'].map((key) => (
+              <div key={key}>
+                <div className="text-3xl md:text-4xl font-display font-extrabold text-text-heading">
+                  {t(`metrics.${key}.number`)}
+                </div>
+                <div className="text-sm text-text-muted mt-1">
+                  {t(`metrics.${key}.label`)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="py-16 bg-canvas">
+        <div className="max-w-5xl mx-auto px-6">
+          <h3 className="reveal-slide-left text-sm font-mono text-terra uppercase tracking-wider mb-8">
+            {t('skillsTitle')}
+          </h3>
+          <div className="reveal-fade grid grid-cols-1 md:grid-cols-2 gap-6">
+            {['strategy', 'technical', 'education', 'leadership'].map((key) => (
+              <div key={key} className="card-alive p-6">
+                <h4 className="font-display font-bold text-text-heading text-lg mb-2">
+                  {t(`skills.${key}.title`)}
+                </h4>
+                <p className="text-text-secondary text-base leading-relaxed">
+                  {t(`skills.${key}.items`)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -184,6 +237,24 @@ export default function AboutPage() {
               className="inline-flex items-center justify-center px-8 py-3 bg-terra hover:bg-terra-dark text-white font-semibold rounded-lg transition-colors text-lg"
             >
               {t('cta')}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Photography + Contact CTAs */}
+      <section className="py-16 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row gap-8 items-start sm:items-center justify-between">
+          <div className="reveal-fade">
+            <p className="text-text-secondary text-lg mb-2">{t('photographyLink')}</p>
+            <Link href={`/${locale}/photography`} className="link-underline text-terra font-medium inline-flex items-center gap-2">
+              {t('photographyLinkCta')} →
+            </Link>
+          </div>
+          <div className="reveal-fade stagger-1">
+            <p className="text-text-secondary text-lg mb-2">{t('contactCta')}</p>
+            <Link href={`/${locale}/contact`} className="btn-terra inline-flex items-center gap-2 px-6 py-3 rounded-lg">
+              {t('contactCtaButton')} →
             </Link>
           </div>
         </div>

@@ -44,7 +44,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Left Column - Brand */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <Link href={`/${locale}`} className="inline-block group">
               <h3 className="text-2xl font-display font-bold text-text-heading group-hover:text-terra transition-colors mb-2">
                 JAMELNA
@@ -61,19 +61,41 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Middle Column - Navigation */}
-          <div className="md:col-span-3">
+          {/* Navigate Column */}
+          <div className="md:col-span-2">
             <h4 className="text-xs font-mono text-terra uppercase tracking-wider mb-4">
               {t('navigate')}
             </h4>
             <ul className="space-y-3">
               {[
                 { href: `/${locale}`, label: nav('home') },
+                { href: `/${locale}/about`, label: nav('about') },
                 { href: `/${locale}/work`, label: nav('work') },
+                { href: `/${locale}/contact`, label: nav('contact') },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-text-secondary hover:text-terra transition-colors text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Explore Column */}
+          <div className="md:col-span-2">
+            <h4 className="text-xs font-mono text-terra uppercase tracking-wider mb-4">
+              Explore
+            </h4>
+            <ul className="space-y-3">
+              {[
                 { href: `/${locale}/k12-cs-education`, label: nav('k12cs') },
                 { href: `/${locale}/photography`, label: nav('photography') },
-                { href: `/${locale}/about`, label: nav('about') },
-                { href: `/${locale}/contact`, label: nav('contact') },
+                { href: `/${locale}/tech-sovereignty`, label: 'Tech Sovereignty' },
+                { href: `/${locale}/anchor-and-steer`, label: 'Anchor & STEER' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

@@ -34,10 +34,8 @@ const Navigation = () => {
 
   const navLinks = [
     { href: `/${locale}`, label: t('home') },
-    { href: `/${locale}/work`, label: t('work') },
-    { href: `/${locale}/k12-cs-education`, label: t('k12cs') },
-    { href: `/${locale}/photography`, label: t('photography') },
     { href: `/${locale}/about`, label: t('about') },
+    { href: `/${locale}/work`, label: t('work') },
     { href: `/${locale}/contact`, label: t('contact') },
   ];
 

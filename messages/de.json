@@ -14,7 +14,7 @@
     "name": "Joe Alexander Meléndez-Naharro",
     "roleLabel": "Emerging Technology Strategist · K12 Innovation Leader",
     "tagline": "I Help Schools Navigate What's Next",
-    "description": "From AI to immersive learning to data-driven instruction — I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
+    "description": "Currently a Research Scholar at NC State's Friday Institute, managing SceneCraft — an NSF-funded AI-powered education platform. From AI to immersive learning to data-driven instruction, I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
     "ctaPrimary": "Let's Talk",
     "ctaSecondary": "See My Work",
     "yearsExperience": "15+"
@@ -83,6 +83,24 @@
       "title": "Through the Lens",
       "subtitle": "Street photography across three continents.",
       "viewAll": "View all galleries"
+    },
+    "metrics": {
+      "schools": {
+        "number": "200+",
+        "label": "Schools Impacted"
+      },
+      "educators": {
+        "number": "500+",
+        "label": "Educators Trained"
+      },
+      "students": {
+        "number": "25K+",
+        "label": "Students Reached"
+      },
+      "nsfFunded": {
+        "number": "NSF",
+        "label": "Funded Research"
+      }
     }
   },
   "footer": {
@@ -443,43 +461,75 @@
     "educationValue": "B.A. Geisteswissenschaften, Kreatives Schreiben\nNew School University",
     "contact": "Kontakt",
     "linkedin": "LinkedIn",
-    "cta": "Lassen Sie Uns Sprechen"
+    "cta": "Lassen Sie Uns Sprechen",
+    "linkedinButton": "View Full Profile on LinkedIn",
+    "metricsTitle": "By the Numbers",
+    "metrics": {
+      "schools": {
+        "number": "200+",
+        "label": "Schools Impacted"
+      },
+      "educators": {
+        "number": "500+",
+        "label": "Educators Trained"
+      },
+      "students": {
+        "number": "25K+",
+        "label": "Students Reached"
+      },
+      "years": {
+        "number": "15+",
+        "label": "Years in Education"
+      },
+      "nsfFunded": {
+        "number": "NSF",
+        "label": "Funded Research"
+      }
+    },
+    "skillsTitle": "Core Skills",
+    "skills": {
+      "strategy": {
+        "title": "Strategy",
+        "items": "Innovation roadmaps, pilot design, emerging tech evaluation, scaling frameworks"
+      },
+      "technical": {
+        "title": "Technical",
+        "items": "JavaScript, TypeScript, React, Next.js, React Native, Python, AI/ML integration"
+      },
+      "education": {
+        "title": "Education",
+        "items": "Curriculum design, CSTA standards, UDL, professional development, equity-centered design"
+      },
+      "leadership": {
+        "title": "Leadership",
+        "items": "Program management, cross-functional teams, stakeholder alignment, multi-state partnerships"
+      }
+    },
+    "photographyLink": "I'm also a photographer",
+    "photographyLinkCta": "View my galleries",
+    "contactCta": "Interested in working together?",
+    "contactCtaButton": "Get in touch"
   },
   "contact": {
-    "title": "Kontakt",
-    "description": "Ob Sie erkunden möchten, wie wir zusammenarbeiten könnten, oder sich einfach über Bildung und Technologie austauschen möchten, ich würde gerne von Ihnen hören.",
-    "consultingTitle": "Beratungsanfragen",
-    "consultingIntro": "Wenn Sie an einer Zusammenarbeit interessiert sind, so geht es los:",
-    "consultingStep1": "Schreiben Sie mir eine E-Mail",
-    "consultingStep1At": "an",
-    "consultingStep1With": "mit:",
-    "consultingBullet1": "Kurze Beschreibung Ihrer Herausforderung oder Chance",
-    "consultingBullet2": "Welche Art von Unterstützung Sie suchen",
-    "consultingBullet3": "Zeitrahmen (falls vorhanden)",
-    "consultingStep2": "Ich antworte",
-    "consultingStep2Detail": "innerhalb von 2 Werktagen",
-    "consultingStep3": "Wir vereinbaren",
-    "consultingStep3Detail": "ein 30-minütiges Erkundungsgespräch (kostenlos, unverbindlich)",
-    "consultingStep4": "Wenn es passt",
-    "consultingStep4Detail": "sende ich Ihnen ein maßgeschneidertes Angebot",
-    "sendEmail": "E-Mail Senden",
-    "employmentTitle": "Beschäftigungsmöglichkeiten",
-    "employmentIntro": "Ich bin offen für Gespräche über die richtige Gelegenheit, einschließlich:",
-    "employmentBullet1": "Vollzeitstellen (remote oder in Spanien/USA)",
-    "employmentBullet2": "Vertragspositionen für spezifische Projekte",
-    "employmentBullet3": "Remote-Arbeit mit EdTech-Unternehmen oder Bildungsorganisationen",
-    "employmentEmail": "E-Mail",
-    "employmentSubject": "mit \"Beschäftigungsmöglichkeit\" in der Betreffzeile.",
-    "generalTitle": "Allgemeine Anfragen",
-    "generalIntro": "Möchten Sie sich über KI in der Bildung austauschen, über spanische EdTech-Trends diskutieren oder einen virtuellen Kaffee trinken? Melden Sie sich – ich liebe es, Menschen zu treffen, die interessante Arbeit leisten.",
-    "email": "E-Mail:",
-    "linkedin": "LinkedIn:",
-    "locationTitle": "Standort & Verfügbarkeit",
-    "locationLabel": "Standort",
-    "locationValue": "Durham, North Carolina",
-    "availabilityLabel": "Verfügbarkeit",
-    "availabilityValue1": "Verfügbar für Remote-Arbeit in den USA und international",
-    "availabilityValue2": "Offen für Reisen für die richtigen Projekte"
+    "title": "Contact",
+    "description": "Whether you're exploring how we might work together or just want to connect about education and technology, I'd love to hear from you.",
+    "opportunities": {
+      "title": "Open to Opportunities",
+      "description": "I'm open to full-time, contract, and advisory roles across education technology, innovation strategy, and product leadership. Remote-friendly, based in the US with strong ties to Spain and Europe.",
+      "cta": "Send Email",
+      "email": "joe@jamelna.com"
+    },
+    "consulting": {
+      "title": "Consulting & Advisory",
+      "description": "I also take on select consulting engagements — from EdTech market strategy to AI implementation in schools. If you have a specific project in mind, I'd love to hear about it.",
+      "cta": "Send Email"
+    },
+    "connect": {
+      "title": "Get in Touch",
+      "email": "joe@jamelna.com",
+      "linkedin": "linkedin.com/in/joeamelendez",
+      "location": "Durham, NC — open to remote, hybrid, US or Spain-based opportunities"
+    }
   },
   "photography": {
     "title": "Fotografie",

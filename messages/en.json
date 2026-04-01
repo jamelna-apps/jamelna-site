@@ -14,7 +14,7 @@
     "name": "Joe Alexander Meléndez-Naharro",
     "roleLabel": "Emerging Technology Strategist · K12 Innovation Leader",
     "tagline": "I Help Schools Navigate What's Next",
-    "description": "From AI to immersive learning to data-driven instruction — I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
+    "description": "Currently a Research Scholar at NC State's Friday Institute, managing SceneCraft — an NSF-funded AI-powered education platform. From AI to immersive learning to data-driven instruction, I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
     "ctaPrimary": "Let's Talk",
     "ctaSecondary": "See My Work",
     "yearsExperience": "15+"
@@ -81,6 +81,12 @@
       "title": "Ready to Move Forward?",
       "description": "Whether you're evaluating AI tools, designing a district technology roadmap, or building something from scratch — I'd love to hear what you're working on.",
       "button": "Start a Conversation"
+    },
+    "metrics": {
+      "schools": { "number": "200+", "label": "Schools Impacted" },
+      "educators": { "number": "500+", "label": "Educators Trained" },
+      "students": { "number": "25K+", "label": "Students Reached" },
+      "nsfFunded": { "number": "NSF", "label": "Funded Research" }
     },
     "coreExpertise": "Do",
     "photography": {
@@ -509,43 +515,60 @@
         "dates": "2009 - 2013",
         "description": "Developed and delivered science education programming for diverse audiences. Created hands-on exhibits and facilitated learning experiences that sparked curiosity in visitors of all ages."
       }
-    }
+    },
+    "linkedinButton": "View Full Profile on LinkedIn",
+    "metricsTitle": "By the Numbers",
+    "metrics": {
+      "schools": { "number": "200+", "label": "Schools Impacted" },
+      "educators": { "number": "500+", "label": "Educators Trained" },
+      "students": { "number": "25K+", "label": "Students Reached" },
+      "years": { "number": "15+", "label": "Years in Education" },
+      "nsfFunded": { "number": "NSF", "label": "Funded Research" }
+    },
+    "skillsTitle": "Core Skills",
+    "skills": {
+      "strategy": {
+        "title": "Strategy",
+        "items": "Innovation roadmaps, pilot design, emerging tech evaluation, scaling frameworks"
+      },
+      "technical": {
+        "title": "Technical",
+        "items": "JavaScript, TypeScript, React, Next.js, React Native, Python, AI/ML integration"
+      },
+      "education": {
+        "title": "Education",
+        "items": "Curriculum design, CSTA standards, UDL, professional development, equity-centered design"
+      },
+      "leadership": {
+        "title": "Leadership",
+        "items": "Program management, cross-functional teams, stakeholder alignment, multi-state partnerships"
+      }
+    },
+    "photographyLink": "I'm also a photographer",
+    "photographyLinkCta": "View my galleries",
+    "contactCta": "Interested in working together?",
+    "contactCtaButton": "Get in touch"
   },
   "contact": {
     "title": "Contact",
     "description": "Whether you're exploring how we might work together or just want to connect about education and technology, I'd love to hear from you.",
-    "consultingTitle": "Consulting Inquiries",
-    "consultingIntro": "If you're interested in working together, here's how to start:",
-    "consultingStep1": "Email me",
-    "consultingStep1At": "at",
-    "consultingStep1With": "with:",
-    "consultingBullet1": "Brief description of your challenge or opportunity",
-    "consultingBullet2": "What kind of support you're looking for",
-    "consultingBullet3": "Timeline (if you have one)",
-    "consultingStep2": "I'll respond",
-    "consultingStep2Detail": "within 2 business days",
-    "consultingStep3": "We'll schedule",
-    "consultingStep3Detail": "a 30-minute exploratory conversation (no cost, no obligation)",
-    "consultingStep4": "If there's a fit",
-    "consultingStep4Detail": "I'll send you a custom proposal",
-    "sendEmail": "Send Email",
-    "employmentTitle": "Employment Opportunities",
-    "employmentIntro": "I'm open to conversations about the right opportunity, including:",
-    "employmentBullet1": "Full-time roles (remote or based in Spain/US)",
-    "employmentBullet2": "Contract positions for specific projects",
-    "employmentBullet3": "Remote work with EdTech companies or educational organizations",
-    "employmentEmail": "Email",
-    "employmentSubject": "with \"Employment Opportunity\" in the subject line.",
-    "generalTitle": "General Inquiries",
-    "generalIntro": "Want to connect about AI in education, discuss Spanish EdTech trends, or grab a virtual coffee? Reach out - I love meeting people doing interesting work.",
-    "email": "Email:",
-    "linkedin": "LinkedIn:",
-    "locationTitle": "Location & Availability",
-    "locationLabel": "Location",
-    "locationValue": "Durham, NC",
-    "availabilityLabel": "Availability",
-    "availabilityValue1": "Available for remote work across the US and internationally",
-    "availabilityValue2": "Open to travel for the right projects"
+    "opportunities": {
+      "title": "Open to Opportunities",
+      "description": "I'm open to full-time, contract, and advisory roles across education technology, innovation strategy, and product leadership. Remote-friendly, based in the US with strong ties to Spain and Europe.",
+      "cta": "Send Email",
+      "email": "joe@jamelna.com"
+    },
+    "consulting": {
+      "title": "Consulting & Advisory",
+      "description": "I also take on select consulting engagements — from EdTech market strategy to AI implementation in schools. If you have a specific project in mind, I'd love to hear about it.",
+      "cta": "Send Email"
+    },
+    "connect": {
+      "title": "Get in Touch",
+      "email": "joe@jamelna.com",
+      "linkedin": "linkedin.com/in/joeamelendez",
+      "location": "Durham, NC — open to remote, hybrid, US or Spain-based opportunities"
+    }
   },
   "photography": {
     "title": "Photography",

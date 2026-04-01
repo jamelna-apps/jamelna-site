@@ -54,138 +54,61 @@ export default function ContactPage() {
       {/* Content */}
       <section className="py-12 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          {/* Consulting Inquiries */}
-          <div className="border-t border-canvas-border pt-12 mb-16 reveal-fade" style={{ transitionDelay: '0s' }}>
+
+          {/* Section 1: Open to Opportunities */}
+          <section className="reveal-fade mb-16">
             <hr className="heading-rule" />
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-12 bg-terra"></div>
-              <h2 className="text-display-section font-display font-extrabold text-text-heading">
-                {t('consultingTitle')}
-              </h2>
-            </div>
-            <p className="text-text-secondary mb-4">
-              {t('consultingIntro')}
+            <h2 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+              {t('opportunities.title')}
+            </h2>
+            <p className="text-text-secondary text-lg leading-relaxed max-w-2xl mb-6">
+              {t('opportunities.description')}
             </p>
-            <ol className="list-decimal list-inside space-y-3 text-text-secondary mb-6">
-              <li>
-                <strong className="text-text-heading">{t('consultingStep1')}</strong> {t('consultingStep1At')}{' '}
-                <a
-                  href="mailto:joe@jamelna.com"
-                  className="text-terra hover:text-terra-light transition-colors"
-                >
-                  joe@jamelna.com
-                </a>{' '}
-                {t('consultingStep1With')}
-                <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                  <li>{t('consultingBullet1')}</li>
-                  <li>{t('consultingBullet2')}</li>
-                  <li>{t('consultingBullet3')}</li>
-                </ul>
-              </li>
-              <li>
-                <strong className="text-text-heading">{t('consultingStep2')}</strong> {t('consultingStep2Detail')}
-              </li>
-              <li>
-                <strong className="text-text-heading">{t('consultingStep3')}</strong> {t('consultingStep3Detail')}
-              </li>
-              <li>
-                <strong className="text-text-heading">{t('consultingStep4')}</strong>, {t('consultingStep4Detail')}
-              </li>
-            </ol>
-            <a
-              href="mailto:joe@jamelna.com"
-              className="inline-flex items-center justify-center px-6 py-3 bg-terra hover:bg-terra-dark text-white font-semibold rounded-lg transition-colors"
-            >
-              {t('sendEmail')}
+            <a href="mailto:joe@jamelna.com" className="btn-terra inline-flex items-center gap-2 px-6 py-3 rounded-lg">
+              {t('opportunities.cta')}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
             </a>
-          </div>
+          </section>
 
-          {/* Employment Opportunities */}
-          <div className="border-t border-canvas-border pt-12 mb-16 reveal-fade" style={{ transitionDelay: '0.1s' }}>
-            <hr className="heading-rule" />
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-12 bg-ink"></div>
-              <h2 className="text-display-section font-display font-extrabold text-text-heading">
-                {t('employmentTitle')}
-              </h2>
-            </div>
-            <p className="text-text-secondary mb-4">
-              {t('employmentIntro')}
+          {/* Section 2: Consulting */}
+          <section className="reveal-fade stagger-1 mb-16">
+            <h3 className="text-xl font-display font-bold text-text-heading mb-3">
+              {t('consulting.title')}
+            </h3>
+            <p className="text-text-secondary text-base leading-relaxed max-w-2xl mb-4">
+              {t('consulting.description')}
             </p>
-            <ul className="list-disc list-inside space-y-2 text-text-secondary mb-4 ml-4">
-              <li>{t('employmentBullet1')}</li>
-              <li>{t('employmentBullet2')}</li>
-              <li>{t('employmentBullet3')}</li>
-            </ul>
-            <p className="text-text-secondary">
-              {t('employmentEmail')}{' '}
-              <a
-                href="mailto:joe@jamelna.com?subject=Employment Opportunity"
-                className="text-ink hover:text-ink-light transition-colors"
-              >
-                joe@jamelna.com
-              </a>{' '}
-              {t('employmentSubject')}
-            </p>
-          </div>
+            <a href="mailto:joe@jamelna.com" className="link-underline text-terra font-medium">
+              {t('consulting.cta')} →
+            </a>
+          </section>
 
-          {/* General Inquiries */}
-          <div className="border-t border-canvas-border pt-12 mb-16 reveal-fade" style={{ transitionDelay: '0.2s' }}>
-            <hr className="heading-rule" />
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-12 bg-terra"></div>
-              <h2 className="text-display-section font-display font-extrabold text-text-heading">
-                {t('generalTitle')}
-              </h2>
-            </div>
-            <p className="text-text-secondary mb-4">
-              {t('generalIntro')}
-            </p>
-            <div className="space-y-2 text-text-secondary">
-              <p>
-                <strong className="text-terra">{t('email')}</strong>{' '}
-                <a
-                  href="mailto:joe@jamelna.com"
-                  className="text-terra hover:text-terra-light transition-colors"
-                >
-                  joe@jamelna.com
-                </a>
-              </p>
-              <p>
-                <strong className="text-terra">{t('linkedin')}</strong>{' '}
-                <a
-                  href="https://linkedin.com/in/joeamelendez"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-terra hover:text-terra-light transition-colors"
-                >
-                  linkedin.com/in/joeamelendez
-                </a>
+          {/* Section 3: Get in Touch */}
+          <section className="reveal-fade stagger-2 bg-canvas-raised border border-canvas-border rounded-lg p-8">
+            <h3 className="text-xl font-display font-bold text-text-heading mb-6">
+              {t('connect.title')}
+            </h3>
+            <div className="space-y-4">
+              <a href="mailto:joe@jamelna.com" className="flex items-center gap-3 text-text-secondary hover:text-terra transition-colors text-base">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                {t('connect.email')}
+              </a>
+              <a href="https://linkedin.com/in/joeamelendez" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-text-secondary hover:text-terra transition-colors text-base">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <p className="text-text-muted text-base pt-2">
+                {t('connect.location')}
               </p>
             </div>
-          </div>
+          </section>
 
-          {/* Location & Availability */}
-          <div className="border-t border-canvas-border pt-12 reveal-fade" style={{ transitionDelay: '0.3s' }}>
-            <hr className="heading-rule" />
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-12 bg-ink"></div>
-              <h2 className="text-display-section font-display font-extrabold text-text-heading">
-                {t('locationTitle')}
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-canvas-raised border border-canvas-border rounded-lg p-6">
-                <h3 className="font-bold text-terra mb-2 uppercase tracking-wider text-sm font-mono">{t('locationLabel')}</h3>
-                <p className="text-text-secondary">{t('locationValue')}</p>
-              </div>
-              <div className="bg-canvas-raised border border-canvas-border rounded-lg p-6">
-                <h3 className="font-bold text-terra mb-2 uppercase tracking-wider text-sm font-mono">{t('availabilityLabel')}</h3>
-                <p className="text-text-secondary">{t('availabilityValue1')}</p>
-                <p className="text-text-secondary">{t('availabilityValue2')}</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>

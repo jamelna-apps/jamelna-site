@@ -14,7 +14,7 @@
     "name": "Joe Alexander Meléndez-Naharro",
     "roleLabel": "Emerging Technology Strategist · K12 Innovation Leader",
     "tagline": "I Help Schools Navigate What's Next",
-    "description": "From AI to immersive learning to data-driven instruction — I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
+    "description": "Currently a Research Scholar at NC State's Friday Institute, managing SceneCraft — an NSF-funded AI-powered education platform. From AI to immersive learning to data-driven instruction, I evaluate, pilot, and scale the technologies that actually move the needle for students. 15+ years building the programs, frameworks, and tools that turn emerging tech into equitable classroom practice.",
     "ctaPrimary": "Let's Talk",
     "ctaSecondary": "See My Work",
     "yearsExperience": "15+"
@@ -83,6 +83,24 @@
       "title": "Through the Lens",
       "subtitle": "Street photography across three continents.",
       "viewAll": "View all galleries"
+    },
+    "metrics": {
+      "schools": {
+        "number": "200+",
+        "label": "Schools Impacted"
+      },
+      "educators": {
+        "number": "500+",
+        "label": "Educators Trained"
+      },
+      "students": {
+        "number": "25K+",
+        "label": "Students Reached"
+      },
+      "nsfFunded": {
+        "number": "NSF",
+        "label": "Funded Research"
+      }
     }
   },
   "footer": {
@@ -443,43 +461,75 @@
     "educationValue": "文学学士，文理科学，创意写作\n新学院大学",
     "contact": "联系",
     "linkedin": "LinkedIn",
-    "cta": "让我们谈谈"
+    "cta": "让我们谈谈",
+    "linkedinButton": "View Full Profile on LinkedIn",
+    "metricsTitle": "By the Numbers",
+    "metrics": {
+      "schools": {
+        "number": "200+",
+        "label": "Schools Impacted"
+      },
+      "educators": {
+        "number": "500+",
+        "label": "Educators Trained"
+      },
+      "students": {
+        "number": "25K+",
+        "label": "Students Reached"
+      },
+      "years": {
+        "number": "15+",
+        "label": "Years in Education"
+      },
+      "nsfFunded": {
+        "number": "NSF",
+        "label": "Funded Research"
+      }
+    },
+    "skillsTitle": "Core Skills",
+    "skills": {
+      "strategy": {
+        "title": "Strategy",
+        "items": "Innovation roadmaps, pilot design, emerging tech evaluation, scaling frameworks"
+      },
+      "technical": {
+        "title": "Technical",
+        "items": "JavaScript, TypeScript, React, Next.js, React Native, Python, AI/ML integration"
+      },
+      "education": {
+        "title": "Education",
+        "items": "Curriculum design, CSTA standards, UDL, professional development, equity-centered design"
+      },
+      "leadership": {
+        "title": "Leadership",
+        "items": "Program management, cross-functional teams, stakeholder alignment, multi-state partnerships"
+      }
+    },
+    "photographyLink": "I'm also a photographer",
+    "photographyLinkCta": "View my galleries",
+    "contactCta": "Interested in working together?",
+    "contactCtaButton": "Get in touch"
   },
   "contact": {
-    "title": "联系",
-    "description": "无论您是在探索我们如何合作，还是只是想就教育和技术进行交流，我都很乐意听到您的声音。",
-    "consultingTitle": "咨询咨询",
-    "consultingIntro": "如果您有兴趣合作，以下是开始的方法：",
-    "consultingStep1": "给我发电子邮件",
-    "consultingStep1At": "到",
-    "consultingStep1With": "包括：",
-    "consultingBullet1": "简要描述您的挑战或机会",
-    "consultingBullet2": "您正在寻找什么样的支持",
-    "consultingBullet3": "时间表（如果有的话）",
-    "consultingStep2": "我会回复",
-    "consultingStep2Detail": "在2个工作日内",
-    "consultingStep3": "我们将安排",
-    "consultingStep3Detail": "30分钟的探索性对话（免费，无义务）",
-    "consultingStep4": "如果合适",
-    "consultingStep4Detail": "我会向您发送定制提案",
-    "sendEmail": "发送电子邮件",
-    "employmentTitle": "就业机会",
-    "employmentIntro": "我愿意就合适的机会进行对话，包括：",
-    "employmentBullet1": "全职职位（远程或在西班牙/美国）",
-    "employmentBullet2": "特定项目的合同职位",
-    "employmentBullet3": "与教育科技公司或教育组织的远程工作",
-    "employmentEmail": "发送电子邮件",
-    "employmentSubject": "主题行中包含「就业机会」。",
-    "generalTitle": "一般咨询",
-    "generalIntro": "想就教育中的人工智能进行交流，讨论西班牙教育科技趋势，或喝杯虚拟咖啡？请联系我——我喜欢结识从事有趣工作的人。",
-    "email": "电子邮件：",
-    "linkedin": "LinkedIn：",
-    "locationTitle": "位置和可用性",
-    "locationLabel": "位置",
-    "locationValue": "北卡罗来纳州达勒姆",
-    "availabilityLabel": "可用性",
-    "availabilityValue1": "可在美国和国际范围内进行远程工作",
-    "availabilityValue2": "愿意为合适的项目出差"
+    "title": "Contact",
+    "description": "Whether you're exploring how we might work together or just want to connect about education and technology, I'd love to hear from you.",
+    "opportunities": {
+      "title": "Open to Opportunities",
+      "description": "I'm open to full-time, contract, and advisory roles across education technology, innovation strategy, and product leadership. Remote-friendly, based in the US with strong ties to Spain and Europe.",
+      "cta": "Send Email",
+      "email": "joe@jamelna.com"
+    },
+    "consulting": {
+      "title": "Consulting & Advisory",
+      "description": "I also take on select consulting engagements — from EdTech market strategy to AI implementation in schools. If you have a specific project in mind, I'd love to hear about it.",
+      "cta": "Send Email"
+    },
+    "connect": {
+      "title": "Get in Touch",
+      "email": "joe@jamelna.com",
+      "linkedin": "linkedin.com/in/joeamelendez",
+      "location": "Durham, NC — open to remote, hybrid, US or Spain-based opportunities"
+    }
   },
   "photography": {
     "title": "摄影",
