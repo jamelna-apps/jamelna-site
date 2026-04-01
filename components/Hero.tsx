@@ -114,7 +114,7 @@ const Hero = () => {
         <div className="absolute inset-0 grid grid-cols-4 gap-1 opacity-30 grayscale group-hover:grayscale-0 transition-all duration-1000">
           {[
             '/photos/bridge.webp',
-            '/photos/out-there-somewhere/18-DSCF6572.webp',
+            '/photos/out-there-somewhere/30-DSCF2369.webp',
             '/photos/open-world/1-_DSF4181.webp',
             '/photos/open-world/24-DSCF5915.webp',
           ].map((src, i) => (
