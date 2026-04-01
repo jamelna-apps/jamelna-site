@@ -138,7 +138,6 @@ export default function AboutPage() {
               <p>{t('p1')}</p>
               <p>{t('p2')}</p>
               <p>{t('p3')}</p>
-              <p>{t('p4')}</p>
               <a
                 href="https://linkedin.com/in/joeamelendez"
                 target="_blank"
@@ -201,11 +200,8 @@ export default function AboutPage() {
       <section className="py-12 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
           <div className="reveal-fade mb-16 space-y-6 text-lg text-text-secondary leading-relaxed">
+            <p>{t('p4')}</p>
             <p>{t('p5')}</p>
-            <p>{t('p6')}</p>
-            <p>{t('p7')}</p>
-            <p>{t('p8')}</p>
-            <p>{t('p9')}</p>
           </div>
 
           {/* Experience / CV Section */}
