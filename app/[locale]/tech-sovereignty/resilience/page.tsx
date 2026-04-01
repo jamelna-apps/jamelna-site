@@ -326,7 +326,7 @@ export default function ResiliencePage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-canvas-deep text-text-heading">
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-      <section className="pt-20 pb-12 px-6 bg-canvas-deep">
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-6xl mx-auto">
           {/* Back link */}
           <Link
