@@ -144,7 +144,7 @@ const Navigation = () => {
             {/* Logo */}
             <Link href={`/${locale}`} tabIndex={0} className="flex items-center gap-2 group">
               <span className="text-2xl font-display font-bold text-text-heading group-hover:text-terra transition-colors">
-                JAMELNA<span className="text-terra">.</span>
+                JAMELNA
               </span>
             </Link>
 

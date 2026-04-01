@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="md:col-span-5">
             <Link href={`/${locale}`} className="inline-block group">
               <h3 className="text-2xl font-display font-bold text-text-heading group-hover:text-terra transition-colors mb-2">
-                JAMELNA<span className="text-terra">.</span>
+                JAMELNA
               </h3>
             </Link>
             <p className="text-text-muted text-sm mb-4">

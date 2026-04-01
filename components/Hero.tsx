@@ -40,16 +40,6 @@ const NAME_WORD_GROUPS: WordGroup[] = [
   },
 ];
 
-const FILMSTRIP_PHOTOS = [
-  { src: '/photos/bridge.webp' },
-  { src: '/photos/once-upon-a-time-in-new-york/3-DSCF2638.webp' },
-  { src: '/photos/open-world/1-_DSF4181.webp' },
-  { src: '/photos/out-there-somewhere/6-DSCF6005.webp' },
-  { src: '/photos/once-upon-a-time-in-new-york/17-DSCF4663.webp' },
-  { src: '/photos/open-world/22-DSCF5809.webp' },
-  { src: '/photos/out-there-somewhere/18-DSCF6572.webp' },
-  { src: '/photos/once-upon-a-time-in-new-york/35-DSCF8855.webp' },
-];
 
 const Hero = () => {
   const t = useTranslations('hero');
@@ -62,7 +52,6 @@ const Hero = () => {
   const [letterFeedback, setLetterFeedback] = useState<number | null>(null);
   const [isNameHovered, setIsNameHovered] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [filmstripPaused, setFilmstripPaused] = useState(false);
 
   // Check for reduced motion preference
   useEffect(() => {
@@ -118,35 +107,15 @@ const Hero = () => {
   return (
     <section
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-canvas-deep"
-      onMouseEnter={() => setFilmstripPaused(true)}
-      onMouseLeave={() => setFilmstripPaused(false)}
     >
-      {/* Photo filmstrip background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-canvas-deep/93 z-10" />
-
-        {/* Scrolling filmstrip */}
-        <div
-          className={`flex h-full ${prefersReducedMotion ? '' : 'animate-filmstrip'}`}
-          style={{
-            width: '200%',
-            animationPlayState: filmstripPaused ? 'paused' : 'running',
-          }}
-        >
-          {/* Duplicate photos for seamless loop */}
-          {[...FILMSTRIP_PHOTOS, ...FILMSTRIP_PHOTOS].map((photo, i) => (
-            <div key={i} className="h-full flex-shrink-0" style={{ width: `${100 / FILMSTRIP_PHOTOS.length}%` }}>
-              <img
-                src={photo.src}
-                alt=""
-                className="w-full h-full object-cover"
-                loading={i < 4 ? 'eager' : 'lazy'}
-                aria-hidden="true"
-              />
-            </div>
-          ))}
-        </div>
+      {/* Blurred photo texture background */}
+      <div className="absolute inset-0">
+        <img
+          src="/photos/bridge.webp"
+          alt=""
+          className="w-full h-full object-cover blur-[60px] opacity-[0.12] saturate-50 scale-110"
+          aria-hidden="true"
+        />
       </div>
 
       {/* Portal animation overlay */}
