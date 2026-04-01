@@ -142,8 +142,7 @@ export default function PhotographyPage() {
                   <button
                     key={index}
                     onClick={() => openLightbox(gallery, index)}
-                    className="aspect-square bg-canvas-raised rounded-lg overflow-hidden group cursor-pointer border border-canvas-border hover:border-terra/50 transition-colors reveal-fade"
-                    style={{ transitionDelay: `${(index % 8) * 0.06}s` }}
+                    className="aspect-square bg-canvas-raised rounded-lg overflow-hidden group cursor-pointer border border-canvas-border hover:border-terra/50 transition-colors"
                     onContextMenu={(e) => e.preventDefault()}
                     onDragStart={(e) => e.preventDefault()}
                   >

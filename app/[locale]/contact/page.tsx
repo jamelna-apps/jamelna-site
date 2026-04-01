@@ -45,7 +45,7 @@ export default function ContactPage() {
       </section>
 
       <PhotoBreak
-        src="/photos/out-there-somewhere/23-DSCF0272.webp"
+        src="/photos/once-upon-a-time-in-new-york/1-DSCF2326.webp"
         alt=""
         position="center"
         height="20vh"

@@ -136,7 +136,7 @@ export default function WorkPage() {
           {/* Photo break between Professional and Products */}
           <div className="mb-20 -mx-4">
             <PhotoBreak
-              src="/photos/open-world/22-DSCF5809.webp"
+              src="/photos/once-upon-a-time-in-new-york/16-DSCF4610.webp"
               alt="Travel photography"
               position="center"
               height="25vh"
