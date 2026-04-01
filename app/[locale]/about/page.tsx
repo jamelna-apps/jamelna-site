@@ -139,7 +139,7 @@ export default function AboutPage() {
                   {t('metricsTitle')}
                 </h3>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4">
-                  {['schools', 'educators', 'students', 'years', 'nsfFunded'].map((key) => (
+                  {['schools', 'educators', 'students', 'years'].map((key) => (
                     <div key={key}>
                       <div className="text-2xl font-display font-extrabold text-text-heading">
                         {t(`metrics.${key}.number`)}
@@ -182,7 +182,7 @@ export default function AboutPage() {
             {t('metricsTitle')}
           </h3>
           <div className="reveal-fade grid grid-cols-2 gap-8">
-            {['schools', 'educators', 'students', 'years', 'nsfFunded'].map((key) => (
+            {['schools', 'educators', 'students', 'years'].map((key) => (
               <div key={key}>
                 <div className="text-3xl font-display font-extrabold text-text-heading">
                   {t(`metrics.${key}.number`)}
