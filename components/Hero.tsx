@@ -115,8 +115,8 @@ const Hero = () => {
           {[
             '/photos/bridge.webp',
             '/photos/out-there-somewhere/30-DSCF2369.webp',
-            '/photos/open-world/1-_DSF4181.webp',
             '/photos/open-world/24-DSCF5915.webp',
+            '/photos/open-world/1-_DSF4181.webp',
           ].map((src, i) => (
             <img
               key={i}
