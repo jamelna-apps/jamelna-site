@@ -1,8 +1,30 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import PhotoBreak from '@/components/PhotoBreak';
+
+// Scroll reveal hook
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+}
 import {
   ActionCard,
   TierSelector,
@@ -267,6 +289,7 @@ function getSortedActions(
 export default function ResiliencePage() {
   const t = useTranslations('techSovereignty');
   const locale = useLocale();
+  const containerRef = useScrollReveal();
 
   const [activeContext, setActiveContext] = useState<ThreatContext>(null);
   const [activeTier, setActiveTier] = useState<number | null>(null);
@@ -302,29 +325,10 @@ export default function ResiliencePage() {
   };
 
   return (
-    <div className="min-h-screen bg-canvas-deep text-text-heading">
+    <div ref={containerRef} className="min-h-screen bg-canvas-deep text-text-heading">
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden">
-        {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-canvas to-canvas-deep" />
-
-        {/* Decorative grid */}
-        <div className="absolute inset-0 opacity-[0.04]">
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="resilience-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#resilience-grid)" />
-          </svg>
-        </div>
-
-        {/* Decorative red accent blobs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-red-500/5 rounded-full blur-2xl pointer-events-none" />
-
-        <div className="relative max-w-6xl mx-auto px-6 py-20 sm:py-28">
+      <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+        <div className="max-w-6xl mx-auto">
           {/* Back link */}
           <Link
             href={`/${locale}/tech-sovereignty`}
@@ -341,6 +345,8 @@ export default function ResiliencePage() {
             {t('resilience.hero.backLink')}
           </Link>
 
+          <hr className="heading-rule" />
+
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-3 py-1 mb-6">
             <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
@@ -349,7 +355,7 @@ export default function ResiliencePage() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-text-heading mb-4 leading-tight">
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4 leading-tight">
             {t('resilience.hero.title')}
           </h1>
 
@@ -363,21 +369,21 @@ export default function ResiliencePage() {
 
           {/* Quick stats */}
           <div className="flex flex-wrap gap-6 mt-10">
-            <div className="text-center">
+            <div>
               <div className="text-3xl font-black text-text-heading">{resilienceActions.length}</div>
               <div className="text-sm text-text-muted uppercase tracking-wide mt-0.5">
                 {t('resilience.hero.statActions')}
               </div>
             </div>
             <div className="w-px bg-canvas-border self-stretch" />
-            <div className="text-center">
+            <div>
               <div className="text-3xl font-black text-text-heading">5</div>
               <div className="text-sm text-text-muted uppercase tracking-wide mt-0.5">
                 {t('resilience.hero.statPillars')}
               </div>
             </div>
             <div className="w-px bg-canvas-border self-stretch" />
-            <div className="text-center">
+            <div>
               <div className="text-3xl font-black text-text-heading">3</div>
               <div className="text-sm text-text-muted uppercase tracking-wide mt-0.5">
                 {t('resilience.hero.statTiers')}
@@ -387,12 +393,20 @@ export default function ResiliencePage() {
         </div>
       </section>
 
+      {/* Photo Break */}
+      <PhotoBreak
+        src="/photos/bridge.webp"
+        alt="Digital infrastructure — resilience through independence"
+        position="center 50%"
+        height="22vh"
+      />
+
       <div className="max-w-6xl mx-auto px-6 pb-24 space-y-20">
 
         {/* ── Threat Context Selector ────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-text-heading mb-2">
+            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.contexts.sectionTitle')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -405,7 +419,7 @@ export default function ResiliencePage() {
         {/* ── Tier Selector ──────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-text-heading mb-2">
+            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.tiers.sectionTitle')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -418,7 +432,7 @@ export default function ResiliencePage() {
         {/* ── Pillar Overview Grid ───────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-text-heading mb-2">
+            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.pillarsOverview.title')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -426,14 +440,15 @@ export default function ResiliencePage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {pillarConfigs.map((config) => (
-              <PillarCard
-                key={config.id}
-                pillarId={config.id}
-                accentColor={config.accentColor}
-                actionCount={getActionsByPillar(config.id).length}
-                icon={PillarIcons[config.id]}
-              />
+            {pillarConfigs.map((config, idx) => (
+              <div key={config.id} className="reveal-fade" style={{ transitionDelay: `${idx * 80}ms` }}>
+                <PillarCard
+                  pillarId={config.id}
+                  accentColor={config.accentColor}
+                  actionCount={getActionsByPillar(config.id).length}
+                  icon={PillarIcons[config.id]}
+                />
+              </div>
             ))}
           </div>
         </section>
@@ -455,7 +470,7 @@ export default function ResiliencePage() {
                   <SectionPillarIcon pillar={config.id} />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-text-heading">
+                  <h2 className="reveal-slide-left text-2xl font-bold text-text-heading">
                     {t(`resilience.pillars.${pillarKeyMap[config.id]}.title`)}
                   </h2>
                   <p className="text-text-secondary text-sm mt-0.5">
@@ -481,19 +496,20 @@ export default function ResiliencePage() {
                 </div>
               ) : (
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {sortedActions.map((action) => (
-                    <ActionCard
-                      key={action.id}
-                      actionId={action.id}
-                      pillar={action.pillar}
-                      duration={action.duration}
-                      tier={action.tier as 1 | 2 | 3}
-                      tools={action.tools}
-                      stepCount={action.stepCount}
-                      color={config.accentColor}
-                      relatedTrack={action.relatedTrack}
-                      locale={locale}
-                    />
+                  {sortedActions.map((action, actionIdx) => (
+                    <div key={action.id} className="reveal-fade" style={{ transitionDelay: `${actionIdx * 60}ms` }}>
+                      <ActionCard
+                        actionId={action.id}
+                        pillar={action.pillar}
+                        duration={action.duration}
+                        tier={action.tier as 1 | 2 | 3}
+                        tools={action.tools}
+                        stepCount={action.stepCount}
+                        color={config.accentColor}
+                        relatedTrack={action.relatedTrack}
+                        locale={locale}
+                      />
+                    </div>
                   ))}
                 </div>
               )}
@@ -504,7 +520,7 @@ export default function ResiliencePage() {
         {/* ── Tool Directory ─────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-text-heading mb-2">
+            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.toolDirectory.title')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -569,7 +585,7 @@ export default function ResiliencePage() {
         {/* ── Cross-links ────────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-text-heading mb-2">
+            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.crossLinks.title')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -577,13 +593,14 @@ export default function ResiliencePage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {crossLinks.map(({ slug, color, icon }) => {
+            {crossLinks.map(({ slug, color, icon }, clIdx) => {
               const c = crossLinkColorMap[color];
               return (
                 <Link
                   key={slug}
                   href={`/${locale}/tech-sovereignty/${slug}`}
-                  className={`group bg-canvas-raised border ${c.border} ${c.hoverBorder} rounded-xl p-5 transition-all hover:shadow-lg flex flex-col gap-3`}
+                  className={`reveal-fade group bg-canvas-raised border ${c.border} ${c.hoverBorder} rounded-xl p-5 transition-all hover:shadow-lg flex flex-col gap-3`}
+                  style={{ transitionDelay: `${clIdx * 80}ms` }}
                 >
                   <div className={`w-10 h-10 ${c.iconBg} rounded-lg flex items-center justify-center ${c.iconText}`}>
                     {icon}

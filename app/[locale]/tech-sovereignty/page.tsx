@@ -11,6 +11,28 @@ import { EducatorHub } from '@/components/tech-sovereignty/EducatorHub';
 import { getAllPathways } from '@/data/pathways';
 import { quickWins } from '@/data/quick-wins';
 import { getCompletedCount } from '@/lib/sovereignty-progress';
+import PhotoBreak from '@/components/PhotoBreak';
+
+// Scroll reveal hook
+function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+}
 
 // Project Card Component
 interface Project {
@@ -163,6 +185,7 @@ export default function TechSovereigntyPage() {
   const [pathwayProgress, setPathwayProgress] = useState<Record<string, number>>({});
   const curriculumRef = useRef<HTMLDivElement>(null);
   const pathwaysRef = useRef<HTMLDivElement>(null);
+  const containerRef = useScrollReveal();
 
   // Load progress from localStorage on mount
   useEffect(() => {
@@ -271,27 +294,21 @@ export default function TechSovereigntyPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main ref={containerRef} className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
-        {/* Purple gradient background for secret page */}
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-canvas to-canvas-deep"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent)' }} />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(167, 139, 250, 0.3), transparent)' }} />
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-            <span className="text-violet-400">/</span> {t('hero.title')}
+      <section className="pt-32 pb-16 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
+          <hr className="heading-rule" />
+          <h1 className="reveal-slide-left text-display-section font-display font-extrabold text-text-heading mb-4">
+            {t('hero.title')}
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-2xl mb-4">
             {t('hero.subtitle')}
           </p>
-          <p className="text-lg text-text-muted mb-10 max-w-2xl mx-auto">
+          <p className="text-base text-text-secondary max-w-2xl mb-8">
             {t('hero.description')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#curriculum"
               className="bg-violet-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-400 transition-colors"
@@ -311,16 +328,16 @@ export default function TechSovereigntyPage() {
       {/* Why Tech Sovereignty */}
       <section id="why" className="py-20 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6 text-center">
+          <h2 className="reveal-slide-left text-3xl md:text-4xl font-bold text-text-heading mb-6">
             {t('why.title')}
           </h2>
-          <p className="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12">
+          <p className="text-lg text-text-secondary max-w-3xl mb-12">
             {t('why.intro')}
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Problem */}
-            <div className="bg-canvas-raised border border-orange-500/30 rounded-xl p-6 hover:border-orange-500/60 transition-colors">
+            <div className="reveal-fade bg-canvas-raised border border-orange-500/30 rounded-xl p-6 hover:border-orange-500/60 transition-colors">
               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -331,7 +348,7 @@ export default function TechSovereigntyPage() {
             </div>
 
             {/* Vision */}
-            <div className="bg-canvas-raised border border-sky-500/30 rounded-xl p-6 hover:border-sky-500/60 transition-colors">
+            <div className="reveal-fade bg-canvas-raised border border-sky-500/30 rounded-xl p-6 hover:border-sky-500/60 transition-colors">
               <div className="w-12 h-12 bg-sky-500/20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -343,7 +360,7 @@ export default function TechSovereigntyPage() {
             </div>
 
             {/* Benefit */}
-            <div className="bg-canvas-raised border border-violet-500/30 rounded-xl p-6 hover:border-violet-500/50 transition-colors">
+            <div className="reveal-fade bg-canvas-raised border border-violet-500/30 rounded-xl p-6 hover:border-violet-500/50 transition-colors">
               <div className="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -356,12 +373,20 @@ export default function TechSovereigntyPage() {
         </div>
       </section>
 
+      {/* Photo Break */}
+      <PhotoBreak
+        src="/photos/bridge.webp"
+        alt="Digital infrastructure and connectivity"
+        position="center 60%"
+        height="25vh"
+      />
+
       {/* Digital Resilience Toolkit Banner */}
       <section className="py-12 px-4 bg-canvas border-t border-canvas-raised">
         <div className="max-w-5xl mx-auto">
           <Link
             href={`/${locale}/tech-sovereignty/resilience`}
-            className="block bg-canvas-raised border-2 border-red-500/30 hover:border-red-500/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-red-500/10 group"
+            className="card-alive block bg-canvas-raised border-2 border-red-500/30 hover:border-red-500/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-red-500/10 group"
           >
             <div className="flex items-start gap-6">
               <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/30 transition-colors">
@@ -390,7 +415,7 @@ export default function TechSovereigntyPage() {
 
       {/* Mode Selector - Start Here */}
       <section id="start" className="py-16 px-4 bg-canvas border-t border-canvas-raised">
-        <div className="max-w-5xl mx-auto">
+        <div className="reveal-fade max-w-5xl mx-auto">
           <ModeSelector onSelect={handleModeSelect} />
         </div>
       </section>
@@ -398,20 +423,20 @@ export default function TechSovereigntyPage() {
       {/* Quick Wins Section */}
       <section id="quick-wins" className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="mb-10">
             <span className="inline-block bg-green-500/20 text-green-300 text-xs px-3 py-1 rounded-full font-medium mb-4">
               30-45 minutes each
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-4">
+            <h2 className="reveal-slide-left text-3xl md:text-4xl font-bold text-text-heading mb-4">
               Quick Wins
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-lg text-text-secondary max-w-2xl">
               Get a taste of tech sovereignty with these starter projects. Each one gives you immediate, tangible results.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quickWins.slice(0, 6).map((qw) => {
+            {quickWins.slice(0, 6).map((qw, qwIndex) => {
               const colorMap: Record<string, 'sky' | 'violet' | 'amber' | 'green' | 'orange' | 'rose'> = {
                 networking: 'sky',
                 'self-hosted': 'violet',
@@ -455,15 +480,16 @@ export default function TechSovereigntyPage() {
               };
 
               return (
-                <QuickWinCard
-                  key={qw.id}
-                  quickWin={{
-                    ...qw,
-                    link: `/${locale}${qw.link}`,
-                  }}
-                  color={colorMap[qw.track] || 'sky'}
-                  icon={iconMap[qw.track]}
-                />
+                <div key={qw.id} className="reveal-fade" style={{ transitionDelay: `${qwIndex * 80}ms` }}>
+                  <QuickWinCard
+                    quickWin={{
+                      ...qw,
+                      link: `/${locale}${qw.link}`,
+                    }}
+                    color={colorMap[qw.track] || 'sky'}
+                    icon={iconMap[qw.track]}
+                  />
+                </div>
               );
             })}
           </div>
