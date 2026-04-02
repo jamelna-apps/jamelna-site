@@ -121,11 +121,11 @@ const Navigation = () => {
   return (
     <>
       {/* Fixed menu button on homepage before scroll */}
-      {isHomePage && !isVisible && (
+      {isHomePage && !isVisible && !isMenuOpen && (
         <button
           onClick={() => setIsMenuOpen(true)}
           aria-label="Open navigation menu"
-          className="fixed top-4 right-4 z-50 p-3 rounded-full bg-terra text-canvas-deep hover:bg-terra-light transition-colors"
+          className="fixed top-4 right-4 z-50 p-3 rounded-full bg-terra text-canvas-deep hover:bg-terra-light transition-colors md:hidden"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -237,7 +237,7 @@ const Navigation = () => {
         {isMenuOpen && (
           <div
             id="mobile-menu"
-            className="md:hidden fixed inset-0 z-40 bg-canvas-deep flex flex-col justify-center px-8"
+            className="md:hidden fixed inset-0 z-[60] bg-canvas-deep flex flex-col justify-center px-8"
           >
             {/* Close button */}
             <button

@@ -190,7 +190,7 @@ const Hero = () => {
         <p
           className={`
             text-center text-xl md:text-2xl lg:text-3xl text-text-secondary font-body
-            max-w-4xl mx-auto mb-12
+            max-w-4xl mx-auto mb-6 md:mb-12
             transition-all duration-1000 delay-500
             ${animationStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
           `}
@@ -202,8 +202,8 @@ const Hero = () => {
         {/* Description */}
         <p
           className={`
-            text-center text-lg text-text-primary/80 font-body
-            max-w-2xl mx-auto mb-12
+            text-center text-base md:text-lg text-text-primary/80 font-body
+            max-w-2xl mx-auto mb-8 md:mb-12
             transition-all duration-1000 delay-700
             ${animationStarted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
           `}
