@@ -4,65 +4,17 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
-// The JAMELNA sequence for the easter egg (click order)
-const JAMELNA_SEQUENCE = ['J', 'A', 'M', 'E', 'L', 'N', 'A'];
-
-// Name word groups - each group stays together on the same line
-// Joe Alexander MELéndez-NAharro
-// J=0, A=1, M=2, E=3, L=4, N=5, A=6
-type NamePart = { text: string; isJamelna: boolean; jamelnaIndex?: number };
-type WordGroup = { parts: NamePart[]; noWrap?: boolean };
-
-const NAME_WORD_GROUPS: WordGroup[] = [
-  {
-    parts: [
-      { text: 'J', isJamelna: true, jamelnaIndex: 0 },
-      { text: 'oe', isJamelna: false },
-    ]
-  },
-  {
-    parts: [
-      { text: 'A', isJamelna: true, jamelnaIndex: 1 },
-      { text: 'lexander', isJamelna: false },
-    ]
-  },
-  {
-    parts: [
-      { text: 'M', isJamelna: true, jamelnaIndex: 2 },
-      { text: 'E', isJamelna: true, jamelnaIndex: 3 },
-      { text: 'L', isJamelna: true, jamelnaIndex: 4 },
-      { text: 'éndez-', isJamelna: false },
-      { text: 'N', isJamelna: true, jamelnaIndex: 5 },
-      { text: 'A', isJamelna: true, jamelnaIndex: 6 },
-      { text: 'harro', isJamelna: false },
-    ],
-    noWrap: true  // Keep "MELéndez-NAharro" together
-  },
-];
-
+// Easter egg: Konami code → Tech Sovereignty page
+const KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight'];
 
 const Hero = () => {
   const t = useTranslations('hero');
   const locale = useLocale();
   const router = useRouter();
 
-  const [clickedSequence, setClickedSequence] = useState<number[]>([]);
   const [showPortal, setShowPortal] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
-  const [letterFeedback, setLetterFeedback] = useState<number | null>(null);
-  const [isNameHovered, setIsNameHovered] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  });
-
-  // Subscribe to reduced motion preference changes
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
-    mediaQuery.addEventListener('change', handler);
-    return () => mediaQuery.removeEventListener('change', handler);
-  }, []);
+  const [konamiProgress, setKonamiProgress] = useState(0);
 
   // Start animation after mount
   useEffect(() => {
@@ -70,34 +22,30 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Handle JAMELNA letter click
-  const handleLetterClick = useCallback((jamelnaIndex: number) => {
-    const expectedIndex = clickedSequence.length;
-
-    // Check if this is the correct next letter
-    if (jamelnaIndex === expectedIndex) {
-      // Correct letter!
-      setLetterFeedback(jamelnaIndex);
-      setTimeout(() => setLetterFeedback(null), 300);
-
-      const newSequence = [...clickedSequence, jamelnaIndex];
-      setClickedSequence(newSequence);
-
-      // Check if sequence is complete
-      if (newSequence.length === JAMELNA_SEQUENCE.length) {
-        // Easter egg triggered!
-        setShowPortal(true);
-        setTimeout(() => {
-          router.push(`/${locale}/tech-sovereignty`);
-        }, 1500);
+  // Konami code listener
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    setKonamiProgress((prev) => {
+      if (e.key === KONAMI[prev]) {
+        const next = prev + 1;
+        if (next === KONAMI.length) {
+          setShowPortal(true);
+          setTimeout(() => {
+            router.push(`/${locale}/tech-sovereignty`);
+          }, 1500);
+          return 0;
+        }
+        return next;
       }
-    } else {
-      // Wrong letter - reset sequence
-      setClickedSequence([]);
-    }
-  }, [clickedSequence, locale, router]);
+      // Reset on wrong key, but check if it matches the start
+      return e.key === KONAMI[0] ? 1 : 0;
+    });
+  }, [locale, router]);
 
-  // Scroll hint animation
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
   const scrollToContent = () => {
     window.scrollTo({
       top: window.innerHeight,
@@ -109,9 +57,8 @@ const Hero = () => {
     <section
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-canvas-deep group"
     >
-      {/* Photo strip background — visible at edges, dark center band for text */}
+      {/* Photo strip background */}
       <div className="absolute inset-0">
-        {/* Photo mosaic grid */}
         <div className="absolute inset-0 grid grid-cols-4 gap-1 opacity-30 grayscale group-hover:grayscale-0 transition-all duration-1000">
           {[
             '/photos/bridge.webp',
@@ -129,7 +76,6 @@ const Hero = () => {
             />
           ))}
         </div>
-        {/* Dark vignette: heavy in center for text readability, lighter at edges for photo visibility */}
         <div className="absolute inset-0 bg-gradient-to-b from-canvas-deep/70 via-canvas-deep/95 to-canvas-deep/70" />
       </div>
 
@@ -137,7 +83,6 @@ const Hero = () => {
       {showPortal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-canvas-deep">
           <div className="relative">
-            {/* Portal rings */}
             <div className="absolute inset-0 animate-ping">
               <div className="w-64 h-64 rounded-full border-2 border-secret opacity-50" />
             </div>
@@ -162,127 +107,25 @@ const Hero = () => {
       {/* Main content */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
         {/* Full name */}
-        <h2 className={`
-          text-center font-display font-extrabold text-text-heading text-3xl sm:text-4xl md:text-5xl tracking-tight mb-3
+        <h1 className={`
+          text-center font-display font-extrabold text-text-heading
+          text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-4
           transition-all duration-1000 delay-100
           ${animationStarted ? 'opacity-100' : 'opacity-0'}
-        `}>
+        `}
+          style={{ textShadow: '0 2px 20px rgba(18,17,15,0.6)' }}
+        >
           {t('name', { defaultValue: 'Joe Alexander Meléndez-Naharro' })}
-        </h2>
+        </h1>
 
         {/* Role label */}
         <p className={`
-          text-center font-mono text-display-label uppercase tracking-[0.15em] text-text-muted mb-6
-          transition-all duration-1000 delay-200
+          text-center font-mono text-display-label uppercase tracking-[0.15em] text-text-muted mb-8
+          transition-all duration-1000 delay-300
           ${animationStarted ? 'opacity-100' : 'opacity-0'}
         `}>
           {t('roleLabel', { defaultValue: 'Educator / Designer / Manager / Photographer' })}
         </p>
-
-        {/* Name display */}
-        <h1 className="text-center mb-8">
-          {/* Screen reader accessible full name */}
-          <span className="sr-only">Joe Alexander Meléndez-Naharro</span>
-
-          {/* Visual animated name - hidden from screen readers */}
-          <span
-            aria-hidden="true"
-            className={`
-              block text-[12vw] sm:text-[11vw] md:text-[10vw] lg:text-[9vw]
-              leading-[0.85] tracking-tighter
-              font-display font-bold cursor-pointer
-              ${prefersReducedMotion ? '' : 'transition-opacity duration-1000'}
-              ${animationStarted || prefersReducedMotion ? 'opacity-100' : 'opacity-0'}
-            `}
-            style={{ textShadow: '0 2px 20px rgba(18,17,15,0.6)' }}
-            onMouseEnter={() => setIsNameHovered(true)}
-            onMouseLeave={() => setIsNameHovered(false)}
-            onFocus={() => setIsNameHovered(true)}
-            onBlur={() => setIsNameHovered(false)}
-          >
-            {NAME_WORD_GROUPS.map((group, groupIndex) => (
-              <span
-                key={groupIndex}
-                className={group.noWrap ? 'whitespace-nowrap' : undefined}
-              >
-                {group.parts.map((part, partIndex) => {
-                  if (part.isJamelna) {
-                    const isClicked = clickedSequence.includes(part.jamelnaIndex!);
-                    const isNextInSequence = part.jamelnaIndex === clickedSequence.length;
-                    const showFeedback = letterFeedback === part.jamelnaIndex;
-
-                    return (
-                      <span
-                        key={partIndex}
-                        onClick={() => handleLetterClick(part.jamelnaIndex!)}
-                        className={`
-                          cursor-pointer select-none inline-block
-                          transition-all duration-300
-                          ${isClicked ? 'text-terra scale-110' : 'text-terra'}
-                          ${showFeedback ? 'scale-125' : ''}
-                          ${isNextInSequence ? 'hover:scale-110' : ''}
-                        `}
-                        style={{
-                          animationDelay: `${(part.jamelnaIndex || 0) * 0.3}s`,
-                          textShadow: isClicked
-                            ? '0 0 30px rgba(196, 112, 63, 0.8), 0 0 60px rgba(196, 112, 63, 0.5)'
-                            : undefined,
-                        }}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            handleLetterClick(part.jamelnaIndex!);
-                          }
-                        }}
-                        aria-label={`Letter ${part.text}`}
-                      >
-                        {part.text}
-                      </span>
-                    );
-                  }
-
-                  // Non-JAMELNA letters: hidden by default, revealed on hover
-                  // For reduced motion: always show full name
-                  // Wrapper handles width animation, inner span preserves baseline
-                  const showFull = isNameHovered || prefersReducedMotion;
-                  return (
-                    <span
-                      key={partIndex}
-                      className={`inline-flex overflow-hidden ${prefersReducedMotion ? '' : 'transition-all duration-1000 ease-out'}`}
-                      style={{
-                        maxWidth: showFull ? `${part.text.length + 0.5}ch` : '0',
-                        verticalAlign: 'baseline',
-                      }}
-                    >
-                      <span
-                        className={`whitespace-pre ${prefersReducedMotion ? 'text-text-secondary' : 'text-text-muted/30'}`}
-                        style={{
-                          opacity: showFull ? 1 : 0,
-                          transition: prefersReducedMotion ? 'none' : 'opacity 0.5s ease-out 0.3s',
-                        }}
-                      >
-                        {part.text}
-                      </span>
-                    </span>
-                  );
-                })}
-                {/* Add space between word groups - also animated */}
-                {groupIndex < NAME_WORD_GROUPS.length - 1 && (
-                  <span
-                    className={`inline-flex overflow-hidden ${prefersReducedMotion ? '' : 'transition-all duration-1000 ease-out'}`}
-                    style={{
-                      maxWidth: (isNameHovered || prefersReducedMotion) ? '0.4em' : '0',
-                      verticalAlign: 'baseline',
-                    }}
-                  >
-                    <span className="whitespace-pre">&nbsp;</span>
-                  </span>
-                )}
-              </span>
-            ))}
-          </span>
-        </h1>
 
         {/* Tagline */}
         <p
@@ -346,17 +189,6 @@ const Hero = () => {
         <span className="text-xs font-mono uppercase tracking-widest">Scroll</span>
         <span className="w-px bg-current animate-grow-line" />
       </button>
-
-      {/* Hidden hint for easter egg (very subtle) */}
-      <div
-        className={`
-          absolute bottom-4 right-4 text-xs text-text-muted/20
-          transition-opacity duration-500
-          ${clickedSequence.length > 0 && clickedSequence.length < 7 ? 'opacity-100' : 'opacity-0'}
-        `}
-      >
-        {clickedSequence.length}/7
-      </div>
     </section>
   );
 };
