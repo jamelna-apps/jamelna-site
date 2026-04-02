@@ -104,6 +104,64 @@ const Hero = () => {
         </div>
       )}
 
+      {/* HUD frame — decorative sci-fi elements around content */}
+      <div className="absolute inset-0 z-[5] pointer-events-none hidden md:block">
+        {/* Corner brackets */}
+        <div className="absolute top-16 left-8 w-16 h-16 border-t-2 border-l-2 border-terra/30 group-hover:border-terra/60 transition-colors duration-700" />
+        <div className="absolute top-16 right-8 w-16 h-16 border-t-2 border-r-2 border-terra/30 group-hover:border-terra/60 transition-colors duration-700" />
+        <div className="absolute bottom-16 left-8 w-16 h-16 border-b-2 border-l-2 border-terra/30 group-hover:border-terra/60 transition-colors duration-700" />
+        <div className="absolute bottom-16 right-8 w-16 h-16 border-b-2 border-r-2 border-terra/30 group-hover:border-terra/60 transition-colors duration-700" />
+
+        {/* Connecting edge lines */}
+        <div className="absolute top-16 left-24 right-24 h-px bg-gradient-to-r from-terra/20 via-terra/5 to-terra/20" />
+        <div className="absolute bottom-16 left-24 right-24 h-px bg-gradient-to-r from-terra/20 via-terra/5 to-terra/20" />
+        <div className="absolute left-8 top-32 bottom-32 w-px bg-gradient-to-b from-terra/20 via-terra/5 to-terra/20" />
+        <div className="absolute right-8 top-32 bottom-32 w-px bg-gradient-to-b from-terra/20 via-terra/5 to-terra/20" />
+
+        {/* Scanning line */}
+        <div className="absolute inset-x-8 top-16 bottom-16 overflow-hidden">
+          <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-terra/25 to-transparent animate-scan" />
+        </div>
+
+        {/* Data readouts */}
+        <div className="absolute top-20 left-12 flex items-center gap-2">
+          <div className="w-1.5 h-1.5 rounded-full bg-terra/60 animate-pulse" />
+          <span className="font-mono text-[10px] text-terra/40 uppercase tracking-widest">sys.portfolio.active</span>
+        </div>
+        <div className="absolute top-20 right-12 text-right">
+          <span className="font-mono text-[10px] text-text-muted/30 tracking-wider">35.99°N 78.90°W</span>
+        </div>
+        <div className="absolute bottom-20 left-12">
+          <span className="font-mono text-[10px] text-text-muted/20 tracking-wider">v2026.04</span>
+        </div>
+
+        {/* Side data bars */}
+        <div className="absolute left-3 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 items-center">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="w-1 rounded-full bg-terra/15 group-hover:bg-terra/40 transition-all duration-700"
+              style={{
+                height: `${5 + Math.sin(i * 1.2) * 4}px`,
+                transitionDelay: `${i * 80}ms`,
+              }}
+            />
+          ))}
+        </div>
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 items-center">
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={i}
+              className="w-1 rounded-full bg-terra/15 group-hover:bg-terra/40 transition-all duration-700"
+              style={{
+                height: `${5 + Math.cos(i * 1.2) * 4}px`,
+                transitionDelay: `${i * 80}ms`,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
       {/* Main content */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
         {/* Role label */}
@@ -115,7 +173,7 @@ const Hero = () => {
           {t('roleLabel', { defaultValue: 'Educator / Designer / Manager / Photographer' })}
         </p>
 
-        {/* Full name — constrained to role label width */}
+        {/* Full name */}
         <h1 className={`
           text-center font-display font-extrabold text-text-heading
           text-3xl sm:text-4xl md:text-5xl tracking-tight mb-8
