@@ -106,26 +106,27 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-        {/* Full name */}
+        {/* Role label */}
+        <p className={`
+          text-center font-mono text-display-label uppercase tracking-[0.15em] text-text-muted mb-4
+          transition-all duration-1000 delay-100
+          ${animationStarted ? 'opacity-100' : 'opacity-0'}
+        `}>
+          {t('roleLabel', { defaultValue: 'Educator / Designer / Manager / Photographer' })}
+        </p>
+
+        {/* Full name — constrained to role label width */}
         <h1 className={`
           text-center font-display font-extrabold text-text-heading
-          text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mb-4
-          transition-all duration-1000 delay-100
+          text-3xl sm:text-4xl md:text-5xl tracking-tight mb-8
+          max-w-fit mx-auto
+          transition-all duration-1000 delay-200
           ${animationStarted ? 'opacity-100' : 'opacity-0'}
         `}
           style={{ textShadow: '0 2px 20px rgba(18,17,15,0.6)' }}
         >
           {t('name', { defaultValue: 'Joe Alexander Meléndez-Naharro' })}
         </h1>
-
-        {/* Role label */}
-        <p className={`
-          text-center font-mono text-display-label uppercase tracking-[0.15em] text-text-muted mb-8
-          transition-all duration-1000 delay-300
-          ${animationStarted ? 'opacity-100' : 'opacity-0'}
-        `}>
-          {t('roleLabel', { defaultValue: 'Educator / Designer / Manager / Photographer' })}
-        </p>
 
         {/* Tagline */}
         <p
