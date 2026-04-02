@@ -233,69 +233,6 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile menu — full-screen editorial overlay */}
-        {isMenuOpen && (
-          <div
-            id="mobile-menu"
-            className="md:hidden fixed inset-0 z-[60] bg-canvas-deep flex flex-col justify-center px-8"
-          >
-            {/* Close button */}
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              aria-label="Close navigation menu"
-              className="absolute top-4 right-4 p-3 text-text-muted hover:text-terra transition-colors"
-            >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            <nav className="space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block py-3 text-3xl font-display font-bold transition-colors ${
-                    isActive(link.href)
-                      ? 'text-terra'
-                      : 'text-text-heading hover:text-terra'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-
-            {/* Language switcher in mobile overlay */}
-            <div className="mt-12 pt-8 border-t border-canvas-border">
-              <p className="text-sm font-mono text-text-muted uppercase tracking-wider mb-4">
-                {t('language')}
-              </p>
-              <div className="flex flex-wrap gap-3" role="menu">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      changeLanguage(lang.code);
-                      setIsMenuOpen(false);
-                    }}
-                    role="menuitem"
-                    className={`px-4 py-2 rounded-lg text-base flex items-center gap-2 transition-colors ${
-                      locale === lang.code
-                        ? 'bg-terra/10 text-terra border border-terra/30'
-                        : 'text-text-secondary hover:text-terra border border-canvas-border'
-                    }`}
-                  >
-                    <span>{lang.flag}</span>
-                    <span>{lang.label}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
         {/* Scroll progress bar */}
         {isScrolled && (
           <div
@@ -305,6 +242,71 @@ const Navigation = () => {
           />
         )}
       </nav>
+
+      {/* Mobile menu — full-screen overlay, outside nav to avoid z-index/transform issues */}
+      {isMenuOpen && (
+        <div
+          id="mobile-menu"
+          className="md:hidden fixed inset-0 z-[60] bg-canvas-deep/100 flex flex-col justify-center px-8"
+          style={{ backgroundColor: 'var(--color-canvas-deep, #1A1816)' }}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close navigation menu"
+            className="absolute top-4 right-4 p-3 text-text-muted hover:text-terra transition-colors z-10"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Nav links */}
+          <nav className="space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block py-3 text-3xl font-display font-bold transition-colors ${
+                  isActive(link.href)
+                    ? 'text-terra'
+                    : 'text-text-heading hover:text-terra'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Language switcher */}
+          <div className="mt-12 pt-8 border-t border-canvas-border">
+            <p className="text-sm font-mono text-text-muted uppercase tracking-wider mb-4">
+              {t('language')}
+            </p>
+            <div className="flex flex-wrap gap-3" role="menu">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => {
+                    changeLanguage(lang.code);
+                    setIsMenuOpen(false);
+                  }}
+                  role="menuitem"
+                  className={`px-4 py-2 rounded-lg text-base flex items-center gap-2 transition-colors ${
+                    locale === lang.code
+                      ? 'bg-terra/10 text-terra border border-terra/30'
+                      : 'text-text-secondary hover:text-terra border border-canvas-border'
+                  }`}
+                >
+                  <span>{lang.flag}</span>
+                  <span>{lang.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
