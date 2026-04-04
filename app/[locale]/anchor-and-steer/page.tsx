@@ -47,11 +47,13 @@ const dimensions = [
     color: fc.S,
     designThinking: 'Empathize',
     description:
-      'The AI and teacher need to operate from a common understanding of what\'s happening in the classroom. The AI surfaces its reasoning and confidence levels transparently, and teachers can inspect, question, and correct the AI\'s understanding of student states.',
+      'The AI and the teacher need to be working from the same understanding of what\'s happening. That means the AI doesn\'t just give recommendations. It shows its reasoning, its confidence level, and the data behind its conclusions. Teachers can inspect that reasoning, question it, and correct it when the AI gets something wrong.',
     keyInsight:
-      'Mutual empathy made structural. The teacher reads the AI\'s confidence; the AI is designed around the teacher\'s context. Reasoning should be pedagogically educative, not just legible.',
+      'Transparency isn\'t just about being explainable. It\'s about being educative. The teacher should learn something from reading the AI\'s reasoning, not just verify that it ran.',
     example:
-      '"I recommended this problem set because 7 students struggled with fraction comparison on Tuesday\'s quiz. My confidence is moderate — three of those students may have been affected by the timed format rather than conceptual misunderstanding."',
+      '"I flagged these 7 students because their quiz responses suggest difficulty with fraction comparison. But I\'m only moderately confident. Three of them may have been affected by the timed format rather than a conceptual gap. You know your students better than I do."',
+    coachExample:
+      'In the Coach platform at coach.jamelna.com, the AI chat uses retrieval-augmented generation with visible citations. When a coach asks "How should I approach a teacher who\'s resistant to feedback?", the response includes bracketed references to specific knowledge base articles. The coach can click through to verify the source, question the recommendation, or explore further. The AI never presents its answers as authoritative conclusions.',
   },
   {
     letter: 'T',
@@ -60,11 +62,13 @@ const dimensions = [
     color: fc.T,
     designThinking: 'Define',
     description:
-      'Teachers define the boundaries within which the AI operates autonomously. This includes scope controls (what can the AI do without asking?), pedagogical preferences (when should the AI intervene?), and content boundaries (what materials can the AI draw from?).',
+      'Teachers define the boundaries the AI operates within. What can it do without asking? When should it intervene? What materials can it draw from? These aren\'t developer settings buried in a config file. They\'re pedagogical choices that belong to the teacher, and the act of articulating them is itself a form of professional development.',
     keyInsight:
-      'Constraints fuel creativity. The teacher\'s pedagogical constraints become the AI\'s operating parameters — and articulating them is itself professional development.',
+      'Constraints aren\'t limitations. When a teacher defines their guardrails, they\'re clarifying their own teaching philosophy. The AI\'s operating parameters become a mirror for the teacher\'s pedagogical intent.',
     example:
-      'A teacher who values productive struggle configures: "Wait at least 3 attempts before offering scaffolding. Never give direct answers — always use guiding questions. Allow students to select their own problem difficulty."',
+      'A teacher who believes in productive struggle configures: "Wait at least 3 attempts before offering scaffolding. Never give direct answers. Let students choose their own problem difficulty." Those aren\'t restrictions on the AI. They\'re a teaching philosophy made executable.',
+    coachExample:
+      'Coach platform users set their own coaching context: which teachers they work with, which schools, which grade levels and subjects. The AI chat scopes its responses to that context rather than giving generic advice. When a coach asks about differentiation strategies, the system draws from their specific teacher relationships and observation history, not a one-size-fits-all knowledge base.',
   },
   {
     letter: 'E',
@@ -73,24 +77,28 @@ const dimensions = [
     color: fc.E1,
     designThinking: 'Prototype',
     description:
-      'Not everything should be automated. The framework needs clearly designed moments where the AI hands off to the teacher: uncertainty escalation, emotional and social escalation, and pedagogical judgment calls.',
+      'Not everything should be automated. Some moments require a human. The framework needs clearly designed points where the AI steps back and surfaces something to the teacher: when it\'s uncertain, when there\'s an emotional or social signal it can\'t interpret, or when a decision requires pedagogical judgment that no model should be making alone.',
     keyInsight:
-      'Escalation pathways must be tested and refined through real use. The design question is friction: lightweight enough that it actually happens, visible enough that teachers feel informed.',
+      'The design challenge is friction. Escalations need to be lightweight enough that they actually happen, but visible enough that teachers feel informed rather than ambushed.',
     example:
-      '"Flagging: Maria has submitted and deleted her response three times in the last 5 minutes. Her error pattern doesn\'t match a clear misconception — this might be a confidence issue rather than a knowledge gap. Routing to you for a check-in."',
+      '"Maria has submitted and deleted her response three times in the last five minutes. Her error pattern doesn\'t match a clear misconception. This might be a confidence issue rather than a knowledge gap. Routing to you for a check-in."',
+    coachExample:
+      'The Coach platform\'s observation workflow is built around this principle. When a coach documents a classroom visit, the system captures notes, tags, and action items, but it never generates evaluative conclusions about the teacher. It surfaces patterns across visits and lets the coach decide what they mean. The judgment stays with the human who was in the room.',
   },
   {
     letter: 'E',
     title: 'Evolving Delegation',
-    subtitle: 'Trust that deepens — and stays reversible',
+    subtitle: 'Trust that deepens and stays reversible',
     color: fc.E2,
     designThinking: 'Iterate',
     description:
-      'Trust between teacher and AI should deepen over time. Start with high oversight and low autonomy. As the teacher validates the AI\'s judgment, they can gradually expand its scope. Critically, delegation must be reversible.',
+      'The relationship between a teacher and an AI tool should change over time. Start with high oversight and low autonomy. As the teacher validates the AI\'s judgment, they can gradually expand its scope. But delegation must always be reversible. A teacher who pulls back control isn\'t failing. They\'re exercising exactly the kind of professional judgment the system should support.',
     keyInsight:
-      'You never "finish" designing the human-AI relationship. Delegate only tasks where the teacher genuinely doesn\'t need the practice — never outsource what builds professional skill.',
+      'Never automate something the teacher still needs practice doing. Delegation should free up time for higher-order work, not erode the skills that make the teacher effective.',
     example:
-      'September: AI suggests differentiated homework, teacher reviews each recommendation. November: Teacher has approved 90% — system asks, "Would you like me to assign these automatically and flag only exceptions?" January: Teacher pulls back to review mode for two weeks.',
+      'September: the AI suggests differentiated homework and the teacher reviews every recommendation. November: the teacher has approved 90% of suggestions, and the system asks, "Would you like me to assign these automatically and flag only the exceptions?" January: the teacher pulls back to full review for two weeks after a curriculum shift. The system adapts without friction.',
+    coachExample:
+      'The Coach platform tracks coaching relationships through stages. Early in a coaching cycle, the platform provides more structured prompts and suggested goals. As the coaching relationship matures, the coach has more flexibility to customize plans, skip scaffolding, and rely on their own judgment. The tool supports growth without creating a ceiling.',
   },
   {
     letter: 'R',
@@ -99,11 +107,13 @@ const dimensions = [
     color: fc.R,
     designThinking: 'Test',
     description:
-      'The system generates opportunities for the teacher to reflect on and learn from the AI\'s data — and vice versa. Weekly digests surface patterns. Every teacher override is training signal. Structured moments invite annotation.',
+      'Every interaction between teacher and AI is a learning opportunity in both directions. The system surfaces patterns the teacher might not have seen. The teacher\'s overrides and corrections teach the system what it got wrong. Weekly digests, structured reflection prompts, and annotation moments turn routine use into professional growth.',
     keyInsight:
-      'Every override, every dismissed suggestion, every moment of surprise is data flowing both ways. The question shifts from "did the AI get it right" to "what did I learn from this interaction."',
+      'The question shifts from "Did the AI get it right?" to "What did I learn from this interaction?" Every dismissed suggestion, every override, every moment of surprise is data flowing both ways.',
     example:
-      '"Weekly insight: Students who attempted the optional challenge problem before the quiz scored 23% higher on related questions. 14 of your 28 students attempted it. Would you like to explore making it a recommended warm-up?"',
+      '"Students who attempted the optional challenge problem before the quiz scored 23% higher on related questions. 14 of your 28 students attempted it. Would you like to explore making it a recommended warm-up?"',
+    coachExample:
+      'The Coach platform\'s progress tracking for CT competencies works this way. The system aggregates student progress data across a teacher\'s classes, but the coach interprets the trends during their next conversation. A competency score dropping isn\'t an automated alert that triggers intervention. It\'s a data point the coach brings to a reflective discussion with the teacher about what might be happening and what to try next.',
   },
 ];
 
@@ -112,19 +122,19 @@ const anchorQuestions = [
     number: '01',
     question: 'What specific professional skill or judgment does this enhance?',
     detail:
-      'Not "helps teachers" generically, but something concrete — like noticing which students are falling behind before it shows up on a test, differentiating instruction across 30 kids with different needs, or giving timely feedback on writing when you have 150 essays to grade.',
+      'Be specific. Not "helps teachers" but something you can point to: noticing which students are falling behind before it shows up on a test, differentiating across 30 kids with different needs, or giving timely feedback on writing when there are 150 essays waiting to be graded. If you can\'t name the skill, the feature doesn\'t have a clear reason to exist.',
   },
   {
     number: '02',
     question: 'What\'s the current workaround, and why is it inadequate?',
     detail:
-      'If a teacher is already solving this problem with sticky notes and intuition, the AI tool needs to be meaningfully better — not just fancier. This question forces you to understand the real workflow rather than inventing a new one.',
+      'Teachers are already solving most of these problems. Sticky notes, spreadsheets, gut instinct built over years. If your AI tool isn\'t meaningfully better than what they\'re already doing, it\'s just a fancier version of the same thing. This question forces you to understand the real workflow before you try to replace it.',
   },
   {
     number: '03',
     question: 'Does using this tool make the teacher more skilled over time, or more dependent?',
     detail:
-      'A well-designed AI tool should be like a great teaching coach — it helps you see things you wouldn\'t have seen, and over time you internalize some of those patterns. A poorly designed one risks creating learned helplessness.',
+      'A well-designed AI tool works like a great mentor. It helps you notice things you would have missed, and over time you start seeing those patterns yourself. A poorly designed one does the opposite: it makes decisions for you until you stop developing the judgment to make them on your own. Every feature should pass this test.',
   },
 ];
 
@@ -195,6 +205,9 @@ export default function AnchorAndSteerPage() {
           <p className="reveal text-sm text-text-muted stagger-3">
             By Joe Alexander Mel&eacute;ndez-Naharro
           </p>
+          <p className="reveal text-sm text-text-muted/70 mt-1 stagger-3">
+            Developed from experience leading CS education programs, coaching teachers, and building AI-powered tools for K-12 classrooms.
+          </p>
         </div>
       </section>
 
@@ -206,13 +219,16 @@ export default function AnchorAndSteerPage() {
           </h2>
           <div className="reveal space-y-4 text-text-secondary leading-relaxed stagger-1">
             <p>
-              A common pattern in AI-powered education technology is starting with &ldquo;what can AI do?&rdquo; rather than &ldquo;what do teachers actually need to be better at, and where are they bottlenecked?&rdquo;
+              Most AI education tools start with the wrong question: <em>&ldquo;What can AI do?&rdquo;</em> instead of <em>&ldquo;Where are teachers actually struggling, and what would genuinely help?&rdquo;</em>
             </p>
             <p>
-              When this happens, the risk is building tools that look impressive in demos but struggle to find traction in real classrooms — tools that may automate the wrong things, create dependency instead of capability, or position educators as passive recipients of algorithmic decisions about their students.
+              I&apos;ve watched this play out firsthand. Tools that demo beautifully but collect dust in real classrooms. Tools that automate the wrong things. Tools that make decisions about students without the teacher understanding why, or worse, without the teacher even knowing.
             </p>
             <p>
-              The Anchor &amp; STEER framework proposes an alternative starting point — one rooted in design thinking. It begins where human-centered design begins: with empathy. Observe teachers. Understand their real constraints. Define the problem from their perspective. Then ideate, prototype, and test AI features — with the teacher in the loop, in control, and growing more skilled through the interaction.
+              The problem isn&apos;t the technology. It&apos;s the starting point. When you begin with the AI&apos;s capabilities instead of the teacher&apos;s reality, you build impressive software that nobody trusts enough to use.
+            </p>
+            <p>
+              Anchor &amp; STEER is the alternative I developed. A design framework rooted in design thinking that starts where human-centered design starts: with empathy. Observe teachers. Understand their real constraints. Define the problem from their perspective. <em>Then</em> build.
             </p>
           </div>
         </div>
@@ -382,10 +398,10 @@ export default function AnchorAndSteerPage() {
           <div className="reveal mt-8 bg-canvas-elevated border border-canvas-border rounded-lg p-6">
             <h4 className="font-display font-semibold text-terra mb-3">The Critical Distinction</h4>
             <p className="text-sm text-text-secondary mb-2">
-              An AI that says <em>&ldquo;Student X is struggling with fractions&rdquo;</em> <strong className="text-red-400">replaces</strong> teacher judgment.
+              An AI that says <em>&ldquo;Student X is struggling with fractions&rdquo;</em> <strong className="text-red-400">replaces</strong> teacher judgment. It hands the teacher a conclusion.
             </p>
             <p className="text-sm text-text-secondary">
-              An AI that says <em>&ldquo;Here&apos;s the pattern in Student X&apos;s errors — they&apos;re consistently treating the numerator and denominator as independent numbers. Here&apos;s a diagnostic task you could try&rdquo;</em> <strong className="text-emerald-400">sharpens</strong> it.
+              An AI that says <em>&ldquo;Student X keeps treating numerators and denominators as separate numbers. Here&apos;s a diagnostic task that could confirm whether it&apos;s a conceptual gap or a notation habit&rdquo;</em> <strong className="text-emerald-400">sharpens</strong> it. The teacher still makes the call.
             </p>
           </div>
         </div>
@@ -430,9 +446,18 @@ export default function AnchorAndSteerPage() {
                     <p className="text-text-secondary text-sm leading-relaxed">{d.description}</p>
                     <p className="text-text-muted text-sm italic border-l-2 border-canvas-border pl-3">{d.keyInsight}</p>
                     <div className="rounded-lg p-4 bg-canvas-elevated/60 border border-canvas-border">
-                      <p className="text-xs uppercase tracking-wider mb-2 font-mono" style={{ color: d.color }}>In Practice</p>
+                      <p className="text-xs uppercase tracking-wider mb-2 font-mono" style={{ color: d.color }}>Example</p>
                       <p className="text-sm text-text-secondary leading-relaxed">{d.example}</p>
                     </div>
+                    {d.coachExample && (
+                      <div className="rounded-lg p-4 border border-terra/20 bg-terra/5">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-xs uppercase tracking-wider font-mono text-terra">See It in Practice</span>
+                          <span className="text-xs text-text-muted">— Coach Platform</span>
+                        </div>
+                        <p className="text-sm text-text-secondary leading-relaxed">{d.coachExample}</p>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
