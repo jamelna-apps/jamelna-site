@@ -9,7 +9,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
   const router = useRouter();
@@ -68,12 +68,8 @@ const Navigation = () => {
       const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
       setScrollProgress(Math.min(progress, 100));
 
-      // On homepage, show nav after scrolling past hero
-      if (isHomePage) {
-        setIsVisible(scrollY > viewportHeight * 0.5);
-      } else {
-        setIsVisible(true);
-      }
+      // Nav is always visible; on homepage it starts transparent
+      setIsVisible(true);
     };
 
     // Initial check
@@ -109,9 +105,8 @@ const Navigation = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isLangMenuOpen]);
 
-  // Don't render nav on homepage until scrolled, but show menu button
-  // Also show nav when mobile menu is open
-  const shouldShowNav = !isHomePage || isVisible || isMenuOpen;
+  // Nav is always shown (transparent on homepage hero, solid after scroll)
+  const shouldShowNav = true;
 
   // Don't render main nav on jobs section - it has its own navigation
   if (isJobsSection) {
@@ -120,19 +115,6 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Fixed menu button on homepage before scroll */}
-      {isHomePage && !isVisible && !isMenuOpen && (
-        <button
-          onClick={() => setIsMenuOpen(true)}
-          aria-label="Open navigation menu"
-          className="fixed top-4 right-4 z-50 p-3 rounded-full bg-terra text-canvas-deep hover:bg-terra-light transition-colors md:hidden"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      )}
-
       {/* Main Navigation */}
       <nav
         aria-label="Main navigation"
@@ -141,6 +123,7 @@ const Navigation = () => {
           transition-all duration-500
           ${shouldShowNav ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
           ${isScrolled || isMenuOpen ? 'bg-canvas-deep/98 border-b border-canvas-border' : 'bg-transparent'}
+          ${isHomePage && !isScrolled && !isMenuOpen ? 'backdrop-blur-none' : ''}
         `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
