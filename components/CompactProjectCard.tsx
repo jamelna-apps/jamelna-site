@@ -24,8 +24,13 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
   images,
   website,
 }) => {
+  const Wrapper = website ? 'a' : 'div';
+  const wrapperProps = website
+    ? { href: website, target: '_blank' as const, rel: 'noopener noreferrer' }
+    : {};
+
   return (
-    <div className="glass-card p-6 flex flex-col h-full">
+    <Wrapper {...wrapperProps} className="glass-card p-6 flex flex-col h-full group hover:border-primary/30 transition-colors cursor-pointer">
       {/* Image */}
       {images && images.length > 0 && (
         <div className="relative aspect-video rounded-lg overflow-hidden border border-canvas-border mb-4">
@@ -33,14 +38,21 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
             src={images[0]}
             alt={title}
             fill
-            className="object-cover"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
       )}
 
       {/* Title & Timeline */}
       <div className="mb-3">
-        <h3 className="text-xl font-display font-bold text-text-heading mb-1">{title}</h3>
+        <h3 className="text-xl font-display font-bold text-text-heading mb-1 group-hover:text-primary transition-colors">
+          {title}
+          {website && (
+            <svg className="w-4 h-4 inline-block ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          )}
+        </h3>
         <p className="text-sm text-text-muted">{timeline}</p>
       </div>
 
@@ -60,19 +72,14 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
 
       {/* Link */}
       {website && (
-        <a
-          href={website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1"
-        >
+        <span className="text-sm text-primary group-hover:text-primary/80 transition-colors inline-flex items-center gap-1 mt-auto">
           Visit Site
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
-        </a>
+        </span>
       )}
-    </div>
+    </Wrapper>
   );
 };
 
