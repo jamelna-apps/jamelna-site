@@ -1,6 +1,34 @@
-placeholder:
-  title: "Placeholder Source"
-  author: "TBD"
-  url: https://example.com/placeholder
+openai-loss-2024-fortune:
+  title: "OpenAI lost $5 billion last year on $3.7 billion in revenue, reports say"
+  author: "Fortune (reporting NYT source documents)"
+  url: https://fortune.com/2024/09/28/openai-5-billion-loss-2024-revenue-forecasts-fundraising-chapgpt-fee-hikes/
   accessed: "2026-04-23"
-  pull_quote: "This is a placeholder source entry. Real sources will be added in Phase B."
+  pull_quote: "But OpenAI sees a loss of $5 billion, which doesn't include equity-based compensation, the Times said."
+
+openai-loss-2024-cnbc:
+  title: "OpenAI sees $5 billion loss this year on $3.7 billion in revenue"
+  author: "CNBC"
+  url: https://www.cnbc.com/2024/09/27/openai-sees-5-billion-loss-this-year-on-3point7-billion-in-revenue.html
+  accessed: "2026-04-23"
+  pull_quote: "OpenAI is projecting a loss of $5 billion this year on $3.7 billion in revenue, according to internal documents reviewed by The New York Times."
+
+anthropic-burn-2024-acquinox:
+  title: "Anthropic investor insights — FY2024 cash burn"
+  author: "Acquinox Capital (summarizing Reuters and The Information)"
+  url: https://acquinox.capital/insights/gen-ai-and-ai-agents/anthropic-investor-insights
+  accessed: "2026-04-23"
+  pull_quote: "Anthropic's projected cash burn is expected to decline from $5.6 billion in 2024 to approximately $3 billion in 2025."
+
+anthropic-burn-2024-theinformation:
+  title: "Anthropic Projected to Burn More Than $2.7 Billion in Cash This Year"
+  author: "The Information (briefing, paywalled)"
+  url: https://www.theinformation.com/briefings/anthropic-projected-to-burn-more-than-2-7-billion-in-cash-this-year
+  accessed: "2026-04-23"
+  pull_quote: "Headline and framing verified; full text paywalled. Confirms Anthropic's multi-billion annual cash burn pattern sourced from investor documents."
+
+alphabet-cloud-profitable-q4-2025:
+  title: "Alphabet Q4 & FY2025 earnings release"
+  author: "Alphabet Inc. (investor relations)"
+  url: https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf
+  accessed: "2026-04-23"
+  pull_quote: "Google Cloud revenues of $17.7 billion, up 34%, and Google Cloud operating income of $5.3 billion with a 30.1% operating margin."
