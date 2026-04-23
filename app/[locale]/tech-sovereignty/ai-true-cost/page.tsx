@@ -1,5 +1,7 @@
+import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { getTrueCostData } from '@/lib/ai-true-cost/data';
+import { Calculator } from '@/components/ai-true-cost/Calculator';
 
 export const metadata: Metadata = {
   title: 'The True Cost of AI | Jamelna',
@@ -11,6 +13,9 @@ export default async function AiTrueCostPage() {
   const data = await getTrueCostData();
   const productCount = data.products.length;
   const subsidyUsd = data.subsidyConstants.annual_industry_subsidy_usd;
+
+  // Build a lookup map for the client-side calculator
+  const productsById = Object.fromEntries(data.products.map((p) => [p.id, p]));
 
   return (
     <main className="min-h-screen bg-canvas-deep text-white">
@@ -38,14 +43,20 @@ export default async function AiTrueCostPage() {
         </div>
       </section>
 
-      {/* Calculator placeholder — replaced in Task 17 */}
-      <section id="calculator" className="py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-text-muted text-sm font-mono">
-            [Calculator coming in Task 17]
-          </p>
-        </div>
-      </section>
+      {/* Calculator */}
+      <div id="calculator">
+        <section className="py-16 px-6">
+          <div className="max-w-5xl mx-auto">
+            <Suspense fallback={<p className="text-text-muted text-sm">Loading calculator…</p>}>
+              <Calculator
+                scenarios={data.scenarios}
+                productsById={productsById}
+                sources={data.sources}
+              />
+            </Suspense>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
