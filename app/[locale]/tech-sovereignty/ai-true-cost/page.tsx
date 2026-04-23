@@ -4,14 +4,49 @@ import { getTrueCostData } from '@/lib/ai-true-cost/data';
 import { computeBreakdown } from '@/lib/ai-true-cost/math';
 import { Calculator } from '@/components/ai-true-cost/Calculator';
 import { Hero } from '@/components/ai-true-cost/Hero';
+import { TrustStamp } from '@/components/ai-true-cost/TrustStamp';
 
-export const metadata: Metadata = {
-  title: 'The True Cost of AI | Jamelna',
-  description:
-    'Discover the real, unsubsidized cost of the AI tools you use every day. Interactive calculator with cited sources for ChatGPT, Claude, Gemini, and more.',
-};
+interface PageProps {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ scenario?: string }>;
+}
 
-export default async function AiTrueCostPage() {
+export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const { scenario } = await searchParams;
+  const scenarioParam = scenario ?? 'chatgpt-plus';
+
+  const ogUrl = `/api/og/true-cost?scenario=${encodeURIComponent(scenarioParam)}`;
+
+  return {
+    title: 'The True Cost of AI | Jamelna',
+    description:
+      'Discover the real, unsubsidized cost of the AI tools you use every day. Interactive calculator with cited sources for ChatGPT, Claude, Gemini, and more.',
+    openGraph: {
+      title: 'The True Cost of AI',
+      description:
+        'See what ChatGPT, Claude, and other AI tools would cost without billions in investor subsidies.',
+      images: [
+        {
+          url: ogUrl,
+          width: 1200,
+          height: 630,
+          alt: 'The True Cost of AI — interactive calculator',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'The True Cost of AI',
+      description:
+        'See what ChatGPT, Claude, and other AI tools would cost without billions in investor subsidies.',
+      images: [ogUrl],
+    },
+  };
+}
+
+export default async function AiTrueCostPage({ params }: PageProps) {
+  const { locale } = await params;
   const data = await getTrueCostData();
 
   // Build a lookup map for the client-side calculator
@@ -52,6 +87,12 @@ export default async function AiTrueCostPage() {
           </div>
         </section>
       </div>
+
+      {/* Trust footer */}
+      <TrustStamp
+        lastVerified={data.subsidyConstants.last_verified}
+        locale={locale}
+      />
     </main>
   );
 }
