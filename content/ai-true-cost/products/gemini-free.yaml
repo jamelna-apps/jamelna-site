@@ -1,0 +1,64 @@
+id: gemini-free
+name: Gemini Free
+vendor: Google
+tier: free
+price_paid_usd: 0.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 200
+  avg_input_tokens: 800
+  avg_output_tokens: 400
+  primary_model: gemini-2-0-flash
+
+cost_components:
+  compute:
+    value_usd: 0.06
+    basis: >
+      Gemini 2.0 Flash API retail: $0.10/1M input, $0.40/1M output. At 200 queries ×
+      (800 in + 400 out) = 0.16M input + 0.08M output = $0.016 + $0.032 = $0.058/mo.
+      Notable: Gemini Flash is the cheapest frontier model by API price due to
+      Google's in-house TPU fleet (no Nvidia margin).
+    sources:
+      - gemini-api-pricing-2026
+
+  training_amortization:
+    value_usd: 0.01
+    basis: >
+      Gemini 2.0 Flash training cost not publicly disclosed. Flash-class models
+      are small; Google operates on custom TPU silicon at lower unit cost than
+      Nvidia-based training. Amortized across 750M MAU (Alphabet Q4 2025 earnings)
+      the per-user share is effectively zero.
+    sources:
+      - epoch-frontier-training-cost-2024
+      - gemini-750m-mau-techcrunch-2026
+
+  energy_water:
+    value_usd: 0.01
+    basis: >
+      Same model-class figures: ~$0.010/mo electricity externality at 200 queries.
+      Google operates more energy-efficient datacenters on average than most
+      competitors (per Google's own disclosures) so this is likely an over-estimate.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+
+  investor_subsidy:
+    value_usd: 0.00
+    basis: >
+      N/A — Google AI is cross-subsidized internally by profitable Google Cloud
+      ($5.3B Q4 2025 operating income) and Search advertising revenue. Alphabet
+      does not disclose a Gemini-specific P&L and no credible per-user loss
+      figure can be derived. This differs fundamentally from OpenAI and Anthropic,
+      which are pure-play frontier labs burning VC capital. The "$0" here is an
+      honest representation that there is no quotable cash loss attributable to
+      Gemini free users — NOT a claim that the product is free to provide. Google
+      spent ~$91B on AI infrastructure capex in 2025 (guided $175-185B for 2026);
+      a critic could argue some share of that represents a subsidy, but there is
+      no public methodology for attributing that to a specific Gemini user. The
+      methodology page surfaces this as supplementary context.
+    sources:
+      - alphabet-cloud-profitable-q4-2025
+      - gemini-750m-mau-techcrunch-2026
+
+last_verified: "2026-04-23"

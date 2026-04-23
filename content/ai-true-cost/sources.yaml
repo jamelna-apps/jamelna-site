@@ -74,3 +74,87 @@ theinformation-11m-chatgpt-subs-2024:
   url: https://www.theinformation.com/articles/openai-coo-says-chatgpt-passed-11-million-paying-subscribers
   accessed: "2026-04-23"
   pull_quote: "OpenAI COO Brad Lightcap disclosed in an internal message (Sep 2024) that ChatGPT had passed 11 million paying customers across Plus, Team, and Enterprise tiers."
+
+openai-gpt-4o-mini-announcement-2024:
+  title: "GPT-4o mini: advancing cost-efficient intelligence"
+  author: "OpenAI"
+  url: https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/
+  accessed: "2026-04-23"
+  pull_quote: "15 cents per million input tokens and 60 cents per million output tokens."
+
+chatgpt-700m-wau-techcrunch-2025:
+  title: "OpenAI says ChatGPT is on track to reach 700M weekly users"
+  author: "TechCrunch (reporting OpenAI disclosure)"
+  url: https://techcrunch.com/2025/08/04/openai-says-chatgpt-is-on-track-to-reach-700m-weekly-users/
+  accessed: "2026-04-23"
+  pull_quote: "ChatGPT is on pace to cross 700 million weekly active users, roughly doubling in six months."
+
+anthropic-api-pricing-2026:
+  title: "Plans & Pricing — Claude API"
+  author: "Anthropic"
+  url: https://claude.com/pricing
+  accessed: "2026-04-23"
+  pull_quote: "Claude Haiku 4.5 — Input $1 per million tokens, Output $5 per million tokens. Claude Sonnet 4.5 — Input $3, Output $15."
+
+claude-mau-businessofapps-2026:
+  title: "Claude Revenue and Usage Statistics (2026)"
+  author: "Business of Apps (aggregating app-store and third-party scraper estimates)"
+  url: https://www.businessofapps.com/data/claude-statistics/
+  accessed: "2026-04-23"
+  pull_quote: "Claude mobile app reached roughly 12.5M monthly active users by February 2026; Claude.ai web had an estimated 18.9M MAU in early 2025."
+
+gemini-api-pricing-2026:
+  title: "Gemini Developer API pricing"
+  author: "Google"
+  url: https://ai.google.dev/gemini-api/docs/pricing
+  accessed: "2026-04-23"
+  pull_quote: "Gemini 2.0 Flash — Input $0.10 per 1M tokens, Output $0.40 per 1M tokens."
+
+gemini-750m-mau-techcrunch-2026:
+  title: "Google's Gemini app has surpassed 750M monthly active users"
+  author: "TechCrunch (reporting Alphabet Q4 2025 earnings)"
+  url: https://techcrunch.com/2026/02/04/googles-gemini-app-has-surpassed-750m-monthly-active-users/
+  accessed: "2026-04-23"
+  pull_quote: "Alphabet said the Gemini app reached 750 million monthly active users as of its Q4 2025 earnings."
+
+magicschool-series-b-2025:
+  title: "MagicSchool raises $45M Series B to bring AI to every educator"
+  author: "MagicSchool (company blog)"
+  url: https://www.magicschool.ai/blog-posts/series-b-fundraise-for-teacher-ai
+  accessed: "2026-04-23"
+  pull_quote: "$45M Series B led by Valor Equity Partners; over 6 million educators signed up across 10,000+ schools in 160 countries."
+
+schoolai-series-a-2025:
+  title: "SchoolAI Secures $25 Million to Help Teachers and Schools Reach Every Student"
+  author: "SchoolAI (GlobeNewswire press release)"
+  url: https://www.globenewswire.com/news-release/2025/04/02/3054126/0/en/SchoolAI-Secures-25-Million-to-Help-Teachers-and-Schools-Reach-Every-Student.html
+  accessed: "2026-04-23"
+  pull_quote: "$25M Series A led by Insight Partners; $32M total funding; reaches one million classrooms in 50 US states and 80 countries."
+
+khan-academy-annual-report-24-25:
+  title: "Khan Academy Annual Report SY24-25"
+  author: "Khan Academy"
+  url: https://annualreport.khanacademy.org/
+  accessed: "2026-04-23"
+  pull_quote: "2.0 million students, educators, and parents used Khanmigo during SY24-25; 731% year-over-year growth; 189.6M registered users globally."
+
+khan-academy-990-2024:
+  title: "Khan Academy Inc — IRS Form 990 (FY2024-25)"
+  author: "Khan Academy / IRS / ProPublica Nonprofit Explorer"
+  url: https://projects.propublica.org/nonprofits/organizations/261544963
+  accessed: "2026-04-23"
+  pull_quote: "Revenue $98.3M, Expenses $68.1M, Net assets $128.5M for fiscal year ending 2025."
+
+microsoft-khan-partnership-2024:
+  title: "Khan Academy and Microsoft partner to expand access to AI tools"
+  author: "Microsoft"
+  url: https://news.microsoft.com/source/features/ai/khan-academy-and-microsoft-partner-to-expand-access-to-ai-tools/
+  accessed: "2026-04-23"
+  pull_quote: "Microsoft is donating access to Azure AI-optimized infrastructure to enable Khan Academy to offer Khanmigo free to all U.S. K-12 educators."
+
+khanmigo-4dollar-prior-cnbc-2024:
+  title: "Microsoft, Khan Academy provide free AI assistant for all educators in US"
+  author: "CNBC"
+  url: https://www.cnbc.com/2024/05/21/microsoft-khan-academy-launch-free-ai-assistant-for-all-us-teachers.html
+  accessed: "2026-04-23"
+  pull_quote: "Khanmigo previously cost teachers $4 per month; Microsoft's Azure donation removes that cost entirely for U.S. educators."

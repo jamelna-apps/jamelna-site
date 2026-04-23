@@ -1,0 +1,69 @@
+id: khanmigo
+name: Khanmigo
+vendor: Khan Academy
+tier: free
+price_paid_usd: 0.00
+price_unit: monthly
+wraps: chatgpt-plus
+
+assumed_usage:
+  queries_per_month: 200
+  avg_input_tokens: 800
+  avg_output_tokens: 400
+  primary_model: gpt-4o-via-azure-openai
+
+cost_components:
+  compute:
+    value_usd: 0.09
+    basis: >
+      Khanmigo routes queries through Microsoft Azure OpenAI Service. At 200
+      queries/mo of GPT-4o-class usage retail is ~$0.086/mo. Microsoft is
+      currently donating this capacity (see investor_subsidy basis for the
+      triple-stack explanation).
+    sources:
+      - openai-api-pricing-2026
+      - microsoft-khan-partnership-2024
+
+  training_amortization:
+    value_usd: 0.01
+    basis: >
+      Pass-through from underlying OpenAI model. Khan Academy does not train.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.01
+    basis: >
+      Same per-query figures as free-tier ChatGPT. Trivial in $.
+    sources:
+      - altman-gentle-singularity-2025
+      - luccioni-power-hungry-2024
+
+  investor_subsidy:
+    value_usd: 4.00
+    basis: >
+      Triple-stack subsidy case. This figure combines two of the three layers;
+      the third (underlying OpenAI) stacks via wraps linkage below.
+
+      Layer 1 — Khan Academy nonprofit subsidy: Khan Academy's SY24-25 annual
+      report shows $95M expenses across 189.6M registered users. Khanmigo alone
+      reached 2.0M users. Assuming Khanmigo consumes roughly 30% of Khan's
+      operating budget, per-user spend ≈ $1.25-$2.10/mo. This is donor-funded,
+      not VC-funded — categorically different from startup burn.
+
+      Layer 2 — Microsoft Azure in-kind donation: Microsoft donates Azure OpenAI
+      Service capacity to Khan (per Microsoft's May 2024 announcement). Dollar
+      value is undisclosed but material — CNBC reported Khanmigo previously cost
+      teachers $4/month before Microsoft removed the cost entirely. Using $4/mo
+      as a revealed-preference anchor for combined operating + API cost before
+      Microsoft's donation.
+
+      Combined Layers 1+2: ~$4.00/mo. Methodology page details the triple-stack
+      case.
+    sources:
+      - khan-academy-annual-report-24-25
+      - khan-academy-990-2024
+      - microsoft-khan-partnership-2024
+      - khanmigo-4dollar-prior-cnbc-2024
+
+last_verified: "2026-04-23"

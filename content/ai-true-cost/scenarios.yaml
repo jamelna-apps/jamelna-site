@@ -1,7 +1,25 @@
 groups:
   - tier: free
     label: "Free Tiers"
-    scenarios: []
+    scenarios:
+      - id: chatgpt-free
+        name: ChatGPT Free
+        tier: free
+      - id: claude-free
+        name: Claude Free
+        tier: free
+      - id: gemini-free
+        name: Gemini Free
+        tier: free
+      - id: magicschool-free
+        name: MagicSchool (Teacher Free)
+        tier: free
+      - id: schoolai-free
+        name: SchoolAI (Free)
+        tier: free
+      - id: khanmigo
+        name: Khanmigo
+        tier: free
 
   - tier: paid-consumer
     label: "Paid Consumer ($20 tier)"
