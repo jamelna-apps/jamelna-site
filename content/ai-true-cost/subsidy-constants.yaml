@@ -1,0 +1,9 @@
+annual_industry_subsidy_usd: 0
+last_verified: "2026-04-23"
+sources: []
+notes: >
+  These are placeholder values to be populated in Phase B with properly
+  researched and cited figures. The annual_industry_subsidy_usd will
+  reflect the combined annual losses of OpenAI + Anthropic + Google AI
+  division, sourced from financial reporting and analyst research.
+  Do not use these zeros for any real calculations until Phase B is complete.

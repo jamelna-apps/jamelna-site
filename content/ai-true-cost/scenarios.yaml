@@ -1,0 +1,12 @@
+groups:
+  - tier: free
+    label: "Free Tiers"
+    scenarios: []
+
+  - tier: paid-consumer
+    label: "Paid Consumer ($20 tier)"
+    scenarios: []
+
+  - tier: education
+    label: "Education / Institutional"
+    scenarios: []
