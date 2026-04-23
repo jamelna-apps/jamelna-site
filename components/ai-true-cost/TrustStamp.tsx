@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { trackEvent } from '@/analytics/tracker';
 
 const CHALLENGE_URL =
   'https://github.com/jamelna-apps/jamelna-site/issues/new?template=true-cost-challenge.md';
@@ -57,7 +58,10 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
           target="_blank"
           rel="noopener noreferrer"
           className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
-          onClick={onChallenge}
+          onClick={() => {
+            trackEvent('jamelna', 'challenge_clicked');
+            onChallenge?.();
+          }}
         >
           Challenge a number →
         </a>

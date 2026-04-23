@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import type { ScenariosFile, Product, SourcesMap } from '@/lib/ai-true-cost/types';
+import { trackEvent } from '@/analytics/tracker';
 import { ScenarioGrid } from './ScenarioGrid';
 import { ResultView } from './ResultView';
 
@@ -30,6 +31,7 @@ export function Calculator({ scenarios, productsById, sources }: CalculatorProps
   const handleSelect = useCallback(
     (productId: string) => {
       setSelectedId(productId);
+      trackEvent('jamelna', 'scenario_picked', { scenario: productId });
 
       // Update URL without scrolling
       const params = new URLSearchParams(searchParams.toString());

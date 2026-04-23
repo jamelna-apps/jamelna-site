@@ -4,6 +4,7 @@ import path from 'path';
 import type { Metadata } from 'next';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
+import { MethodologyViewTracker } from '@/components/ai-true-cost/MethodologyViewTracker';
 
 export const metadata: Metadata = {
   title: 'Methodology | AI True Cost | Jamelna',
@@ -16,6 +17,7 @@ export default function MethodologyPage() {
 
   return (
     <main className="min-h-screen bg-canvas-deep text-white">
+      <MethodologyViewTracker />
       <div className="max-w-3xl mx-auto px-6 py-16">
         <nav className="mb-8">
           <Link

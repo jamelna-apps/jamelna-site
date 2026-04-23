@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import type { Product } from '@/lib/ai-true-cost/types';
 import type { Breakdown } from '@/lib/ai-true-cost/math';
+import { trackEvent } from '@/analytics/tracker';
 
 interface ShareBarProps {
   product: Product;
@@ -30,6 +31,7 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
   const shareText = buildShareText(product, breakdown);
 
   const handleCopy = useCallback(async () => {
+    trackEvent('jamelna', 'share_clicked', { product: product.id, channel: 'copy' });
     try {
       await navigator.clipboard.writeText(shareText);
       setCopied(true);
@@ -94,6 +96,7 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
         href={tweetUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent('jamelna', 'share_clicked', { product: product.id, channel: 'x' })}
         className="
           inline-flex items-center gap-2
           text-xs font-medium font-mono
@@ -114,6 +117,7 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
         href={linkedInUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent('jamelna', 'share_clicked', { product: product.id, channel: 'linkedin' })}
         className="
           inline-flex items-center gap-2
           text-xs font-medium font-mono
