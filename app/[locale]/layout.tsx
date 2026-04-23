@@ -2,6 +2,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google';
+import type { Metadata } from 'next';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { locales } from '@/i18n';
@@ -33,7 +34,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
@@ -51,6 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 
   return {
+    metadataBase: new URL('https://jamelna.com'),
     title: titles[locale as keyof typeof titles] || titles.en,
     description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
     keywords: "emerging technology strategist, K-12 innovation, AI in education, computer science education, education technology, bilingual",
