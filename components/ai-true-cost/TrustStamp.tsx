@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { trackEvent } from '@/analytics/tracker';
 
 const CHALLENGE_URL =
@@ -21,12 +22,13 @@ interface TrustStampProps {
  * - "Challenge a number" GitHub issue deep-link
  */
 export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProps) {
+  const t = useTranslations('trueCost.trustStamp');
   return (
     <div className="border-t border-canvas-border bg-canvas-raised px-6 py-4">
       <div className="max-w-5xl mx-auto flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-text-muted font-mono">
         {/* Last verified */}
         <span>
-          Last verified:{' '}
+          {t('lastVerified')}{' '}
           <span className="text-text-secondary">{lastVerified}</span>
         </span>
 
@@ -37,7 +39,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
           href={`/${locale}/tech-sovereignty/ai-true-cost/methodology`}
           className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
         >
-          methodology
+          {t('methodology')}
         </Link>
 
         <span className="text-canvas-border hidden sm:inline">·</span>
@@ -47,7 +49,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
           href={`/${locale}/tech-sovereignty/ai-true-cost/changelog`}
           className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
         >
-          changelog
+          {t('changelog')}
         </Link>
 
         <span className="text-canvas-border hidden sm:inline">·</span>
@@ -63,7 +65,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
             onChallenge?.();
           }}
         >
-          Challenge a number →
+          {t('challenge')}
         </a>
       </div>
     </div>

@@ -1917,5 +1917,68 @@
     "right5": "Objection — object to certain uses of your data",
     "contactTitle": "Questions?",
     "contactText": "If you have any questions about this privacy policy or want to exercise your data rights, reach out at:"
+  },
+  "trueCost": {
+    "pageTitle": "The True Cost of AI | Jamelna",
+    "pageDescription": "Discover the real, unsubsidized cost of the AI tools you use every day. Interactive calculator with cited sources for ChatGPT, Claude, Gemini, and more.",
+    "hero": {
+      "headline": "The True Cost of AI",
+      "taglinePrefix": "You pay",
+      "taglineMiddle": "for",
+      "taglineSuffix": "Without subsidies, it would cost you",
+      "cta": "See your true cost →",
+      "counterLabel": "Since you opened this page, AI companies have subsidized users like you:",
+      "counterMethodologyLink": "See methodology →"
+    },
+    "calculator": {
+      "sectionTitle": "Select your AI tool",
+      "noSelection": "Select an AI tool above to see its true cost breakdown.",
+      "loading": "Loading calculator…"
+    },
+    "scenarioGrid": {
+      "emptyGroup": "No scenarios yet — content coming in Phase B."
+    },
+    "resultView": {
+      "monthlyTrueCost": "MONTHLY TRUE COST",
+      "youPay": "You pay",
+      "trueCost": "True cost",
+      "subsidizedLabel": "You are being subsidized",
+      "subsidizedDetail": "Someone else covers {amount}/month of your costs — a {multiple}× subsidy on what you pay.",
+      "doubleSubsidyTitle": "Double-subsidy stack",
+      "doubleSubsidyIntro": "{product} is built on top of {wrapped}. You're receiving subsidies from two layers simultaneously.",
+      "subsidyLayer": "{name} subsidy",
+      "combinedSubsidy": "Combined subsidy",
+      "components": {
+        "compute": "Compute (GPU-hours × cloud)",
+        "training_amortization": "Training amortization",
+        "energy_water": "Energy + water externalities",
+        "investor_subsidy": "Investor subsidy"
+      }
+    },
+    "shareBar": {
+      "copy": "Copy result",
+      "copied": "Copied",
+      "shareX": "Share on X",
+      "shareLinkedIn": "Share on LinkedIn"
+    },
+    "trustStamp": {
+      "lastVerified": "Last verified:",
+      "methodology": "methodology",
+      "changelog": "changelog",
+      "challenge": "Challenge a number →"
+    },
+    "changelogPage": {
+      "title": "Changelog | AI True Cost | Jamelna",
+      "description": "A public record of every change to the numbers and methodology on the AI True Cost calculator.",
+      "backLink": "Back to True Cost Calculator"
+    },
+    "methodologyPage": {
+      "title": "Methodology | AI True Cost | Jamelna",
+      "description": "How we calculate the true unsubsidized cost of AI products — definitions, formulas, sources, and assumptions.",
+      "backLink": "Back to True Cost Calculator",
+      "heading": "Methodology",
+      "phaseBNotice": "Methodology is being drafted (Phase B)",
+      "phaseBDetail": "The full methodology essay — covering how we calculate each of the five cost components, our assumptions, sensitivity analysis, and honest caveats — will be published alongside the first real cost numbers in Phase B."
+    }
   }
 }

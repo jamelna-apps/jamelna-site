@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import type { ScenariosFile, Product, SourcesMap } from '@/lib/ai-true-cost/types';
 import { trackEvent } from '@/analytics/tracker';
 import { ScenarioGrid } from './ScenarioGrid';
@@ -18,6 +19,7 @@ interface CalculatorProps {
  * Syncs selected scenario to the URL via ?scenario= param.
  */
 export function Calculator({ scenarios, productsById, sources }: CalculatorProps) {
+  const t = useTranslations('trueCost.calculator');
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -53,7 +55,7 @@ export function Calculator({ scenarios, productsById, sources }: CalculatorProps
     <div className="space-y-10">
       {/* Scenario picker */}
       <div>
-        <h2 className="text-lg font-bold text-white mb-6">Select your AI tool</h2>
+        <h2 className="text-lg font-bold text-white mb-6">{t('sectionTitle')}</h2>
         <ScenarioGrid
           scenarios={scenarios}
           selectedId={selectedId}
@@ -74,7 +76,7 @@ export function Calculator({ scenarios, productsById, sources }: CalculatorProps
 
       {!selectedProduct && (
         <p className="text-text-muted text-sm italic">
-          Select an AI tool above to see its true cost breakdown.
+          {t('noSelection')}
         </p>
       )}
     </div>

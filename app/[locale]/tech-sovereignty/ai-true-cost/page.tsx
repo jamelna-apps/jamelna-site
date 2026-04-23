@@ -77,7 +77,7 @@ export default async function AiTrueCostPage({ params }: PageProps) {
       <div id="calculator">
         <section className="py-16 px-6">
           <div className="max-w-5xl mx-auto">
-            <Suspense fallback={<p className="text-text-muted text-sm">Loading calculator…</p>}>
+            <Suspense fallback={<p className="text-text-muted text-sm">Loading calculator&#8230;</p>}>
               <Calculator
                 scenarios={data.scenarios}
                 productsById={productsById}
