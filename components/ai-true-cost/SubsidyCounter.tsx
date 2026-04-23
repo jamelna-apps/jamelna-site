@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 import { subsidyPerSecond } from '@/lib/ai-true-cost/counter';
 
 interface SubsidyCounterProps {
@@ -15,6 +16,7 @@ interface SubsidyCounterProps {
  */
 export function SubsidyCounter({ annualSubsidyUsd }: SubsidyCounterProps) {
   const t = useTranslations('trueCost.hero');
+  const locale = useLocale();
   const startRef = useRef<number | null>(null);
   const [elapsedMs, setElapsedMs] = useState(0);
 
@@ -50,12 +52,12 @@ export function SubsidyCounter({ annualSubsidyUsd }: SubsidyCounterProps) {
       </p>
       <p className="text-xs text-text-muted mt-2">
         Based on industry annual losses.{' '}
-        <a
-          href="#methodology"
+        <Link
+          href={`/${locale}/tech-sovereignty/ai-true-cost/methodology`}
           className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
         >
           {t('counterMethodologyLink')}
-        </a>
+        </Link>
       </p>
     </div>
   );
