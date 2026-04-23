@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import type { Product } from '@/lib/ai-true-cost/types';
 import type { Breakdown } from '@/lib/ai-true-cost/math';
 import { useTranslations } from 'next-intl';
@@ -32,7 +32,7 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
 
   const shareText = buildShareText(product, breakdown);
 
-  const handleCopy = useCallback(async () => {
+  const handleCopy = async () => {
     trackEvent('jamelna', 'share_clicked', { product: product.id, channel: 'copy' });
     try {
       await navigator.clipboard.writeText(shareText);
@@ -51,7 +51,7 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
-  }, [shareText]);
+  };
 
   const tweetUrl =
     `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;

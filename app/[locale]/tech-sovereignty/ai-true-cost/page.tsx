@@ -11,8 +11,7 @@ interface PageProps {
   searchParams: Promise<{ scenario?: string }>;
 }
 
-export async function generateMetadata({ params, searchParams }: PageProps): Promise<Metadata> {
-  const { locale } = await params;
+export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
   const { scenario } = await searchParams;
   const scenarioParam = scenario ?? 'chatgpt-plus';
 
