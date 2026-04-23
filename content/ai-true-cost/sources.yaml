@@ -32,3 +32,45 @@ alphabet-cloud-profitable-q4-2025:
   url: https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf
   accessed: "2026-04-23"
   pull_quote: "Google Cloud revenues of $17.7 billion, up 34%, and Google Cloud operating income of $5.3 billion with a 30.1% operating margin."
+
+openai-api-pricing-2026:
+  title: "OpenAI API Pricing — GPT-4o"
+  author: "OpenAI"
+  url: https://openai.com/api/pricing/
+  accessed: "2026-04-23"
+  pull_quote: "GPT-4o: $2.50 per 1M input tokens, $10.00 per 1M output tokens (as of April 2026)."
+
+epoch-frontier-training-cost-2024:
+  title: "How much does it cost to train frontier AI models?"
+  author: "Ben Cottier, Robi Rahman, et al. — Epoch AI"
+  url: https://epoch.ai/blog/how-much-does-it-cost-to-train-frontier-ai-models
+  accessed: "2026-04-23"
+  pull_quote: "GPT-4's training cost is estimated at $78.4 million. Frontier training costs are growing at a rate of 2.4× per year. For selected models including GPT-4, the combined cost of AI accelerator chips, other server components and interconnect hardware makes up 47–67% of the total."
+
+luccioni-power-hungry-2024:
+  title: "Power Hungry Processing: Watts Driving the Cost of AI Deployment?"
+  author: "Sasha Luccioni, Yacine Jernite, Emma Strubell (FAccT '24)"
+  url: https://arxiv.org/abs/2311.16863
+  accessed: "2026-04-23"
+  pull_quote: "1,000 text generation queries used on average 0.047 kWh or 47 watt-hours. This averages out to 0.047 watt-hours per inference."
+
+altman-gentle-singularity-2025:
+  title: "The Gentle Singularity"
+  author: "Sam Altman"
+  url: https://blog.samaltman.com/the-gentle-singularity
+  accessed: "2026-04-23"
+  pull_quote: "The average ChatGPT query uses about 0.34 watt-hours, about what an oven would use in a little over one second… about 0.000085 gallons of water; roughly one fifteenth of a teaspoon."
+
+li-making-ai-thirsty-2023:
+  title: "Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models"
+  author: "Pengfei Li, Jianyi Yang, Mohammad A. Islam, Shaolei Ren"
+  url: https://arxiv.org/abs/2304.03271
+  accessed: "2026-04-23"
+  pull_quote: "GPT-3 needs to 'drink' (i.e., consume) a 500ml bottle of water for roughly 10–50 medium-length responses."
+
+theinformation-11m-chatgpt-subs-2024:
+  title: "OpenAI COO Says ChatGPT Passed 11 Million Paying Subscribers"
+  author: "The Information (paywalled; figures confirmed via Winbuzzer + multiple secondary sources)"
+  url: https://www.theinformation.com/articles/openai-coo-says-chatgpt-passed-11-million-paying-subscribers
+  accessed: "2026-04-23"
+  pull_quote: "OpenAI COO Brad Lightcap disclosed in an internal message (Sep 2024) that ChatGPT had passed 11 million paying customers across Plus, Team, and Enterprise tiers."

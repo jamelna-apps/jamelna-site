@@ -29,10 +29,14 @@ export async function Hero({ annualSubsidyUsd, tagline }: HeroProps) {
 
         <p className="text-xl text-text-secondary max-w-2xl mb-8 leading-relaxed">
           {t('taglinePrefix')}{' '}
-          <strong className="text-white">${tagline.paid}/month</strong> {t('taglineMiddle')}{' '}
+          <strong className="text-white">${(tagline.paid * 12).toLocaleString()}/year</strong>{' '}
+          {t('taglineMiddle')}{' '}
           <strong className="text-white">{tagline.productName}</strong>.
           {' '}{t('taglineSuffix')}{' '}
-          <strong className="text-orange-300">${tagline.trueCost}/month</strong>.
+          <strong className="text-orange-300">${(tagline.trueCost * 12).toLocaleString(undefined, { maximumFractionDigits: 0 })}/year</strong>
+          {' '}— an extra{' '}
+          <strong className="text-orange-300">${((tagline.trueCost - tagline.paid) * 12).toLocaleString(undefined, { maximumFractionDigits: 0 })}/year</strong>{' '}
+          covered by investors.
         </p>
 
         <Link

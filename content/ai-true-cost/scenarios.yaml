@@ -5,7 +5,10 @@ groups:
 
   - tier: paid-consumer
     label: "Paid Consumer ($20 tier)"
-    scenarios: []
+    scenarios:
+      - id: chatgpt-plus
+        name: ChatGPT Plus
+        tier: paid-consumer
 
   - tier: education
     label: "Education / Institutional"

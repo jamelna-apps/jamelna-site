@@ -62,7 +62,7 @@ export default async function AiTrueCostPage({ params }: PageProps) {
           trueCost: bd.true_cost_usd,
         };
       })()
-    : { productName: 'ChatGPT Plus', paid: 20, trueCost: 287 };
+    : { productName: 'ChatGPT Plus', paid: 20, trueCost: 61 };
 
   return (
     <main className="min-h-screen bg-canvas-deep text-white">
