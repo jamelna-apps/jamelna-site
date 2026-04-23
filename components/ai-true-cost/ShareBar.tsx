@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import type { Product } from '@/lib/ai-true-cost/types';
 import type { Breakdown } from '@/lib/ai-true-cost/math';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { trackEvent } from '@/analytics/tracker';
 
 interface ShareBarProps {
@@ -13,12 +13,12 @@ interface ShareBarProps {
 
 const SITE_URL = 'https://jamelna.com';
 
-function buildShareText(product: Product, breakdown: Breakdown): string {
+function buildShareText(product: Product, breakdown: Breakdown, locale: string): string {
   return (
     `${product.name}: you pay $${product.price_paid_usd}/mo. ` +
     `True cost: $${breakdown.true_cost_usd.toFixed(2)}/mo ` +
     `(${breakdown.subsidy_multiple.toFixed(1)}× subsidy). ` +
-    `See: ${SITE_URL}/en/tech-sovereignty/ai-true-cost?scenario=${product.id}`
+    `See: ${SITE_URL}/${locale}/tech-sovereignty/ai-true-cost?scenario=${encodeURIComponent(product.id)}`
   );
 }
 
@@ -28,9 +28,10 @@ function buildShareText(product: Product, breakdown: Breakdown): string {
  */
 export function ShareBar({ product, breakdown }: ShareBarProps) {
   const t = useTranslations('trueCost.shareBar');
+  const locale = useLocale();
   const [copied, setCopied] = useState(false);
 
-  const shareText = buildShareText(product, breakdown);
+  const shareText = buildShareText(product, breakdown, locale);
 
   const handleCopy = async () => {
     trackEvent('jamelna', 'share_clicked', { product: product.id, channel: 'copy' });
@@ -58,7 +59,7 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
 
   const linkedInUrl =
     `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-      `${SITE_URL}/en/tech-sovereignty/ai-true-cost?scenario=${product.id}`
+      `${SITE_URL}/${locale}/tech-sovereignty/ai-true-cost?scenario=${encodeURIComponent(product.id)}`
     )}`;
 
   return (
