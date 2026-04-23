@@ -4,6 +4,7 @@ import React from 'react';
 import type { Product, SourcesMap } from '@/lib/ai-true-cost/types';
 import { computeBreakdown, stackWrapper } from '@/lib/ai-true-cost/math';
 import { Citation } from './Citation';
+import { ShareBar } from './ShareBar';
 
 interface ResultViewProps {
   product: Product;
@@ -122,6 +123,9 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
           </p>
         </div>
       )}
+
+      {/* Share bar */}
+      <ShareBar product={product} breakdown={breakdown} />
 
       {/* Double-subsidy stack */}
       {stacked && wrapped && wrappedBreakdown && (
