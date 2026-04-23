@@ -66,8 +66,9 @@ describe('loadProduct', () => {
 describe('loadAllProducts', () => {
   it('loads all product files in a directory', async () => {
     const products = await loadAllProducts(productsDir);
-    expect(products).toHaveLength(1);
-    expect(products[0].id).toBe('test-product');
+    expect(products).toHaveLength(2);
+    const ids = products.map((p) => p.id);
+    expect(ids).toContain('test-product');
   });
 
   it('returns an array of Product objects', async () => {
@@ -77,6 +78,34 @@ describe('loadAllProducts', () => {
       expect(product).toHaveProperty('name');
       expect(product).toHaveProperty('cost_components');
     }
+  });
+});
+
+describe('date coercion', () => {
+  it('normalizes unquoted YAML dates to ISO string on product', async () => {
+    const product = await loadProduct(
+      path.join(productsDir, 'test-product-unquoted-date.yaml')
+    );
+    expect(typeof product.last_verified).toBe('string');
+    expect(product.last_verified).toBe('2026-04-23');
+  });
+
+  it('normalizes unquoted YAML dates to ISO string on source', async () => {
+    const sources = await loadSources(
+      path.join(fixturesDir, 'sources-unquoted-date.yaml')
+    );
+    const src = sources['test-source-unquoted'];
+    expect(typeof src.accessed).toBe('string');
+    expect(src.accessed).toBe('2026-04-23');
+  });
+
+  it('throws with filename and field name when required field missing', async () => {
+    await expect(
+      loadProduct(path.join(fixturesDir, 'test-product-missing-id.yaml'))
+    ).rejects.toThrow(/id/);
+    await expect(
+      loadProduct(path.join(fixturesDir, 'test-product-missing-id.yaml'))
+    ).rejects.toThrow(/test-product-missing-id/);
   });
 });
 
