@@ -31,7 +31,13 @@ interface Section {
   slug: string;
 }
 
-export default function MethodologyPage() {
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function MethodologyPage({ params }: PageProps) {
+  const { locale } = await params;
+  const calculatorUrl = `/${locale}/ai-true-cost`;
   const filePath = path.join(process.cwd(), 'content', 'ai-true-cost', 'methodology.md');
   const raw = fs.readFileSync(filePath, 'utf-8');
 
@@ -47,7 +53,7 @@ export default function MethodologyPage() {
         {/* Back nav */}
         <nav className="mb-10">
           <Link
-            href=".."
+            href={calculatorUrl}
             className="text-sm text-text-muted hover:text-orange-300 transition-colors inline-flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,7 +182,7 @@ export default function MethodologyPage() {
         {/* Footer actions */}
         <div className="mt-16 pt-8 border-t border-canvas-border flex flex-wrap gap-4 justify-between items-center">
           <Link
-            href=".."
+            href={calculatorUrl}
             className="text-sm text-text-muted hover:text-orange-300 transition-colors inline-flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
