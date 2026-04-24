@@ -13,14 +13,23 @@ assumed_usage:
 
 cost_components:
   compute:
-    value_usd: 67.50
+    value_usd: 128.70
     basis: >
       Power-user assumption: 5,000 queries × 1,500 tokens = 7.5M tokens/mo
-      (60% input, 40% output). Primary Sonnet 4.5: 4.5M × $3 + 3M × $15 =
-      $13.50 + $45.00 = $58.50. Plus ~12% Opus 4.1 heavy use at $15/$75
-      adds ~$9 = $67.50/mo. At retail this approaches the full $200
-      subscription price — before any training, externality, or subsidy
-      attribution.
+      (60% input, 40% output). Model mix: 70% Sonnet 4.5 + 30% Opus 4.1 —
+      same behavioral mix as Max 5×. The tier difference is query volume,
+      not model selection: a Max 20× user just makes 2.5× more queries of
+      the same workload, not a fundamentally different mix.
+
+      70% Sonnet portion (5.25M tokens): 3.15M × $3/M + 2.1M × $15/M
+      = $9.45 + $31.50 = $40.95.
+
+      30% Opus portion (2.25M tokens): 1.35M × $15/M + 0.9M × $75/M
+      = $20.25 + $67.50 = $87.75.
+
+      Total: $128.70/mo — well over 60% of the $200 subscription price
+      on compute alone before any training, externality, or subsidy
+      attribution. Sensitivity: at 50% Opus compute rises to ~$174.
     sources:
       - anthropic-api-pricing-2026
       - claude-max-pricing-2026

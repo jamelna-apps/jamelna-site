@@ -13,12 +13,23 @@ assumed_usage:
 
 cost_components:
   compute:
-    value_usd: 25.20
+    value_usd: 51.48
     basis: >
       Heavy chat assumption: 2,000 queries × 1,500 tokens = 3M tokens/mo
-      (60% input, 40% output). At Claude Sonnet 4.5 retail ($3/1M in, $15/1M
-      out): 1.8M × $3 + 1.2M × $15 = $5.40 + $18.00 = $23.40. Plus ~8% Opus
-      4.1 mix at $15/$75 adds ~$1.80 = $25.20/mo.
+      (60% input, 40% output). Model mix: 70% Sonnet 4.5 + 30% Opus 4.1
+      — Max users pay specifically for more Opus access but Sonnet remains
+      faster/cheaper for most queries. The mix is behavioral and doesn't
+      differ between Max 5× and 20×; what scales with tier is query volume.
+
+      70% Sonnet portion (2.1M tokens): 1.26M × $3/M + 0.84M × $15/M
+      = $3.78 + $12.60 = $16.38.
+
+      30% Opus portion (0.9M tokens at $15/$75): 0.54M × $15/M + 0.36M
+      × $75/M = $8.10 + $27.00 = $35.10.
+
+      Total: $51.48/mo. Anthropic does not publish Opus-vs-Sonnet usage
+      ratios; 30% is an estimate. Sensitivity: at 20% Opus compute drops
+      to ~$40; at 50% Opus it rises to ~$70.
     sources:
       - anthropic-api-pricing-2026
       - claude-max-pricing-2026

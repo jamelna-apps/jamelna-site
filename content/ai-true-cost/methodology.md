@@ -102,6 +102,14 @@ Each product's true cost uses a fixed usage assumption:
 
 Your actual usage can be 10× higher or lower. Each product's YAML discloses its assumption.
 
+### Reasoning tokens on o1 and Opus
+
+OpenAI's o1 Pro mode and similar reasoning models generate **hidden reasoning tokens** — internal chain-of-thought that OpenAI bills as output tokens but are not visible to the user. Community reports put the multiplier at **3–10× the visible output**.
+
+For products that use o1 heavily (ChatGPT Pro at 30% o1 Pro mix, ChatGPT Edu at 20% o1), compute uses a conservative **3× reasoning multiplier**. At 5–10× multipliers these numbers roughly double or triple. This is disclosed in each product's `basis:` field.
+
+Claude Opus 4.1 is priced at $15/M input and $75/M output — 5× Sonnet 4.5 rates. Products heavy on Opus (Claude Max 5× and 20×) assume a **30% Opus mix**, same across both tiers (tier differences drive volume, not model mix).
+
 ### Cursor Pro is the most sensitive scenario
 
 At the power-dev assumption, Anthropic retail compute alone is **$78/month** against a $20 subscription — a 3.9× gap before anything else. The 10M-token assumption is deliberate: Cursor's own reported AWS costs and the observation that ["Cursor spends 100% of its revenue on Anthropic"](https://www.wheresyoured.at/costs/) make heavy usage the load-bearing case.
