@@ -1,0 +1,72 @@
+id: github-copilot-pro
+name: GitHub Copilot Pro
+vendor: GitHub (Microsoft)
+tier: developer-tools
+price_paid_usd: 10.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 2000
+  avg_input_tokens: 600
+  avg_output_tokens: 600
+  primary_model: multi-model-gpt-5-claude-gemini
+
+cost_components:
+  compute:
+    value_usd: 18.00
+    basis: >
+      2,000 code-completion queries × 1,200 tokens = 2.4M tokens/mo.
+      Code-heavy 50/50 input/output split due to long context + long
+      completions: 1.2M in + 1.2M out. Weighted blend of GPT-5-mini
+      ($0.25/$2.00), Claude Sonnet 4.5 ($3/$15), and xAI Grok Code Fast 1
+      yields approximately $18/mo at retail. Microsoft has volume discounts
+      below retail so this is an upper bound.
+
+      NOTE: Copilot does NOT wrap chatgpt-plus or claude-pro here — the
+      $20 wrapper-layer subsidy (next row) already captures the
+      OpenAI-to-Microsoft pricing arrangement. Stacking would double-count.
+    sources:
+      - openai-api-pricing-2026
+      - anthropic-api-pricing-2026
+      - github-copilot-plans-2026
+
+  training_amortization:
+    value_usd: 0.35
+    basis: >
+      Pass-through from upstream vendors (OpenAI + Anthropic + Google + xAI).
+      Code-heavy users consume ~11× chat token volume but Copilot has its
+      own caching layer. ~$0.35/mo blended.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.40
+    basis: >
+      2,000 code-completion queries × ~0.05 Wh per query (Luccioni lower
+      bound; code completion is lighter than chat generation) ≈ $0.02
+      energy. Water ≈ $0.38. Total $0.40/mo.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+
+  investor_subsidy:
+    value_usd: 20.00
+    basis: >
+      The headline figure. WSJ reported in Oct 2023 that GitHub Copilot
+      was losing "on average more than $20 a month per user, with some
+      users costing the company as much as $80 a month." Microsoft
+      publicly disputed the specific figure but the April 2026 shift to
+      token-based billing + tightened rate limits (per The Information,
+      via Ed Zitron) strongly suggests the directional claim remains true
+      or worse — Copilot's weekly cost reportedly doubled over 2026 YTD.
+      Used $20/mo as the WSJ-cited average; heavy users much higher.
+
+      This wrapper-layer subsidy already accounts for Microsoft absorbing
+      OpenAI's pricing via their 2019 deal — do NOT stack an additional
+      chatgpt-plus subsidy on top or the figure double-counts.
+    sources:
+      - wsj-copilot-20-loss-2023
+      - thurrott-copilot-loss-2023
+      - github-copilot-token-billing-wheresyoured-2026
+
+last_verified: "2026-04-24"

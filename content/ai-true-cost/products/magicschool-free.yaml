@@ -1,0 +1,57 @@
+id: magicschool-free
+name: MagicSchool (Teacher Free)
+vendor: MagicSchool
+tier: free
+price_paid_usd: 0.00
+price_unit: monthly
+wraps: chatgpt-plus
+
+assumed_usage:
+  queries_per_month: 200
+  avg_input_tokens: 800
+  avg_output_tokens: 400
+  primary_model: gpt-4o-via-openai-api
+
+cost_components:
+  compute:
+    value_usd: 0.09
+    basis: >
+      MagicSchool proxies teacher queries through OpenAI's API. At 200 queries/mo
+      of GPT-4o-class usage the retail API cost is ~$0.086/mo (same derivation as
+      ChatGPT Free). This component is a pass-through; the underlying subsidy on
+      this API usage is modeled via the wraps linkage to ChatGPT Plus.
+    sources:
+      - openai-api-pricing-2026
+
+  training_amortization:
+    value_usd: 0.01
+    basis: >
+      Pass-through from underlying OpenAI model. MagicSchool does not train its
+      own frontier model; the training cost amortization lives on the wrapped
+      ChatGPT Plus product.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.01
+    basis: >
+      Same per-query figures as free-tier ChatGPT. Externality is trivial in $.
+    sources:
+      - altman-gentle-singularity-2025
+      - luccioni-power-hungry-2024
+
+  investor_subsidy:
+    value_usd: 0.50
+    basis: >
+      MagicSchool-specific VC burn (NOT including underlying OpenAI subsidy; that
+      stacks separately via the wraps linkage). Derivation: Series B $45M Feb 2025,
+      total funding $65.3M across 3 rounds. Estimated burn at Series-B scale
+      ~$22.5-30M/yr ÷ 6-7M educators signed up (company claim). Per-educator
+      monthly burn ≈ $0.37-$0.60; midpoint $0.50/mo. Flag: a large share of these
+      educators are inactive; burn per active teacher is higher. Also partially
+      offset by district revenue (~$44.9M ARR per aggregator estimate) which is
+      why this tier exists as a loss-leader for district sales.
+    sources:
+      - magicschool-series-b-2025
+
+last_verified: "2026-04-23"

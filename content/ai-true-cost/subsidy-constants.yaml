@@ -1,0 +1,49 @@
+annual_industry_subsidy_usd: 10600000000
+last_verified: "2026-04-23"
+sources:
+  - openai-loss-2024-fortune
+  - openai-loss-2024-cnbc
+  - anthropic-burn-2024-acquinox
+  - anthropic-burn-2024-theinformation
+  - alphabet-cloud-profitable-q4-2025
+notes: >
+  Basis: $5.0B (OpenAI FY2024 net loss ex stock-based comp) + $5.6B
+  (Anthropic FY2024 cash burn) = $10.6B. Google AI is excluded because
+  Alphabet's AI activity is cross-subsidized internally by profitable
+  search and cloud margins; no credible attributable "AI division loss"
+  figure is publicly disclosed.
+
+
+  Important caveats, surfaced on the methodology page:
+
+
+  1. Apples vs oranges. OpenAI's $5B is net loss (ex-SBC). Anthropic's
+  $5.6B is cash burn — it includes a one-time data-center prepayment
+  and so mixes capex-like items with recurring operating expense. A
+  critic could argue the true comparable operating-loss figures are
+  meaningfully smaller.
+
+
+  2. Unaudited. Neither company files public financials. All figures
+  come from leaked investor documents via NYT, Fortune, CNBC, Reuters,
+  and The Information.
+
+
+  3. The Information's primary articles on both losses are paywalled.
+  The figures here are matched against independent secondary reporting
+  from Reuters and NYT-derived coverage, but the primary articles were
+  not read directly.
+
+
+  4. "Subsidy" framing. These companies burn cash to grow, not because
+  unit economics are broken. Anthropic's gross margins went positive
+  in 2025 and its 2025 revenue run-rate reached approximately $9B.
+  The "subsidy" label reflects current cash-flow reality, not a claim
+  of permanent unit-economics failure.
+
+
+  5. Google AI exclusion is defensible but contestable. Alphabet's 2025
+  AI infrastructure capex was approximately $91B (guided $175-185B for
+  2026). A reasonable critic could argue some share of that capex, net
+  of attributable revenue, constitutes a subsidy. It is surfaced in the
+  methodology page as supplementary but not rolled into the counter.

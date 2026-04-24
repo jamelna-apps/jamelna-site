@@ -1,0 +1,53 @@
+id: schoolai-free
+name: SchoolAI (Free)
+vendor: SchoolAI
+tier: free
+price_paid_usd: 0.00
+price_unit: monthly
+wraps: chatgpt-plus
+
+assumed_usage:
+  queries_per_month: 200
+  avg_input_tokens: 800
+  avg_output_tokens: 400
+  primary_model: gpt-4o-via-openai-api
+
+cost_components:
+  compute:
+    value_usd: 0.09
+    basis: >
+      SchoolAI proxies queries through OpenAI. At 200 queries/mo of GPT-4o-class
+      usage the retail API cost is ~$0.086/mo. Pass-through.
+    sources:
+      - openai-api-pricing-2026
+
+  training_amortization:
+    value_usd: 0.01
+    basis: >
+      Pass-through from underlying OpenAI model. SchoolAI does not train.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.01
+    basis: >
+      Same per-query figures as free-tier ChatGPT. Trivial in $.
+    sources:
+      - altman-gentle-singularity-2025
+      - luccioni-power-hungry-2024
+
+  investor_subsidy:
+    value_usd: 2.00
+    basis: >
+      SchoolAI-specific VC burn (NOT including underlying OpenAI subsidy; that
+      stacks via wraps). Derivation: Series A $25M April 2025, total funding
+      $32M. Estimated burn post-Series-A ~$12M/yr ÷ ~500k active teachers
+      (Stanford SCALE study found ~42% of the "1M classrooms" figure become
+      regular users). Per-active-teacher monthly burn ≈ $1.50-$3.00; midpoint
+      $2.00/mo. LOW CONFIDENCE — SchoolAI's public disclosures are thinner than
+      MagicSchool's, and "1 million classrooms" is a reach metric without
+      third-party audit.
+    sources:
+      - schoolai-series-a-2025
+
+last_verified: "2026-04-23"

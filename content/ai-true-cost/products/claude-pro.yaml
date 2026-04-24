@@ -1,0 +1,67 @@
+id: claude-pro
+name: Claude Pro
+vendor: Anthropic
+tier: paid-consumer
+price_paid_usd: 20.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 600
+  avg_input_tokens: 840
+  avg_output_tokens: 360
+  primary_model: claude-sonnet-4-5
+
+cost_components:
+  compute:
+    value_usd: 4.75
+    basis: >
+      Claude Sonnet 4.5 retail: $3/1M input + $15/1M output. At 600 queries ×
+      1200 tokens total (70/30 input/output split) = 504k input + 216k output
+      = $1.512 + $3.240 = $4.752/mo. Opus 4.1 is available to Pro under tighter
+      limits ($15/$75) but most Pro queries are routed to Sonnet 4.5. Retail
+      pricing used rather than cost-to-serve because the thesis is
+      what-you'd-pay-at-market.
+    sources:
+      - anthropic-api-pricing-2026
+
+  training_amortization:
+    value_usd: 0.25
+    basis: >
+      Claude Opus/Sonnet-class training costs are in Epoch AI's frontier cluster
+      ($100-300M per run). Amortized over ~20M paying-consumer-equivalents × 24
+      month model life attributes ~$0.10-$0.40/mo to the Pro tier, depending on
+      allocation between enterprise API and consumer use. Midpoint $0.25.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.10
+    basis: >
+      Same per-query figures as ChatGPT Plus. 600 queries × 0.34 Wh (Altman)
+      × $0.15/kWh ≈ $0.031. Luccioni peer-reviewed lower bound yields ~$0.004.
+      Water cost in $ terms is sub-penny. Midpoint cited $0.10 includes some
+      margin for larger per-query energy at Sonnet vs smaller models.
+    sources:
+      - altman-gentle-singularity-2025
+      - luccioni-power-hungry-2024
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 13.89
+    basis: >
+      Proportional attribution: Anthropic FY2024 cash burn $5.6B × 12.5%
+      (consumer/subscription share of revenue per Sacra) ÷ ~3M paying
+      consumer subs (estimated) ÷ 12 months ≈ $13.89/mo. Range $6-23/mo
+      depending on which year's burn (2025 projected $3B), which denominator
+      (paying sub counts not disclosed by Anthropic; TechCrunch reports
+      estimates "all over the map" from 18-30M total consumer users with
+      the majority on Pro tier), and whether proportional attribution is
+      applied. Primary sources are secondary reporting of leaked investor
+      documents; no audited numbers exist.
+    sources:
+      - anthropic-burn-2024-acquinox
+      - anthropic-burn-2024-theinformation
+      - sacra-anthropic-revenue-mix-2026
+      - techcrunch-claude-subs-2026
+
+last_verified: "2026-04-23"

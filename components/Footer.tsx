@@ -95,6 +95,7 @@ const Footer = () => {
                 { href: `/${locale}/k12-cs-education`, label: nav('k12cs') },
                 { href: `/${locale}/photography`, label: nav('photography') },
                 { href: `/${locale}/anchor-and-steer`, label: 'Anchor & STEER' },
+                { href: `/${locale}/ai-true-cost`, label: 'True Cost of AI' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

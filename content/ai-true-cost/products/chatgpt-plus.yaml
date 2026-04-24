@@ -1,0 +1,69 @@
+id: chatgpt-plus
+name: ChatGPT Plus
+vendor: OpenAI
+tier: paid-consumer
+price_paid_usd: 20.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 600
+  avg_input_tokens: 800
+  avg_output_tokens: 400
+  primary_model: gpt-4o
+
+cost_components:
+  compute:
+    value_usd: 2.88
+    basis: >
+      GPT-4o API retail pricing: $2.50/1M input tokens + $10.00/1M output tokens.
+      At assumed usage (480k input + 240k output tokens/mo): $1.20 + $2.40 = $3.60
+      at current pricing. Earlier 2024 pricing was higher ($5/$20) yielding $7.20.
+      Midpoint cited. API retail used rather than cost-to-serve because the thesis
+      is "what would you pay at market rates" — API is what a third-party product
+      would pay today.
+    sources:
+      - openai-api-pricing-2026
+
+  training_amortization:
+    value_usd: 0.33
+    basis: >
+      GPT-4 training cost $78.4M (Epoch AI) ÷ 24-month useful life ÷ 10M ChatGPT
+      Plus subscribers = $0.327/Plus-user/month. Reasonable range $0.14–$0.65
+      depending on amortization period (12–24 months) and paid-user denominator
+      (10–20M). GPT-4o training cost not publicly disclosed; assumed same order
+      of magnitude as GPT-4.
+    sources:
+      - epoch-frontier-training-cost-2024
+      - theinformation-11m-chatgpt-subs-2024
+
+  energy_water:
+    value_usd: 0.03
+    basis: >
+      Energy: 0.34 Wh/query × 600 queries = 204 Wh/mo × $0.15/kWh (US retail avg)
+      = $0.0306/mo. Water: 0.000085 gal × 600 = 0.051 gal × $0.002/gal ≈ $0.0001/mo.
+      Uses OpenAI's own self-reported figures (Altman 2025) as the upper bound; the
+      peer-reviewed Luccioni paper reports 0.047 Wh/query for BLOOMz-class models
+      which would yield ~$0.004/mo. Either way the dollar externality is trivial.
+      The real environmental argument is aggregate carbon/water stress, not priced
+      cost per user.
+    sources:
+      - altman-gentle-singularity-2025
+      - luccioni-power-hungry-2024
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 37.88
+    basis: >
+      OpenAI FY2024 net loss $5.0B (ex stock-based compensation) ÷ 11M total paying
+      subscribers (Plus + Team + Enterprise, as of Sep 2024) ÷ 12 months = $37.88
+      per paying user per month. Uses matched 2024 vintage for both numerator and
+      denominator. The denominator has roughly tripled by late 2025 (~35M paying),
+      which — paired with 2024 loss — would collapse the figure to ~$11.90/mo;
+      but 2025 audited losses are not yet disclosed and are reportedly larger.
+      Counter will be updated via changelog when 2025 actuals are released.
+    sources:
+      - openai-loss-2024-fortune
+      - openai-loss-2024-cnbc
+      - theinformation-11m-chatgpt-subs-2024
+
+last_verified: "2026-04-23"

@@ -1,0 +1,17 @@
+name: Test Product Missing ID
+vendor: Test Vendor
+tier: paid-consumer
+price_paid_usd: 20.00
+price_unit: monthly
+assumed_usage:
+  queries_per_month: 600
+  avg_input_tokens: 800
+  avg_output_tokens: 400
+  primary_model: test-model
+cost_components:
+  compute:
+    value_usd: 50.00
+    basis: "gpu_hours * cloud_rate"
+    sources:
+      - test-source-1
+last_verified: "2026-04-23"

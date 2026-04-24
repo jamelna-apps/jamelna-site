@@ -1,0 +1,64 @@
+id: chatgpt-free
+name: ChatGPT Free
+vendor: OpenAI
+tier: free
+price_paid_usd: 0.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 200
+  avg_input_tokens: 800
+  avg_output_tokens: 400
+  primary_model: gpt-4o-mini
+
+cost_components:
+  compute:
+    value_usd: 0.09
+    basis: >
+      GPT-4o-mini API retail: $0.15/1M input, $0.60/1M output. At 200 queries ×
+      (800 input + 400 output) = 0.16M input + 0.08M output = $0.024 + $0.048 ≈
+      $0.086/mo. Retail pricing used rather than cost-to-serve because the thesis
+      is what-you'd-pay-at-market. Cost-to-serve is likely 25-40% of retail.
+    sources:
+      - openai-api-pricing-2026
+      - openai-gpt-4o-mini-announcement-2024
+
+  training_amortization:
+    value_usd: 0.01
+    basis: >
+      GPT-4o-mini training cost is not publicly disclosed but is substantially
+      smaller than GPT-4 ($78.4M via Epoch AI). Amortized across OpenAI's
+      ~700-800M weekly active user base (TechCrunch 2025) over 24 months the
+      per-free-user share is <$0.01/mo. Effectively negligible for small models.
+    sources:
+      - epoch-frontier-training-cost-2024
+      - chatgpt-700m-wau-techcrunch-2025
+
+  energy_water:
+    value_usd: 0.01
+    basis: >
+      200 queries × 0.34 Wh/query (Altman self-report) = 68 Wh/mo × $0.15/kWh US
+      retail = $0.010/mo. Water: 200 × 0.000085 gal (Altman) × $0.002/gal ≈ $0 in
+      dollar terms. Luccioni lower bound of 0.047 Wh/query yields $0.001/mo. Dollar
+      externality is trivial regardless of source chosen; the real environmental
+      argument is aggregate stress, not priced cost per user.
+    sources:
+      - altman-gentle-singularity-2025
+      - luccioni-power-hungry-2024
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 1.17
+    basis: >
+      OpenAI FY2024 net loss $5.0B (ex-SBC) ÷ ~700-800M weekly active users
+      (mid-2025 Lightcap disclosure, via TechCrunch) ÷ 12 months ≈ $0.74-$0.89
+      per WAU per month. Using 2025 projected loss ($9B per Fortune) with the
+      same base raises it to ~$1.30. Midpoint cited: $1.17/mo. Much smaller than
+      per-paid-user because the free-user denominator is enormous. Note: a heavy
+      200-query/mo free user is a p90 user; the average WAU makes far fewer
+      queries, so the per-heavy-free-user subsidy is likely higher than average.
+    sources:
+      - openai-loss-2024-fortune
+      - chatgpt-700m-wau-techcrunch-2025
+
+last_verified: "2026-04-23"

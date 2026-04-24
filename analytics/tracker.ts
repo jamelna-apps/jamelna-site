@@ -59,6 +59,40 @@ function parseUA(): { browser: string; os: string; deviceType: 'desktop' | 'tabl
   return { browser, os, deviceType }
 }
 
+/**
+ * Fire a lightweight custom event. Sends via sendBeacon (or fetch fallback).
+ * The event is keyed under `eventName` and `eventProps` in the payload.
+ * Silently fails — analytics must never break the app.
+ */
+export function trackEvent(
+  projectId: string,
+  eventName: string,
+  eventProps: Record<string, string> = {}
+): void {
+  try {
+    const body = JSON.stringify({
+      projectId,
+      eventName,
+      eventProps,
+      sessionId: getSessionId(),
+      path: typeof window !== 'undefined' ? window.location.pathname : '',
+      timestamp: new Date().toISOString(),
+    });
+    if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
+      navigator.sendBeacon('/api/analytics/events', body);
+    } else {
+      fetch('/api/analytics/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+        keepalive: true,
+      }).catch(() => {});
+    }
+  } catch {
+    // Silent fail
+  }
+}
+
 export async function trackPageview(projectId: string, path: string): Promise<void> {
   try {
     const { browser, os, deviceType } = parseUA()

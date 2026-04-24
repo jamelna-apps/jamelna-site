@@ -1,0 +1,74 @@
+id: claude-max-100
+name: Claude Max (5×)
+vendor: Anthropic
+tier: paid-consumer
+price_paid_usd: 100.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 2000
+  avg_input_tokens: 900
+  avg_output_tokens: 600
+  primary_model: claude-sonnet-4-5-opus-4-1
+
+cost_components:
+  compute:
+    value_usd: 51.48
+    basis: >
+      Heavy chat assumption: 2,000 queries × 1,500 tokens = 3M tokens/mo
+      (60% input, 40% output). Model mix: 70% Sonnet 4.5 + 30% Opus 4.1
+      — Max users pay specifically for more Opus access but Sonnet remains
+      faster/cheaper for most queries. The mix is behavioral and doesn't
+      differ between Max 5× and 20×; what scales with tier is query volume.
+
+      70% Sonnet portion (2.1M tokens): 1.26M × $3/M + 0.84M × $15/M
+      = $3.78 + $12.60 = $16.38.
+
+      30% Opus portion (0.9M tokens at $15/$75): 0.54M × $15/M + 0.36M
+      × $75/M = $8.10 + $27.00 = $35.10.
+
+      Total: $51.48/mo. Anthropic does not publish Opus-vs-Sonnet usage
+      ratios; 30% is an estimate. Sensitivity: at 20% Opus compute drops
+      to ~$40; at 50% Opus it rises to ~$70.
+    sources:
+      - anthropic-api-pricing-2026
+      - claude-max-pricing-2026
+
+  training_amortization:
+    value_usd: 0.60
+    basis: >
+      Scales with token volume relative to Pro baseline (~14× tokens at Max
+      vs Pro at 600 queries × 1200). Proportional amortization ≈ $0.60/mo.
+      Max tier's training-cost share is higher because these users exercise
+      Opus heavily.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.45
+    basis: >
+      2,000 queries × 0.34 Wh (Altman) = 680 Wh/mo × $0.15/kWh = $0.10 energy.
+      Water: proportional to query volume, ~$0.35/mo at Li et al. rates.
+      Scales roughly 3× chat tier due to higher volume.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 18.00
+    basis: >
+      Proportional to revenue share: Max 5× users pay 5× Pro revenue and
+      disproportionately drive compute load. Baseline Pro subsidy $3.60/mo
+      (Anthropic burn × 12.5% consumer attribution ÷ paying sub count) scaled
+      5× ≈ $18/mo. Low confidence — Anthropic does not disclose Max-tier
+      subscriber counts; the 18-30M "consumer users" figure from TechCrunch
+      is a wide range and the Pro/Max-100/Max-200 mix is unknown.
+    sources:
+      - anthropic-burn-2024-acquinox
+      - anthropic-burn-2024-theinformation
+      - sacra-anthropic-revenue-mix-2026
+      - techcrunch-claude-subs-2026
+      - claude-max-pricing-2026
+
+last_verified: "2026-04-24"

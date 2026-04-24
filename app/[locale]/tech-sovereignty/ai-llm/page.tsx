@@ -1846,6 +1846,35 @@ export default function AILLMPage() {
 
       <div className="max-w-6xl mx-auto px-4 py-12">
         <CorePrinciple />
+
+        {/* True Cost callout */}
+        <div className="mb-8 bg-canvas-raised border border-orange-500/30 rounded-xl p-6">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-base font-bold text-white mb-1">
+                Want to see what the AI tools your school uses would cost without subsidies?
+              </h3>
+              <p className="text-text-secondary text-sm mb-3">
+                ChatGPT, Claude, MagicSchool, and others are heavily subsidized by investors. The True Cost of AI calculator shows the real unsubsidized numbers — with cited sources for every figure.
+              </p>
+              <Link
+                href={`/${locale}/ai-true-cost`}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-400 hover:text-orange-300 transition-colors"
+              >
+                The True Cost of AI →
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-6">{projects.map((project) => (<ProjectSection key={project.id} project={project} isExpanded={expandedProject === project.id} onToggle={() => setExpandedProject(expandedProject === project.id ? null : project.id)} />))}</div>
       </div>
 

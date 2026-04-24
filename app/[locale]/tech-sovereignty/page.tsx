@@ -373,6 +373,43 @@ export default function TechSovereigntyPage() {
       <div className="h-px bg-canvas-border"
       />
 
+      {/* AI True Cost Banner */}
+      <section className="py-12 px-4 bg-canvas border-t border-canvas-raised">
+        <div className="max-w-5xl mx-auto">
+          <Link
+            href={`/${locale}/ai-true-cost`}
+            className="card-alive block bg-canvas-raised border-2 border-orange-500/30 hover:border-orange-500/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-orange-500/10 group"
+          >
+            <div className="flex items-start gap-6">
+              <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/30 transition-colors">
+                <svg className="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-xl font-bold text-text-heading group-hover:text-orange-300 transition-colors">
+                    The True Cost of AI
+                  </h3>
+                  <span className="bg-orange-500/20 text-orange-300 text-xs px-2 py-1 rounded-full font-medium">
+                    New
+                  </span>
+                </div>
+                <p className="text-text-secondary text-sm mb-3">
+                  ChatGPT charges you $20/month. Without investor subsidies, it would cost over $287/month. See the real numbers behind the AI tools your school uses — interactive calculator with cited sources.
+                </p>
+                <span className="text-sm text-orange-400 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                  See the true cost
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Digital Resilience Toolkit Banner */}
       <section className="py-12 px-4 bg-canvas border-t border-canvas-raised">
         <div className="max-w-5xl mx-auto">

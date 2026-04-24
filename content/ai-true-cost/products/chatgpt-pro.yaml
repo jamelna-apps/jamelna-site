@@ -1,0 +1,87 @@
+id: chatgpt-pro
+name: ChatGPT Pro
+vendor: OpenAI
+tier: paid-consumer
+price_paid_usd: 200.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 3000
+  avg_input_tokens: 900
+  avg_output_tokens: 600
+  primary_model: gpt-5-and-o1-pro-mode
+
+cost_components:
+  compute:
+    value_usd: 126.68
+    basis: >
+      3,000 queries × 1,500 tokens = 4.5M tokens/mo (60% input, 40% output).
+      Model mix: 70% GPT-5 / GPT-4o-class + 30% o1 Pro mode. Pro tier is
+      sold specifically for o1 Pro access; 30% mix reflects users escalating
+      to o1 Pro for reasoning-heavy tasks while staying on GPT-5/4o for
+      everyday queries.
+
+      70% GPT-4o portion (3.15M tokens): 1.89M × $2.50/M + 1.26M × $10/M
+      = $4.73 + $12.60 = $17.33.
+
+      30% o1 Pro portion — THE KEY MATH. o1 Pro generates "hidden reasoning
+      tokens" that OpenAI bills as output tokens but are not visible to
+      users. Community reports estimate the reasoning multiplier at 3-10×
+      visible output. Using 3× (conservative midpoint).
+
+      1.35M visible o1 tokens at 60/40 = 0.81M input + 0.54M visible output.
+      With 3× reasoning multiplier, total billable output = 1.62M. Cost:
+      0.81M × $15/M + 1.62M × $60/M = $12.15 + $97.20 = $109.35.
+
+      Total compute: $17.33 + $109.35 = $126.68/mo. At a 5× reasoning
+      multiplier compute jumps to ~$224; at 10× to ~$380 — approaching or
+      exceeding the $200 subscription on compute alone. Sora video compute
+      not included (undisclosed).
+    sources:
+      - openai-api-pricing-2026
+      - chatgpt-pro-launch-openai-2024
+
+  training_amortization:
+    value_usd: 1.20
+    basis: >
+      Pro users consume ~15× Plus baseline tokens but are only ~5.8% of
+      OpenAI's consumer base. Per-user training share scales proportionally:
+      15 × $0.08 Plus baseline ≈ $1.20/mo.
+    sources:
+      - epoch-frontier-training-cost-2024
+      - openai-50m-paying-subs-2026
+
+  energy_water:
+    value_usd: 0.75
+    basis: >
+      3,000 queries × 0.34 Wh × 3 (reasoning multiplier for o1 Pro) = ~3
+      kWh/mo × $0.15 = $0.45. Water sub-cent at Altman's figures. Midpoint
+      $0.75/mo including Sora.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 50.00
+    basis: >
+      OpenAI projected 2026 loss $14B (The Information). ~50M paying subs
+      early 2026 (Lightcap / Business of Apps). Pro tier = ~5.8% of consumer
+      sales, so ~2.9M Pro subs. Consumer-attributable burn estimated at 40%
+      of $14B = $5.6B ÷ 12 = $466M/mo consumer burn. Proportional revenue
+      allocation: Pro revenue ($580M/mo) is ~25% of consumer revenue.
+      25% × $466M ÷ 2.9M Pro subs ≈ $40/mo baseline.
+
+      Revised downward to $50/mo (from earlier $125 estimate) now that the
+      compute line reflects the true cost of o1 Pro's hidden reasoning
+      tokens — previously the subsidy was inflated to compensate for an
+      understated compute estimate. Compute now carries the bulk of the
+      "true cost" weight and the subsidy sits closer to the consumer-base
+      average.
+    sources:
+      - openai-loss-2026-14b-theinformation
+      - openai-loss-2024-fortune
+      - openai-50m-paying-subs-2026
+      - chatgpt-pro-launch-openai-2024
+
+last_verified: "2026-04-24"

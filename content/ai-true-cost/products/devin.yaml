@@ -1,0 +1,79 @@
+id: devin
+name: Devin (Max)
+vendor: Cognition AI
+tier: developer-tools
+price_paid_usd: 200.00
+price_unit: monthly
+wraps: claude-pro
+
+assumed_usage:
+  queries_per_month: 100
+  avg_input_tokens: 20000
+  avg_output_tokens: 30000
+  primary_model: claude-sonnet-4-5-plus-gpt-5-agentic
+
+cost_components:
+  compute:
+    value_usd: 45.00
+    basis: >
+      Agent tasks are token-heavy due to tool calls, reasoning loops, and
+      full-repo context. Assumption: 100 tasks × 50,000 tokens = 5M tokens/mo
+      (40% input / 60% output — heavier output for multi-step plans). Primary
+      Claude Sonnet 4.5: 2M × $3 + 3M × $15 = $6 + $45 = $51. Minority OpenAI
+      GPT-5 (~20%): ~$4. Net ~$45/mo inference. Understates TRUE cost —
+      Cognition's own ACU pricing ($2.25 each, ~4 ACUs/hour of agent runtime)
+      implies 100 tasks at 1-hour avg = $900 in infra; 15-minute avg = $225.
+      Inference-only figure cited; infrastructure extra.
+
+      THE STORY: Original Devin GA launch (Dec 2024) priced at $500/month.
+      Cognition slashed to $20/month Pro (or $200 Max) in April 2025 when
+      the economics became untenable. The $500→$20 price collapse is the
+      cleanest public case of an AI product's initial pricing being
+      catastrophically below true cost. Documented in methodology.
+    sources:
+      - anthropic-api-pricing-2026
+      - openai-api-pricing-2026
+      - devin-pricing-2026
+      - devin-20-venturebeat-2025
+      - devin-ga-cognition-2024
+
+  training_amortization:
+    value_usd: 0.50
+    basis: >
+      Passthrough from upstream Claude and OpenAI models. Cognition does not
+      train frontier models. ~$0.50/mo.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.90
+    basis: >
+      Agent tasks run virtual machines for ~15 minutes each = ~25 hours of
+      VM compute time/mo. At Luccioni's text-generation energy bounds scaled
+      for long-running agent loops: ~$0.90/mo combined energy + water.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+
+  investor_subsidy:
+    value_usd: 30.00
+    basis: >
+      Cognition total funding ~$696M (Sacra + TechCrunch). ARR scaled $1M
+      (Sep 2024) → $73M (June 2025). Paying base small (enterprise teams).
+      For Devin Max at $200: Cognition's TRUE per-user cost estimate based
+      on agent economics is in the $230-280/mo range (matching 100 tasks
+      at 15-30 min VM time per task at retail Claude rates). Price covers
+      most of it; wrapper subsidy estimated ~$30/mo at Max tier. Anthropic
+      underlying subsidy stacks via wraps.
+
+      At the legacy $500/mo tier (Dec 2024 - April 2025), implied wrapper
+      subsidy was $300+/mo per heavy user — which is why the tier no longer
+      exists. Max $200 still loses money per heavy user but closer to
+      break-even.
+    sources:
+      - cognition-400m-techcrunch-2025
+      - devin-ga-cognition-2024
+      - devin-20-venturebeat-2025
+      - devin-pricing-2026
+
+last_verified: "2026-04-24"

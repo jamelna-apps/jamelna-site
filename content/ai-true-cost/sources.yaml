@@ -1,0 +1,377 @@
+openai-loss-2024-fortune:
+  title: "OpenAI lost $5 billion last year on $3.7 billion in revenue, reports say"
+  author: "Fortune (reporting NYT source documents)"
+  url: https://fortune.com/2024/09/28/openai-5-billion-loss-2024-revenue-forecasts-fundraising-chapgpt-fee-hikes/
+  accessed: "2026-04-23"
+  pull_quote: "But OpenAI sees a loss of $5 billion, which doesn't include equity-based compensation, the Times said."
+
+openai-loss-2024-cnbc:
+  title: "OpenAI sees $5 billion loss this year on $3.7 billion in revenue"
+  author: "CNBC"
+  url: https://www.cnbc.com/2024/09/27/openai-sees-5-billion-loss-this-year-on-3point7-billion-in-revenue.html
+  accessed: "2026-04-23"
+  pull_quote: "OpenAI is projecting a loss of $5 billion this year on $3.7 billion in revenue, according to internal documents reviewed by The New York Times."
+
+anthropic-burn-2024-acquinox:
+  title: "Anthropic investor insights — FY2024 cash burn"
+  author: "Acquinox Capital (summarizing Reuters and The Information)"
+  url: https://acquinox.capital/insights/gen-ai-and-ai-agents/anthropic-investor-insights
+  accessed: "2026-04-23"
+  pull_quote: "Anthropic's projected cash burn is expected to decline from $5.6 billion in 2024 to approximately $3 billion in 2025."
+
+anthropic-burn-2024-theinformation:
+  title: "Anthropic Projected to Burn More Than $2.7 Billion in Cash This Year"
+  author: "The Information (briefing, paywalled)"
+  url: https://www.theinformation.com/briefings/anthropic-projected-to-burn-more-than-2-7-billion-in-cash-this-year
+  accessed: "2026-04-23"
+  pull_quote: "Headline and framing verified; full text paywalled. Confirms Anthropic's multi-billion annual cash burn pattern sourced from investor documents."
+
+alphabet-cloud-profitable-q4-2025:
+  title: "Alphabet Q4 & FY2025 earnings release"
+  author: "Alphabet Inc. (investor relations)"
+  url: https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf
+  accessed: "2026-04-23"
+  pull_quote: "Google Cloud revenues of $17.7 billion, up 34%, and Google Cloud operating income of $5.3 billion with a 30.1% operating margin."
+
+openai-api-pricing-2026:
+  title: "OpenAI API Pricing — GPT-4o"
+  author: "OpenAI"
+  url: https://openai.com/api/pricing/
+  accessed: "2026-04-23"
+  pull_quote: "GPT-4o: $2.50 per 1M input tokens, $10.00 per 1M output tokens (as of April 2026)."
+
+epoch-frontier-training-cost-2024:
+  title: "How much does it cost to train frontier AI models?"
+  author: "Ben Cottier, Robi Rahman, et al. — Epoch AI"
+  url: https://epoch.ai/blog/how-much-does-it-cost-to-train-frontier-ai-models
+  accessed: "2026-04-23"
+  pull_quote: "GPT-4's training cost is estimated at $78.4 million. Frontier training costs are growing at a rate of 2.4× per year. For selected models including GPT-4, the combined cost of AI accelerator chips, other server components and interconnect hardware makes up 47–67% of the total."
+
+luccioni-power-hungry-2024:
+  title: "Power Hungry Processing: Watts Driving the Cost of AI Deployment?"
+  author: "Sasha Luccioni, Yacine Jernite, Emma Strubell (FAccT '24)"
+  url: https://arxiv.org/abs/2311.16863
+  accessed: "2026-04-23"
+  pull_quote: "1,000 text generation queries used on average 0.047 kWh or 47 watt-hours. This averages out to 0.047 watt-hours per inference."
+
+altman-gentle-singularity-2025:
+  title: "The Gentle Singularity"
+  author: "Sam Altman"
+  url: https://blog.samaltman.com/the-gentle-singularity
+  accessed: "2026-04-23"
+  pull_quote: "The average ChatGPT query uses about 0.34 watt-hours, about what an oven would use in a little over one second… about 0.000085 gallons of water; roughly one fifteenth of a teaspoon."
+
+li-making-ai-thirsty-2023:
+  title: "Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models"
+  author: "Pengfei Li, Jianyi Yang, Mohammad A. Islam, Shaolei Ren"
+  url: https://arxiv.org/abs/2304.03271
+  accessed: "2026-04-23"
+  pull_quote: "GPT-3 needs to 'drink' (i.e., consume) a 500ml bottle of water for roughly 10–50 medium-length responses."
+
+theinformation-11m-chatgpt-subs-2024:
+  title: "OpenAI COO Says ChatGPT Passed 11 Million Paying Subscribers"
+  author: "The Information (paywalled; figures confirmed via Winbuzzer + multiple secondary sources)"
+  url: https://www.theinformation.com/articles/openai-coo-says-chatgpt-passed-11-million-paying-subscribers
+  accessed: "2026-04-23"
+  pull_quote: "OpenAI COO Brad Lightcap disclosed in an internal message (Sep 2024) that ChatGPT had passed 11 million paying customers across Plus, Team, and Enterprise tiers."
+
+openai-gpt-4o-mini-announcement-2024:
+  title: "GPT-4o mini: advancing cost-efficient intelligence"
+  author: "OpenAI"
+  url: https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/
+  accessed: "2026-04-23"
+  pull_quote: "15 cents per million input tokens and 60 cents per million output tokens."
+
+chatgpt-700m-wau-techcrunch-2025:
+  title: "OpenAI says ChatGPT is on track to reach 700M weekly users"
+  author: "TechCrunch (reporting OpenAI disclosure)"
+  url: https://techcrunch.com/2025/08/04/openai-says-chatgpt-is-on-track-to-reach-700m-weekly-users/
+  accessed: "2026-04-23"
+  pull_quote: "ChatGPT is on pace to cross 700 million weekly active users, roughly doubling in six months."
+
+anthropic-api-pricing-2026:
+  title: "Plans & Pricing — Claude API"
+  author: "Anthropic"
+  url: https://claude.com/pricing
+  accessed: "2026-04-23"
+  pull_quote: "Claude Haiku 4.5 — Input $1 per million tokens, Output $5 per million tokens. Claude Sonnet 4.5 — Input $3, Output $15."
+
+claude-mau-businessofapps-2026:
+  title: "Claude Revenue and Usage Statistics (2026)"
+  author: "Business of Apps (aggregating app-store and third-party scraper estimates)"
+  url: https://www.businessofapps.com/data/claude-statistics/
+  accessed: "2026-04-23"
+  pull_quote: "Claude mobile app reached roughly 12.5M monthly active users by February 2026; Claude.ai web had an estimated 18.9M MAU in early 2025."
+
+gemini-api-pricing-2026:
+  title: "Gemini Developer API pricing"
+  author: "Google"
+  url: https://ai.google.dev/gemini-api/docs/pricing
+  accessed: "2026-04-23"
+  pull_quote: "Gemini 2.0 Flash — Input $0.10 per 1M tokens, Output $0.40 per 1M tokens."
+
+gemini-750m-mau-techcrunch-2026:
+  title: "Google's Gemini app has surpassed 750M monthly active users"
+  author: "TechCrunch (reporting Alphabet Q4 2025 earnings)"
+  url: https://techcrunch.com/2026/02/04/googles-gemini-app-has-surpassed-750m-monthly-active-users/
+  accessed: "2026-04-23"
+  pull_quote: "Alphabet said the Gemini app reached 750 million monthly active users as of its Q4 2025 earnings."
+
+magicschool-series-b-2025:
+  title: "MagicSchool raises $45M Series B to bring AI to every educator"
+  author: "MagicSchool (company blog)"
+  url: https://www.magicschool.ai/blog-posts/series-b-fundraise-for-teacher-ai
+  accessed: "2026-04-23"
+  pull_quote: "$45M Series B led by Valor Equity Partners; over 6 million educators signed up across 10,000+ schools in 160 countries."
+
+schoolai-series-a-2025:
+  title: "SchoolAI Secures $25 Million to Help Teachers and Schools Reach Every Student"
+  author: "SchoolAI (GlobeNewswire press release)"
+  url: https://www.globenewswire.com/news-release/2025/04/02/3054126/0/en/SchoolAI-Secures-25-Million-to-Help-Teachers-and-Schools-Reach-Every-Student.html
+  accessed: "2026-04-23"
+  pull_quote: "$25M Series A led by Insight Partners; $32M total funding; reaches one million classrooms in 50 US states and 80 countries."
+
+khan-academy-annual-report-24-25:
+  title: "Khan Academy Annual Report SY24-25"
+  author: "Khan Academy"
+  url: https://annualreport.khanacademy.org/
+  accessed: "2026-04-23"
+  pull_quote: "2.0 million students, educators, and parents used Khanmigo during SY24-25; 731% year-over-year growth; 189.6M registered users globally."
+
+khan-academy-990-2024:
+  title: "Khan Academy Inc — IRS Form 990 (FY2024-25)"
+  author: "Khan Academy / IRS / ProPublica Nonprofit Explorer"
+  url: https://projects.propublica.org/nonprofits/organizations/261544963
+  accessed: "2026-04-23"
+  pull_quote: "Revenue $98.3M, Expenses $68.1M, Net assets $128.5M for fiscal year ending 2025."
+
+microsoft-khan-partnership-2024:
+  title: "Khan Academy and Microsoft partner to expand access to AI tools"
+  author: "Microsoft"
+  url: https://news.microsoft.com/source/features/ai/khan-academy-and-microsoft-partner-to-expand-access-to-ai-tools/
+  accessed: "2026-04-23"
+  pull_quote: "Microsoft is donating access to Azure AI-optimized infrastructure to enable Khan Academy to offer Khanmigo free to all U.S. K-12 educators."
+
+khanmigo-4dollar-prior-cnbc-2024:
+  title: "Microsoft, Khan Academy provide free AI assistant for all educators in US"
+  author: "CNBC"
+  url: https://www.cnbc.com/2024/05/21/microsoft-khan-academy-launch-free-ai-assistant-for-all-us-teachers.html
+  accessed: "2026-04-23"
+  pull_quote: "Khanmigo previously cost teachers $4 per month; Microsoft's Azure donation removes that cost entirely for U.S. educators."
+
+techcrunch-claude-subs-2026:
+  title: "Anthropic's Claude popularity with paying consumers is skyrocketing"
+  author: "TechCrunch"
+  url: https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/
+  accessed: "2026-04-23"
+  pull_quote: "Claude paid subscriptions have more than doubled this year. The majority of new subscribers are at its lowest tier, 'Pro' users ($20 per month, compared with $100 or $200 per month). Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million)."
+
+sacra-anthropic-revenue-mix-2026:
+  title: "Anthropic revenue, valuation & funding"
+  author: "Sacra"
+  url: https://sacra.com/c/anthropic/
+  accessed: "2026-04-23"
+  pull_quote: "Approximately 70-75% of Anthropic's revenue comes from pay-per-token API calls. Subscriptions account for 10-15% of total revenue. Anthropic expects to burn approximately $3B in cash in 2025, down from $5.6B the prior year."
+
+9to5google-googleone-150m-2025:
+  title: "Google One now has 150 million subscribers, 'millions' with AI Premium"
+  author: "9to5Google"
+  url: https://9to5google.com/2025/05/15/google-one-150-million/
+  accessed: "2026-04-23"
+  pull_quote: "Google One now has 150 million subscribers, a 50% increase from February of last year. The rapid increase in subscribers can be credited to the introduction of the Google One AI Premium Plan, which has attracted 'millions' of new subscriptions."
+
+techcrunch-cursor-9b-2025:
+  title: "Cursor's Anysphere nabs $9.9B valuation, soars past $500M ARR"
+  author: "TechCrunch"
+  url: https://techcrunch.com/2025/06/05/cursors-anysphere-nabs-9-9b-valuation-soars-past-500m-arr/
+  accessed: "2026-04-23"
+  pull_quote: "$900 million raised at $9.9 billion valuation. Anysphere has surpassed $500 million in ARR with approximately 1 million paying customers; ARR is doubling roughly every two months."
+
+cnbc-cursor-29b-2025:
+  title: "AI startup Cursor raises $2.3 billion funding round at $29.3 billion valuation"
+  author: "CNBC"
+  url: https://www.cnbc.com/2025/11/13/cursor-ai-startup-funding-round-valuation.html
+  accessed: "2026-04-23"
+  pull_quote: "Anysphere closed a $2.3 billion Series D funding round co-led by Accel and Coatue Management, valuing the company at $29.3 billion, with participation from strategic partners Google and Nvidia."
+
+wheresyoured-costs-2025:
+  title: "This Is How Much Anthropic and Cursor Spend On Amazon Web Services"
+  author: "Ed Zitron (citing Newcomer + Bloomberg financial reporting)"
+  url: https://www.wheresyoured.at/costs/
+  accessed: "2026-04-23"
+  pull_quote: "Cursor's AWS bill climbed from $1.5M/mo in January 2025 to $12.9M/mo by September 2025, totaling ~$70M through Q3 2025. Cursor is spending 100% of its revenue on Anthropic."
+
+csu-openai-contract-2025-laist:
+  title: "Inside Cal State's big $17 million bet on ChatGPT for all"
+  author: "LAist"
+  url: https://laist.com/news/education/chatgpt-california-state-university-csu-ai-deal
+  accessed: "2026-04-23"
+  pull_quote: "Cal State signed an 18-month, $16.9 million contract with OpenAI to provide ChatGPT Edu to all 533,000 students, faculty, and staff across 23 campuses — equivalent to roughly $2.11 per user per month. OpenAI described it as the single largest deployment of ChatGPT anywhere in the world."
+
+csu-openai-edsource-2025:
+  title: "Cal State unveils artificial intelligence tools for students"
+  author: "EdSource"
+  url: https://edsource.org/2025/cal-state-unveils-artificial-intelligence-tools-for-students/726205
+  accessed: "2026-04-23"
+  pull_quote: "Cal State's $16.9 million deal with OpenAI covers 23 campuses and roughly 533,000 students and staff, giving every member of the system a ChatGPT Edu account."
+
+openai-help-edu-models-2026:
+  title: "ChatGPT Enterprise and Edu — Models & Limits"
+  author: "OpenAI Help Center"
+  url: https://help.openai.com/en/articles/11165333-chatgpt-enterprise-and-edu-models-limits
+  accessed: "2026-04-23"
+  pull_quote: "ChatGPT Edu seats include access to GPT-4o, GPT-4.1, o1, o3, and o4-mini on the same schedule as ChatGPT Enterprise."
+
+magicschool-pricing-page:
+  title: "MagicSchool Pricing"
+  author: "MagicSchool"
+  url: https://www.magicschool.ai/pricing
+  accessed: "2026-04-23"
+  pull_quote: "Plus tier $12.99/month billed monthly, or $8.33/month billed annually ($99.96/yr). Enterprise pricing is custom."
+
+magicschool-claude-case-study:
+  title: "MagicSchool transforms K-12 education for 3M teachers"
+  author: "Anthropic (customer case study)"
+  url: https://claude.com/customers/magicschool
+  accessed: "2026-04-23"
+  pull_quote: "MagicSchool has transitioned many of its tools from OpenAI models to Claude, citing lower hallucination rates and better alignment with educator use cases. Over 7 million educators and 13,000+ schools use the platform."
+
+schoolai-openai-case-study:
+  title: "SchoolAI builds an AI platform that empowers teachers"
+  author: "OpenAI (customer case study)"
+  url: https://openai.com/index/schoolai/
+  accessed: "2026-04-23"
+  pull_quote: "SchoolAI's Sidekick AI tutor is built on GPT-4o and GPT-4.1. Dot's conversational interface uses GPT-4o; deeper reasoning uses GPT-4.1."
+
+schoolai-pricing-aggregators-2026:
+  title: "SchoolAI Pro pricing (third-party aggregator data)"
+  author: "AIChief, UseThisAI, SourceForge (aggregated; SchoolAI does not publish consumer pricing)"
+  url: https://aichief.com/schoolai/
+  accessed: "2026-04-23"
+  pull_quote: "SchoolAI Pro listed by multiple third-party review aggregators at $14.99/month. SchoolAI's own pricing page does not disclose a dollar figure for Pro; education plans listed as 'starting at $50/month' for districts."
+
+onlineeducation-chatgpt-edu-2024:
+  title: "What is OpenAI's New ChatGPT Edu for Universities?"
+  author: "OnlineEducation.com"
+  url: https://www.onlineeducation.com/features/chatgpt-edu-for-universities
+  accessed: "2026-04-23"
+  pull_quote: "ChatGPT Edu pricing is not publicly disclosed. Reddit-sourced reports from procurement officers put the range around $12/user/month with a 10,000-user minimum; confirmed in principle but not from an OpenAI primary source."
+
+claude-max-pricing-2026:
+  title: "Max plan | Claude by Anthropic"
+  author: "Anthropic"
+  url: https://claude.com/pricing/max
+  accessed: "2026-04-24"
+  pull_quote: "Max 5x — $100 per person billed monthly — 5x more usage per session than Pro. Max 20x — $200 per person billed monthly — 20x more usage per session than Pro. Priority access to new models and features."
+
+chatgpt-pro-launch-openai-2024:
+  title: "Introducing ChatGPT Pro"
+  author: "OpenAI"
+  url: https://openai.com/index/introducing-chatgpt-pro/
+  accessed: "2026-04-24"
+  pull_quote: "ChatGPT Pro is a $200 monthly plan that enables scaled access to the best of OpenAI's models and tools. Includes unlimited access to OpenAI o1, o1-mini, GPT-4o, and Advanced Voice, plus o1 pro mode which uses more compute to think harder."
+
+openai-50m-paying-subs-2026:
+  title: "OpenAI paying subscribers pass 50 million (early 2026)"
+  author: "Business of Apps (aggregating Lightcap disclosures and press reporting)"
+  url: https://www.businessofapps.com/data/chatgpt-statistics/
+  accessed: "2026-04-24"
+  pull_quote: "ChatGPT Pro ($200) accounted for roughly 5.8% of consumer sales as of early 2025. Total paying subscribers passed 50 million in early 2026, up from ~20M a year prior."
+
+openai-loss-2026-14b-theinformation:
+  title: "OpenAI Projections Imply Losses Tripling to $14 Billion in 2026"
+  author: "The Information (paywalled; widely syndicated)"
+  url: https://www.theinformation.com/articles/openai-projections-imply-losses-tripling-to-14-billion-in-2026
+  accessed: "2026-04-24"
+  pull_quote: "Internal OpenAI financial documents project a $14 billion loss in 2026, roughly three times 2025 estimates. OpenAI expects cumulative losses of $44B between 2023 and 2028 before turning profitable in 2029."
+
+wsj-copilot-20-loss-2023:
+  title: "Big Tech's AI Bets Are Coming With Big Bills"
+  author: "Wall Street Journal — Tom Dotan, Deepa Seetharaman"
+  url: https://www.wsj.com/tech/ai/big-tech-ai-bets-expensive-2cdad5b8
+  accessed: "2026-04-24"
+  pull_quote: "Individual GitHub Copilot customers pay $10 a month. In the first few months of this year, the company was losing on average more than $20 a month per user, according to a person familiar with the figures, who said some users were costing the company as much as $80 a month."
+
+thurrott-copilot-loss-2023:
+  title: "Report: GitHub Copilot Loses an Average of $20 Per User Per Month"
+  author: "Thurrott.com (Paul Thurrott — summary of WSJ original)"
+  url: https://www.thurrott.com/cloud/290661/report-github-copilot-loses-an-average-of-20-per-user-per-month
+  accessed: "2026-04-24"
+  pull_quote: "According to the WSJ, Microsoft's GitHub Copilot is losing an average of $20 a month per user, with some folks costing the tech giant as much as $80 a month. Copilot charges $10 a month to use."
+
+github-copilot-plans-2026:
+  title: "GitHub Copilot — Plans & Pricing"
+  author: "GitHub"
+  url: https://github.com/features/copilot/plans
+  accessed: "2026-04-24"
+  pull_quote: "GitHub Copilot Pro — $10 USD per user / month. 300 premium requests per month. Access to Anthropic Claude, Google Gemini, OpenAI GPT-5 family, xAI Grok Code Fast 1."
+
+github-copilot-token-billing-wheresyoured-2026:
+  title: "Exclusive: Microsoft To Shift GitHub Copilot Users To Token-Based Billing, Tighten Rate Limits"
+  author: "Ed Zitron (Where's Your Ed At)"
+  url: https://www.wheresyoured.at/news-microsoft-to-shift-github-copilot-users-to-token-based-billing-reduce-rate-limits-2/
+  accessed: "2026-04-24"
+  pull_quote: "The weekly cost of running GitHub Copilot has doubled since the start of the year. Microsoft intends to transition from request-based to token-based pricing and tighten rate limits on some Copilot Business and Enterprise plans, as well as on individual plans. (April 20, 2026.)"
+
+windsurf-pricing-2026:
+  title: "Windsurf Pricing (Pro plan)"
+  author: "Windsurf (Cognition)"
+  url: https://windsurf.com/pricing
+  accessed: "2026-04-24"
+  pull_quote: "Pro — $20/month. Unlimited usage (refreshes daily and weekly). Extra usage at API price. All premium models including SWE-1.5 Fast Agent model."
+
+cognition-acquires-windsurf-2025:
+  title: "Cognition's acquisition of Windsurf"
+  author: "Cognition AI (company blog)"
+  url: https://cognition.ai/blog/windsurf
+  accessed: "2026-04-24"
+  pull_quote: "On July 14, 2025, Cognition acquired Windsurf including its IP, product, trademark, team, $82M of ARR, and 350+ enterprise customers with hundreds of thousands of daily active users."
+
+codeium-funding-sacra-2025:
+  title: "Codeium (Windsurf) revenue, valuation & funding"
+  author: "Sacra"
+  url: https://sacra.com/c/codeium/
+  accessed: "2026-04-24"
+  pull_quote: "Windsurf (formerly Codeium) raised approximately $243M total since 2021: $65M Series B (Jan 2024, $500M valuation) and $150M Series C (Aug 2024, $1.25B valuation, led by General Catalyst)."
+
+devin-ga-cognition-2024:
+  title: "Devin is now generally available"
+  author: "Cognition AI (company blog)"
+  url: https://cognition.ai/blog/devin-generally-available
+  accessed: "2026-04-24"
+  pull_quote: "Starting today, Devin is available to engineering teams starting at $500 a month. No seat limits. Access to Devin's Slack integration, IDE extension, and API. (December 10, 2024.)"
+
+devin-20-venturebeat-2025:
+  title: "Devin 2.0 is here: Cognition slashes price from $500 to $20 per month"
+  author: "VentureBeat"
+  url: https://venturebeat.com/programming-development/devin-2-0-is-here-cognition-slashes-price-of-ai-software-engineer-to-20-per-month-from-500
+  accessed: "2026-04-24"
+  pull_quote: "Devin 2.0 is available starting at $20 per month minimum ($2.25 per Agent Compute Unit), whereas before, previous versions of the software started around $500 per month. Devin 2.0 completes over 83% more junior-level tasks per ACU."
+
+devin-pricing-2026:
+  title: "Devin Pricing"
+  author: "Cognition AI"
+  url: https://devin.ai/pricing/
+  accessed: "2026-04-24"
+  pull_quote: "Core (Pro) — $20/month, pay-as-you-go at $2.25 per Agent Compute Unit. Max — $200/month. Teams — $80/month per seat with 250 ACUs at $2.00 each. Enterprise — custom."
+
+cognition-400m-techcrunch-2025:
+  title: "Cognition AI defies turbulence with a $400M raise at $10.2B valuation"
+  author: "TechCrunch"
+  url: https://techcrunch.com/2025/09/08/cognition-ai-defies-turbulence-with-a-400m-raise-at-10-2b-valuation/
+  accessed: "2026-04-24"
+  pull_quote: "Cognition closed a $400M funding round led by Founders Fund at a $10.2B valuation in September 2025. ARR grew from ~$1M (Sep 2024) to ~$73M (June 2025)."
+
+v0-pricing-vercel-2025:
+  title: "Updated v0 pricing"
+  author: "Vercel"
+  url: https://vercel.com/blog/updated-v0-pricing
+  accessed: "2026-04-24"
+  pull_quote: "v0 shifted to token-based credit metering on May 13, 2025. Premium includes $20 in credits monthly. Free tier includes $5 in credits monthly."
+
+v0-model-pricing-2026:
+  title: "vercel/v0 1.5 md API Pricing"
+  author: "PricePerToken.com"
+  url: https://pricepertoken.com/pricing-page/model/vercel-v0-1-5-md
+  accessed: "2026-04-24"
+  pull_quote: "vercel/v0-1.5-md: $3.00 per million input tokens, $15.00 per million output tokens. Vercel's proprietary UI-generation model priced at Claude Sonnet retail."

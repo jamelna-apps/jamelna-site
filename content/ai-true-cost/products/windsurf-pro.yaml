@@ -1,0 +1,65 @@
+id: windsurf-pro
+name: Windsurf Pro
+vendor: Cognition (acquired Codeium July 2025)
+tier: developer-tools
+price_paid_usd: 20.00
+price_unit: monthly
+wraps: claude-pro
+
+assumed_usage:
+  queries_per_month: 5000
+  avg_input_tokens: 1200
+  avg_output_tokens: 800
+  primary_model: claude-sonnet-4-5-via-api
+
+cost_components:
+  compute:
+    value_usd: 78.00
+    basis: >
+      Same math as Cursor Pro. 10M tokens/mo (60% input / 40% output). At
+      Claude Sonnet 4.5 retail ($3/$15): 6M × $3 + 4M × $15 = $18 + $60 =
+      $78/mo — 3.9× the $20 subscription. Cognition's acquisition of
+      Codeium (July 2025) and the restructured pricing confirm the same
+      structural problem Cursor has: retail compute alone exceeds the
+      subscription price by a large multiple.
+    sources:
+      - anthropic-api-pricing-2026
+      - windsurf-pricing-2026
+      - cognition-acquires-windsurf-2025
+
+  training_amortization:
+    value_usd: 1.00
+    basis: >
+      Pass-through from Anthropic (primary) + OpenAI (minority) + Cognition's
+      own SWE-1.5 fine-tune (small contribution). Scales with tokens vs chat
+      baseline: ~$1/mo.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 1.50
+    basis: >
+      Scales linearly with token volume — 14× chat baseline ≈ $1.00-$2.10/mo.
+      Midpoint $1.50.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+
+  investor_subsidy:
+    value_usd: 3.00
+    basis: >
+      Cognition total funding post-Windsurf-acquisition ≈ $696M+ ($21M Series
+      A Mar 2024, $175M extension Apr 2024, ~$500M 2025 rounds, $400M at
+      $10.2B val Sep 2025). Windsurf brought in $82M ARR and 350+ enterprise
+      customers via the acquisition, plus hundreds of thousands of DAUs.
+      Estimated Cognition-layer burn allocated per Windsurf paying user:
+      ~$3/mo midpoint. Lower than Cursor because Windsurf contributed
+      meaningful ARR at acquisition and Cognition's model-training costs
+      are partly offset by Devin revenue. Anthropic-layer subsidy stacks
+      via the wraps linkage.
+    sources:
+      - cognition-acquires-windsurf-2025
+      - codeium-funding-sacra-2025
+      - cognition-400m-techcrunch-2025
+
+last_verified: "2026-04-24"
