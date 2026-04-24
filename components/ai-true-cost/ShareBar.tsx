@@ -18,7 +18,7 @@ function buildShareText(product: Product, breakdown: Breakdown, locale: string):
     `${product.name}: you pay $${product.price_paid_usd}/mo. ` +
     `True cost: $${breakdown.true_cost_usd.toFixed(2)}/mo ` +
     `(${breakdown.subsidy_multiple.toFixed(1)}× subsidy). ` +
-    `See: ${SITE_URL}/${locale}/tech-sovereignty/ai-true-cost?scenario=${encodeURIComponent(product.id)}`
+    `See: ${SITE_URL}/${locale}/ai-true-cost?scenario=${encodeURIComponent(product.id)}`
   );
 }
 
@@ -59,7 +59,7 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
 
   const linkedInUrl =
     `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-      `${SITE_URL}/${locale}/tech-sovereignty/ai-true-cost?scenario=${encodeURIComponent(product.id)}`
+      `${SITE_URL}/${locale}/ai-true-cost?scenario=${encodeURIComponent(product.id)}`
     )}`;
 
   return (

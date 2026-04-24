@@ -1863,7 +1863,7 @@ export default function AILLMPage() {
                 ChatGPT, Claude, MagicSchool, and others are heavily subsidized by investors. The True Cost of AI calculator shows the real unsubsidized numbers — with cited sources for every figure.
               </p>
               <Link
-                href={`/${locale}/tech-sovereignty/ai-true-cost`}
+                href={`/${locale}/ai-true-cost`}
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-400 hover:text-orange-300 transition-colors"
               >
                 The True Cost of AI →

@@ -36,7 +36,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
 
         {/* Methodology link */}
         <Link
-          href={`/${locale}/tech-sovereignty/ai-true-cost/methodology`}
+          href={`/${locale}/ai-true-cost/methodology`}
           className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
         >
           {t('methodology')}
@@ -46,7 +46,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
 
         {/* Changelog link */}
         <Link
-          href={`/${locale}/tech-sovereignty/ai-true-cost/changelog`}
+          href={`/${locale}/ai-true-cost/changelog`}
           className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
         >
           {t('changelog')}

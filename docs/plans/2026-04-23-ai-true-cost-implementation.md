@@ -1,6 +1,6 @@
 # AI True Cost Implementation Plan
 
-**Goal:** Ship `/tech-sovereignty/ai-true-cost/` on jamelna.com — a cited, interactive calculator that shows the true unsubsidized cost of common AI products, with a live subsidy counter, methodology page, and changelog.
+**Goal:** Ship `/ai-true-cost/` on jamelna.com — a cited, interactive calculator that shows the true unsubsidized cost of common AI products, with a live subsidy counter, methodology page, and changelog.
 
 **Architecture:** YAML content files compiled at build time into typed JSON. Client-side Next.js page renders scenario grid → result view. All math in-browser. Citations are a custom component wired to a central sources file. Live counter runs off a build-time constant. Dynamic OG images via `@vercel/og`. No database.
 
@@ -74,8 +74,8 @@ Each task bundles setup → TDD where applicable → implement → verify → co
 ---
 
 ### Task 10: Route scaffold
-- Create `app/[locale]/tech-sovereignty/ai-true-cost/page.tsx` as a server component that reads `getTrueCostData()` and renders a placeholder hero with product count + subsidy constant. Include `metadata` export with title/description.
-- `npm run dev` → visit `/en/tech-sovereignty/ai-true-cost`. Should render without errors.
+- Create `app/[locale]/ai-true-cost/page.tsx` as a server component that reads `getTrueCostData()` and renders a placeholder hero with product count + subsidy constant. Include `metadata` export with title/description.
+- `npm run dev` → visit `/en/ai-true-cost`. Should render without errors.
 - Commit.
 
 ### Task 11: Citation component
@@ -113,7 +113,7 @@ Each task bundles setup → TDD where applicable → implement → verify → co
 
 ### Task 21: Changelog page + TrustStamp footer
 - Create `content/ai-true-cost/changelog.md` with initial entry.
-- Create `app/[locale]/tech-sovereignty/ai-true-cost/changelog/page.tsx` that reads and renders the markdown via `react-markdown`.
+- Create `app/[locale]/ai-true-cost/changelog/page.tsx` that reads and renders the markdown via `react-markdown`.
 - Create `components/ai-true-cost/TrustStamp.tsx` with four links: `Last verified: <date>`, methodology, changelog, challenge-a-number (GitHub issue deep-link — use the repo URL resolved from `git remote -v`).
 - Render `<TrustStamp>` at the bottom of the main page.
 - Commit.
@@ -141,7 +141,7 @@ Each task bundles setup → TDD where applicable → implement → verify → co
 - Commit.
 
 ### Task 26: Cross-links
-- Add a card linking to `/tech-sovereignty/ai-true-cost` on `app/[locale]/tech-sovereignty/page.tsx` matching existing pathway-card visual language.
+- Add a card linking to `/ai-true-cost` on `app/[locale]/tech-sovereignty/page.tsx` matching existing pathway-card visual language.
 - Add a callout on `app/[locale]/tech-sovereignty/ai-llm/page.tsx` linking to the new page.
 - Commit.
 

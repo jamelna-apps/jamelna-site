@@ -53,7 +53,7 @@ export function SubsidyCounter({ annualSubsidyUsd }: SubsidyCounterProps) {
       <p className="text-xs text-text-muted mt-2">
         Based on industry annual losses.{' '}
         <Link
-          href={`/${locale}/tech-sovereignty/ai-true-cost/methodology`}
+          href={`/${locale}/ai-true-cost/methodology`}
           className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
         >
           {t('counterMethodologyLink')}

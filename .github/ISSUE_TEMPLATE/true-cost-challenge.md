@@ -1,6 +1,6 @@
 ---
 name: True Cost number challenge
-about: Flag a number on /tech-sovereignty/ai-true-cost that you believe is wrong
+about: Flag a number on /ai-true-cost that you believe is wrong
 labels: ["true-cost", "review-needed"]
 ---
 
@@ -32,4 +32,4 @@ Any additional context, related numbers, or caveats we should know about?
 
 ---
 
-_Thank you for helping keep these numbers honest. Every challenge is reviewed by the maintainer and, if valid, will result in a dated entry in the [changelog](/en/tech-sovereignty/ai-true-cost/changelog)._
+_Thank you for helping keep these numbers honest. Every challenge is reviewed by the maintainer and, if valid, will result in a dated entry in the [changelog](/en/ai-true-cost/changelog)._

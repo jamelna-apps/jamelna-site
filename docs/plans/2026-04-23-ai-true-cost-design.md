@@ -2,7 +2,7 @@
 
 **Status:** Validated design, ready for implementation plan
 **Date:** 2026-04-23
-**Location:** `jamelna-site/app/[locale]/tech-sovereignty/ai-true-cost/`
+**Location:** `jamelna-site/app/[locale]/ai-true-cost/`
 
 ## Thesis
 
@@ -136,7 +136,7 @@ Every number in the calculator renders via a `<Citation>` component. Hover / tap
 
 ## Methodology & Trust
 
-Public methodology page at `/tech-sovereignty/ai-true-cost/methodology`.
+Public methodology page at `/ai-true-cost/methodology`.
 
 Structured as a short essay:
 
@@ -158,7 +158,7 @@ Structured as a short essay:
 All within the existing `jamelna-site` Next.js app.
 
 - **Framework:** Next.js App Router (existing), `next-intl` for i18n.
-- **Route:** `/[locale]/tech-sovereignty/ai-true-cost/`
+- **Route:** `/[locale]/ai-true-cost/`
 - **Content loader:** `lib/ai-true-cost/*` parses YAML at build time, emits typed data.
 - **Calculator:** client component. All math in-browser.
 - **Counter:** client `setInterval`. Annual-loss constant from `sources.yaml` at build time. No network calls.

@@ -377,7 +377,7 @@ export default function TechSovereigntyPage() {
       <section className="py-12 px-4 bg-canvas border-t border-canvas-raised">
         <div className="max-w-5xl mx-auto">
           <Link
-            href={`/${locale}/tech-sovereignty/ai-true-cost`}
+            href={`/${locale}/ai-true-cost`}
             className="card-alive block bg-canvas-raised border-2 border-orange-500/30 hover:border-orange-500/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-orange-500/10 group"
           >
             <div className="flex items-start gap-6">

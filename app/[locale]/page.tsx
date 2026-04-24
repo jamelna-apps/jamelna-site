@@ -246,7 +246,7 @@ export default function Home() {
               $20 subscription. See what 19 AI tools really cost — every number cited.
             </p>
             <Link
-              href={`/${locale}/tech-sovereignty/ai-true-cost`}
+              href={`/${locale}/ai-true-cost`}
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-black font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               See the true cost calculator

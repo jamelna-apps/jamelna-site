@@ -22,7 +22,7 @@ export default function MethodologyPage() {
       <div className="max-w-3xl mx-auto px-6 py-16">
         <nav className="mb-8">
           <Link
-            href="../ai-true-cost"
+            href=".."
             className="text-sm text-text-muted hover:text-orange-300 transition-colors flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ export default function MethodologyPage() {
               <p className="text-text-secondary text-sm mt-4 leading-relaxed">
                 In the meantime, you can review the{' '}
                 <Link
-                  href="../ai-true-cost/changelog"
+                  href="../changelog"
                   className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
                 >
                   changelog
