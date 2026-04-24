@@ -22,20 +22,45 @@ groups:
         tier: free
 
   - tier: paid-consumer
-    label: "Paid Consumer ($20 tier)"
+    label: "Paid Consumer"
     scenarios:
       - id: chatgpt-plus
         name: ChatGPT Plus
         tier: paid-consumer
+      - id: chatgpt-pro
+        name: ChatGPT Pro
+        tier: paid-consumer
       - id: claude-pro
         name: Claude Pro
+        tier: paid-consumer
+      - id: claude-max-100
+        name: Claude Max (5×)
+        tier: paid-consumer
+      - id: claude-max-200
+        name: Claude Max (20×)
         tier: paid-consumer
       - id: gemini-advanced
         name: Gemini Advanced
         tier: paid-consumer
+
+  - tier: developer-tools
+    label: "Developer Tools"
+    scenarios:
       - id: cursor-pro
         name: Cursor Pro
-        tier: paid-consumer
+        tier: developer-tools
+      - id: github-copilot-pro
+        name: GitHub Copilot Pro
+        tier: developer-tools
+      - id: windsurf-pro
+        name: Windsurf Pro
+        tier: developer-tools
+      - id: devin
+        name: Devin (Max)
+        tier: developer-tools
+      - id: v0-pro
+        name: v0 Premium
+        tier: developer-tools
 
   - tier: education
     label: "Education / Institutional"

@@ -1,0 +1,63 @@
+id: claude-max-200
+name: Claude Max (20×)
+vendor: Anthropic
+tier: paid-consumer
+price_paid_usd: 200.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 5000
+  avg_input_tokens: 900
+  avg_output_tokens: 600
+  primary_model: claude-opus-4-1-heavy
+
+cost_components:
+  compute:
+    value_usd: 67.50
+    basis: >
+      Power-user assumption: 5,000 queries × 1,500 tokens = 7.5M tokens/mo
+      (60% input, 40% output). Primary Sonnet 4.5: 4.5M × $3 + 3M × $15 =
+      $13.50 + $45.00 = $58.50. Plus ~12% Opus 4.1 heavy use at $15/$75
+      adds ~$9 = $67.50/mo. At retail this approaches the full $200
+      subscription price — before any training, externality, or subsidy
+      attribution.
+    sources:
+      - anthropic-api-pricing-2026
+      - claude-max-pricing-2026
+
+  training_amortization:
+    value_usd: 1.50
+    basis: >
+      2.5× the Max-100 figure due to 2.5× token share. ~$1.50/mo.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 1.15
+    basis: >
+      2.5× Max-100 figure. 5,000 queries × 0.34 Wh = 1.7 kWh/mo = $0.26
+      energy. Water proportional ≈ $0.90/mo. Total ~$1.15.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 54.00
+    basis: >
+      10× the Pro baseline ($3.60/mo) to reflect Max 20× users' revenue
+      contribution and disproportionate Opus usage. Very low confidence.
+      The math: Anthropic 2025 projected burn $3B × 12.5% consumer
+      attribution = $375M/yr consumer burn ÷ ~5-8M paying consumer subs
+      = ~$6/mo baseline average; 10× that = $54/mo attributed to Max 20×
+      users. Alternative view: if Max users cover their own marginal
+      compute (the $67.50 figure), subsidy could be closer to zero. This
+      is among the most uncertain figures on the page.
+    sources:
+      - anthropic-burn-2024-acquinox
+      - anthropic-burn-2024-theinformation
+      - sacra-anthropic-revenue-mix-2026
+      - techcrunch-claude-subs-2026
+      - claude-max-pricing-2026
+
+last_verified: "2026-04-24"

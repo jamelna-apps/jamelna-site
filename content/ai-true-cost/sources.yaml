@@ -256,3 +256,122 @@ onlineeducation-chatgpt-edu-2024:
   url: https://www.onlineeducation.com/features/chatgpt-edu-for-universities
   accessed: "2026-04-23"
   pull_quote: "ChatGPT Edu pricing is not publicly disclosed. Reddit-sourced reports from procurement officers put the range around $12/user/month with a 10,000-user minimum; confirmed in principle but not from an OpenAI primary source."
+
+claude-max-pricing-2026:
+  title: "Max plan | Claude by Anthropic"
+  author: "Anthropic"
+  url: https://claude.com/pricing/max
+  accessed: "2026-04-24"
+  pull_quote: "Max 5x — $100 per person billed monthly — 5x more usage per session than Pro. Max 20x — $200 per person billed monthly — 20x more usage per session than Pro. Priority access to new models and features."
+
+chatgpt-pro-launch-openai-2024:
+  title: "Introducing ChatGPT Pro"
+  author: "OpenAI"
+  url: https://openai.com/index/introducing-chatgpt-pro/
+  accessed: "2026-04-24"
+  pull_quote: "ChatGPT Pro is a $200 monthly plan that enables scaled access to the best of OpenAI's models and tools. Includes unlimited access to OpenAI o1, o1-mini, GPT-4o, and Advanced Voice, plus o1 pro mode which uses more compute to think harder."
+
+openai-50m-paying-subs-2026:
+  title: "OpenAI paying subscribers pass 50 million (early 2026)"
+  author: "Business of Apps (aggregating Lightcap disclosures and press reporting)"
+  url: https://www.businessofapps.com/data/chatgpt-statistics/
+  accessed: "2026-04-24"
+  pull_quote: "ChatGPT Pro ($200) accounted for roughly 5.8% of consumer sales as of early 2025. Total paying subscribers passed 50 million in early 2026, up from ~20M a year prior."
+
+openai-loss-2026-14b-theinformation:
+  title: "OpenAI Projections Imply Losses Tripling to $14 Billion in 2026"
+  author: "The Information (paywalled; widely syndicated)"
+  url: https://www.theinformation.com/articles/openai-projections-imply-losses-tripling-to-14-billion-in-2026
+  accessed: "2026-04-24"
+  pull_quote: "Internal OpenAI financial documents project a $14 billion loss in 2026, roughly three times 2025 estimates. OpenAI expects cumulative losses of $44B between 2023 and 2028 before turning profitable in 2029."
+
+wsj-copilot-20-loss-2023:
+  title: "Big Tech's AI Bets Are Coming With Big Bills"
+  author: "Wall Street Journal — Tom Dotan, Deepa Seetharaman"
+  url: https://www.wsj.com/tech/ai/big-tech-ai-bets-expensive-2cdad5b8
+  accessed: "2026-04-24"
+  pull_quote: "Individual GitHub Copilot customers pay $10 a month. In the first few months of this year, the company was losing on average more than $20 a month per user, according to a person familiar with the figures, who said some users were costing the company as much as $80 a month."
+
+thurrott-copilot-loss-2023:
+  title: "Report: GitHub Copilot Loses an Average of $20 Per User Per Month"
+  author: "Thurrott.com (Paul Thurrott — summary of WSJ original)"
+  url: https://www.thurrott.com/cloud/290661/report-github-copilot-loses-an-average-of-20-per-user-per-month
+  accessed: "2026-04-24"
+  pull_quote: "According to the WSJ, Microsoft's GitHub Copilot is losing an average of $20 a month per user, with some folks costing the tech giant as much as $80 a month. Copilot charges $10 a month to use."
+
+github-copilot-plans-2026:
+  title: "GitHub Copilot — Plans & Pricing"
+  author: "GitHub"
+  url: https://github.com/features/copilot/plans
+  accessed: "2026-04-24"
+  pull_quote: "GitHub Copilot Pro — $10 USD per user / month. 300 premium requests per month. Access to Anthropic Claude, Google Gemini, OpenAI GPT-5 family, xAI Grok Code Fast 1."
+
+github-copilot-token-billing-wheresyoured-2026:
+  title: "Exclusive: Microsoft To Shift GitHub Copilot Users To Token-Based Billing, Tighten Rate Limits"
+  author: "Ed Zitron (Where's Your Ed At)"
+  url: https://www.wheresyoured.at/news-microsoft-to-shift-github-copilot-users-to-token-based-billing-reduce-rate-limits-2/
+  accessed: "2026-04-24"
+  pull_quote: "The weekly cost of running GitHub Copilot has doubled since the start of the year. Microsoft intends to transition from request-based to token-based pricing and tighten rate limits on some Copilot Business and Enterprise plans, as well as on individual plans. (April 20, 2026.)"
+
+windsurf-pricing-2026:
+  title: "Windsurf Pricing (Pro plan)"
+  author: "Windsurf (Cognition)"
+  url: https://windsurf.com/pricing
+  accessed: "2026-04-24"
+  pull_quote: "Pro — $20/month. Unlimited usage (refreshes daily and weekly). Extra usage at API price. All premium models including SWE-1.5 Fast Agent model."
+
+cognition-acquires-windsurf-2025:
+  title: "Cognition's acquisition of Windsurf"
+  author: "Cognition AI (company blog)"
+  url: https://cognition.ai/blog/windsurf
+  accessed: "2026-04-24"
+  pull_quote: "On July 14, 2025, Cognition acquired Windsurf including its IP, product, trademark, team, $82M of ARR, and 350+ enterprise customers with hundreds of thousands of daily active users."
+
+codeium-funding-sacra-2025:
+  title: "Codeium (Windsurf) revenue, valuation & funding"
+  author: "Sacra"
+  url: https://sacra.com/c/codeium/
+  accessed: "2026-04-24"
+  pull_quote: "Windsurf (formerly Codeium) raised approximately $243M total since 2021: $65M Series B (Jan 2024, $500M valuation) and $150M Series C (Aug 2024, $1.25B valuation, led by General Catalyst)."
+
+devin-ga-cognition-2024:
+  title: "Devin is now generally available"
+  author: "Cognition AI (company blog)"
+  url: https://cognition.ai/blog/devin-generally-available
+  accessed: "2026-04-24"
+  pull_quote: "Starting today, Devin is available to engineering teams starting at $500 a month. No seat limits. Access to Devin's Slack integration, IDE extension, and API. (December 10, 2024.)"
+
+devin-20-venturebeat-2025:
+  title: "Devin 2.0 is here: Cognition slashes price from $500 to $20 per month"
+  author: "VentureBeat"
+  url: https://venturebeat.com/programming-development/devin-2-0-is-here-cognition-slashes-price-of-ai-software-engineer-to-20-per-month-from-500
+  accessed: "2026-04-24"
+  pull_quote: "Devin 2.0 is available starting at $20 per month minimum ($2.25 per Agent Compute Unit), whereas before, previous versions of the software started around $500 per month. Devin 2.0 completes over 83% more junior-level tasks per ACU."
+
+devin-pricing-2026:
+  title: "Devin Pricing"
+  author: "Cognition AI"
+  url: https://devin.ai/pricing/
+  accessed: "2026-04-24"
+  pull_quote: "Core (Pro) — $20/month, pay-as-you-go at $2.25 per Agent Compute Unit. Max — $200/month. Teams — $80/month per seat with 250 ACUs at $2.00 each. Enterprise — custom."
+
+cognition-400m-techcrunch-2025:
+  title: "Cognition AI defies turbulence with a $400M raise at $10.2B valuation"
+  author: "TechCrunch"
+  url: https://techcrunch.com/2025/09/08/cognition-ai-defies-turbulence-with-a-400m-raise-at-10-2b-valuation/
+  accessed: "2026-04-24"
+  pull_quote: "Cognition closed a $400M funding round led by Founders Fund at a $10.2B valuation in September 2025. ARR grew from ~$1M (Sep 2024) to ~$73M (June 2025)."
+
+v0-pricing-vercel-2025:
+  title: "Updated v0 pricing"
+  author: "Vercel"
+  url: https://vercel.com/blog/updated-v0-pricing
+  accessed: "2026-04-24"
+  pull_quote: "v0 shifted to token-based credit metering on May 13, 2025. Premium includes $20 in credits monthly. Free tier includes $5 in credits monthly."
+
+v0-model-pricing-2026:
+  title: "vercel/v0 1.5 md API Pricing"
+  author: "PricePerToken.com"
+  url: https://pricepertoken.com/pricing-page/model/vercel-v0-1-5-md
+  accessed: "2026-04-24"
+  pull_quote: "vercel/v0-1.5-md: $3.00 per million input tokens, $15.00 per million output tokens. Vercel's proprietary UI-generation model priced at Claude Sonnet retail."

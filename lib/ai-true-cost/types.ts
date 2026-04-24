@@ -1,5 +1,5 @@
 /** Tier classification for AI products */
-export type Tier = 'free' | 'paid-consumer' | 'education';
+export type Tier = 'free' | 'paid-consumer' | 'education' | 'developer-tools';
 
 /** Keys for the four cost components beyond the price paid */
 export type ComponentKey =

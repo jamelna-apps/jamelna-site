@@ -1,0 +1,64 @@
+id: v0-pro
+name: v0 Premium
+vendor: Vercel
+tier: developer-tools
+price_paid_usd: 20.00
+price_unit: monthly
+wraps: claude-pro
+
+assumed_usage:
+  queries_per_month: 500
+  avg_input_tokens: 1500
+  avg_output_tokens: 1500
+  primary_model: v0-1-5-md-plus-claude-openai
+
+cost_components:
+  compute:
+    value_usd: 15.75
+    basis: >
+      500 UI generations × 3,000 tokens = 1.5M tokens/mo. UI-gen 50/50
+      input/output (lots of JSX/CSS output): 0.75M in + 0.75M out. Vercel's
+      v0-1.5-md priced at $3/$15 (same as Claude Sonnet retail — likely a
+      Sonnet-derived fine-tune): 0.75 × $3 + 0.75 × $15 = $2.25 + $11.25 =
+      $13.50. Add ~$2.25 for direct Claude/OpenAI via Vercel AI Gateway =
+      $15.75/mo. This already exceeds the $20 subscription's included $20
+      credit allocation.
+    sources:
+      - v0-model-pricing-2026
+      - v0-pricing-vercel-2025
+
+  training_amortization:
+    value_usd: 0.30
+    basis: >
+      Vercel fine-tunes base models; most training cost is already captured
+      upstream. Per-user share ≈ $0.30/mo.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.30
+    basis: >
+      500 generations × 0.34 Wh × multiplier 3 (longer outputs for UI code)
+      ≈ 0.5 kWh/mo × $0.15 = $0.075 energy. Water proportional ≈ $0.25.
+      Total $0.30.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+
+  investor_subsidy:
+    value_usd: 5.00
+    basis: >
+      Vercel is profitable overall (core Next.js hosting business). v0
+      operates as a loss-leader for their platform ecosystem. Vercel does
+      not separately disclose v0 P&L. Treatment similar to Gemini —
+      cross-subsidized by the parent company's main business. Estimated
+      net loss per $20 Premium subscriber: ~$5/mo (compute $15.75 + infra
+      + RLHF fine-tuning amortization ≈ $25-30 true cost on $20 price).
+      The May 2025 pricing switch from flat-fee to token-metered credits
+      suggests the prior flat tier was losing more money. Underlying
+      Anthropic/OpenAI subsidy stacks via the wraps linkage.
+    sources:
+      - v0-pricing-vercel-2025
+      - v0-model-pricing-2026
+
+last_verified: "2026-04-24"
