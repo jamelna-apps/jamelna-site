@@ -229,6 +229,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI True Cost — featured experiment */}
+      <section className="py-24 lg:py-32 bg-canvas-deep border-y border-canvas-border">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="reveal-fade">
+            <div className="inline-block text-xs uppercase tracking-widest text-orange-400 font-semibold mb-3">
+              New · Tech Sovereignty
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+              The True Cost of AI
+            </h2>
+            <p className="text-xl text-text-secondary max-w-3xl mb-6 leading-relaxed">
+              Your <strong className="text-white">$240/year</strong> ChatGPT Plus habit would actually cost
+              {' '}<strong className="text-orange-300">$732/year</strong> without investor subsidies.
+              Cursor Pro? <strong className="text-orange-300">$78/month of Anthropic compute alone</strong> on a
+              $20 subscription. See what 19 AI tools really cost — every number cited.
+            </p>
+            <Link
+              href={`/${locale}/tech-sovereignty/ai-true-cost`}
+              className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-black font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              See the true cost calculator
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Photography Teaser */}
       <PhotoTeaser />
 
