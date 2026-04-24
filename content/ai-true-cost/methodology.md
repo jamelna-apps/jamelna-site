@@ -40,7 +40,8 @@ The retail API cost of the queries you send per month, using each vendor's publi
 |---|---|---|
 | OpenAI GPT-4o | $2.50 | $10.00 |
 | OpenAI GPT-4o-mini | $0.15 | $0.60 |
-| OpenAI o1 | $15.00 | $60.00 |
+| OpenAI o1 (+ o1 Pro mode) | $15.00 | $60.00 |
+| Claude Opus 4.1 | $15.00 | $75.00 |
 | Claude Sonnet 4.5 | $3.00 | $15.00 |
 | Claude Haiku 4.5 | $1.00 | $5.00 |
 | Gemini 2.5 Pro | $1.25 | $10.00 |
