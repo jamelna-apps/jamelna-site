@@ -41,62 +41,61 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
   const stacked = wrappedBreakdown ? stackWrapper(breakdown, wrappedBreakdown) : undefined;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Breakdown card */}
-      <div className="bg-canvas-raised border border-canvas-border rounded-xl p-6">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-text-muted mb-6 font-mono">
-          {product.name.toUpperCase()} — MONTHLY TRUE COST
-        </h2>
+      <div className="bg-canvas-raised border border-canvas-border rounded-2xl p-8 md:p-10">
+        <div className="mb-8">
+          <div className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
+            Monthly true cost
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-white">
+            {product.name}
+          </h2>
+        </div>
 
-        <table className="w-full font-mono text-sm">
+        <table className="w-full text-base">
           <tbody>
             {/* You pay row */}
             <tr className="border-b border-canvas-border">
-              <td className="py-2 text-text-secondary w-3/4">You pay</td>
-              <td className="py-2 text-right text-white font-medium">
+              <td className="py-4 text-text-secondary">You pay</td>
+              <td className="py-4 text-right text-white font-mono font-medium">
                 {usd(breakdown.price_paid_usd)}
               </td>
             </tr>
 
-            {/* Separator */}
-            <tr>
-              <td colSpan={2} className="py-1">
-                <div className="h-px bg-canvas-border" />
-              </td>
-            </tr>
-
             {/* Four cost component rows */}
-            {COMPONENT_KEYS.map((key) => {
+            {COMPONENT_KEYS.map((key, idx) => {
               const comp = product.cost_components[key];
               const value = breakdown[`${key}_usd` as keyof typeof breakdown] as number;
               const citedSources = comp?.sources ? resolveSources(comp.sources, sources) : [];
+              const isLast = idx === COMPONENT_KEYS.length - 1;
 
               return (
-                <tr key={key} className="border-b border-canvas-border/50">
-                  <td className="py-2 text-text-secondary">
-                    <span className="mr-2">{COMPONENT_LABELS[key]}</span>
-                    {citedSources.map(({ id, source }) => (
-                      <Citation key={id} source={source} />
-                    ))}
+                <tr
+                  key={key}
+                  className={isLast ? '' : 'border-b border-canvas-border/60'}
+                >
+                  <td className="py-4 text-text-secondary">
+                    <div className="flex items-center flex-wrap gap-2">
+                      <span>{COMPONENT_LABELS[key]}</span>
+                      <div className="inline-flex gap-1">
+                        {citedSources.map(({ id, source }) => (
+                          <Citation key={id} source={source} />
+                        ))}
+                      </div>
+                    </div>
                   </td>
-                  <td className="py-2 text-right text-text-secondary">
+                  <td className="py-4 text-right text-text-secondary font-mono">
                     {usd(value)}
                   </td>
                 </tr>
               );
             })}
 
-            {/* Separator */}
-            <tr>
-              <td colSpan={2} className="py-1">
-                <div className="h-px bg-orange-500/30" />
-              </td>
-            </tr>
-
             {/* True cost row */}
-            <tr>
-              <td className="py-2 font-bold text-white">True cost</td>
-              <td className="py-2 text-right font-bold text-orange-300 text-base">
+            <tr className="border-t-2 border-orange-500/40">
+              <td className="pt-6 font-bold text-white text-lg">True cost</td>
+              <td className="pt-6 text-right font-bold text-orange-300 text-2xl font-mono">
                 {usd(breakdown.true_cost_usd)}
               </td>
             </tr>
@@ -106,17 +105,17 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
 
       {/* Subsidy callout */}
       {breakdown.subsidy_usd > 0 && (
-        <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-5">
-          <p className="text-sm font-semibold text-orange-200 mb-1">
+        <div className="bg-orange-500/10 border border-orange-500/30 rounded-2xl p-7 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-widest text-orange-300 mb-3">
             You are being subsidized
           </p>
-          <p className="text-text-secondary text-sm">
+          <p className="text-text-primary text-lg leading-relaxed">
             Someone else covers{' '}
-            <span className="text-orange-300 font-mono font-semibold">
+            <span className="text-orange-300 font-mono font-bold">
               {usd(breakdown.subsidy_usd)}/month
             </span>{' '}
             of your costs — a{' '}
-            <span className="text-orange-300 font-mono font-semibold">
+            <span className="text-orange-300 font-mono font-bold">
               {breakdown.subsidy_multiple.toFixed(1)}×
             </span>{' '}
             subsidy on what you pay.
@@ -129,26 +128,26 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
 
       {/* Double-subsidy stack */}
       {stacked && wrapped && wrappedBreakdown && (
-        <div className="bg-canvas-raised border border-orange-500/20 rounded-xl p-5">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-orange-400 mb-3">
+        <div className="bg-canvas-raised border border-orange-500/30 rounded-2xl p-7 md:p-8">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-orange-400 mb-4">
             Double-subsidy stack
           </h3>
-          <p className="text-text-secondary text-sm mb-4">
+          <p className="text-text-secondary text-base leading-relaxed mb-6">
             {product.name} is built on top of {wrapped.name}. You&apos;re receiving subsidies
             from two layers simultaneously.
           </p>
 
-          <div className="space-y-2 font-mono text-sm">
-            <div className="flex justify-between">
+          <div className="space-y-3 font-mono text-base">
+            <div className="flex justify-between py-2">
               <span className="text-text-muted">{product.name} subsidy</span>
               <span className="text-text-secondary">{usd(breakdown.subsidy_usd)}/mo</span>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between py-2">
               <span className="text-text-muted">{wrapped.name} subsidy</span>
               <span className="text-text-secondary">{usd(wrappedBreakdown.subsidy_usd)}/mo</span>
             </div>
-            <div className="h-px bg-orange-500/20 my-1" />
-            <div className="flex justify-between font-bold">
+            <div className="h-px bg-orange-500/30 my-2" />
+            <div className="flex justify-between py-2 text-lg font-bold">
               <span className="text-orange-300">Combined subsidy</span>
               <span className="text-orange-300">{usd(stacked.subsidy_usd)}/mo</span>
             </div>

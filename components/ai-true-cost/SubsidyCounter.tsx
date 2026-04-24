@@ -39,18 +39,19 @@ export function SubsidyCounter({ annualSubsidyUsd }: SubsidyCounterProps) {
   });
 
   return (
-    <div className="bg-canvas-raised border border-orange-500/30 rounded-xl px-6 py-5 inline-block">
-      <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
+    <div className="bg-canvas-raised border border-orange-500/30 rounded-2xl px-8 py-7 md:px-10 md:py-8 max-w-2xl">
+      <p className="text-sm font-semibold uppercase tracking-widest text-text-muted mb-4">
         {t('counterLabel')}
       </p>
       <p
         aria-live="polite"
         aria-atomic="true"
-        className="font-mono text-3xl font-bold text-orange-300 tabular-nums tracking-tight"
+        className="font-mono text-4xl md:text-6xl font-bold text-orange-300 tabular-nums tracking-tight leading-none mb-4"
       >
-        ${formatted} <span className="text-orange-500 text-xl">▲</span>
+        ${formatted}
+        <span className="text-orange-500/70 text-2xl md:text-3xl ml-2">▲</span>
       </p>
-      <p className="text-xs text-text-muted mt-2">
+      <p className="text-sm text-text-muted leading-relaxed">
         Based on industry annual losses.{' '}
         <Link
           href={`/${locale}/ai-true-cost/methodology`}

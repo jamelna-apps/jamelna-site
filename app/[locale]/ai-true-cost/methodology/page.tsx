@@ -117,27 +117,29 @@ export default function MethodologyPage() {
             className="
               prose prose-invert prose-orange max-w-none
               prose-headings:scroll-mt-24
-              prose-h2:text-3xl prose-h2:font-bold prose-h2:text-white
-              prose-h2:mt-20 prose-h2:mb-6 prose-h2:pb-3
+              prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:font-bold prose-h2:text-white
+              prose-h2:mt-24 prose-h2:mb-8 prose-h2:pb-4
               prose-h2:border-b prose-h2:border-canvas-border
               prose-h2:first:mt-0
-              prose-h3:text-xl prose-h3:font-semibold prose-h3:text-white
-              prose-h3:mt-12 prose-h3:mb-3
-              prose-p:text-base prose-p:leading-relaxed prose-p:text-text-secondary
-              prose-li:text-text-secondary prose-li:leading-relaxed
+              prose-h3:text-xl md:prose-h3:text-2xl prose-h3:font-semibold prose-h3:text-white
+              prose-h3:mt-16 prose-h3:mb-5
+              prose-p:text-lg prose-p:leading-[1.8] prose-p:text-text-secondary prose-p:my-6
+              prose-li:text-lg prose-li:text-text-secondary prose-li:leading-[1.75] prose-li:my-2
+              prose-ul:my-6 prose-ol:my-6
               prose-strong:text-white
               prose-a:text-orange-300 prose-a:no-underline hover:prose-a:text-orange-200 hover:prose-a:underline
-              prose-hr:border-canvas-border prose-hr:my-16
-              prose-table:text-sm prose-table:my-8
+              prose-hr:border-canvas-border prose-hr:my-20
+              prose-table:text-base prose-table:my-10
               prose-table:border prose-table:border-canvas-border prose-table:rounded-lg prose-table:overflow-hidden
               prose-th:bg-canvas-raised prose-th:text-white prose-th:font-semibold
-              prose-th:px-4 prose-th:py-3 prose-th:text-left
-              prose-td:px-4 prose-td:py-3 prose-td:border-t prose-td:border-canvas-border
+              prose-th:px-5 prose-th:py-4 prose-th:text-left
+              prose-td:px-5 prose-td:py-4 prose-td:border-t prose-td:border-canvas-border
+              prose-td:text-text-secondary
               prose-blockquote:not-italic prose-blockquote:border-l-4 prose-blockquote:border-orange-500
               prose-blockquote:bg-orange-500/5 prose-blockquote:rounded-r-lg
-              prose-blockquote:px-5 prose-blockquote:py-1
-              prose-blockquote:text-text-primary
-              prose-blockquote:font-normal
+              prose-blockquote:px-7 prose-blockquote:py-4 prose-blockquote:my-8
+              prose-blockquote:text-text-primary prose-blockquote:text-lg
+              prose-blockquote:font-normal prose-blockquote:leading-[1.75]
               prose-code:bg-canvas-raised prose-code:text-orange-200 prose-code:px-1.5 prose-code:py-0.5
               prose-code:rounded prose-code:text-sm prose-code:font-mono
               prose-code:before:content-none prose-code:after:content-none
