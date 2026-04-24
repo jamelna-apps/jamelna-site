@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import type { Metadata } from 'next';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 import { MethodologyViewTracker } from '@/components/ai-true-cost/MethodologyViewTracker';
 
@@ -32,8 +33,8 @@ export default function MethodologyPage() {
         </nav>
 
         {fileExists ? (
-          <article className="prose prose-invert prose-orange max-w-none">
-            <ReactMarkdown>{fs.readFileSync(filePath, 'utf-8')}</ReactMarkdown>
+          <article className="prose prose-invert prose-orange max-w-none prose-table:text-sm prose-table:border prose-table:border-canvas-border prose-th:bg-canvas-raised prose-th:px-3 prose-th:py-2 prose-th:text-left prose-th:text-white prose-td:px-3 prose-td:py-2 prose-td:border-t prose-td:border-canvas-border prose-blockquote:border-l-orange-500 prose-blockquote:bg-canvas-raised/50 prose-blockquote:not-italic prose-blockquote:px-4 prose-blockquote:py-2 prose-blockquote:rounded-r prose-headings:scroll-mt-20 prose-h2:mt-12 prose-h3:mt-8 prose-hr:border-canvas-border">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{fs.readFileSync(filePath, 'utf-8')}</ReactMarkdown>
           </article>
         ) : (
           <div>

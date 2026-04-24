@@ -62,10 +62,10 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
           onMouseEnter={openCard}
           onMouseLeave={scheduleClose}
           className="
-            absolute z-50 left-0 top-full mt-1
-            w-72 max-w-[90vw]
-            bg-canvas-raised border border-canvas-border rounded-lg
-            p-4 shadow-xl shadow-black/40
+            absolute z-50 left-0 top-full mt-2
+            w-80 max-w-[92vw]
+            bg-[#0a0908] border-2 border-orange-500/50 rounded-lg
+            p-5 shadow-2xl shadow-black/90
             text-left
           "
         >
@@ -74,13 +74,13 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
             href={source.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-sm font-semibold text-orange-300 hover:text-orange-200 leading-snug mb-1 underline underline-offset-2"
+            className="block text-base font-semibold text-orange-300 hover:text-orange-200 leading-snug mb-2 underline underline-offset-2"
           >
             {source.title}
           </a>
 
           {/* Author + date */}
-          <p className="text-xs text-text-muted mb-2">
+          <p className="text-sm text-neutral-300 mb-3">
             {source.author}
             {source.accessed && (
               <> &middot; Accessed {source.accessed}</>
@@ -89,8 +89,8 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
 
           {/* Pull quote */}
           {source.pull_quote && (
-            <blockquote className="border-l-2 border-orange-500/40 pl-3 mt-2">
-              <p className="text-xs italic text-text-secondary leading-relaxed">
+            <blockquote className="border-l-2 border-orange-500/60 pl-4 mt-3">
+              <p className="text-sm italic text-white leading-relaxed">
                 &ldquo;{source.pull_quote}&rdquo;
               </p>
             </blockquote>
