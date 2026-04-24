@@ -1,0 +1,65 @@
+id: gemini-advanced
+name: Gemini Advanced
+vendor: Google
+tier: paid-consumer
+price_paid_usd: 19.99
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 600
+  avg_input_tokens: 840
+  avg_output_tokens: 360
+  primary_model: gemini-2-5-pro
+
+cost_components:
+  compute:
+    value_usd: 2.79
+    basis: >
+      Gemini 2.5 Pro retail (<200k context): $1.25/1M input + $10/1M output.
+      At 600 queries × (840 in + 360 out) = 504k input + 216k output = $0.63 +
+      $2.16 = $2.79/mo. Gemini Pro output pricing is cheaper than Claude Sonnet
+      4.5 ($15/M) — Google runs on in-house TPUs without Nvidia margin.
+    sources:
+      - gemini-api-pricing-2026
+
+  training_amortization:
+    value_usd: 0.25
+    basis: >
+      Gemini 2.5 Pro training is in Epoch AI's frontier cluster ($100-500M per
+      run). Amortized across a very large paying denominator (Google One AI
+      Premium had 'millions' of subs in May 2025, likely tens of millions by
+      2026) plus the free Gemini app's 750M MAU, per-user training share is
+      trivial. Range $0.10-$0.50/mo.
+    sources:
+      - epoch-frontier-training-cost-2024
+      - 9to5google-googleone-150m-2025
+
+  energy_water:
+    value_usd: 0.10
+    basis: >
+      Same per-query figures. 600 queries × 0.34 Wh × $0.15/kWh ≈ $0.031/mo.
+      Google operates more energy-efficient datacenters on average (per
+      Google's own environmental disclosures), so this is likely an
+      over-estimate.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+
+  investor_subsidy:
+    value_usd: 0.00
+    basis: >
+      N/A — same treatment as Gemini Free. Google AI is cross-subsidized by
+      profitable Cloud ($5.3B Q4 2025 op income) and Search advertising. Alphabet
+      does not disclose a Gemini-specific P&L or per-user loss figure. Google
+      One AI Premium ("millions" of paid Advanced subs, 150M Google One total
+      in May 2025) generates meaningful revenue that further offsets AI costs.
+      $0 here is an honest representation that no quotable cash loss exists
+      attributable to Gemini Advanced users — NOT a claim that providing the
+      service is costless. Google spent ~$91B on AI infrastructure capex in 2025
+      (guided $175-185B for 2026); a critic could argue some share of that
+      represents a subsidy, but no public methodology attributes it per-user.
+    sources:
+      - alphabet-cloud-profitable-q4-2025
+      - 9to5google-googleone-150m-2025
+
+last_verified: "2026-04-23"

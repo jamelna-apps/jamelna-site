@@ -158,3 +158,101 @@ khanmigo-4dollar-prior-cnbc-2024:
   url: https://www.cnbc.com/2024/05/21/microsoft-khan-academy-launch-free-ai-assistant-for-all-us-teachers.html
   accessed: "2026-04-23"
   pull_quote: "Khanmigo previously cost teachers $4 per month; Microsoft's Azure donation removes that cost entirely for U.S. educators."
+
+techcrunch-claude-subs-2026:
+  title: "Anthropic's Claude popularity with paying consumers is skyrocketing"
+  author: "TechCrunch"
+  url: https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/
+  accessed: "2026-04-23"
+  pull_quote: "Claude paid subscriptions have more than doubled this year. The majority of new subscribers are at its lowest tier, 'Pro' users ($20 per month, compared with $100 or $200 per month). Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million)."
+
+sacra-anthropic-revenue-mix-2026:
+  title: "Anthropic revenue, valuation & funding"
+  author: "Sacra"
+  url: https://sacra.com/c/anthropic/
+  accessed: "2026-04-23"
+  pull_quote: "Approximately 70-75% of Anthropic's revenue comes from pay-per-token API calls. Subscriptions account for 10-15% of total revenue. Anthropic expects to burn approximately $3B in cash in 2025, down from $5.6B the prior year."
+
+9to5google-googleone-150m-2025:
+  title: "Google One now has 150 million subscribers, 'millions' with AI Premium"
+  author: "9to5Google"
+  url: https://9to5google.com/2025/05/15/google-one-150-million/
+  accessed: "2026-04-23"
+  pull_quote: "Google One now has 150 million subscribers, a 50% increase from February of last year. The rapid increase in subscribers can be credited to the introduction of the Google One AI Premium Plan, which has attracted 'millions' of new subscriptions."
+
+techcrunch-cursor-9b-2025:
+  title: "Cursor's Anysphere nabs $9.9B valuation, soars past $500M ARR"
+  author: "TechCrunch"
+  url: https://techcrunch.com/2025/06/05/cursors-anysphere-nabs-9-9b-valuation-soars-past-500m-arr/
+  accessed: "2026-04-23"
+  pull_quote: "$900 million raised at $9.9 billion valuation. Anysphere has surpassed $500 million in ARR with approximately 1 million paying customers; ARR is doubling roughly every two months."
+
+cnbc-cursor-29b-2025:
+  title: "AI startup Cursor raises $2.3 billion funding round at $29.3 billion valuation"
+  author: "CNBC"
+  url: https://www.cnbc.com/2025/11/13/cursor-ai-startup-funding-round-valuation.html
+  accessed: "2026-04-23"
+  pull_quote: "Anysphere closed a $2.3 billion Series D funding round co-led by Accel and Coatue Management, valuing the company at $29.3 billion, with participation from strategic partners Google and Nvidia."
+
+wheresyoured-costs-2025:
+  title: "This Is How Much Anthropic and Cursor Spend On Amazon Web Services"
+  author: "Ed Zitron (citing Newcomer + Bloomberg financial reporting)"
+  url: https://www.wheresyoured.at/costs/
+  accessed: "2026-04-23"
+  pull_quote: "Cursor's AWS bill climbed from $1.5M/mo in January 2025 to $12.9M/mo by September 2025, totaling ~$70M through Q3 2025. Cursor is spending 100% of its revenue on Anthropic."
+
+csu-openai-contract-2025-laist:
+  title: "Inside Cal State's big $17 million bet on ChatGPT for all"
+  author: "LAist"
+  url: https://laist.com/news/education/chatgpt-california-state-university-csu-ai-deal
+  accessed: "2026-04-23"
+  pull_quote: "Cal State signed an 18-month, $16.9 million contract with OpenAI to provide ChatGPT Edu to all 533,000 students, faculty, and staff across 23 campuses — equivalent to roughly $2.11 per user per month. OpenAI described it as the single largest deployment of ChatGPT anywhere in the world."
+
+csu-openai-edsource-2025:
+  title: "Cal State unveils artificial intelligence tools for students"
+  author: "EdSource"
+  url: https://edsource.org/2025/cal-state-unveils-artificial-intelligence-tools-for-students/726205
+  accessed: "2026-04-23"
+  pull_quote: "Cal State's $16.9 million deal with OpenAI covers 23 campuses and roughly 533,000 students and staff, giving every member of the system a ChatGPT Edu account."
+
+openai-help-edu-models-2026:
+  title: "ChatGPT Enterprise and Edu — Models & Limits"
+  author: "OpenAI Help Center"
+  url: https://help.openai.com/en/articles/11165333-chatgpt-enterprise-and-edu-models-limits
+  accessed: "2026-04-23"
+  pull_quote: "ChatGPT Edu seats include access to GPT-4o, GPT-4.1, o1, o3, and o4-mini on the same schedule as ChatGPT Enterprise."
+
+magicschool-pricing-page:
+  title: "MagicSchool Pricing"
+  author: "MagicSchool"
+  url: https://www.magicschool.ai/pricing
+  accessed: "2026-04-23"
+  pull_quote: "Plus tier $12.99/month billed monthly, or $8.33/month billed annually ($99.96/yr). Enterprise pricing is custom."
+
+magicschool-claude-case-study:
+  title: "MagicSchool transforms K-12 education for 3M teachers"
+  author: "Anthropic (customer case study)"
+  url: https://claude.com/customers/magicschool
+  accessed: "2026-04-23"
+  pull_quote: "MagicSchool has transitioned many of its tools from OpenAI models to Claude, citing lower hallucination rates and better alignment with educator use cases. Over 7 million educators and 13,000+ schools use the platform."
+
+schoolai-openai-case-study:
+  title: "SchoolAI builds an AI platform that empowers teachers"
+  author: "OpenAI (customer case study)"
+  url: https://openai.com/index/schoolai/
+  accessed: "2026-04-23"
+  pull_quote: "SchoolAI's Sidekick AI tutor is built on GPT-4o and GPT-4.1. Dot's conversational interface uses GPT-4o; deeper reasoning uses GPT-4.1."
+
+schoolai-pricing-aggregators-2026:
+  title: "SchoolAI Pro pricing (third-party aggregator data)"
+  author: "AIChief, UseThisAI, SourceForge (aggregated; SchoolAI does not publish consumer pricing)"
+  url: https://aichief.com/schoolai/
+  accessed: "2026-04-23"
+  pull_quote: "SchoolAI Pro listed by multiple third-party review aggregators at $14.99/month. SchoolAI's own pricing page does not disclose a dollar figure for Pro; education plans listed as 'starting at $50/month' for districts."
+
+onlineeducation-chatgpt-edu-2024:
+  title: "What is OpenAI's New ChatGPT Edu for Universities?"
+  author: "OnlineEducation.com"
+  url: https://www.onlineeducation.com/features/chatgpt-edu-for-universities
+  accessed: "2026-04-23"
+  pull_quote: "ChatGPT Edu pricing is not publicly disclosed. Reddit-sourced reports from procurement officers put the range around $12/user/month with a 10,000-user minimum; confirmed in principle but not from an OpenAI primary source."

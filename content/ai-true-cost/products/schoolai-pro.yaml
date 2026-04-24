@@ -1,0 +1,66 @@
+id: schoolai-pro
+name: SchoolAI Pro
+vendor: SchoolAI
+tier: education
+price_paid_usd: 14.99
+price_unit: monthly
+wraps: chatgpt-plus
+
+assumed_usage:
+  queries_per_month: 400
+  avg_input_tokens: 840
+  avg_output_tokens: 360
+  primary_model: gpt-4o-and-4-1-via-openai-api
+
+cost_components:
+  compute:
+    value_usd: 2.17
+    basis: >
+      SchoolAI Pro priced at $14.99/mo per third-party aggregators (SchoolAI's
+      own pricing page does not publish a dollar figure — opacity is itself a
+      source fact). District "Education plan starting at $50/month" is likely
+      per-institution or per-seat minimum, unclear.
+
+      Compute: 480k tokens/mo (400 queries × 1200). 100% OpenAI stack per
+      OpenAI customer case study (Sidekick on GPT-4o + GPT-4.1; Dot on GPT-4o).
+      Assume 60% GPT-4o / 40% GPT-4.1 weighted pricing (~$2.50/M in, ~$9.20/M
+      out blended): 336k × $2.50/M + 144k × $9.20/M = $0.84 + $1.33 = $2.17/mo.
+
+      Note: `wraps: chatgpt-plus` is a simplification; SchoolAI buys API
+      tokens directly, not ChatGPT Plus subscriptions.
+    sources:
+      - openai-api-pricing-2026
+      - schoolai-openai-case-study
+      - schoolai-pricing-aggregators-2026
+
+  training_amortization:
+    value_usd: 0.08
+    basis: >
+      Pass-through from upstream OpenAI training. Same methodology as
+      MagicSchool Plus.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.11
+    basis: >
+      400 queries × 1.5 Wh × $0.12/kWh ≈ $0.072 + water $0.036. Same
+      methodology as MagicSchool Plus.
+    sources:
+      - luccioni-power-hungry-2024
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 3.00
+    basis: >
+      SchoolAI-layer VC burn (upstream OpenAI subsidy stacks via wraps).
+      $32M total raised ($25M Series A April 2025, $7M prior). Smaller than
+      MagicSchool (1M classrooms vs 7M educators). Single-vendor OpenAI
+      dependency (vs MagicSchool's multi-provider) creates higher correlation
+      risk. Estimated wrapper burn ~$8-12M/yr ÷ ~50k paying Pro/district
+      seats ≈ $2-4/mo midpoint. Cited $3/mo. LOW confidence — SchoolAI's
+      public disclosures are thinner than MagicSchool's.
+    sources:
+      - schoolai-series-a-2025
+
+last_verified: "2026-04-23"

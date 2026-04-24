@@ -1,0 +1,73 @@
+id: cursor-pro
+name: Cursor Pro
+vendor: Anysphere (Cursor)
+tier: paid-consumer
+price_paid_usd: 20.00
+price_unit: monthly
+wraps: claude-pro
+
+assumed_usage:
+  queries_per_month: 5000
+  avg_input_tokens: 1200
+  avg_output_tokens: 800
+  primary_model: claude-sonnet-4-5-via-anthropic-api
+
+cost_components:
+  compute:
+    value_usd: 78.00
+    basis: >
+      The headline number. Cursor routes heavy developer queries through the
+      Anthropic API (primarily Claude Sonnet 4.5). Power-user assumption: 5,000
+      queries × 2,000 tokens (1200 input + 800 output) = 10M tokens/mo. Split
+      60% input / 40% output (code context + generation are both large). At
+      Anthropic retail ($3/1M in, $15/1M out): 6M × $3 + 4M × $15 = $18 + $60 =
+      $78/mo. This exceeds the $20 subscription by 3.9×. Cursor has volume
+      discounts and prompt caching that shave some of this — but the directional
+      point is clear: at retail compute rates alone Cursor Pro is deeply
+      unprofitable. This assumption represents a power-dev user; typical usage
+      is lower. Some heavy Cursor users hit 50M+ tokens/month.
+    sources:
+      - anthropic-api-pricing-2026
+      - wheresyoured-costs-2025
+
+  training_amortization:
+    value_usd: 1.00
+    basis: >
+      Pass-through from underlying Anthropic model. Cursor does not train.
+      Higher than Claude Pro's training line ($0.25) because Cursor users
+      consume roughly 14× the tokens of a chat user, so their share of
+      Anthropic's training amortization scales with usage.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 1.50
+    basis: >
+      Scales linearly with tokens. 14× the Claude Pro chat figure →
+      ~$1.00-$2.10/mo. Midpoint $1.50. Still small in $ terms; the real
+      environmental argument here is aggregate energy/water load across
+      millions of heavy-use Cursor sessions.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+
+  investor_subsidy:
+    value_usd: 2.00
+    basis: >
+      Cursor-layer VC burn ONLY (underlying Anthropic burn stacks via wraps
+      linkage below). Derivation: Cursor raised ~$3.3-5.3B total across
+      Series B (2024, $105M), Series C ($900M at $9.9B Jun 2025), Series D
+      ($2.3B at $29.3B Nov 2025), and a possible 2026 round. ARR scaled
+      $100M → $500M → $1B → $2B by Feb 2026 with ~1M paying subscribers.
+      Cursor reportedly spends "100% of revenue on Anthropic" (Zitron citing
+      Newcomer). AWS bill alone jumped from $1.5M/mo to $12.9M/mo during
+      2025 = ~$5.80/user/mo in AWS COGS. Plausible net Cursor-layer burn
+      per paying user: $0-3/mo (depending on whether the 2025 pricing
+      reset to credits put Cursor at contribution-margin-positive). Cited
+      at $2/mo midpoint. Anthropic-layer subsidy stacks via wraps.
+    sources:
+      - techcrunch-cursor-9b-2025
+      - cnbc-cursor-29b-2025
+      - wheresyoured-costs-2025
+
+last_verified: "2026-04-23"

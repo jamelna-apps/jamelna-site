@@ -1,0 +1,69 @@
+id: magicschool-plus
+name: MagicSchool Plus
+vendor: MagicSchool
+tier: education
+price_paid_usd: 8.33
+price_unit: monthly
+wraps: chatgpt-plus
+
+assumed_usage:
+  queries_per_month: 400
+  avg_input_tokens: 840
+  avg_output_tokens: 360
+  primary_model: multi-model-anthropic-openai-google
+
+cost_components:
+  compute:
+    value_usd: 2.90
+    basis: >
+      MagicSchool Plus is $12.99/mo monthly or $8.33/mo billed annually
+      ($99.96/yr). Annual rate cited as the "true" price most teachers pay.
+      Compute at 480k tokens/mo (400 queries × 1200): assume current 70%
+      Anthropic + 30% OpenAI mix (MagicSchool transitioned many tools to
+      Claude per Anthropic case study). 336k input + 144k output. Anthropic
+      Sonnet portion: 235k × $3/M + 101k × $15/M = $2.22. OpenAI portion:
+      101k × $2.50/M + 43k × $10/M = $0.68. Weighted ≈ $2.90/mo.
+
+      Note: `wraps: chatgpt-plus` is a SIMPLIFICATION for the UI's wrapper
+      stacking. MagicSchool actually buys API tokens from multiple vendors,
+      not ChatGPT Plus subscriptions — the true underlying product is the
+      aggregated OpenAI+Anthropic API layer. Methodology page explains
+      this approximation.
+    sources:
+      - magicschool-pricing-page
+      - anthropic-api-pricing-2026
+      - openai-api-pricing-2026
+      - magicschool-claude-case-study
+
+  training_amortization:
+    value_usd: 0.08
+    basis: >
+      Pass-through from upstream OpenAI/Anthropic model training. Cited
+      flat $0.08/mo per teacher at reduced classroom-scheduled usage.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.11
+    basis: >
+      400 queries × 1.5 Wh × $0.12/kWh ≈ $0.072 energy + $0.036 water.
+      Classroom-scheduled use is lower volume than personal chat so
+      externality is smaller than ChatGPT Plus.
+    sources:
+      - luccioni-power-hungry-2024
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 3.50
+    basis: >
+      MagicSchool-layer VC burn (NOT including upstream OpenAI/Anthropic
+      subsidy; that stacks via wraps linkage). Series B $45M Feb 2025;
+      total $65.3M raised. Estimated paid base ~200k Plus subs + district
+      enterprise revenue (~$44.9M ARR per aggregator). At Series-B scale
+      with this paid base, wrapper burn per paying user ≈ $3.50/mo midpoint.
+      Enterprise tier is likely near break-even per seat; Plus individual
+      is more subsidized as a CAC/loss-leader for district sales.
+    sources:
+      - magicschool-series-b-2025
+
+last_verified: "2026-04-23"

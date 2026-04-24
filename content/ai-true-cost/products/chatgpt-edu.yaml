@@ -1,0 +1,70 @@
+id: chatgpt-edu
+name: ChatGPT Edu
+vendor: OpenAI
+tier: education
+price_paid_usd: 12.00
+price_unit: monthly
+
+assumed_usage:
+  queries_per_month: 600
+  avg_input_tokens: 840
+  avg_output_tokens: 360
+  primary_model: gpt-4o-and-o1-mix
+
+cost_components:
+  compute:
+    value_usd: 6.84
+    basis: >
+      80% GPT-4o + 20% o1 usage mix (Edu seats get both). Total 720k tokens/mo.
+      GPT-4o portion (576k): 403k input × $2.50/M + 173k output × $10/M = $1.01
+      + $1.73 = $2.74. o1 portion (144k): 101k input × $15/M + 43k output ×
+      $60/M = $1.51 + $2.59 = $4.10. Weighted total ≈ $6.84/mo per seat.
+      Retail pricing used.
+
+      Notable: Cal State's $16.9M 18-month contract covering 533k seats =
+      $2.11/seat/month. At that price OpenAI LOSES money on compute alone
+      ($6.84 > $2.11) before any training or investor-loss attribution. CSU is
+      the most extreme public "sell below cost to capture the market" anchor
+      in the AI edtech space.
+    sources:
+      - openai-api-pricing-2026
+      - openai-help-edu-models-2026
+      - csu-openai-contract-2025-laist
+
+  training_amortization:
+    value_usd: 0.12
+    basis: >
+      Pass-through from underlying OpenAI models. Edu seats consume both GPT-4o
+      and o1 class models; blended training amortization across OpenAI's
+      paying base ≈ $0.10-0.15/mo. Cited $0.12.
+    sources:
+      - epoch-frontier-training-cost-2024
+
+  energy_water:
+    value_usd: 0.16
+    basis: >
+      Higher than ChatGPT Plus by ~5× because Edu seats use o1 which is a larger
+      / more-compute-hungry reasoning model. 600 queries × ~1.5 Wh avg (vs Plus
+      0.34) = 0.9 kWh/mo × $0.15 ≈ $0.135 energy. Water sub-penny. Midpoint
+      $0.16/mo.
+    sources:
+      - luccioni-power-hungry-2024
+      - altman-gentle-singularity-2025
+      - li-making-ai-thirsty-2023
+
+  investor_subsidy:
+    value_usd: 37.88
+    basis: >
+      OpenAI FY2024 loss $5B ÷ 11M paying subs ÷ 12 = $37.88/paying-user/mo.
+      Applied at the same rate as ChatGPT Plus since the loss attribution is
+      corporate-wide, not tier-specific. Edu's deeper volume discounts (see
+      price and compute notes) mean OpenAI's effective per-Edu-seat loss is
+      arguably HIGHER than per-Plus-seat. Price paid is $12/seat/mo as the
+      typical institutional mid-case; CSU's $2.11 floor is the outlier.
+    sources:
+      - openai-loss-2024-fortune
+      - theinformation-11m-chatgpt-subs-2024
+      - csu-openai-contract-2025-laist
+      - onlineeducation-chatgpt-edu-2024
+
+last_verified: "2026-04-23"

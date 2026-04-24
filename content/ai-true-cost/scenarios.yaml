@@ -27,7 +27,25 @@ groups:
       - id: chatgpt-plus
         name: ChatGPT Plus
         tier: paid-consumer
+      - id: claude-pro
+        name: Claude Pro
+        tier: paid-consumer
+      - id: gemini-advanced
+        name: Gemini Advanced
+        tier: paid-consumer
+      - id: cursor-pro
+        name: Cursor Pro
+        tier: paid-consumer
 
   - tier: education
     label: "Education / Institutional"
-    scenarios: []
+    scenarios:
+      - id: chatgpt-edu
+        name: ChatGPT Edu
+        tier: education
+      - id: magicschool-plus
+        name: MagicSchool Plus
+        tier: education
+      - id: schoolai-pro
+        name: SchoolAI Pro
+        tier: education
