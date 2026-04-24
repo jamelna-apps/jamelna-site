@@ -115,31 +115,33 @@ export default function MethodologyPage() {
           {/* Content */}
           <article
             className="
-              prose prose-invert prose-orange max-w-none
+              prose prose-invert prose-orange
+              max-w-[68ch]
+              [&_table]:max-w-none [&_pre]:max-w-none
               prose-headings:scroll-mt-24
               prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:font-bold prose-h2:text-white
-              prose-h2:mt-24 prose-h2:mb-8 prose-h2:pb-4
+              prose-h2:mt-28 prose-h2:mb-10 prose-h2:pb-5
               prose-h2:border-b prose-h2:border-canvas-border
               prose-h2:first:mt-0
               prose-h3:text-xl md:prose-h3:text-2xl prose-h3:font-semibold prose-h3:text-white
-              prose-h3:mt-16 prose-h3:mb-5
-              prose-p:text-lg prose-p:leading-[1.8] prose-p:text-text-secondary prose-p:my-6
-              prose-li:text-lg prose-li:text-text-secondary prose-li:leading-[1.75] prose-li:my-2
-              prose-ul:my-6 prose-ol:my-6
-              prose-strong:text-white
-              prose-a:text-orange-300 prose-a:no-underline hover:prose-a:text-orange-200 hover:prose-a:underline
-              prose-hr:border-canvas-border prose-hr:my-20
-              prose-table:text-base prose-table:my-10
+              prose-h3:mt-20 prose-h3:mb-6
+              prose-p:text-lg prose-p:leading-[1.9] prose-p:text-text-secondary prose-p:my-8
+              prose-li:text-lg prose-li:text-text-secondary prose-li:leading-[1.8] prose-li:my-4
+              prose-ul:my-8 prose-ol:my-8 prose-ul:pl-2 prose-ol:pl-2
+              prose-strong:text-white prose-strong:font-semibold
+              prose-a:text-orange-300 prose-a:no-underline prose-a:underline-offset-4 hover:prose-a:text-orange-200 hover:prose-a:underline
+              prose-hr:border-canvas-border prose-hr:my-24
+              prose-table:text-base prose-table:my-12
               prose-table:border prose-table:border-canvas-border prose-table:rounded-lg prose-table:overflow-hidden
               prose-th:bg-canvas-raised prose-th:text-white prose-th:font-semibold
-              prose-th:px-5 prose-th:py-4 prose-th:text-left
-              prose-td:px-5 prose-td:py-4 prose-td:border-t prose-td:border-canvas-border
-              prose-td:text-text-secondary
+              prose-th:px-6 prose-th:py-5 prose-th:text-left prose-th:leading-snug
+              prose-td:px-6 prose-td:py-5 prose-td:border-t prose-td:border-canvas-border
+              prose-td:text-text-secondary prose-td:leading-relaxed
               prose-blockquote:not-italic prose-blockquote:border-l-4 prose-blockquote:border-orange-500
               prose-blockquote:bg-orange-500/5 prose-blockquote:rounded-r-lg
-              prose-blockquote:px-7 prose-blockquote:py-4 prose-blockquote:my-8
+              prose-blockquote:px-8 prose-blockquote:py-6 prose-blockquote:my-10
               prose-blockquote:text-text-primary prose-blockquote:text-lg
-              prose-blockquote:font-normal prose-blockquote:leading-[1.75]
+              prose-blockquote:font-normal prose-blockquote:leading-[1.85]
               prose-code:bg-canvas-raised prose-code:text-orange-200 prose-code:px-1.5 prose-code:py-0.5
               prose-code:rounded prose-code:text-sm prose-code:font-mono
               prose-code:before:content-none prose-code:after:content-none
