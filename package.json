@@ -17,6 +17,7 @@
     "@sanity/image-url": "^2.0.2",
     "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.87.1",
+    "@tailwindcss/typography": "^0.5.19",
     "@vercel/og": "^0.11.1",
     "firebase": "^12.6.0",
     "firebase-admin": "^13.6.0",
