@@ -2055,5 +2055,332 @@
       "phaseBNotice": "Methodology is being drafted (Phase B) [TODO-TRANSLATE]",
       "phaseBDetail": "The full methodology essay — covering how we calculate each of the five cost components, our assumptions, sensitivity analysis, and honest caveats — will be published alongside the first real cost numbers in Phase B. [TODO-TRANSLATE]"
     }
+  },
+  "anchorAndSteer": {
+    "hero": {
+      "kicker": "A Human-Centered Design Framework for AI in Education [TODO-TRANSLATE]",
+      "title": "Anchor & STEER [TODO-TRANSLATE]",
+      "tagline": "AI in education should extend a teacher's reach, judgment, and pedagogical intent — never bypass it. [TODO-TRANSLATE]",
+      "byline": "By Joe Alexander Meléndez-Naharro [TODO-TRANSLATE]",
+      "credits": "Developed from experience leading CS education programs, coaching teachers, and building AI-powered tools for K-12 classrooms. [TODO-TRANSLATE]"
+    },
+    "corePrinciple": {
+      "label": "Core Principle [TODO-TRANSLATE]",
+      "body": "AI in education should extend a teacher's reach, judgment, and pedagogical intent — never bypass it. Every AI action should be traceable back to a teacher's goals, preferences, or explicit approval. [TODO-TRANSLATE]",
+      "nonNegotiablesLabel": "Two Non-Negotiables [TODO-TRANSLATE]",
+      "humanInLoopTitle": "The human stays in the loop. [TODO-TRANSLATE]",
+      "humanInLoopBody": "The teacher is the operational designer of learning. Their judgment is the thing the system is built to support, not replace. [TODO-TRANSLATE]",
+      "aiHonestTitle": "The AI stays honest about being a tool. [TODO-TRANSLATE]",
+      "aiHonestBody": "No human personas, no fake feelings, no claimed stakes. An AI pretending to be human is bypassing the teacher's judgment in a different costume. [TODO-TRANSLATE]"
+    },
+    "problem": {
+      "title": "The Problem [TODO-TRANSLATE]",
+      "p1Pre": "Most AI education tools start with the wrong question:  [TODO-TRANSLATE]",
+      "p1Wrong": "What can AI do? [TODO-TRANSLATE]",
+      "p1Mid": " instead of  [TODO-TRANSLATE]",
+      "p1Right": "Where are teachers actually struggling, and what would genuinely help? [TODO-TRANSLATE]",
+      "p2": "I've watched this play out firsthand. Tools that demo beautifully but collect dust in real classrooms. Tools that automate the wrong things. Tools that make decisions about students without the teacher understanding why, or worse, without the teacher even knowing. [TODO-TRANSLATE]",
+      "p3": "The problem isn't the technology. It's the starting point. When you begin with the AI's capabilities instead of the teacher's reality, you build impressive software that nobody trusts enough to use. [TODO-TRANSLATE]",
+      "p4Pre": "Anchor & STEER is the alternative I developed. A design framework rooted in design thinking that starts where human-centered design starts: with empathy. Observe teachers. Understand their real constraints. Define the problem from their perspective.  [TODO-TRANSLATE]",
+      "p4Then": "Then [TODO-TRANSLATE]",
+      "p4Post": " build. [TODO-TRANSLATE]"
+    },
+    "designThinking": {
+      "title": "Rooted in Design Thinking [TODO-TRANSLATE]",
+      "intro": "Each layer of the framework maps to a design thinking mindset — grounding AI-teacher collaboration in human-centered principles. [TODO-TRANSLATE]",
+      "anchorCardTitle": "ANCHOR = Empathize + Define [TODO-TRANSLATE]",
+      "anchorCardSubtitle": "Before you build, understand [TODO-TRANSLATE]",
+      "empathizeLabel": "Empathize [TODO-TRANSLATE]",
+      "empathizeText": "Shadow teachers. Observe their workarounds. Understand what 150 essays on a Sunday night actually feels like. [TODO-TRANSLATE]",
+      "defineLabel": "Define [TODO-TRANSLATE]",
+      "defineText": "Frame the problem from the teacher's perspective. \"How might we help teachers give timely, personalized writing feedback without sacrificing their weekends?\" [TODO-TRANSLATE]",
+      "steerCardTitle": "STEER = Ideate + Prototype + Test [TODO-TRANSLATE]",
+      "steerCardSubtitle": "Design the collaboration, then keep learning [TODO-TRANSLATE]",
+      "ideateLabel": "Ideate [TODO-TRANSLATE]",
+      "ideateText": "Explore how the AI and teacher might share mental models, set guardrails, and handle moments the AI should step back. [TODO-TRANSLATE]",
+      "prototypeLabel": "Prototype [TODO-TRANSLATE]",
+      "prototypeText": "Design escalation pathways and delegation arcs. Test them with real teachers before scaling. [TODO-TRANSLATE]",
+      "testLabel": "Test [TODO-TRANSLATE]",
+      "testText": "Build reflective feedback loops so every interaction teaches the system and the teacher. Iterate continuously. [TODO-TRANSLATE]",
+      "keyDifferenceLabel": "The key difference: [TODO-TRANSLATE]",
+      "keyDifferenceBody": "Design thinking typically empathizes with end users. Anchor & STEER asks you to empathize with teachers — because in AI EdTech, the teacher should be understood as the designer of the learning experience, not treated as a passive intermediary. [TODO-TRANSLATE]",
+      "keyDifferenceEndUsers": "end users [TODO-TRANSLATE]",
+      "keyDifferenceTeachers": "teachers [TODO-TRANSLATE]"
+    },
+    "failureModes": {
+      "title": "Common Failure Modes [TODO-TRANSLATE]",
+      "items": [
+        {
+          "type": "failure",
+          "mode": "Half-Built Frameworks [TODO-TRANSLATE]",
+          "description": "Steer without anchoring builds impressive AI that nobody adopts — sophisticated technology that doesn't fit actual practice. Anchor without steering understands the problem deeply but designs clumsy collaboration teachers can't work with day-to-day. Either way, the framework is half-built. [TODO-TRANSLATE]"
+        },
+        {
+          "type": "success",
+          "mode": "Anchor & STEER Together [TODO-TRANSLATE]",
+          "description": "Grounds every feature in real teacher needs, then designs thoughtful human-AI collaboration across five dimensions. The teacher is amplified — more capable, more informed, more effective — without becoming dependent. [TODO-TRANSLATE]"
+        }
+      ]
+    },
+    "frameworkStructure": {
+      "title": "Framework Structure [TODO-TRANSLATE]",
+      "designLayer": "Design Layer [TODO-TRANSLATE]",
+      "foundationLabel": "Anchor — Foundation Layer [TODO-TRANSLATE]",
+      "foundationBody": "Ground every AI feature in real teacher needs. Does it enhance a professional skill? Does it solve a felt problem? Does it build capability, not dependency? [TODO-TRANSLATE]"
+    },
+    "anchorSection": {
+      "title": "ANCHOR: Ground Before You Build [TODO-TRANSLATE]",
+      "intro1": "Before applying STEER, every AI feature must pass a threshold test. Think of it in nautical terms — a ship that only steers drifts without purpose. You anchor to understand your position, then steer with intention. [TODO-TRANSLATE]",
+      "intro2": "Anchoring is evidence work. You don't fix a position from one sighting — you triangulate. Teachers are at the helm, but the chart is drawn from many readings: teachers, school and district admins, students, parents, and the community around the school. The teacher acts on what we learn — but they're not the only voice we listen to. [TODO-TRANSLATE]",
+      "questionsTitle": "The Four Anchor Questions [TODO-TRANSLATE]",
+      "questions": [
+        {
+          "number": "01",
+          "question": "What specific professional skill or judgment does this enhance? [TODO-TRANSLATE]",
+          "detail": "Not \"helps teachers\" generically, but something concrete — like noticing which students are falling behind before it shows up on a test, differentiating instruction across 30 kids with different needs, or giving timely feedback on writing when you have 150 essays to grade. These are things teachers already want to do and often know how to do but can't at scale or speed. [TODO-TRANSLATE]"
+        },
+        {
+          "number": "02",
+          "question": "Whose workaround are we replacing, and why is it inadequate? [TODO-TRANSLATE]",
+          "detail": "Teachers are already solving most of these problems with sticky notes, spreadsheets, and gut instinct built over years. So are admins, parents, and students — each of them has a workaround, and each one is partial. Your AI tool needs to be meaningfully better than the workarounds it replaces, not just fancier. Surface all of them before designing. [TODO-TRANSLATE]"
+        },
+        {
+          "number": "03",
+          "question": "Does using this tool make the teacher more skilled over time, or more dependent? [TODO-TRANSLATE]",
+          "detail": "A well-designed AI tool should be like a great teaching coach — it helps you see things you wouldn't have seen, and over time you internalize some of those patterns. A poorly designed one creates learned helplessness. The teacher stops knowing their students because the dashboard knows them instead. [TODO-TRANSLATE]"
+        },
+        {
+          "number": "04",
+          "question": "Whose evidence have we actually heard from? [TODO-TRANSLATE]",
+          "detail": "Anchoring isn't a teacher survey — it's evidence triangulated across the people the tool actually touches. Have we heard from the students whose work it shapes? The parents who'll see its outputs? The admins whose decisions it informs? The community whose values shape the school? If teachers are the only voice in the room, the evidence base is too narrow to anchor on. [TODO-TRANSLATE]"
+        }
+      ],
+      "criticalDistinctionTitle": "The Critical Distinction [TODO-TRANSLATE]",
+      "criticalDistinction1Pre": "An AI that says  [TODO-TRANSLATE]",
+      "criticalDistinction1Quote": "Student X is struggling with fractions [TODO-TRANSLATE]",
+      "criticalDistinction1Verb": "replaces [TODO-TRANSLATE]",
+      "criticalDistinction1Post": " teacher judgment. It hands the teacher a conclusion. [TODO-TRANSLATE]",
+      "criticalDistinction2Pre": "An AI that says  [TODO-TRANSLATE]",
+      "criticalDistinction2Quote": "Student X keeps treating numerators and denominators as separate numbers. Here's a diagnostic task that could confirm whether it's a conceptual gap or a notation habit [TODO-TRANSLATE]",
+      "criticalDistinction2Verb": "sharpens [TODO-TRANSLATE]",
+      "criticalDistinction2Post": " it. The teacher still makes the call. [TODO-TRANSLATE]"
+    },
+    "steerSection": {
+      "title": "STEER: Five Dimensions of Teacher-AI Collaboration [TODO-TRANSLATE]",
+      "intro": "Once value is anchored, design the interaction. Each dimension shapes a different facet of how the AI and teacher work together. [TODO-TRANSLATE]",
+      "exampleLabel": "Example [TODO-TRANSLATE]",
+      "seeInPracticeLabel": "See It in Practice [TODO-TRANSLATE]",
+      "coachPlatformLabel": "— Coach Platform"
+    },
+    "dimensions": [
+      {
+        "letter": "S",
+        "title": "Shared Mental Model [TODO-TRANSLATE]",
+        "subtitle": "Transparency that teaches, not just tells [TODO-TRANSLATE]",
+        "designThinking": "Empathize [TODO-TRANSLATE]",
+        "description": "The AI and the teacher need to be working from the same understanding of what's happening. That means the AI doesn't just give recommendations. It shows its reasoning, its confidence level, and the data behind its conclusions. Teachers can inspect that reasoning, question it, and correct it when the AI gets something wrong. And the AI's representation of itself is part of that shared model — it should be honest about what it is, not just what it sees. A tool that misrepresents its own nature can't be a reliable partner in shared sense-making. [TODO-TRANSLATE]",
+        "keyInsight": "Transparency isn't just about being explainable. It's about being educative. The teacher should learn something from reading the AI's reasoning, not just verify that it ran. [TODO-TRANSLATE]",
+        "example": "\"I flagged these 7 students because their quiz responses suggest difficulty with fraction comparison. But I'm only moderately confident. Three of them may have been affected by the timed format rather than a conceptual gap. You know your students better than I do.\" [TODO-TRANSLATE]",
+        "coachExample": "In the Coach platform at coach.jamelna.com, the AI chat uses retrieval-augmented generation with visible citations. When a coach asks \"How should I approach a teacher who's resistant to feedback?\", the response includes bracketed references to specific knowledge base articles. The coach can click through to verify the source, question the recommendation, or explore further. The AI never presents its answers as authoritative conclusions. [TODO-TRANSLATE]"
+      },
+      {
+        "letter": "T",
+        "title": "Teacher-Set Guardrails [TODO-TRANSLATE]",
+        "subtitle": "The policy layer teachers author themselves [TODO-TRANSLATE]",
+        "designThinking": "Define [TODO-TRANSLATE]",
+        "description": "Teachers define the boundaries the AI operates within. What can it do without asking? When should it intervene? What materials can it draw from? These aren't developer settings buried in a config file. They're pedagogical choices that belong to the teacher, and the act of articulating them is itself a form of professional development. [TODO-TRANSLATE]",
+        "keyInsight": "Constraints aren't limitations. When a teacher defines their guardrails, they're clarifying their own teaching philosophy. The AI's operating parameters become a mirror for the teacher's pedagogical intent. [TODO-TRANSLATE]",
+        "example": "A teacher who believes in productive struggle configures: \"Wait at least 3 attempts before offering scaffolding. Never give direct answers. Let students choose their own problem difficulty.\" Those aren't restrictions on the AI. They're a teaching philosophy made executable. [TODO-TRANSLATE]",
+        "coachExample": "Coach platform users set their own coaching context: which teachers they work with, which schools, which grade levels and subjects. The AI chat scopes its responses to that context rather than giving generic advice. When a coach asks about differentiation strategies, the system draws from their specific teacher relationships and observation history, not a one-size-fits-all knowledge base. [TODO-TRANSLATE]"
+      },
+      {
+        "letter": "E",
+        "title": "Escalation Pathways [TODO-TRANSLATE]",
+        "subtitle": "Knowing when to hand off, not just hand over [TODO-TRANSLATE]",
+        "designThinking": "Prototype [TODO-TRANSLATE]",
+        "description": "Not everything should be automated. Some moments require a human. The framework needs clearly designed points where the AI steps back and surfaces something to the teacher: when it's uncertain, when there's an emotional or social signal it can't interpret, or when a decision requires pedagogical judgment that no model should be making alone. [TODO-TRANSLATE]",
+        "keyInsight": "The design challenge is friction. Escalations need to be lightweight enough that they actually happen, but visible enough that teachers feel informed rather than ambushed. [TODO-TRANSLATE]",
+        "example": "\"Maria has submitted and deleted her response three times in the last five minutes. Her error pattern doesn't match a clear misconception. This might be a confidence issue rather than a knowledge gap. Routing to you for a check-in.\" [TODO-TRANSLATE]",
+        "coachExample": "The Coach platform's observation workflow is built around this principle. When a coach documents a classroom visit, the system captures notes, tags, and action items, but it never generates evaluative conclusions about the teacher. It surfaces patterns across visits and lets the coach decide what they mean. The judgment stays with the human who was in the room. [TODO-TRANSLATE]"
+      },
+      {
+        "letter": "E",
+        "title": "Evolving Delegation [TODO-TRANSLATE]",
+        "subtitle": "Trust that deepens and stays reversible [TODO-TRANSLATE]",
+        "designThinking": "Iterate [TODO-TRANSLATE]",
+        "description": "The relationship between a teacher and an AI tool should change over time. Start with high oversight and low autonomy. As the teacher validates the AI's judgment, they can gradually expand its scope. But delegation must always be reversible. A teacher who pulls back control isn't failing. They're exercising exactly the kind of professional judgment the system should support. [TODO-TRANSLATE]",
+        "keyInsight": "Never automate something the teacher still needs practice doing. Delegation should free up time for higher-order work, not erode the skills that make the teacher effective. [TODO-TRANSLATE]",
+        "example": "September: the AI suggests differentiated homework and the teacher reviews every recommendation. November: the teacher has approved 90% of suggestions, and the system asks, \"Would you like me to assign these automatically and flag only the exceptions?\" January: the teacher pulls back to full review for two weeks after a curriculum shift. The system adapts without friction. [TODO-TRANSLATE]",
+        "coachExample": "The Coach platform tracks coaching relationships through stages. Early in a coaching cycle, the platform provides more structured prompts and suggested goals. As the coaching relationship matures, the coach has more flexibility to customize plans, skip scaffolding, and rely on their own judgment. The tool supports growth without creating a ceiling. [TODO-TRANSLATE]"
+      },
+      {
+        "letter": "R",
+        "title": "Reflective Feedback Loops [TODO-TRANSLATE]",
+        "subtitle": "Learning that flows both ways [TODO-TRANSLATE]",
+        "designThinking": "Test [TODO-TRANSLATE]",
+        "description": "Every interaction between teacher and AI is a learning opportunity in both directions. The system surfaces patterns the teacher might not have seen. The teacher's overrides and corrections teach the system what it got wrong. Weekly digests, structured reflection prompts, and annotation moments turn routine use into professional growth. [TODO-TRANSLATE]",
+        "keyInsight": "The question shifts from \"Did the AI get it right?\" to \"What did I learn from this interaction?\" Every dismissed suggestion, every override, every moment of surprise is data flowing both ways. [TODO-TRANSLATE]",
+        "example": "\"Students who attempted the optional challenge problem before the quiz scored 23% higher on related questions. 14 of your 28 students attempted it. Would you like to explore making it a recommended warm-up?\" [TODO-TRANSLATE]",
+        "coachExample": "The Coach platform's progress tracking for CT competencies works this way. The system aggregates student progress data across a teacher's classes, but the coach interprets the trends during their next conversation. A competency score dropping isn't an automated alert that triggers intervention. It's a data point the coach brings to a reflective discussion with the teacher about what might be happening and what to try next. [TODO-TRANSLATE]"
+      }
+    ],
+    "cycle": {
+      "title": "The Continuous Cycle [TODO-TRANSLATE]",
+      "intro": "The framework isn't linear — it's cyclical. You anchor before a new feature. You re-anchor when user research reveals you've drifted from real needs. [TODO-TRANSLATE]",
+      "anchor": "ANCHOR",
+      "anchorDesc": "Identify real needs [TODO-TRANSLATE]",
+      "steer": "STEER",
+      "steerDesc": "Design & build [TODO-TRANSLATE]",
+      "reanchor": "RE-ANCHOR",
+      "reanchorDesc": "Validate & refine [TODO-TRANSLATE]",
+      "footer": "Resist the urge to STEER before you've anchored. This may be the most important discipline the framework asks of product teams — because it can be tempting to skip straight to \"look what the AI can do\" without first grounding in \"but should it.\" [TODO-TRANSLATE]"
+    },
+    "designImplications": {
+      "title": "Design Implications [TODO-TRANSLATE]",
+      "items": [
+        {
+          "title": "On Authenticity [TODO-TRANSLATE]",
+          "text": "AI is a tool, not a colleague. It doesn't have stakes, feelings, or a position on the work. Designing it to act like it does isn't warmth — it's misdirection. Honest about what it sees. Honest about what it is. Both, or neither counts. [TODO-TRANSLATE]"
+        },
+        {
+          "title": "On Transparency [TODO-TRANSLATE]",
+          "text": "The interface shouldn't bury the AI's logic. One of the fastest ways to lose teacher trust is a black box. Teachers should be able to understand why in under 10 seconds. [TODO-TRANSLATE]"
+        },
+        {
+          "title": "On Defaults [TODO-TRANSLATE]",
+          "text": "Defaults are pedagogical choices. If the AI defaults to giving hints quickly, that embodies a philosophy. Defaults must be intentional, documented, and overridable. [TODO-TRANSLATE]"
+        },
+        {
+          "title": "On Equity [TODO-TRANSLATE]",
+          "text": "Teacher-in-the-loop means the AI doesn't silently create different learning experiences for different students without the teacher knowing. Differential treatment should always be visible and endorsed. [TODO-TRANSLATE]"
+        },
+        {
+          "title": "On Time [TODO-TRANSLATE]",
+          "text": "One of the biggest constraints teachers face. If oversight burden is too high, teachers may end up rubber-stamping everything or disengaging — both of which defeat the purpose. [TODO-TRANSLATE]"
+        }
+      ]
+    },
+    "anchorCard": {
+      "title": "The Anchor Card [TODO-TRANSLATE]",
+      "intro": "A feature validation template. Fill this in before writing a single line of code. [TODO-TRANSLATE]",
+      "fields": [
+        {
+          "field": "How Might We... [TODO-TRANSLATE]",
+          "prompt": "Frame the teacher's need as a \"How might we...\" question. [TODO-TRANSLATE]"
+        },
+        {
+          "field": "Teacher Skill Enhanced [TODO-TRANSLATE]",
+          "prompt": "What specific professional skill does this feature enhance — not replace? [TODO-TRANSLATE]"
+        },
+        {
+          "field": "Observed Workaround [TODO-TRANSLATE]",
+          "prompt": "How are teachers solving this now? Why is their current approach inadequate? [TODO-TRANSLATE]"
+        },
+        {
+          "field": "Stakeholder Evidence [TODO-TRANSLATE]",
+          "prompt": "Whose voices have we heard beyond teachers? What do students, parents, admins, or the wider community say about whether this matters and whether the proposed solution fits? [TODO-TRANSLATE]"
+        },
+        {
+          "field": "Evidence of Demand [TODO-TRANSLATE]",
+          "prompt": "What evidence do we have that teachers actually want this solved? [TODO-TRANSLATE]"
+        },
+        {
+          "field": "Time & Cognitive Load Reclaimed [TODO-TRANSLATE]",
+          "prompt": "What time or mental energy does this free up, and what does the teacher reinvest it in? [TODO-TRANSLATE]"
+        },
+        {
+          "field": "Capability After Removal [TODO-TRANSLATE]",
+          "prompt": "Is the teacher more capable without the tool after having used it? Does the design build skill or dependency? [TODO-TRANSLATE]"
+        }
+      ]
+    },
+    "researchConnections": {
+      "title": "Research Connections [TODO-TRANSLATE]",
+      "items": [
+        {
+          "key": "designThinking",
+          "dimension": "Design Thinking [TODO-TRANSLATE]",
+          "sources": [
+            "Stanford d.school — Empathize, Define, Ideate, Prototype, Test [TODO-TRANSLATE]",
+            "Tim Brown (IDEO) — Human-centered design as innovation method [TODO-TRANSLATE]",
+            "Participatory Design — Users as co-designers, not just informants [TODO-TRANSLATE]"
+          ]
+        },
+        {
+          "key": "anchor",
+          "dimension": "Anchor [TODO-TRANSLATE]",
+          "sources": [
+            "TPACK Framework — Technological Pedagogical Content Knowledge [TODO-TRANSLATE]",
+            "Design Thinking: Empathize & Define — Grounding in observed needs [TODO-TRANSLATE]"
+          ]
+        },
+        {
+          "key": "S",
+          "dimension": "S — Shared Mental Model [TODO-TRANSLATE]",
+          "sources": [
+            "Endsley's Situational Awareness — Shared mental models and team cognition [TODO-TRANSLATE]",
+            "Empathy Maps — Structured tools for understanding perspectives [TODO-TRANSLATE]"
+          ]
+        },
+        {
+          "key": "T",
+          "dimension": "T — Guardrails [TODO-TRANSLATE]",
+          "sources": [
+            "Dillenbourg's Orchestration — Teacher coordination of complex activity [TODO-TRANSLATE]",
+            "Kapur's Productive Failure — When struggle is beneficial [TODO-TRANSLATE]"
+          ]
+        },
+        {
+          "key": "E",
+          "dimension": "E — Escalation & Delegation [TODO-TRANSLATE]",
+          "sources": [
+            "Lee & See on Trust in Automation [TODO-TRANSLATE]",
+            "Shneiderman's Human-Centered AI (HCAI) [TODO-TRANSLATE]",
+            "Sheridan & Verplank's Levels of Automation [TODO-TRANSLATE]"
+          ]
+        },
+        {
+          "key": "R",
+          "dimension": "R — Reflective Loops [TODO-TRANSLATE]",
+          "sources": [
+            "Schön's Reflective Practice [TODO-TRANSLATE]",
+            "LATUX Workflow — Learning analytics with teacher validation [TODO-TRANSLATE]"
+          ]
+        }
+      ]
+    },
+    "howToUse": {
+      "title": "How to Use This Framework [TODO-TRANSLATE]",
+      "items": [
+        {
+          "title": "As an audit lens [TODO-TRANSLATE]",
+          "description": "Does your existing product have each of these layers? Where are the gaps? [TODO-TRANSLATE]"
+        },
+        {
+          "title": "As a design checklist [TODO-TRANSLATE]",
+          "description": "For new features, start with the Anchor Card. If it passes, use STEER to shape interaction design. [TODO-TRANSLATE]"
+        },
+        {
+          "title": "As a maturity model [TODO-TRANSLATE]",
+          "description": "Where is your product on the delegation spectrum? Are your escalation pathways well-designed or ad hoc? [TODO-TRANSLATE]"
+        },
+        {
+          "title": "As a critique shorthand [TODO-TRANSLATE]",
+          "description": "\"Have we anchored this?\" becomes a way of asking whether a feature is grounded in real teacher value. [TODO-TRANSLATE]"
+        },
+        {
+          "title": "As a procurement framework [TODO-TRANSLATE]",
+          "description": "Schools evaluating AI tools can use Anchor & STEER to ask the right questions of vendors. [TODO-TRANSLATE]"
+        },
+        {
+          "title": "As a research scaffold [TODO-TRANSLATE]",
+          "description": "Map user research interviews to each dimension separately for structured insight gathering. [TODO-TRANSLATE]"
+        }
+      ]
+    },
+    "footer": {
+      "share": "This framework is shared for the benefit of the education community. If you use or adapt it, please attribute accordingly. [TODO-TRANSLATE]",
+      "attribution": "Anchor & STEER — By Joe Alexander Meléndez-Naharro [TODO-TRANSLATE]"
+    }
   }
 }
