@@ -469,6 +469,8 @@
         "impact": "Toolkit landesweit als Schlüsselressource für Informatik-Coaches übernommen. Beeinflussung der Coaching-Praxis in mehreren Bundesstaaten und Bezirken.",
         "skills": "Ressourcenentwicklung, Framework-Design, Berufsbildungsdesign, Mehrstaatliche Partnerschaften",
         "website": "https://tech.cornell.edu/k12-initiative/cs-coaching-toolkit/",
+        "images": ["/images/screenshots/cs-coaching/card-deck.jpg"],
+        "imageCredit": "Image courtesy of Cornell Tech. [TODO-TRANSLATE]",
         "category": "professional"
       }
     ],

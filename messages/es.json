@@ -469,6 +469,8 @@
         "impact": "El Toolkit fue adoptado a nivel nacional como recurso clave para coaches de informática. Influyó en la práctica de coaching en múltiples estados y distritos.",
         "skills": "Desarrollo de recursos, diseño de marcos, diseño de desarrollo profesional, asociaciones multi-estatales",
         "website": "https://tech.cornell.edu/k12-initiative/cs-coaching-toolkit/",
+        "images": ["/images/screenshots/cs-coaching/card-deck.jpg"],
+        "imageCredit": "Imagen cortesía de Cornell Tech.",
         "category": "professional"
       }
     ],

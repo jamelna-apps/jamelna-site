@@ -18,6 +18,7 @@ interface Project {
   impact: string;
   skills: string;
   images?: string[];
+  imageCredit?: string;
   website?: string;
   category: string;
 }

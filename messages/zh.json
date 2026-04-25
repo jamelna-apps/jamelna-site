@@ -469,6 +469,8 @@
         "impact": "工具包在全国范围内被采用为计算机科学辅导员的关键资源。影响了多个州和学区的辅导实践。",
         "skills": "资源开发、框架设计、专业发展设计、多州合作伙伴关系",
         "website": "https://tech.cornell.edu/k12-initiative/cs-coaching-toolkit/",
+        "images": ["/images/screenshots/cs-coaching/card-deck.jpg"],
+        "imageCredit": "Image courtesy of Cornell Tech. [TODO-TRANSLATE]",
         "category": "professional"
       }
     ],

@@ -457,6 +457,8 @@
         "impact": "Toolkit adopted nationally as key resource for CS coaches. Influenced coaching practice across multiple states and districts.",
         "skills": "Resource development, framework design, professional development design, multi-state partnerships",
         "website": "https://tech.cornell.edu/k12-initiative/cs-coaching-toolkit/",
+        "images": ["/images/screenshots/cs-coaching/card-deck.jpg"],
+        "imageCredit": "Image courtesy of Cornell Tech.",
         "category": "professional"
       }
     ],

@@ -15,6 +15,7 @@ interface ProjectCardProps {
   impact: string;
   skills: string;
   images?: string[];
+  imageCredit?: string;
   website?: string;
 }
 
@@ -29,6 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   impact,
   skills,
   images,
+  imageCredit,
   website,
 }) => {
   const t = useTranslations('work');
@@ -89,6 +91,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </div>
             ))}
           </div>
+          {imageCredit && (
+            <p className="mt-2 text-xs text-text-muted italic">{imageCredit}</p>
+          )}
         </div>
       )}
 
