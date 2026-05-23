@@ -57,7 +57,7 @@ function SectionHeader({ title, description }: { title: string; description: str
 
 // Desired order within each category (by title substring match)
 const professionalOrder = ['SceneCraft', 'SCRIPT', 'CS4All', 'CS Coaching'];
-const productsOrder = ['GYST', 'CoachDesk', 'CodeTale', 'SMARTIE'];
+const productsOrder = ['FamList', 'GYST', 'CoachDesk', 'CodeTale', 'SMARTIE'];
 const creativeOrder = ['ForEveryBomb', 'Earth', 'Spread'];
 
 function sortByPreference(projects: Project[], order: string[]): Project[] {

@@ -224,6 +224,88 @@ Keep recommendations practical and aligned with the district's stated constraint
 ${languageInstruction}`;
 }
 
+// ---------------------------------------------------------------------------
+// Grant-discovery prompts (/resources/grants)
+// ---------------------------------------------------------------------------
+
+export interface GrantRankingCandidate {
+  opportunityId: string;
+  source: 'grants_gov' | 'propublica' | 'donors_choose';
+  title: string;
+  agency: string;
+  description: string;
+  closeDate: string | null;
+  awardCeiling: number | null;
+  awardFloor: number | null;
+}
+
+export interface GrantRankingProfile {
+  orgType: string;
+  focusAreas: string[];
+  stateCode: string;
+  budgetRange: string;
+  projectSummary: string;
+}
+
+export const GRANTS_SYSTEM_PROMPT = `You are a US grant discovery assistant for educators, schools, and non-profit organizations. Your ONLY job is to rank and summarize the grant opportunities provided in the CANDIDATES list. You must NEVER invent, hallucinate, or reference opportunities that are not in the provided list.
+
+For each candidate, produce an entry with these fields:
+- opportunityId: exactly the id from the input
+- fitScore: integer 0-100 where 0 means poor fit and 100 means excellent fit
+- fitRationale: one or two plain-English sentences explaining the score (no marketing language)
+- eligibilityNotes: concrete eligibility observations (who can apply, caveats)
+- keyDeadline: the close date in ISO format if known, otherwise "No deadline listed"
+- redFlags: array of short strings for potential mismatches (budget gap, eligibility uncertainty, short timeline)
+
+Scoring weights (be honest — low scores are valuable):
+- Eligibility match: 40%
+- Focus-area alignment with the organization's project summary: 30%
+- Budget fit (award ceiling vs the organization's budget range): 20%
+- Deadline feasibility (time remaining from today): 10%
+
+Tone: plain, professional, neutral. Never use words like "recommended", "approved", "guaranteed", or "perfect fit". Use "AI-estimated match" framing if needed. Flag mismatches honestly rather than hiding them.
+
+Output format: a single JSON object in a fenced code block. No prose before or after the code block.
+\`\`\`json
+{ "results": [ /* one entry per candidate, preserving opportunityId */ ] }
+\`\`\``;
+
+export function buildGrantRankingPrompt(
+  profile: GrantRankingProfile,
+  candidates: GrantRankingCandidate[],
+): string {
+  const orgProfileBlock = [
+    `Organization type: ${profile.orgType}`,
+    `Focus areas: ${profile.focusAreas.join(', ')}`,
+    `US state: ${profile.stateCode}`,
+    `Budget range: ${profile.budgetRange}`,
+    `Project summary: ${profile.projectSummary}`,
+  ].join('\n');
+
+  const candidatesBlock = JSON.stringify(
+    candidates.map((c) => ({
+      opportunityId: c.opportunityId,
+      source: c.source,
+      title: c.title,
+      agency: c.agency,
+      closeDate: c.closeDate,
+      awardCeiling: c.awardCeiling,
+      awardFloor: c.awardFloor,
+      description: (c.description ?? '').slice(0, 1200),
+    })),
+    null,
+    2,
+  );
+
+  return `## ORGANIZATION PROFILE
+${orgProfileBlock}
+
+## CANDIDATES
+${candidatesBlock}
+
+Produce the ranked JSON output now. Return only the JSON object in a fenced code block.`;
+}
+
 export const SUGGESTED_PROMPTS = {
   en: [
     "What curricula would you recommend for our elementary grades?",

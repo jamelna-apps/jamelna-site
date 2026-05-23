@@ -197,6 +197,34 @@
     "skills": "技能",
     "projects": [
       {
+        "title": "FamList",
+        "role": "创始人兼开发者",
+        "organization": "独立项目",
+        "timeline": "2026年至今",
+        "challenge": "打造一款共享家庭储藏室应用，让家庭成员可以一起追踪家里有什么，共享一份按货架分类的购物清单，并获得 AI 晚餐建议，针对今晚吃饭的人调整，涵盖每位成员的过敏与饮食模式。",
+        "whatIDid": [
+          "基于 Expo 设计并开发了一款 React Native 应用，使用 Firebase Auth、Firestore 与 Storage",
+          "构建了以家庭为单位的数据模型，让多位成员共同管理同一个储藏室、清单与共享的食谱历史",
+          "通过 Gemini 实现小票扫描解析，一次操作同时更新储藏室和购物清单",
+          "为每位成员创建饮食偏好档案，并衍生出家庭交集，在推荐食谱时使用",
+          "编写了尊重每位成员过敏并优先使用临期食材的 AI 食谱建议",
+          "构建按货架分组的购物清单，库存不足时自动添加",
+          "2026 年发布到 App Store，包含免费版和每年 $9.99 的 Family 计划用于共享和 AI"
+        ],
+        "impact": "打造了一款家庭应用，取代了家庭用来协调饮食的电子表格、备忘录清单和群聊。FamList 将储藏室、采购和晚餐计划整合到一个共享界面中，尊重每位成员的饮食需求。已在 iOS 上线。",
+        "skills": "React Native, Expo, Firebase, Gemini AI 集成, 小票解析, 家庭维度数据建模, 饮食偏好档案, AI 食谱生成, App Store 发布",
+        "website": "https://famlist.net",
+        "images": [
+          "/images/screenshots/famlist/home.png",
+          "/images/screenshots/famlist/pantry.png",
+          "/images/screenshots/famlist/suggestions.png"
+        ],
+        "appStoreLinks": {
+          "ios": "https://apps.apple.com/us/app/famlist/id6766077549"
+        },
+        "category": "products"
+      },
+      {
         "title": "GYST (Get Your Style Together)",
         "role": "创始人兼开发者",
         "organization": "独立项目",
@@ -469,7 +497,9 @@
         "impact": "工具包在全国范围内被采用为计算机科学辅导员的关键资源。影响了多个州和学区的辅导实践。",
         "skills": "资源开发、框架设计、专业发展设计、多州合作伙伴关系",
         "website": "https://tech.cornell.edu/k12-initiative/cs-coaching-toolkit/",
-        "images": ["/images/screenshots/cs-coaching/card-deck.jpg"],
+        "images": [
+          "/images/screenshots/cs-coaching/card-deck.jpg"
+        ],
         "imageCredit": "Image courtesy of Cornell Tech. [TODO-TRANSLATE]",
         "category": "professional"
       }

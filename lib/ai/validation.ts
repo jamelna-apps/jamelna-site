@@ -284,6 +284,114 @@ export function validatePlanGeneration(
 }
 
 /**
+ * Validate grant search input (org profile for /resources/grants).
+ */
+const VALID_ORG_TYPES = [
+  'school_district',
+  'individual_school',
+  'nonprofit_501c3',
+  'nonprofit_other',
+  'individual_teacher',
+];
+const VALID_FOCUS_AREAS = [
+  'stem',
+  'cs',
+  'ai_emerging',
+  'cte',
+  'cyber',
+  'arts',
+  'literacy',
+  'health',
+  'workforce',
+  'early_childhood',
+  'special_ed',
+  'civics',
+  'environment',
+  'media',
+  'general',
+];
+const VALID_BUDGET_RANGES = ['lt_10k', '10k_50k', '50k_250k', '250k_1m', 'gt_1m'];
+const VALID_STATE_CODES = [
+  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
+  'KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
+  'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT',
+  'VA','WA','WV','WI','WY','DC','PR',
+];
+
+export interface GrantSearchInput {
+  orgType: string;
+  focusAreas: string[];
+  stateCode: string;
+  budgetRange: string;
+  projectSummary: string;
+  includeForecasted: boolean;
+}
+
+export function validateGrantSearch(input: unknown): ValidationResult<GrantSearchInput> {
+  const errors: ValidationError[] = [];
+  if (!input || typeof input !== 'object') {
+    return {
+      valid: false,
+      errors: [{ field: 'body', message: 'Request body is required' }],
+    };
+  }
+  const data = input as Record<string, unknown>;
+
+  const orgType = sanitizeString(data.orgType as string);
+  if (!VALID_ORG_TYPES.includes(orgType)) {
+    errors.push({ field: 'orgType', message: 'Invalid organization type' });
+  }
+  // Accept either focusAreas: string[] or legacy focusArea: string.
+  const rawFocus = Array.isArray(data.focusAreas)
+    ? data.focusAreas
+    : typeof data.focusArea === 'string'
+      ? [data.focusArea]
+      : [];
+  const focusAreas = Array.from(
+    new Set(
+      rawFocus
+        .filter((v): v is string => typeof v === 'string')
+        .map((v) => sanitizeString(v)),
+    ),
+  ).filter((v) => VALID_FOCUS_AREAS.includes(v));
+  if (focusAreas.length === 0) {
+    errors.push({ field: 'focusAreas', message: 'Select at least one focus area' });
+  } else if (focusAreas.length > 5) {
+    errors.push({ field: 'focusAreas', message: 'Pick up to 5 focus areas' });
+  }
+  const stateCode = sanitizeString(data.stateCode as string).toUpperCase();
+  if (!VALID_STATE_CODES.includes(stateCode)) {
+    errors.push({ field: 'stateCode', message: 'Invalid US state code' });
+  }
+  const budgetRange = sanitizeString(data.budgetRange as string);
+  if (!VALID_BUDGET_RANGES.includes(budgetRange)) {
+    errors.push({ field: 'budgetRange', message: 'Invalid budget range' });
+  }
+  const projectSummary = sanitizeString(data.projectSummary as string);
+  if (!projectSummary || projectSummary.length < 10) {
+    errors.push({
+      field: 'projectSummary',
+      message: 'Project summary is required (min 10 characters)',
+    });
+  } else if (projectSummary.length > 800) {
+    errors.push({
+      field: 'projectSummary',
+      message: 'Project summary is too long (max 800 characters)',
+    });
+  }
+
+  const includeForecasted = Boolean(data.includeForecasted);
+
+  if (errors.length > 0) {
+    return { valid: false, errors };
+  }
+  return {
+    valid: true,
+    data: { orgType, focusAreas, stateCode, budgetRange, projectSummary, includeForecasted },
+  };
+}
+
+/**
  * Create validation error response
  */
 export function createValidationErrorResponse(errors: ValidationError[]): Response {

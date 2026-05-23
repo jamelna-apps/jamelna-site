@@ -132,6 +132,22 @@ export const RateLimiters = {
       windowMs: 60000,
       keyPrefix: 'export',
     }),
+
+  /** Grant search: 5 requests per minute (Claude ranking is expensive) */
+  grantsSearch: (identifier: string) =>
+    checkRateLimit(identifier, {
+      limit: 5,
+      windowMs: 60000,
+      keyPrefix: 'grants-search',
+    }),
+
+  /** Grant detail: 30 requests per minute (cached, cheap) */
+  grantsDetail: (identifier: string) =>
+    checkRateLimit(identifier, {
+      limit: 30,
+      windowMs: 60000,
+      keyPrefix: 'grants-detail',
+    }),
 };
 
 /**

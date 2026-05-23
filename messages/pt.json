@@ -197,6 +197,34 @@
     "skills": "Competências",
     "projects": [
       {
+        "title": "FamList",
+        "role": "Fundador e Programador",
+        "organization": "Projeto Independente",
+        "timeline": "2026 - Presente",
+        "challenge": "Criar um app de despensa partilhada que permite às famílias acompanhar o que têm em casa, partilhar uma lista de compras organizada por corredor e receber sugestões de jantar com IA ajustadas a quem está a comer esta noite, incluindo alergias e regimes alimentares de cada membro.",
+        "whatIDid": [
+          "Projetei e desenvolvi uma app React Native sobre Expo com Firebase Auth, Firestore e Storage",
+          "Construí um modelo de dados por agregado familiar para que vários membros giram uma só despensa, uma lista e um histórico partilhado de receitas",
+          "Implementei a leitura de talões via Gemini que atualiza a despensa e a lista de compras num só passo",
+          "Criei perfis alimentares por membro com uma interseção derivada do agregado usada ao recomendar receitas",
+          "Escrevi sugestões de receitas com IA que respeitam as alergias de cada membro e priorizam ingredientes próximos do prazo",
+          "Construí listas de compras agrupadas por corredor com adição automática quando o stock da despensa baixa",
+          "Publiquei na App Store em 2026 com plano gratuito e plano Family de $9.99/ano para partilha e IA"
+        ],
+        "impact": "Criei uma única app familiar que substitui as folhas de cálculo, listas em Notas e conversas de grupo que as famílias usam para coordenar a comida. O FamList centraliza a despensa, a ida ao supermercado e o planeamento do jantar numa superfície partilhada que respeita as necessidades alimentares de cada membro. Disponível em iOS.",
+        "skills": "React Native, Expo, Firebase, integração de Gemini AI, leitura de talões, modelação de dados por agregado, perfis de preferências alimentares, geração de receitas com IA, publicação na App Store",
+        "website": "https://famlist.net",
+        "images": [
+          "/images/screenshots/famlist/home.png",
+          "/images/screenshots/famlist/pantry.png",
+          "/images/screenshots/famlist/suggestions.png"
+        ],
+        "appStoreLinks": {
+          "ios": "https://apps.apple.com/us/app/famlist/id6766077549"
+        },
+        "category": "products"
+      },
+      {
         "title": "GYST (Get Your Style Together)",
         "role": "Fundador e Programador",
         "organization": "Projeto Independente",
@@ -469,7 +497,9 @@
         "impact": "Toolkit adotado nacionalmente como recurso-chave para coaches CS. Influenciou prática de coaching em múltiplos estados e distritos.",
         "skills": "Desenvolvimento de recursos, design de framework, design de desenvolvimento profissional, parcerias multi-estaduais",
         "website": "https://tech.cornell.edu/k12-initiative/cs-coaching-toolkit/",
-        "images": ["/images/screenshots/cs-coaching/card-deck.jpg"],
+        "images": [
+          "/images/screenshots/cs-coaching/card-deck.jpg"
+        ],
         "imageCredit": "Image courtesy of Cornell Tech. [TODO-TRANSLATE]",
         "category": "professional"
       }

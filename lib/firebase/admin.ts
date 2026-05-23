@@ -2,10 +2,12 @@ import { initializeApp, getApps, cert, App } from 'firebase-admin/app';
 import { getFirestore, Firestore } from 'firebase-admin/firestore';
 import { getAuth, Auth } from 'firebase-admin/auth';
 
+const ADMIN_APP_NAME = 'jamelna-admin';
+
 // Initialize Firebase Admin (server-side only)
-let adminApp: App;
-let adminDb: Firestore;
-let adminAuth: Auth;
+let adminApp: App | undefined;
+let adminDb: Firestore | undefined;
+let adminAuth: Auth | undefined;
 
 function getServiceAccount() {
   // Can use either a JSON file or individual env variables
@@ -21,17 +23,21 @@ function getServiceAccount() {
 }
 
 export function getAdminApp(): App {
-  if (!adminApp) {
-    const apps = getApps();
-    if (apps.length > 0) {
-      adminApp = apps[0];
-    } else {
-      adminApp = initializeApp({
-        credential: cert(getServiceAccount()),
-        projectId: process.env.FIREBASE_PROJECT_ID || process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-      });
-    }
+  if (adminApp) return adminApp;
+
+  const existing = getApps().find((a) => a.name === ADMIN_APP_NAME);
+  if (existing) {
+    adminApp = existing;
+    return existing;
   }
+
+  adminApp = initializeApp(
+    {
+      credential: cert(getServiceAccount()),
+      projectId: process.env.FIREBASE_PROJECT_ID || process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    },
+    ADMIN_APP_NAME
+  );
   return adminApp;
 }
 

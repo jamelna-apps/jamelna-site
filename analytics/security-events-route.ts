@@ -1,16 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { initializeApp, getApps, cert, type ServiceAccount } from 'firebase-admin/app'
-import { getFirestore, FieldValue } from 'firebase-admin/firestore'
-
-function getFirestoreDb() {
-  if (getApps().length === 0) {
-    const serviceAccount = JSON.parse(
-      Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT || '', 'base64').toString()
-    )
-    initializeApp({ credential: cert(serviceAccount as ServiceAccount) })
-  }
-  return getFirestore()
-}
+import { FieldValue } from 'firebase-admin/firestore'
+import { getAnalyticsDb } from '@/lib/firebase/analytics-admin'
 
 export async function handleSecurityEvent(req: NextRequest): Promise<NextResponse> {
   if (req.method !== 'POST') {
@@ -26,7 +16,7 @@ export async function handleSecurityEvent(req: NextRequest): Promise<NextRespons
       return NextResponse.json({ error: 'Missing or invalid fields' }, { status: 400 })
     }
 
-    const db = getFirestoreDb()
+    const db = getAnalyticsDb()
     const timestamp = new Date().toISOString()
     const dateKey = timestamp.split('T')[0]
 

@@ -1,18 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { initializeApp, getApps, cert, type ServiceAccount } from 'firebase-admin/app'
-import { getFirestore, FieldValue } from 'firebase-admin/firestore'
+import { FieldValue } from 'firebase-admin/firestore'
+import { getAnalyticsDb } from '@/lib/firebase/analytics-admin'
 import type { AnalyticsPayload, GeoData, SecuritySignals, SecurityEvent } from './types'
-
-// Initialize Firebase Admin (lazy singleton)
-function getFirestoreDb() {
-  if (getApps().length === 0) {
-    const serviceAccount = JSON.parse(
-      Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT || '', 'base64').toString()
-    )
-    initializeApp({ credential: cert(serviceAccount as ServiceAccount) })
-  }
-  return getFirestore()
-}
 
 function getGeoData(req: NextRequest): GeoData {
   return {
@@ -41,7 +30,7 @@ const ATTACK_PATTERNS: { pattern: RegExp; detail: string; severity: 'high' | 'cr
 const BOT_UA = /bot|crawl|spider|headless|phantom|selenium|puppeteer|playwright|wget|curl|scrapy|python-requests|go-http-client|ahrefsbot|semrushbot|dotbot|mj12bot/i
 
 async function detectSecurityEvents(
-  db: ReturnType<typeof getFirestore>,
+  db: ReturnType<typeof getAnalyticsDb>,
   projectId: string,
   path: string,
   referrer: string,
@@ -183,7 +172,7 @@ export async function handleAnalytics(req: NextRequest): Promise<NextResponse> {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    const db = getFirestoreDb()
+    const db = getAnalyticsDb()
     const geo = getGeoData(req)
     const now = new Date()
     const timestamp = now.toISOString()

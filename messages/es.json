@@ -197,6 +197,34 @@
     "skills": "Habilidades",
     "projects": [
       {
+        "title": "FamList",
+        "role": "Fundador y Desarrollador",
+        "organization": "Proyecto Independiente",
+        "timeline": "2026 - Presente",
+        "challenge": "Crear una app de despensa compartida para que las familias hagan seguimiento de lo que tienen en casa, compartan una lista de la compra organizada por pasillos y reciban sugerencias de cenas con IA adaptadas a quién come esta noche, incluyendo alergias y modos dietéticos de cada miembro.",
+        "whatIDid": [
+          "Diseñé y desarrollé una app React Native sobre Expo con Firebase Auth, Firestore y Storage",
+          "Construí un modelo de datos por hogar para que varios miembros gestionen una sola despensa, una sola lista y un historial compartido de recetas",
+          "Implementé el escaneo de tickets vía Gemini que actualiza la despensa y la lista de la compra en un solo paso",
+          "Creé perfiles dietéticos por miembro con una intersección derivada del hogar usada al recomendar recetas",
+          "Escribí sugerencias de recetas con IA que respetan las alergias de cada miembro y priorizan ingredientes próximos a caducar",
+          "Construí listas de la compra agrupadas por pasillo con autoañadido cuando el stock de la despensa baja",
+          "Publiqué en la App Store en 2026 con un nivel gratuito y un plan Family de $9.99/año para compartir y la IA"
+        ],
+        "impact": "Creé una sola app de hogar que reemplaza las hojas de cálculo, listas en Notas y mensajes de grupo que las familias usan para coordinar la comida. FamList centraliza la despensa, la ida al supermercado y la planificación de la cena en una superficie compartida que respeta las necesidades dietéticas de cada miembro. Disponible en iOS.",
+        "skills": "React Native, Expo, Firebase, integración de Gemini AI, parseo de tickets, modelado de datos por hogar, perfiles de preferencias dietéticas, generación de recetas con IA, publicación en App Store",
+        "website": "https://famlist.net",
+        "images": [
+          "/images/screenshots/famlist/home.png",
+          "/images/screenshots/famlist/pantry.png",
+          "/images/screenshots/famlist/suggestions.png"
+        ],
+        "appStoreLinks": {
+          "ios": "https://apps.apple.com/us/app/famlist/id6766077549"
+        },
+        "category": "products"
+      },
+      {
         "title": "GYST (Get Your Style Together)",
         "role": "Fundador y Desarrollador",
         "organization": "Proyecto Independiente",
@@ -469,7 +497,9 @@
         "impact": "El Toolkit fue adoptado a nivel nacional como recurso clave para coaches de informática. Influyó en la práctica de coaching en múltiples estados y distritos.",
         "skills": "Desarrollo de recursos, diseño de marcos, diseño de desarrollo profesional, asociaciones multi-estatales",
         "website": "https://tech.cornell.edu/k12-initiative/cs-coaching-toolkit/",
-        "images": ["/images/screenshots/cs-coaching/card-deck.jpg"],
+        "images": [
+          "/images/screenshots/cs-coaching/card-deck.jpg"
+        ],
         "imageCredit": "Imagen cortesía de Cornell Tech.",
         "category": "professional"
       }
@@ -2065,8 +2095,16 @@
     "failureModes": {
       "title": "Modos de Fallo Comunes",
       "items": [
-        { "type": "failure", "mode": "Marcos a Medio Construir", "description": "Navegar (STEER) sin anclar (Anchor) construye IA impresionante que nadie adopta — tecnología sofisticada que no encaja con la práctica real. Anclar sin navegar comprende el problema en profundidad pero diseña una colaboración torpe con la que los docentes no pueden trabajar día a día. En cualquiera de los dos casos, el marco está a medio construir." },
-        { "type": "success", "mode": "Anchor & STEER Juntos", "description": "Fundamenta cada función en necesidades reales del docente, y luego diseña una colaboración humano-IA cuidadosa a través de cinco dimensiones. El docente queda amplificado — más capaz, más informado, más eficaz — sin volverse dependiente." }
+        {
+          "type": "failure",
+          "mode": "Marcos a Medio Construir",
+          "description": "Navegar (STEER) sin anclar (Anchor) construye IA impresionante que nadie adopta — tecnología sofisticada que no encaja con la práctica real. Anclar sin navegar comprende el problema en profundidad pero diseña una colaboración torpe con la que los docentes no pueden trabajar día a día. En cualquiera de los dos casos, el marco está a medio construir."
+        },
+        {
+          "type": "success",
+          "mode": "Anchor & STEER Juntos",
+          "description": "Fundamenta cada función en necesidades reales del docente, y luego diseña una colaboración humano-IA cuidadosa a través de cinco dimensiones. El docente queda amplificado — más capaz, más informado, más eficaz — sin volverse dependiente."
+        }
       ]
     },
     "frameworkStructure": {
@@ -2081,10 +2119,26 @@
       "intro2": "Anclar es trabajo de evidencia. No fijas una posición desde un solo avistamiento — triangulas. Los docentes están al timón, pero la carta náutica se traza con muchas lecturas: docentes, administración escolar y de distrito, estudiantes, familias y la comunidad alrededor de la escuela. El docente actúa sobre lo que aprendemos — pero no es la única voz que escuchamos.",
       "questionsTitle": "Las Cuatro Preguntas de Anclaje",
       "questions": [
-        { "number": "01", "question": "¿Qué habilidad profesional o juicio específico mejora esto?", "detail": "No \"ayuda a los docentes\" en general, sino algo concreto — como notar qué estudiantes se están quedando atrás antes de que aparezca en un examen, diferenciar la instrucción para 30 niños con necesidades distintas, o dar retroalimentación oportuna sobre escritura cuando hay 150 redacciones por corregir. Son cosas que los docentes ya quieren hacer y a menudo saben hacer, pero no pueden a la escala o velocidad necesarias." },
-        { "number": "02", "question": "¿Cuyo apaño estamos reemplazando, y por qué es inadecuado?", "detail": "Los docentes ya están resolviendo la mayoría de estos problemas con notas adhesivas, hojas de cálculo e intuición construida durante años. También lo hacen administradores, familias y estudiantes — cada uno tiene su apaño, y cada uno es parcial. Tu herramienta de IA tiene que ser significativamente mejor que los apaños que reemplaza, no solo más vistosa. Saca todos a la luz antes de diseñar." },
-        { "number": "03", "question": "¿Usar esta herramienta hace al docente más hábil con el tiempo, o más dependiente?", "detail": "Una herramienta de IA bien diseñada debería ser como un gran coach pedagógico — te ayuda a ver cosas que no habrías visto, y con el tiempo internalizas algunos de esos patrones. Una mal diseñada genera indefensión aprendida. El docente deja de conocer a sus estudiantes porque el panel los conoce por él." },
-        { "number": "04", "question": "¿De quién hemos escuchado evidencia realmente?", "detail": "Anclar no es una encuesta a docentes — es evidencia triangulada entre las personas a las que la herramienta realmente afecta. ¿Hemos escuchado a los estudiantes cuyo trabajo configura? ¿A las familias que verán sus resultados? ¿A los administradores cuyas decisiones informa? ¿A la comunidad cuyos valores moldean la escuela? Si los docentes son la única voz en la sala, la base de evidencia es demasiado estrecha para anclar sobre ella." }
+        {
+          "number": "01",
+          "question": "¿Qué habilidad profesional o juicio específico mejora esto?",
+          "detail": "No \"ayuda a los docentes\" en general, sino algo concreto — como notar qué estudiantes se están quedando atrás antes de que aparezca en un examen, diferenciar la instrucción para 30 niños con necesidades distintas, o dar retroalimentación oportuna sobre escritura cuando hay 150 redacciones por corregir. Son cosas que los docentes ya quieren hacer y a menudo saben hacer, pero no pueden a la escala o velocidad necesarias."
+        },
+        {
+          "number": "02",
+          "question": "¿Cuyo apaño estamos reemplazando, y por qué es inadecuado?",
+          "detail": "Los docentes ya están resolviendo la mayoría de estos problemas con notas adhesivas, hojas de cálculo e intuición construida durante años. También lo hacen administradores, familias y estudiantes — cada uno tiene su apaño, y cada uno es parcial. Tu herramienta de IA tiene que ser significativamente mejor que los apaños que reemplaza, no solo más vistosa. Saca todos a la luz antes de diseñar."
+        },
+        {
+          "number": "03",
+          "question": "¿Usar esta herramienta hace al docente más hábil con el tiempo, o más dependiente?",
+          "detail": "Una herramienta de IA bien diseñada debería ser como un gran coach pedagógico — te ayuda a ver cosas que no habrías visto, y con el tiempo internalizas algunos de esos patrones. Una mal diseñada genera indefensión aprendida. El docente deja de conocer a sus estudiantes porque el panel los conoce por él."
+        },
+        {
+          "number": "04",
+          "question": "¿De quién hemos escuchado evidencia realmente?",
+          "detail": "Anclar no es una encuesta a docentes — es evidencia triangulada entre las personas a las que la herramienta realmente afecta. ¿Hemos escuchado a los estudiantes cuyo trabajo configura? ¿A las familias que verán sus resultados? ¿A los administradores cuyas decisiones informa? ¿A la comunidad cuyos valores moldean la escuela? Si los docentes son la única voz en la sala, la base de evidencia es demasiado estrecha para anclar sobre ella."
+        }
       ],
       "criticalDistinctionTitle": "La Distinción Crítica",
       "criticalDistinction1Pre": "Una IA que dice ",
@@ -2169,46 +2223,144 @@
     "designImplications": {
       "title": "Implicaciones de Diseño",
       "items": [
-        { "title": "Sobre la Autenticidad", "text": "La IA es una herramienta, no una colega. No tiene intereses, sentimientos ni postura sobre el trabajo. Diseñarla para actuar como si los tuviera no es calidez — es desorientación. Honesta sobre lo que ve. Honesta sobre lo que es. Las dos cosas, o ninguna cuenta." },
-        { "title": "Sobre la Transparencia", "text": "La interfaz no debería sepultar la lógica de la IA. Una de las formas más rápidas de perder la confianza del docente es una caja negra. Los docentes deberían poder entender el porqué en menos de 10 segundos." },
-        { "title": "Sobre los Valores por Defecto", "text": "Los valores por defecto son decisiones pedagógicas. Si la IA por defecto da pistas rápidamente, eso encarna una filosofía. Los valores por defecto deben ser intencionales, documentados y modificables." },
-        { "title": "Sobre la Equidad", "text": "Docente-en-el-bucle significa que la IA no crea silenciosamente experiencias de aprendizaje distintas para distintos estudiantes sin que el docente lo sepa. El trato diferencial siempre debe ser visible y respaldado." },
-        { "title": "Sobre el Tiempo", "text": "Una de las mayores limitaciones que enfrentan los docentes. Si la carga de supervisión es demasiado alta, los docentes acabarán dando el visto bueno a todo o desconectándose — ambas cosas anulan el propósito." }
+        {
+          "title": "Sobre la Autenticidad",
+          "text": "La IA es una herramienta, no una colega. No tiene intereses, sentimientos ni postura sobre el trabajo. Diseñarla para actuar como si los tuviera no es calidez — es desorientación. Honesta sobre lo que ve. Honesta sobre lo que es. Las dos cosas, o ninguna cuenta."
+        },
+        {
+          "title": "Sobre la Transparencia",
+          "text": "La interfaz no debería sepultar la lógica de la IA. Una de las formas más rápidas de perder la confianza del docente es una caja negra. Los docentes deberían poder entender el porqué en menos de 10 segundos."
+        },
+        {
+          "title": "Sobre los Valores por Defecto",
+          "text": "Los valores por defecto son decisiones pedagógicas. Si la IA por defecto da pistas rápidamente, eso encarna una filosofía. Los valores por defecto deben ser intencionales, documentados y modificables."
+        },
+        {
+          "title": "Sobre la Equidad",
+          "text": "Docente-en-el-bucle significa que la IA no crea silenciosamente experiencias de aprendizaje distintas para distintos estudiantes sin que el docente lo sepa. El trato diferencial siempre debe ser visible y respaldado."
+        },
+        {
+          "title": "Sobre el Tiempo",
+          "text": "Una de las mayores limitaciones que enfrentan los docentes. Si la carga de supervisión es demasiado alta, los docentes acabarán dando el visto bueno a todo o desconectándose — ambas cosas anulan el propósito."
+        }
       ]
     },
     "anchorCard": {
       "title": "La Ficha de Anclaje",
       "intro": "Una plantilla de validación de funcionalidad. Rellénala antes de escribir una sola línea de código.",
       "fields": [
-        { "field": "Cómo Podríamos...", "prompt": "Plantea la necesidad del docente como una pregunta \"¿Cómo podríamos...?\"." },
-        { "field": "Habilidad Docente Mejorada", "prompt": "¿Qué habilidad profesional específica mejora esta funcionalidad — sin reemplazarla?" },
-        { "field": "Apaño Observado", "prompt": "¿Cómo están resolviendo esto los docentes ahora? ¿Por qué es inadecuado su enfoque actual?" },
-        { "field": "Evidencia de Stakeholders", "prompt": "¿Qué voces hemos escuchado más allá de los docentes? ¿Qué dicen los estudiantes, las familias, los administradores o la comunidad más amplia sobre si esto importa y si la solución propuesta encaja?" },
-        { "field": "Evidencia de Demanda", "prompt": "¿Qué evidencia tenemos de que los docentes realmente quieren que esto se resuelva?" },
-        { "field": "Tiempo y Carga Cognitiva Recuperados", "prompt": "¿Qué tiempo o energía mental libera esto, y en qué lo reinvierte el docente?" },
-        { "field": "Capacidad Tras la Retirada", "prompt": "¿Es el docente más capaz sin la herramienta tras haberla usado? ¿El diseño construye habilidad o dependencia?" }
+        {
+          "field": "Cómo Podríamos...",
+          "prompt": "Plantea la necesidad del docente como una pregunta \"¿Cómo podríamos...?\"."
+        },
+        {
+          "field": "Habilidad Docente Mejorada",
+          "prompt": "¿Qué habilidad profesional específica mejora esta funcionalidad — sin reemplazarla?"
+        },
+        {
+          "field": "Apaño Observado",
+          "prompt": "¿Cómo están resolviendo esto los docentes ahora? ¿Por qué es inadecuado su enfoque actual?"
+        },
+        {
+          "field": "Evidencia de Stakeholders",
+          "prompt": "¿Qué voces hemos escuchado más allá de los docentes? ¿Qué dicen los estudiantes, las familias, los administradores o la comunidad más amplia sobre si esto importa y si la solución propuesta encaja?"
+        },
+        {
+          "field": "Evidencia de Demanda",
+          "prompt": "¿Qué evidencia tenemos de que los docentes realmente quieren que esto se resuelva?"
+        },
+        {
+          "field": "Tiempo y Carga Cognitiva Recuperados",
+          "prompt": "¿Qué tiempo o energía mental libera esto, y en qué lo reinvierte el docente?"
+        },
+        {
+          "field": "Capacidad Tras la Retirada",
+          "prompt": "¿Es el docente más capaz sin la herramienta tras haberla usado? ¿El diseño construye habilidad o dependencia?"
+        }
       ]
     },
     "researchConnections": {
       "title": "Conexiones con la Investigación",
       "items": [
-        { "key": "designThinking", "dimension": "Design Thinking", "sources": ["Stanford d.school — Empatizar, Definir, Idear, Prototipar, Probar", "Tim Brown (IDEO) — El diseño centrado en el ser humano como método de innovación", "Diseño Participativo — Usuarios como co-diseñadores, no solo informantes"] },
-        { "key": "anchor", "dimension": "Anchor", "sources": ["Marco TPACK — Conocimiento Tecnológico-Pedagógico del Contenido", "Design Thinking: Empatizar y Definir — Anclaje en necesidades observadas"] },
-        { "key": "S", "dimension": "S — Modelo Mental Compartido", "sources": ["Conciencia Situacional de Endsley — Modelos mentales compartidos y cognición de equipo", "Mapas de Empatía — Herramientas estructuradas para comprender perspectivas"] },
-        { "key": "T", "dimension": "T — Guardarraíles", "sources": ["Orquestación de Dillenbourg — Coordinación docente de actividades complejas", "Fracaso Productivo de Kapur — Cuándo la lucha es beneficiosa"] },
-        { "key": "E", "dimension": "E — Escalación y Delegación", "sources": ["Lee y See sobre la Confianza en la Automatización", "IA Centrada en el Ser Humano (HCAI) de Shneiderman", "Niveles de Automatización de Sheridan y Verplank"] },
-        { "key": "R", "dimension": "R — Bucles Reflexivos", "sources": ["Práctica Reflexiva de Schön", "Flujo LATUX — Analítica del aprendizaje con validación docente"] }
+        {
+          "key": "designThinking",
+          "dimension": "Design Thinking",
+          "sources": [
+            "Stanford d.school — Empatizar, Definir, Idear, Prototipar, Probar",
+            "Tim Brown (IDEO) — El diseño centrado en el ser humano como método de innovación",
+            "Diseño Participativo — Usuarios como co-diseñadores, no solo informantes"
+          ]
+        },
+        {
+          "key": "anchor",
+          "dimension": "Anchor",
+          "sources": [
+            "Marco TPACK — Conocimiento Tecnológico-Pedagógico del Contenido",
+            "Design Thinking: Empatizar y Definir — Anclaje en necesidades observadas"
+          ]
+        },
+        {
+          "key": "S",
+          "dimension": "S — Modelo Mental Compartido",
+          "sources": [
+            "Conciencia Situacional de Endsley — Modelos mentales compartidos y cognición de equipo",
+            "Mapas de Empatía — Herramientas estructuradas para comprender perspectivas"
+          ]
+        },
+        {
+          "key": "T",
+          "dimension": "T — Guardarraíles",
+          "sources": [
+            "Orquestación de Dillenbourg — Coordinación docente de actividades complejas",
+            "Fracaso Productivo de Kapur — Cuándo la lucha es beneficiosa"
+          ]
+        },
+        {
+          "key": "E",
+          "dimension": "E — Escalación y Delegación",
+          "sources": [
+            "Lee y See sobre la Confianza en la Automatización",
+            "IA Centrada en el Ser Humano (HCAI) de Shneiderman",
+            "Niveles de Automatización de Sheridan y Verplank"
+          ]
+        },
+        {
+          "key": "R",
+          "dimension": "R — Bucles Reflexivos",
+          "sources": [
+            "Práctica Reflexiva de Schön",
+            "Flujo LATUX — Analítica del aprendizaje con validación docente"
+          ]
+        }
       ]
     },
     "howToUse": {
       "title": "Cómo Usar Este Marco",
       "items": [
-        { "title": "Como lente de auditoría", "description": "¿Tu producto actual tiene cada una de estas capas? ¿Dónde están los huecos?" },
-        { "title": "Como checklist de diseño", "description": "Para nuevas funciones, empieza con la Ficha de Anclaje. Si la pasa, usa STEER para dar forma al diseño de la interacción." },
-        { "title": "Como modelo de madurez", "description": "¿Dónde está tu producto en el espectro de delegación? ¿Tus rutas de escalación están bien diseñadas o son improvisadas?" },
-        { "title": "Como atajo crítico", "description": "\"¿Hemos anclado esto?\" se convierte en una forma de preguntar si una funcionalidad está fundamentada en valor real para el docente." },
-        { "title": "Como marco de adquisición", "description": "Las escuelas que evalúan herramientas de IA pueden usar Anchor & STEER para hacer las preguntas correctas a los proveedores." },
-        { "title": "Como andamiaje de investigación", "description": "Mapea las entrevistas de investigación con usuarios a cada dimensión por separado para una recolección estructurada de hallazgos." }
+        {
+          "title": "Como lente de auditoría",
+          "description": "¿Tu producto actual tiene cada una de estas capas? ¿Dónde están los huecos?"
+        },
+        {
+          "title": "Como checklist de diseño",
+          "description": "Para nuevas funciones, empieza con la Ficha de Anclaje. Si la pasa, usa STEER para dar forma al diseño de la interacción."
+        },
+        {
+          "title": "Como modelo de madurez",
+          "description": "¿Dónde está tu producto en el espectro de delegación? ¿Tus rutas de escalación están bien diseñadas o son improvisadas?"
+        },
+        {
+          "title": "Como atajo crítico",
+          "description": "\"¿Hemos anclado esto?\" se convierte en una forma de preguntar si una funcionalidad está fundamentada en valor real para el docente."
+        },
+        {
+          "title": "Como marco de adquisición",
+          "description": "Las escuelas que evalúan herramientas de IA pueden usar Anchor & STEER para hacer las preguntas correctas a los proveedores."
+        },
+        {
+          "title": "Como andamiaje de investigación",
+          "description": "Mapea las entrevistas de investigación con usuarios a cada dimensión por separado para una recolección estructurada de hallazgos."
+        }
       ]
     },
     "footer": {
