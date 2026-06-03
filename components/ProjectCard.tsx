@@ -86,7 +86,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   src={image}
                   alt={`Screenshot ${index + 1}`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}
