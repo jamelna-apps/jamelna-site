@@ -14,7 +14,7 @@
     "name": "Joe Alexander Meléndez-Naharro",
     "roleLabel": "Estratega de Tecnología Emergente · Líder de Innovación K-12",
     "tagline": "Ayudo a las Escuelas a Navegar lo que Viene",
-    "description": "Actualmente Research Scholar en el Friday Institute de NC State, gestionando SceneCraft — una plataforma educativa impulsada por IA y financiada por la NSF. Desde IA hasta aprendizaje inmersivo e instrucción basada en datos, evalúo, piloto y escalo las tecnologías que realmente marcan la diferencia para los estudiantes. Más de 15 años construyendo programas, marcos y herramientas que convierten la tecnología emergente en práctica equitativa en el aula.",
+    "description": "Actualmente Research Scholar en el Friday Institute de NC State, gestionando SceneCraft, una plataforma educativa impulsada por IA y financiada por la NSF. En IA, aprendizaje inmersivo e instrucción basada en datos, evalúo, piloto y escalo las tecnologías que realmente marcan la diferencia para los estudiantes. Más de 15 años construyendo programas, marcos y herramientas que convierten la tecnología emergente en práctica equitativa en el aula.",
     "ctaPrimary": "Hablemos",
     "ctaSecondary": "Ver Mi Trabajo",
     "yearsExperience": "15+"
@@ -23,7 +23,7 @@
     "valueProps": {
       "bridgeBuilder": {
         "title": "Estrategia de Innovación",
-        "description": "No persigo tendencias — las evalúo. ¿Qué tecnologías emergentes mejoran realmente los resultados? ¿Cómo se hace un piloto de manera responsable? ¿Cómo se escala sin dejar atrás a las escuelas? He construido los marcos que responden estas preguntas a nivel de distrito y nacional."
+        "description": "Evalúo las tecnologías emergentes en lugar de perseguirlas. ¿Cuáles mejoran realmente los resultados? ¿Cómo se hace un piloto de manera responsable? ¿Cómo se escala sin dejar atrás a las escuelas? He construido los marcos que responden estas preguntas a nivel de distrito y nacional."
       },
       "aiPioneer": {
         "title": "Implementación de Tecnología Emergente",
@@ -31,12 +31,12 @@
       },
       "systemsDesigner": {
         "title": "Sistemas y Escala",
-        "description": "Lideré el marco nacional SCRIPT para la educación en informática. Gestioné el despliegue de CS4All de NYC en más de 200 escuelas. Construí productos utilizados por miles. Sé cómo llevar una idea prometedora de piloto a implementación a toda la ciudad — y qué falla cuando lo intentas."
+        "description": "Lideré el marco nacional SCRIPT para la educación en informática. Gestioné el despliegue de CS4All de NYC en más de 200 escuelas. Construí productos utilizados por miles. Sé cómo llevar una idea prometedora de piloto a implementación a toda la ciudad, y qué falla cuando lo intentas."
       }
     },
     "featuredWork": {
       "title": "Proyectos Destacados",
-      "description": "Marcos nacionales, programas a escala de distrito y productos construidos desde cero.",
+      "description": "Marcos nacionales, programas a escala de distrito y productos que diseñé y construí yo mismo.",
       "viewAll": "Ver Todos los Proyectos",
       "projects": {
         "gyst": {
@@ -83,7 +83,7 @@
     },
     "cta": {
       "title": "¿Listo para Avanzar?",
-      "description": "Ya sea que estés evaluando herramientas de IA, diseñando una hoja de ruta tecnológica para tu distrito o construyendo algo desde cero — me encantaría escuchar en qué estás trabajando.",
+      "description": "Ya sea que estés evaluando herramientas de IA, diseñando una hoja de ruta tecnológica para tu distrito o construyendo algo desde cero, me encantaría escuchar en qué estás trabajando.",
       "button": "Iniciar una Conversación"
     },
     "coreExpertise": "Do",
@@ -229,10 +229,10 @@
         "role": "Fundador y Desarrollador",
         "organization": "Proyecto Independiente",
         "timeline": "2024 - Presente",
-        "challenge": "Crear una app móvil gratuita que ayuda a las personas a digitalizar su armario, obtener sugerencias de outfits impulsadas por IA y vender localmente a través de un mercado peer-to-peer — demostrando que la tecnología puede impulsar la moda sostenible mientras apoya las economías locales.",
+        "challenge": "Crear una app móvil gratuita que ayuda a las personas a digitalizar su armario, obtener sugerencias de outfits impulsadas por IA y vender localmente a través de un mercado peer-to-peer, demostrando que la tecnología puede impulsar la moda sostenible mientras apoya las economías locales.",
         "whatIDid": [
           "Diseñé y desarrollé una aplicación móvil full-stack con React Native con funciones principales: gestión del armario, sugerencias de outfits con IA, mercado SwapMeet y analíticas del armario",
-          "Construí el mercado SwapMeet con ventas de ropa peer-to-peer, encuentros locales verificados por QR, comisión fija del 8% y sin envíos — los vendedores se quedan con el 92%",
+          "Construí el mercado SwapMeet con ventas de ropa peer-to-peer, encuentros locales verificados por QR, comisión fija del 8% y sin envíos, por lo que los vendedores se quedan con el 92%",
           "Integré Gemini AI para sugerencias de outfits personalizadas según el clima, la ocasión y el contenido del armario",
           "Desarrollé panel de analíticas del armario con patrones de uso, métricas de coste por uso, detección de carencias e impacto de sostenibilidad",
           "Construí función de armario cápsula para viajes y planificación estacional",
@@ -258,7 +258,7 @@
         "role": "Fundador y Desarrollador",
         "organization": "Proyecto Independiente",
         "timeline": "2025 - Presente",
-        "challenge": "Crear un espacio de trabajo gratuito para coaches instruccionales de K-12 donde puedan gestionar relaciones con docentes, hacer seguimiento de objetivos, recopilar evidencias y coordinar entre escuelas — con controles de privacidad que respetan la naturaleza de confianza del coaching.",
+        "challenge": "Crear un espacio de trabajo gratuito para coaches instruccionales de K-12 donde puedan gestionar relaciones con docentes, hacer seguimiento de objetivos, recopilar evidencias y coordinar entre escuelas, con controles de privacidad que respetan la naturaleza de confianza del coaching.",
         "whatIDid": [
           "Diseñé y desarrollé una aplicación web full-stack en Next.js con control de acceso por roles para coaches, docentes y administradores",
           "Construí un modelo de datos completo que admite jerarquías de distrito/escuela/docente, ciclos de coaching, objetivos, seguimientos y notas",
@@ -266,7 +266,7 @@
           "Creé sistema de invitación de docentes con incorporación segura mediante token",
           "Construí sistema de recopilación de evidencias para fotos, documentos y trabajos de estudiantes con organización automática",
           "Diseñé una interfaz cálida y accesible con una paleta de color terracota pensada para profesionales de la educación",
-          "Lancé una versión gratuita que admite hasta 10 docentes, 500 evidencias y objetivos y seguimientos ilimitados — sin tarjeta de crédito"
+          "Lancé una versión gratuita que admite hasta 10 docentes, 500 evidencias y objetivos y seguimientos ilimitados, sin tarjeta de crédito"
         ],
         "impact": "Creé una herramienta específica para coaches instruccionales que actualmente dependen de hojas de cálculo y documentos dispersos. CoachDesk centraliza el seguimiento de docentes, evidencias e informes, respetando la naturaleza de confianza de las relaciones de coaching mediante controles de privacidad transparentes. Gratuita para coaches individuales.",
         "skills": "Next.js, React, TypeScript, Tailwind CSS, control de acceso por roles, arquitectura con privacidad como prioridad, gestión de evidencias, tecnología educativa",
@@ -309,11 +309,11 @@
         "role": "Fundador y Desarrollador",
         "organization": "Proyecto Independiente",
         "timeline": "2024 - Presente",
-        "challenge": "Crear una plataforma gratuita de establecimiento de objetivos impulsada por IA con el marco SMARTIE — objetivos Específicos, Medibles, Alcanzables, Relevantes, con Tiempo definido, Inclusivos y Equitativos — con coaching de IA instantáneo y seguimiento visual del progreso.",
+        "challenge": "Crear una plataforma gratuita de establecimiento de objetivos impulsada por IA con el marco SMARTIE, objetivos Específicos, Medibles, Alcanzables, Relevantes, con Tiempo definido, Inclusivos y Equitativos, con coaching de IA instantáneo y seguimiento visual del progreso.",
         "whatIDid": [
           "Construí una aplicación web Next.js con un coach de objetivos de IA impulsado por Gemini que ayuda a los usuarios a estructurar sus metas mediante conversación natural",
           "Diseñé el marco SMARTIE, que extiende los objetivos SMART tradicionales con dimensiones de Inclusión y Equidad",
-          "Creé un generador de objetivos instantáneo en la página principal — sin necesidad de registrarse, la IA estructura cualquier meta en segundos",
+          "Creé un generador de objetivos instantáneo en la página principal, sin necesidad de registrarse, que estructura cualquier meta en segundos",
           "Implementé seguimiento visual del progreso con gráficos, porcentajes de completación y desglose de hitos",
           "Construí analíticas inteligentes que proporcionan información personalizada sobre patrones de objetivos y tendencias de logro",
           "Integré autenticación con Google, Apple y correo electrónico mediante Firebase",
@@ -364,12 +364,12 @@
           "Diseñé y desarrollé una aplicación web Next.js con contador de gasto en tiempo real actualizándose cada 5 minutos a partir de periodismo verificado",
           "Construí un pipeline automatizado de datos diarios usando cron jobs de Vercel para rastrear, categorizar y agregar eventos de gasto",
           "Implementé un verificador de noticias impulsado por Claude AI para identificar y categorizar nuevos informes de gasto militar",
-          "Creé una calculadora de coste de oportunidad con filtrado por estado que muestra en qué podría haberse invertido el dinero: salarios de profesores, viviendas, atención sanitaria, almuerzos escolares",
+          "Creé una calculadora de coste de oportunidad con filtrado por estado que muestra en qué podría haberse invertido el dinero: salarios de profesores, viviendas, atención sanitaria y almuerzos escolares",
           "Construí un desglose del gasto por categoría (municiones, operaciones, otros) con un libro de registro día a día que cita el periodismo de fuente",
           "Desarrollé un pipeline propio de analíticas y monitorización de seguridad",
           "Desplegué en producción con dominio personalizado y actualizaciones diarias automatizadas"
         ],
-        "impact": "Creé una visualización de datos accesible que transforma cifras abstractas de gasto militar en números personales y cercanos. Al mostrar lo que podría haberse financiado cada día en educación, vivienda y salud —filtrable por estado— el proyecto hace tangible la política fiscal e invita a la participación cívica.",
+        "impact": "Creé una visualización de datos accesible que transforma cifras abstractas de gasto militar en números personales y cercanos. Al mostrar lo que podría haberse financiado cada día en educación, vivienda y salud, filtrable por estado, el proyecto hace tangible la política fiscal e invita a la participación cívica.",
         "skills": "Next.js, React, TypeScript, Tailwind CSS, Firebase, Vercel Cron, integración de Claude AI, visualización de datos en tiempo real, pipelines de datos automatizados",
         "images": [
           "/images/screenshots/foreverybomb/home.png",
@@ -384,7 +384,7 @@
         "role": "Creador y Desarrollador",
         "organization": "Proyecto Independiente",
         "timeline": "2026 - Presente",
-        "challenge": "Construir una publicación periodística de una Tierra paralela donde la empatía impulsa el progreso humano — usando IA para reimaginar titulares del mundo real tal como aparecerían en un mundo que eligió la cooperación sobre el conflicto.",
+        "challenge": "Construir una publicación periodística de una Tierra paralela donde la empatía impulsa el progreso humano, usando IA para reimaginar titulares del mundo real tal como aparecerían en un mundo que eligió la cooperación sobre el conflicto.",
         "whatIDid": [
           "Diseñé y desarrollé un sitio Next.js de estilo periodístico con tipografía editorial clásica y diseño responsive",
           "Construí un pipeline de publicación semanal automatizado: se seleccionan titulares reales y Claude AI reescribe cada historia desde la perspectiva de una Tierra paralela (Terra-04) donde la humanidad eligió consistentemente el diálogo sobre la violencia",
@@ -507,15 +507,15 @@
     "sectionProfessional": "Experiencia Profesional",
     "sectionProfessionalDesc": "Roles donde lideré programas, gestioné equipos y definí políticas a escala.",
     "sectionProducts": "Productos que he Creado",
-    "sectionProductsDesc": "Aplicaciones y herramientas independientes — diseñadas, desarrolladas y publicadas.",
+    "sectionProductsDesc": "Aplicaciones y herramientas independientes, diseñadas, desarrolladas y publicadas.",
     "sectionCreative": "Proyectos Creativos",
     "sectionCreativeDesc": "Arte y trabajo conceptual explorando tecnología, memoria y significado."
   },
   "about": {
     "title": "Sobre Mí",
     "p1": "Mi madre es de España, mi padre de Puerto Rico. Crecer bilingüe y entre dos mundos me dio algo que uso cada día: la capacidad de traducir entre diferentes comunidades, sistemas y formas de pensar.",
-    "p2": "Comencé en educación museística en Liberty Science Center, persiguiendo ese momento en que el rostro de un estudiante cambia cuando algo hace clic. Eso me llevó por programas STEM extraescolares y a escuelas K-12 — finalmente a Manhattan, donde ayudé a liderar CS4All, la mayor iniciativa nacional de equidad en ciencias de la computación. Tres años viendo a maestros que nunca habían programado convertirse en educadores seguros de informática me enseñaron que el acceso por sí solo no es suficiente. Necesitas sistemas, apoyo y confianza.",
-    "p3": "Desde entonces he trabajado a escala nacional — dirigiendo la iniciativa SCRIPT de CSforALL en más de 50 distritos, diseñando marcos de coaching en Cornell Tech, y ahora gestionando SceneCraft, una plataforma de aprendizaje con IA financiada por la NSF en el Friday Institute de NC State. Cada rol reforzó la misma lección: la innovación se propaga a través de las relaciones, no solo de la tecnología.",
+    "p2": "Comencé en educación museística en Liberty Science Center, persiguiendo ese momento en que el rostro de un estudiante cambia cuando algo hace clic. Eso me llevó por programas STEM extraescolares y a escuelas K-12, finalmente a Manhattan, donde ayudé a liderar CS4All, la mayor iniciativa nacional de equidad en ciencias de la computación. Tres años viendo a maestros que nunca habían programado convertirse en educadores seguros de informática me enseñaron que el acceso por sí solo no es suficiente. Necesitas sistemas, apoyo y confianza.",
+    "p3": "Desde entonces he trabajado a escala nacional, dirigiendo la iniciativa SCRIPT de CSforALL en más de 50 distritos, diseñando marcos de coaching en Cornell Tech, y ahora gestionando SceneCraft, una plataforma de aprendizaje con IA financiada por la NSF en el Friday Institute de NC State. Cada rol reforzó la misma lección: la innovación se propaga a través de las relaciones, no solo de la tecnología.",
     "p4": "Vivo en Durham, Carolina del Norte. Creo que cada estudiante merece acceso a experiencias de aprendizaje poderosas, y que el trabajo significativo puede ocurrir desde cualquier lugar.",
     "p5": "Si estás trabajando en algo que importa en educación, me encantaría hablar.",
     "basedIn": "Ubicado en",
@@ -645,14 +645,14 @@
     },
     "consulting": {
       "title": "Consultoría y Asesoramiento",
-      "description": "También acepto proyectos de consultoría selectos — desde estrategia de mercado EdTech hasta implementación de IA en escuelas. Si tienes un proyecto específico en mente, me encantaría escuchar más.",
+      "description": "También acepto proyectos de consultoría selectos, desde estrategia de mercado EdTech hasta implementación de IA en escuelas. Si tienes un proyecto específico en mente, me encantaría escuchar más.",
       "cta": "Enviar Email"
     },
     "connect": {
       "title": "Ponerse en Contacto",
       "email": "joe@jamelna.com",
       "linkedin": "linkedin.com/in/joeamelendez",
-      "location": "Durham, NC — abierto a oportunidades remotas, híbridas, en EE.UU. o en España"
+      "location": "Durham, NC: abierto a oportunidades remotas, híbridas, en EE.UU. o en España"
     }
   },
   "photography": {
@@ -829,7 +829,7 @@
     "hero": {
       "title": "Soberanía Tecnológica",
       "subtitle": "Construye tus propias redes. Controla tus propios datos. Adueñate de tu futuro digital.",
-      "description": "Un currículo basado en proyectos que enseña a estudiantes y comunidades a construir infraestructura tecnológica independiente—desde redes locales hasta IA autoalojada—liberándose de la dependencia de la tecnología corporativa.",
+      "description": "Un currículo basado en proyectos que enseña a estudiantes y comunidades a construir infraestructura tecnológica independiente, desde redes locales hasta IA autoalojada, liberándose de la dependencia de la tecnología corporativa.",
       "ctaPrimary": "Explorar Currículo",
       "ctaSecondary": "Ver Herramientas"
     },
@@ -838,11 +838,11 @@
       "intro": "Las grandes empresas tecnológicas extraen nuestros datos, manipulan nuestra atención y nos hacen dependientes de sistemas que no controlamos. Hay otra manera.",
       "problem": {
         "title": "El Problema",
-        "description": "Las plataformas corporativas recolectan datos personales, usan algoritmos para manipular comportamientos y crean dependencia de sistemas propietarios costosos—perjudicando especialmente a las comunidades de bajos ingresos y marginadas."
+        "description": "Las plataformas corporativas recolectan datos personales, usan algoritmos para manipular comportamientos y crean dependencia de sistemas propietarios costosos, perjudicando especialmente a las comunidades de bajos ingresos y marginadas."
       },
       "vision": {
         "title": "Nuestra Visión",
-        "description": "Comunidades que poseen su propia infraestructura tecnológica: redes locales, servicios autoalojados y herramientas de IA que sirven a las personas—no a las ganancias corporativas."
+        "description": "Comunidades que poseen su propia infraestructura tecnológica: redes locales, servicios autoalojados y herramientas de IA que sirven a las personas, no a las ganancias corporativas."
       },
       "benefit": {
         "title": "El Beneficio",
@@ -884,7 +884,7 @@
       },
       "selfHosted": {
         "title": "Servicios Autoalojados",
-        "description": "Reemplaza los servicios de nube corporativos con los tuyos propios—manteniendo tus datos bajo tu control.",
+        "description": "Reemplaza los servicios de nube corporativos con los tuyos propios, manteniendo tus datos bajo tu control.",
         "project1": {
           "title": "Configura Tu Propio Servidor",
           "description": "Transforma un ordenador viejo o Raspberry Pi en un servidor. Aprende lo básico de Linux, acceso remoto y administración de sistemas.",
@@ -912,7 +912,7 @@
       },
       "ai": {
         "title": "Independencia en IA/LLM",
-        "description": "Ejecuta modelos de IA potentes en tu propio hardware—sin nube requerida, sin datos saliendo de tu comunidad.",
+        "description": "Ejecuta modelos de IA potentes en tu propio hardware, sin nube requerida, sin datos saliendo de tu comunidad.",
         "project1": {
           "title": "Entendiendo los Modelos de IA",
           "description": "Aprende cómo funcionan los modelos de lenguaje grandes, sus capacidades y limitaciones, y las consideraciones éticas del despliegue de IA.",
@@ -927,7 +927,7 @@
         },
         "project3": {
           "title": "Ajuste Fino para Necesidades Comunitarias",
-          "description": "Personaliza modelos de IA para aplicaciones comunitarias específicas—idioma local, contexto cultural o conocimiento especializado.",
+          "description": "Personaliza modelos de IA para aplicaciones comunitarias específicas, idioma local, contexto cultural o conocimiento especializado.",
           "difficulty": "Avanzado",
           "duration": "6-8 semanas"
         },
@@ -940,7 +940,7 @@
       },
       "appDev": {
         "title": "Desarrollo de Aplicaciones",
-        "description": "Construye aplicaciones que sirvan a tu comunidad—redes sociales, directorios de recursos y herramientas para organización local.",
+        "description": "Construye aplicaciones que sirvan a tu comunidad, redes sociales, directorios de recursos y herramientas para organización local.",
         "project1": {
           "title": "Fundamentos de Desarrollo Web",
           "description": "Aprende HTML, CSS y JavaScript. Construye tus primeros sitios web estáticos y comprende cómo funciona la web.",
@@ -989,7 +989,7 @@
         },
         "project4": {
           "title": "Gobernanza Tecnológica Colaborativa",
-          "description": "Desarrolla estructuras de gobernanza que mantengan la tecnología responsable ante las necesidades de la comunidad: políticas, toma de decisiones y ética.",
+          "description": "Desarrolla estructuras de gobernanza que mantengan la tecnología responsable ante las necesidades de la comunidad, políticas, toma de decisiones y ética.",
           "difficulty": "Avanzado",
           "duration": "5-6 semanas"
         }
@@ -1036,7 +1036,7 @@
       "title": "Para Educadores",
       "description": "Este currículo está diseñado para profesores, organizadores comunitarios y cualquier persona que quiera llevar la soberanía tecnológica a su comunidad. Todos los materiales son gratuitos y de código abierto.",
       "benefit1": "Módulos flexibles que se adaptan a diferentes niveles de habilidad y restricciones de tiempo",
-      "benefit2": "No se requiere experiencia técnica previa—aprende junto a tus estudiantes",
+      "benefit2": "No se requiere experiencia técnica previa, aprende junto a tus estudiantes",
       "benefit3": "Enfoque basado en proyectos que mantiene a los estudiantes comprometidos con resultados del mundo real",
       "requirements": {
         "title": "Requisitos Básicos",
@@ -1059,7 +1059,7 @@
       "hero": {
         "title": "Kit de Resiliencia Digital",
         "subtitle": "Herramientas prácticas para protegerte a ti, a tu comunidad y a tus datos.",
-        "description": "Cuando los gobiernos amenazan las libertades civiles, la tecnología se convierte en arma y escudo a la vez. Este kit te ofrece pasos concretos — desde soluciones de 5 minutos hasta infraestructura a escala comunitaria — para construir sistemas de comunicación que no puedan silenciarse y preservar información que no pueda borrarse.",
+        "description": "Cuando los gobiernos amenazan las libertades civiles, la tecnología se convierte en arma y escudo a la vez. Este kit te ofrece pasos concretos, desde soluciones de 5 minutos hasta infraestructura a escala comunitaria, para construir sistemas de comunicación que no puedan silenciarse y preservar información que no pueda borrarse.",
         "backLink": "Soberanía Tech",
         "eyebrow": "Resiliencia Digital",
         "statActions": "Acciones",
@@ -1081,7 +1081,7 @@
         "1": {
           "title": "Protégete Ahora",
           "subtitle": "30 minutos para ser significativamente más seguro",
-          "audience": "Para todos — no se necesita conocimiento técnico"
+          "audience": "Para todos: no se necesita conocimiento técnico"
         },
         "2": {
           "title": "Construye Sistemas Seguros",
@@ -1125,9 +1125,9 @@
               "protects": "Protects message content from interception and server-side surveillance",
               "steps": {
                 "0": "Download Signal from your app store (iOS or Android) or signal.org for desktop",
-                "1": "Register with your phone number — this is required but Signal doesn't store your contacts",
+                "1": "Register with your phone number: this is required but Signal doesn't store your contacts",
                 "2": "Go to Settings → Privacy → Disappearing Messages and set a default timer (1 week recommended)",
-                "3": "Invite your key contacts to install Signal — it only works when both sides use it",
+                "3": "Invite your key contacts to install Signal: it only works when both sides use it",
                 "4": "Verify safety numbers with critical contacts by scanning QR codes in person"
               }
             },
@@ -1140,7 +1140,7 @@
                 "1": "Set up two-factor authentication immediately in Settings → Security",
                 "2": "Install the Proton Mail app on your phone",
                 "3": "Begin forwarding important accounts to your new address",
-                "4": "For maximum security, email other Proton users — that enables full end-to-end encryption"
+                "4": "For maximum security, email other Proton users: that enables full end-to-end encryption"
               }
             },
             "disappearing-messages": {
@@ -1162,7 +1162,7 @@
                 "0": "Choose a server: VPS (recommended) or Raspberry Pi for local-only",
                 "1": "Install Matrix Synapse following the official quickstart guide",
                 "2": "Configure SSL/TLS with Let's Encrypt for encrypted connections",
-                "3": "Create user accounts for your group — avoid using real names as usernames",
+                "3": "Create user accounts for your group: avoid using real names as usernames",
                 "4": "Install Element app on all member devices and connect to your server",
                 "5": "Enable end-to-end encryption in room settings for all rooms",
                 "6": "Set up key backup so members don't lose message history on new devices"
@@ -1173,10 +1173,10 @@
               "description": "Route your web traffic through multiple encrypted layers so no one can trace your browsing back to you.",
               "protects": "Prevents ISPs, networks, and websites from identifying you or tracking your location",
               "steps": {
-                "0": "Download Tor Browser from torproject.org — verify the download signature",
-                "1": "Run Tor Browser — it connects automatically. If censored, use bridge relays",
-                "2": "Never maximize the window — browser fingerprinting uses window size",
-                "3": "Don't log into personal accounts through Tor — it defeats anonymity",
+                "0": "Download Tor Browser from torproject.org: verify the download signature",
+                "1": "Run Tor Browser: it connects automatically. If censored, use bridge relays",
+                "2": "Never maximize the window: browser fingerprinting uses window size",
+                "3": "Don't log into personal accounts through Tor: it defeats anonymity",
                 "4": "For censored regions: Settings → Connection → use obfs4 or Snowflake bridges"
               }
             },
@@ -1190,17 +1190,17 @@
                 "2": "Export your public key and share it with contacts (or upload to a keyserver)",
                 "3": "Import your contacts' public keys",
                 "4": "Compose encrypted emails using your email client's PGP plugin",
-                "5": "Back up your private key securely — losing it means losing access to all encrypted mail"
+                "5": "Back up your private key securely: losing it means losing access to all encrypted mail"
               }
             },
             "briar-mesh": {
               "title": "Peer-to-Peer Messaging Without Internet",
-              "description": "Briar connects directly via Bluetooth, WiFi, or Tor — no internet, no servers, no infrastructure needed.",
+              "description": "Briar connects directly via Bluetooth, WiFi, or Tor: no internet, no servers, no infrastructure needed.",
               "protects": "Enables communication when internet is shut down or heavily monitored",
               "steps": {
                 "0": "Install Briar from F-Droid (recommended) or Google Play on Android",
-                "1": "Create your account — it's stored only on your device, no server",
-                "2": "Add contacts by meeting in person and scanning QR codes — this is the only way",
+                "1": "Create your account: it's stored only on your device, no server",
+                "2": "Add contacts by meeting in person and scanning QR codes: this is the only way",
                 "3": "For nearby communication: enable Bluetooth and WiFi in Briar settings",
                 "4": "Messages sync whenever you're in range or both online via Tor"
               }
@@ -1214,9 +1214,9 @@
                 "1": "Flash Meshtastic firmware using the web flasher at flasher.meshtastic.org",
                 "2": "Configure your device: set region, channel name, and encryption key",
                 "3": "Install the Meshtastic app on your phone and connect via Bluetooth",
-                "4": "Distribute devices to your network — each node extends range by relaying messages",
+                "4": "Distribute devices to your network: each node extends range by relaying messages",
                 "5": "Place nodes at high points for maximum coverage (windows, rooftops)",
-                "6": "Test range and adjust antenna positioning — typical range is 1-10km per hop"
+                "6": "Test range and adjust antenna positioning: typical range is 1-10km per hop"
               }
             },
             "onion-service": {
@@ -1247,10 +1247,10 @@
               "protects": "Makes files unreadable without your password, even if storage is seized or breached",
               "steps": {
                 "0": "Download Cryptomator from cryptomator.org (desktop) or your app store (mobile)",
-                "1": "Create a new vault — choose a location in your cloud storage folder (Dropbox, Google Drive, etc.)",
-                "2": "Set a strong passphrase — at least 20 characters, mix of words and symbols",
+                "1": "Create a new vault: choose a location in your cloud storage folder (Dropbox, Google Drive, etc.)",
+                "2": "Set a strong passphrase: at least 20 characters, mix of words and symbols",
                 "3": "Move your sensitive files into the unlocked vault",
-                "4": "Files are encrypted automatically — lock the vault when not in use"
+                "4": "Files are encrypted automatically: lock the vault when not in use"
               }
             },
             "backup-321": {
@@ -1260,7 +1260,7 @@
               "steps": {
                 "0": "Identify your critical files: documents, photos, evidence, contacts, credentials",
                 "1": "Copy 1: Keep originals on your primary device",
-                "2": "Copy 2: External drive or USB — encrypt with VeraCrypt or Cryptomator",
+                "2": "Copy 2: External drive or USB: encrypt with VeraCrypt or Cryptomator",
                 "3": "Copy 3: Encrypted cloud backup OR give an encrypted drive to a trusted person in another location",
                 "4": "Test restoring from each backup at least once",
                 "5": "Set a calendar reminder to update backups weekly"
@@ -1272,35 +1272,35 @@
               "protects": "Creates verifiable evidence that can withstand legal scrutiny and proves it hasn't been tampered with",
               "steps": {
                 "0": "Install ProofMode from Google Play or F-Droid on Android",
-                "1": "Enable it — it runs in the background and adds cryptographic signatures to every photo/video",
+                "1": "Enable it: it runs in the background and adds cryptographic signatures to every photo/video",
                 "2": "When documenting: capture steadily, include context (street signs, landmarks, timestamps)",
-                "3": "Export proof bundles — they include hash signatures, GPS data, and device info",
+                "3": "Export proof bundles: they include hash signatures, GPS data, and device info",
                 "4": "Send proof bundles to multiple trusted recipients immediately"
               }
             },
             "veracrypt-volume": {
               "title": "Create Hidden Encrypted Volumes",
-              "description": "VeraCrypt creates encrypted containers with a hidden volume feature — you can have a decoy password and a real one.",
-              "protects": "Provides plausible deniability — even under coercion, the hidden volume is undetectable",
+              "description": "VeraCrypt creates encrypted containers with a hidden volume feature: you can have a decoy password and a real one.",
+              "protects": "Provides plausible deniability: even under coercion, the hidden volume is undetectable",
               "steps": {
-                "0": "Download VeraCrypt from veracrypt.fr — verify the PGP signature",
+                "0": "Download VeraCrypt from veracrypt.fr: verify the PGP signature",
                 "1": "Create a new volume: choose 'Create an encrypted file container'",
                 "2": "Select 'Hidden VeraCrypt volume' for plausible deniability",
                 "3": "Set up the outer (decoy) volume with a simple password and harmless files",
                 "4": "Set up the inner (real) volume with a strong passphrase and your sensitive files",
-                "5": "The outer password opens the decoy — the inner password opens the real data",
-                "6": "Never mount both volumes simultaneously — it can damage the hidden volume"
+                "5": "The outer password opens the decoy: the inner password opens the real data",
+                "6": "Never mount both volumes simultaneously: it can damage the hidden volume"
               }
             },
             "ipfs-pin": {
               "title": "Distribute Files on IPFS",
               "description": "Pin files to IPFS so they're distributed across multiple nodes. No single server to seize or shut down.",
-              "protects": "Makes data virtually impossible to delete — as long as one node has it, it exists",
+              "protects": "Makes data virtually impossible to delete: as long as one node has it, it exists",
               "steps": {
                 "0": "Install IPFS Desktop from github.com/ipfs/ipfs-desktop",
-                "1": "Start your IPFS node — it joins the global network automatically",
+                "1": "Start your IPFS node: it joins the global network automatically",
                 "2": "Add files: drag into IPFS Desktop or use 'ipfs add' command",
-                "3": "Share the CID (Content Identifier) — this is the permanent address of your file",
+                "3": "Share the CID (Content Identifier): this is the permanent address of your file",
                 "4": "Ask trusted allies to pin your CID on their nodes: ipfs pin add <CID>",
                 "5": "Consider using a pinning service (Pinata, web3.storage) for persistence"
               }
@@ -1313,8 +1313,8 @@
                 "0": "Record: who captured it, when, where, what device, what conditions",
                 "1": "Hash the original file immediately: sha256sum filename > filename.sha256",
                 "2": "Document every transfer: who sent it, who received it, when, through what channel",
-                "3": "Store the hash separately from the file — publish it if possible (tweet it, email it to multiple people)",
-                "4": "Never edit originals — work only on copies and document which is which"
+                "3": "Store the hash separately from the file: publish it if possible (tweet it, email it to multiple people)",
+                "4": "Never edit originals: work only on copies and document which is which"
               }
             },
             "securedrop-deploy": {
@@ -1334,14 +1334,14 @@
             "air-gapped-archive": {
               "title": "Air-Gapped Archival System",
               "description": "Create a computer that has never and will never connect to any network, dedicated to storing sensitive archives.",
-              "protects": "Makes remote access or exfiltration physically impossible — data only moves via physical media",
+              "protects": "Makes remote access or exfiltration physically impossible: data only moves via physical media",
               "steps": {
-                "0": "Obtain a dedicated laptop — remove or disable WiFi and Bluetooth hardware",
-                "1": "Install Tails OS from a verified USB — it leaves no trace on the hard drive",
+                "0": "Obtain a dedicated laptop: remove or disable WiFi and Bluetooth hardware",
+                "1": "Install Tails OS from a verified USB: it leaves no trace on the hard drive",
                 "2": "Create encrypted persistent storage on a separate USB drive",
-                "3": "Transfer files using a dedicated USB drive — scan it on an intermediary machine first",
+                "3": "Transfer files using a dedicated USB drive: scan it on an intermediary machine first",
                 "4": "Store the archive machine and USB drives in a physically secure location",
-                "5": "Document access procedures — who can access, under what circumstances"
+                "5": "Document access procedures: who can access, under what circumstances"
               }
             },
             "distributed-evidence": {
@@ -1352,7 +1352,7 @@
                 "0": "Identify 5+ trusted individuals or organizations willing to host evidence nodes",
                 "1": "Set up IPFS nodes at each location with pinning agreements",
                 "2": "Establish encryption: each node gets a GPG key, evidence is encrypted before distribution",
-                "3": "Create a hash registry — a shared, append-only log of all evidence hashes",
+                "3": "Create a hash registry: a shared, append-only log of all evidence hashes",
                 "4": "Distribute encrypted evidence across all nodes with geographic diversity",
                 "5": "Test recovery: verify any 3 nodes can reconstruct the full archive",
                 "6": "Establish regular verification: nodes periodically confirm they still hold all pinned content"
@@ -1371,8 +1371,8 @@
               "description": "Replace cloud-dependent apps with ones that store data on your device first. Works offline, syncs when possible.",
               "protects": "Ensures access to your data even without internet, and keeps it off corporate servers",
               "steps": {
-                "0": "Install Standard Notes (standardnotes.com) — replaces Google Keep, Apple Notes",
-                "1": "Install Joplin (joplinapp.org) — replaces Evernote, OneNote, with Markdown support",
+                "0": "Install Standard Notes (standardnotes.com): replaces Google Keep, Apple Notes",
+                "1": "Install Joplin (joplinapp.org): replaces Evernote, OneNote, with Markdown support",
                 "2": "Export your existing notes from cloud services",
                 "3": "Import into your new local-first apps",
                 "4": "Set up encrypted sync between devices if needed (Joplin supports Nextcloud, Dropbox, OneDrive)"
@@ -1383,11 +1383,11 @@
               "description": "Mullvad VPN accepts cash payment, requires no email, and has been independently audited. They can't identify you even if compelled.",
               "protects": "Hides your internet traffic from your ISP, network operator, and local surveillance",
               "steps": {
-                "0": "Go to mullvad.net — generate an account number (no email required)",
-                "1": "Pay with cash, cryptocurrency, or card — cash is most anonymous",
+                "0": "Go to mullvad.net: generate an account number (no email required)",
+                "1": "Pay with cash, cryptocurrency, or card: cash is most anonymous",
                 "2": "Download the Mullvad app for your platform",
                 "3": "Enter your account number and connect",
-                "4": "Enable kill switch: if VPN drops, all internet stops — prevents accidental exposure"
+                "4": "Enable kill switch: if VPN drops, all internet stops: prevents accidental exposure"
               }
             },
             "dns-privacy": {
@@ -1403,7 +1403,7 @@
             },
             "nextcloud-deploy": {
               "title": "Self-Host Cloud Storage",
-              "description": "Run your own Nextcloud server — full replacement for Google Drive, Calendar, Contacts, and more.",
+              "description": "Run your own Nextcloud server: full replacement for Google Drive, Calendar, Contacts, and more.",
               "protects": "Keeps all your files, contacts, and calendar on hardware you control",
               "steps": {
                 "0": "Choose hosting: VPS ($5-10/month), Raspberry Pi (one-time cost), or old PC",
@@ -1417,8 +1417,8 @@
             },
             "wireguard-vpn": {
               "title": "Run Your Own VPN",
-              "description": "Deploy WireGuard on a VPS you control. No VPN provider to trust — you own the whole tunnel.",
-              "protects": "Full control over your VPN — no provider logs, no third-party trust required",
+              "description": "Deploy WireGuard on a VPS you control. No VPN provider to trust: you own the whole tunnel.",
+              "protects": "Full control over your VPN: no provider logs, no third-party trust required",
               "steps": {
                 "0": "Get a VPS in a privacy-friendly jurisdiction ($5/month from any provider)",
                 "1": "Install WireGuard: sudo apt install wireguard",
@@ -1438,7 +1438,7 @@
                 "1": "Install Pi-hole: curl -sSL https://install.pi-hole.net | bash",
                 "2": "Point your router's DHCP DNS settings to the Pi-hole's IP address",
                 "3": "Add community blocklists for ads, trackers, and malware domains",
-                "4": "Monitor the dashboard — you'll see how much tracking was happening",
+                "4": "Monitor the dashboard: you'll see how much tracking was happening",
                 "5": "Share DNS access with neighbors to extend protection"
               }
             },
@@ -1453,7 +1453,7 @@
                 "3": "Configure mesh protocol (Batman-adv or 802.11s)",
                 "4": "Install directional antennas for building-to-building links",
                 "5": "Set up local services: DNS, file sharing, messaging on the mesh",
-                "6": "Add internet gateways if desired — multiple uplinks for redundancy",
+                "6": "Add internet gateways if desired: multiple uplinks for redundancy",
                 "7": "Document the network and train community members to maintain it"
               }
             },
@@ -1473,7 +1473,7 @@
             },
             "offgrid-compute": {
               "title": "Off-Grid Compute Nodes",
-              "description": "Set up computing infrastructure that runs on solar power and connects via mesh — fully independent of the grid.",
+              "description": "Set up computing infrastructure that runs on solar power and connects via mesh: fully independent of the grid.",
               "protects": "Ensures computing capability survives power outages, grid shutdowns, and infrastructure attacks",
               "steps": {
                 "0": "Acquire low-power hardware: Raspberry Pi 4/5 or similar SBC",
@@ -1502,7 +1502,7 @@
                 "2": "Assess capabilities: what can each adversary actually do? (subpoena records, deploy malware, physical surveillance)",
                 "3": "Identify vulnerabilities: where are you currently exposed?",
                 "4": "Prioritize: what's the most likely threat? What has the worst consequences?",
-                "5": "Choose your tools based on your actual threat model — not paranoia, not complacency"
+                "5": "Choose your tools based on your actual threat model: not paranoia, not complacency"
               }
             },
             "device-security": {
@@ -1511,7 +1511,7 @@
               "protects": "Reduces what can be extracted if a device is seized, stolen, or infected",
               "steps": {
                 "0": "Enable full-disk encryption (FileVault on Mac, BitLocker on Windows, default on modern iOS/Android)",
-                "1": "Set a strong passcode — 6+ digits on phone, passphrase on computer. Disable biometrics for border crossings",
+                "1": "Set a strong passcode: 6+ digits on phone, passphrase on computer. Disable biometrics for border crossings",
                 "2": "Enable automatic updates on all devices",
                 "3": "Review app permissions: revoke camera, microphone, location for apps that don't need them",
                 "4": "Disable USB accessories when locked (iOS: Settings → Face ID → USB Accessories off)",
@@ -1520,12 +1520,12 @@
             },
             "metadata-awareness": {
               "title": "Understand Metadata Exposure",
-              "description": "Message content may be encrypted, but metadata — who, when, where, how often — tells its own story. Learn what you're leaking.",
-              "protects": "Helps you understand that encryption alone isn't enough — patterns reveal relationships and activities",
+              "description": "Message content may be encrypted, but metadata: who, when, where, how often: tells its own story. Learn what you're leaking.",
+              "protects": "Helps you understand that encryption alone isn't enough: patterns reveal relationships and activities",
               "steps": {
                 "0": "Check a photo's metadata: right-click → Properties (Windows) or use ExifTool. See GPS coordinates, device info, timestamps",
                 "1": "Understand call metadata: your phone company logs every number you call, when, and for how long",
-                "2": "Review location services: Settings → Privacy → Location — see which apps track you",
+                "2": "Review location services: Settings → Privacy → Location: see which apps track you",
                 "3": "Check Google's record: myactivity.google.com shows everything Google logged",
                 "4": "Strip photo metadata before sharing: use ExifTool or a metadata removal app"
               }
@@ -1533,14 +1533,14 @@
             "tails-usb": {
               "title": "Boot Tails for Amnesic Computing",
               "description": "Tails is a portable OS that runs from USB, routes everything through Tor, and leaves zero trace on the computer.",
-              "protects": "Leaves no forensic evidence on the host computer — perfect for sensitive work on shared or seized machines",
+              "protects": "Leaves no forensic evidence on the host computer: perfect for sensitive work on shared or seized machines",
               "steps": {
-                "0": "Download Tails from tails.net — verify the download using the provided verification tool",
+                "0": "Download Tails from tails.net: verify the download using the provided verification tool",
                 "1": "Flash to USB drive (8GB minimum) using balenaEtcher or the Tails installer",
                 "2": "Boot from USB: restart computer, press F12/F2/Option to select boot device",
-                "3": "Configure persistent storage if needed — encrypted with a passphrase",
-                "4": "All internet traffic goes through Tor automatically — no configuration needed",
-                "5": "When done, remove USB and restart — the computer has no record of your session"
+                "3": "Configure persistent storage if needed: encrypted with a passphrase",
+                "4": "All internet traffic goes through Tor automatically: no configuration needed",
+                "5": "When done, remove USB and restart: the computer has no record of your session"
               }
             },
             "compartmentalization": {
@@ -1548,9 +1548,9 @@
               "description": "Separate your digital identities so compromising one doesn't reveal the others. Different browsers, accounts, devices for different roles.",
               "protects": "Prevents a single compromise from unraveling all your activities and connections",
               "steps": {
-                "0": "Map your roles: personal, professional, activist, anonymous — each gets separate treatment",
+                "0": "Map your roles: personal, professional, activist, anonymous. Each gets separate treatment",
                 "1": "Use different browsers for different roles (Firefox for personal, Tor for anonymous, Brave for professional)",
-                "2": "Create separate email addresses for each role — different providers",
+                "2": "Create separate email addresses for each role: different providers",
                 "3": "Never cross-contaminate: don't log into a personal account from an anonymous browser",
                 "4": "Consider separate devices for high-risk activities",
                 "5": "Use different VPN servers or Tor for different identities"
@@ -1561,7 +1561,7 @@
               "description": "How to acquire and use prepaid phones without connecting them to your real identity.",
               "protects": "Provides a communication channel that can't be traced back to you",
               "steps": {
-                "0": "Buy a prepaid phone with cash at a store away from your usual area — no ID required in most states",
+                "0": "Buy a prepaid phone with cash at a store away from your usual area: no ID required in most states",
                 "1": "Buy a prepaid SIM with cash separately",
                 "2": "Activate the phone away from your home and regular locations",
                 "3": "Never connect to your home WiFi or use near your regular devices",
@@ -1577,8 +1577,8 @@
                 "0": "Vary your timing: don't establish predictable patterns for sensitive activities",
                 "1": "Use cover traffic: mix sensitive communications with routine ones",
                 "2": "Understand timing correlation: if you post anonymously while your real IP is active, patterns emerge",
-                "3": "Use Tor with Tails for high-sensitivity work — never from your home network",
-                "4": "Assume your phone is a tracking device — leave it behind for sensitive meetings",
+                "3": "Use Tor with Tails for high-sensitivity work: never from your home network",
+                "4": "Assume your phone is a tracking device: leave it behind for sensitive meetings",
                 "5": "Practice information compartmentalization: different people know different pieces, no one knows everything"
               }
             },
@@ -1592,7 +1592,7 @@
                 "2": "Check for unknown devices on your network regularly (use Fing or nmap)",
                 "3": "Be aware of IMSI catchers (Stingrays): sudden signal drops + reconnection, unusual signal strength",
                 "4": "For meetings: leave phones in another room or in a Faraday bag",
-                "5": "Establish distress signals with trusted contacts — a code word that means 'I'm compromised'"
+                "5": "Establish distress signals with trusted contacts: a code word that means 'I'm compromised'"
               }
             },
             "travel-security": {
@@ -1601,8 +1601,8 @@
               "protects": "Limits exposure during border searches and device seizures while traveling",
               "steps": {
                 "0": "Back up everything, then wipe sensitive data from travel devices",
-                "1": "Use a travel-only device if possible — minimal apps, no sensitive data",
-                "2": "Store sensitive data in encrypted cloud storage — download at destination, not at border",
+                "1": "Use a travel-only device if possible: minimal apps, no sensitive data",
+                "2": "Store sensitive data in encrypted cloud storage: download at destination, not at border",
                 "3": "Disable biometrics before crossing borders (police can compel fingerprint, not passcode in the US)",
                 "4": "Know your rights: in the US, you can refuse to unlock devices at the border, but they can seize them",
                 "5": "After crossing: change passwords used on any device that was out of your sight"
@@ -1622,7 +1622,7 @@
               "protects": "Gives your group an encrypted, reliable communication channel that's easy for everyone to use",
               "steps": {
                 "0": "Have all members install Signal and verify it's working",
-                "1": "Create the group — give it a non-descriptive name",
+                "1": "Create the group: give it a non-descriptive name",
                 "2": "Enable disappearing messages (set timer based on your threat model)",
                 "3": "Set group permissions: only admins can add members or edit group info",
                 "4": "Establish group norms: what's discussed here, what isn't, when to use it"
@@ -1647,7 +1647,7 @@
               "protects": "Enables coordinated response when things go wrong, instead of panic and confusion",
               "steps": {
                 "0": "Create a buddy system: everyone has a check-in partner",
-                "1": "Set check-in schedule: daily or event-based — missed check-in triggers protocol",
+                "1": "Set check-in schedule: daily or event-based: missed check-in triggers protocol",
                 "2": "Establish a legal support hotline: have a lawyer's number everyone has memorized",
                 "3": "Create a 'duress' signal: a code word in normal conversation that means 'I'm compromised'",
                 "4": "Document the protocol and ensure everyone has a physical copy"
@@ -1658,11 +1658,11 @@
               "description": "Set up self-hosted collaboration tools so your coordination doesn't depend on Google, Microsoft, or any company.",
               "protects": "Prevents service shutdowns, subpoenas, or corporate policy changes from disrupting your work",
               "steps": {
-                "0": "Deploy CryptPad (cryptpad.org) — encrypted documents, spreadsheets, and forms",
+                "0": "Deploy CryptPad (cryptpad.org): encrypted documents, spreadsheets, and forms",
                 "1": "Set up OnlyOffice or Nextcloud Office for document collaboration",
                 "2": "Use Jitsi Meet for video calls instead of Zoom (meet.jit.si or self-host)",
                 "3": "Migrate shared documents off Google Docs and Dropbox",
-                "4": "Train all members on the new tools — adoption requires support, not just access",
+                "4": "Train all members on the new tools: adoption requires support, not just access",
                 "5": "Establish backup access: ensure multiple people can administer each service"
               }
             },
@@ -1671,22 +1671,22 @@
               "description": "Establish verified trust relationships so you know who you're communicating with and can vouch for new members.",
               "protects": "Prevents infiltration and impersonation by verifying identity through human relationships",
               "steps": {
-                "0": "Verify core members in person — exchange Signal safety numbers, PGP keys",
+                "0": "Verify core members in person: exchange Signal safety numbers, PGP keys",
                 "1": "Establish a vouching system: new members need 2+ existing members to vouch",
-                "2": "Share sensitive information on a need-to-know basis — not everyone needs everything",
+                "2": "Share sensitive information on a need-to-know basis: not everyone needs everything",
                 "3": "Regular key verification: periodically re-verify safety numbers and keys",
                 "4": "Create a secure onboarding process for new members that includes tool setup"
               }
             },
             "secure-meetings": {
               "title": "Conduct Secure Meetings",
-              "description": "Hold meetings that are secure both physically and digitally — from choosing locations to managing devices.",
+              "description": "Hold meetings that are secure both physically and digitally, from choosing locations to managing devices.",
               "protects": "Prevents surveillance of your meetings and protects attendee identities",
               "steps": {
                 "0": "Choose locations without surveillance cameras and with multiple exits",
                 "1": "All attendees leave phones in a separate room or Faraday bags",
                 "2": "For virtual meetings: use Jitsi Meet with a new room name each time, no accounts required",
-                "3": "Don't take notes on connected devices — use paper, photograph later if needed",
+                "3": "Don't take notes on connected devices: use paper, photograph later if needed",
                 "4": "Vary meeting times, locations, and routes to prevent pattern analysis"
               }
             },
@@ -1697,7 +1697,7 @@
               "steps": {
                 "0": "Divide your organization into cells of 3-7 people with specific functions",
                 "1": "Each cell has one liaison who communicates with the coordination layer",
-                "2": "Cells don't know each other's members — only liaisons have cross-cell contact",
+                "2": "Cells don't know each other's members: only liaisons have cross-cell contact",
                 "3": "Use separate communication channels for each cell",
                 "4": "If a cell is compromised: other cells continue operating independently",
                 "5": "Regularly rotate liaison roles to prevent single points of failure"
@@ -1713,7 +1713,7 @@
                 "2": "Rotate responsibilities regularly so experience is distributed",
                 "3": "Establish succession protocols: if a leader is arrested, who steps up automatically?",
                 "4": "Maintain encrypted, distributed copies of critical organizational documents",
-                "5": "Practice operating without key leaders — run exercises where leaders are 'removed'"
+                "5": "Practice operating without key leaders: run exercises where leaders are 'removed'"
               }
             },
             "counter-infiltration": {
@@ -1722,10 +1722,10 @@
               "protects": "Protects the organization from agents provocateurs, informants, and surveillance operatives",
               "steps": {
                 "0": "Know the patterns: infiltrators often push for illegal actions, create conflict, or gather personal information",
-                "1": "Vet new members through the trust network — require vouching, take time",
+                "1": "Vet new members through the trust network: require vouching, take time",
                 "2": "Compartmentalize information: no one person should know everything",
                 "3": "Be wary of anyone who asks excessive questions about other members or operations",
-                "4": "If you suspect infiltration: don't confront — limit the suspect's access and consult legal counsel",
+                "4": "If you suspect infiltration: don't confront: limit the suspect's access and consult legal counsel",
                 "5": "Remember: the goal isn't paranoia, it's proportional caution based on your threat model"
               }
             }
@@ -1962,19 +1962,19 @@
     "tpVercel": "Se utiliza para alojar y desplegar este sitio web. Vercel puede registrar metadatos de solicitudes (direcciones IP, agentes de usuario) por motivos de seguridad y rendimiento.",
     "cookiesTitle": "Cookies",
     "cookiesIntro": "Este sitio utiliza un número mínimo de cookies:",
-    "cookie1": "Cookie de sesión — mantiene el estado durante una única visita. Se elimina al cerrar el navegador.",
-    "cookie2": "Cookie de idioma — recuerda tu preferencia de idioma entre visitas.",
+    "cookie1": "Cookie de sesión: mantiene el estado durante una única visita. Se elimina al cerrar el navegador.",
+    "cookie2": "Cookie de idioma: recuerda tu preferencia de idioma entre visitas.",
     "cookiesNote": "No utilizamos cookies publicitarias, píxeles de seguimiento ni ninguna tecnología de rastreo entre sitios.",
     "retentionTitle": "Retención de Datos",
     "retention1": "Los datos de analítica anonimizados se conservan durante un máximo de 12 meses y luego se eliminan. Los envíos del formulario de contacto se conservan solo el tiempo necesario para responder a tu consulta.",
     "retention2": "Las entradas enviadas a la herramienta K-12 no se almacenan tras el procesamiento. No se conserva ningún dato de sesión de planificación curricular en nuestros servidores.",
     "rightsTitle": "Tus Derechos",
     "rightsIntro": "Si te encuentras en la UE u otra jurisdicción con leyes de protección de datos, tienes los siguientes derechos:",
-    "right1": "Acceso — solicitar una copia de cualquier dato personal que tengamos sobre ti",
-    "right2": "Eliminación — solicitar que se eliminen tus datos",
-    "right3": "Corrección — solicitar que se corrijan los datos inexactos",
-    "right4": "Portabilidad — solicitar tus datos en un formato portátil",
-    "right5": "Oposición — oponerte a ciertos usos de tus datos",
+    "right1": "Acceso: solicitar una copia de cualquier dato personal que tengamos sobre ti",
+    "right2": "Eliminación: solicitar que se eliminen tus datos",
+    "right3": "Corrección: solicitar que se corrijan los datos inexactos",
+    "right4": "Portabilidad: solicitar tus datos en un formato portátil",
+    "right5": "Oposición: oponerte a ciertos usos de tus datos",
     "contactTitle": "¿Preguntas?",
     "contactText": "Si tienes alguna pregunta sobre esta política de privacidad o deseas ejercer tus derechos sobre los datos, contáctanos en:"
   },
@@ -1996,14 +1996,14 @@
       "loading": "Loading calculator… [TODO-TRANSLATE]"
     },
     "scenarioGrid": {
-      "emptyGroup": "No scenarios yet — content coming in Phase B. [TODO-TRANSLATE]"
+      "emptyGroup": "No scenarios yet: content coming in Phase B. [TODO-TRANSLATE]"
     },
     "resultView": {
       "monthlyTrueCost": "MONTHLY TRUE COST [TODO-TRANSLATE]",
       "youPay": "You pay [TODO-TRANSLATE]",
       "trueCost": "True cost [TODO-TRANSLATE]",
       "subsidizedLabel": "You are being subsidized [TODO-TRANSLATE]",
-      "subsidizedDetail": "Someone else covers {amount}/month of your costs — a {multiple}× subsidy on what you pay. [TODO-TRANSLATE]",
+      "subsidizedDetail": "Someone else covers {amount}/month of your costs: a {multiple}× subsidy on what you pay. [TODO-TRANSLATE]",
       "doubleSubsidyTitle": "Double-subsidy stack [TODO-TRANSLATE]",
       "doubleSubsidyIntro": "{product} is built on top of {wrapped}. You're receiving subsidies from two layers simultaneously. [TODO-TRANSLATE]",
       "subsidyLayer": "{name} subsidy [TODO-TRANSLATE]",
@@ -2034,24 +2034,24 @@
     },
     "methodologyPage": {
       "title": "Methodology | AI True Cost | Jamelna [TODO-TRANSLATE]",
-      "description": "How we calculate the true unsubsidized cost of AI products — definitions, formulas, sources, and assumptions. [TODO-TRANSLATE]",
+      "description": "How we calculate the true unsubsidized cost of AI products: definitions, formulas, sources, and assumptions. [TODO-TRANSLATE]",
       "backLink": "Back to True Cost Calculator [TODO-TRANSLATE]",
       "heading": "Methodology [TODO-TRANSLATE]",
       "phaseBNotice": "Methodology is being drafted (Phase B) [TODO-TRANSLATE]",
-      "phaseBDetail": "The full methodology essay — covering how we calculate each of the five cost components, our assumptions, sensitivity analysis, and honest caveats — will be published alongside the first real cost numbers in Phase B. [TODO-TRANSLATE]"
+      "phaseBDetail": "The full methodology essay: covering how we calculate each of the five cost components, our assumptions, sensitivity analysis, and honest caveats: will be published alongside the first real cost numbers in Phase B. [TODO-TRANSLATE]"
     }
   },
   "anchorAndSteer": {
     "hero": {
       "kicker": "Un Marco de Diseño Centrado en el Ser Humano para la IA en Educación",
       "title": "Anchor & STEER",
-      "tagline": "La IA en educación debe ampliar el alcance, el juicio y la intención pedagógica del docente — nunca eludirlos.",
+      "tagline": "La IA en educación debe ampliar el alcance, el juicio y la intención pedagógica del docente: nunca eludirlos.",
       "byline": "Por Joe Alexander Meléndez-Naharro",
       "credits": "Desarrollado a partir de la experiencia liderando programas de educación en informática, formando docentes y construyendo herramientas de IA para aulas K-12."
     },
     "corePrinciple": {
       "label": "Principio Central",
-      "body": "La IA en educación debe ampliar el alcance, el juicio y la intención pedagógica del docente — nunca eludirlos. Cada acción de la IA debe ser trazable hasta los objetivos, preferencias o aprobación explícita del docente.",
+      "body": "La IA en educación debe ampliar el alcance, el juicio y la intención pedagógica del docente: nunca eludirlos. Cada acción de la IA debe ser trazable hasta los objetivos, preferencias o aprobación explícita del docente.",
       "nonNegotiablesLabel": "Dos Principios Innegociables",
       "humanInLoopTitle": "El humano permanece en el bucle.",
       "humanInLoopBody": "El docente es el diseñador operativo del aprendizaje. Su juicio es lo que el sistema está construido para apoyar, no para reemplazar.",
@@ -2064,7 +2064,7 @@
       "p1Wrong": "¿Qué puede hacer la IA?",
       "p1Mid": " en lugar de ",
       "p1Right": "¿Dónde están luchando realmente los docentes, y qué les ayudaría de verdad?",
-      "p2": "Lo he visto de primera mano. Herramientas que demuestran de maravilla pero acumulan polvo en aulas reales. Herramientas que automatizan lo que no debían. Herramientas que toman decisiones sobre estudiantes sin que el docente entienda por qué — o peor, sin que siquiera lo sepa.",
+      "p2": "Lo he visto de primera mano. Herramientas que demuestran de maravilla pero acumulan polvo en aulas reales. Herramientas que automatizan lo que no debían. Herramientas que toman decisiones sobre estudiantes sin que el docente entienda por qué, o peor, sin que siquiera lo sepa.",
       "p3": "El problema no es la tecnología. Es el punto de partida. Cuando empiezas por las capacidades de la IA en lugar de la realidad del docente, construyes software impresionante en el que nadie confía lo suficiente como para usarlo.",
       "p4Pre": "Anchor & STEER es la alternativa que desarrollé. Un marco de diseño arraigado en el design thinking que comienza donde comienza el diseño centrado en el ser humano: con empatía. Observa a los docentes. Comprende sus restricciones reales. Define el problema desde su perspectiva. ",
       "p4Then": "Después",
@@ -2072,7 +2072,7 @@
     },
     "designThinking": {
       "title": "Arraigado en el Design Thinking",
-      "intro": "Cada capa del marco corresponde a una mentalidad de design thinking — anclando la colaboración entre IA y docente en principios centrados en el ser humano.",
+      "intro": "Cada capa del marco corresponde a una mentalidad de design thinking: anclando la colaboración entre IA y docente en principios centrados en el ser humano.",
       "anchorCardTitle": "ANCHOR = Empatizar + Definir",
       "anchorCardSubtitle": "Antes de construir, comprende",
       "empathizeLabel": "Empatizar",
@@ -2088,7 +2088,7 @@
       "testLabel": "Probar",
       "testText": "Construye bucles reflexivos para que cada interacción enseñe al sistema y al docente. Itera continuamente.",
       "keyDifferenceLabel": "La diferencia clave:",
-      "keyDifferenceBody": "El design thinking típicamente empatiza con los usuarios finales. Anchor & STEER te pide empatizar con los docentes — porque en la EdTech con IA, el docente debe entenderse como el diseñador de la experiencia de aprendizaje, no como un intermediario pasivo.",
+      "keyDifferenceBody": "El design thinking típicamente empatiza con los usuarios finales. Anchor & STEER te pide empatizar con los docentes: porque en la EdTech con IA, el docente debe entenderse como el diseñador de la experiencia de aprendizaje, no como un intermediario pasivo.",
       "keyDifferenceEndUsers": "usuarios finales",
       "keyDifferenceTeachers": "docentes"
     },
@@ -2098,46 +2098,46 @@
         {
           "type": "failure",
           "mode": "Marcos a Medio Construir",
-          "description": "Navegar (STEER) sin anclar (Anchor) construye IA impresionante que nadie adopta — tecnología sofisticada que no encaja con la práctica real. Anclar sin navegar comprende el problema en profundidad pero diseña una colaboración torpe con la que los docentes no pueden trabajar día a día. En cualquiera de los dos casos, el marco está a medio construir."
+          "description": "Navegar (STEER) sin anclar (Anchor) construye IA impresionante que nadie adopta: tecnología sofisticada que no encaja con la práctica real. Anclar sin navegar comprende el problema en profundidad pero diseña una colaboración torpe con la que los docentes no pueden trabajar día a día. En cualquiera de los dos casos, el marco está a medio construir."
         },
         {
           "type": "success",
           "mode": "Anchor & STEER Juntos",
-          "description": "Fundamenta cada función en necesidades reales del docente, y luego diseña una colaboración humano-IA cuidadosa a través de cinco dimensiones. El docente queda amplificado — más capaz, más informado, más eficaz — sin volverse dependiente."
+          "description": "Fundamenta cada función en necesidades reales del docente, y luego diseña una colaboración humano-IA cuidadosa a través de cinco dimensiones. El docente queda amplificado: más capaz, más informado, más eficaz, sin volverse dependiente."
         }
       ]
     },
     "frameworkStructure": {
       "title": "Estructura del Marco",
       "designLayer": "Capa de Diseño",
-      "foundationLabel": "Anchor — Capa de Fundamento",
+      "foundationLabel": "Anchor: Capa de Fundamento",
       "foundationBody": "Fundamenta cada función de IA en necesidades reales del docente. ¿Mejora una habilidad profesional? ¿Resuelve un problema sentido? ¿Construye capacidad, no dependencia?"
     },
     "anchorSection": {
       "title": "ANCHOR: Fundamenta Antes de Construir",
-      "intro1": "Antes de aplicar STEER, cada función de IA debe pasar una prueba de umbral. Piénsalo en términos náuticos — un barco que solo navega va a la deriva sin propósito. Anclas para entender tu posición, y luego navegas con intención.",
-      "intro2": "Anclar es trabajo de evidencia. No fijas una posición desde un solo avistamiento — triangulas. Los docentes están al timón, pero la carta náutica se traza con muchas lecturas: docentes, administración escolar y de distrito, estudiantes, familias y la comunidad alrededor de la escuela. El docente actúa sobre lo que aprendemos — pero no es la única voz que escuchamos.",
+      "intro1": "Antes de aplicar STEER, cada función de IA debe pasar una prueba de umbral. Piénsalo en términos náuticos: un barco que solo navega va a la deriva sin propósito. Anclas para entender tu posición, y luego navegas con intención.",
+      "intro2": "Anclar es trabajo de evidencia. No fijas una posición desde un solo avistamiento: triangulas. Los docentes están al timón, pero la carta náutica se traza con muchas lecturas: docentes, administración escolar y de distrito, estudiantes, familias y la comunidad alrededor de la escuela. El docente actúa sobre lo que aprendemos, pero no es la única voz que escuchamos.",
       "questionsTitle": "Las Cuatro Preguntas de Anclaje",
       "questions": [
         {
           "number": "01",
           "question": "¿Qué habilidad profesional o juicio específico mejora esto?",
-          "detail": "No \"ayuda a los docentes\" en general, sino algo concreto — como notar qué estudiantes se están quedando atrás antes de que aparezca en un examen, diferenciar la instrucción para 30 niños con necesidades distintas, o dar retroalimentación oportuna sobre escritura cuando hay 150 redacciones por corregir. Son cosas que los docentes ya quieren hacer y a menudo saben hacer, pero no pueden a la escala o velocidad necesarias."
+          "detail": "No \"ayuda a los docentes\" en general, sino algo concreto: como notar qué estudiantes se están quedando atrás antes de que aparezca en un examen, diferenciar la instrucción para 30 niños con necesidades distintas, o dar retroalimentación oportuna sobre escritura cuando hay 150 redacciones por corregir. Son cosas que los docentes ya quieren hacer y a menudo saben hacer, pero no pueden a la escala o velocidad necesarias."
         },
         {
           "number": "02",
           "question": "¿Cuyo apaño estamos reemplazando, y por qué es inadecuado?",
-          "detail": "Los docentes ya están resolviendo la mayoría de estos problemas con notas adhesivas, hojas de cálculo e intuición construida durante años. También lo hacen administradores, familias y estudiantes — cada uno tiene su apaño, y cada uno es parcial. Tu herramienta de IA tiene que ser significativamente mejor que los apaños que reemplaza, no solo más vistosa. Saca todos a la luz antes de diseñar."
+          "detail": "Los docentes ya están resolviendo la mayoría de estos problemas con notas adhesivas, hojas de cálculo e intuición construida durante años. También lo hacen administradores, familias y estudiantes: cada uno tiene su apaño, y cada uno es parcial. Tu herramienta de IA tiene que ser significativamente mejor que los apaños que reemplaza, no solo más vistosa. Saca todos a la luz antes de diseñar."
         },
         {
           "number": "03",
           "question": "¿Usar esta herramienta hace al docente más hábil con el tiempo, o más dependiente?",
-          "detail": "Una herramienta de IA bien diseñada debería ser como un gran coach pedagógico — te ayuda a ver cosas que no habrías visto, y con el tiempo internalizas algunos de esos patrones. Una mal diseñada genera indefensión aprendida. El docente deja de conocer a sus estudiantes porque el panel los conoce por él."
+          "detail": "Una herramienta de IA bien diseñada debería ser como un gran coach pedagógico: te ayuda a ver cosas que no habrías visto, y con el tiempo internalizas algunos de esos patrones. Una mal diseñada genera indefensión aprendida. El docente deja de conocer a sus estudiantes porque el panel los conoce por él."
         },
         {
           "number": "04",
           "question": "¿De quién hemos escuchado evidencia realmente?",
-          "detail": "Anclar no es una encuesta a docentes — es evidencia triangulada entre las personas a las que la herramienta realmente afecta. ¿Hemos escuchado a los estudiantes cuyo trabajo configura? ¿A las familias que verán sus resultados? ¿A los administradores cuyas decisiones informa? ¿A la comunidad cuyos valores moldean la escuela? Si los docentes son la única voz en la sala, la base de evidencia es demasiado estrecha para anclar sobre ella."
+          "detail": "Anclar no es una encuesta a docentes. Es evidencia triangulada entre las personas a las que la herramienta realmente afecta. ¿Hemos escuchado a los estudiantes cuyo trabajo configura? ¿A las familias que verán sus resultados? ¿A los administradores cuyas decisiones informa? ¿A la comunidad cuyos valores moldean la escuela? Si los docentes son la única voz en la sala, la base de evidencia es demasiado estrecha para anclar sobre ella."
         }
       ],
       "criticalDistinctionTitle": "La Distinción Crítica",
@@ -2155,7 +2155,7 @@
       "intro": "Una vez anclado el valor, diseña la interacción. Cada dimensión moldea una faceta distinta de cómo trabajan juntos la IA y el docente.",
       "exampleLabel": "Ejemplo",
       "seeInPracticeLabel": "Verlo en la práctica",
-      "coachPlatformLabel": "— Plataforma Coach"
+      "coachPlatformLabel": "en la Plataforma Coach"
     },
     "dimensions": [
       {
@@ -2163,9 +2163,9 @@
         "title": "Modelo Mental Compartido",
         "subtitle": "Transparencia que enseña, no solo informa",
         "designThinking": "Empatizar",
-        "description": "La IA y el docente necesitan trabajar desde la misma comprensión de lo que está pasando. Eso significa que la IA no solo da recomendaciones. Muestra su razonamiento, su nivel de confianza y los datos detrás de sus conclusiones. Los docentes pueden inspeccionar ese razonamiento, cuestionarlo y corregirlo cuando la IA se equivoca. Y la representación que la IA hace de sí misma forma parte de ese modelo compartido — debe ser honesta sobre lo que es, no solo sobre lo que ve. Una herramienta que tergiversa su propia naturaleza no puede ser una socia fiable en la construcción compartida de sentido.",
+        "description": "La IA y el docente necesitan trabajar desde la misma comprensión de lo que está pasando. Eso significa que la IA no solo da recomendaciones. Muestra su razonamiento, su nivel de confianza y los datos detrás de sus conclusiones. Los docentes pueden inspeccionar ese razonamiento, cuestionarlo y corregirlo cuando la IA se equivoca. Y la representación que la IA hace de sí misma forma parte de ese modelo compartido: debe ser honesta sobre lo que es, no solo sobre lo que ve. Una herramienta que tergiversa su propia naturaleza no puede ser una socia fiable en la construcción compartida de sentido.",
         "keyInsight": "La transparencia no consiste solo en ser explicable. Consiste en ser educativa. El docente debería aprender algo al leer el razonamiento de la IA, no solo verificar que se ejecutó.",
-        "example": "\"Marqué a estos 7 estudiantes porque sus respuestas en el examen sugieren dificultad con la comparación de fracciones. Pero mi confianza es moderada — tres de ellos pueden haberse visto afectados por el formato cronometrado más que por una laguna conceptual. Tú conoces a tus estudiantes mejor que yo.\"",
+        "example": "\"Marqué a estos 7 estudiantes porque sus respuestas en el examen sugieren dificultad con la comparación de fracciones. Pero mi confianza es moderada: tres de ellos pueden haberse visto afectados por el formato cronometrado más que por una laguna conceptual. Tú conoces a tus estudiantes mejor que yo.\"",
         "coachExample": "En la plataforma Coach en coach.jamelna.com, el chat de IA usa generación aumentada por recuperación con citas visibles. Cuando un coach pregunta \"¿Cómo debería abordar a un docente que se resiste a la retroalimentación?\", la respuesta incluye referencias entre corchetes a artículos específicos de la base de conocimiento. El coach puede acceder al origen para verificarlo, cuestionar la recomendación o explorar más. La IA nunca presenta sus respuestas como conclusiones autoritativas."
       },
       {
@@ -2211,21 +2211,21 @@
     ],
     "cycle": {
       "title": "El Ciclo Continuo",
-      "intro": "El marco no es lineal — es cíclico. Anclas antes de una nueva función. Re-anclas cuando la investigación con usuarios revela que has derivado de las necesidades reales.",
+      "intro": "El marco no es lineal. Es cíclico. Anclas antes de una nueva función. Re-anclas cuando la investigación con usuarios revela que has derivado de las necesidades reales.",
       "anchor": "ANCHOR",
       "anchorDesc": "Identificar necesidades reales",
       "steer": "STEER",
       "steerDesc": "Diseñar y construir",
       "reanchor": "RE-ANCHOR",
       "reanchorDesc": "Validar y refinar",
-      "footer": "Resiste el impulso de NAVEGAR (STEER) antes de haber ANCLADO. Esta puede ser la disciplina más importante que el marco le pide a los equipos de producto — porque puede ser tentador saltar directamente a \"mira lo que la IA puede hacer\" sin antes anclarse en \"pero ¿debería hacerlo?\"."
+      "footer": "Resiste el impulso de NAVEGAR (STEER) antes de haber ANCLADO. Esta puede ser la disciplina más importante que el marco le pide a los equipos de producto: porque puede ser tentador saltar directamente a \"mira lo que la IA puede hacer\" sin antes anclarse en \"pero ¿debería hacerlo?\"."
     },
     "designImplications": {
       "title": "Implicaciones de Diseño",
       "items": [
         {
           "title": "Sobre la Autenticidad",
-          "text": "La IA es una herramienta, no una colega. No tiene intereses, sentimientos ni postura sobre el trabajo. Diseñarla para actuar como si los tuviera no es calidez — es desorientación. Honesta sobre lo que ve. Honesta sobre lo que es. Las dos cosas, o ninguna cuenta."
+          "text": "La IA es una herramienta, no una colega. No tiene intereses, sentimientos ni postura sobre el trabajo. Diseñarla para actuar como si los tuviera no es calidez. Es desorientación. Honesta sobre lo que ve. Honesta sobre lo que es. Las dos cosas, o ninguna cuenta."
         },
         {
           "title": "Sobre la Transparencia",
@@ -2241,7 +2241,7 @@
         },
         {
           "title": "Sobre el Tiempo",
-          "text": "Una de las mayores limitaciones que enfrentan los docentes. Si la carga de supervisión es demasiado alta, los docentes acabarán dando el visto bueno a todo o desconectándose — ambas cosas anulan el propósito."
+          "text": "Una de las mayores limitaciones que enfrentan los docentes. Si la carga de supervisión es demasiado alta, los docentes acabarán dando el visto bueno a todo o desconectándose: ambas cosas anulan el propósito."
         }
       ]
     },
@@ -2255,7 +2255,7 @@
         },
         {
           "field": "Habilidad Docente Mejorada",
-          "prompt": "¿Qué habilidad profesional específica mejora esta funcionalidad — sin reemplazarla?"
+          "prompt": "¿Qué habilidad profesional específica mejora esta funcionalidad: sin reemplazarla?"
         },
         {
           "field": "Apaño Observado",
@@ -2286,38 +2286,38 @@
           "key": "designThinking",
           "dimension": "Design Thinking",
           "sources": [
-            "Stanford d.school — Empatizar, Definir, Idear, Prototipar, Probar",
-            "Tim Brown (IDEO) — El diseño centrado en el ser humano como método de innovación",
-            "Diseño Participativo — Usuarios como co-diseñadores, no solo informantes"
+            "Stanford d.school: Empatizar, Definir, Idear, Prototipar, Probar",
+            "Tim Brown (IDEO): El diseño centrado en el ser humano como método de innovación",
+            "Diseño Participativo: Usuarios como co-diseñadores, no solo informantes"
           ]
         },
         {
           "key": "anchor",
           "dimension": "Anchor",
           "sources": [
-            "Marco TPACK — Conocimiento Tecnológico-Pedagógico del Contenido",
-            "Design Thinking: Empatizar y Definir — Anclaje en necesidades observadas"
+            "Marco TPACK: Conocimiento Tecnológico-Pedagógico del Contenido",
+            "Design Thinking: Empatizar y Definir: Anclaje en necesidades observadas"
           ]
         },
         {
           "key": "S",
-          "dimension": "S — Modelo Mental Compartido",
+          "dimension": "S: Modelo Mental Compartido",
           "sources": [
-            "Conciencia Situacional de Endsley — Modelos mentales compartidos y cognición de equipo",
-            "Mapas de Empatía — Herramientas estructuradas para comprender perspectivas"
+            "Conciencia Situacional de Endsley: Modelos mentales compartidos y cognición de equipo",
+            "Mapas de Empatía: Herramientas estructuradas para comprender perspectivas"
           ]
         },
         {
           "key": "T",
-          "dimension": "T — Guardarraíles",
+          "dimension": "T: Guardarraíles",
           "sources": [
-            "Orquestación de Dillenbourg — Coordinación docente de actividades complejas",
-            "Fracaso Productivo de Kapur — Cuándo la lucha es beneficiosa"
+            "Orquestación de Dillenbourg: Coordinación docente de actividades complejas",
+            "Fracaso Productivo de Kapur: Cuándo la lucha es beneficiosa"
           ]
         },
         {
           "key": "E",
-          "dimension": "E — Escalación y Delegación",
+          "dimension": "E: Escalación y Delegación",
           "sources": [
             "Lee y See sobre la Confianza en la Automatización",
             "IA Centrada en el Ser Humano (HCAI) de Shneiderman",
@@ -2326,10 +2326,10 @@
         },
         {
           "key": "R",
-          "dimension": "R — Bucles Reflexivos",
+          "dimension": "R: Bucles Reflexivos",
           "sources": [
             "Práctica Reflexiva de Schön",
-            "Flujo LATUX — Analítica del aprendizaje con validación docente"
+            "Flujo LATUX: Analítica del aprendizaje con validación docente"
           ]
         }
       ]
@@ -2365,7 +2365,7 @@
     },
     "footer": {
       "share": "Este marco se comparte para beneficio de la comunidad educativa. Si lo usas o adaptas, por favor atribuye en consecuencia.",
-      "attribution": "Anchor & STEER — Por Joe Alexander Meléndez-Naharro"
+      "attribution": "Anchor & STEER, por Joe Alexander Meléndez-Naharro"
     }
   }
 }
