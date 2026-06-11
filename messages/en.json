@@ -1090,8 +1090,6 @@
         "description": "Each pillar addresses a critical aspect of building independent, surveillance-resistant systems."
       },
       "tiers": {
-        "sectionTitle": "Choose your depth",
-        "sectionDescription": "Filter by how much time and technical skill you can invest.",
         "1": {
           "title": "Protect Yourself Now",
           "subtitle": "30 minutes to significantly safer",
@@ -1106,7 +1104,9 @@
           "title": "Create Resilient Networks",
           "subtitle": "Days to weeks of sustained work",
           "audience": "For technical builders and system administrators"
-        }
+        },
+        "sectionTitle": "Choose your depth",
+        "sectionDescription": "Filter by how much time and technical skill you can invest."
       },
       "contexts": {
         "sectionTitle": "What's your situation?",
@@ -2365,6 +2365,192 @@
     "footer": {
       "share": "This framework is shared for the benefit of the education community. If you use or adapt it, please attribute accordingly.",
       "attribution": "Anchor & STEER, by Joe Alexander Meléndez-Naharro"
+    }
+  },
+  "computationalCollaboration": {
+    "hero": {
+      "kicker": "A Framework for Designing and Building with AI",
+      "title": "Computational Collaboration",
+      "tagline": "For K–12 educators and their students: treat working with AI as a collaboration and leadership problem rather than a tool-use problem.",
+      "byline": "By Joe Alexander Meléndez-Naharro"
+    },
+    "premise": {
+      "title": "The Premise",
+      "lead": "What is it like to work on a team whose members are described to you as highly competent, capable, and compliant?",
+      "threeCsLabel": "The 3Cs",
+      "threeCs": [
+        "Competent",
+        "Capable",
+        "Compliant"
+      ],
+      "p1": "Before anything else, you face a verification problem: how would you know whether they actually have those qualities? To judge a teammate's competence, you need to understand the content yourself. To judge whether their work serves the project, you need to hold the vision and the purpose, and you need a clear picture of what success looks like.",
+      "p2": "Suppose you get past that hurdle and the team really does have the 3Cs. New questions follow. What happens to you on that team? Does working alongside highly capable collaborators sharpen you, or does it make you lazy and dependent? If those teammates worked for you, how would you direct them? What would you delegate, what would you keep, and what would you bring to the team that no one else could?",
+      "p3": "Every educator and every student who creates with AI now faces these questions. Computational Collaboration is a framework for answering them.",
+      "p4": "Its central move is to treat working with AI as a collaboration and leadership problem rather than a tool-use problem. Educators already carry rich mental models for collaboration: co-planning with colleagues, managing group work, assessing student products, supervising teaching assistants. This framework builds on what teachers already know how to do and points it at a new kind of teammate."
+    },
+    "coreArgument": {
+      "title": "The Core Argument",
+      "intro": "AI brings the 3Cs to the table. It is competent across a wide range of school tasks, capable of producing work at a speed and volume no human matches, and compliant to a fault.",
+      "pullLine": "But the 3Cs describe a teammate, not a team.",
+      "bridge": "A working team also needs context, commitment, and accountability, and all three come from the human side of the partnership.",
+      "aiSide": {
+        "label": "What AI supplies",
+        "items": [
+          {
+            "term": "Competent",
+            "desc": "Across a wide range of school tasks."
+          },
+          {
+            "term": "Capable",
+            "desc": "Producing work at a speed and volume no human matches."
+          },
+          {
+            "term": "Compliant",
+            "desc": "To a fault."
+          }
+        ]
+      },
+      "humanSide": {
+        "label": "What you supply",
+        "items": [
+          {
+            "term": "Context",
+            "desc": "You know your students, your school, your community, your constraints, and your history. AI knows the world in general; you know your world in particular."
+          },
+          {
+            "term": "Commitment",
+            "desc": "AI produces whatever is asked of it with equal indifference. You are the one with a stake in whether the work succeeds."
+          },
+          {
+            "term": "Accountability",
+            "desc": "Your name goes on the work. AI cannot be responsible for a lesson taught, a decision made, or a product shipped. Responsibility stays with you."
+          }
+        ]
+      },
+      "equalsLabel": "A working team",
+      "closing": "The AI supplies the 3Cs. You supply the context, the commitment, and the accountability. Computational Collaboration is the practice of bringing both halves together deliberately, and computational thinking is the discipline that makes the practice teachable."
+    },
+    "principles": {
+      "title": "Three Principles",
+      "testLabel": "The test",
+      "items": [
+        {
+          "number": "01",
+          "name": "The Verification Principle",
+          "quote": "You can only delegate what you can evaluate.",
+          "paragraphs": [
+            "Competence in a teammate is invisible to someone who lacks domain knowledge. A novice cannot tell a brilliant draft from a fluent but wrong one, and AI output is reliably fluent either way. Domain expertise therefore becomes more important when you work with AI, not less. The more capable the collaborator, the more knowledge it takes to supervise that collaborator well. Content knowledge is the license to delegate.",
+            "For educators, this extends a familiar idea: assessment literacy. You can't grade what you don't understand, and you can't verify work you couldn't have written a rubric for. The principle also answers a common fear head-on. AI does not make content knowledge irrelevant; it raises the cost of lacking it."
+          ],
+          "test": "Could I tell if this output were wrong, generic, or subtly off? If not, I'm not ready to delegate this piece."
+        },
+        {
+          "number": "02",
+          "name": "The Growth Principle",
+          "quote": "Collaboration should sharpen you, not soften you.",
+          "paragraphs": [
+            "Working with highly capable teammates can go two ways. It can raise your game, exposing you to better thinking and freeing you to work at the edge of your ability. Or it can erode your game while you hand over the thinking along with the typing.",
+            "Which way it goes depends on how you design the workflow, and the useful distinction is between scaffolding and offloading. A scaffold supports you while you build capacity; the support is temporary and the capability becomes yours. Offloading removes the load and removes the learning with it. So the question to ask after any AI-assisted project is whether you can now do more than you could before, not merely whether the AI helped.",
+            "A well-designed collaboration delegates production while retaining thinking. You keep the framing, the judgment calls, and the final decisions even when AI generates drafts and raw material."
+          ],
+          "test": "After this collaboration, am I more capable or less capable than when I started?"
+        },
+        {
+          "number": "03",
+          "name": "The Contribution Principle",
+          "quote": "Name what you irreplaceably bring.",
+          "paragraphs": [
+            "On a strong team, every member can answer one question: what do I contribute that the others can't? Working with AI demands the same self-knowledge. A person who can't name their contribution risks becoming a courier, passing prompts in and outputs out while adding nothing along the way.",
+            "The human contribution starts with the context only you hold, the commitment only you feel, and the accountability only you can carry, along with your vision, your values, and your taste. Naming your contribution before you begin changes the nature of the work. AI stops doing the work for you and starts extending work that is recognizably yours."
+          ],
+          "test": "What is in this final product that could only have come from me?"
+        }
+      ]
+    },
+    "crosswalk": {
+      "title": "The Computational Thinking Crosswalk",
+      "intro": "The three principles describe a stance. Computational thinking supplies the skillset. The four classic CT practices map directly onto the skills of collaborating with AI.",
+      "colTraditional": "In traditional CS",
+      "colAI": "In AI collaboration",
+      "rows": [
+        {
+          "practice": "Decomposition",
+          "traditional": "Breaking a problem into solvable parts",
+          "ai": "Breaking a project into delegable pieces, and deciding which parts need your judgment and which parts AI can draft"
+        },
+        {
+          "practice": "Abstraction",
+          "traditional": "Stripping away detail to model what matters",
+          "ai": "Specifying the work. A good prompt is an act of abstraction: naming constraints, audience, purpose, and success criteria while filtering out noise"
+        },
+        {
+          "practice": "Pattern Recognition",
+          "traditional": "Finding regularities and reusable structures",
+          "ai": "Evaluating output. Spotting AI failure modes (generic voice, confident errors, surface plausibility, missing context) is quality-control pattern recognition"
+        },
+        {
+          "practice": "Algorithmic Thinking",
+          "traditional": "Designing step-by-step procedures",
+          "ai": "Designing the workflow. The loop of draft, critique, revise, verify is an algorithm you author, run, and debug"
+        }
+      ],
+      "outro": "This crosswalk justifies the word Computational in the framework's name. The thinking practices we already teach for programming and problem-solving are the same practices that make humans effective directors of AI. Schools don't need to invent a new literacy from scratch; they need to extend one that many of them already teach."
+    },
+    "cycle": {
+      "title": "The Practice Cycle: The Five Ds",
+      "intro": "The principles and the crosswalk come together in a repeatable cycle for any project built with AI.",
+      "steps": [
+        {
+          "name": "Define",
+          "tag": "Verification Principle",
+          "body": "Establish the vision before opening any tool. What are we building? Who is it for? What does success look like, concretely enough to recognize it? Success criteria have to exist before collaboration begins; this is where the Verification Principle gets its footing."
+        },
+        {
+          "name": "Decompose",
+          "tag": "CT: Decomposition",
+          "body": "Break the project into parts and sort them. Which parts require my context, judgment, and values? Which parts are production work that AI can draft? This is CT decomposition in action, and it forces the Contribution question early."
+        },
+        {
+          "name": "Direct",
+          "tag": "CT: Abstraction",
+          "body": "Specify the delegated work with precision. Communicate constraints, audience, purpose, format, and the success criteria from step one. Vague vision produces vague delegation. This is abstraction applied to communication."
+        },
+        {
+          "name": "Discern",
+          "tag": "CT: Pattern Recognition",
+          "body": "Evaluate what comes back against the success criteria. Hunt for the characteristic failure modes. Then decide: accept, revise, redirect, or reject. Pattern recognition does the heavy lifting here, and the Verification Principle comes due."
+        },
+        {
+          "name": "Develop",
+          "tag": "CT: Algorithmic Thinking",
+          "body": "Integrate the work, iterate the loop, and reflect on what you learned. What can you now do, judge, or articulate that you couldn't before? This reflection is what closes the Growth Principle, and the loop itself is algorithmic thinking made visible."
+        }
+      ],
+      "outro": "The cycle works at any scale: a teacher designing a unit, a team building a school resource, a student producing a project. The reflection step in Develop is what keeps the loop from collapsing into offloading."
+    },
+    "whyNow": {
+      "title": "Why This Framework, Why Now",
+      "p1": "Most AI guidance for schools clusters at two poles: tool tutorials and policy guardrails. Computational Collaboration sits in the middle ground between them, offering a disposition and a skillset that hold up across tools, that build on thinking practices schools already teach, and that stay honest about the central risk: powerful collaborators can weaken us if we let them do our thinking.",
+      "poleTutorials": {
+        "label": "Tool tutorials",
+        "quote": "Here's how to prompt"
+      },
+      "poleGuardrails": {
+        "label": "Policy guardrails",
+        "quote": "Here's what's not allowed"
+      },
+      "middle": {
+        "label": "Computational Collaboration",
+        "desc": "A disposition and a skillset that hold up across tools"
+      },
+      "bet": "The framework makes one bet. The schools that thrive with AI will be the ones whose educators and students can answer, clearly and confidently, the question at the heart of every collaboration:",
+      "bigQuestion": "What do I bring to this team?"
+    },
+    "footer": {
+      "share": "Share this framework with educators designing and building with AI.",
+      "attribution": "Computational Collaboration · Joe Alexander Meléndez-Naharro",
+      "relatedLabel": "Related framework",
+      "relatedText": "Anchor & STEER — a human-centered design framework for AI in education"
     }
   }
 }

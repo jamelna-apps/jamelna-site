@@ -2414,5 +2414,191 @@
       "share": "This framework is shared for the benefit of the education community. If you use or adapt it, please attribute accordingly. [TODO-TRANSLATE]",
       "attribution": "Anchor & STEER, by Joe Alexander Meléndez-Naharro [TODO-TRANSLATE]"
     }
+  },
+  "computationalCollaboration": {
+    "hero": {
+      "kicker": "Um framework para projetar e construir com IA",
+      "title": "Computational Collaboration",
+      "tagline": "Para educadores da educação básica e seus alunos: tratar o trabalho com IA como um problema de colaboração e liderança, e não como um problema de uso de ferramenta.",
+      "byline": "Por Joe Alexander Meléndez-Naharro"
+    },
+    "premise": {
+      "title": "A Premissa",
+      "lead": "Como é trabalhar em uma equipe cujos membros são descritos como altamente competentes, capazes e complacentes?",
+      "threeCsLabel": "Os 3Cs",
+      "threeCs": [
+        "Competente",
+        "Capaz",
+        "Complacente"
+      ],
+      "p1": "Antes de qualquer outra coisa, você enfrenta um problema de verificação: como saber se eles realmente têm essas qualidades? Para julgar a competência de um colega de equipe, você precisa entender o conteúdo por conta própria. Para julgar se o trabalho dele serve ao projeto, você precisa carregar a visão e o propósito, e precisa de uma imagem clara de como é o sucesso.",
+      "p2": "Suponha que você supere esse obstáculo e a equipe realmente tenha os 3Cs. Novas perguntas surgem. O que acontece com você nessa equipe? Trabalhar ao lado de colaboradores altamente capazes afia você, ou torna você preguiçoso e dependente? Se esses colegas trabalhassem para você, como você os dirigiria? O que você delegaria, o que manteria para si e o que você traria para a equipe que ninguém mais poderia trazer?",
+      "p3": "Todo educador e todo aluno que cria com IA enfrenta agora essas perguntas. Computational Collaboration é um framework para respondê-las.",
+      "p4": "Seu movimento central é tratar o trabalho com IA como um problema de colaboração e liderança, e não como um problema de uso de ferramenta. Educadores já carregam modelos mentais ricos de colaboração: planejar em conjunto com colegas, conduzir trabalhos em grupo, avaliar produções de alunos, supervisionar monitores. Este framework parte do que os professores já sabem fazer e aponta esse saber para um novo tipo de colega de equipe."
+    },
+    "coreArgument": {
+      "title": "O Argumento Central",
+      "intro": "A IA traz os 3Cs para a mesa. Ela é competente em uma ampla gama de tarefas escolares, capaz de produzir trabalho em uma velocidade e em um volume que nenhum humano alcança, e complacente até demais.",
+      "pullLine": "Mas os 3Cs descrevem um colega de equipe, não uma equipe.",
+      "bridge": "Uma equipe que funciona também precisa de contexto, comprometimento e responsabilidade — e os três vêm do lado humano da parceria.",
+      "aiSide": {
+        "label": "O que a IA fornece",
+        "items": [
+          {
+            "term": "Competente",
+            "desc": "Em uma ampla gama de tarefas escolares."
+          },
+          {
+            "term": "Capaz",
+            "desc": "Produzindo trabalho em uma velocidade e em um volume que nenhum humano alcança."
+          },
+          {
+            "term": "Complacente",
+            "desc": "Até demais."
+          }
+        ]
+      },
+      "humanSide": {
+        "label": "O que você fornece",
+        "items": [
+          {
+            "term": "Contexto",
+            "desc": "Você conhece seus alunos, sua escola, sua comunidade, suas restrições e sua história. A IA conhece o mundo em geral; você conhece o seu mundo em particular."
+          },
+          {
+            "term": "Comprometimento",
+            "desc": "A IA produz o que quer que lhe peçam com a mesma indiferença. É você quem tem algo em jogo no sucesso do trabalho."
+          },
+          {
+            "term": "Responsabilidade",
+            "desc": "É o seu nome que assina o trabalho. A IA não pode responder por uma aula dada, uma decisão tomada ou um produto entregue. A responsabilidade permanece com você."
+          }
+        ]
+      },
+      "equalsLabel": "Uma equipe que funciona",
+      "closing": "A IA fornece os 3Cs. Você fornece o contexto, o comprometimento e a responsabilidade. Computational Collaboration é a prática de reunir as duas metades de forma deliberada, e o pensamento computacional é a disciplina que torna essa prática ensinável."
+    },
+    "principles": {
+      "title": "Três Princípios",
+      "testLabel": "O teste",
+      "items": [
+        {
+          "number": "01",
+          "name": "O Princípio da Verificação",
+          "quote": "Você só pode delegar aquilo que consegue avaliar.",
+          "paragraphs": [
+            "A competência de um colega de equipe é invisível para quem não domina a área. Um novato não distingue um rascunho brilhante de um fluente porém errado — e a produção da IA é confiavelmente fluente nos dois casos. O domínio do conteúdo, portanto, torna-se mais importante quando você trabalha com IA, não menos. Quanto mais capaz o colaborador, mais conhecimento é preciso para supervisioná-lo bem. O conhecimento do conteúdo é a licença para delegar.",
+            "Para educadores, isso estende uma ideia familiar: o letramento em avaliação. Você não pode corrigir o que não entende, e não pode verificar um trabalho para o qual não saberia escrever uma rubrica. O princípio também responde de frente a um medo comum. A IA não torna o conhecimento do conteúdo irrelevante; ela aumenta o custo de não tê-lo."
+          ],
+          "test": "Eu perceberia se este resultado estivesse errado, genérico ou sutilmente fora do alvo? Se não, ainda não estou pronto para delegar esta parte."
+        },
+        {
+          "number": "02",
+          "name": "O Princípio do Crescimento",
+          "quote": "A colaboração deve afiar você, não amolecer você.",
+          "paragraphs": [
+            "Trabalhar com colegas altamente capazes pode seguir dois caminhos. Pode elevar o seu jogo, expondo você a um pensamento melhor e liberando você para trabalhar no limite da sua capacidade. Ou pode corroer o seu jogo, enquanto você entrega o pensar junto com o digitar.",
+            "O caminho que isso toma depende de como você desenha o fluxo de trabalho, e a distinção útil é entre andaime e terceirização. Um andaime sustenta você enquanto você constrói capacidade; o apoio é temporário e a capacidade passa a ser sua. A terceirização remove a carga e remove o aprendizado junto. Então a pergunta a fazer depois de qualquer projeto assistido por IA é se você agora consegue fazer mais do que conseguia antes — não apenas se a IA ajudou.",
+            "Uma colaboração bem desenhada delega a produção e retém o pensamento. Você mantém o enquadramento, os julgamentos e as decisões finais, mesmo quando a IA gera rascunhos e matéria-prima."
+          ],
+          "test": "Depois desta colaboração, estou mais capaz ou menos capaz do que quando comecei?"
+        },
+        {
+          "number": "03",
+          "name": "O Princípio da Contribuição",
+          "quote": "Nomeie o que você traz de insubstituível.",
+          "paragraphs": [
+            "Em uma equipe forte, todo membro consegue responder a uma pergunta: o que eu contribuo que os outros não podem contribuir? Trabalhar com IA exige o mesmo autoconhecimento. Quem não consegue nomear sua contribuição corre o risco de virar um mensageiro, passando prompts para dentro e resultados para fora sem acrescentar nada no caminho.",
+            "A contribuição humana começa com o contexto que só você detém, o comprometimento que só você sente e a responsabilidade que só você pode carregar, junto com sua visão, seus valores e seu gosto. Nomear sua contribuição antes de começar muda a natureza do trabalho. A IA deixa de fazer o trabalho por você e passa a estender um trabalho que é reconhecivelmente seu."
+          ],
+          "test": "O que há neste produto final que só poderia ter vindo de mim?"
+        }
+      ]
+    },
+    "crosswalk": {
+      "title": "A Correspondência com o Pensamento Computacional",
+      "intro": "Os três princípios descrevem uma postura. O pensamento computacional fornece o conjunto de habilidades. As quatro práticas clássicas do pensamento computacional mapeiam diretamente para as habilidades de colaborar com IA.",
+      "colTraditional": "Na ciência da computação tradicional",
+      "colAI": "Na colaboração com IA",
+      "rows": [
+        {
+          "practice": "Decomposição",
+          "traditional": "Quebrar um problema em partes solucionáveis",
+          "ai": "Quebrar um projeto em partes delegáveis, decidindo quais exigem o seu julgamento e quais a IA pode rascunhar"
+        },
+        {
+          "practice": "Abstração",
+          "traditional": "Remover detalhes para modelar o que importa",
+          "ai": "Especificar o trabalho. Um bom prompt é um ato de abstração: nomear restrições, público, propósito e critérios de sucesso, filtrando o ruído"
+        },
+        {
+          "practice": "Reconhecimento de Padrões",
+          "traditional": "Encontrar regularidades e estruturas reutilizáveis",
+          "ai": "Avaliar resultados. Identificar os modos de falha da IA (voz genérica, erros confiantes, plausibilidade superficial, falta de contexto) é reconhecimento de padrões a serviço do controle de qualidade"
+        },
+        {
+          "practice": "Pensamento Algorítmico",
+          "traditional": "Projetar procedimentos passo a passo",
+          "ai": "Projetar o fluxo de trabalho. O ciclo de rascunhar, criticar, revisar e verificar é um algoritmo que você escreve, executa e depura"
+        }
+      ],
+      "outro": "Essa correspondência justifica a palavra Computational no nome do framework. As práticas de pensamento que já ensinamos para programação e resolução de problemas são as mesmas que tornam os humanos diretores eficazes da IA. As escolas não precisam inventar um novo letramento do zero; precisam estender um que muitas delas já ensinam."
+    },
+    "cycle": {
+      "title": "O Ciclo de Prática: Os Cinco Ds",
+      "intro": "Os princípios e a correspondência se encontram em um ciclo repetível para qualquer projeto construído com IA.",
+      "steps": [
+        {
+          "name": "Definir",
+          "tag": "Princípio da Verificação",
+          "body": "Estabeleça a visão antes de abrir qualquer ferramenta. O que estamos construindo? Para quem? Como é o sucesso, de forma concreta o bastante para ser reconhecido? Os critérios de sucesso precisam existir antes que a colaboração comece; é aqui que o Princípio da Verificação encontra seu apoio."
+        },
+        {
+          "name": "Decompor",
+          "tag": "PC: Decomposição",
+          "body": "Quebre o projeto em partes e classifique-as. Quais partes exigem o meu contexto, o meu julgamento e os meus valores? Quais são trabalho de produção que a IA pode rascunhar? Isso é a decomposição do pensamento computacional em ação, e ela força a pergunta da Contribuição desde cedo."
+        },
+        {
+          "name": "Direcionar",
+          "tag": "PC: Abstração",
+          "body": "Especifique o trabalho delegado com precisão. Comunique restrições, público, propósito, formato e os critérios de sucesso da primeira etapa. Visão vaga produz delegação vaga. Isso é abstração aplicada à comunicação."
+        },
+        {
+          "name": "Discernir",
+          "tag": "PC: Reconhecimento de Padrões",
+          "body": "Avalie o que volta em relação aos critérios de sucesso. Cace os modos de falha característicos. Então decida: aceitar, revisar, redirecionar ou rejeitar. O reconhecimento de padrões faz o trabalho pesado aqui, e o Princípio da Verificação cobra a sua conta."
+        },
+        {
+          "name": "Desenvolver",
+          "tag": "PC: Pensamento Algorítmico",
+          "body": "Integre o trabalho, itere o ciclo e reflita sobre o que aprendeu. O que você agora consegue fazer, julgar ou articular que não conseguia antes? Essa reflexão é o que fecha o Princípio do Crescimento, e o próprio ciclo é o pensamento algorítmico tornado visível."
+        }
+      ],
+      "outro": "O ciclo funciona em qualquer escala: um professor planejando uma unidade, uma equipe construindo um recurso para a escola, um aluno produzindo um projeto. A etapa de reflexão em Desenvolver é o que impede que o ciclo desabe em terceirização."
+    },
+    "whyNow": {
+      "title": "Por Que Este Framework, Por Que Agora",
+      "p1": "A maior parte das orientações sobre IA para escolas se aglomera em dois polos: tutoriais de ferramentas e barreiras de política. Computational Collaboration ocupa o meio-termo entre eles, oferecendo uma disposição e um conjunto de habilidades que se sustentam independentemente da ferramenta, que partem de práticas de pensamento que as escolas já ensinam e que permanecem honestas sobre o risco central: colaboradores poderosos podem nos enfraquecer se deixarmos que pensem por nós.",
+      "poleTutorials": {
+        "label": "Tutoriais de ferramentas",
+        "quote": "Veja como escrever prompts"
+      },
+      "poleGuardrails": {
+        "label": "Barreiras de política",
+        "quote": "Veja o que não é permitido"
+      },
+      "middle": {
+        "label": "Computational Collaboration",
+        "desc": "Uma disposição e um conjunto de habilidades que se sustentam independentemente da ferramenta"
+      },
+      "bet": "O framework faz uma única aposta. As escolas que vão prosperar com IA serão aquelas cujos educadores e alunos conseguem responder, com clareza e confiança, à pergunta que está no coração de toda colaboração:",
+      "bigQuestion": "O que eu trago para esta equipe?"
+    },
+    "footer": {
+      "share": "Compartilhe este framework com educadores que projetam e constroem com IA.",
+      "attribution": "Computational Collaboration · Joe Alexander Meléndez-Naharro",
+      "relatedLabel": "Framework relacionado",
+      "relatedText": "Anchor & STEER — um framework de design centrado no humano para IA na educação"
+    }
   }
 }

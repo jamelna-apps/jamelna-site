@@ -2414,5 +2414,191 @@
       "share": "This framework is shared for the benefit of the education community. If you use or adapt it, please attribute accordingly. [TODO-TRANSLATE]",
       "attribution": "Anchor & STEER, by Joe Alexander Meléndez-Naharro [TODO-TRANSLATE]"
     }
+  },
+  "computationalCollaboration": {
+    "hero": {
+      "kicker": "Ein Rahmenwerk für das Gestalten und Entwickeln mit KI",
+      "title": "Computational Collaboration",
+      "tagline": "Für Lehrkräfte und ihre Schülerinnen und Schüler: Die Arbeit mit KI als Frage von Zusammenarbeit und Führung begreifen – nicht als Frage der Werkzeugbedienung.",
+      "byline": "Von Joe Alexander Meléndez-Naharro"
+    },
+    "premise": {
+      "title": "Die Ausgangsfrage",
+      "lead": "Wie ist es, in einem Team zu arbeiten, dessen Mitglieder Ihnen als hochkompetent, leistungsfähig und gefügig beschrieben werden?",
+      "threeCsLabel": "Die 3Cs",
+      "threeCs": [
+        "Kompetent (Competent)",
+        "Leistungsfähig (Capable)",
+        "Gefügig (Compliant)"
+      ],
+      "p1": "Zuallererst stehen Sie vor einem Prüfproblem: Woher wüssten Sie, ob diese Eigenschaften tatsächlich vorhanden sind? Um die Kompetenz eines Teammitglieds zu beurteilen, müssen Sie den Inhalt selbst verstehen. Um zu beurteilen, ob seine Arbeit dem Projekt dient, müssen Sie die Vision und den Zweck im Blick behalten – und ein klares Bild davon haben, wie Erfolg aussieht.",
+      "p2": "Angenommen, Sie nehmen diese Hürde, und das Team besitzt die 3Cs tatsächlich. Dann stellen sich neue Fragen. Was geschieht mit Ihnen in diesem Team? Macht Sie die Arbeit an der Seite hochfähiger Mitstreiter schärfer – oder bequem und abhängig? Wenn diese Teammitglieder für Sie arbeiteten: Wie würden Sie sie anleiten? Was würden Sie delegieren, was behalten, und was würden Sie selbst ins Team einbringen, das sonst niemand beisteuern könnte?",
+      "p3": "Jede Lehrkraft und alle Schülerinnen und Schüler, die mit KI etwas erschaffen, stehen heute vor diesen Fragen. Computational Collaboration ist ein Rahmenwerk, um sie zu beantworten.",
+      "p4": "Sein zentraler Gedanke: Die Arbeit mit KI wird als Frage von Zusammenarbeit und Führung behandelt, nicht als Frage der Werkzeugbedienung. Lehrkräfte verfügen bereits über reiche mentale Modelle für Zusammenarbeit – gemeinsames Planen mit Kolleginnen und Kollegen, das Begleiten von Gruppenarbeit, das Bewerten von Schülerprodukten, das Anleiten von Hilfskräften. Dieses Rahmenwerk knüpft an das an, was Lehrkräfte ohnehin können, und richtet es auf eine neue Art von Teammitglied."
+    },
+    "coreArgument": {
+      "title": "Das Kernargument",
+      "intro": "KI bringt die 3Cs mit. Sie ist kompetent in einem breiten Spektrum schulischer Aufgaben, leistungsfähig genug, um in Tempo und Menge jeden Menschen zu übertreffen – und gefügig bis zur Selbstaufgabe.",
+      "pullLine": "Doch die 3Cs beschreiben ein Teammitglied, kein Team.",
+      "bridge": "Ein funktionierendes Team braucht außerdem Kontext, Engagement und Verantwortung – und alle drei kommen von der menschlichen Seite der Partnerschaft.",
+      "aiSide": {
+        "label": "Was die KI beisteuert",
+        "items": [
+          {
+            "term": "Kompetent",
+            "desc": "In einem breiten Spektrum schulischer Aufgaben."
+          },
+          {
+            "term": "Leistungsfähig",
+            "desc": "Sie produziert Arbeit in einem Tempo und Umfang, mit dem kein Mensch mithält."
+          },
+          {
+            "term": "Gefügig",
+            "desc": "Bis zur Selbstaufgabe."
+          }
+        ]
+      },
+      "humanSide": {
+        "label": "Was Sie beisteuern",
+        "items": [
+          {
+            "term": "Kontext",
+            "desc": "Sie kennen Ihre Schülerinnen und Schüler, Ihre Schule, Ihr Umfeld, Ihre Rahmenbedingungen und Ihre Geschichte. KI kennt die Welt im Allgemeinen; Sie kennen Ihre Welt im Besonderen."
+          },
+          {
+            "term": "Engagement",
+            "desc": "KI erzeugt alles, was man von ihr verlangt, mit derselben Gleichgültigkeit. Sie sind diejenige Person, der am Gelingen der Arbeit etwas liegt."
+          },
+          {
+            "term": "Verantwortung",
+            "desc": "Ihr Name steht über der Arbeit. KI kann keine Verantwortung tragen – nicht für eine gehaltene Stunde, eine getroffene Entscheidung oder ein ausgeliefertes Produkt. Die Verantwortung bleibt bei Ihnen."
+          }
+        ]
+      },
+      "equalsLabel": "Ein funktionierendes Team",
+      "closing": "Die KI liefert die 3Cs. Sie liefern Kontext, Engagement und Verantwortung. Computational Collaboration ist die Praxis, beide Hälften bewusst zusammenzubringen – und informatisches Denken ist die Disziplin, die diese Praxis lehrbar macht."
+    },
+    "principles": {
+      "title": "Drei Prinzipien",
+      "testLabel": "Die Prüffrage",
+      "items": [
+        {
+          "number": "01",
+          "name": "Das Prüfprinzip",
+          "quote": "Sie können nur delegieren, was Sie auch beurteilen können.",
+          "paragraphs": [
+            "Die Kompetenz eines Teammitglieds bleibt unsichtbar für alle, denen das Fachwissen fehlt. Wer neu in einem Gebiet ist, kann einen brillanten Entwurf nicht von einem flüssig formulierten, aber falschen unterscheiden – und KI-Ausgaben sind in beiden Fällen zuverlässig flüssig. Fachwissen wird in der Arbeit mit KI deshalb wichtiger, nicht unwichtiger. Je fähiger das Gegenüber, desto mehr Wissen braucht es, um es gut zu beaufsichtigen. Inhaltliches Wissen ist die Lizenz zum Delegieren.",
+            "Für Lehrkräfte erweitert das einen vertrauten Gedanken: diagnostische Kompetenz. Man kann nicht bewerten, was man nicht versteht, und man kann keine Arbeit prüfen, für die man selbst kein Bewertungsraster hätte schreiben können. Das Prinzip begegnet auch einer verbreiteten Sorge ganz direkt: KI macht Fachwissen nicht überflüssig – sie macht seinen Mangel teurer."
+          ],
+          "test": "Würde ich merken, wenn dieses Ergebnis falsch, beliebig oder auf subtile Weise daneben wäre? Wenn nicht, bin ich noch nicht bereit, diesen Teil zu delegieren."
+        },
+        {
+          "number": "02",
+          "name": "Das Wachstumsprinzip",
+          "quote": "Zusammenarbeit soll Sie schärfen, nicht erschlaffen lassen.",
+          "paragraphs": [
+            "Die Arbeit mit hochfähigen Teammitgliedern kann zwei Wege nehmen. Sie kann Ihr Niveau heben, Sie mit besserem Denken in Berührung bringen und Ihnen Raum geben, an der Grenze Ihres Könnens zu arbeiten. Oder sie kann Ihr Können aushöhlen, während Sie mit dem Tippen auch das Denken aus der Hand geben.",
+            "Welcher Weg es wird, hängt davon ab, wie Sie den Arbeitsablauf gestalten. Die nützliche Unterscheidung ist die zwischen Gerüst und Abwälzen. Ein Gerüst stützt Sie, während Sie Fähigkeiten aufbauen; die Stütze ist vorübergehend, und die Fähigkeit wird Ihre eigene. Abwälzen nimmt Ihnen die Last ab – und das Lernen gleich mit. Die Frage nach jedem KI-gestützten Projekt lautet deshalb, ob Sie jetzt mehr können als vorher, und nicht bloß, ob die KI geholfen hat.",
+            "Eine gut gestaltete Zusammenarbeit delegiert die Produktion und behält das Denken. Die Rahmensetzung, die Ermessensentscheidungen und die letzten Entscheidungen bleiben bei Ihnen – auch wenn die KI Entwürfe und Rohmaterial liefert."
+          ],
+          "test": "Bin ich nach dieser Zusammenarbeit fähiger oder weniger fähig als zu Beginn?"
+        },
+        {
+          "number": "03",
+          "name": "Das Beitragsprinzip",
+          "quote": "Benennen Sie, was nur Sie einbringen können.",
+          "paragraphs": [
+            "In einem starken Team kann jedes Mitglied eine Frage beantworten: Was trage ich bei, das die anderen nicht beitragen können? Die Arbeit mit KI verlangt dieselbe Selbstkenntnis. Wer den eigenen Beitrag nicht benennen kann, läuft Gefahr, zum Boten zu werden – Eingaben hinein, Ergebnisse heraus, ohne unterwegs etwas hinzuzufügen.",
+            "Der menschliche Beitrag beginnt mit dem Kontext, den nur Sie haben, dem Engagement, das nur Sie empfinden, und der Verantwortung, die nur Sie tragen können – dazu kommen Ihre Vision, Ihre Werte und Ihr Gespür. Wer den eigenen Beitrag benennt, bevor er anfängt, verändert den Charakter der Arbeit: Die KI erledigt die Arbeit nicht mehr für Sie, sondern erweitert eine Arbeit, die erkennbar Ihre eigene ist."
+          ],
+          "test": "Was steckt in diesem Endprodukt, das nur von mir kommen konnte?"
+        }
+      ]
+    },
+    "crosswalk": {
+      "title": "Die Brücke zum informatischen Denken",
+      "intro": "Die drei Prinzipien beschreiben eine Haltung. Das informatische Denken liefert das Handwerkszeug. Die vier klassischen Praktiken des informatischen Denkens lassen sich direkt auf die Fertigkeiten der Zusammenarbeit mit KI übertragen.",
+      "colTraditional": "In der klassischen Informatik",
+      "colAI": "In der Zusammenarbeit mit KI",
+      "rows": [
+        {
+          "practice": "Dekomposition",
+          "traditional": "Ein Problem in lösbare Teile zerlegen",
+          "ai": "Ein Projekt in delegierbare Teile zerlegen – und entscheiden, welche Teile Ihr Urteil brauchen und welche die KI entwerfen kann"
+        },
+        {
+          "practice": "Abstraktion",
+          "traditional": "Details weglassen, um das Wesentliche zu modellieren",
+          "ai": "Die Arbeit präzise spezifizieren. Ein guter Prompt ist ein Akt der Abstraktion: Rahmenbedingungen, Zielgruppe, Zweck und Erfolgskriterien benennen und das Rauschen herausfiltern"
+        },
+        {
+          "practice": "Mustererkennung",
+          "traditional": "Regelmäßigkeiten und wiederverwendbare Strukturen finden",
+          "ai": "Ergebnisse bewerten. Die typischen Fehlermuster von KI zu erkennen (beliebige Stimme, selbstbewusste Fehler, oberflächliche Plausibilität, fehlender Kontext) ist Mustererkennung als Qualitätskontrolle"
+        },
+        {
+          "practice": "Algorithmisches Denken",
+          "traditional": "Schritt-für-Schritt-Verfahren entwerfen",
+          "ai": "Den Arbeitsablauf entwerfen. Die Schleife aus Entwerfen, Kritisieren, Überarbeiten und Prüfen ist ein Algorithmus, den Sie selbst schreiben, ausführen und korrigieren"
+        }
+      ],
+      "outro": "Diese Brücke begründet das Wort „Computational“ im Namen des Rahmenwerks. Die Denkpraktiken, die wir längst für Programmierung und Problemlösen unterrichten, sind dieselben Praktiken, die Menschen zu wirksamen Regisseuren der KI machen. Schulen müssen keine neue Grundkompetenz aus dem Nichts erfinden – sie müssen eine erweitern, die viele von ihnen bereits unterrichten."
+    },
+    "cycle": {
+      "title": "Der Praxiszyklus: Die Fünf Ds",
+      "intro": "Die Prinzipien und die Brücke zum informatischen Denken fügen sich zu einem wiederholbaren Zyklus für jedes Projekt, das mit KI entsteht. Die fünf Schritte – Definieren, Dekomponieren, Dirigieren, Differenzieren, Dazulernen – folgen den englischen Five Ds: Define, Decompose, Direct, Discern, Develop.",
+      "steps": [
+        {
+          "name": "Definieren",
+          "tag": "Prüfprinzip",
+          "body": "Klären Sie die Vision, bevor Sie irgendein Werkzeug öffnen. Was bauen wir? Für wen ist es? Wie sieht Erfolg aus – konkret genug, um ihn zu erkennen? Erfolgskriterien müssen vorhanden sein, bevor die Zusammenarbeit beginnt; hier findet das Prüfprinzip seinen Halt."
+        },
+        {
+          "name": "Dekomponieren",
+          "tag": "CT: Dekomposition",
+          "body": "Zerlegen Sie das Projekt in Teile und sortieren Sie sie. Welche Teile brauchen meinen Kontext, mein Urteil und meine Werte? Welche Teile sind Produktionsarbeit, die die KI entwerfen kann? Das ist Dekomposition in Aktion – und sie stellt die Beitragsfrage von Anfang an."
+        },
+        {
+          "name": "Dirigieren",
+          "tag": "CT: Abstraktion",
+          "body": "Spezifizieren Sie die delegierte Arbeit präzise. Vermitteln Sie Rahmenbedingungen, Zielgruppe, Zweck, Format und die Erfolgskriterien aus Schritt eins. Eine vage Vision führt zu vager Delegation. Das ist Abstraktion, angewandt auf Kommunikation."
+        },
+        {
+          "name": "Differenzieren",
+          "tag": "CT: Mustererkennung",
+          "body": "Bewerten Sie das Ergebnis an den Erfolgskriterien. Suchen Sie gezielt nach den typischen Fehlermustern. Dann entscheiden Sie: annehmen, überarbeiten, neu ausrichten oder verwerfen. Hier leistet die Mustererkennung die Hauptarbeit – und das Prüfprinzip wird fällig."
+        },
+        {
+          "name": "Dazulernen",
+          "tag": "CT: Algorithmisches Denken",
+          "body": "Fügen Sie die Arbeit zusammen, wiederholen Sie die Schleife und reflektieren Sie, was Sie gelernt haben. Was können Sie jetzt tun, beurteilen oder ausdrücken, was vorher nicht ging? Diese Reflexion schließt das Wachstumsprinzip ab – und die Schleife selbst macht algorithmisches Denken sichtbar."
+        }
+      ],
+      "outro": "Der Zyklus funktioniert in jedem Maßstab: eine Lehrkraft, die eine Unterrichtseinheit entwirft; ein Team, das eine schulische Ressource baut; Schülerinnen und Schüler, die ein Projekt umsetzen. Der Reflexionsschritt im Dazulernen ist es, der verhindert, dass die Schleife ins bloße Abwälzen kippt."
+    },
+    "whyNow": {
+      "title": "Warum dieses Rahmenwerk, warum jetzt",
+      "p1": "Die meisten KI-Handreichungen für Schulen sammeln sich an zwei Polen: Werkzeug-Tutorials und Regelwerke. Computational Collaboration steht in der Mitte dazwischen und bietet eine Haltung und ein Handwerkszeug, die über einzelne Werkzeuge hinaus Bestand haben, die an Denkpraktiken anknüpfen, die Schulen bereits unterrichten, und die ehrlich bleiben gegenüber dem zentralen Risiko: Mächtige Mitarbeiter können uns schwächen, wenn wir sie unser Denken erledigen lassen.",
+      "poleTutorials": {
+        "label": "Werkzeug-Tutorials",
+        "quote": "So schreibt man einen Prompt"
+      },
+      "poleGuardrails": {
+        "label": "Regelwerke",
+        "quote": "Das hier ist nicht erlaubt"
+      },
+      "middle": {
+        "label": "Computational Collaboration",
+        "desc": "Eine Haltung und ein Handwerkszeug, die über einzelne Werkzeuge hinaus Bestand haben"
+      },
+      "bet": "Das Rahmenwerk setzt auf eine These: Die Schulen, die mit KI aufblühen, werden diejenigen sein, deren Lehrkräfte und Lernende die Frage im Kern jeder Zusammenarbeit klar und selbstbewusst beantworten können:",
+      "bigQuestion": "Was bringe ich in dieses Team ein?"
+    },
+    "footer": {
+      "share": "Teilen Sie dieses Rahmenwerk mit Lehrkräften, die mit KI gestalten und entwickeln.",
+      "attribution": "Computational Collaboration · Joe Alexander Meléndez-Naharro",
+      "relatedLabel": "Verwandtes Rahmenwerk",
+      "relatedText": "Anchor & STEER — ein menschzentriertes Design-Rahmenwerk für KI in der Bildung"
+    }
   }
 }
