@@ -215,6 +215,19 @@ export default function ComputationalCollaborationPage() {
           <p className="reveal text-text-secondary leading-relaxed text-center max-w-2xl mx-auto mt-10 stagger-5">
             {t('coreArgument.closing')}
           </p>
+
+          <aside
+            className="reveal max-w-2xl mx-auto mt-10 rounded-lg bg-canvas-raised/50 border border-canvas-border p-6 md:p-7"
+            style={{ borderLeft: `3px solid ${cc.human}` }}
+          >
+            <p className="text-xs uppercase tracking-widest text-terra font-mono mb-3">
+              {t('coreArgument.note.label')}
+            </p>
+            <div className="space-y-3 text-sm text-text-secondary leading-relaxed">
+              <p>{t('coreArgument.note.p1')}</p>
+              <p>{t('coreArgument.note.p2')}</p>
+            </div>
+          </aside>
         </div>
       </section>
 

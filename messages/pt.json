@@ -2476,7 +2476,12 @@
         ]
       },
       "equalsLabel": "Uma equipe que funciona",
-      "closing": "A IA fornece os 3Cs. Você fornece o contexto, o comprometimento e a responsabilidade. Computational Collaboration é a prática de reunir as duas metades de forma deliberada, e o pensamento computacional é a disciplina que torna essa prática ensinável."
+      "closing": "A IA fornece os 3Cs. Você fornece o contexto, o comprometimento e a responsabilidade. Computational Collaboration é a prática de reunir as duas metades de forma deliberada, e o pensamento computacional é a disciplina que torna essa prática ensinável.",
+      "note": {
+        "label": "Uma nota sobre a palavra “colaboração”",
+        "p1": "Chamar isso de colaboração não transforma a IA em colega. A IA generativa continua sendo uma ferramenta — extraordinariamente capaz, mas uma ferramenta. Ela não tem nada em jogo no que ajuda a produzir: não lhe importa se a aula funciona ou se o projeto avança, e nenhuma fluência nas respostas muda isso.",
+        "p2": "Por isso a palavra precisa ser redefinida antes de ser útil. A colaboração humana pressupõe que todos à mesa se importam com o resultado do trabalho; aqui, esse cuidado está inteiramente do seu lado. Computational Collaboration mantém a postura do trabalho em equipe porque essa postura ensina as habilidades certas — delegar, direcionar, avaliar — enquanto o que está em jogo e a responsabilidade permanecem humanos."
+      }
     },
     "principles": {
       "title": "Três Princípios",

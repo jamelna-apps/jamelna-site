@@ -2428,7 +2428,12 @@
         ]
       },
       "equalsLabel": "A working team",
-      "closing": "The AI supplies the 3Cs. You supply the context, the commitment, and the accountability. Computational Collaboration is the practice of bringing both halves together deliberately, and computational thinking is the discipline that makes the practice teachable."
+      "closing": "The AI supplies the 3Cs. You supply the context, the commitment, and the accountability. Computational Collaboration is the practice of bringing both halves together deliberately, and computational thinking is the discipline that makes the practice teachable.",
+      "note": {
+        "label": "A note on the word “collaboration”",
+        "p1": "Calling this collaboration doesn't make AI a colleague. Generative AI is still a tool — a remarkably capable one, but a tool. It holds no stake in what it helps produce: nothing rides, for the AI, on the lesson landing or the project shipping, and no amount of fluent output changes that.",
+        "p2": "So the word has to be redefined before it can be useful. Human collaboration assumes everyone at the table cares how the work turns out; here, the caring sits entirely on your side. Computational Collaboration keeps the posture of teamwork because that posture teaches the right skills — delegating, directing, evaluating — while the stake and the responsibility stay human."
+      }
     },
     "principles": {
       "title": "Three Principles",
