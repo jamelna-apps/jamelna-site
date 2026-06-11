@@ -304,6 +304,25 @@ textarea:focus-visible {
 .stagger-4 { transition-delay: 0.32s; }
 .stagger-5 { transition-delay: 0.40s; }
 
+/* Reduced motion: show reveal content immediately, no animation */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-fade,
+  .reveal-clip,
+  .reveal-mask,
+  .reveal-slide-left,
+  .reveal-slide-right {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: none;
+  }
+
+  .reveal-mask::after {
+    display: none;
+  }
+}
+
 /* ── Advanced reveals ─────────────────────────────────────────────────── */
 
 /* Mask reveal — colored bar wipes across, revealing content */

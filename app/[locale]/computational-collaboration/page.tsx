@@ -9,6 +9,13 @@ function useScrollReveal() {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const elements = ref.current?.querySelectorAll('.reveal');
+
+    if (typeof IntersectionObserver === 'undefined') {
+      elements?.forEach((el) => el.classList.add('visible'));
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -20,7 +27,6 @@ function useScrollReveal() {
       { threshold: 0.1 }
     );
 
-    const elements = ref.current?.querySelectorAll('.reveal');
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
