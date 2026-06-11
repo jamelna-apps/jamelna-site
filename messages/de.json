@@ -2479,8 +2479,8 @@
       "closing": "Die KI liefert die 3Cs. Sie liefern Kontext, Engagement und Verantwortung. Computational Collaboration ist die Praxis, beide Hälften bewusst zusammenzubringen – und informatisches Denken ist die Disziplin, die diese Praxis lehrbar macht.",
       "note": {
         "label": "Eine Anmerkung zum Wort „Kollaboration“",
-        "p1": "Dass wir hier von Kollaboration sprechen, macht KI nicht zur Kollegin. Generative KI ist nach wie vor ein Werkzeug — ein bemerkenswert leistungsfähiges, aber ein Werkzeug. Sie hat nichts in dem zu verlieren, was sie mitproduziert: Ob die Unterrichtsstunde gelingt oder das Projekt ankommt, berührt sie nicht, und noch so flüssige Ausgaben ändern daran nichts.",
-        "p2": "Deshalb muss das Wort erst neu gefasst werden, bevor es trägt. Menschliche Zusammenarbeit setzt voraus, dass allen am Tisch am Ergebnis liegt; hier liegt dieses Interesse ganz auf Ihrer Seite. Computational Collaboration behält die Haltung von Teamarbeit bei, weil diese Haltung die richtigen Fähigkeiten vermittelt — delegieren, anleiten, beurteilen —, während Einsatz und Verantwortung menschlich bleiben."
+        "p1": "Dass wir hier von Kollaboration sprechen, macht KI nicht zur Kollegin. Generative KI ist nach wie vor ein Werkzeug, ein bemerkenswert leistungsfähiges, aber eben ein Werkzeug. Sie hat nichts in dem zu verlieren, was sie mitproduziert: Ob die Unterrichtsstunde gelingt oder das Projekt ankommt, berührt sie nicht, und noch so flüssige Ausgaben ändern daran nichts.",
+        "p2": "Deshalb muss das Wort erst neu gefasst werden, bevor es trägt. Menschliche Zusammenarbeit setzt voraus, dass allen am Tisch am Ergebnis liegt; hier liegt dieses Interesse ganz auf Ihrer Seite. Computational Collaboration behält die Haltung von Teamarbeit bei, weil diese Haltung die richtigen Fähigkeiten vermittelt: Delegieren, Anleiten, Beurteilen. Einsatz und Verantwortung bleiben dabei menschlich."
       }
     },
     "principles": {
@@ -2603,7 +2603,7 @@
       "share": "Teilen Sie dieses Rahmenwerk mit Lehrkräften, die mit KI gestalten und entwickeln.",
       "attribution": "Computational Collaboration · Joe Alexander Meléndez-Naharro",
       "relatedLabel": "Verwandtes Rahmenwerk",
-      "relatedText": "Anchor & STEER — ein menschzentriertes Design-Rahmenwerk für KI in der Bildung"
+      "relatedText": "Anchor & STEER, ein menschzentriertes Design-Rahmenwerk für KI in der Bildung"
     }
   }
 }

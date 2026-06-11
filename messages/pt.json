@@ -2440,7 +2440,7 @@
       "title": "O Argumento Central",
       "intro": "A IA traz os 3Cs para a mesa. Ela é competente em uma ampla gama de tarefas escolares, capaz de produzir trabalho em uma velocidade e em um volume que nenhum humano alcança, e complacente até demais.",
       "pullLine": "Mas os 3Cs descrevem um colega de equipe, não uma equipe.",
-      "bridge": "Uma equipe que funciona também precisa de contexto, comprometimento e responsabilidade — e os três vêm do lado humano da parceria.",
+      "bridge": "Uma equipe que funciona também precisa de contexto, comprometimento e responsabilidade, e os três vêm do lado humano da parceria.",
       "aiSide": {
         "label": "O que a IA fornece",
         "items": [
@@ -2479,8 +2479,8 @@
       "closing": "A IA fornece os 3Cs. Você fornece o contexto, o comprometimento e a responsabilidade. Computational Collaboration é a prática de reunir as duas metades de forma deliberada, e o pensamento computacional é a disciplina que torna essa prática ensinável.",
       "note": {
         "label": "Uma nota sobre a palavra “colaboração”",
-        "p1": "Chamar isso de colaboração não transforma a IA em colega. A IA generativa continua sendo uma ferramenta — extraordinariamente capaz, mas uma ferramenta. Ela não tem nada em jogo no que ajuda a produzir: não lhe importa se a aula funciona ou se o projeto avança, e nenhuma fluência nas respostas muda isso.",
-        "p2": "Por isso a palavra precisa ser redefinida antes de ser útil. A colaboração humana pressupõe que todos à mesa se importam com o resultado do trabalho; aqui, esse cuidado está inteiramente do seu lado. Computational Collaboration mantém a postura do trabalho em equipe porque essa postura ensina as habilidades certas — delegar, direcionar, avaliar — enquanto o que está em jogo e a responsabilidade permanecem humanos."
+        "p1": "Chamar isso de colaboração não transforma a IA em colega. A IA generativa continua sendo uma ferramenta, extraordinariamente capaz, mas uma ferramenta. Ela não tem nada em jogo no que ajuda a produzir: não lhe importa se a aula funciona ou se o projeto avança, e nenhuma fluência nas respostas muda isso.",
+        "p2": "Por isso a palavra precisa ser redefinida antes de ser útil. A colaboração humana pressupõe que todos à mesa se importam com o resultado do trabalho; aqui, esse cuidado está inteiramente do seu lado. Computational Collaboration mantém a postura do trabalho em equipe porque essa postura ensina as habilidades certas de delegar, direcionar e avaliar, enquanto o que está em jogo e a responsabilidade permanecem humanos."
       }
     },
     "principles": {
@@ -2492,7 +2492,7 @@
           "name": "O Princípio da Verificação",
           "quote": "Você só pode delegar aquilo que consegue avaliar.",
           "paragraphs": [
-            "A competência de um colega de equipe é invisível para quem não domina a área. Um novato não distingue um rascunho brilhante de um fluente porém errado — e a produção da IA é confiavelmente fluente nos dois casos. O domínio do conteúdo, portanto, torna-se mais importante quando você trabalha com IA, não menos. Quanto mais capaz o colaborador, mais conhecimento é preciso para supervisioná-lo bem. O conhecimento do conteúdo é a licença para delegar.",
+            "A competência de um colega de equipe é invisível para quem não domina a área. Um novato não distingue um rascunho brilhante de um fluente porém errado, e a produção da IA é confiavelmente fluente nos dois casos. O domínio do conteúdo, portanto, torna-se mais importante quando você trabalha com IA, não menos. Quanto mais capaz o colaborador, mais conhecimento é preciso para supervisioná-lo bem. O conhecimento do conteúdo é a licença para delegar.",
             "Para educadores, isso estende uma ideia familiar: o letramento em avaliação. Você não pode corrigir o que não entende, e não pode verificar um trabalho para o qual não saberia escrever uma rubrica. O princípio também responde de frente a um medo comum. A IA não torna o conhecimento do conteúdo irrelevante; ela aumenta o custo de não tê-lo."
           ],
           "test": "Eu perceberia se este resultado estivesse errado, genérico ou sutilmente fora do alvo? Se não, ainda não estou pronto para delegar esta parte."
@@ -2503,7 +2503,7 @@
           "quote": "A colaboração deve afiar você, não amolecer você.",
           "paragraphs": [
             "Trabalhar com colegas altamente capazes pode seguir dois caminhos. Pode elevar o seu jogo, expondo você a um pensamento melhor e liberando você para trabalhar no limite da sua capacidade. Ou pode corroer o seu jogo, enquanto você entrega o pensar junto com o digitar.",
-            "O caminho que isso toma depende de como você desenha o fluxo de trabalho, e a distinção útil é entre andaime e terceirização. Um andaime sustenta você enquanto você constrói capacidade; o apoio é temporário e a capacidade passa a ser sua. A terceirização remove a carga e remove o aprendizado junto. Então a pergunta a fazer depois de qualquer projeto assistido por IA é se você agora consegue fazer mais do que conseguia antes — não apenas se a IA ajudou.",
+            "O caminho que isso toma depende de como você desenha o fluxo de trabalho, e a distinção útil é entre andaime e terceirização. Um andaime sustenta você enquanto você constrói capacidade; o apoio é temporário e a capacidade passa a ser sua. A terceirização remove a carga e remove o aprendizado junto. Então a pergunta a fazer depois de qualquer projeto assistido por IA é se você agora consegue fazer mais do que conseguia antes, não apenas se a IA ajudou.",
             "Uma colaboração bem desenhada delega a produção e retém o pensamento. Você mantém o enquadramento, os julgamentos e as decisões finais, mesmo quando a IA gera rascunhos e matéria-prima."
           ],
           "test": "Depois desta colaboração, estou mais capaz ou menos capaz do que quando comecei?"
@@ -2603,7 +2603,7 @@
       "share": "Compartilhe este framework com educadores que projetam e constroem com IA.",
       "attribution": "Computational Collaboration · Joe Alexander Meléndez-Naharro",
       "relatedLabel": "Framework relacionado",
-      "relatedText": "Anchor & STEER — um framework de design centrado no humano para IA na educação"
+      "relatedText": "Anchor & STEER, um framework de design centrado no humano para IA na educação"
     }
   }
 }
