@@ -77,12 +77,9 @@ export default function ContactPage() {
             <h3 className="text-xl font-display font-bold text-text-heading mb-3">
               {t('consulting.title')}
             </h3>
-            <p className="text-text-secondary text-base leading-relaxed max-w-2xl mb-4">
+            <p className="text-text-secondary text-base leading-relaxed max-w-2xl">
               {t('consulting.description')}
             </p>
-            <a href="mailto:joe@jamelna.com" className="link-underline text-terra font-medium">
-              {t('consulting.cta')} →
-            </a>
           </section>
 
           {/* Section 3: Get in Touch */}
