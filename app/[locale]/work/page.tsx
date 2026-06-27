@@ -1,10 +1,13 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import CompactProjectCard from '@/components/CompactProjectCard';
 import PhotoBreak from '@/components/PhotoBreak';
 import { useTranslations } from 'next-intl';
+import { CATEGORY_META, CategoryKey } from '@/lib/categories';
+
+type FilterKey = 'all' | CategoryKey;
 
 interface Project {
   title: string;
@@ -23,7 +26,7 @@ interface Project {
   category: string;
 }
 
-function useScrollReveal() {
+function useScrollReveal(deps: React.DependencyList = []) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,7 +42,10 @@ function useScrollReveal() {
     const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
     elements?.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+    // Re-run when deps change (e.g. the category filter) so newly shown
+    // sections are re-observed and revealed instead of staying hidden.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
   return ref;
 }
 
@@ -71,7 +77,8 @@ function sortByPreference(projects: Project[], order: string[]): Project[] {
 export default function WorkPage() {
   const t = useTranslations('work');
   const projects = t.raw('projects') as Project[];
-  const containerRef = useScrollReveal();
+  const [filter, setFilter] = useState<FilterKey>('all');
+  const containerRef = useScrollReveal([filter]);
 
   const professional = sortByPreference(
     projects.filter(p => p.category === 'professional'),
@@ -102,11 +109,42 @@ export default function WorkPage() {
         </div>
       </section>
 
+      {/* Category filter */}
+      <div className="sticky top-16 z-30 border-b border-canvas-border bg-canvas-deep/95 backdrop-blur">
+        <div className="max-w-5xl mx-auto flex flex-wrap gap-2 px-4 py-3">
+          {([
+            { key: 'all', labelKey: 'filterAll', count: projects.length },
+            { key: 'professional', labelKey: 'catProfessional', count: professional.length },
+            { key: 'products', labelKey: 'catPersonal', count: products.length },
+            { key: 'creative', labelKey: 'catArt', count: creative.length },
+          ] as { key: FilterKey; labelKey: string; count: number }[]).map((tab) => {
+            const active = filter === tab.key;
+            const meta = tab.key !== 'all' ? CATEGORY_META[tab.key as CategoryKey] : null;
+            return (
+              <button
+                key={tab.key}
+                onClick={() => setFilter(tab.key)}
+                aria-pressed={active}
+                className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
+                  active
+                    ? 'border-canvas-border bg-canvas-raised text-text-heading'
+                    : 'border-transparent text-text-muted hover:text-text-secondary'
+                }`}
+              >
+                {meta && <span className={`h-1.5 w-1.5 rounded-full ${meta.dot}`} />}
+                {t(tab.labelKey)}
+                <span className="text-xs text-text-muted">{tab.count}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       <section className="py-12 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
 
           {/* Professional Experience */}
-          <div className="mb-20" id="professional">
+          <div className={`mb-20 ${filter === 'all' || filter === 'professional' ? '' : 'hidden'}`} id="professional">
             <SectionHeader
               title={t('sectionProfessional')}
               description={t('sectionProfessionalDesc')}
@@ -136,7 +174,7 @@ export default function WorkPage() {
 
 
           {/* Products I've Built */}
-          <div className="mb-20" id="products">
+          <div className={`mb-20 ${filter === 'all' || filter === 'products' ? '' : 'hidden'}`} id="products">
             <SectionHeader
               title={t('sectionProducts')}
               description={t('sectionProductsDesc')}
@@ -165,7 +203,7 @@ export default function WorkPage() {
           </div>
 
           {/* Creative Projects - Compact Grid */}
-          <div id="creative">
+          <div className={filter === 'all' || filter === 'creative' ? '' : 'hidden'} id="creative">
             <SectionHeader
               title={t('sectionCreative')}
               description={t('sectionCreativeDesc')}

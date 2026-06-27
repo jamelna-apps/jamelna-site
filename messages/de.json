@@ -504,12 +504,16 @@
         "category": "professional"
       }
     ],
-    "sectionProfessional": "Berufserfahrung",
+    "sectionProfessional": "Beruflich",
     "sectionProfessionalDesc": "Positionen, in denen ich Programme leitete, Teams führte und Politik im großen Maßstab gestaltete.",
-    "sectionProducts": "Produkte, die ich entwickelt habe",
+    "sectionProducts": "Persönliche Projekte",
     "sectionProductsDesc": "Unabhängige Apps und Tools, entworfen, entwickelt und veröffentlicht.",
-    "sectionCreative": "Kreative Projekte",
-    "sectionCreativeDesc": "Kunst und konzeptionelle Arbeiten, die Technologie, Erinnerung und Bedeutung erforschen."
+    "sectionCreative": "Kunst",
+    "sectionCreativeDesc": "Kunst und konzeptionelle Arbeiten, die Technologie, Erinnerung und Bedeutung erforschen.",
+    "filterAll": "Alle",
+    "catProfessional": "Beruflich",
+    "catPersonal": "Persönlich",
+    "catArt": "Kunst"
   },
   "about": {
     "title": "Über Mich",

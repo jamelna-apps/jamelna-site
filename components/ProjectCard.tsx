@@ -3,8 +3,10 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import CategoryBadge from './CategoryBadge';
 
 interface ProjectCardProps {
+  category: string;
   role: string;
   organization: string;
   timeline: string;
@@ -20,6 +22,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  category,
   role,
   organization,
   timeline,
@@ -38,6 +41,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="glass-card p-8 mb-12">
       {/* Header */}
       <div className="mb-6">
+        <div className="mb-3">
+          <CategoryBadge category={category} />
+        </div>
         <div className="flex flex-wrap items-center justify-between mb-2 gap-4">
           <h3 className="text-sm font-bold text-warm uppercase tracking-wider font-mono">
             {role}

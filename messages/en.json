@@ -504,12 +504,16 @@
         "category": "professional"
       }
     ],
-    "sectionProfessional": "Professional Experience",
+    "sectionProfessional": "Professional",
     "sectionProfessionalDesc": "Roles where I led programs, managed teams, and shaped policy at scale.",
-    "sectionProducts": "Products I've Built",
+    "sectionProducts": "Personal projects",
     "sectionProductsDesc": "Independent apps and tools, designed, built, and shipped.",
-    "sectionCreative": "Creative Projects",
-    "sectionCreativeDesc": "Art and conceptual work exploring technology, memory, and meaning."
+    "sectionCreative": "Art",
+    "sectionCreativeDesc": "Art and conceptual work exploring technology, memory, and meaning.",
+    "filterAll": "All",
+    "catProfessional": "Professional",
+    "catPersonal": "Personal",
+    "catArt": "Art"
   },
   "about": {
     "title": "About",

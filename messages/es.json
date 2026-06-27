@@ -504,12 +504,16 @@
         "category": "professional"
       }
     ],
-    "sectionProfessional": "Experiencia Profesional",
+    "sectionProfessional": "Profesional",
     "sectionProfessionalDesc": "Roles donde lideré programas, gestioné equipos y definí políticas a escala.",
-    "sectionProducts": "Productos que he Creado",
+    "sectionProducts": "Proyectos personales",
     "sectionProductsDesc": "Aplicaciones y herramientas independientes, diseñadas, desarrolladas y publicadas.",
-    "sectionCreative": "Proyectos Creativos",
-    "sectionCreativeDesc": "Arte y trabajo conceptual explorando tecnología, memoria y significado."
+    "sectionCreative": "Arte",
+    "sectionCreativeDesc": "Arte y trabajo conceptual explorando tecnología, memoria y significado.",
+    "filterAll": "Todos",
+    "catProfessional": "Profesional",
+    "catPersonal": "Personal",
+    "catArt": "Arte"
   },
   "about": {
     "title": "Sobre Mí",

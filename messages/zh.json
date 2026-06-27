@@ -504,12 +504,16 @@
         "category": "professional"
       }
     ],
-    "sectionProfessional": "专业经验",
+    "sectionProfessional": "专业",
     "sectionProfessionalDesc": "我领导项目、管理团队并大规模制定政策的角色。",
-    "sectionProducts": "我构建的产品",
+    "sectionProducts": "个人项目",
     "sectionProductsDesc": "独立应用和工具，设计、开发和发布。",
-    "sectionCreative": "创意项目",
-    "sectionCreativeDesc": "探索技术、记忆和意义的艺术与概念性作品。"
+    "sectionCreative": "艺术",
+    "sectionCreativeDesc": "探索技术、记忆和意义的艺术与概念性作品。",
+    "filterAll": "全部",
+    "catProfessional": "专业",
+    "catPersonal": "个人",
+    "catArt": "艺术"
   },
   "about": {
     "title": "关于我",

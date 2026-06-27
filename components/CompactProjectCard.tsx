@@ -2,8 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
+import CategoryBadge from './CategoryBadge';
 
 interface CompactProjectCardProps {
+  category: string;
   title: string;
   role: string;
   organization: string;
@@ -15,6 +17,7 @@ interface CompactProjectCardProps {
 }
 
 const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
+  category,
   title,
   role: _role,
   organization: _organization,
@@ -45,6 +48,9 @@ const CompactProjectCard: React.FC<CompactProjectCardProps> = ({
 
       {/* Title & Timeline */}
       <div className="mb-3">
+        <div className="mb-2">
+          <CategoryBadge category={category} />
+        </div>
         <h3 className="text-xl font-display font-bold text-text-heading mb-1 group-hover:text-primary transition-colors">
           {title}
           {website && (

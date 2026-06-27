@@ -504,12 +504,16 @@
         "category": "professional"
       }
     ],
-    "sectionProfessional": "Experiência Profissional",
+    "sectionProfessional": "Profissional",
     "sectionProfessionalDesc": "Funções onde liderei programas, gerenciei equipes e moldei políticas em escala.",
-    "sectionProducts": "Produtos que Construí",
+    "sectionProducts": "Projetos pessoais",
     "sectionProductsDesc": "Aplicações e ferramentas independentes, projetadas, desenvolvidas e publicadas.",
-    "sectionCreative": "Projetos Criativos",
-    "sectionCreativeDesc": "Arte e trabalho conceitual explorando tecnologia, memória e significado."
+    "sectionCreative": "Arte",
+    "sectionCreativeDesc": "Arte e trabalho conceitual explorando tecnologia, memória e significado.",
+    "filterAll": "Todos",
+    "catProfessional": "Profissional",
+    "catPersonal": "Pessoal",
+    "catArt": "Arte"
   },
   "about": {
     "title": "Sobre",
