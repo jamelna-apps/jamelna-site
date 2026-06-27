@@ -502,6 +502,50 @@
         ],
         "imageCredit": "Image courtesy of Cornell Tech.",
         "category": "professional"
+      },
+      {
+        "title": "whAImiss",
+        "role": "Creator & Developer",
+        "organization": "Conceptual Art Project",
+        "timeline": "2026 - Present",
+        "challenge": "Build a deadpan, real-looking product site for a wearable AI that pays attention to your life so you do not have to, a wellness-branded surveillance collar, as a critique of the attention economy and our urge to outsource presence to our devices.",
+        "whatIDid": [
+          "Designed a calm pastel wellness-brand identity that hides the dystopia in plain sight",
+          "Wrote and built an escalating 'Wha I miss?' demo where the AI recaps what you ignored, from harmless to deeply invasive",
+          "Added a live counter that reframes your time on the page as the life you are missing",
+          "Layered social proof, an FAQ, and fine print so every reassurance quietly admits the opposite",
+          "Implemented a CSS-only scroll reveal so content can never get stuck hidden on mobile",
+          "Shipped fully static on Vercel with a custom domain and per-page share images"
+        ],
+        "impact": "A finished, convincing fake product that lands its critique by being genuinely seductive; visitors reach for the device before they realize what they have agreed to.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Framer Motion, conceptual design, satirical copywriting, Vercel, conceptual art",
+        "images": [
+          "/images/screenshots/whaimiss/home.png"
+        ],
+        "website": "https://whaimiss.jamelna.com",
+        "category": "creative"
+      },
+      {
+        "title": "The brAIn Company",
+        "role": "Creator & Developer",
+        "organization": "Conceptual Art Project",
+        "timeline": "2026 - Present",
+        "challenge": "Build the corporate site for a fictional frontier AI lab, the company behind whAImiss, whose stated mission is to relieve people of presence, decisions, and thought so their energy can flow into consumption. A Brave New World dressed as a wellness brand.",
+        "whatIDid": [
+          "Wrote a full institutional voice: a mission, a 'think less, so you can do more' thesis, and a Responsible Cognition page that mirrors real AI-safety language",
+          "Authored four deadpan research papers with abstracts, methods, results tables, and citations, each at its own URL",
+          "Built product pages for a family of devices that take over deciding, sleeping, and the inner voice",
+          "Added a careers page whose roles and 'we do not accept applications' twist extend the satire",
+          "Wired cross-page navigation, a research index, and per-page share cards across the site",
+          "Shipped fully static with a CSS-only reveal so nothing depends on JavaScript to be visible"
+        ],
+        "impact": "A complete, unsettling tech-company world that connects to whAImiss as its parent, the cozy product and the calm corporation that makes it, closing on the flat assurance that everyone is happy.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, conceptual design, satirical writing, information architecture, Vercel, conceptual art",
+        "images": [
+          "/images/screenshots/brainco/home.png"
+        ],
+        "website": "https://brainco.jamelna.com",
+        "category": "creative"
       }
     ],
     "sectionProfessional": "Professional",

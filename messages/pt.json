@@ -502,6 +502,50 @@
         ],
         "imageCredit": "Image courtesy of Cornell Tech. [TODO-TRANSLATE]",
         "category": "professional"
+      },
+      {
+        "title": "whAImiss",
+        "role": "Criador e Programador",
+        "organization": "Projeto de Arte Conceptual",
+        "timeline": "2026 - Presente",
+        "challenge": "Criar um site de produto sóbrio e de aparência real para uma IA vestível que presta atenção à sua vida para que você não precise, um colar de vigilância com estética de bem-estar, como crítica à economia da atenção e ao nosso impulso de delegar a presença aos nossos dispositivos.",
+        "whatIDid": [
+          "Desenhei uma identidade de marca de bem-estar, em tons pastel e serena, que esconde a distopia à vista de todos",
+          "Escrevi e construí uma demo crescente de 'O que perdi?' em que a IA resume o que você ignorou, do inofensivo ao profundamente invasivo",
+          "Adicionei um contador ao vivo que reenquadra o seu tempo na página como a vida que está a perder",
+          "Sobrepus provas sociais, perguntas frequentes e letras miúdas para que cada garantia admita em voz baixa o contrário",
+          "Implementei uma revelação só com CSS para que o conteúdo nunca fique oculto no telemóvel",
+          "Publiquei totalmente estático na Vercel, com domínio próprio e imagens de partilha por página"
+        ],
+        "impact": "Um produto falso acabado e convincente que concretiza a sua crítica por ser genuinamente sedutor; os visitantes desejam o dispositivo antes de perceberem aquilo com que concordaram.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Framer Motion, design conceptual, redação satírica, Vercel, arte conceptual",
+        "images": [
+          "/images/screenshots/whaimiss/home.png"
+        ],
+        "website": "https://whaimiss.jamelna.com",
+        "category": "creative"
+      },
+      {
+        "title": "The brAIn Company",
+        "role": "Criador e Programador",
+        "organization": "Projeto de Arte Conceptual",
+        "timeline": "2026 - Presente",
+        "challenge": "Criar o site corporativo de um laboratório fictício de IA de ponta, a empresa por trás de whAImiss, cuja missão declarada é libertar as pessoas da presença, das decisões e do pensamento para que a sua energia flua para o consumo. Um admirável mundo novo disfarçado de marca de bem-estar.",
+        "whatIDid": [
+          "Escrevi uma voz institucional completa: uma missão, uma tese de 'pensar menos para fazer mais' e uma página de Cognição Responsável que imita a linguagem real de segurança em IA",
+          "Redigi quatro artigos de investigação sóbrios, com resumos, métodos, tabelas de resultados e citações, cada um no seu próprio URL",
+          "Construí páginas de produto para uma família de dispositivos que assumem o decidir, o dormir e a voz interior",
+          "Adicionei uma página de carreiras cujas vagas e a reviravolta de 'não aceitamos candidaturas' prolongam a sátira",
+          "Liguei a navegação entre páginas, um índice de investigação e imagens de partilha por página",
+          "Publiquei totalmente estático com uma revelação só em CSS, para que nada dependa de JavaScript para ser visível"
+        ],
+        "impact": "Um mundo de empresa tecnológica completo e perturbador que se liga a whAImiss como a sua empresa-mãe, o produto acolhedor e a corporação serena que o fabrica, terminando com a garantia impassível de que todos são felizes.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, design conceptual, escrita satírica, arquitetura de informação, Vercel, arte conceptual",
+        "images": [
+          "/images/screenshots/brainco/home.png"
+        ],
+        "website": "https://brainco.jamelna.com",
+        "category": "creative"
       }
     ],
     "sectionProfessional": "Profissional",

@@ -502,6 +502,50 @@
         ],
         "imageCredit": "Image courtesy of Cornell Tech. [TODO-TRANSLATE]",
         "category": "professional"
+      },
+      {
+        "title": "whAImiss",
+        "role": "创建者兼开发者",
+        "organization": "概念艺术项目",
+        "timeline": "2026年至今",
+        "challenge": "为一款可穿戴AI打造一个一本正经、看似真实的产品网站，它替你关注你的生活，一个以健康品牌包装的监控项圈，借此批判注意力经济，以及我们将在场感外包给设备的冲动。",
+        "whatIDid": [
+          "设计了一套沉静的粉彩健康品牌形象，将反乌托邦藏在显眼处",
+          "撰写并搭建了层层升级的'我错过了什么？'演示，AI从无害到极具侵入性地复述你所忽略的一切",
+          "加入实时计数器，把你停留在页面的时间重新诠释为你正在错过的人生",
+          "层叠社会证明、常见问答与小字条款，让每一句安慰都悄悄承认相反的事实",
+          "实现纯CSS的滚动显现，确保内容在移动端永不卡在隐藏状态",
+          "在Vercel上以完全静态方式发布，配有专属域名和每页分享图"
+        ],
+        "impact": "一个完成度很高、令人信服的虚构产品，正因真正诱人而完成其批判；访客在意识到自己同意了什么之前，就已经伸手想要这台设备。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、Framer Motion、概念设计、讽刺文案、Vercel、概念艺术",
+        "images": [
+          "/images/screenshots/whaimiss/home.png"
+        ],
+        "website": "https://whaimiss.jamelna.com",
+        "category": "creative"
+      },
+      {
+        "title": "The brAIn Company",
+        "role": "创建者兼开发者",
+        "organization": "概念艺术项目",
+        "timeline": "2026年至今",
+        "challenge": "为一家虚构的前沿AI实验室打造企业网站，它正是whAImiss背后的公司，其宣称的使命是把人们从在场感、决策与思考中解放出来，好让他们的精力流向消费。一个披着健康品牌外衣的《美丽新世界》。",
+        "whatIDid": [
+          "撰写了完整的机构口吻：使命、少思考多成事的论点，以及一页模仿真实AI安全话术的《负责任的认知》",
+          "撰写了四篇一本正经的研究论文，配有摘要、方法、结果表格与引用，各有独立网址",
+          "为一系列接管决策、睡眠与内心声音的设备搭建了产品页",
+          "新增招聘页，其职位与我们不接受申请的反转延续了整体讽刺",
+          "打通了跨页面导航、研究索引与每页分享图",
+          "以完全静态方式发布，采用纯CSS显现，使任何内容都不依赖JavaScript才可见"
+        ],
+        "impact": "一个完整而令人不安的科技公司世界，作为whAImiss的母公司与其相连，温馨的产品与制造它的沉静企业，并以一句平淡的保证收尾：每个人都很幸福。",
+        "skills": "Next.js、React、TypeScript、Tailwind CSS、概念设计、讽刺写作、信息架构、Vercel、概念艺术",
+        "images": [
+          "/images/screenshots/brainco/home.png"
+        ],
+        "website": "https://brainco.jamelna.com",
+        "category": "creative"
       }
     ],
     "sectionProfessional": "专业",

@@ -502,6 +502,50 @@
         ],
         "imageCredit": "Image courtesy of Cornell Tech. [TODO-TRANSLATE]",
         "category": "professional"
+      },
+      {
+        "title": "whAImiss",
+        "role": "Schöpfer & Entwickler",
+        "organization": "Konzeptkunst-Projekt",
+        "timeline": "2026 - Heute",
+        "challenge": "Eine nüchterne, echt wirkende Produktseite für eine tragbare KI gestalten, die auf dein Leben achtet, damit du es nicht musst, ein als Wellnessprodukt vermarktetes Überwachungshalsband, als Kritik an der Aufmerksamkeitsökonomie und unserem Drang, Präsenz an unsere Geräte abzugeben.",
+        "whatIDid": [
+          "Eine ruhige, pastellfarbene Wellness-Markenidentität gestaltet, die die Dystopie offen verbirgt",
+          "Eine sich steigernde 'Wha I miss?'-Demo geschrieben und gebaut, in der die KI zusammenfasst, was du übersehen hast, von harmlos bis zutiefst übergriffig",
+          "Einen Live-Zähler ergänzt, der deine Zeit auf der Seite als das Leben darstellt, das du verpasst",
+          "Soziale Beweise, FAQ und Kleingedrucktes so geschichtet, dass jede Beruhigung leise das Gegenteil zugibt",
+          "Eine reine CSS-Einblendung umgesetzt, damit Inhalte auf dem Handy nie unsichtbar hängen bleiben",
+          "Vollständig statisch auf Vercel veröffentlicht, mit eigener Domain und Vorschaubildern pro Seite"
+        ],
+        "impact": "Ein fertiges, überzeugendes Fake-Produkt, dessen Kritik gerade dadurch wirkt, dass es wirklich verführerisch ist; Besucher greifen nach dem Gerät, bevor ihnen klar wird, wozu sie zugestimmt haben.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Framer Motion, Konzeptdesign, satirisches Texten, Vercel, Konzeptkunst",
+        "images": [
+          "/images/screenshots/whaimiss/home.png"
+        ],
+        "website": "https://whaimiss.jamelna.com",
+        "category": "creative"
+      },
+      {
+        "title": "The brAIn Company",
+        "role": "Schöpfer & Entwickler",
+        "organization": "Konzeptkunst-Projekt",
+        "timeline": "2026 - Heute",
+        "challenge": "Die Unternehmensseite für ein fiktives Spitzen-KI-Labor gestalten, die Firma hinter whAImiss, deren erklärtes Ziel es ist, Menschen von Präsenz, Entscheidungen und Denken zu befreien, damit ihre Energie in den Konsum fließt. Schöne neue Welt im Gewand einer Wellnessmarke.",
+        "whatIDid": [
+          "Eine vollständige institutionelle Stimme geschrieben: eine Mission, eine These 'denk weniger, um mehr zu tun' und eine Seite 'Verantwortungsvolle Kognition', die echte KI-Sicherheitssprache nachahmt",
+          "Vier nüchterne Forschungspapiere verfasst, mit Abstracts, Methoden, Ergebnistabellen und Zitaten, jeweils unter eigener URL",
+          "Produktseiten für eine Gerätefamilie gebaut, die das Entscheiden, das Schlafen und die innere Stimme übernehmen",
+          "Eine Karriereseite ergänzt, deren Stellen und die Wendung 'wir nehmen keine Bewerbungen an' die Satire weiterführen",
+          "Seitenübergreifende Navigation, einen Forschungsindex und Vorschaubilder pro Seite verbunden",
+          "Vollständig statisch veröffentlicht mit reiner CSS-Einblendung, sodass nichts von JavaScript abhängt, um sichtbar zu sein"
+        ],
+        "impact": "Eine vollständige, beunruhigende Tech-Konzernwelt, die als Mutter von whAImiss mit ihm verbunden ist, das gemütliche Produkt und der ruhige Konzern, der es herstellt, und endet mit der nüchternen Versicherung, dass alle glücklich sind.",
+        "skills": "Next.js, React, TypeScript, Tailwind CSS, Konzeptdesign, satirisches Schreiben, Informationsarchitektur, Vercel, Konzeptkunst",
+        "images": [
+          "/images/screenshots/brainco/home.png"
+        ],
+        "website": "https://brainco.jamelna.com",
+        "category": "creative"
       }
     ],
     "sectionProfessional": "Beruflich",
