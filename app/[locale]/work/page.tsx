@@ -86,7 +86,7 @@ export default function WorkPage() {
       </section>
 
       {/* Category filter */}
-      <div className="sticky top-16 z-30 border-b border-canvas-border bg-canvas-deep/95 backdrop-blur">
+      <div className="sticky top-0 z-30 border-b border-canvas-border bg-canvas-deep/95 backdrop-blur">
         <div className="max-w-5xl mx-auto flex flex-wrap gap-2 px-4 py-3">
           {([
             { key: 'all', labelKey: 'filterAll', count: projects.length },
