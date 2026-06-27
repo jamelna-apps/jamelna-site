@@ -1,39 +1,12 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 
-// Scroll reveal hook
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-}
-
 export default function AboutPage() {
   const t = useTranslations('about');
   const locale = useLocale();
-  const containerRef = useScrollReveal();
 
   const experiences = [
     { key: 'ncstate' },
@@ -48,7 +21,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

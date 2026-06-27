@@ -1,41 +1,14 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import PhotoBreak from '@/components/PhotoBreak';
 import PhotoTeaser from '@/components/PhotoTeaser';
 import { useTranslations, useLocale } from 'next-intl';
 
-// Scroll reveal hook
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-}
-
 export default function Home() {
   const t = useTranslations('home');
   const locale = useLocale();
-  const containerRef = useScrollReveal();
 
   const expertiseItems = [
     {
@@ -77,7 +50,7 @@ export default function Home() {
   ];
 
   return (
-    <div ref={containerRef} className="bg-canvas">
+    <div className="bg-canvas">
       {/* Hero Section */}
       <Hero />
 

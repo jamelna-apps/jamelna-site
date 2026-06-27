@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import CompactProjectCard from '@/components/CompactProjectCard';
 import PhotoBreak from '@/components/PhotoBreak';
@@ -24,29 +24,6 @@ interface Project {
   imageCredit?: string;
   website?: string;
   category: string;
-}
-
-function useScrollReveal(deps: React.DependencyList = []) {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
-    elements?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-    // Re-run when deps change (e.g. the category filter) so newly shown
-    // sections are re-observed and revealed instead of staying hidden.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, deps);
-  return ref;
 }
 
 function SectionHeader({ title, description }: { title: string; description: string }) {
@@ -78,7 +55,6 @@ export default function WorkPage() {
   const t = useTranslations('work');
   const projects = t.raw('projects') as Project[];
   const [filter, setFilter] = useState<FilterKey>('all');
-  const containerRef = useScrollReveal([filter]);
 
   const professional = sortByPreference(
     projects.filter(p => p.category === 'professional'),
@@ -94,7 +70,7 @@ export default function WorkPage() {
   );
 
   return (
-    <main className="min-h-screen bg-canvas pt-16" ref={containerRef}>
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

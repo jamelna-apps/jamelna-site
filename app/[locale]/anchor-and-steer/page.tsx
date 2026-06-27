@@ -1,32 +1,8 @@
 // app/[locale]/anchor-and-steer/page.tsx
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = ref.current?.querySelectorAll('.reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-}
 
 const fc = {
   anchor: '#1a3a5c',
@@ -68,7 +44,6 @@ type UseCaseItem = { title: string; description: string };
 
 export default function AnchorAndSteerPage() {
   const [expandedDimension, setExpandedDimension] = useState<number | null>(null);
-  const containerRef = useScrollReveal();
   const t = useTranslations('anchorAndSteer');
 
   const failureModes = t.raw('failureModes.items') as FailureItem[];
@@ -80,7 +55,7 @@ export default function AnchorAndSteerPage() {
   const useCases = t.raw('howToUse.items') as UseCaseItem[];
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

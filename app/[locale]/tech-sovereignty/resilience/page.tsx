@@ -1,29 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-
-// Scroll reveal hook
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
-    elements?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-}
 import {
   ActionCard,
   TierSelector,
@@ -288,7 +267,6 @@ function getSortedActions(
 export default function ResiliencePage() {
   const t = useTranslations('techSovereignty');
   const locale = useLocale();
-  const containerRef = useScrollReveal();
 
   const [activeContext, setActiveContext] = useState<ThreatContext>(null);
   const [activeTier, setActiveTier] = useState<number | null>(null);
@@ -324,7 +302,7 @@ export default function ResiliencePage() {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-canvas-deep text-text-heading">
+    <div className="min-h-screen bg-canvas-deep text-text-heading">
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-6xl mx-auto">

@@ -1,30 +1,10 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Lightbox from '@/components/Lightbox';
 import { useTranslations } from 'next-intl';
 import { Gallery } from '@/lib/photos';
-
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
-    elements?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-}
 
 export default function PhotographyPage() {
   const t = useTranslations('photography');
@@ -32,7 +12,6 @@ export default function PhotographyPage() {
   const [selectedGallery, setSelectedGallery] = useState<Gallery | null>(null);
   const [lightboxIndex, setLightboxIndex] = useState<number>(0);
   const [loading, setLoading] = useState(true);
-  const containerRef = useScrollReveal();
 
   React.useEffect(() => {
     fetch('/api/galleries')
@@ -112,7 +91,7 @@ export default function PhotographyPage() {
   }
 
   return (
-    <main className="min-h-screen bg-canvas pt-16" ref={containerRef}>
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

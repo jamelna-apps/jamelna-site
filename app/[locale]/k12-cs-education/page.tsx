@@ -1,36 +1,15 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import CollapsedCurriculumGrid from '@/components/k12/CollapsedCurriculumGrid';
 import ScopeSequenceBuilder from '@/components/k12/ScopeSequenceBuilder';
 import { curricula, GradeLevel, Topic } from '@/data/curricula';
 import PhotoBreak from '@/components/PhotoBreak';
 
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
-    elements?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-}
-
 export default function K12CSEducation() {
   const t = useTranslations('k12CSEducation');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-  const containerRef = useScrollReveal();
 
   const gradeLevelLabels: Record<GradeLevel, string> = {
     elementary: t('gradeLevels.elementary'),
@@ -50,7 +29,7 @@ export default function K12CSEducation() {
   };
 
   return (
-    <main className="min-h-screen bg-canvas pt-16" ref={containerRef}>
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -11,27 +11,6 @@ import { EducatorHub } from '@/components/tech-sovereignty/EducatorHub';
 import { getAllPathways } from '@/data/pathways';
 import { quickWins } from '@/data/quick-wins';
 import { getCompletedCount } from '@/lib/sovereignty-progress';
-
-// Scroll reveal hook
-function useScrollReveal() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    const elements = ref.current?.querySelectorAll('.reveal, .reveal-clip, .reveal-fade, .reveal-mask, .reveal-slide-left, .reveal-slide-right');
-    elements?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-  return ref;
-}
 
 // Project Card Component
 interface Project {
@@ -191,7 +170,6 @@ export default function TechSovereigntyPage() {
   });
   const curriculumRef = useRef<HTMLDivElement>(null);
   const pathwaysRef = useRef<HTMLDivElement>(null);
-  const containerRef = useScrollReveal();
 
   const handleModeSelect = (mode: 'educator' | 'learner') => {
     setSelectedMode(mode);
@@ -290,7 +268,7 @@ export default function TechSovereigntyPage() {
   ];
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero Section */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

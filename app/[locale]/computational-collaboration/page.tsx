@@ -1,39 +1,8 @@
 // app/[locale]/computational-collaboration/page.tsx
 'use client';
 
-import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
-
-function useScrollReveal() {
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const elements = ref.current?.querySelectorAll('.reveal');
-
-    if (typeof IntersectionObserver === 'undefined') {
-      elements?.forEach((el) => el.classList.add('visible'));
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return ref;
-}
 
 const cc = {
   ai: '#3D5A6E',       // ink — what AI supplies
@@ -57,7 +26,6 @@ type CrosswalkRow = { practice: string; traditional: string; ai: string };
 type CycleStep = { name: string; tag: string; body: string };
 
 export default function ComputationalCollaborationPage() {
-  const containerRef = useScrollReveal();
   const t = useTranslations('computationalCollaboration');
   const locale = useLocale();
 
@@ -69,7 +37,7 @@ export default function ComputationalCollaborationPage() {
   const cycleSteps = t.raw('cycle.steps') as CycleStep[];
 
   return (
-    <main ref={containerRef} className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas pt-16">
       {/* Hero */}
       <section className="pt-10 pb-12 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
