@@ -267,34 +267,18 @@ textarea:focus-visible {
 
 /* Clip reveal — editorial, not template */
 .reveal-clip {
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  clip-path: none;
 }
 
-.reveal-clip.visible {
-  clip-path: inset(0 0 0 0);
-}
-
-/* Fade reveal — opacity only, no translateY */
+/* Fade reveal */
 .reveal-fade {
-  opacity: 0;
-  transition: opacity 0.6s ease-out;
-}
-
-.reveal-fade.visible {
   opacity: 1;
 }
 
-/* Keep old reveal class for backward compatibility during migration */
+/* Old reveal class (kept for compatibility) */
 .reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* Staggered animation delays */
@@ -328,7 +312,7 @@ textarea:focus-visible {
 /* Mask reveal — colored bar wipes across, revealing content */
 .reveal-mask {
   position: relative;
-  opacity: 0;
+  opacity: 1;
 }
 
 .reveal-mask::after {
@@ -336,42 +320,55 @@ textarea:focus-visible {
   position: absolute;
   inset: 0;
   background: var(--terra);
-  transform: scaleX(1);
-  transform-origin: right;
-  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
-}
-
-.reveal-mask.visible {
-  opacity: 1;
-}
-
-.reveal-mask.visible::after {
   transform: scaleX(0);
+  transform-origin: right;
+  pointer-events: none;
 }
 
 /* Slide from left */
 .reveal-slide-left {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.reveal-slide-left.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: none;
 }
 
 /* Slide from right */
 .reveal-slide-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  transform: none;
 }
 
-.reveal-slide-right.visible {
-  opacity: 1;
-  transform: translateX(0);
+/* CSS-only scroll-driven reveals. The classes above are visible by default, so
+   content never depends on JavaScript to appear. Where the browser supports a
+   view() timeline the animations below replay the scroll reveal; where it does
+   not, content simply shows. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { animation-name: rev-up; }
+    .reveal-fade { animation-name: rev-fade; }
+    .reveal-clip { animation-name: rev-clip; animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal-slide-left { animation-name: rev-left; animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal-slide-right { animation-name: rev-right; animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .reveal-mask::after { animation-name: rev-mask; animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1); }
+
+    .reveal,
+    .reveal-fade,
+    .reveal-clip,
+    .reveal-slide-left,
+    .reveal-slide-right,
+    .reveal-mask::after {
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+  }
 }
+
+@keyframes rev-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+@keyframes rev-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rev-clip { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes rev-left { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
+@keyframes rev-right { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+@keyframes rev-mask { from { transform: scaleX(1); } to { transform: scaleX(0); } }
 
 /* ── Depth & overlap ──────────────────────────────────────────────────── */
 
