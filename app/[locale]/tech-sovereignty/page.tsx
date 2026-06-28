@@ -832,32 +832,6 @@ export default function TechSovereigntyPage() {
         </div>
       </section>
 
-      {/* Community Network */}
-      <section id="community" className="py-20 px-4 bg-canvas">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6">
-            {t('community.title')}
-          </h2>
-          <p className="text-lg text-text-secondary max-w-3xl mx-auto mb-8">
-            {t('community.description')}
-          </p>
-          <div className="bg-canvas-raised border border-canvas-border rounded-xl p-8 max-w-2xl mx-auto hover:border-violet-500/50 transition-colors">
-            <div className="w-16 h-16 bg-violet-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-text-heading mb-2">{t('community.cta.title')}</h3>
-            <p className="text-text-secondary mb-6">{t('community.cta.description')}</p>
-            <Link
-              href={`/${locale}/contact`}
-              className="inline-block bg-violet-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-400 transition-colors"
-            >
-              {t('community.cta.button')}
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
