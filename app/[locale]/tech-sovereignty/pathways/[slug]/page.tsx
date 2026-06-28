@@ -67,61 +67,62 @@ const typeLabels = {
 interface StepCardProps {
   step: PathwayStep;
   index: number;
+  isLast: boolean;
   isCompleted: boolean;
   onToggle: () => void;
   color: keyof typeof colorClasses;
   locale: string;
 }
 
-function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCardProps) {
+function StepCard({ step, index, isLast, isCompleted, onToggle, color, locale }: StepCardProps) {
   const colors = colorClasses[color];
   const typeInfo = typeLabels[step.type];
   const lessonInfo = trackRefToUrl(step.trackRef, locale);
 
   return (
-    <div
-      className={`relative bg-canvas-raised border ${
-        isCompleted ? colors.border : 'border-canvas-border'
-      } rounded-xl p-6 transition-all ${isCompleted ? 'opacity-90' : ''}`}
-    >
-      {/* Step number */}
-      <div
-        className={`absolute -left-3 top-6 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-          isCompleted ? `${colors.bg} ${colors.text}` : 'bg-canvas-border text-text-secondary'
-        }`}
-      >
-        {isCompleted ? (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        ) : (
-          index + 1
+    <div className="relative flex gap-5">
+      {/* Timeline rail: connector line + number / completion badge */}
+      <div className="relative flex-shrink-0 w-9">
+        {!isLast && (
+          <div className="absolute left-1/2 top-9 -bottom-6 w-px -translate-x-1/2 bg-canvas-border" />
         )}
+        <div
+          className={`relative z-10 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold ring-4 ring-canvas transition-colors ${
+            isCompleted ? `${colors.bg} ${colors.text}` : 'bg-canvas-raised border border-canvas-border text-text-secondary'
+          }`}
+        >
+          {isCompleted ? (
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+            </svg>
+          ) : (
+            index + 1
+          )}
+        </div>
       </div>
 
-      {/* Content */}
-      <div className="ml-4">
-        <div className="flex items-start justify-between gap-4 mb-3">
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className={`text-xs px-2 py-0.5 rounded-full ${typeInfo.bg} ${typeInfo.text}`}>
-                {typeInfo.label}
-              </span>
-              <span className="text-xs text-text-muted">{step.duration}</span>
-            </div>
-            <h3 className={`font-display text-lg font-semibold ${isCompleted ? 'text-text-secondary line-through' : 'text-white'}`}>
-              {step.title}
-            </h3>
-          </div>
+      {/* Card */}
+      <div
+        className={`flex-1 min-w-0 bg-canvas-raised border rounded-xl p-5 transition-colors ${
+          isCompleted ? `${colors.border} opacity-80` : 'border-canvas-border'
+        }`}
+      >
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${typeInfo.bg} ${typeInfo.text}`}>
+            {typeInfo.label}
+          </span>
+          <span className="text-xs text-text-muted">{step.duration}</span>
         </div>
-
-        <p className="text-text-secondary text-sm mb-4">{step.description}</p>
+        <h3 className={`font-display text-lg font-semibold mb-1.5 ${isCompleted ? 'text-text-secondary line-through' : 'text-white'}`}>
+          {step.title}
+        </h3>
+        <p className="text-text-secondary text-sm leading-relaxed">{step.description}</p>
 
         {/* Lesson Link */}
         {lessonInfo && (
           <Link
             href={lessonInfo.url}
-            className={`inline-flex items-center gap-2 text-sm ${colors.text} hover:underline mb-4`}
+            className={`inline-flex items-center gap-1.5 text-sm font-medium ${colors.text} hover:underline mt-3`}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -133,31 +134,30 @@ function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCar
           </Link>
         )}
 
-        {/* Checkpoint */}
-        <div className={`bg-canvas-deep/50 rounded-lg p-4 border ${isCompleted ? colors.border : 'border-canvas-border'}`}>
-          <div className="flex items-start gap-3">
-            <button
-              onClick={onToggle}
-              className={`mt-0.5 w-5 h-5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-all ${
-                isCompleted
-                  ? `${colors.bg} ${colors.border} ${colors.text}`
-                  : 'border-canvas-border hover:border-text-muted'
-              }`}
-            >
-              {isCompleted && (
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                </svg>
-              )}
-            </button>
-            <div>
-              <p className="text-xs text-text-muted mb-1">Checkpoint:</p>
-              <p className={`text-sm ${isCompleted ? 'text-text-muted line-through' : 'text-text-secondary'}`}>
-                {step.checkpoint}
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* Checkpoint — fully clickable row, separated by a hairline */}
+        <button
+          onClick={onToggle}
+          aria-pressed={isCompleted}
+          className="group mt-4 flex w-full items-start gap-3 border-t border-canvas-border pt-4 text-left"
+        >
+          <span
+            className={`mt-0.5 w-5 h-5 rounded border-2 flex-shrink-0 flex items-center justify-center transition-all ${
+              isCompleted ? `${colors.bg} ${colors.border} ${colors.text}` : 'border-canvas-border group-hover:border-text-muted'
+            }`}
+          >
+            {isCompleted && (
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            )}
+          </span>
+          <span className="min-w-0">
+            <span className="block text-xs uppercase tracking-wide text-text-muted mb-0.5">Checkpoint</span>
+            <span className={`block text-sm ${isCompleted ? 'text-text-muted line-through' : 'text-text-secondary'}`}>
+              {step.checkpoint}
+            </span>
+          </span>
+        </button>
       </div>
     </div>
   );
@@ -274,23 +274,19 @@ export default function PathwayPage() {
           </div>
 
           {/* Timeline */}
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-canvas-border ml-[11px]" />
-
-            <div className="space-y-6">
-              {pathway.steps.map((step, index) => (
-                <StepCard
-                  key={step.id}
-                  step={step}
-                  index={index}
-                  isCompleted={completedSteps.includes(step.id)}
-                  onToggle={() => handleToggle(step.id)}
-                  color={pathway.color}
-                  locale={locale}
-                />
-              ))}
-            </div>
+          <div className="space-y-6">
+            {pathway.steps.map((step, index) => (
+              <StepCard
+                key={step.id}
+                step={step}
+                index={index}
+                isLast={index === pathway.steps.length - 1}
+                isCompleted={completedSteps.includes(step.id)}
+                onToggle={() => handleToggle(step.id)}
+                color={pathway.color}
+                locale={locale}
+              />
+            ))}
           </div>
         </div>
       </section>
