@@ -195,7 +195,7 @@ export default function PathwayPage() {
   return (
     <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16 px-4 overflow-hidden">
+      <section className="relative pt-10 pb-12 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-terra/10 via-zinc-900 to-zinc-950"></div>
 
         <div className="max-w-4xl mx-auto relative z-10">

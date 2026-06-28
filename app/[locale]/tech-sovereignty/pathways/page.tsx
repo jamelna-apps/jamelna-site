@@ -43,7 +43,7 @@ export default function PathwaysPage() {
   return (
     <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
+      <section className="relative pt-10 pb-12 md:pb-16 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-terra/10 via-zinc-900 to-zinc-950"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, rgba(196, 112, 63, 0.3), transparent)' }} />
