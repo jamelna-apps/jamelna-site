@@ -193,7 +193,7 @@ export default function PathwayPage() {
   const nextStepIndex = pathway.steps.findIndex((step) => !completedSteps.includes(step.id));
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 px-4 overflow-hidden">
         <div className={`absolute inset-0 bg-gradient-to-br from-${pathway.color}-500/10 via-zinc-900 to-zinc-950`}></div>

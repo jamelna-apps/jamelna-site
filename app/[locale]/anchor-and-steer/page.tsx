@@ -55,7 +55,7 @@ export default function AnchorAndSteerPage() {
   const useCases = t.raw('howToUse.items') as UseCaseItem[];
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas">
       {/* Hero */}
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

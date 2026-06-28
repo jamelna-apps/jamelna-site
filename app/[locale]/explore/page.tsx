@@ -28,11 +28,11 @@ function CompassGlyph() {
 
 function NodesGlyph() {
   return (
-    <svg className={glyphClass} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" d="M7.6 7.4 16.4 8.4 M7.4 8.6 10.4 15.6 M12 16.8 16.2 9.8" />
-      <circle cx="6.5" cy="6.5" r="2" fill="currentColor" stroke="none" />
-      <circle cx="17.5" cy="8.5" r="2" fill="currentColor" stroke="none" />
-      <circle cx="11" cy="17.5" r="2" fill="currentColor" stroke="none" />
+    <svg className="relative h-[4.5rem] w-[4.5rem]" fill="none" stroke="currentColor" strokeWidth={1.6} viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" d="M7.1 6.9 16.9 8.3 M6.8 8.4 10.7 16.4 M12.3 17.2 16.8 9.5" />
+      <circle cx="5.7" cy="6.1" r="2.6" fill="currentColor" stroke="none" />
+      <circle cx="18.3" cy="8.4" r="2.6" fill="currentColor" stroke="none" />
+      <circle cx="11.2" cy="18.3" r="2.6" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -201,7 +201,7 @@ export default function ExplorePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas">
       {/* Hero */}
       <section className="pt-16 pb-10 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">

@@ -2255,7 +2255,7 @@ export default function DigitalRightsPage() {
   }, [projectParam]);
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas">
       {/* Header */}
       <div className="bg-canvas-deep border-b border-canvas-border">
         <div className="max-w-6xl mx-auto px-4 py-4">

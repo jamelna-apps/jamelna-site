@@ -35,7 +35,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-canvas pt-16">
+    <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
       <section className="py-12 md:py-20 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto text-center">

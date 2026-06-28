@@ -7669,7 +7669,7 @@ export default function NetworkingCurriculum() {
   ];
 
   return (
-    <div className="min-h-screen bg-canvas pt-16">
+    <div className="min-h-screen bg-canvas">
       {/* Breadcrumb Navigation */}
       <div className="bg-canvas-deep border-b border-canvas-border">
         <div className="max-w-6xl mx-auto px-4 py-4">
