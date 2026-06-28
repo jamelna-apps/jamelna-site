@@ -42,7 +42,7 @@ export async function Hero({ annualSubsidyUsd, tagline }: HeroProps) {
           <strong className="text-orange-300 whitespace-nowrap">
             ${((tagline.trueCost - tagline.paid) * 12).toLocaleString(undefined, { maximumFractionDigits: 0 })}/year
           </strong>{' '}
-          covered by investors.
+          covered by investors and providers.
         </p>
 
         <Link

@@ -13,14 +13,13 @@ assumed_usage:
 
 cost_components:
   compute:
-    value_usd: 2.88
+    value_usd: 3.60
     basis: >
       GPT-4o API retail pricing: $2.50/1M input tokens + $10.00/1M output tokens.
-      At assumed usage (480k input + 240k output tokens/mo): $1.20 + $2.40 = $3.60
-      at current pricing. Earlier 2024 pricing was higher ($5/$20) yielding $7.20.
-      Midpoint cited. API retail used rather than cost-to-serve because the thesis
-      is "what would you pay at market rates" — API is what a third-party product
-      would pay today.
+      At assumed usage (480k input + 240k output tokens/mo): $1.20 + $2.40 = $3.60.
+      API retail used rather than cost-to-serve because the thesis is "what would
+      you pay at market rates" — API is what a third-party product would pay today.
+      (Earlier 2024 GPT-4o pricing of $5/$20 per 1M would have yielded $7.20.)
     sources:
       - openai-api-pricing-2026
 

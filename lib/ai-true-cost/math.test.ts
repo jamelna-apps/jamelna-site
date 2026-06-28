@@ -28,25 +28,25 @@ function makePaidProduct(overrides: Partial<Product> = {}): Product {
 }
 
 describe('computeBreakdown', () => {
-  it('sums the four cost components into true_cost_usd', () => {
+  it('sums price plus the four cost components into true_cost_usd', () => {
     const product = makePaidProduct();
     const breakdown = computeBreakdown(product);
-    // 50 + 30 + 10 + 40 = 130
-    expect(breakdown.true_cost_usd).toBe(130.00);
+    // 20 + 50 + 30 + 10 + 40 = 150
+    expect(breakdown.true_cost_usd).toBe(150.00);
   });
 
   it('computes subsidy_usd as true_cost_usd minus price_paid_usd', () => {
     const product = makePaidProduct();
     const breakdown = computeBreakdown(product);
-    // 130 - 20 = 110
-    expect(breakdown.subsidy_usd).toBe(110.00);
+    // 150 - 20 = 130 (the four absorbed components)
+    expect(breakdown.subsidy_usd).toBe(130.00);
   });
 
   it('computes subsidy_multiple as true_cost_usd / price_paid_usd', () => {
     const product = makePaidProduct();
     const breakdown = computeBreakdown(product);
-    // 130 / 20 = 6.5
-    expect(breakdown.subsidy_multiple).toBe(6.50);
+    // 150 / 20 = 7.5
+    expect(breakdown.subsidy_multiple).toBe(7.50);
   });
 
   it('includes individual component values in result', () => {
@@ -73,7 +73,8 @@ describe('computeBreakdown', () => {
     expect(breakdown.training_amortization_usd).toBe(11.11);
     expect(breakdown.energy_water_usd).toBe(5.56);
     expect(breakdown.investor_subsidy_usd).toBe(7.78);
-    expect(breakdown.true_cost_usd).toBe(57.78);
+    // 20 price + 33.33 + 11.11 + 5.56 + 7.78 = 77.78
+    expect(breakdown.true_cost_usd).toBe(77.78);
   });
 
   it('handles free tier (price=0) without divide-by-zero', () => {
@@ -98,7 +99,8 @@ describe('computeBreakdown', () => {
       },
     });
     const breakdown = computeBreakdown(product);
-    expect(breakdown.true_cost_usd).toBe(50.00);
+    // 20 price + 50 compute = 70
+    expect(breakdown.true_cost_usd).toBe(70.00);
     expect(breakdown.training_amortization_usd).toBe(0);
     expect(breakdown.energy_water_usd).toBe(0);
     expect(breakdown.investor_subsidy_usd).toBe(0);

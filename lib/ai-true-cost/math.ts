@@ -37,10 +37,12 @@ export function computeBreakdown(product: Product): Breakdown {
   const energy_water_usd = round2(cost_components.energy_water?.value_usd ?? 0);
   const investor_subsidy_usd = round2(cost_components.investor_subsidy?.value_usd ?? 0);
 
-  const true_cost_usd = round2(
-    compute_usd + training_amortization_usd + energy_water_usd + investor_subsidy_usd
-  );
   const price = round2(price_paid_usd);
+  // True cost = what you pay plus the four components others currently absorb.
+  const true_cost_usd = round2(
+    price + compute_usd + training_amortization_usd + energy_water_usd + investor_subsidy_usd
+  );
+  // What someone else (investors, cloud providers, unpriced externalities) covers.
   const subsidy_usd = round2(true_cost_usd - price);
   const subsidy_multiple = round2(true_cost_usd / Math.max(price, 0.01));
 
