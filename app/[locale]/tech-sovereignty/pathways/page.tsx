@@ -31,14 +31,16 @@ export default function PathwaysPage() {
   const [pathwayProgress, setPathwayProgress] = useState<Record<string, number>>({});
   const pathways = getAllPathways();
 
-  // Load progress from localStorage on mount
+  // Load progress from localStorage on mount. getAllPathways() returns a fresh
+  // array each render, so depend on nothing (the data is static) to avoid an
+  // infinite update loop.
   useEffect(() => {
     const progress: Record<string, number> = {};
-    pathways.forEach((pathway) => {
+    getAllPathways().forEach((pathway) => {
       progress[pathway.slug] = getCompletedCount(pathway.slug);
     });
     setPathwayProgress(progress);
-  }, [pathways]);
+  }, []);
 
   return (
     <main className="min-h-screen bg-canvas">
