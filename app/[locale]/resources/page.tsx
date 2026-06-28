@@ -10,7 +10,6 @@ export default async function ResourcesHubPage({ params }: PageProps) {
   return (
     <PageWrapper>
       <div className="max-w-3xl mx-auto">
-        <div className="text-xs uppercase tracking-wider text-warm mb-3">Resources</div>
         <h1 className="text-4xl md:text-5xl font-display font-bold text-text-heading mb-4">
           Free tools for educators and non-profits
         </h1>
