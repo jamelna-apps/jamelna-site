@@ -179,7 +179,7 @@ export function ResultsView({ locale }: Props) {
   if (status === 'missing-profile') {
     return (
       <div className="border border-deep-border rounded-lg p-6 bg-deep-card">
-        <h1 className="text-xl font-semibold text-text-heading">No search in progress</h1>
+        <h1 className="text-xl font-display font-semibold text-text-heading">No search in progress</h1>
         <p className="mt-2 text-sm text-text-secondary">
           We could not find an organization profile in this browser session. Start a new search to
           get ranked grant matches.
@@ -212,7 +212,7 @@ export function ResultsView({ locale }: Props) {
   if (status === 'error') {
     return (
       <div className="border border-highlight-red/40 bg-highlight-red/10 rounded-lg p-6">
-        <h1 className="text-lg font-semibold text-highlight-red">Search failed</h1>
+        <h1 className="text-lg font-display font-semibold text-highlight-red">Search failed</h1>
         <p className="mt-2 text-sm text-text-secondary">{errorMessage}</p>
         <div className="mt-4 flex gap-2">
           <button
@@ -246,7 +246,7 @@ export function ResultsView({ locale }: Props) {
       <header className="border border-deep-border rounded-lg p-6 bg-deep-card">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-semibold text-text-heading">
+            <h1 className="text-2xl font-display font-semibold text-text-heading">
               Your AI-ranked grant matches
             </h1>
             <p className="mt-2 text-sm text-text-secondary">
@@ -308,7 +308,7 @@ export function ResultsView({ locale }: Props) {
 
       {curatedFunders && curatedFunders.length > 0 && (
         <section className="border border-deep-border rounded-lg p-6 bg-deep-card">
-          <h2 className="text-lg font-semibold text-text-heading">
+          <h2 className="text-lg font-display font-semibold text-text-heading">
             Major foundations likely to fund this work
           </h2>
           <p className="mt-1 text-sm text-text-secondary">
@@ -347,7 +347,7 @@ export function ResultsView({ locale }: Props) {
 
       {foundationLeads && foundationLeads.length > 0 && (
         <section className="border border-deep-border rounded-lg p-6 bg-deep-card">
-          <h2 className="text-lg font-semibold text-text-heading">
+          <h2 className="text-lg font-display font-semibold text-text-heading">
             Additional foundations from IRS filings
           </h2>
           <p className="mt-1 text-sm text-text-secondary">
@@ -372,7 +372,7 @@ export function ResultsView({ locale }: Props) {
 
       {classroomProjects && classroomProjects.length > 0 && (
         <section className="border border-deep-border rounded-lg p-6 bg-deep-card">
-          <h2 className="text-lg font-semibold text-text-heading">
+          <h2 className="text-lg font-display font-semibold text-text-heading">
             Classroom crowdfunding (DonorsChoose)
           </h2>
           <ul className="mt-4 space-y-2 text-sm">

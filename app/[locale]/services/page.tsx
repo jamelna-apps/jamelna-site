@@ -37,12 +37,13 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
-      <section className="py-12 md:py-20 px-4 bg-canvas-deep">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-            <span className="text-terra">/</span> {t('title')}
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
+          <hr className="heading-rule" />
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+            {t('title')}
           </h1>
-          <p className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-2xl">
             {t('description')}
           </p>
         </div>

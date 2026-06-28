@@ -33,11 +33,21 @@ export default function AIPlannerPage() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-6">
-          <span className="text-warm">/</span> {t('title')}
+      <div className="mb-8">
+        <Link
+          href={`/${locale}/k12-cs-education`}
+          className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading mb-8"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to K-12 CS Education Resources
+        </Link>
+        <hr className="heading-rule" />
+        <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+          {t('title')}
         </h1>
-        <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+        <p className="text-xl text-text-secondary max-w-2xl">
           {t('subtitle')}
         </p>
       </div>
@@ -57,18 +67,6 @@ export default function AIPlannerPage() {
         <SamplePlans />
       </div>
 
-      {/* Back Link */}
-      <div className="mt-8 text-center">
-        <Link
-          href={`/${locale}/k12-cs-education`}
-          className="text-text-secondary hover:text-warm text-sm inline-flex items-center gap-1 transition-colors"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to K-12 CS Education Resources
-        </Link>
-      </div>
     </PageWrapper>
   );
 }

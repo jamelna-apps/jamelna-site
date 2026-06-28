@@ -92,16 +92,16 @@ export default function ComputationalCollaborationPage() {
       {/* The Core Argument — team equation */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-6 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-6">
             {t('coreArgument.title')}
           </h2>
-          <p className="reveal text-text-secondary leading-relaxed text-center max-w-2xl mx-auto mb-4 stagger-1">
+          <p className="reveal text-text-secondary leading-relaxed max-w-2xl mb-4 stagger-1">
             {t('coreArgument.intro')}
           </p>
-          <p className="reveal text-xl md:text-2xl font-display font-semibold text-terra text-center mb-4 stagger-2">
+          <p className="reveal text-xl md:text-2xl font-display font-semibold text-terra mb-4 stagger-2">
             {t('coreArgument.pullLine')}
           </p>
-          <p className="reveal text-text-secondary leading-relaxed text-center max-w-2xl mx-auto mb-12 stagger-3">
+          <p className="reveal text-text-secondary leading-relaxed max-w-2xl mb-12 stagger-3">
             {t('coreArgument.bridge')}
           </p>
 
@@ -202,7 +202,7 @@ export default function ComputationalCollaborationPage() {
       {/* Three Principles */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-10 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-10">
             {t('principles.title')}
           </h2>
           <div className="space-y-8">
@@ -254,10 +254,10 @@ export default function ComputationalCollaborationPage() {
       {/* The Computational Thinking Crosswalk */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3">
             {t('crosswalk.title')}
           </h2>
-          <p className="reveal text-text-muted text-center max-w-2xl mx-auto mb-10 stagger-1">
+          <p className="reveal text-text-muted max-w-2xl mb-10 stagger-1">
             {t('crosswalk.intro')}
           </p>
 
@@ -307,10 +307,10 @@ export default function ComputationalCollaborationPage() {
       {/* The Practice Cycle: The Five Ds */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3">
             {t('cycle.title')}
           </h2>
-          <p className="reveal text-text-muted text-center mb-12 stagger-1">
+          <p className="reveal text-text-muted mb-12 stagger-1">
             {t('cycle.intro')}
           </p>
 
@@ -363,10 +363,10 @@ export default function ComputationalCollaborationPage() {
       {/* Why This Framework, Why Now */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-6 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-6">
             {t('whyNow.title')}
           </h2>
-          <p className="reveal text-text-secondary leading-relaxed max-w-2xl mx-auto text-center mb-12 stagger-1">
+          <p className="reveal text-text-secondary leading-relaxed max-w-2xl mb-12 stagger-1">
             {t('whyNow.p1')}
           </p>
 

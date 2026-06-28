@@ -469,7 +469,7 @@ export function PlannerWizard({
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-text-heading mb-2">
+              <h2 className="text-2xl font-display font-bold text-text-heading mb-2">
                 {mergedLabels.generating}
               </h2>
               <p className="text-text-secondary">

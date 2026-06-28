@@ -141,7 +141,7 @@ const CollapsedCurriculumGrid: React.FC<CollapsedCurriculumGridProps> = ({
                   {group.icon}
                 </div>
                 <div className="text-left">
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-lg font-display font-semibold text-text-heading">
                     {group.label}
                   </h3>
                   <p className="text-sm text-text-muted">

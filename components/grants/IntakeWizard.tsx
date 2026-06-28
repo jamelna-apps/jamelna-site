@@ -121,7 +121,7 @@ export function IntakeWizard({ locale }: IntakeWizardProps) {
 
         {current === 'org' && (
           <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-text-heading mb-2">
+            <h2 className="text-lg font-display font-semibold text-text-heading mb-2">
               Which best describes your organization?
             </h2>
             <div className="text-xs text-text-muted mb-2">
@@ -216,7 +216,7 @@ export function IntakeWizard({ locale }: IntakeWizardProps) {
 
         {current === 'budget' && (
           <div className="space-y-3">
-            <h2 className="text-lg font-semibold text-text-heading mb-2">
+            <h2 className="text-lg font-display font-semibold text-text-heading mb-2">
               Approximate funding need
             </h2>
             {BUDGET_OPTIONS.map((opt) => {

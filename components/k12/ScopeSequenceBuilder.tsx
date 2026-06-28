@@ -117,7 +117,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
 
     return (
       <div className="bg-canvas-raised/50 rounded-xl p-6 border border-canvas-border hover:border-canvas-border transition-colors">
-        <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+        <h4 className="text-lg font-display font-semibold text-text-heading mb-4 flex items-center gap-2">
           <span className={`w-2 h-2 rounded-full ${colors.bg}`} />
           {gradeBandLabels[gradeBand]}
         </h4>
@@ -125,7 +125,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
         <div className="space-y-5">
           {/* Core Curricula */}
           <div>
-            <h5 className="text-sm font-medium text-text-secondary mb-2 flex items-center gap-2">
+            <h5 className="text-sm font-display font-medium text-text-secondary mb-2 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-canvas-border rounded" />
               {t('scopeSequence.coreCurricula')}
             </h5>
@@ -134,7 +134,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
 
           {/* Pathway-Specific Curricula */}
           <div>
-            <h5 className={`text-sm font-medium mb-2 flex items-center gap-2 ${colors.text}`}>
+            <h5 className={`text-sm font-display font-medium mb-2 flex items-center gap-2 ${colors.text}`}>
               <span className={`w-4 h-0.5 ${colors.bg} rounded`} />
               {t('scopeSequence.pathwayCurricula')}
             </h5>
@@ -143,7 +143,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
 
           {/* Key Skills */}
           <div>
-            <h5 className="text-sm font-medium text-text-secondary mb-2 flex items-center gap-2">
+            <h5 className="text-sm font-display font-medium text-text-secondary mb-2 flex items-center gap-2">
               <LightbulbIcon className="w-4 h-4" />
               {t('scopeSequence.skills')}
             </h5>
@@ -164,7 +164,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
     <div className={className}>
       {/* Header */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-text-heading mb-4">
           {t('scopeSequence.title')}
         </h2>
         <p className="text-lg text-text-secondary max-w-3xl mx-auto">
@@ -179,7 +179,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
             <LightbulbIcon className="w-5 h-5 text-amber-400" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-amber-300 mb-2">
+            <h3 className="text-lg font-display font-semibold text-amber-300 mb-2">
               {t('scopeSequence.foundation')}
             </h3>
             <p className="text-sm text-text-secondary">
@@ -191,7 +191,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
 
       {/* Pathway Selector */}
       <div className="mb-8">
-        <h3 className="text-sm font-medium text-text-secondary mb-4">{t('scopeSequence.selectPathway')}</h3>
+        <h3 className="text-sm font-display font-medium text-text-secondary mb-4">{t('scopeSequence.selectPathway')}</h3>
         <div className="flex flex-wrap gap-3">
           {k12Pathways.map((pathway) => {
             const colors = getColors(pathway.color);
@@ -224,7 +224,7 @@ const ScopeSequenceBuilder: React.FC<ScopeSequenceBuilderProps> = ({ className =
             <div className="flex items-center gap-3">
               <IconComponent className={`w-6 h-6 ${getColors(currentPathway.color).text}`} />
               <div>
-                <h3 className="font-semibold text-white">{currentPathway.name}</h3>
+                <h3 className="font-display font-semibold text-text-heading">{currentPathway.name}</h3>
                 <p className="text-sm text-text-secondary">{currentPathway.description}</p>
               </div>
             </div>

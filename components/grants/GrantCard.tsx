@@ -39,7 +39,7 @@ export function GrantCard({ grant, rank, locale }: GrantCardProps) {
           <div className="text-xs text-text-muted mb-1">
             #{rank} · {grant.agency}
           </div>
-          <h3 className="text-lg font-semibold text-text-heading truncate">{grant.title}</h3>
+          <h3 className="text-lg font-display font-semibold text-text-heading truncate">{grant.title}</h3>
         </div>
         <span
           className={`shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium border ${fitBadgeClasses(grant.fitScore)}`}

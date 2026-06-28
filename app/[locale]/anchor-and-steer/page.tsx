@@ -136,10 +136,10 @@ export default function AnchorAndSteerPage() {
       {/* Rooted in Design Thinking */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3">
             {t('designThinking.title')}
           </h2>
-          <p className="reveal text-text-muted text-center mb-10 max-w-2xl mx-auto stagger-1">
+          <p className="reveal text-text-muted mb-10 max-w-2xl stagger-1">
             {t('designThinking.intro')}
           </p>
 
@@ -204,7 +204,7 @@ export default function AnchorAndSteerPage() {
       {/* Common Failure Modes */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-8 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-8">
             {t('failureModes.title')}
           </h2>
           <div className="reveal grid md:grid-cols-2 gap-4 stagger-1">
@@ -235,7 +235,7 @@ export default function AnchorAndSteerPage() {
       {/* Framework Structure Diagram */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-4xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-10 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-10">
             {t('frameworkStructure.title')}
           </h2>
 
@@ -306,10 +306,10 @@ export default function AnchorAndSteerPage() {
       {/* STEER Dimensions */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-3xl mx-auto">
-          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3 text-center">
+          <h2 className="reveal text-2xl md:text-3xl font-display font-bold text-text-heading mb-3">
             {t('steerSection.title')}
           </h2>
-          <p className="reveal text-text-muted text-center mb-10 stagger-1">
+          <p className="reveal text-text-muted mb-10 stagger-1">
             {t('steerSection.intro')}
           </p>
 

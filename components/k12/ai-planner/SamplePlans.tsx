@@ -186,7 +186,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-text-muted">{TYPE_ICONS[profile.type]}</span>
-              <h3 className="text-lg font-semibold text-text-heading">
+              <h3 className="text-lg font-display font-semibold text-text-heading">
                 {profile.schoolName}
               </h3>
             </div>
@@ -235,7 +235,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
         <div className="border-t border-deep-border">
           {/* Executive Summary */}
           <div className="p-5 bg-deep-alt">
-            <h4 className="text-sm font-semibold text-text-muted uppercase tracking-wider mb-2">
+            <h4 className="text-sm font-display font-semibold text-text-muted uppercase tracking-wider mb-2">
               Executive Summary
             </h4>
             <p className="text-text-secondary">{plan.plan.executiveSummary}</p>
@@ -297,7 +297,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
               <div className="space-y-4">
                 {plan.plan.subjectIntegration.map((subject, idx) => (
                   <div key={idx} className="bg-deep-alt rounded-lg p-3">
-                    <h5 className="font-medium text-text-heading mb-2">{subject.subject}</h5>
+                    <h5 className="font-display font-medium text-text-heading mb-2">{subject.subject}</h5>
                     <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
                       {subject.activities.map((activity, i) => (
                         <li key={i}>{activity}</li>
@@ -318,7 +318,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
               <div className="space-y-4">
                 {plan.plan.staffGuidance.map((staff, idx) => (
                   <div key={idx}>
-                    <h5 className="font-medium text-text-heading mb-2">{staff.role}</h5>
+                    <h5 className="font-display font-medium text-text-heading mb-2">{staff.role}</h5>
                     <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
                       {staff.responsibilities.map((resp, i) => (
                         <li key={i}>{resp}</li>
@@ -334,7 +334,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
               <div className="space-y-4">
                 {plan.plan.pathways.map((pathway, idx) => (
                   <div key={idx} className="bg-gradient-to-r from-purple-900/20 to-primary/20 rounded-lg p-3">
-                    <h5 className="font-medium text-text-heading mb-2">{pathway.name}</h5>
+                    <h5 className="font-display font-medium text-text-heading mb-2">{pathway.name}</h5>
                     <div className="space-y-1">
                       {pathway.progression.map((step, i) => (
                         <div key={i} className="flex items-start gap-2 text-sm text-text-secondary">
@@ -356,7 +356,7 @@ function PlanCard({ plan, isExpanded, onToggle }: PlanCardProps) {
                 {plan.plan.implementation.map((phase, idx) => (
                   <div key={idx} className="border-l-4 border-warm pl-4">
                     <div className="flex items-center gap-2 mb-2">
-                      <h5 className="font-medium text-text-heading">{phase.phase}</h5>
+                      <h5 className="font-display font-medium text-text-heading">{phase.phase}</h5>
                       <span className="text-xs bg-deep-alt text-text-secondary px-2 py-0.5 rounded">
                         {phase.timeline}
                       </span>
@@ -444,7 +444,7 @@ export default function SamplePlans() {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-text-heading mb-2">
+        <h2 className="text-2xl font-display font-bold text-text-heading mb-2">
           Sample Plans for Different School Contexts
         </h2>
         <p className="text-text-secondary max-w-2xl mx-auto">
@@ -514,7 +514,7 @@ export default function SamplePlans() {
 
       {/* CTA */}
       <div className="text-center py-8 bg-gradient-to-r from-deep-card to-primary/20 rounded-xl border border-deep-border">
-        <h3 className="text-xl font-semibold text-text-heading mb-2">
+        <h3 className="text-xl font-display font-semibold text-text-heading mb-2">
           Ready to create your custom plan?
         </h3>
         <p className="text-text-secondary mb-4">

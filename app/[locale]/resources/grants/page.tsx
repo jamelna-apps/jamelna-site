@@ -12,16 +12,20 @@ export default async function GrantsIntakePage({ params }: PageProps) {
   return (
     <PageWrapper>
       <div className="max-w-3xl mx-auto">
-        <div className="text-xs uppercase tracking-wider text-warm mb-3">
-          <Link href={`/${locale}/resources`} className="hover:underline">
-            Resources
-          </Link>{' '}
-          / Grant finder
-        </div>
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-text-heading mb-4">
+        <Link
+          href={`/${locale}/resources`}
+          className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading mb-8"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Resources
+        </Link>
+        <hr className="heading-rule" />
+        <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
           Find US grants that fit your organization
         </h1>
-        <p className="text-lg text-text-secondary">
+        <p className="text-xl text-text-secondary max-w-2xl">
           Answer four quick questions. We will search Grants.gov, ProPublica Nonprofit Explorer, and
           DonorsChoose, then ask Claude to rank the best matches for your project. Results never
           leave your browser unless you choose to email or download them.

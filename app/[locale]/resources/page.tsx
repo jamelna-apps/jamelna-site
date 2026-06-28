@@ -10,10 +10,11 @@ export default async function ResourcesHubPage({ params }: PageProps) {
   return (
     <PageWrapper>
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-text-heading mb-4">
+        <hr className="heading-rule" />
+        <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
           Free tools for educators and non-profits
         </h1>
-        <p className="text-lg text-text-secondary">
+        <p className="text-xl text-text-secondary max-w-2xl">
           Practical utilities we&apos;ve built while consulting with schools and non-profits. Free
           to use, no account required.
         </p>
@@ -25,7 +26,7 @@ export default async function ResourcesHubPage({ params }: PageProps) {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h2 className="text-xl font-semibold text-text-heading group-hover:text-warm">
+                <h2 className="text-xl font-display font-semibold text-text-heading group-hover:text-warm">
                   Grant finder
                 </h2>
                 <p className="mt-2 text-sm text-text-secondary">
@@ -47,7 +48,7 @@ export default async function ResourcesHubPage({ params }: PageProps) {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h2 className="text-xl font-semibold text-text-heading group-hover:text-warm">
+                <h2 className="text-xl font-display font-semibold text-text-heading group-hover:text-warm">
                   K-12 CS education planner
                 </h2>
                 <p className="mt-2 text-sm text-text-secondary">

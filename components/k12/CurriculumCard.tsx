@@ -18,7 +18,7 @@ const CurriculumCard: React.FC<CurriculumCardProps> = ({ curriculum, topicLabels
       <div className="p-6">
         {/* Header */}
         <div className="mb-4">
-          <h3 className="text-lg font-bold text-white mb-1">
+          <h3 className="text-lg font-display font-bold text-text-heading mb-1">
             {curriculum.name}
           </h3>
           <p className="text-sm text-text-secondary">

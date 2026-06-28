@@ -209,7 +209,7 @@ export default function AboutPage() {
                   <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-canvas-raised border-2 border-canvas-border"></div>
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-2">
                     <div>
-                      <h3 className="text-lg font-semibold text-text-heading">
+                      <h3 className="text-lg font-display font-semibold text-text-heading">
                         {t(`experience.${exp.key}.title`)}
                       </h3>
                       <p className="text-terra font-medium">

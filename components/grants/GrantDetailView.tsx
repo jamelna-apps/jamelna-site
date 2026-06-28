@@ -52,7 +52,7 @@ export function GrantDetailView({ opportunityId, source, locale }: Props) {
   if (error || !detail) {
     return (
       <div className="border border-highlight-red/40 bg-highlight-red/10 rounded-lg p-6">
-        <h1 className="text-lg font-semibold text-highlight-red">
+        <h1 className="text-lg font-display font-semibold text-highlight-red">
           Could not load opportunity
         </h1>
         <p className="mt-2 text-sm text-text-secondary">{error ?? 'Not found.'}</p>
@@ -77,7 +77,7 @@ export function GrantDetailView({ opportunityId, source, locale }: Props) {
 
       <header className="border border-deep-border rounded-lg p-6 bg-deep-card">
         <div className="text-xs text-text-muted">{detail.agency}</div>
-        <h1 className="mt-1 text-2xl font-semibold text-text-heading">{detail.title}</h1>
+        <h1 className="mt-1 text-2xl font-display font-semibold text-text-heading">{detail.title}</h1>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
           <div>
             <div className="text-text-muted">Close date</div>
@@ -105,7 +105,7 @@ export function GrantDetailView({ opportunityId, source, locale }: Props) {
       </header>
 
       <section className="border border-deep-border rounded-lg p-6 bg-deep-card">
-        <h2 className="text-lg font-semibold text-text-heading mb-2">Opportunity description</h2>
+        <h2 className="text-lg font-display font-semibold text-text-heading mb-2">Opportunity description</h2>
         <p className="whitespace-pre-line text-sm text-text-secondary">
           {detail.description || 'No description provided by the source.'}
         </p>

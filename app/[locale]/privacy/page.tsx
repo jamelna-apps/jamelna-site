@@ -10,9 +10,10 @@ export default function PrivacyPage() {
   return (
     <PageWrapper>
       {/* Page Header */}
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-text-heading mb-4">
-          <span className="text-warm">/</span> {t('title')}
+      <div className="mb-12">
+        <hr className="heading-rule" />
+        <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+          {t('title')}
         </h1>
         <p className="text-text-muted text-sm font-mono">{t('lastUpdated')}</p>
       </div>
