@@ -9,16 +9,18 @@ assumed_usage:
   queries_per_month: 600
   avg_input_tokens: 840
   avg_output_tokens: 360
-  primary_model: gemini-2-5-pro
+  primary_model: gemini-3-1-pro
 
 cost_components:
   compute:
-    value_usd: 2.79
+    value_usd: 3.60
     basis: >
-      Gemini 2.5 Pro retail (<200k context): $1.25/1M input + $10/1M output.
-      At 600 queries × (840 in + 360 out) = 504k input + 216k output = $0.63 +
-      $2.16 = $2.79/mo. Gemini Pro output pricing is cheaper than Claude Sonnet
-      4.5 ($15/M) — Google runs on in-house TPUs without Nvidia margin.
+      Gemini 3.1 Pro retail (<200k context): $2/1M input + $12/1M output.
+      At 600 queries × (840 in + 360 out) = 504k input + 216k output =
+      504k × $2 + 216k × $12 = $1.008 + $2.592 = $3.60/mo. Gemini moved from
+      2.5 Pro to the 3.x line; 3.1 Pro is the current Pro tier. Gemini Pro
+      output pricing is still cheaper than Claude Sonnet 4.6 ($15/M) — Google
+      runs on in-house TPUs without Nvidia margin.
     sources:
       - gemini-api-pricing-2026
 
@@ -62,4 +64,4 @@ cost_components:
       - alphabet-cloud-profitable-q4-2025
       - 9to5google-googleone-150m-2025
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

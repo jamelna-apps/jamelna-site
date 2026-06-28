@@ -9,16 +9,17 @@ assumed_usage:
   queries_per_month: 200
   avg_input_tokens: 800
   avg_output_tokens: 400
-  primary_model: gpt-4o-mini
+  primary_model: gpt-5.4-mini
 
 cost_components:
   compute:
-    value_usd: 0.09
+    value_usd: 0.48
     basis: >
-      GPT-4o-mini API retail: $0.15/1M input, $0.60/1M output. At 200 queries ×
-      (800 input + 400 output) = 0.16M input + 0.08M output = $0.024 + $0.048 ≈
-      $0.086/mo. Retail pricing used rather than cost-to-serve because the thesis
-      is what-you'd-pay-at-market. Cost-to-serve is likely 25-40% of retail.
+      gpt-5.4-mini API retail: $0.75/1M input, $4.50/1M output. At 200 queries ×
+      (800 input + 400 output) = 160k input + 80k output = 160k × $0.75 + 80k × $4.50
+      = $0.12 + $0.36 = $0.48/mo. Retail pricing used rather than cost-to-serve
+      because the thesis is what-you'd-pay-at-market. Cost-to-serve is likely
+      25-40% of retail.
     sources:
       - openai-api-pricing-2026
       - openai-gpt-4o-mini-announcement-2024
@@ -61,4 +62,4 @@ cost_components:
       - openai-loss-2024-fortune
       - chatgpt-700m-wau-techcrunch-2025
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

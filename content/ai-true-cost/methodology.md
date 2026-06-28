@@ -38,14 +38,15 @@ The retail API cost of the queries you send per month, using each vendor's publi
 
 | Model | Input / 1M tokens | Output / 1M tokens |
 |---|---|---|
-| OpenAI GPT-4o | $2.50 | $10.00 |
-| OpenAI GPT-4o-mini | $0.15 | $0.60 |
-| OpenAI o1 (+ o1 Pro mode) | $15.00 | $60.00 |
-| Claude Opus 4.1 | $15.00 | $75.00 |
-| Claude Sonnet 4.5 | $3.00 | $15.00 |
+| OpenAI gpt-5.5 | $5.00 | $30.00 |
+| OpenAI gpt-5.4 | $2.50 | $15.00 |
+| OpenAI gpt-5.4-mini | $0.75 | $4.50 |
+| OpenAI gpt-5.5-pro (reasoning) | $30.00 | $180.00 |
+| Claude Opus 4.8 | $5.00 | $25.00 |
+| Claude Sonnet 4.6 | $3.00 | $15.00 |
 | Claude Haiku 4.5 | $1.00 | $5.00 |
-| Gemini 2.5 Pro | $1.25 | $10.00 |
-| Gemini 2.0 Flash | $0.10 | $0.40 |
+| Gemini 3.1 Pro | $2.00 | $12.00 |
+| Gemini 2.5 Flash-Lite | $0.10 | $0.40 |
 
 Retail API pricing — not cost-to-serve — because the thesis is "what you would pay at market rates," not "what the provider's raw cost is."
 
@@ -103,13 +104,13 @@ Each product's true cost uses a fixed usage assumption:
 
 Your actual usage can be 10× higher or lower. Each product's YAML discloses its assumption.
 
-### Reasoning tokens on o1 and Opus
+### Reasoning tokens on gpt-5.5-pro and Opus
 
-OpenAI's o1 Pro mode and similar reasoning models generate **hidden reasoning tokens** — internal chain-of-thought that OpenAI bills as output tokens but are not visible to the user. Community reports put the multiplier at **3–10× the visible output**.
+OpenAI's gpt-5.5-pro and similar reasoning models generate **hidden reasoning tokens** — internal chain-of-thought that OpenAI bills as output tokens but are not visible to the user. Community reports put the multiplier at **3–10× the visible output**.
 
-For products that use o1 heavily (ChatGPT Pro at 30% o1 Pro mix, ChatGPT Edu at 20% o1), compute uses a conservative **3× reasoning multiplier**. At 5–10× multipliers these numbers roughly double or triple. This is disclosed in each product's `basis:` field.
+For products that use gpt-5.5-pro heavily (ChatGPT Pro at 30% gpt-5.5-pro mix, ChatGPT Edu at 20% gpt-5.5-pro), compute uses a conservative **3× reasoning multiplier**. At 5–10× multipliers these numbers climb to multiples of the subscription price. This is disclosed in each product's `basis:` field.
 
-Claude Opus 4.1 is priced at $15/M input and $75/M output — 5× Sonnet 4.5 rates. Products heavy on Opus (Claude Max 5× and 20×) assume a **30% Opus mix**, same across both tiers (tier differences drive volume, not model mix).
+Claude Opus 4.8 is priced at $5/M input and $25/M output — down sharply from Opus 4.1's $15/$75. Products heavy on Opus (Claude Max 5× and 20×) assume a **30% Opus mix**, same across both tiers (tier differences drive volume, not model mix).
 
 ### Cursor Pro is the most sensitive scenario
 
@@ -119,7 +120,7 @@ A casual user at 1M tokens/month would see compute under $10.
 
 ### ChatGPT Edu has a huge price range
 
-The calculator uses $12/seat/month as a typical institutional mid-case. The outlier is Cal State's [$16.9M / 533,000-seat contract](https://laist.com/news/education/chatgpt-california-state-university-csu-ai-deal) — **$2.11 per seat per month**. That's below what OpenAI spends on compute for those seats. Clearest public "sell below cost to capture the market" case.
+The calculator uses $12/seat/month as a typical institutional mid-case. The outlier is Cal State's [$16.9M / 533,000-seat contract](https://laist.com/news/education/chatgpt-california-state-university-csu-ai-deal) — **$2.11 per seat per month**. At current model pricing the modeled per-seat compute is roughly **$33/seat/month**, so that $2.11 contract sits far below OpenAI's own compute cost for those seats — the gap is even wider than under the prior model generation. Clearest public "sell below cost to capture the market" case.
 
 ### Google is genuinely different
 

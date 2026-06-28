@@ -9,17 +9,17 @@ assumed_usage:
   queries_per_month: 2000
   avg_input_tokens: 600
   avg_output_tokens: 600
-  primary_model: multi-model-gpt-5-claude-gemini
+  primary_model: multi-model-gpt-5.4-mini-sonnet-4-6
 
 cost_components:
   compute:
-    value_usd: 18.00
+    value_usd: 12.42
     basis: >
       2,000 code-completion queries × 1,200 tokens = 2.4M tokens/mo.
       Code-heavy 50/50 input/output split due to long context + long
-      completions: 1.2M in + 1.2M out. Weighted blend of GPT-5-mini
-      ($0.25/$2.00), Claude Sonnet 4.5 ($3/$15), and xAI Grok Code Fast 1
-      yields approximately $18/mo at retail. Microsoft has volume discounts
+      completions: 1.2M in + 1.2M out. Weighted blend of two primary models:
+      60% gpt-5.4-mini ($0.75/$4.50) = $3.78 + 40% Claude Sonnet 4.6 ($3/$15)
+      = $8.64; total ≈ $12.42/mo at retail. Microsoft has volume discounts
       below retail so this is an upper bound.
 
       NOTE: Copilot does NOT wrap chatgpt-plus or claude-pro here — the
@@ -69,4 +69,4 @@ cost_components:
       - thurrott-copilot-loss-2023
       - github-copilot-token-billing-wheresyoured-2026
 
-last_verified: "2026-04-24"
+last_verified: "2026-06-27"

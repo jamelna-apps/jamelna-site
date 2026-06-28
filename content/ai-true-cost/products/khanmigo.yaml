@@ -10,16 +10,16 @@ assumed_usage:
   queries_per_month: 200
   avg_input_tokens: 800
   avg_output_tokens: 400
-  primary_model: gpt-4o-via-azure-openai
+  primary_model: gpt-5.4-mini-via-azure-openai
 
 cost_components:
   compute:
-    value_usd: 0.09
+    value_usd: 0.48
     basis: >
       Khanmigo routes queries through Microsoft Azure OpenAI Service. At 200
-      queries/mo of GPT-4o-class usage retail is ~$0.086/mo. Microsoft is
-      currently donating this capacity (see investor_subsidy basis for the
-      triple-stack explanation).
+      queries/mo of gpt-5.4-mini usage (160k input × $0.75 + 80k output × $4.50
+      = $0.12 + $0.36 = $0.48/mo). Microsoft is currently donating this capacity
+      (see investor_subsidy basis for the triple-stack explanation).
     sources:
       - openai-api-pricing-2026
       - microsoft-khan-partnership-2024
@@ -66,4 +66,4 @@ cost_components:
       - microsoft-khan-partnership-2024
       - khanmigo-4dollar-prior-cnbc-2024
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

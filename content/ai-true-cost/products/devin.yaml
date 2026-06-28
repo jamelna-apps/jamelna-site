@@ -10,20 +10,20 @@ assumed_usage:
   queries_per_month: 100
   avg_input_tokens: 20000
   avg_output_tokens: 30000
-  primary_model: claude-sonnet-4-5-plus-gpt-5-agentic
+  primary_model: claude-sonnet-4-6-agentic
 
 cost_components:
   compute:
-    value_usd: 45.00
+    value_usd: 51.00
     basis: >
       Agent tasks are token-heavy due to tool calls, reasoning loops, and
       full-repo context. Assumption: 100 tasks × 50,000 tokens = 5M tokens/mo
       (40% input / 60% output — heavier output for multi-step plans). Primary
-      Claude Sonnet 4.5: 2M × $3 + 3M × $15 = $6 + $45 = $51. Minority OpenAI
-      GPT-5 (~20%): ~$4. Net ~$45/mo inference. Understates TRUE cost —
-      Cognition's own ACU pricing ($2.25 each, ~4 ACUs/hour of agent runtime)
-      implies 100 tasks at 1-hour avg = $900 in infra; 15-minute avg = $225.
-      Inference-only figure cited; infrastructure extra.
+      Claude Sonnet 4.6: 2M × $3 + 3M × $15 = $6 + $45 = $51/mo inference-only.
+      Understates TRUE cost — Cognition's own ACU pricing ($2.25 each, ~4
+      ACUs/hour of agent runtime) implies 100 tasks at 1-hour avg = $900 in
+      infra; 15-minute avg = $225. Inference-only figure cited; infrastructure
+      extra.
 
       THE STORY: Original Devin GA launch (Dec 2024) priced at $500/month.
       Cognition slashed to $20/month Pro (or $200 Max) in April 2025 when
@@ -76,4 +76,4 @@ cost_components:
       - devin-20-venturebeat-2025
       - devin-pricing-2026
 
-last_verified: "2026-04-24"
+last_verified: "2026-06-27"

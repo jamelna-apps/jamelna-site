@@ -10,14 +10,14 @@ assumed_usage:
   queries_per_month: 5000
   avg_input_tokens: 1200
   avg_output_tokens: 800
-  primary_model: claude-sonnet-4-5-via-api
+  primary_model: claude-sonnet-4-6-via-api
 
 cost_components:
   compute:
     value_usd: 78.00
     basis: >
       Same math as Cursor Pro. 10M tokens/mo (60% input / 40% output). At
-      Claude Sonnet 4.5 retail ($3/$15): 6M × $3 + 4M × $15 = $18 + $60 =
+      Claude Sonnet 4.6 retail ($3/$15): 6M × $3 + 4M × $15 = $18 + $60 =
       $78/mo — 3.9× the $20 subscription. Cognition's acquisition of
       Codeium (July 2025) and the restructured pricing confirm the same
       structural problem Cursor has: retail compute alone exceeds the
@@ -62,4 +62,4 @@ cost_components:
       - codeium-funding-sacra-2025
       - cognition-400m-techcrunch-2025
 
-last_verified: "2026-04-24"
+last_verified: "2026-06-27"

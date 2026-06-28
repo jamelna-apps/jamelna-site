@@ -4,6 +4,19 @@ This file records every substantive change to the numbers and methodology on thi
 
 ---
 
+## 2026-06-27 — Refreshed all compute pricing to current models (June 2026)
+
+Re-verified every product's `compute` component against current (June 2026) API rates and current flagship models. Training amortization, energy/water, and investor-subsidy components were **not** re-verified in this pass — only compute model names, arithmetic, and `last_verified` dates changed.
+
+- **OpenAI → gpt-5.5 / gpt-5.5-pro.** gpt-5.5 (chat-latest) is now $5/$30 per 1M (in/out); gpt-5.4 $2.50/$15; gpt-5.4-mini $0.75/$4.50; gpt-5.5-pro (extended reasoning) $30/$180. Replaces the prior GPT-4o / GPT-4o-mini / o1-Pro lineup.
+- **Anthropic → Opus 4.8 / Sonnet 4.6 / Haiku 4.5.** Opus repriced to **$5/$25, down sharply from Opus 4.1's $15/$75**. Sonnet 4.6 unchanged at $3/$15; Haiku 4.5 unchanged at $1/$5.
+- **Google → Gemini 3.1 Pro** ($2/$12, replacing Gemini 2.5 Pro) and **Gemini 2.5 Flash-Lite** ($0.10/$0.40, replacing Gemini 2.0 Flash on the free tier).
+- **Net effect on compute lines.** ChatGPT tools' compute **rose** (gpt-5.5 is pricier than GPT-4o, and gpt-5.5-pro's reasoning tokens are far pricier than o1 — e.g. ChatGPT Pro $126.68 → $363.15; ChatGPT Edu $12.03 → $33.46). Claude Max compute **fell sharply** on the Opus price collapse (Max 5× $51.48 → $28.08; Max 20× $128.70 → $70.20).
+- **CSU below-cost gap widened.** ChatGPT Edu modeled compute is now ~$33/seat against the $2.11/seat CSU contract — an even larger "sell below cost" gap than before.
+- **Note:** investor-subsidy financials were NOT re-verified in this pass; those figures still carry their April 2026 vintage and denominators.
+
+---
+
 ## 2026-04-24 — Phase B content published
 
 All 13 scenarios now ship with real, primary-source-cited cost components. The page is production-ready.

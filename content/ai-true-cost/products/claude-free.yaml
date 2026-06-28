@@ -17,7 +17,7 @@ cost_components:
     basis: >
       Claude Haiku 4.5 retail: $1/1M input + $5/1M output. At 200 queries ×
       (800 in + 400 out) = 0.16M input + 0.08M output = $0.16 + $0.40 = $0.56
-      at Haiku rates. Free tier may route some queries to Sonnet ($3/$15) for
+      at Haiku rates. Free tier may route some queries to Sonnet 4.6 ($3/$15) for
       harder prompts; midpoint of Haiku-only and mixed-model usage ≈ $0.39/mo.
     sources:
       - anthropic-api-pricing-2026
@@ -59,4 +59,4 @@ cost_components:
       - anthropic-burn-2024-theinformation
       - claude-mau-businessofapps-2026
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

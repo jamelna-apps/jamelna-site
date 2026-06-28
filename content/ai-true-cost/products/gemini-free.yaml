@@ -9,13 +9,13 @@ assumed_usage:
   queries_per_month: 200
   avg_input_tokens: 800
   avg_output_tokens: 400
-  primary_model: gemini-2-0-flash
+  primary_model: gemini-2-5-flash-lite
 
 cost_components:
   compute:
     value_usd: 0.06
     basis: >
-      Gemini 2.0 Flash API retail: $0.10/1M input, $0.40/1M output. At 200 queries ×
+      Gemini 2.5 Flash-Lite API retail: $0.10/1M input, $0.40/1M output. At 200 queries ×
       (800 in + 400 out) = 0.16M input + 0.08M output = $0.016 + $0.032 = $0.058/mo.
       Notable: Gemini Flash is the cheapest frontier model by API price due to
       Google's in-house TPU fleet (no Nvidia margin).
@@ -25,7 +25,7 @@ cost_components:
   training_amortization:
     value_usd: 0.01
     basis: >
-      Gemini 2.0 Flash training cost not publicly disclosed. Flash-class models
+      Gemini 2.5 Flash-Lite training cost not publicly disclosed. Flash-class models
       are small; Google operates on custom TPU silicon at lower unit cost than
       Nvidia-based training. Amortized across 750M MAU (Alphabet Q4 2025 earnings)
       the per-user share is effectively zero.
@@ -61,4 +61,4 @@ cost_components:
       - alphabet-cloud-profitable-q4-2025
       - gemini-750m-mau-techcrunch-2026
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

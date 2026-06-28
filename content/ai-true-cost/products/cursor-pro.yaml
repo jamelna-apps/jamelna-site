@@ -10,14 +10,14 @@ assumed_usage:
   queries_per_month: 5000
   avg_input_tokens: 1200
   avg_output_tokens: 800
-  primary_model: claude-sonnet-4-5-via-anthropic-api
+  primary_model: claude-sonnet-4-6-via-anthropic-api
 
 cost_components:
   compute:
     value_usd: 78.00
     basis: >
       The headline number. Cursor routes heavy developer queries through the
-      Anthropic API (primarily Claude Sonnet 4.5). Power-user assumption: 5,000
+      Anthropic API (primarily Claude Sonnet 4.6). Power-user assumption: 5,000
       queries × 2,000 tokens (1200 input + 800 output) = 10M tokens/mo. Split
       60% input / 40% output (code context + generation are both large). At
       Anthropic retail ($3/1M in, $15/1M out): 6M × $3 + 4M × $15 = $18 + $60 =
@@ -70,4 +70,4 @@ cost_components:
       - cnbc-cursor-29b-2025
       - wheresyoured-costs-2025
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

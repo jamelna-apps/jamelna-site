@@ -9,17 +9,17 @@ assumed_usage:
   queries_per_month: 600
   avg_input_tokens: 800
   avg_output_tokens: 400
-  primary_model: gpt-4o
+  primary_model: gpt-5.5
 
 cost_components:
   compute:
-    value_usd: 3.60
+    value_usd: 9.60
     basis: >
-      GPT-4o API retail pricing: $2.50/1M input tokens + $10.00/1M output tokens.
-      At assumed usage (480k input + 240k output tokens/mo): $1.20 + $2.40 = $3.60.
-      API retail used rather than cost-to-serve because the thesis is "what would
-      you pay at market rates" — API is what a third-party product would pay today.
-      (Earlier 2024 GPT-4o pricing of $5/$20 per 1M would have yielded $7.20.)
+      gpt-5.5 (chat-latest) API retail pricing: $5/1M input tokens + $30/1M output tokens.
+      At assumed usage (480k input + 240k output tokens/mo): 480k × $5 + 240k × $30
+      = $2.40 + $7.20 = $9.60. API retail used rather than cost-to-serve because the
+      thesis is "what would you pay at market rates" — API is what a third-party
+      product would pay today.
     sources:
       - openai-api-pricing-2026
 
@@ -65,4 +65,4 @@ cost_components:
       - openai-loss-2024-cnbc
       - theinformation-11m-chatgpt-subs-2024
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

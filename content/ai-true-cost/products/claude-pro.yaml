@@ -9,16 +9,16 @@ assumed_usage:
   queries_per_month: 600
   avg_input_tokens: 840
   avg_output_tokens: 360
-  primary_model: claude-sonnet-4-5
+  primary_model: claude-sonnet-4-6
 
 cost_components:
   compute:
     value_usd: 4.75
     basis: >
-      Claude Sonnet 4.5 retail: $3/1M input + $15/1M output. At 600 queries ×
+      Claude Sonnet 4.6 retail: $3/1M input + $15/1M output. At 600 queries ×
       1200 tokens total (70/30 input/output split) = 504k input + 216k output
-      = $1.512 + $3.240 = $4.752/mo. Opus 4.1 is available to Pro under tighter
-      limits ($15/$75) but most Pro queries are routed to Sonnet 4.5. Retail
+      = $1.512 + $3.240 = $4.752/mo. Opus 4.8 is available to Pro under tighter
+      limits ($5/$25) but most Pro queries are routed to Sonnet 4.6. Retail
       pricing used rather than cost-to-serve because the thesis is
       what-you'd-pay-at-market.
     sources:
@@ -64,4 +64,4 @@ cost_components:
       - sacra-anthropic-revenue-mix-2026
       - techcrunch-claude-subs-2026
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

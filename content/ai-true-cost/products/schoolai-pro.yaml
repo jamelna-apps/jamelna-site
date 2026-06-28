@@ -10,11 +10,11 @@ assumed_usage:
   queries_per_month: 400
   avg_input_tokens: 840
   avg_output_tokens: 360
-  primary_model: gpt-4o-and-4-1-via-openai-api
+  primary_model: gpt-5.5-and-5.4-via-openai-api
 
 cost_components:
   compute:
-    value_usd: 2.17
+    value_usd: 4.80
     basis: >
       SchoolAI Pro priced at $14.99/mo per third-party aggregators (SchoolAI's
       own pricing page does not publish a dollar figure — opacity is itself a
@@ -22,9 +22,9 @@ cost_components:
       per-institution or per-seat minimum, unclear.
 
       Compute: 480k tokens/mo (400 queries × 1200). 100% OpenAI stack per
-      OpenAI customer case study (Sidekick on GPT-4o + GPT-4.1; Dot on GPT-4o).
-      Assume 60% GPT-4o / 40% GPT-4.1 weighted pricing (~$2.50/M in, ~$9.20/M
-      out blended): 336k × $2.50/M + 144k × $9.20/M = $0.84 + $1.33 = $2.17/mo.
+      OpenAI customer case study. Assume 60% gpt-5.5 / 40% gpt-5.4 weighted
+      pricing ($4/M in, $24/M out blended): 336k × $4/M + 144k × $24/M
+      = $1.344 + $3.456 = $4.80/mo.
 
       Note: `wraps: chatgpt-plus` is a simplification; SchoolAI buys API
       tokens directly, not ChatGPT Plus subscriptions.
@@ -63,4 +63,4 @@ cost_components:
     sources:
       - schoolai-series-a-2025
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

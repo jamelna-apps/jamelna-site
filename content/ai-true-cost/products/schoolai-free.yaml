@@ -10,14 +10,15 @@ assumed_usage:
   queries_per_month: 200
   avg_input_tokens: 800
   avg_output_tokens: 400
-  primary_model: gpt-4o-via-openai-api
+  primary_model: gpt-5.4-mini-via-openai-api
 
 cost_components:
   compute:
-    value_usd: 0.09
+    value_usd: 0.48
     basis: >
-      SchoolAI proxies queries through OpenAI. At 200 queries/mo of GPT-4o-class
-      usage the retail API cost is ~$0.086/mo. Pass-through.
+      SchoolAI proxies queries through OpenAI. At 200 queries/mo of gpt-5.4-mini
+      usage the retail API cost is $0.48/mo (160k in × $0.75 + 80k out × $4.50).
+      Pass-through.
     sources:
       - openai-api-pricing-2026
 
@@ -50,4 +51,4 @@ cost_components:
     sources:
       - schoolai-series-a-2025
 
-last_verified: "2026-04-23"
+last_verified: "2026-06-27"

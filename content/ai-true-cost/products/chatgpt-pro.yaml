@@ -9,34 +9,34 @@ assumed_usage:
   queries_per_month: 3000
   avg_input_tokens: 900
   avg_output_tokens: 600
-  primary_model: gpt-5-and-o1-pro-mode
+  primary_model: gpt-5.5-and-gpt-5.5-pro-mode
 
 cost_components:
   compute:
-    value_usd: 126.68
+    value_usd: 363.15
     basis: >
       3,000 queries × 1,500 tokens = 4.5M tokens/mo (60% input, 40% output).
-      Model mix: 70% GPT-5 / GPT-4o-class + 30% o1 Pro mode. Pro tier is
-      sold specifically for o1 Pro access; 30% mix reflects users escalating
-      to o1 Pro for reasoning-heavy tasks while staying on GPT-5/4o for
+      Model mix: 70% gpt-5.5 + 30% gpt-5.5-pro (extended reasoning). Pro tier is
+      sold specifically for gpt-5.5-pro access; 30% mix reflects users escalating
+      to gpt-5.5-pro for reasoning-heavy tasks while staying on gpt-5.5 for
       everyday queries.
 
-      70% GPT-4o portion (3.15M tokens): 1.89M × $2.50/M + 1.26M × $10/M
-      = $4.73 + $12.60 = $17.33.
+      70% gpt-5.5 portion (3.15M tokens): 1.89M × $5/M + 1.26M × $30/M
+      = $9.45 + $37.80 = $47.25.
 
-      30% o1 Pro portion — THE KEY MATH. o1 Pro generates "hidden reasoning
-      tokens" that OpenAI bills as output tokens but are not visible to
+      30% gpt-5.5-pro portion — THE KEY MATH. gpt-5.5-pro generates "hidden
+      reasoning tokens" that OpenAI bills as output tokens but are not visible to
       users. Community reports estimate the reasoning multiplier at 3-10×
       visible output. Using 3× (conservative midpoint).
 
-      1.35M visible o1 tokens at 60/40 = 0.81M input + 0.54M visible output.
-      With 3× reasoning multiplier, total billable output = 1.62M. Cost:
-      0.81M × $15/M + 1.62M × $60/M = $12.15 + $97.20 = $109.35.
+      1.35M visible gpt-5.5-pro tokens at 60/40 = 0.81M input + 0.54M visible
+      output. With 3× reasoning multiplier, total billable output = 1.62M. Cost:
+      0.81M × $30/M + 1.62M × $180/M = $24.30 + $291.60 = $315.90.
 
-      Total compute: $17.33 + $109.35 = $126.68/mo. At a 5× reasoning
-      multiplier compute jumps to ~$224; at 10× to ~$380 — approaching or
-      exceeding the $200 subscription on compute alone. Sora video compute
-      not included (undisclosed).
+      Total compute: $47.25 + $315.90 = $363.15/mo. At a 5× reasoning
+      multiplier compute climbs far higher; at 10× higher still — multiples of
+      the $200 subscription on compute alone. Sora video compute not included
+      (undisclosed).
     sources:
       - openai-api-pricing-2026
       - chatgpt-pro-launch-openai-2024
@@ -84,4 +84,4 @@ cost_components:
       - openai-50m-paying-subs-2026
       - chatgpt-pro-launch-openai-2024
 
-last_verified: "2026-04-24"
+last_verified: "2026-06-27"
