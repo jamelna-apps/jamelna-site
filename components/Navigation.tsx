@@ -8,6 +8,7 @@ import { useLocale, useTranslations } from 'next-intl';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isExploreMenuOpen, setIsExploreMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -39,6 +40,15 @@ const Navigation = () => {
     { href: `/${locale}/contact`, label: t('contact') },
   ];
 
+  // Mirrors the footer's Explore column
+  const exploreLinks = [
+    { href: `/${locale}/k12-cs-education`, label: t('k12cs') },
+    { href: `/${locale}/photography`, label: t('photography') },
+    { href: `/${locale}/anchor-and-steer`, label: 'Anchor & STEER' },
+    { href: `/${locale}/computational-collaboration`, label: 'Computational Collaboration' },
+    { href: `/${locale}/ai-true-cost`, label: 'True Cost of AI' },
+  ];
+
   const changeLanguage = (newLocale: string) => {
     const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
     const newPath = `/${newLocale}${pathWithoutLocale}`;
@@ -54,6 +64,8 @@ const Navigation = () => {
     }
     return currentPath?.startsWith(linkPath);
   };
+
+  const exploreActive = exploreLinks.some((link) => isActive(link.href));
 
   // Handle scroll for showing/hiding nav on homepage
   useEffect(() => {
@@ -85,12 +97,13 @@ const Navigation = () => {
       if (event.key === 'Escape') {
         if (isMenuOpen) setIsMenuOpen(false);
         if (isLangMenuOpen) setIsLangMenuOpen(false);
+        if (isExploreMenuOpen) setIsExploreMenuOpen(false);
       }
     };
 
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
-  }, [isMenuOpen, isLangMenuOpen]);
+  }, [isMenuOpen, isLangMenuOpen, isExploreMenuOpen]);
 
   // Close language menu when clicking outside
   useEffect(() => {
@@ -99,11 +112,14 @@ const Navigation = () => {
       if (isLangMenuOpen && !target.closest('#language-menu') && !target.closest('[aria-controls="language-menu"]')) {
         setIsLangMenuOpen(false);
       }
+      if (isExploreMenuOpen && !target.closest('#explore-menu') && !target.closest('[aria-controls="explore-menu"]')) {
+        setIsExploreMenuOpen(false);
+      }
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
-  }, [isLangMenuOpen]);
+  }, [isLangMenuOpen, isExploreMenuOpen]);
 
   // Nav is always shown (transparent on homepage hero, solid after scroll)
   const shouldShowNav = true;
@@ -156,6 +172,58 @@ const Navigation = () => {
                   )}
                 </Link>
               ))}
+
+              {/* Explore dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsExploreMenuOpen(!isExploreMenuOpen)}
+                  aria-expanded={isExploreMenuOpen}
+                  aria-haspopup="true"
+                  aria-controls="explore-menu"
+                  className={`
+                    flex items-center gap-1 text-sm font-medium transition-all duration-300 relative
+                    ${exploreActive ? 'text-terra' : 'text-text-primary hover:text-terra'}
+                  `}
+                >
+                  {t('explore')}
+                  <svg
+                    className={`w-3.5 h-3.5 transition-transform duration-300 ${isExploreMenuOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  {exploreActive && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-terra rounded-full" />
+                  )}
+                </button>
+
+                {isExploreMenuOpen && (
+                  <div
+                    id="explore-menu"
+                    role="menu"
+                    className="absolute left-0 mt-2 w-64 bg-canvas-raised border border-canvas-border rounded-lg shadow-lg py-1 z-50"
+                  >
+                    {exploreLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        role="menuitem"
+                        onClick={() => setIsExploreMenuOpen(false)}
+                        className={`block px-4 py-2 text-sm transition-colors ${
+                          isActive(link.href)
+                            ? 'bg-terra/10 text-terra'
+                            : 'text-text-primary hover:bg-canvas-border/50 hover:text-terra'
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Language Switcher */}
               <div className="relative">
@@ -230,20 +298,21 @@ const Navigation = () => {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden fixed inset-0 z-[60] bg-canvas-deep/100 flex flex-col justify-center px-8"
+          className="md:hidden fixed inset-0 z-[60] bg-canvas-deep/100 overflow-y-auto"
           style={{ backgroundColor: 'var(--color-canvas-deep, #1A1816)' }}
         >
           {/* Close button */}
           <button
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close navigation menu"
-            className="absolute top-4 right-4 p-3 text-text-muted hover:text-terra transition-colors z-10"
+            className="fixed top-4 right-4 p-3 text-text-muted hover:text-terra transition-colors z-10"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
+          <div className="min-h-full flex flex-col justify-center px-8 py-24">
           {/* Nav links */}
           <nav className="space-y-1">
             {navLinks.map((link) => (
@@ -262,8 +331,31 @@ const Navigation = () => {
             ))}
           </nav>
 
+          {/* Explore links */}
+          <div className="mt-10 pt-8 border-t border-canvas-border">
+            <p className="text-sm font-mono text-text-muted uppercase tracking-wider mb-4">
+              {t('explore')}
+            </p>
+            <div className="space-y-1">
+              {exploreLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block py-2 text-xl font-display transition-colors ${
+                    isActive(link.href)
+                      ? 'text-terra'
+                      : 'text-text-secondary hover:text-terra'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* Language switcher */}
-          <div className="mt-12 pt-8 border-t border-canvas-border">
+          <div className="mt-10 pt-8 border-t border-canvas-border">
             <p className="text-sm font-mono text-text-muted uppercase tracking-wider mb-4">
               {t('language')}
             </p>
@@ -287,6 +379,7 @@ const Navigation = () => {
                 </button>
               ))}
             </div>
+          </div>
           </div>
         </div>
       )}
