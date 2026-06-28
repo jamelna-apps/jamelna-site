@@ -137,70 +137,70 @@ const crossLinks = [
 
 const crossLinkColorMap = {
   violet: {
-    border: 'border-terra/30',
-    hoverBorder: 'hover:border-terra/50',
-    iconBg: 'bg-terra/20',
-    iconText: 'text-terra-light',
-    text: 'text-terra-light',
+    border: 'border-violet-500/30',
+    hoverBorder: 'hover:border-violet-500/50',
+    iconBg: 'bg-violet-500/20',
+    iconText: 'text-violet-400',
+    text: 'text-violet-400',
   },
   amber: {
-    border: 'border-terra/30',
-    hoverBorder: 'hover:border-terra/50',
-    iconBg: 'bg-terra/20',
-    iconText: 'text-terra-light',
-    text: 'text-terra-light',
+    border: 'border-amber-500/30',
+    hoverBorder: 'hover:border-amber-500/50',
+    iconBg: 'bg-amber-500/20',
+    iconText: 'text-amber-400',
+    text: 'text-amber-400',
   },
   cyan: {
-    border: 'border-terra/30',
-    hoverBorder: 'hover:border-terra/50',
-    iconBg: 'bg-terra/20',
-    iconText: 'text-terra-light',
-    text: 'text-terra-light',
+    border: 'border-cyan-500/30',
+    hoverBorder: 'hover:border-cyan-500/50',
+    iconBg: 'bg-cyan-500/20',
+    iconText: 'text-cyan-400',
+    text: 'text-cyan-400',
   },
   emerald: {
-    border: 'border-terra/30',
-    hoverBorder: 'hover:border-terra/50',
-    iconBg: 'bg-terra/20',
-    iconText: 'text-terra-light',
-    text: 'text-terra-light',
+    border: 'border-emerald-500/30',
+    hoverBorder: 'hover:border-emerald-500/50',
+    iconBg: 'bg-emerald-500/20',
+    iconText: 'text-emerald-400',
+    text: 'text-emerald-400',
   },
 };
 
 const pillarColorMap = {
   emerald: {
-    border: 'border-terra/30',
-    text: 'text-terra-light',
-    iconBg: 'bg-terra/20',
-    callout: 'border-l-4 border-terra/50 bg-terra/5',
-    divider: 'border-terra/20',
+    border: 'border-emerald-500/30',
+    text: 'text-emerald-400',
+    iconBg: 'bg-emerald-500/20',
+    callout: 'border-l-4 border-emerald-500/50 bg-emerald-500/5',
+    divider: 'border-emerald-500/20',
   },
   cyan: {
-    border: 'border-terra/30',
-    text: 'text-terra-light',
-    iconBg: 'bg-terra/20',
-    callout: 'border-l-4 border-terra/50 bg-terra/5',
-    divider: 'border-terra/20',
+    border: 'border-cyan-500/30',
+    text: 'text-cyan-400',
+    iconBg: 'bg-cyan-500/20',
+    callout: 'border-l-4 border-cyan-500/50 bg-cyan-500/5',
+    divider: 'border-cyan-500/20',
   },
   amber: {
-    border: 'border-terra/30',
-    text: 'text-terra-light',
-    iconBg: 'bg-terra/20',
-    callout: 'border-l-4 border-terra/50 bg-terra/5',
-    divider: 'border-terra/20',
+    border: 'border-amber-500/30',
+    text: 'text-amber-400',
+    iconBg: 'bg-amber-500/20',
+    callout: 'border-l-4 border-amber-500/50 bg-amber-500/5',
+    divider: 'border-amber-500/20',
   },
   rose: {
-    border: 'border-terra/30',
-    text: 'text-terra-light',
-    iconBg: 'bg-terra/20',
-    callout: 'border-l-4 border-terra/50 bg-terra/5',
-    divider: 'border-terra/20',
+    border: 'border-rose-500/30',
+    text: 'text-rose-400',
+    iconBg: 'bg-rose-500/20',
+    callout: 'border-l-4 border-rose-500/50 bg-rose-500/5',
+    divider: 'border-rose-500/20',
   },
   violet: {
-    border: 'border-terra/30',
-    text: 'text-terra-light',
-    iconBg: 'bg-terra/20',
-    callout: 'border-l-4 border-terra/50 bg-terra/5',
-    divider: 'border-terra/20',
+    border: 'border-violet-500/30',
+    text: 'text-violet-400',
+    iconBg: 'bg-violet-500/20',
+    callout: 'border-l-4 border-violet-500/50 bg-violet-500/5',
+    divider: 'border-violet-500/20',
   },
 };
 
@@ -328,7 +328,7 @@ export default function ResiliencePage() {
             {t('resilience.hero.title')}
           </h1>
 
-          <p className="text-lg sm:text-xl text-terra-light/90 font-semibold mb-4 max-w-2xl">
+          <p className="text-lg sm:text-xl text-red-300/90 font-semibold mb-4 max-w-2xl">
             {t('resilience.hero.subtitle')}
           </p>
 

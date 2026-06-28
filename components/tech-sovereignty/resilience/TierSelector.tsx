@@ -11,30 +11,30 @@ interface TierSelectorProps {
 const tierColors = [
   // Tier 1
   {
-    border: 'border-terra/30',
-    activeBorder: 'border-terra/70',
-    activeBg: 'bg-terra/10',
-    iconBg: 'bg-terra/20',
-    iconText: 'text-terra-light',
-    text: 'text-terra-light',
+    border: 'border-green-500/30',
+    activeBorder: 'border-green-500/70',
+    activeBg: 'bg-green-500/10',
+    iconBg: 'bg-green-500/20',
+    iconText: 'text-green-400',
+    text: 'text-green-400',
   },
   // Tier 2
   {
-    border: 'border-terra/30',
-    activeBorder: 'border-terra/70',
-    activeBg: 'bg-terra/10',
-    iconBg: 'bg-terra/20',
-    iconText: 'text-terra-light',
-    text: 'text-terra-light',
+    border: 'border-blue-500/30',
+    activeBorder: 'border-blue-500/70',
+    activeBg: 'bg-blue-500/10',
+    iconBg: 'bg-blue-500/20',
+    iconText: 'text-blue-400',
+    text: 'text-blue-400',
   },
   // Tier 3
   {
-    border: 'border-terra/30',
-    activeBorder: 'border-terra/70',
-    activeBg: 'bg-terra/10',
-    iconBg: 'bg-terra/20',
-    iconText: 'text-terra-light',
-    text: 'text-terra-light',
+    border: 'border-purple-500/30',
+    activeBorder: 'border-purple-500/70',
+    activeBg: 'bg-purple-500/10',
+    iconBg: 'bg-purple-500/20',
+    iconText: 'text-purple-400',
+    text: 'text-purple-400',
   },
 ];
 
