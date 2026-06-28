@@ -79,8 +79,8 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
                     <div className="flex items-center flex-wrap gap-2">
                       <span>{COMPONENT_LABELS[key]}</span>
                       <div className="inline-flex gap-1">
-                        {citedSources.map(({ id, source }) => (
-                          <Citation key={id} source={source} />
+                        {citedSources.map(({ id, source }, i) => (
+                          <Citation key={id} source={source} label={String(i + 1)} />
                         ))}
                       </div>
                     </div>

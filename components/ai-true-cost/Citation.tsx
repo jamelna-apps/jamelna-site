@@ -42,10 +42,10 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
         onFocus={openCard}
         onBlur={scheduleClose}
         className={`
-          inline-flex items-center gap-0.5
-          text-[10px] font-mono font-medium leading-none
-          px-1.5 py-0.5 rounded
-          border
+          inline-flex items-center justify-center
+          min-w-[1.1rem] h-[1.1rem] px-1
+          text-[10px] font-mono font-semibold leading-none
+          rounded-full border
           transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-terra
           ${open
             ? 'bg-terra/20 border-terra/50 text-terra-light'
@@ -53,7 +53,7 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
           }
         `}
       >
-        [{label}]
+        {label}
       </button>
 
       {open && (
