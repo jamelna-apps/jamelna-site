@@ -2655,7 +2655,6 @@
     }
   },
   "explore": {
-    "kicker": "Explore",
     "title": "What I'm building",
     "intro": "Frameworks for AI in education, open computer-science curricula, a cost-of-AI calculator, and a photography practice. Each one has its own page.",
     "view": "View"

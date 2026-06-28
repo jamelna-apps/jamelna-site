@@ -206,9 +206,6 @@ export default function ExplorePage() {
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
-          <p className="text-sm font-mono uppercase tracking-widest text-terra mb-4">
-            {t('explore.kicker')}
-          </p>
           <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
             {t('explore.title')}
           </h1>
