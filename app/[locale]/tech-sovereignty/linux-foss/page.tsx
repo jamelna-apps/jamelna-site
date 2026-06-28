@@ -15,7 +15,7 @@ const CorePrinciple = () => (
         </svg>
       </div>
       <div>
-        <h3 className="font-display text-lg font-bold text-white mb-2">Core Pedagogical Principle: Freedom Through Understanding</h3>
+        <h3 className="font-display text-lg font-bold text-text-heading mb-2">Core Pedagogical Principle: Freedom Through Understanding</h3>
         <p className="text-text-secondary mb-3">
           Linux and open source aren&apos;t just alternatives—they&apos;re a philosophy of <strong className="text-white">transparency</strong>,
           <strong className="text-white"> collaboration</strong>, and <strong className="text-white">user empowerment</strong>. Students learn not just how to use these tools,
@@ -205,7 +205,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
             {index + 1}
           </div>
           <div>
-            <h6 className="text-sm font-medium text-white">{activity.title}</h6>
+            <h6 className="text-sm font-medium text-text-heading">{activity.title}</h6>
             <span className="text-xs text-text-muted">{activity.duration}</span>
           </div>
         </div>
@@ -306,7 +306,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
             {index + 1}
           </div>
           <div>
-            <h4 className="font-semibold text-white">{lesson.title}</h4>
+            <h4 className="font-semibold text-text-heading">{lesson.title}</h4>
             <div className="flex items-center gap-3 text-sm text-text-muted">
               <span>{lesson.duration}</span>
               <span className="text-xs px-2 py-0.5 bg-canvas-border rounded">Grades {lesson.gradeBand}</span>
@@ -377,7 +377,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
       >
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-2">
-            <h3 className="font-display text-xl font-bold text-white">{project.title}</h3>
+            <h3 className="font-display text-xl font-bold text-text-heading">{project.title}</h3>
             <span className={`text-xs px-2 py-1 rounded-full ${
               project.difficulty === 'Beginner' ? 'bg-terra/20 text-terra-light' :
               project.difficulty === 'Intermediate' ? 'bg-terra/20 text-terra-light' :
@@ -402,13 +402,13 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
         <div className="p-6 border-t border-canvas-border space-y-6">
           {/* Overview */}
           <div className="bg-canvas-deep rounded-lg p-4">
-            <h4 className="font-semibold text-white mb-2">Project Overview</h4>
+            <h4 className="font-semibold text-text-heading mb-2">Project Overview</h4>
             <p className="text-text-secondary text-sm">{project.overview}</p>
           </div>
 
           {/* Learning Objectives */}
           <div>
-            <h4 className="font-semibold text-white mb-3">Learning Objectives</h4>
+            <h4 className="font-semibold text-text-heading mb-3">Learning Objectives</h4>
             <ul className="grid md:grid-cols-2 gap-2">
               {project.learningObjectives.map((obj, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
@@ -424,7 +424,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           {/* Prerequisites */}
           {project.prerequisites.length > 0 && (
             <div>
-              <h4 className="font-semibold text-white mb-3">Prerequisites</h4>
+              <h4 className="font-semibold text-text-heading mb-3">Prerequisites</h4>
               <ul className="flex flex-wrap gap-2">
                 {project.prerequisites.map((prereq, i) => (
                   <li key={i} className="text-xs px-3 py-1 bg-canvas-border text-text-secondary rounded-full">{prereq}</li>
@@ -451,7 +451,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Lessons */}
           <div>
-            <h4 className="font-semibold text-white mb-3">Lessons</h4>
+            <h4 className="font-semibold text-text-heading mb-3">Lessons</h4>
             <div className="space-y-3">
               {project.lessons.map((lesson, i) => (
                 <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />
@@ -461,7 +461,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Assessment */}
           <div className="bg-canvas-deep rounded-lg p-4">
-            <h4 className="font-semibold text-white mb-3">Assessment</h4>
+            <h4 className="font-semibold text-text-heading mb-3">Assessment</h4>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h5 className="font-medium text-terra-light mb-2">Formative Assessment</h5>
@@ -478,7 +478,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Real World Connections */}
           <div>
-            <h4 className="font-semibold text-white mb-3">Real-World Connections</h4>
+            <h4 className="font-semibold text-text-heading mb-3">Real-World Connections</h4>
             <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
               {project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}
             </ul>

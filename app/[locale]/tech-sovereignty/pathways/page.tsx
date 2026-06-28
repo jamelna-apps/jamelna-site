@@ -95,7 +95,7 @@ export default function PathwaysPage() {
       {/* How It Works */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8 text-center">
             How Pathways Work
           </h2>
 
@@ -104,7 +104,7 @@ export default function PathwaysPage() {
               <div className="w-12 h-12 bg-terra/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-xl font-bold text-terra-light">1</span>
               </div>
-              <h3 className="font-display text-lg font-semibold text-white mb-2">Choose Your Goal</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">Choose Your Goal</h3>
               <p className="text-text-secondary text-sm">
                 Select a pathway based on what you want to achieve. Each has a clear outcome.
               </p>
@@ -114,7 +114,7 @@ export default function PathwaysPage() {
               <div className="w-12 h-12 bg-terra/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-xl font-bold text-terra-light">2</span>
               </div>
-              <h3 className="font-display text-lg font-semibold text-white mb-2">Follow the Steps</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">Follow the Steps</h3>
               <p className="text-text-secondary text-sm">
                 Work through lessons and projects at your own pace. Each step builds on the last.
               </p>
@@ -124,7 +124,7 @@ export default function PathwaysPage() {
               <div className="w-12 h-12 bg-terra/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-xl font-bold text-terra-light">3</span>
               </div>
-              <h3 className="font-display text-lg font-semibold text-white mb-2">Mark Your Progress</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">Mark Your Progress</h3>
               <p className="text-text-secondary text-sm">
                 Complete checkpoints to verify you&apos;ve actually done the work. Your progress is saved locally.
               </p>
@@ -136,7 +136,7 @@ export default function PathwaysPage() {
       {/* CTA */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-4">
             Prefer Structured Curriculum?
           </h2>
           <p className="text-text-secondary mb-8">

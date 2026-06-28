@@ -15,7 +15,7 @@ const CorePrinciple = () => (
         </svg>
       </div>
       <div>
-        <h3 className="font-display text-lg font-bold text-white mb-2">Core Pedagogical Principle: Building for Community</h3>
+        <h3 className="font-display text-lg font-bold text-text-heading mb-2">Core Pedagogical Principle: Building for Community</h3>
         <p className="text-text-secondary mb-3">
           Development skills empower communities to create their own tools rather than depending on outside solutions.
           Students learn to <strong className="text-white">identify needs</strong>, <strong className="text-white">design solutions</strong>,
@@ -164,7 +164,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
       <button onClick={() => setExpanded(!expanded)} className="w-full p-4 bg-canvas-deep flex items-center justify-between text-left hover:bg-canvas-raised transition-colors">
         <div className="flex items-center gap-3">
           <span className="flex-shrink-0 w-8 h-8 bg-terra text-white rounded-full flex items-center justify-center text-sm font-bold">{index + 1}</span>
-          <div><h6 className="font-semibold text-white">{activity.title}</h6><p className="text-xs text-text-muted">{activity.duration}</p></div>
+          <div><h6 className="font-semibold text-text-heading">{activity.title}</h6><p className="text-xs text-text-muted">{activity.duration}</p></div>
         </div>
         <svg className={`w-5 h-5 text-terra-light transform transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -187,7 +187,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
             </div>
           )}
           <div>
-            <h6 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <h6 className="text-sm font-semibold text-text-heading mb-3 flex items-center gap-2">
               <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
               Step-by-Step Instructions
             </h6>
@@ -229,7 +229,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-canvas-deep text-white rounded-full flex items-center justify-center font-bold">{index + 1}</div>
           <div>
-            <h4 className="font-semibold text-white">{lesson.title}</h4>
+            <h4 className="font-semibold text-text-heading">{lesson.title}</h4>
             <div className="flex items-center gap-3 text-sm text-text-muted">
               <span>{lesson.duration}</span>
               <span className={`text-xs px-2 py-1 rounded font-medium ${lesson.gradeBand === '6-8' ? 'bg-terra/20 text-terra-light' : lesson.gradeBand === '9-12' ? 'bg-terra/20 text-terra-light' : 'bg-terra/20 text-terra-light'}`}>
@@ -280,7 +280,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
     <button onClick={onToggle} className="w-full p-6 flex items-center justify-between text-left hover:bg-canvas-border transition-colors">
       <div className="flex-1">
         <div className="flex items-center gap-3 mb-2">
-          <h3 className="font-display text-xl font-bold text-white">{project.title}</h3>
+          <h3 className="font-display text-xl font-bold text-text-heading">{project.title}</h3>
           <span className={`text-xs px-2 py-1 rounded-full ${project.difficulty === 'Beginner' ? 'bg-terra/20 text-terra-light' : project.difficulty === 'Intermediate' ? 'bg-terra/20 text-terra-light' : 'bg-terra/20 text-terra-light'}`}>{project.difficulty}</span>
         </div>
         <p className="text-text-secondary text-sm">{project.description}</p>
@@ -296,16 +296,16 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
     </button>
     {isExpanded && (
       <div className="p-6 border-t border-canvas-border space-y-6">
-        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-white mb-2">Project Overview</h4><p className="text-text-secondary text-sm">{project.overview}</p></div>
-        <div><h4 className="font-semibold text-white mb-3">Learning Objectives</h4><ul className="grid md:grid-cols-2 gap-2">{project.learningObjectives.map((obj, i) => (<li key={i} className="flex items-start gap-2 text-sm text-text-secondary"><svg className="w-4 h-4 text-terra-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{obj}</li>))}</ul></div>
-        {project.prerequisites.length > 0 && <div><h4 className="font-semibold text-white mb-3">Prerequisites</h4><ul className="flex flex-wrap gap-2">{project.prerequisites.map((prereq, i) => <li key={i} className="text-xs px-3 py-1 bg-canvas-border text-text-secondary rounded-full">{prereq}</li>)}</ul></div>}
+        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-text-heading mb-2">Project Overview</h4><p className="text-text-secondary text-sm">{project.overview}</p></div>
+        <div><h4 className="font-semibold text-text-heading mb-3">Learning Objectives</h4><ul className="grid md:grid-cols-2 gap-2">{project.learningObjectives.map((obj, i) => (<li key={i} className="flex items-start gap-2 text-sm text-text-secondary"><svg className="w-4 h-4 text-terra-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{obj}</li>))}</ul></div>
+        {project.prerequisites.length > 0 && <div><h4 className="font-semibold text-text-heading mb-3">Prerequisites</h4><ul className="flex flex-wrap gap-2">{project.prerequisites.map((prereq, i) => <li key={i} className="text-xs px-3 py-1 bg-canvas-border text-text-secondary rounded-full">{prereq}</li>)}</ul></div>}
         <div className="grid md:grid-cols-2 gap-4">
           <div className="bg-canvas-deep rounded-lg p-4"><h5 className="font-medium text-terra-light mb-2">Required Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.materials.required.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
           <div className="bg-canvas-deep rounded-lg p-4"><h5 className="font-medium text-terra-light mb-2">Optional Materials</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.materials.optional.map((m, i) => <li key={i}>{m}</li>)}</ul></div>
         </div>
-        <div><h4 className="font-semibold text-white mb-3">Lessons</h4><div className="space-y-3">{project.lessons.map((lesson, i) => <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />)}</div></div>
-        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-white mb-3">Assessment</h4><div className="grid md:grid-cols-2 gap-4"><div><h5 className="font-medium text-terra-light mb-2">Formative Assessment</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.assessment.formative.map((a, i) => <li key={i}>{a}</li>)}</ul></div><div><h5 className="font-medium text-terra-light mb-2">Summative Assessment</h5><p className="text-sm text-text-secondary">{project.assessment.summative}</p></div></div></div>
-        <div><h4 className="font-semibold text-white mb-3">Real-World Connections</h4><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}</ul></div>
+        <div><h4 className="font-semibold text-text-heading mb-3">Lessons</h4><div className="space-y-3">{project.lessons.map((lesson, i) => <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />)}</div></div>
+        <div className="bg-canvas-deep rounded-lg p-4"><h4 className="font-semibold text-text-heading mb-3">Assessment</h4><div className="grid md:grid-cols-2 gap-4"><div><h5 className="font-medium text-terra-light mb-2">Formative Assessment</h5><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.assessment.formative.map((a, i) => <li key={i}>{a}</li>)}</ul></div><div><h5 className="font-medium text-terra-light mb-2">Summative Assessment</h5><p className="text-sm text-text-secondary">{project.assessment.summative}</p></div></div></div>
+        <div><h4 className="font-semibold text-text-heading mb-3">Real-World Connections</h4><ul className="list-disc list-inside text-sm text-text-secondary space-y-1">{project.realWorldConnections.map((conn, i) => <li key={i}>{conn}</li>)}</ul></div>
       </div>
     )}
   </div>

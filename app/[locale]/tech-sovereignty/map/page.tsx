@@ -44,7 +44,7 @@ export default function TrackMapPage() {
       {/* Suggested Sequences */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8 text-center">
             Suggested Learning Sequences
           </h2>
 
@@ -56,7 +56,7 @@ export default function TrackMapPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="font-display text-lg font-semibold text-white mb-2">Full Sovereignty</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">Full Sovereignty</h3>
               <p className="text-text-secondary text-sm mb-4">
                 The complete journey from understanding your rights to running your own infrastructure.
               </p>
@@ -91,7 +91,7 @@ export default function TrackMapPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <h3 className="font-display text-lg font-semibold text-white mb-2">Developer Path</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">Developer Path</h3>
               <p className="text-text-secondary text-sm mb-4">
                 Focus on building applications that serve communities and reflect shared values.
               </p>
@@ -122,7 +122,7 @@ export default function TrackMapPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="font-display text-lg font-semibold text-white mb-2">AI Independence</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">AI Independence</h3>
               <p className="text-text-secondary text-sm mb-4">
                 Run powerful AI models locally without sending your data to corporate clouds.
               </p>
@@ -156,7 +156,7 @@ export default function TrackMapPage() {
       {/* Track Overview */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8 text-center">
             All Tracks
           </h2>
 
@@ -180,7 +180,7 @@ export default function TrackMapPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={track.icon} />
                   </svg>
                 </div>
-                <h3 className="font-display font-semibold text-white text-sm mb-1">{track.title}</h3>
+                <h3 className="font-display font-semibold text-text-heading text-sm mb-1">{track.title}</h3>
                 <p className="text-text-secondary text-xs">{track.description}</p>
               </Link>
             ))}
@@ -191,7 +191,7 @@ export default function TrackMapPage() {
       {/* CTA */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-4">
             Ready to Start?
           </h2>
           <p className="text-text-secondary mb-8">

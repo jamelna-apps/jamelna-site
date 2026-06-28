@@ -15,7 +15,7 @@ const CorePrinciple = () => (
         </svg>
       </div>
       <div>
-        <h3 className="font-display text-lg font-bold text-white mb-2">Core Pedagogical Principle: Ownership Through Understanding</h3>
+        <h3 className="font-display text-lg font-bold text-text-heading mb-2">Core Pedagogical Principle: Ownership Through Understanding</h3>
         <p className="text-text-secondary mb-3">
           Self-hosting isn&apos;t just about running software—it&apos;s about understanding <strong className="text-white">what your data is</strong>,
           <strong className="text-white"> where it lives</strong>, and <strong className="text-white">who has access to it</strong>. Students learn to make informed
@@ -310,7 +310,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
             {index + 1}
           </span>
           <div>
-            <h6 className="font-semibold text-white">{activity.title}</h6>
+            <h6 className="font-semibold text-text-heading">{activity.title}</h6>
             <p className="text-xs text-text-muted">{activity.duration}</p>
           </div>
         </div>
@@ -333,7 +333,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 
           {/* Step-by-step instructions */}
           <div>
-            <h6 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <h6 className="text-sm font-semibold text-text-heading mb-3 flex items-center gap-2">
               <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
               </svg>
@@ -409,7 +409,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
       </div>
       <div className="flex-1">
         <div className="flex items-center justify-between mb-2">
-          <h4 className="font-semibold text-white">{lesson.title}</h4>
+          <h4 className="font-semibold text-text-heading">{lesson.title}</h4>
           <div className="flex items-center gap-2">
             <span className={`text-xs px-2 py-1 rounded font-medium ${
               lesson.gradeBand === '6-8'
@@ -450,7 +450,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           {lesson.udl && <UDLSection udl={lesson.udl} />}
 
           <div>
-            <h5 className="text-sm font-medium text-white mb-1">Learning Objectives</h5>
+            <h5 className="text-sm font-medium text-text-heading mb-1">Learning Objectives</h5>
             <ul className="text-sm text-text-secondary space-y-1">
               {lesson.objectives.map((obj, i) => (
                 <li key={i} className="flex items-start gap-2">
@@ -464,7 +464,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           {/* Detailed Activities (if available) */}
           {lesson.detailedActivities && lesson.detailedActivities.length > 0 ? (
             <div>
-              <h5 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
+              <h5 className="text-sm font-medium text-text-heading mb-3 flex items-center gap-2">
                 <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
@@ -478,7 +478,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
             </div>
           ) : (
             <div>
-              <h5 className="text-sm font-medium text-white mb-1">Activities</h5>
+              <h5 className="text-sm font-medium text-text-heading mb-1">Activities</h5>
               <ul className="text-sm text-text-secondary space-y-1">
                 {lesson.activities.map((activity, i) => (
                   <li key={i} className="flex items-start gap-2">
@@ -491,7 +491,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           )}
 
           <div>
-            <h5 className="text-sm font-medium text-white mb-1">Materials Needed</h5>
+            <h5 className="text-sm font-medium text-text-heading mb-1">Materials Needed</h5>
             <div className="flex flex-wrap gap-2">
               {lesson.materials.map((material, i) => (
                 <span key={i} className="text-xs bg-canvas-deep text-text-muted px-2 py-1 rounded">
@@ -524,7 +524,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 flex-wrap">
-              <h3 className="font-display text-xl font-bold text-white">{project.title}</h3>
+              <h3 className="font-display text-xl font-bold text-text-heading">{project.title}</h3>
               <span className={`text-xs px-2 py-1 rounded-full ${difficultyColors[project.difficulty] || 'bg-canvas-deep text-text-muted'}`}>
                 {project.difficulty}
               </span>
@@ -561,13 +561,13 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
         <div className="border-t border-canvas-border p-6 space-y-8">
           {/* Overview */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Project Overview</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Project Overview</h4>
             <p className="text-text-secondary leading-relaxed">{project.overview}</p>
           </div>
 
           {/* Learning Objectives */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Learning Objectives</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Learning Objectives</h4>
             <p className="text-sm text-text-muted mb-2">By the end of this project, students will be able to:</p>
             <ul className="space-y-2">
               {project.learningObjectives.map((objective, i) => (
@@ -583,7 +583,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Prerequisites */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Prerequisites</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Prerequisites</h4>
             <ul className="space-y-1">
               {project.prerequisites.map((prereq, i) => (
                 <li key={i} className="flex items-center gap-2 text-text-secondary">
@@ -597,7 +597,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           {/* Materials */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3">Required Materials</h4>
+              <h4 className="text-lg font-semibold text-text-heading mb-3">Required Materials</h4>
               <ul className="space-y-2">
                 {project.materials.required.map((material, i) => (
                   <li key={i} className="flex items-center gap-2 text-text-secondary">
@@ -608,7 +608,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3">Optional Materials</h4>
+              <h4 className="text-lg font-semibold text-text-heading mb-3">Optional Materials</h4>
               <ul className="space-y-2">
                 {project.materials.optional.map((material, i) => (
                   <li key={i} className="flex items-center gap-2 text-text-secondary">
@@ -622,7 +622,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Lessons */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Lesson Plans</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-4">Lesson Plans</h4>
             <div className="space-y-4">
               {project.lessons.map((lesson, i) => (
                 <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />
@@ -632,10 +632,10 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Assessment */}
           <div className="bg-canvas-deep rounded-lg p-6">
-            <h4 className="text-lg font-semibold text-white mb-4">Assessment</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-4">Assessment</h4>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h5 className="font-medium text-white mb-2">Formative Assessment (Ongoing)</h5>
+                <h5 className="font-medium text-text-heading mb-2">Formative Assessment (Ongoing)</h5>
                 <ul className="space-y-1">
                   {project.assessment.formative.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
@@ -646,7 +646,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
                 </ul>
               </div>
               <div>
-                <h5 className="font-medium text-white mb-2">Summative Assessment (Final)</h5>
+                <h5 className="font-medium text-text-heading mb-2">Summative Assessment (Final)</h5>
                 <p className="text-sm text-text-secondary">{project.assessment.summative}</p>
               </div>
             </div>
@@ -654,7 +654,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Extensions */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Extensions & Challenges</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Extensions & Challenges</h4>
             <p className="text-sm text-text-muted mb-2">For students who finish early or want to go deeper:</p>
             <ul className="space-y-2">
               {project.extensions.map((ext, i) => (
@@ -668,7 +668,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Real World Connections */}
           <div className="bg-secret/10 rounded-lg p-6">
-            <h4 className="text-lg font-semibold text-white mb-3">Real-World Connections</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Real-World Connections</h4>
             <ul className="space-y-2">
               {project.realWorldConnections.map((connection, i) => (
                 <li key={i} className="flex items-start gap-2 text-text-secondary">

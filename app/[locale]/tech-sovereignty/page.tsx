@@ -28,7 +28,7 @@ function ProjectCard({ project }: { project: Project }) {
   const cardContent = (
     <>
       <div className="flex justify-between items-start mb-3">
-        <h4 className="font-semibold text-white text-sm">{project.title}</h4>
+        <h4 className="font-semibold text-text-heading text-sm">{project.title}</h4>
         <span className={`text-xs px-2 py-1 rounded-full font-medium ${
           isAvailable
             ? 'bg-terra/20 text-terra-light'

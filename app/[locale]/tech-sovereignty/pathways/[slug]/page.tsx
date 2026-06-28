@@ -113,7 +113,7 @@ function StepCard({ step, index, isLast, isCompleted, onToggle, color, locale }:
           </span>
           <span className="text-xs text-text-muted">{step.duration}</span>
         </div>
-        <h3 className={`font-display text-lg font-semibold mb-1.5 ${isCompleted ? 'text-text-secondary line-through' : 'text-white'}`}>
+        <h3 className={`font-display text-lg font-semibold mb-1.5 ${isCompleted ? 'text-text-secondary line-through' : 'text-text-heading'}`}>
           {step.title}
         </h3>
         <p className="text-text-secondary text-sm leading-relaxed">{step.description}</p>
@@ -265,7 +265,7 @@ export default function PathwayPage() {
       <section className="py-12 px-4 bg-canvas">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="font-display text-2xl font-bold text-white">Your Journey</h2>
+            <h2 className="font-display text-2xl font-bold text-text-heading">Your Journey</h2>
             {nextStepIndex !== -1 && (
               <span className="text-sm text-text-secondary">
                 Next: Step {nextStepIndex + 1}
@@ -300,7 +300,7 @@ export default function PathwayPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h2 className="font-display text-2xl font-bold text-white mb-2">Pathway Complete!</h2>
+            <h2 className="font-display text-2xl font-bold text-text-heading mb-2">Pathway Complete!</h2>
             <p className="text-text-secondary mb-8">
               Congratulations! You&apos;ve completed all checkpoints in this pathway.
             </p>

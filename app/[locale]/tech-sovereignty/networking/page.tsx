@@ -17,7 +17,7 @@ const CorePrinciple = () => (
         </svg>
       </div>
       <div>
-        <h3 className="font-display text-lg font-bold text-white mb-2">Core Pedagogical Principle: Understanding Over Memorization</h3>
+        <h3 className="font-display text-lg font-bold text-text-heading mb-2">Core Pedagogical Principle: Understanding Over Memorization</h3>
         <p className="text-text-secondary mb-3">
           Every lesson in this curriculum prioritizes <strong>deep conceptual understanding</strong> over surface-level skills.
           Students should never just &quot;make it work&quot;—they must understand <em>why</em> it works, <em>what</em> is happening
@@ -313,7 +313,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
             {index + 1}
           </span>
           <div>
-            <h6 className="font-semibold text-white">{activity.title}</h6>
+            <h6 className="font-semibold text-text-heading">{activity.title}</h6>
             <p className="text-xs text-text-muted">{activity.duration}</p>
           </div>
         </div>
@@ -370,7 +370,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 
           {/* Step-by-step instructions */}
           <div>
-            <h6 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <h6 className="text-sm font-semibold text-text-heading mb-3 flex items-center gap-2">
               <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
               </svg>
@@ -446,7 +446,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
       </div>
       <div className="flex-1">
         <div className="flex items-center justify-between mb-2">
-          <h4 className="font-semibold text-white">{lesson.title}</h4>
+          <h4 className="font-semibold text-text-heading">{lesson.title}</h4>
           <div className="flex items-center gap-2">
             <span className={`text-xs px-2 py-1 rounded font-medium ${
               lesson.gradeBand === '6-8'
@@ -561,7 +561,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 flex-wrap">
-              <h3 className="font-display text-xl font-bold text-white">{project.title}</h3>
+              <h3 className="font-display text-xl font-bold text-text-heading">{project.title}</h3>
               <span className={`text-xs px-2 py-1 rounded-full ${difficultyColors[project.difficulty] || 'bg-canvas-deep text-text-secondary'}`}>
                 {project.difficulty}
               </span>
@@ -598,13 +598,13 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
         <div className="border-t border-canvas-border p-6 space-y-8">
           {/* Overview */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Project Overview</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Project Overview</h4>
             <p className="text-text-muted leading-relaxed">{project.overview}</p>
           </div>
 
           {/* Learning Objectives */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Learning Objectives</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Learning Objectives</h4>
             <p className="text-sm text-text-muted mb-2">By the end of this project, students will be able to:</p>
             <ul className="space-y-2">
               {project.learningObjectives.map((objective, i) => (
@@ -620,7 +620,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Prerequisites */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Prerequisites</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Prerequisites</h4>
             <ul className="space-y-1">
               {project.prerequisites.map((prereq, i) => (
                 <li key={i} className="flex items-center gap-2 text-text-muted">
@@ -634,7 +634,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           {/* Materials */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3">Required Materials</h4>
+              <h4 className="text-lg font-semibold text-text-heading mb-3">Required Materials</h4>
               <ul className="space-y-2">
                 {project.materials.required.map((material, i) => (
                   <li key={i} className="flex items-center gap-2 text-text-muted">
@@ -645,7 +645,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-white mb-3">Optional Materials</h4>
+              <h4 className="text-lg font-semibold text-text-heading mb-3">Optional Materials</h4>
               <ul className="space-y-2">
                 {project.materials.optional.map((material, i) => (
                   <li key={i} className="flex items-center gap-2 text-text-muted">
@@ -659,7 +659,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Lessons */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Lesson Plans</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-4">Lesson Plans</h4>
             <div className="space-y-4">
               {project.lessons.map((lesson, i) => (
                 <LessonCard key={i} lesson={lesson} index={i} projectId={project.id} />
@@ -669,7 +669,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Assessment */}
           <div className="bg-canvas-deep rounded-lg p-6">
-            <h4 className="text-lg font-semibold text-white mb-4">Assessment</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-4">Assessment</h4>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h5 className="font-medium text-text-secondary mb-2">Formative Assessment (Ongoing)</h5>
@@ -691,7 +691,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Extensions */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-3">Extensions & Challenges</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Extensions & Challenges</h4>
             <p className="text-sm text-text-muted mb-2">For students who finish early or want to go deeper:</p>
             <ul className="space-y-2">
               {project.extensions.map((ext, i) => (
@@ -705,7 +705,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
 
           {/* Real World Connections */}
           <div className="bg-terra/10 rounded-lg p-6">
-            <h4 className="text-lg font-semibold text-white mb-3">Real-World Connections</h4>
+            <h4 className="text-lg font-semibold text-text-heading mb-3">Real-World Connections</h4>
             <ul className="space-y-2">
               {project.realWorldConnections.map((connection, i) => (
                 <li key={i} className="flex items-start gap-2 text-text-secondary">
@@ -7722,7 +7722,7 @@ export default function NetworkingCurriculum() {
       {/* Track Overview */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-canvas-raised rounded-xl border border-canvas-border p-8 mb-12">
-          <h2 className="font-display text-2xl font-bold text-white mb-4">Track Overview</h2>
+          <h2 className="font-display text-2xl font-bold text-text-heading mb-4">Track Overview</h2>
           <p className="text-text-secondary mb-6 leading-relaxed">
             The Networking Fundamentals track takes students from zero networking knowledge to designing
             community-scale internet infrastructure. Students will build real networks, analyze real
@@ -7731,7 +7731,7 @@ export default function NetworkingCurriculum() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-display font-semibold text-white mb-2">What You&apos;ll Learn</h3>
+              <h3 className="font-display font-semibold text-text-heading mb-2">What You&apos;ll Learn</h3>
               <ul className="space-y-2 text-text-secondary">
                 <li className="flex items-start gap-2">
                   <span className="text-terra mt-1">&#10003;</span>
@@ -7756,7 +7756,7 @@ export default function NetworkingCurriculum() {
               </ul>
             </div>
             <div>
-              <h3 className="font-display font-semibold text-white mb-2">Why This Matters</h3>
+              <h3 className="font-display font-semibold text-text-heading mb-2">Why This Matters</h3>
               <ul className="space-y-2 text-text-secondary">
                 <li className="flex items-start gap-2">
                   <span className="text-terra-light mt-1">&#8594;</span>
@@ -7783,7 +7783,7 @@ export default function NetworkingCurriculum() {
         <CorePrinciple />
 
         {/* Projects */}
-        <h2 className="font-display text-2xl font-bold text-white mb-6">Projects & Lesson Plans</h2>
+        <h2 className="font-display text-2xl font-bold text-text-heading mb-6">Projects & Lesson Plans</h2>
         <div className="space-y-6">
           {projects.map((project) => (
             <ProjectSection
@@ -7797,7 +7797,7 @@ export default function NetworkingCurriculum() {
 
         {/* Educator Notes */}
         <div className="mt-12 bg-terra/10 rounded-xl border border-terra/30 p-8">
-          <h2 className="font-display text-2xl font-bold text-white mb-4">Notes for Educators</h2>
+          <h2 className="font-display text-2xl font-bold text-text-heading mb-4">Notes for Educators</h2>
           <div className="space-y-4 text-text-secondary">
             <p>
               <strong>Pacing:</strong> The suggested durations are flexible. Some groups may move faster or slower
@@ -7827,7 +7827,7 @@ export default function NetworkingCurriculum() {
 
         {/* Community Network Resources */}
         <div className="mt-12 bg-canvas-raised rounded-xl border border-terra/30 p-8">
-          <h2 className="font-display text-2xl font-bold text-white mb-2">Community Network Resources</h2>
+          <h2 className="font-display text-2xl font-bold text-text-heading mb-2">Community Network Resources</h2>
           <p className="text-text-secondary mb-6">
             Learn from real-world community networks and access comprehensive guides for building your own.
             These resources inspired this curriculum and provide practical guidance for implementation.
@@ -7842,7 +7842,7 @@ export default function NetworkingCurriculum() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                 </div>
-                <h3 className="font-display font-bold text-white">NYC Mesh</h3>
+                <h3 className="font-display font-bold text-text-heading">NYC Mesh</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 New York City&apos;s community-owned network. Volunteer-driven, neutral, private. See how they install, organize, and sustain a real mesh network.
@@ -7892,7 +7892,7 @@ export default function NetworkingCurriculum() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="font-display font-bold text-white">ISOC DIY Toolkit</h3>
+                <h3 className="font-display font-bold text-text-heading">ISOC DIY Toolkit</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 The Internet Society&apos;s 10-step guide for building community networks. Covers community engagement, sustainability, governance, and technical setup.
@@ -7931,7 +7931,7 @@ export default function NetworkingCurriculum() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h3 className="font-display font-bold text-white">Technical Manuals</h3>
+                <h3 className="font-display font-bold text-text-heading">Technical Manuals</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 In-depth technical guides covering LibreRouter, MAZI Toolkit, and community LTE. Published by UN IGF&apos;s Dynamic Coalition on Community Connectivity.
@@ -7970,7 +7970,7 @@ export default function NetworkingCurriculum() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-display font-bold text-white">Global Networks</h3>
+                <h3 className="font-display font-bold text-text-heading">Global Networks</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 Learn from successful community networks around the world. Each has unique lessons about governance, technology, and sustainability.
@@ -8021,7 +8021,7 @@ export default function NetworkingCurriculum() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="font-display font-bold text-white">Technical Tools</h3>
+                <h3 className="font-display font-bold text-text-heading">Technical Tools</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 Open-source firmware, mesh protocols, and tools for building your own network infrastructure.
@@ -8071,7 +8071,7 @@ export default function NetworkingCurriculum() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="font-display font-bold text-white">Further Reading</h3>
+                <h3 className="font-display font-bold text-text-heading">Further Reading</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 Books and comprehensive guides for deep learning about wireless networking and community-built infrastructure.
@@ -8105,7 +8105,7 @@ export default function NetworkingCurriculum() {
 
           {/* Call to Action */}
           <div className="mt-8 bg-terra/20 rounded-lg p-6 text-center">
-            <h3 className="font-display text-lg font-bold text-white mb-2">Ready to Build?</h3>
+            <h3 className="font-display text-lg font-bold text-text-heading mb-2">Ready to Build?</h3>
             <p className="text-sm text-text-secondary mb-4">
               Start with the curriculum above, then connect with existing community networks to learn from their experience.
               Remember NYC Mesh&apos;s core principle: <em>&quot;Installing is the main activity of a community network. Everything else you do should be about enabling more installs.&quot;</em>
@@ -8114,14 +8114,14 @@ export default function NetworkingCurriculum() {
 
           {/* Credits & Acknowledgments */}
           <div className="mt-8 bg-canvas-deep rounded-lg p-6 border border-canvas-border">
-            <h3 className="font-display text-lg font-bold text-white mb-4">Acknowledgments & Credits</h3>
+            <h3 className="font-display text-lg font-bold text-text-heading mb-4">Acknowledgments & Credits</h3>
             <p className="text-sm text-text-muted mb-4">
               This curriculum was developed using open resources, documentation, and lessons learned from community networks around the world.
               We gratefully acknowledge the following organizations whose work has informed and inspired these materials:
             </p>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <div>
-                <h4 className="font-semibold text-white mb-2">Community Networks</h4>
+                <h4 className="font-semibold text-text-heading mb-2">Community Networks</h4>
                 <ul className="space-y-1 text-text-muted">
                   <li>
                     <a href="https://www.nycmesh.net" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">NYC Mesh</a>
@@ -8150,7 +8150,7 @@ export default function NetworkingCurriculum() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-white mb-2">Educational Resources</h4>
+                <h4 className="font-semibold text-text-heading mb-2">Educational Resources</h4>
                 <ul className="space-y-1 text-text-muted">
                   <li>
                     <a href="https://www.internetsociety.org/resources/community-network-diy-toolkit/" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">Internet Society</a>
