@@ -9,10 +9,10 @@ interface ModeSelectorProps {
 export function ModeSelector({ onSelect }: ModeSelectorProps) {
   return (
     <div className="w-full">
-      <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading text-center mb-3">
+      <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-3">
         How would you like to learn?
       </h2>
-      <p className="text-text-secondary text-center mb-8 max-w-xl mx-auto">
+      <p className="text-text-secondary mb-8 max-w-xl">
         Choose your path based on how you want to engage with the curriculum
       </p>
 

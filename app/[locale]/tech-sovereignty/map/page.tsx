@@ -44,7 +44,7 @@ export default function TrackMapPage() {
       {/* Suggested Sequences */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8">
             Suggested Learning Sequences
           </h2>
 
@@ -156,7 +156,7 @@ export default function TrackMapPage() {
       {/* Track Overview */}
       <section className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8">
             All Tracks
           </h2>
 

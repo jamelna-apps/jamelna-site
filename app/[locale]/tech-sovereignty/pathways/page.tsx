@@ -95,7 +95,7 @@ export default function PathwaysPage() {
       {/* How It Works */}
       <section className="py-16 px-4 bg-canvas">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8 text-center">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-8">
             How Pathways Work
           </h2>
 

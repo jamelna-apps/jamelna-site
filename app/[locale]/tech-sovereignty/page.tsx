@@ -582,8 +582,8 @@ export default function TechSovereigntyPage() {
         }`}
       >
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col items-center mb-4">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading text-center">
+          <div className="flex flex-col items-start mb-4">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading">
               {t('curriculum.title')}
             </h2>
             {selectedMode === 'educator' && (
@@ -706,10 +706,10 @@ export default function TechSovereigntyPage() {
       {/* Tools Repository */}
       <section id="tools" className="py-20 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading mb-4 text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading mb-4">
             {t('tools.title')}
           </h2>
-          <p className="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12">
+          <p className="text-lg text-text-secondary max-w-3xl mb-12">
             {t('tools.description')}
           </p>
 
