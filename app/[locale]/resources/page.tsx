@@ -9,7 +9,7 @@ export default async function ResourcesHubPage({ params }: PageProps) {
   const { locale } = await params;
   return (
     <PageWrapper>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <hr className="heading-rule" />
         <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
           Free tools for educators and non-profits

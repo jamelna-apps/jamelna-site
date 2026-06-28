@@ -11,7 +11,7 @@ export default async function GrantsIntakePage({ params }: PageProps) {
   const { locale } = await params;
   return (
     <PageWrapper>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <Link
           href={`/${locale}/resources`}
           className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading mb-8"
@@ -31,11 +31,11 @@ export default async function GrantsIntakePage({ params }: PageProps) {
           leave your browser unless you choose to email or download them.
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 max-w-3xl">
           <IntakeWizard locale={locale} />
         </div>
 
-        <details className="mt-8 text-sm text-text-secondary">
+        <details className="mt-8 max-w-3xl text-sm text-text-secondary">
           <summary className="cursor-pointer text-text-primary font-medium">
             What we do with your data
           </summary>
