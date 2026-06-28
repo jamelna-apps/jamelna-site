@@ -1425,27 +1425,25 @@ export default function CommunityBuildingPage() {
 
   return (
     <main className="min-h-screen bg-canvas">
-      <div className="bg-canvas-deep border-b border-canvas-border">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center text-sm text-text-muted hover:text-terra-light transition-colors">
-            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-            Back to All Tracks
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
+          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading transition-colors mb-8 group">
+            <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            Back to Tech Sovereignty
           </Link>
-        </div>
-      </div>
 
-      <div className="bg-gradient-to-br from-terra-dark to-terra-light text-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
+          <hr className="heading-rule" />
+
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-terra/20 rounded-xl flex items-center justify-center text-terra-light">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
             </div>
-            <span className="text-terra-light/80 text-sm font-medium">Track G</span>
+            <span className="text-terra-light text-sm font-medium">Track G</span>
           </div>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">Community Building</h1>
-          <p className="text-xl text-white/90 max-w-3xl">Build inclusive technology programs that serve everyone in your community. Learn to assess needs, bridge digital divides, and create governance that keeps technology accountable to people.</p>
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">Community Building</h1>
+          <p className="text-xl text-text-secondary max-w-2xl">Build inclusive technology programs that serve everyone in your community. Learn to assess needs, bridge digital divides, and create governance that keeps technology accountable to people.</p>
         </div>
-      </div>
+      </section>
 
       <div className="max-w-6xl mx-auto px-4 py-12">
         <CorePrinciple />

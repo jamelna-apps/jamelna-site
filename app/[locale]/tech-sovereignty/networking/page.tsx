@@ -7670,37 +7670,30 @@ export default function NetworkingCurriculum() {
 
   return (
     <div className="min-h-screen bg-canvas">
-      {/* Breadcrumb Navigation */}
-      <div className="bg-canvas-deep border-b border-canvas-border">
-        <div className="max-w-6xl mx-auto px-4 py-4">
+      {/* Hero Section */}
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center text-sm text-text-secondary hover:text-terra-light transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading transition-colors mb-8 group"
           >
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Tech Sovereignty
           </Link>
-        </div>
-      </div>
 
-      {/* Hero Section */}
-      <section className="relative py-12 md:py-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-deep to-deep-darker"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(196, 112, 63, 0.4), transparent)' }} />
+          <hr className="heading-rule" />
 
-        <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex items-center gap-3 mb-4">
             <span className="bg-terra text-canvas-deep text-sm px-3 py-1 rounded-full font-medium">Track A</span>
             <span className="bg-canvas-raised text-text-secondary text-sm px-3 py-1 rounded-full border border-canvas-border">4 Projects</span>
           </div>
 
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
             {t('tracks.networking.title')}
           </h1>
-          <p className="text-xl text-text-secondary max-w-3xl mb-8">
+          <p className="text-xl text-text-secondary max-w-2xl mb-8">
             {t('tracks.networking.description')}
           </p>
 

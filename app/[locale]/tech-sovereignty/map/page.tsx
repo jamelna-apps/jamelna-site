@@ -11,24 +11,24 @@ export default function TrackMapPage() {
   return (
     <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-terra/10 via-zinc-900 to-zinc-950"></div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center gap-2 text-text-secondary hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading transition-colors mb-8 group"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Tech Sovereignty
           </Link>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
+          <hr className="heading-rule" />
+
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
             Learning Map
           </h1>
-          <p className="text-lg text-text-secondary mb-8 max-w-3xl">
+          <p className="text-xl text-text-secondary max-w-2xl">
             See how all the tracks connect and find your path to tech independence. Click any track to explore its curriculum, or select a suggested path to see the recommended sequence.
           </p>
         </div>

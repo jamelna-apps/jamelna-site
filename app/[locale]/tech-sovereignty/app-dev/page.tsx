@@ -1718,27 +1718,25 @@ export default function AppDevPage() {
 
   return (
     <main className="min-h-screen bg-canvas">
-      <div className="bg-canvas-deep border-b border-canvas-border">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center text-sm text-text-muted hover:text-terra-light transition-colors">
-            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-            Back to All Tracks
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
+          <Link href={`/${locale}/tech-sovereignty`} className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading transition-colors mb-8 group">
+            <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            Back to Tech Sovereignty
           </Link>
-        </div>
-      </div>
 
-      <div className="bg-gradient-to-br from-terra-dark to-terra-light text-white py-16">
-        <div className="max-w-6xl mx-auto px-4">
+          <hr className="heading-rule" />
+
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-terra/20 rounded-xl flex items-center justify-center text-terra-light">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
             </div>
-            <span className="text-terra-light/80 text-sm font-medium">Track D</span>
+            <span className="text-terra-light text-sm font-medium">Track D</span>
           </div>
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">App Development</h1>
-          <p className="text-xl text-white/90 max-w-3xl">Build applications that serve your community—from websites to data-driven tools. Learn to identify needs and create solutions.</p>
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">App Development</h1>
+          <p className="text-xl text-text-secondary max-w-2xl">Build applications that serve your community—from websites to data-driven tools. Learn to identify needs and create solutions.</p>
         </div>
-      </div>
+      </section>
 
       <div className="max-w-6xl mx-auto px-4 py-12">
         <CorePrinciple />

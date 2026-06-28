@@ -45,26 +45,24 @@ export default function PathwaysPage() {
   return (
     <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
-      <section className="relative pt-10 pb-12 md:pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-terra/10 via-zinc-900 to-zinc-950"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 opacity-20 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(196, 112, 63, 0.3), transparent)' }} />
-
-        <div className="max-w-5xl mx-auto relative z-10">
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center gap-2 text-text-secondary hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-heading transition-colors mb-8 group"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Tech Sovereignty
           </Link>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+          <hr className="heading-rule" />
+
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
             Learning Pathways
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-2xl">
             Goal-oriented paths to tech independence. Choose what you want to achieve and follow a structured journey to get there.
           </p>
         </div>
