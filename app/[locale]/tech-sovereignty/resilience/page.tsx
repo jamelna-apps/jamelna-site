@@ -324,14 +324,6 @@ export default function ResiliencePage() {
 
           <hr className="heading-rule" />
 
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-3 py-1 mb-6">
-            <span className="w-1.5 h-1.5 bg-red-400 rounded-full animate-pulse" />
-            <span className="text-xs font-semibold text-red-300 uppercase tracking-widest">
-              {t('resilience.hero.eyebrow')}
-            </span>
-          </div>
-
           <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4 leading-tight">
             {t('resilience.hero.title')}
           </h1>
