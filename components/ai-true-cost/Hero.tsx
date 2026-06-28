@@ -19,7 +19,7 @@ interface HeroProps {
 export async function Hero({ annualSubsidyUsd, tagline }: HeroProps) {
   const t = await getTranslations('trueCost.hero');
   return (
-    <section className="pt-20 pb-20 md:pt-28 md:pb-24 px-6 bg-canvas-deep border-b border-canvas-border">
+    <section className="pt-10 pb-20 md:pb-24 px-6 bg-canvas-deep border-b border-canvas-border">
       <div className="max-w-5xl mx-auto">
         <hr className="heading-rule mb-6" />
 
