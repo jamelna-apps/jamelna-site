@@ -55,7 +55,6 @@ export function Calculator({ scenarios, productsById, sources }: CalculatorProps
     <div className="space-y-10">
       {/* Scenario picker */}
       <div>
-        <h2 className="text-lg font-bold text-white mb-6">{t('sectionTitle')}</h2>
         <ScenarioGrid
           scenarios={scenarios}
           selectedId={selectedId}
