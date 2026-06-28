@@ -71,9 +71,11 @@ The company's annual cash burn or net loss ÷ paying user base ÷ 12 months.
 
 | Company | Period | Loss/Burn | Paying base | Per-user |
 |---|---|---|---|---|
-| OpenAI | FY2024 | $5B net (ex-SBC) | 11M | $37.88/mo |
-| Anthropic | FY2024 | $5.6B cash burn | ~3M consumer | $14/mo (proportional) |
-| Google AI | FY2024 | not disclosed | N/A | N/A |
+| OpenAI | FY2025 | $20.9B operating loss | 50M | $34.83/mo |
+| Anthropic | FY2025 | $3.0B cash burn | ~3M consumer | $10.42/mo (proportional) |
+| Google AI | n/a | not disclosed | N/A | N/A |
+
+OpenAI's figure here is the **operating loss** ($20.9B on $13.07B revenue, FY2025), not the larger ~$38.5B net loss — that net figure is inflated by a one-time, non-cash ~$41.55B charge from the for-profit conversion, so the operating loss is the right basis for this page's "exclude non-cash items" approach.
 
 ---
 
@@ -134,7 +136,7 @@ MagicSchool, SchoolAI, Khanmigo, and Cursor all buy API tokens directly, not con
 
 ### The industry counter mixes metrics
 
-The $10.6B/year figure on the hero sums OpenAI's net loss (excluding stock-based comp) with Anthropic's cash burn (which includes a one-time data-center prepayment). Mixing concepts. A skeptic could argue comparable operating losses are meaningfully smaller.
+The $23.9B/year figure on the hero sums OpenAI's FY2025 **operating loss** ($20.9B) with Anthropic's FY2025 cash burn ($3.0B, which includes capex-like items). Mixing concepts. A skeptic could argue comparable operating losses differ somewhat. Note OpenAI's figure is deliberately the operating loss, not the larger ~$38.5B net loss — that net figure is inflated by a one-time, non-cash ~$41.55B for-profit-conversion charge.
 
 ---
 
@@ -152,13 +154,13 @@ Neither OpenAI nor Anthropic files public financials. Every company loss figure 
 
 ### "Subsidy" is a framing choice
 
-These companies burn cash to grow, not because unit economics are structurally broken. Anthropic's gross margins went positive in 2025. OpenAI's paying subscriber base grew from 11M to ~35M in a year.
+These companies burn cash to grow, not because unit economics are structurally broken. Anthropic's gross margins went positive in 2025 and its cash burn FELL from $5.6B (2024) to $3.0B (2025) as it neared operating profitability. OpenAI's paying subscriber base grew from 11M to ~50M paying (and ~900M weekly active users) in roughly a year.
 
 The "subsidy" framing reflects current cash-flow reality, not a claim that any of these products are doomed.
 
 ### Subscriber denominators age fast
 
-We pair 2024 loss figures with 2024 subscriber counts for internal consistency. When 2025 actuals land (expected mid-2026), numbers will shift — possibly both higher (losses grew) and lower (paying base doubled).
+The investor-subsidy lines now use FY2025 actuals: OpenAI's $20.9B operating loss against 50M paying subscribers (~900M weekly active users), and Anthropic's $3.0B cash burn. These replaced the prior FY2024 vintage ($5B loss / 11M paying / $37.88; Anthropic $5.6B). Denominators still age fast — as paying bases grow and losses move, these figures will keep shifting.
 
 ---
 

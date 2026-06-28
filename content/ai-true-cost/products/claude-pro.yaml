@@ -47,21 +47,21 @@ cost_components:
       - li-making-ai-thirsty-2023
 
   investor_subsidy:
-    value_usd: 13.89
+    value_usd: 10.42
     basis: >
-      Proportional attribution: Anthropic FY2024 cash burn $5.6B × 12.5%
+      Proportional attribution: Anthropic FY2025 cash burn $3.0B × 12.5%
       (consumer/subscription share of revenue per Sacra) ÷ ~3M paying
-      consumer subs (estimated) ÷ 12 months ≈ $13.89/mo. Range $6-23/mo
-      depending on which year's burn (2025 projected $3B), which denominator
+      consumer subs (estimated) ÷ 12 months ≈ $10.42/mo (was $13.89 on
+      FY2024's $5.6B burn). Range $5-18/mo depending on the denominator
       (paying sub counts not disclosed by Anthropic; TechCrunch reports
       estimates "all over the map" from 18-30M total consumer users with
-      the majority on Pro tier), and whether proportional attribution is
-      applied. Primary sources are secondary reporting of leaked investor
-      documents; no audited numbers exist.
+      the majority on Pro tier) and whether proportional attribution is
+      applied. Anthropic's burn FELL from $5.6B to $3.0B as it neared
+      operating profitability. Primary sources are secondary reporting of
+      leaked investor documents; no audited numbers exist.
     sources:
-      - anthropic-burn-2024-acquinox
-      - anthropic-burn-2024-theinformation
+      - anthropic-burn-2025
       - sacra-anthropic-revenue-mix-2026
       - techcrunch-claude-subs-2026
 
-last_verified: "2026-06-27"
+last_verified: "2026-06-28"

@@ -55,19 +55,18 @@ cost_components:
   investor_subsidy:
     value_usd: 54.00
     basis: >
-      10× the Pro baseline ($3.60/mo) to reflect Max 20× users' revenue
-      contribution and disproportionate Opus usage. Very low confidence.
-      The math: Anthropic 2025 projected burn $3B × 12.5% consumer
+      10× the Pro baseline to reflect Max 20× users' revenue contribution and
+      disproportionate Opus usage. Very low confidence. The math: Anthropic's
+      FY2025 cash burn $3B (actual, down from $5.6B in 2024) × 12.5% consumer
       attribution = $375M/yr consumer burn ÷ ~5-8M paying consumer subs
       = ~$6/mo baseline average; 10× that = $54/mo attributed to Max 20×
       users. Alternative view: if Max users cover their own marginal
       compute (the $67.50 figure), subsidy could be closer to zero. This
       is among the most uncertain figures on the page.
     sources:
-      - anthropic-burn-2024-acquinox
-      - anthropic-burn-2024-theinformation
+      - anthropic-burn-2025
       - sacra-anthropic-revenue-mix-2026
       - techcrunch-claude-subs-2026
       - claude-max-pricing-2026
 
-last_verified: "2026-06-27"
+last_verified: "2026-06-28"

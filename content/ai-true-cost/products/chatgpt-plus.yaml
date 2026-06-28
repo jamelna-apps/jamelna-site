@@ -51,18 +51,18 @@ cost_components:
       - li-making-ai-thirsty-2023
 
   investor_subsidy:
-    value_usd: 37.88
+    value_usd: 34.83
     basis: >
-      OpenAI FY2024 net loss $5.0B (ex stock-based compensation) ÷ 11M total paying
-      subscribers (Plus + Team + Enterprise, as of Sep 2024) ÷ 12 months = $37.88
-      per paying user per month. Uses matched 2024 vintage for both numerator and
-      denominator. The denominator has roughly tripled by late 2025 (~35M paying),
-      which — paired with 2024 loss — would collapse the figure to ~$11.90/mo;
-      but 2025 audited losses are not yet disclosed and are reportedly larger.
-      Counter will be updated via changelog when 2025 actuals are released.
+      OpenAI FY2025 operating loss $20.9B ÷ ~50M total paying subscribers
+      (all tiers, April 2026) ÷ 12 months = $34.83 per paying user per month
+      (was $37.88 from FY2024's $5.0B loss ÷ 11M subs). Uses the operating
+      loss rather than the larger ~$38.5B net loss because that net figure is
+      inflated by a one-time, non-cash ~$41.55B for-profit-conversion charge;
+      the operating loss is consistent with this page's "exclude non-cash
+      items" approach. Both numerator and denominator use the most recent
+      2025/early-2026 vintage.
     sources:
-      - openai-loss-2024-fortune
-      - openai-loss-2024-cnbc
-      - theinformation-11m-chatgpt-subs-2024
+      - openai-loss-2025
+      - openai-50m-paying-subs-2026
 
-last_verified: "2026-06-27"
+last_verified: "2026-06-28"

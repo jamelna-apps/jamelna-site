@@ -56,19 +56,19 @@ cost_components:
       - li-making-ai-thirsty-2023
 
   investor_subsidy:
-    value_usd: 18.00
+    value_usd: 9.64
     basis: >
       Proportional to revenue share: Max 5× users pay 5× Pro revenue and
-      disproportionately drive compute load. Baseline Pro subsidy $3.60/mo
-      (Anthropic burn × 12.5% consumer attribution ÷ paying sub count) scaled
-      5× ≈ $18/mo. Low confidence — Anthropic does not disclose Max-tier
-      subscriber counts; the 18-30M "consumer users" figure from TechCrunch
-      is a wide range and the Pro/Max-100/Max-200 mix is unknown.
+      disproportionately drive compute load. The prior $18/mo baseline was
+      scaled off Anthropic's FY2024 $5.6B burn; against the lower FY2025 $3.0B
+      burn it scales to $18 × (3 / 5.6) ≈ $9.64/mo. Low confidence — Anthropic
+      does not disclose Max-tier subscriber counts; the 18-30M "consumer users"
+      figure from TechCrunch is a wide range and the Pro/Max-100/Max-200 mix is
+      unknown.
     sources:
-      - anthropic-burn-2024-acquinox
-      - anthropic-burn-2024-theinformation
+      - anthropic-burn-2025
       - sacra-anthropic-revenue-mix-2026
       - techcrunch-claude-subs-2026
       - claude-max-pricing-2026
 
-last_verified: "2026-06-27"
+last_verified: "2026-06-28"

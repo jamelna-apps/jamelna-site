@@ -61,18 +61,21 @@ cost_components:
       - li-making-ai-thirsty-2023
 
   investor_subsidy:
-    value_usd: 37.88
+    value_usd: 34.83
     basis: >
-      OpenAI FY2024 loss $5B ÷ 11M paying subs ÷ 12 = $37.88/paying-user/mo.
-      Applied at the same rate as ChatGPT Plus since the loss attribution is
-      corporate-wide, not tier-specific. Edu's deeper volume discounts (see
+      OpenAI FY2025 operating loss $20.9B ÷ ~50M paying subs (April 2026) ÷ 12
+      = $34.83/paying-user/mo (was $37.88 from FY2024's $5B ÷ 11M). Applied at
+      the same corporate-wide rate as ChatGPT Plus since the loss attribution
+      is corporate-wide, not tier-specific. Uses the operating loss rather than
+      the larger ~$38.5B net loss, which is inflated by a one-time, non-cash
+      ~$41.55B for-profit-conversion charge. Edu's deeper volume discounts (see
       price and compute notes) mean OpenAI's effective per-Edu-seat loss is
       arguably HIGHER than per-Plus-seat. Price paid is $12/seat/mo as the
       typical institutional mid-case; CSU's $2.11 floor is the outlier.
     sources:
-      - openai-loss-2024-fortune
-      - theinformation-11m-chatgpt-subs-2024
+      - openai-loss-2025
+      - openai-50m-paying-subs-2026
       - csu-openai-contract-2025-laist
       - onlineeducation-chatgpt-edu-2024
 
-last_verified: "2026-06-27"
+last_verified: "2026-06-28"

@@ -4,6 +4,18 @@ This file records every substantive change to the numbers and methodology on thi
 
 ---
 
+## 2026-06-28 — Refreshed investor-subsidy financials to FY2025 actuals
+
+Updated every `investor_subsidy` component to FY2025 actual figures. Compute, training-amortization, and energy/water components were **not** touched in this pass (compute pricing was already refreshed in the 2026-06-27 entry).
+
+- **OpenAI: $5B (FY2024) → $20.9B operating loss (FY2025)**, on $13.07B revenue (up from an $8.78B operating loss in 2024). The figure uses the **operating loss**, excluding the one-time, non-cash ~$41.55B for-profit-conversion charge that inflates the widely quoted ~$38.5B net loss — consistent with this page's "exclude non-cash items" approach.
+- **OpenAI paying base 11M → ~50M; WAU base → ~900M.** Per-paying-user subsidy **$37.88 → $34.83** (ChatGPT Plus and Edu); free-tier per-WAU subsidy **$1.17 → $1.94**; ChatGPT Pro **$50 → $60** (consumer-attributable burn rebased on the $20.9B actual loss).
+- **Anthropic: $5.6B (FY2024) → $3.0B cash burn (FY2025)** as the company neared operating profitability. Claude consumer subsidies fell proportionally: **claude-pro $13.89 → $10.42**, **claude-free $3.60 → $2.08**, **Claude Max 5× $18 → $9.64**. Claude Max 20× stays **$54** (its basis already used the $3B 2025 figure, now reworded as actual rather than projected).
+- **Industry counter $10.6B/year → $23.9B/year** = $20.9B OpenAI FY2025 operating loss + $3.0B Anthropic FY2025 cash burn.
+- **Sources added:** `openai-loss-2025` (Fortune/FT), `anthropic-burn-2025` (The Information/Sacra), `openai-900m-users-2026`.
+
+---
+
 ## 2026-06-27 — Refreshed all compute pricing to current models (June 2026)
 
 Re-verified every product's `compute` component against current (June 2026) API rates and current flagship models. Training amortization, energy/water, and investor-subsidy components were **not** re-verified in this pass — only compute model names, arithmetic, and `last_verified` dates changed.

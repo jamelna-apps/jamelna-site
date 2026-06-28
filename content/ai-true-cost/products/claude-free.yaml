@@ -44,19 +44,20 @@ cost_components:
       - luccioni-power-hungry-2024
 
   investor_subsidy:
-    value_usd: 3.60
+    value_usd: 2.08
     basis: >
-      Proportional attribution: Anthropic FY2024 cash burn $5.6B × 25% (consumer
+      Proportional attribution: Anthropic FY2025 cash burn $3.0B × 25% (consumer
       product share; Anthropic's revenue is ~70-75% enterprise API, so attributing
-      all burn to Claude.ai consumer users overstates) ÷ 30M combined web+mobile
-      MAU ÷ 12 months ≈ $3.60/user/month. Range without proportional attribution:
-      $14-35/mo. This figure is LOW CONFIDENCE because Anthropic does not disclose
-      free-user counts (we use Business of Apps scraper estimates) and the
-      enterprise/consumer burn split is not officially disclosed. Methodology page
-      explains the attribution choice in detail.
+      all burn to Claude.ai consumer users overstates) ÷ ~30M combined web+mobile
+      MAU ÷ 12 months ≈ $2.08/user/month (was $3.60 on FY2024's $5.6B burn).
+      Range without proportional attribution: $8-20/mo. Anthropic's burn FELL from
+      $5.6B to $3.0B as it neared operating profitability. This figure is LOW
+      CONFIDENCE because Anthropic does not disclose free-user counts (we use
+      Business of Apps scraper estimates) and the enterprise/consumer burn split is
+      not officially disclosed. Methodology page explains the attribution choice in
+      detail.
     sources:
-      - anthropic-burn-2024-acquinox
-      - anthropic-burn-2024-theinformation
+      - anthropic-burn-2025
       - claude-mau-businessofapps-2026
 
-last_verified: "2026-06-27"
+last_verified: "2026-06-28"

@@ -275,7 +275,7 @@ openai-50m-paying-subs-2026:
   title: "OpenAI paying subscribers pass 50 million (early 2026)"
   author: "Business of Apps (aggregating Lightcap disclosures and press reporting)"
   url: https://www.businessofapps.com/data/chatgpt-statistics/
-  accessed: "2026-04-24"
+  accessed: "2026-06-28"
   pull_quote: "ChatGPT Pro ($200) accounted for roughly 5.8% of consumer sales as of early 2025. Total paying subscribers passed 50 million in early 2026, up from ~20M a year prior."
 
 openai-loss-2026-14b-theinformation:
@@ -375,3 +375,24 @@ v0-model-pricing-2026:
   url: https://pricepertoken.com/pricing-page/model/vercel-v0-1-5-md
   accessed: "2026-04-24"
   pull_quote: "vercel/v0-1.5-md: $3.00 per million input tokens, $15.00 per million output tokens. Vercel's proprietary UI-generation model priced at Claude Sonnet retail."
+
+openai-loss-2025:
+  title: "OpenAI 2025 financials (leaked)"
+  author: "Fortune / FT"
+  url: https://fortune.com/2026/06/16/openai-financials-leaked-losses-revenue-profit/
+  accessed: "2026-06-28"
+  pull_quote: "OpenAI's 2025 operating loss was approximately $20.9 billion on $13.07 billion of revenue (up from an $8.78B operating loss in 2024). The larger ~$38.5B net loss includes a one-time, non-cash ~$41.55B charge from the for-profit conversion."
+
+anthropic-burn-2025:
+  title: "Anthropic 2025 cash burn"
+  author: "The Information / Sacra"
+  url: https://sacra.com/c/anthropic/
+  accessed: "2026-06-28"
+  pull_quote: "Anthropic's cash burn fell to roughly $3 billion in 2025, down from $5.6 billion in 2024, as revenue run-rate climbed from $9B (end 2025) toward $30B+ (2026) and the company approached operating profitability."
+
+openai-900m-users-2026:
+  title: "ChatGPT user statistics 2026"
+  author: "industry trackers"
+  url: https://technologychecker.io/blog/chatgpt-statistics
+  accessed: "2026-06-28"
+  pull_quote: "ChatGPT reached roughly 900 million weekly active users in 2026."

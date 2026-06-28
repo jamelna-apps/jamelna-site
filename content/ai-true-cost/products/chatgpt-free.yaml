@@ -49,17 +49,18 @@ cost_components:
       - li-making-ai-thirsty-2023
 
   investor_subsidy:
-    value_usd: 1.17
+    value_usd: 1.94
     basis: >
-      OpenAI FY2024 net loss $5.0B (ex-SBC) ÷ ~700-800M weekly active users
-      (mid-2025 Lightcap disclosure, via TechCrunch) ÷ 12 months ≈ $0.74-$0.89
-      per WAU per month. Using 2025 projected loss ($9B per Fortune) with the
-      same base raises it to ~$1.30. Midpoint cited: $1.17/mo. Much smaller than
-      per-paid-user because the free-user denominator is enormous. Note: a heavy
-      200-query/mo free user is a p90 user; the average WAU makes far fewer
-      queries, so the per-heavy-free-user subsidy is likely higher than average.
+      OpenAI FY2025 operating loss $20.9B ÷ ~900M weekly active users (2026) ÷
+      12 months = $1.94 per WAU per month (was $1.17 against the prior $5B/~750M
+      base). Uses the operating loss rather than the larger ~$38.5B net loss,
+      which is inflated by a one-time, non-cash ~$41.55B for-profit-conversion
+      charge. Much smaller than per-paid-user because the free-user denominator
+      is enormous. Note: a heavy 200-query/mo free user is a p90 user; the
+      average WAU makes far fewer queries, so the per-heavy-free-user subsidy is
+      likely higher than average.
     sources:
-      - openai-loss-2024-fortune
-      - chatgpt-700m-wau-techcrunch-2025
+      - openai-loss-2025
+      - openai-900m-users-2026
 
-last_verified: "2026-06-27"
+last_verified: "2026-06-28"
