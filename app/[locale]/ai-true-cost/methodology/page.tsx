@@ -54,7 +54,7 @@ export default async function MethodologyPage({ params }: PageProps) {
         <nav className="mb-10">
           <Link
             href={calculatorUrl}
-            className="text-sm text-text-muted hover:text-orange-300 transition-colors inline-flex items-center gap-1"
+            className="text-sm text-text-muted hover:text-terra-light transition-colors inline-flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -65,10 +65,10 @@ export default async function MethodologyPage({ params }: PageProps) {
 
         {/* Page header */}
         <header className="mb-12 pb-10 border-b border-canvas-border">
-          <div className="text-xs uppercase tracking-widest text-orange-400 font-semibold mb-3">
+          <div className="text-xs uppercase tracking-widest text-terra font-semibold mb-3">
             True Cost of AI
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-display font-extrabold text-white mb-4 leading-tight">
             Methodology
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
@@ -80,14 +80,14 @@ export default async function MethodologyPage({ params }: PageProps) {
         {/* Mobile TOC */}
         <details className="lg:hidden mb-10 bg-canvas-raised border border-canvas-border rounded-lg">
           <summary className="px-4 py-3 cursor-pointer font-semibold text-white select-none">
-            <span className="text-sm uppercase tracking-wider text-orange-400">On this page</span>
+            <span className="text-sm uppercase tracking-wider text-terra">On this page</span>
           </summary>
           <ul className="px-4 pb-4 space-y-2">
             {sections.map((s) => (
               <li key={s.slug}>
                 <a
                   href={`#${s.slug}`}
-                  className="block py-1 text-sm text-text-secondary hover:text-orange-300 transition-colors"
+                  className="block py-1 text-sm text-text-secondary hover:text-terra-light transition-colors"
                 >
                   {s.title}
                 </a>
@@ -100,7 +100,7 @@ export default async function MethodologyPage({ params }: PageProps) {
           {/* Desktop TOC sidebar */}
           <aside className="hidden lg:block">
             <div className="sticky top-8">
-              <div className="text-xs uppercase tracking-widest text-orange-400 font-semibold mb-4">
+              <div className="text-xs uppercase tracking-widest text-terra font-semibold mb-4">
                 On this page
               </div>
               <ul className="space-y-2 border-l border-canvas-border">
@@ -108,7 +108,7 @@ export default async function MethodologyPage({ params }: PageProps) {
                   <li key={s.slug}>
                     <a
                       href={`#${s.slug}`}
-                      className="block -ml-px pl-4 py-1 text-sm text-text-secondary border-l border-transparent hover:border-orange-400 hover:text-orange-300 transition-colors leading-snug"
+                      className="block -ml-px pl-4 py-1 text-sm text-text-secondary border-l border-transparent hover:border-terra hover:text-terra-light transition-colors leading-snug"
                     >
                       {s.title}
                     </a>
@@ -121,7 +121,7 @@ export default async function MethodologyPage({ params }: PageProps) {
           {/* Content */}
           <article
             className="
-              prose prose-invert prose-orange
+              prose prose-invert prose-headings:font-display
               max-w-[68ch]
               [&_table]:max-w-none [&_pre]:max-w-none
               prose-headings:scroll-mt-24
@@ -135,7 +135,7 @@ export default async function MethodologyPage({ params }: PageProps) {
               prose-li:text-lg prose-li:text-text-secondary prose-li:leading-[1.8] prose-li:my-4
               prose-ul:my-8 prose-ol:my-8 prose-ul:pl-2 prose-ol:pl-2
               prose-strong:text-white prose-strong:font-semibold
-              prose-a:text-orange-300 prose-a:no-underline prose-a:underline-offset-4 hover:prose-a:text-orange-200 hover:prose-a:underline
+              prose-a:text-terra-light prose-a:no-underline prose-a:underline-offset-4 hover:prose-a:text-terra-light hover:prose-a:underline
               prose-hr:border-canvas-border prose-hr:my-24
               prose-table:text-base prose-table:my-12
               prose-table:border prose-table:border-canvas-border prose-table:rounded-lg prose-table:overflow-hidden
@@ -143,12 +143,12 @@ export default async function MethodologyPage({ params }: PageProps) {
               prose-th:px-6 prose-th:py-5 prose-th:text-left prose-th:leading-snug
               prose-td:px-6 prose-td:py-5 prose-td:border-t prose-td:border-canvas-border
               prose-td:text-text-secondary prose-td:leading-relaxed
-              prose-blockquote:not-italic prose-blockquote:border-l-4 prose-blockquote:border-orange-500
-              prose-blockquote:bg-orange-500/5 prose-blockquote:rounded-r-lg
+              prose-blockquote:not-italic prose-blockquote:border-l-4 prose-blockquote:border-terra
+              prose-blockquote:bg-terra/5 prose-blockquote:rounded-r-lg
               prose-blockquote:px-8 prose-blockquote:py-6 prose-blockquote:my-10
               prose-blockquote:text-text-primary prose-blockquote:text-lg
               prose-blockquote:font-normal prose-blockquote:leading-[1.85]
-              prose-code:bg-canvas-raised prose-code:text-orange-200 prose-code:px-1.5 prose-code:py-0.5
+              prose-code:bg-canvas-raised prose-code:text-terra-light prose-code:px-1.5 prose-code:py-0.5
               prose-code:rounded prose-code:text-sm prose-code:font-mono
               prose-code:before:content-none prose-code:after:content-none
             "
@@ -183,7 +183,7 @@ export default async function MethodologyPage({ params }: PageProps) {
         <div className="mt-16 pt-8 border-t border-canvas-border flex flex-wrap gap-4 justify-between items-center">
           <Link
             href={calculatorUrl}
-            className="text-sm text-text-muted hover:text-orange-300 transition-colors inline-flex items-center gap-1"
+            className="text-sm text-text-muted hover:text-terra-light transition-colors inline-flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -194,7 +194,7 @@ export default async function MethodologyPage({ params }: PageProps) {
             href="https://github.com/jamelna-apps/jamelna-site/issues/new?template=true-cost-challenge.md"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-orange-400 hover:text-orange-300 transition-colors inline-flex items-center gap-1"
+            className="text-sm text-terra hover:text-terra-light transition-colors inline-flex items-center gap-1"
           >
             Challenge a number
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

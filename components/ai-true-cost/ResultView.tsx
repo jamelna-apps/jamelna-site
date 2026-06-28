@@ -48,7 +48,7 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
           <div className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-2">
             Monthly true cost
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-white">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-white">
             {product.name}
           </h2>
         </div>
@@ -93,9 +93,9 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
             })}
 
             {/* True cost row */}
-            <tr className="border-t-2 border-orange-500/40">
+            <tr className="border-t-2 border-terra/40">
               <td className="pt-6 font-bold text-white text-lg">True cost</td>
-              <td className="pt-6 text-right font-bold text-orange-300 text-2xl font-mono">
+              <td className="pt-6 text-right font-bold text-terra-light text-2xl font-mono">
                 {usd(breakdown.true_cost_usd)}
               </td>
             </tr>
@@ -105,17 +105,17 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
 
       {/* Subsidy callout */}
       {breakdown.subsidy_usd > 0 && (
-        <div className="bg-orange-500/10 border border-orange-500/30 rounded-2xl p-7 md:p-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-orange-300 mb-3">
+        <div className="bg-terra/10 border border-terra/30 rounded-2xl p-7 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-widest text-terra-light mb-3">
             You are being subsidized
           </p>
           <p className="text-text-primary text-lg leading-relaxed">
             Someone else covers{' '}
-            <span className="text-orange-300 font-mono font-bold">
+            <span className="text-terra-light font-mono font-bold">
               {usd(breakdown.subsidy_usd)}/month
             </span>{' '}
             of your costs — a{' '}
-            <span className="text-orange-300 font-mono font-bold">
+            <span className="text-terra-light font-mono font-bold">
               {breakdown.subsidy_multiple.toFixed(1)}×
             </span>{' '}
             subsidy on what you pay.
@@ -128,8 +128,8 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
 
       {/* Double-subsidy stack */}
       {stacked && wrapped && wrappedBreakdown && (
-        <div className="bg-canvas-raised border border-orange-500/30 rounded-2xl p-7 md:p-8">
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-orange-400 mb-4">
+        <div className="bg-canvas-raised border border-terra/30 rounded-2xl p-7 md:p-8">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-terra mb-4">
             Double-subsidy stack
           </h3>
           <p className="text-text-secondary text-base leading-relaxed mb-6">
@@ -146,10 +146,10 @@ export function ResultView({ product, wrapped, sources }: ResultViewProps) {
               <span className="text-text-muted">{wrapped.name} subsidy</span>
               <span className="text-text-secondary">{usd(wrappedBreakdown.subsidy_usd)}/mo</span>
             </div>
-            <div className="h-px bg-orange-500/30 my-2" />
+            <div className="h-px bg-terra/30 my-2" />
             <div className="flex justify-between py-2 text-lg font-bold">
-              <span className="text-orange-300">Combined subsidy</span>
-              <span className="text-orange-300">{usd(stacked.subsidy_usd)}/mo</span>
+              <span className="text-terra-light">Combined subsidy</span>
+              <span className="text-terra-light">{usd(stacked.subsidy_usd)}/mo</span>
             </div>
           </div>
         </div>

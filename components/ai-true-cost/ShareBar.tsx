@@ -72,9 +72,9 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
           inline-flex items-center gap-2
           text-xs font-medium font-mono
           px-4 py-2 rounded-lg border
-          transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400
+          transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-terra
           bg-canvas-raised border-canvas-border text-text-secondary
-          hover:border-orange-500/40 hover:text-white
+          hover:border-terra/40 hover:text-white
         "
       >
         {copied ? (
@@ -104,9 +104,9 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
           inline-flex items-center gap-2
           text-xs font-medium font-mono
           px-4 py-2 rounded-lg border
-          transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400
+          transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-terra
           bg-canvas-raised border-canvas-border text-text-secondary
-          hover:border-orange-500/40 hover:text-white
+          hover:border-terra/40 hover:text-white
         "
       >
         <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -125,9 +125,9 @@ export function ShareBar({ product, breakdown }: ShareBarProps) {
           inline-flex items-center gap-2
           text-xs font-medium font-mono
           px-4 py-2 rounded-lg border
-          transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400
+          transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-terra
           bg-canvas-raised border-canvas-border text-text-secondary
-          hover:border-orange-500/40 hover:text-white
+          hover:border-terra/40 hover:text-white
         "
       >
         <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">

@@ -125,7 +125,7 @@ function ProductCard({ product, breakdown }: { product: Product; breakdown: Brea
             <div style={{ fontSize: 13, color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
               True cost
             </div>
-            <div style={{ fontSize: 40, fontWeight: 700, color: '#fb923c', fontVariantNumeric: 'tabular-nums' }}>
+            <div style={{ fontSize: 40, fontWeight: 700, color: '#D4896A', fontVariantNumeric: 'tabular-nums' }}>
               ${breakdown.true_cost_usd.toFixed(2)}
               <span style={{ fontSize: 18, color: '#9ca3af', marginLeft: 6 }}>/mo</span>
             </div>
@@ -140,7 +140,7 @@ function ProductCard({ product, breakdown }: { product: Product; breakdown: Brea
                 padding: '8px 16px',
                 fontSize: 24,
                 fontWeight: 700,
-                color: '#fb923c',
+                color: '#D4896A',
               }}
             >
               {subsidyMultiple}× subsidized

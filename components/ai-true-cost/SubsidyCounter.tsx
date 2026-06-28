@@ -39,23 +39,23 @@ export function SubsidyCounter({ annualSubsidyUsd }: SubsidyCounterProps) {
   });
 
   return (
-    <div className="bg-canvas-raised border border-orange-500/30 rounded-2xl px-8 py-7 md:px-10 md:py-8 max-w-2xl">
+    <div className="bg-canvas-raised border border-terra/30 rounded-2xl px-8 py-7 md:px-10 md:py-8 max-w-2xl">
       <p className="text-sm font-semibold uppercase tracking-widest text-text-muted mb-4">
         {t('counterLabel')}
       </p>
       <p
         aria-live="polite"
         aria-atomic="true"
-        className="font-mono text-4xl md:text-6xl font-bold text-orange-300 tabular-nums tracking-tight leading-none mb-4"
+        className="font-mono text-4xl md:text-6xl font-bold text-terra-light tabular-nums tracking-tight leading-none mb-4"
       >
         ${formatted}
-        <span className="text-orange-500/70 text-2xl md:text-3xl ml-2">▲</span>
+        <span className="text-terra/70 text-2xl md:text-3xl ml-2">▲</span>
       </p>
       <p className="text-sm text-text-muted leading-relaxed">
         Based on industry annual losses.{' '}
         <Link
           href={`/${locale}/ai-true-cost/methodology`}
-          className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
+          className="text-terra hover:text-terra-light underline underline-offset-2 transition-colors"
         >
           {t('counterMethodologyLink')}
         </Link>

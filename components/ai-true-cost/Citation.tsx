@@ -46,10 +46,10 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
           text-[10px] font-mono font-medium leading-none
           px-1.5 py-0.5 rounded
           border
-          transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400
+          transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-terra
           ${open
-            ? 'bg-orange-500/20 border-orange-500/50 text-orange-300'
-            : 'bg-canvas-deep border-canvas-border text-text-muted hover:border-orange-500/40 hover:text-orange-300'
+            ? 'bg-terra/20 border-terra/50 text-terra-light'
+            : 'bg-canvas-deep border-canvas-border text-text-muted hover:border-terra/40 hover:text-terra-light'
           }
         `}
       >
@@ -64,7 +64,7 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
           className="
             absolute z-50 left-0 top-full mt-2
             w-80 max-w-[92vw]
-            bg-[#0a0908] border-2 border-orange-500/50 rounded-lg
+            bg-[#0a0908] border-2 border-terra/50 rounded-lg
             p-5 shadow-2xl shadow-black/90
             text-left
           "
@@ -74,7 +74,7 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
             href={source.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-base font-semibold text-orange-300 hover:text-orange-200 leading-snug mb-2 underline underline-offset-2"
+            className="block text-base font-semibold text-terra-light hover:text-terra-light leading-snug mb-2 underline underline-offset-2"
           >
             {source.title}
           </a>
@@ -89,7 +89,7 @@ export function Citation({ source, label = 'cite' }: CitationProps) {
 
           {/* Pull quote */}
           {source.pull_quote && (
-            <blockquote className="border-l-2 border-orange-500/60 pl-4 mt-3">
+            <blockquote className="border-l-2 border-terra/60 pl-4 mt-3">
               <p className="text-sm italic text-white leading-relaxed">
                 &ldquo;{source.pull_quote}&rdquo;
               </p>

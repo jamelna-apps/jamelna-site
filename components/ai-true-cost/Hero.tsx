@@ -23,7 +23,7 @@ export async function Hero({ annualSubsidyUsd, tagline }: HeroProps) {
       <div className="max-w-5xl mx-auto">
         <hr className="heading-rule mb-6" />
 
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-[1.05] tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-display font-extrabold text-white mb-8 leading-[1.05] tracking-tight">
           {t('headline')}
         </h1>
 
@@ -35,11 +35,11 @@ export async function Hero({ annualSubsidyUsd, tagline }: HeroProps) {
           {t('taglineMiddle')}{' '}
           <strong className="text-white">{tagline.productName}</strong>.{' '}
           {t('taglineSuffix')}{' '}
-          <strong className="text-orange-300 whitespace-nowrap">
+          <strong className="text-terra-light whitespace-nowrap">
             ${(tagline.trueCost * 12).toLocaleString(undefined, { maximumFractionDigits: 0 })}/year
           </strong>{' '}
           — an extra{' '}
-          <strong className="text-orange-300 whitespace-nowrap">
+          <strong className="text-terra-light whitespace-nowrap">
             ${((tagline.trueCost - tagline.paid) * 12).toLocaleString(undefined, { maximumFractionDigits: 0 })}/year
           </strong>{' '}
           covered by investors and providers.
@@ -49,9 +49,9 @@ export async function Hero({ annualSubsidyUsd, tagline }: HeroProps) {
           href="#calculator"
           className="
             inline-flex items-center gap-2
-            bg-orange-500 hover:bg-orange-400 text-black
+            bg-terra hover:bg-terra-light text-white
             px-8 py-4 rounded-lg font-semibold text-base
-            transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400
+            transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-terra
             mb-16
           "
         >

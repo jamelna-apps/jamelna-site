@@ -19,7 +19,7 @@ export function ScenarioGrid({ scenarios, selectedId, onSelect }: ScenarioGridPr
       {scenarios.groups.map((group) => (
         <div key={group.tier}>
           {/* Group heading */}
-          <h3 className="text-base font-semibold text-white mb-5 pb-2 border-b border-canvas-border">
+          <h3 className="text-base font-display font-semibold text-white mb-5 pb-2 border-b border-canvas-border">
             {group.label}
           </h3>
 
@@ -40,10 +40,10 @@ export function ScenarioGrid({ scenarios, selectedId, onSelect }: ScenarioGridPr
                     className={`
                       text-left px-5 py-4 rounded-xl border text-base font-medium leading-snug
                       transition-all duration-150
-                      focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400
+                      focus:outline-none focus-visible:ring-2 focus-visible:ring-terra
                       ${isActive
-                        ? 'bg-orange-500/15 border-orange-500 text-orange-200 shadow-lg shadow-orange-500/10'
-                        : 'bg-canvas-raised border-canvas-border text-text-secondary hover:border-orange-500/40 hover:bg-canvas-raised/60 hover:text-white'
+                        ? 'bg-terra/15 border-terra text-terra-light shadow-lg shadow-terra/10'
+                        : 'bg-canvas-raised border-canvas-border text-text-secondary hover:border-terra/40 hover:bg-canvas-raised/60 hover:text-white'
                       }
                     `}
                   >

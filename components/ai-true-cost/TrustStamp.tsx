@@ -37,7 +37,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
         {/* Methodology link */}
         <Link
           href={`/${locale}/ai-true-cost/methodology`}
-          className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
+          className="text-terra hover:text-terra-light transition-colors underline underline-offset-2"
         >
           {t('methodology')}
         </Link>
@@ -47,7 +47,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
         {/* Changelog link */}
         <Link
           href={`/${locale}/ai-true-cost/changelog`}
-          className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
+          className="text-terra hover:text-terra-light transition-colors underline underline-offset-2"
         >
           {t('changelog')}
         </Link>
@@ -59,7 +59,7 @@ export function TrustStamp({ lastVerified, locale, onChallenge }: TrustStampProp
           href={CHALLENGE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-orange-400 hover:text-orange-300 transition-colors underline underline-offset-2"
+          className="text-terra hover:text-terra-light transition-colors underline underline-offset-2"
           onClick={() => {
             trackEvent('jamelna', 'challenge_clicked');
             onChallenge?.();

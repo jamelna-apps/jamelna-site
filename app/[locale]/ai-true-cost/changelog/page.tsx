@@ -26,7 +26,7 @@ export default async function ChangelogPage({ params }: PageProps) {
         <nav className="mb-8">
           <Link
             href={calculatorUrl}
-            className="text-sm text-text-muted hover:text-orange-300 transition-colors flex items-center gap-1"
+            className="text-sm text-text-muted hover:text-terra-light transition-colors flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -35,7 +35,7 @@ export default async function ChangelogPage({ params }: PageProps) {
           </Link>
         </nav>
 
-        <article className="prose prose-invert prose-orange max-w-none">
+        <article className="prose prose-invert prose-headings:font-display prose-a:text-terra-light max-w-none">
           <ReactMarkdown>{content}</ReactMarkdown>
         </article>
       </div>

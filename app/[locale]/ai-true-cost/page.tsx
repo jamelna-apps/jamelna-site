@@ -77,10 +77,10 @@ export default async function AiTrueCostPage({ params }: PageProps) {
         <section className="py-20 md:py-28 px-6">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12">
-              <div className="text-xs uppercase tracking-widest text-orange-400 font-semibold mb-3">
+              <div className="text-xs uppercase tracking-widest text-terra font-semibold mb-3">
                 Calculator
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                 Select your AI tool
               </h2>
               <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
