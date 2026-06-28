@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
@@ -8,7 +8,6 @@ import { useLocale, useTranslations } from 'next-intl';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const [isExploreMenuOpen, setIsExploreMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -37,16 +36,8 @@ const Navigation = () => {
     { href: `/${locale}`, label: t('home') },
     { href: `/${locale}/about`, label: t('about') },
     { href: `/${locale}/work`, label: t('work') },
+    { href: `/${locale}/explore`, label: t('explore') },
     { href: `/${locale}/contact`, label: t('contact') },
-  ];
-
-  // Mirrors the footer's Explore column
-  const exploreLinks = [
-    { href: `/${locale}/k12-cs-education`, label: t('k12cs') },
-    { href: `/${locale}/photography`, label: t('photography') },
-    { href: `/${locale}/anchor-and-steer`, label: 'Anchor & STEER' },
-    { href: `/${locale}/computational-collaboration`, label: 'Computational Collaboration' },
-    { href: `/${locale}/ai-true-cost`, label: 'True Cost of AI' },
   ];
 
   const changeLanguage = (newLocale: string) => {
@@ -64,8 +55,6 @@ const Navigation = () => {
     }
     return currentPath?.startsWith(linkPath);
   };
-
-  const exploreActive = exploreLinks.some((link) => isActive(link.href));
 
   // Handle scroll for showing/hiding nav on homepage
   useEffect(() => {
@@ -97,13 +86,12 @@ const Navigation = () => {
       if (event.key === 'Escape') {
         if (isMenuOpen) setIsMenuOpen(false);
         if (isLangMenuOpen) setIsLangMenuOpen(false);
-        if (isExploreMenuOpen) setIsExploreMenuOpen(false);
       }
     };
 
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
-  }, [isMenuOpen, isLangMenuOpen, isExploreMenuOpen]);
+  }, [isMenuOpen, isLangMenuOpen]);
 
   // Close language menu when clicking outside
   useEffect(() => {
@@ -112,14 +100,11 @@ const Navigation = () => {
       if (isLangMenuOpen && !target.closest('#language-menu') && !target.closest('[aria-controls="language-menu"]')) {
         setIsLangMenuOpen(false);
       }
-      if (isExploreMenuOpen && !target.closest('#explore-menu') && !target.closest('[aria-controls="explore-menu"]')) {
-        setIsExploreMenuOpen(false);
-      }
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
-  }, [isLangMenuOpen, isExploreMenuOpen]);
+  }, [isLangMenuOpen]);
 
   // Nav is always shown (transparent on homepage hero, solid after scroll)
   const shouldShowNav = true;
@@ -154,78 +139,23 @@ const Navigation = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               {navLinks.map((link) => (
-                <React.Fragment key={link.href}>
-                  <Link
-                    href={link.href}
-                    tabIndex={0}
-                    className={`
-                      text-sm font-medium transition-all duration-300 relative
-                      ${isActive(link.href)
-                        ? 'text-terra'
-                        : 'text-text-primary hover:text-terra'
-                      }
-                    `}
-                  >
-                    {link.label}
-                    {isActive(link.href) && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-terra rounded-full" />
-                    )}
-                  </Link>
-
-                  {/* Explore dropdown — sits between Work and Contact */}
-                  {link.href === `/${locale}/work` && (
-                    <div className="relative">
-                      <button
-                        onClick={() => setIsExploreMenuOpen(!isExploreMenuOpen)}
-                        aria-expanded={isExploreMenuOpen}
-                        aria-haspopup="true"
-                        aria-controls="explore-menu"
-                        className={`
-                          flex items-center gap-1 text-sm font-medium transition-all duration-300 relative
-                          ${exploreActive ? 'text-terra' : 'text-text-primary hover:text-terra'}
-                        `}
-                      >
-                        {t('explore')}
-                        <svg
-                          className={`w-3.5 h-3.5 transition-transform duration-300 ${isExploreMenuOpen ? 'rotate-180' : ''}`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                        {exploreActive && (
-                          <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-terra rounded-full" />
-                        )}
-                      </button>
-
-                      {isExploreMenuOpen && (
-                        <div
-                          id="explore-menu"
-                          role="menu"
-                          className="absolute left-0 mt-2 w-64 bg-canvas-raised border border-canvas-border rounded-lg shadow-lg py-1 z-50"
-                        >
-                          {exploreLinks.map((exploreLink) => (
-                            <Link
-                              key={exploreLink.href}
-                              href={exploreLink.href}
-                              role="menuitem"
-                              onClick={() => setIsExploreMenuOpen(false)}
-                              className={`block px-4 py-2 text-sm transition-colors ${
-                                isActive(exploreLink.href)
-                                  ? 'bg-terra/10 text-terra'
-                                  : 'text-text-primary hover:bg-canvas-border/50 hover:text-terra'
-                              }`}
-                            >
-                              {exploreLink.label}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  tabIndex={0}
+                  className={`
+                    text-sm font-medium transition-all duration-300 relative
+                    ${isActive(link.href)
+                      ? 'text-terra'
+                      : 'text-text-primary hover:text-terra'
+                    }
+                  `}
+                >
+                  {link.label}
+                  {isActive(link.href) && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-terra rounded-full" />
                   )}
-                </React.Fragment>
+                </Link>
               ))}
 
               {/* Language Switcher */}
@@ -319,44 +249,18 @@ const Navigation = () => {
           {/* Nav links */}
           <nav className="space-y-1">
             {navLinks.map((link) => (
-              <React.Fragment key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block py-3 text-3xl font-display font-bold transition-colors ${
-                    isActive(link.href)
-                      ? 'text-terra'
-                      : 'text-text-heading hover:text-terra'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-
-                {/* Explore links — between Work and Contact */}
-                {link.href === `/${locale}/work` && (
-                  <div className="py-3">
-                    <p className="text-sm font-mono text-text-muted uppercase tracking-wider mb-3">
-                      {t('explore')}
-                    </p>
-                    <div className="space-y-1">
-                      {exploreLinks.map((exploreLink) => (
-                        <Link
-                          key={exploreLink.href}
-                          href={exploreLink.href}
-                          onClick={() => setIsMenuOpen(false)}
-                          className={`block py-1.5 text-xl font-display transition-colors ${
-                            isActive(exploreLink.href)
-                              ? 'text-terra'
-                              : 'text-text-secondary hover:text-terra'
-                          }`}
-                        >
-                          {exploreLink.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </React.Fragment>
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block py-3 text-3xl font-display font-bold transition-colors ${
+                  isActive(link.href)
+                    ? 'text-terra'
+                    : 'text-text-heading hover:text-terra'
+                }`}
+              >
+                {link.label}
+              </Link>
             ))}
           </nav>
 

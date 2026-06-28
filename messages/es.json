@@ -2606,5 +2606,11 @@
       "relatedLabel": "Marco relacionado",
       "relatedText": "Anchor & STEER, un marco de diseño centrado en las personas para la IA en la educación"
     }
+  },
+  "explore": {
+    "kicker": "Explorar",
+    "title": "Lo que estoy construyendo",
+    "intro": "Marcos para la IA en la educación, currículos de informática de código abierto, una calculadora del costo de la IA y un proyecto de fotografía. Cada uno tiene su propia página.",
+    "view": "Ver"
   }
 }
