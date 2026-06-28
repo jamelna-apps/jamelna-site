@@ -137,70 +137,70 @@ const crossLinks = [
 
 const crossLinkColorMap = {
   violet: {
-    border: 'border-violet-500/30',
-    hoverBorder: 'hover:border-violet-500/50',
-    iconBg: 'bg-violet-500/20',
-    iconText: 'text-violet-400',
-    text: 'text-violet-400',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    iconBg: 'bg-terra/20',
+    iconText: 'text-terra-light',
+    text: 'text-terra-light',
   },
   amber: {
-    border: 'border-amber-500/30',
-    hoverBorder: 'hover:border-amber-500/50',
-    iconBg: 'bg-amber-500/20',
-    iconText: 'text-amber-400',
-    text: 'text-amber-400',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    iconBg: 'bg-terra/20',
+    iconText: 'text-terra-light',
+    text: 'text-terra-light',
   },
   cyan: {
-    border: 'border-cyan-500/30',
-    hoverBorder: 'hover:border-cyan-500/50',
-    iconBg: 'bg-cyan-500/20',
-    iconText: 'text-cyan-400',
-    text: 'text-cyan-400',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    iconBg: 'bg-terra/20',
+    iconText: 'text-terra-light',
+    text: 'text-terra-light',
   },
   emerald: {
-    border: 'border-emerald-500/30',
-    hoverBorder: 'hover:border-emerald-500/50',
-    iconBg: 'bg-emerald-500/20',
-    iconText: 'text-emerald-400',
-    text: 'text-emerald-400',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    iconBg: 'bg-terra/20',
+    iconText: 'text-terra-light',
+    text: 'text-terra-light',
   },
 };
 
 const pillarColorMap = {
   emerald: {
-    border: 'border-emerald-500/30',
-    text: 'text-emerald-400',
-    iconBg: 'bg-emerald-500/20',
-    callout: 'border-l-4 border-emerald-500/50 bg-emerald-500/5',
-    divider: 'border-emerald-500/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    iconBg: 'bg-terra/20',
+    callout: 'border-l-4 border-terra/50 bg-terra/5',
+    divider: 'border-terra/20',
   },
   cyan: {
-    border: 'border-cyan-500/30',
-    text: 'text-cyan-400',
-    iconBg: 'bg-cyan-500/20',
-    callout: 'border-l-4 border-cyan-500/50 bg-cyan-500/5',
-    divider: 'border-cyan-500/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    iconBg: 'bg-terra/20',
+    callout: 'border-l-4 border-terra/50 bg-terra/5',
+    divider: 'border-terra/20',
   },
   amber: {
-    border: 'border-amber-500/30',
-    text: 'text-amber-400',
-    iconBg: 'bg-amber-500/20',
-    callout: 'border-l-4 border-amber-500/50 bg-amber-500/5',
-    divider: 'border-amber-500/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    iconBg: 'bg-terra/20',
+    callout: 'border-l-4 border-terra/50 bg-terra/5',
+    divider: 'border-terra/20',
   },
   rose: {
-    border: 'border-rose-500/30',
-    text: 'text-rose-400',
-    iconBg: 'bg-rose-500/20',
-    callout: 'border-l-4 border-rose-500/50 bg-rose-500/5',
-    divider: 'border-rose-500/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    iconBg: 'bg-terra/20',
+    callout: 'border-l-4 border-terra/50 bg-terra/5',
+    divider: 'border-terra/20',
   },
   violet: {
-    border: 'border-violet-500/30',
-    text: 'text-violet-400',
-    iconBg: 'bg-violet-500/20',
-    callout: 'border-l-4 border-violet-500/50 bg-violet-500/5',
-    divider: 'border-violet-500/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    iconBg: 'bg-terra/20',
+    callout: 'border-l-4 border-terra/50 bg-terra/5',
+    divider: 'border-terra/20',
   },
 };
 
@@ -328,7 +328,7 @@ export default function ResiliencePage() {
             {t('resilience.hero.title')}
           </h1>
 
-          <p className="text-lg sm:text-xl text-red-300/90 font-semibold mb-4 max-w-2xl">
+          <p className="text-lg sm:text-xl text-terra-light/90 font-semibold mb-4 max-w-2xl">
             {t('resilience.hero.subtitle')}
           </p>
 
@@ -368,7 +368,7 @@ export default function ResiliencePage() {
         {/* ── Threat Context Selector ────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
+            <h2 className="font-display reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.contexts.sectionTitle')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -381,7 +381,7 @@ export default function ResiliencePage() {
         {/* ── Tier Selector ──────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
+            <h2 className="font-display reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.tiers.sectionTitle')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -394,7 +394,7 @@ export default function ResiliencePage() {
         {/* ── Pillar Overview Grid ───────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
+            <h2 className="font-display reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.pillarsOverview.title')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -432,7 +432,7 @@ export default function ResiliencePage() {
                   <SectionPillarIcon pillar={config.id} />
                 </div>
                 <div>
-                  <h2 className="reveal-slide-left text-2xl font-bold text-text-heading">
+                  <h2 className="font-display reveal-slide-left text-2xl font-bold text-text-heading">
                     {t(`resilience.pillars.${pillarKeyMap[config.id]}.title`)}
                   </h2>
                   <p className="text-text-secondary text-sm mt-0.5">
@@ -482,7 +482,7 @@ export default function ResiliencePage() {
         {/* ── Tool Directory ─────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
+            <h2 className="font-display reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.toolDirectory.title')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -547,7 +547,7 @@ export default function ResiliencePage() {
         {/* ── Cross-links ────────────────────────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="reveal-slide-left text-2xl font-bold text-text-heading mb-2">
+            <h2 className="font-display reveal-slide-left text-2xl font-bold text-text-heading mb-2">
               {t('resilience.crossLinks.title')}
             </h2>
             <p className="text-text-secondary text-base">
@@ -568,7 +568,7 @@ export default function ResiliencePage() {
                     {icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-text-heading text-base mb-1">
+                    <h3 className="font-display font-semibold text-text-heading text-base mb-1">
                       {t(`resilience.crossLinks.${crossLinkKeyMap[slug]}.title`)}
                     </h3>
                     <p className="text-sm text-text-secondary line-clamp-2">

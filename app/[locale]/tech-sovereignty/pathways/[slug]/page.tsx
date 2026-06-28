@@ -15,53 +15,53 @@ import { notFound } from 'next/navigation';
 
 const colorClasses = {
   sky: {
-    bg: 'bg-sky-500/20',
-    border: 'border-sky-500/30',
-    text: 'text-sky-400',
-    progress: 'bg-sky-500',
-    ring: 'ring-sky-500/50',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
+    ring: 'ring-terra/50',
   },
   violet: {
-    bg: 'bg-violet-500/20',
-    border: 'border-violet-500/30',
-    text: 'text-violet-400',
-    progress: 'bg-violet-500',
-    ring: 'ring-violet-500/50',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
+    ring: 'ring-terra/50',
   },
   amber: {
-    bg: 'bg-amber-500/20',
-    border: 'border-amber-500/30',
-    text: 'text-amber-400',
-    progress: 'bg-amber-500',
-    ring: 'ring-amber-500/50',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
+    ring: 'ring-terra/50',
   },
   green: {
-    bg: 'bg-green-500/20',
-    border: 'border-green-500/30',
-    text: 'text-green-400',
-    progress: 'bg-green-500',
-    ring: 'ring-green-500/50',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
+    ring: 'ring-terra/50',
   },
   orange: {
-    bg: 'bg-orange-500/20',
-    border: 'border-orange-500/30',
-    text: 'text-orange-400',
-    progress: 'bg-orange-500',
-    ring: 'ring-orange-500/50',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
+    ring: 'ring-terra/50',
   },
   rose: {
-    bg: 'bg-rose-500/20',
-    border: 'border-rose-500/30',
-    text: 'text-rose-400',
-    progress: 'bg-rose-500',
-    ring: 'ring-rose-500/50',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
+    ring: 'ring-terra/50',
   },
 };
 
 const typeLabels = {
-  'quick-win': { label: 'Quick Win', bg: 'bg-green-500/20', text: 'text-green-400' },
-  lesson: { label: 'Lesson', bg: 'bg-sky-500/20', text: 'text-sky-400' },
-  project: { label: 'Project', bg: 'bg-violet-500/20', text: 'text-violet-400' },
+  'quick-win': { label: 'Quick Win', bg: 'bg-terra/20', text: 'text-terra-light' },
+  lesson: { label: 'Lesson', bg: 'bg-terra/20', text: 'text-terra-light' },
+  project: { label: 'Project', bg: 'bg-terra/20', text: 'text-terra-light' },
 };
 
 interface StepCardProps {
@@ -109,7 +109,7 @@ function StepCard({ step, index, isCompleted, onToggle, color, locale }: StepCar
               </span>
               <span className="text-xs text-text-muted">{step.duration}</span>
             </div>
-            <h3 className={`text-lg font-semibold ${isCompleted ? 'text-text-secondary line-through' : 'text-white'}`}>
+            <h3 className={`font-display text-lg font-semibold ${isCompleted ? 'text-text-secondary line-through' : 'text-white'}`}>
               {step.title}
             </h3>
           </div>
@@ -196,7 +196,7 @@ export default function PathwayPage() {
     <main className="min-h-screen bg-canvas">
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 px-4 overflow-hidden">
-        <div className={`absolute inset-0 bg-gradient-to-br from-${pathway.color}-500/10 via-zinc-900 to-zinc-950`}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-terra/10 via-zinc-900 to-zinc-950"></div>
 
         <div className="max-w-4xl mx-auto relative z-10">
           <Link
@@ -225,7 +225,7 @@ export default function PathwayPage() {
                   {completedSteps.length} of {pathway.steps.length} checkpoints
                 </span>
                 {completedSteps.length === pathway.steps.length && (
-                  <span className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">
+                  <span className="bg-terra/20 text-terra-light text-xs px-2 py-1 rounded-full">
                     Completed!
                   </span>
                 )}
@@ -253,7 +253,7 @@ export default function PathwayPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-text-secondary mb-1">What you&apos;ll achieve</h3>
+                <h3 className="font-display text-sm font-medium text-text-secondary mb-1">What you&apos;ll achieve</h3>
                 <p className="text-lg text-white">{pathway.outcome}</p>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function PathwayPage() {
       <section className="py-12 px-4 bg-canvas">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-white">Your Journey</h2>
+            <h2 className="font-display text-2xl font-bold text-white">Your Journey</h2>
             {nextStepIndex !== -1 && (
               <span className="text-sm text-text-secondary">
                 Next: Step {nextStepIndex + 1}
@@ -299,19 +299,19 @@ export default function PathwayPage() {
       {completedSteps.length === pathway.steps.length && (
         <section className="py-12 px-4 bg-canvas-deep">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 bg-terra/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">Pathway Complete!</h2>
+            <h2 className="font-display text-2xl font-bold text-white mb-2">Pathway Complete!</h2>
             <p className="text-text-secondary mb-8">
               Congratulations! You&apos;ve completed all checkpoints in this pathway.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`/${locale}/tech-sovereignty/pathways`}
-                className="inline-flex items-center justify-center gap-2 bg-violet-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-violet-400 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-terra text-white px-6 py-3 rounded-lg font-semibold hover:bg-terra-light transition-colors"
               >
                 Explore More Pathways
               </Link>

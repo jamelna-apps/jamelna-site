@@ -31,7 +31,7 @@ function ProjectCard({ project }: { project: Project }) {
         <h4 className="font-semibold text-white text-sm">{project.title}</h4>
         <span className={`text-xs px-2 py-1 rounded-full font-medium ${
           isAvailable
-            ? 'bg-violet-500/20 text-violet-300'
+            ? 'bg-terra/20 text-terra-light'
             : 'bg-canvas-deep text-text-muted'
         }`}>
           {isAvailable ? 'Available' : 'Coming Soon'}
@@ -54,7 +54,7 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
       {isAvailable && project.link && (
         <div className="mt-3 pt-3 border-t border-canvas-border">
-          <span className="text-xs text-violet-400 font-medium flex items-center gap-1">
+          <span className="text-xs text-terra-light font-medium flex items-center gap-1">
             View Lesson Plans
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -69,7 +69,7 @@ function ProjectCard({ project }: { project: Project }) {
     return (
       <Link
         href={project.link}
-        className="block bg-canvas-raised border border-canvas-border rounded-lg p-5 hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-500/10 transition-all"
+        className="block bg-canvas-raised border border-canvas-border rounded-lg p-5 hover:border-terra/50 hover:shadow-lg hover:shadow-terra/10 transition-all"
       >
         {cardContent}
       </Link>
@@ -96,7 +96,7 @@ function ToolCard({ tool }: { tool: Tool }) {
       href={tool.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block bg-canvas-raised border border-canvas-border rounded-lg p-4 hover:border-violet-500/50 hover:shadow-sm hover:shadow-violet-500/10 transition-all"
+      className="block bg-canvas-raised border border-canvas-border rounded-lg p-4 hover:border-terra/50 hover:shadow-sm hover:shadow-terra/10 transition-all"
     >
       <h4 className="font-semibold text-text-heading text-base mb-1">{tool.name}</h4>
       <p className="text-text-secondary text-sm">{tool.description}</p>
@@ -126,9 +126,9 @@ function TrackSection({ icon, title, description, projects, color, trackLink, tr
         </div>
         <div className="flex-1">
           <div className="flex items-center gap-3 flex-wrap">
-            <h3 className="text-xl font-bold text-text-heading">{title}</h3>
+            <h3 className="font-display text-xl font-bold text-text-heading">{title}</h3>
             {trackAvailable && (
-              <span className="bg-violet-500/20 text-violet-300 text-xs px-2 py-1 rounded-full font-medium">
+              <span className="bg-terra/20 text-terra-light text-xs px-2 py-1 rounded-full font-medium">
                 Curriculum Available
               </span>
             )}
@@ -137,7 +137,7 @@ function TrackSection({ icon, title, description, projects, color, trackLink, tr
           {trackLink && trackAvailable && (
             <Link
               href={trackLink}
-              className="inline-flex items-center gap-1 text-sm text-violet-400 hover:text-violet-300 font-medium mt-2 transition-colors"
+              className="inline-flex items-center gap-1 text-sm text-terra-light hover:text-terra-light font-medium mt-2 transition-colors"
             >
               View Full Curriculum
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,13 +285,13 @@ export default function TechSovereigntyPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#curriculum"
-              className="bg-violet-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-400 transition-colors"
+              className="bg-terra text-white px-8 py-3 rounded-lg font-semibold hover:bg-terra-light transition-colors"
             >
               {t('hero.ctaPrimary')}
             </a>
             <a
               href="#tools"
-              className="border border-violet-500/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-500/10 transition-colors"
+              className="border border-terra/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-terra/10 transition-colors"
             >
               {t('hero.ctaSecondary')}
             </a>
@@ -302,7 +302,7 @@ export default function TechSovereigntyPage() {
       {/* Why Tech Sovereignty */}
       <section id="why" className="py-20 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
-          <h2 className="reveal-slide-left text-3xl md:text-4xl font-bold text-text-heading mb-6">
+          <h2 className="font-display reveal-slide-left text-3xl md:text-4xl font-bold text-text-heading mb-6">
             {t('why.title')}
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mb-12">
@@ -311,36 +311,36 @@ export default function TechSovereigntyPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Problem */}
-            <div className="reveal-fade bg-canvas-raised border border-orange-500/30 rounded-xl p-6 hover:border-orange-500/60 transition-colors">
-              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="reveal-fade bg-canvas-raised border border-terra/30 rounded-xl p-6 hover:border-terra/60 transition-colors">
+              <div className="w-12 h-12 bg-terra/20 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-text-heading mb-2">{t('why.problem.title')}</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">{t('why.problem.title')}</h3>
               <p className="text-text-secondary text-base">{t('why.problem.description')}</p>
             </div>
 
             {/* Vision */}
-            <div className="reveal-fade bg-canvas-raised border border-sky-500/30 rounded-xl p-6 hover:border-sky-500/60 transition-colors">
-              <div className="w-12 h-12 bg-sky-500/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="reveal-fade bg-canvas-raised border border-terra/30 rounded-xl p-6 hover:border-terra/60 transition-colors">
+              <div className="w-12 h-12 bg-terra/20 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-text-heading mb-2">{t('why.vision.title')}</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">{t('why.vision.title')}</h3>
               <p className="text-text-secondary text-base">{t('why.vision.description')}</p>
             </div>
 
             {/* Benefit */}
-            <div className="reveal-fade bg-canvas-raised border border-violet-500/30 rounded-xl p-6 hover:border-violet-500/50 transition-colors">
-              <div className="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="reveal-fade bg-canvas-raised border border-terra/30 rounded-xl p-6 hover:border-terra/50 transition-colors">
+              <div className="w-12 h-12 bg-terra/20 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-text-heading mb-2">{t('why.benefit.title')}</h3>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-2">{t('why.benefit.title')}</h3>
               <p className="text-text-secondary text-base">{t('why.benefit.description')}</p>
             </div>
           </div>
@@ -356,27 +356,27 @@ export default function TechSovereigntyPage() {
         <div className="max-w-5xl mx-auto">
           <Link
             href={`/${locale}/ai-true-cost`}
-            className="card-alive block bg-canvas-raised border-2 border-orange-500/30 hover:border-orange-500/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-orange-500/10 group"
+            className="card-alive block bg-canvas-raised border-2 border-terra/30 hover:border-terra/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-terra/10 group"
           >
             <div className="flex items-start gap-6">
-              <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/30 transition-colors">
-                <svg className="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 bg-terra/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-terra/30 transition-colors">
+                <svg className="w-7 h-7 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <h3 className="text-xl font-bold text-text-heading group-hover:text-orange-300 transition-colors">
+                  <h3 className="font-display text-xl font-bold text-text-heading group-hover:text-terra-light transition-colors">
                     The True Cost of AI
                   </h3>
-                  <span className="bg-orange-500/20 text-orange-300 text-xs px-2 py-1 rounded-full font-medium">
+                  <span className="bg-terra/20 text-terra-light text-xs px-2 py-1 rounded-full font-medium">
                     New
                   </span>
                 </div>
                 <p className="text-text-secondary text-sm mb-3">
                   ChatGPT charges you $20/month. Without investor subsidies, it would cost over $287/month. See the real numbers behind the AI tools your school uses — interactive calculator with cited sources.
                 </p>
-                <span className="text-sm text-orange-400 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                <span className="text-sm text-terra-light font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                   See the true cost
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -393,22 +393,22 @@ export default function TechSovereigntyPage() {
         <div className="max-w-5xl mx-auto">
           <Link
             href={`/${locale}/tech-sovereignty/resilience`}
-            className="card-alive block bg-canvas-raised border-2 border-red-500/30 hover:border-red-500/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-red-500/10 group"
+            className="card-alive block bg-canvas-raised border-2 border-terra/30 hover:border-terra/50 rounded-xl p-8 transition-all hover:shadow-lg hover:shadow-terra/10 group"
           >
             <div className="flex items-start gap-6">
-              <div className="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/30 transition-colors">
-                <svg className="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 bg-terra/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-terra/30 transition-colors">
+                <svg className="w-7 h-7 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-text-heading mb-2 group-hover:text-red-300 transition-colors">
+                <h3 className="font-display text-xl font-bold text-text-heading mb-2 group-hover:text-terra-light transition-colors">
                   Digital Resilience Toolkit
                 </h3>
                 <p className="text-text-secondary text-sm mb-3">
                   Practical tools and step-by-step guides to protect yourself, your community, and your data. From 5-minute fixes to community-scale infrastructure.
                 </p>
-                <span className="text-sm text-red-400 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                <span className="text-sm text-terra-light font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                   Open Toolkit
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -431,10 +431,10 @@ export default function TechSovereigntyPage() {
       <section id="quick-wins" className="py-16 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <div className="mb-10">
-            <span className="inline-block bg-green-500/20 text-green-300 text-xs px-3 py-1 rounded-full font-medium mb-4">
+            <span className="inline-block bg-terra/20 text-terra-light text-xs px-3 py-1 rounded-full font-medium mb-4">
               30-45 minutes each
             </span>
-            <h2 className="reveal-slide-left text-3xl md:text-4xl font-bold text-text-heading mb-4">
+            <h2 className="font-display reveal-slide-left text-3xl md:text-4xl font-bold text-text-heading mb-4">
               Quick Wins
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl">
@@ -455,32 +455,32 @@ export default function TechSovereigntyPage() {
               };
               const iconMap: Record<string, React.ReactNode> = {
                 networking: (
-                  <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 ),
                 'self-hosted': (
-                  <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                   </svg>
                 ),
                 'ai-llm': (
-                  <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 ),
                 'digital-rights': (
-                  <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 ),
                 'linux-foss': (
-                  <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 ),
                 community: (
-                  <svg className="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 ),
@@ -508,16 +508,16 @@ export default function TechSovereigntyPage() {
         ref={pathwaysRef}
         id="pathways"
         className={`py-20 px-4 bg-canvas-deep transition-all duration-500 ${
-          selectedMode === 'learner' ? 'ring-2 ring-sky-500/30 ring-inset' : ''
+          selectedMode === 'learner' ? 'ring-2 ring-terra/30 ring-inset' : ''
         }`}
       >
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-heading">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading">
               Goal-Based Learning Paths
             </h2>
             {selectedMode === 'learner' && (
-              <span className="bg-sky-500/20 text-sky-300 text-xs px-3 py-1 rounded-full font-medium">
+              <span className="bg-terra/20 text-terra-light text-xs px-3 py-1 rounded-full font-medium">
                 Recommended for you
               </span>
             )}
@@ -542,15 +542,15 @@ export default function TechSovereigntyPage() {
                 locale={locale}
                 icon={
                   pathway.slug === 'secure-network' ? (
-                    <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   ) : pathway.slug === 'own-your-data' ? (
-                    <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                     </svg>
                   ) : (
-                    <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
                     </svg>
                   )
@@ -562,7 +562,7 @@ export default function TechSovereigntyPage() {
           <div className="mt-12 text-center">
             <Link
               href={`/${locale}/tech-sovereignty/pathways`}
-              className="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-terra-light hover:text-terra-light font-medium transition-colors"
             >
               View all pathways
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -578,16 +578,16 @@ export default function TechSovereigntyPage() {
         ref={curriculumRef}
         id="curriculum"
         className={`py-20 px-4 bg-canvas transition-all duration-500 ${
-          selectedMode === 'educator' ? 'ring-2 ring-violet-500/30 ring-inset' : ''
+          selectedMode === 'educator' ? 'ring-2 ring-terra/30 ring-inset' : ''
         }`}
       >
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center mb-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-heading text-center">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading text-center">
               {t('curriculum.title')}
             </h2>
             {selectedMode === 'educator' && (
-              <span className="mt-2 bg-violet-500/20 text-violet-300 text-xs px-3 py-1 rounded-full font-medium">
+              <span className="mt-2 bg-terra/20 text-terra-light text-xs px-3 py-1 rounded-full font-medium">
                 Recommended for you
               </span>
             )}
@@ -599,14 +599,14 @@ export default function TechSovereigntyPage() {
           {/* Track A: Networking */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
             }
             title={t('tracks.networking.title')}
             description={t('tracks.networking.description')}
             projects={networkingProjects}
-            color="bg-sky-500/20"
+            color="bg-terra/20"
             trackLink={`/${locale}/tech-sovereignty/networking`}
             trackAvailable={true}
           />
@@ -614,14 +614,14 @@ export default function TechSovereigntyPage() {
           {/* Track B: Self-Hosted Services */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
               </svg>
             }
             title={t('tracks.selfHosted.title')}
             description={t('tracks.selfHosted.description')}
             projects={selfHostedProjects}
-            color="bg-violet-500/20"
+            color="bg-terra/20"
             trackLink={`/${locale}/tech-sovereignty/self-hosted`}
             trackAvailable={true}
           />
@@ -629,14 +629,14 @@ export default function TechSovereigntyPage() {
           {/* Track C: AI/LLM Independence */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
             }
             title={t('tracks.ai.title')}
             description={t('tracks.ai.description')}
             projects={aiProjects}
-            color="bg-orange-500/20"
+            color="bg-terra/20"
             trackAvailable={true}
             trackLink={`/${locale}/tech-sovereignty/ai-llm`}
           />
@@ -644,14 +644,14 @@ export default function TechSovereigntyPage() {
           {/* Track D: App Development */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             }
             title={t('tracks.appDev.title')}
             description={t('tracks.appDev.description')}
             projects={appDevProjects}
-            color="bg-sky-500/20"
+            color="bg-terra/20"
             trackAvailable={true}
             trackLink={`/${locale}/tech-sovereignty/app-dev`}
           />
@@ -659,14 +659,14 @@ export default function TechSovereigntyPage() {
           {/* Track E: Linux/FOSS Foundations */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             }
             title="Linux & FOSS Foundations"
             description="Discover the power of open source software and Linux. Learn to use, customize, and contribute to the tools that power most of the internet."
             projects={linuxFossProjects}
-            color="bg-green-500/20"
+            color="bg-terra/20"
             trackAvailable={true}
             trackLink={`/${locale}/tech-sovereignty/linux-foss`}
           />
@@ -674,14 +674,14 @@ export default function TechSovereigntyPage() {
           {/* Track F: Digital Rights & Advocacy */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             }
             title="Digital Rights & Advocacy"
             description="Understand your digital rights, recognize threats to online freedom, and learn to advocate effectively for privacy and civil liberties."
             projects={digitalRightsProjects}
-            color="bg-amber-500/20"
+            color="bg-terra/20"
             trackAvailable={true}
             trackLink={`/${locale}/tech-sovereignty/digital-rights`}
           />
@@ -689,14 +689,14 @@ export default function TechSovereigntyPage() {
           {/* Track G: Community Building */}
           <TrackSection
             icon={
-              <svg className="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             }
             title={t('tracks.community.title')}
             description={t('tracks.community.description')}
             projects={communityProjects}
-            color="bg-rose-500/20"
+            color="bg-terra/20"
             trackAvailable={true}
             trackLink={`/${locale}/tech-sovereignty/community`}
           />
@@ -706,7 +706,7 @@ export default function TechSovereigntyPage() {
       {/* Tools Repository */}
       <section id="tools" className="py-20 px-4 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-4 text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading mb-4 text-center">
             {t('tools.title')}
           </h2>
           <p className="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-12">
@@ -716,8 +716,8 @@ export default function TechSovereigntyPage() {
           <div className="space-y-10">
             {/* Networking Tools */}
             <div>
-              <h3 className="text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-sky-400 rounded-full"></span>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-terra-light rounded-full"></span>
                 {t('tools.categories.networking')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -727,8 +727,8 @@ export default function TechSovereigntyPage() {
 
             {/* Self-Hosting Tools */}
             <div>
-              <h3 className="text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-violet-400 rounded-full"></span>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-terra-light rounded-full"></span>
                 {t('tools.categories.selfHosting')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -738,8 +738,8 @@ export default function TechSovereigntyPage() {
 
             {/* LLM Tools */}
             <div>
-              <h3 className="text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-terra-light rounded-full"></span>
                 {t('tools.categories.llm')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -749,8 +749,8 @@ export default function TechSovereigntyPage() {
 
             {/* Development Tools */}
             <div>
-              <h3 className="text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-sky-400 rounded-full"></span>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-terra-light rounded-full"></span>
                 {t('tools.categories.dev')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -760,8 +760,8 @@ export default function TechSovereigntyPage() {
 
             {/* Hardware */}
             <div>
-              <h3 className="text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-sky-400/50 rounded-full"></span>
+              <h3 className="font-display text-lg font-semibold text-text-heading mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-terra-light/50 rounded-full"></span>
                 {t('tools.categories.hardware')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -777,7 +777,7 @@ export default function TechSovereigntyPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-text-heading mb-6">
                 {t('educators.title')}
               </h2>
               <p className="text-text-secondary text-lg mb-6">
@@ -785,19 +785,19 @@ export default function TechSovereigntyPage() {
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-violet-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-text-secondary">{t('educators.benefit1')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-violet-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-text-secondary">{t('educators.benefit2')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-violet-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-terra-light flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-text-secondary">{t('educators.benefit3')}</span>
@@ -805,7 +805,7 @@ export default function TechSovereigntyPage() {
               </ul>
             </div>
             <div className="bg-canvas-raised rounded-xl p-8 border border-canvas-border">
-              <h3 className="text-xl font-semibold text-text-heading mb-4">{t('educators.requirements.title')}</h3>
+              <h3 className="font-display text-xl font-semibold text-text-heading mb-4">{t('educators.requirements.title')}</h3>
               <ul className="space-y-3 text-text-secondary text-sm">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-text-muted rounded-full"></span>

@@ -80,16 +80,16 @@ export function EducatorHub({ locale }: EducatorHubProps) {
     : gradeBands.filter(b => b.id === selectedBand);
 
   const colorClasses: Record<string, { bg: string; border: string; text: string; pill: string }> = {
-    green: { bg: 'bg-green-500/20', border: 'border-green-500/30', text: 'text-green-400', pill: 'bg-green-500/20 text-green-300' },
-    sky: { bg: 'bg-sky-500/20', border: 'border-sky-500/30', text: 'text-sky-400', pill: 'bg-sky-500/20 text-sky-300' },
-    violet: { bg: 'bg-violet-500/20', border: 'border-violet-500/30', text: 'text-violet-400', pill: 'bg-violet-500/20 text-violet-300' },
+    green: { bg: 'bg-terra/20', border: 'border-terra/30', text: 'text-terra-light', pill: 'bg-terra/20 text-terra-light' },
+    sky: { bg: 'bg-terra/20', border: 'border-terra/30', text: 'text-terra-light', pill: 'bg-terra/20 text-terra-light' },
+    violet: { bg: 'bg-terra/20', border: 'border-terra/30', text: 'text-terra-light', pill: 'bg-terra/20 text-terra-light' },
   };
 
   return (
     <div className="w-full">
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-text-heading mb-3">
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-text-heading mb-3">
           Educator Resources by Grade Band
         </h2>
         <p className="text-text-secondary max-w-2xl mx-auto">
@@ -103,7 +103,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
           onClick={() => setSelectedBand('all')}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedBand === 'all'
-              ? 'bg-violet-500 text-white'
+              ? 'bg-terra text-white'
               : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
@@ -115,7 +115,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
             onClick={() => setSelectedBand(band.id)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
               selectedBand === band.id
-                ? `${colorClasses[band.color].bg} ${colorClasses[band.color].text} ring-1 ring-${band.color}-500/50`
+                ? `${colorClasses[band.color].bg} ${colorClasses[band.color].text} ring-1 ring-terra/50`
                 : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
             }`}
           >
@@ -133,7 +133,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
               <div className="flex items-start justify-between mb-4 flex-wrap gap-3">
                 <div>
                   <div className="flex items-center gap-3 mb-1">
-                    <h3 className={`text-xl font-semibold ${colors.text}`}>{band.label}</h3>
+                    <h3 className={`font-display text-xl font-semibold ${colors.text}`}>{band.label}</h3>
                     <span className="text-xs text-text-muted">{band.ageRange}</span>
                   </div>
                   <p className="text-sm text-text-secondary">{band.description}</p>
@@ -152,7 +152,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-medium text-text-heading text-sm group-hover:text-violet-300 transition-colors mb-1">
+                        <h4 className="font-medium text-text-heading text-sm group-hover:text-terra-light transition-colors mb-1">
                           {lesson.title}
                         </h4>
                         <div className="flex items-center gap-3 text-xs text-text-muted">
@@ -163,11 +163,11 @@ export function EducatorHub({ locale }: EducatorHubProps) {
                       </div>
                       <div className="flex items-center gap-2 flex-shrink-0">
                         {lesson.hasAssessment && (
-                          <span className="bg-violet-500/20 text-violet-300 text-xs px-2 py-0.5 rounded">
+                          <span className="bg-terra/20 text-terra-light text-xs px-2 py-0.5 rounded">
                             Assessment
                           </span>
                         )}
-                        <svg className="w-4 h-4 text-text-muted group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-text-muted group-hover:text-terra-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
@@ -183,8 +183,8 @@ export function EducatorHub({ locale }: EducatorHubProps) {
       {/* UDL Info */}
       <div className="mt-8 bg-canvas-deep/50 border border-canvas-border rounded-xl p-6">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-12 h-12 bg-terra/20 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
@@ -207,7 +207,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
       <div className="mt-6 grid md:grid-cols-3 gap-4">
         <button className="bg-canvas-raised border border-canvas-border hover:border-canvas-border/60 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
-            <svg className="w-5 h-5 text-text-secondary group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-text-secondary group-hover:text-terra-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             <span className="font-medium text-text-heading text-sm">Scope & Sequence</span>
@@ -216,7 +216,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
         </button>
         <button className="bg-canvas-raised border border-canvas-border hover:border-canvas-border/60 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
-            <svg className="w-5 h-5 text-text-secondary group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-text-secondary group-hover:text-terra-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
             </svg>
             <span className="font-medium text-text-heading text-sm">Assessment Rubrics</span>
@@ -225,7 +225,7 @@ export function EducatorHub({ locale }: EducatorHubProps) {
         </button>
         <button className="bg-canvas-raised border border-canvas-border hover:border-canvas-border/60 rounded-lg p-4 text-left transition-all group">
           <div className="flex items-center gap-3 mb-2">
-            <svg className="w-5 h-5 text-text-secondary group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-text-secondary group-hover:text-terra-light transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
             <span className="font-medium text-text-heading text-sm">Materials List</span>

@@ -22,46 +22,46 @@ interface QuickWinCardProps {
 
 const colorClasses = {
   sky: {
-    bg: 'bg-sky-500/20',
-    border: 'border-sky-500/30',
-    hoverBorder: 'hover:border-sky-500/50',
-    text: 'text-sky-400',
-    badge: 'bg-sky-500/20 text-sky-300',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
   },
   violet: {
-    bg: 'bg-violet-500/20',
-    border: 'border-violet-500/30',
-    hoverBorder: 'hover:border-violet-500/50',
-    text: 'text-violet-400',
-    badge: 'bg-violet-500/20 text-violet-300',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
   },
   amber: {
-    bg: 'bg-amber-500/20',
-    border: 'border-amber-500/30',
-    hoverBorder: 'hover:border-amber-500/50',
-    text: 'text-amber-400',
-    badge: 'bg-amber-500/20 text-amber-300',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
   },
   green: {
-    bg: 'bg-green-500/20',
-    border: 'border-green-500/30',
-    hoverBorder: 'hover:border-green-500/50',
-    text: 'text-green-400',
-    badge: 'bg-green-500/20 text-green-300',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
   },
   orange: {
-    bg: 'bg-orange-500/20',
-    border: 'border-orange-500/30',
-    hoverBorder: 'hover:border-orange-500/50',
-    text: 'text-orange-400',
-    badge: 'bg-orange-500/20 text-orange-300',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
   },
   rose: {
-    bg: 'bg-rose-500/20',
-    border: 'border-rose-500/30',
-    hoverBorder: 'hover:border-rose-500/50',
-    text: 'text-rose-400',
-    badge: 'bg-rose-500/20 text-rose-300',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
   },
 };
 
@@ -84,7 +84,7 @@ export function QuickWinCard({ quickWin, color, icon }: QuickWinCardProps) {
             </span>
             <span className="text-xs text-text-muted">{quickWin.trackTitle}</span>
           </div>
-          <h3 className="font-semibold text-text-heading text-lg mb-1 group-hover:text-violet-300 transition-colors">
+          <h3 className="font-display font-semibold text-text-heading text-lg mb-1 group-hover:text-terra-light transition-colors">
             {quickWin.title}
           </h3>
           <p className="text-text-secondary text-base mb-3 line-clamp-2">

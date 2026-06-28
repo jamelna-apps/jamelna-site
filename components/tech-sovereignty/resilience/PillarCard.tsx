@@ -12,44 +12,44 @@ interface PillarCardProps {
 
 const colorClasses = {
   emerald: {
-    bg: 'bg-emerald-500/20',
-    border: 'border-emerald-500/30',
-    hoverBorder: 'hover:border-emerald-500/50',
-    text: 'text-emerald-400',
-    badge: 'bg-emerald-500/20 text-emerald-300',
-    callout: 'border-l-2 border-emerald-500/50 pl-3',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
+    callout: 'border-l-2 border-terra/50 pl-3',
   },
   cyan: {
-    bg: 'bg-cyan-500/20',
-    border: 'border-cyan-500/30',
-    hoverBorder: 'hover:border-cyan-500/50',
-    text: 'text-cyan-400',
-    badge: 'bg-cyan-500/20 text-cyan-300',
-    callout: 'border-l-2 border-cyan-500/50 pl-3',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
+    callout: 'border-l-2 border-terra/50 pl-3',
   },
   amber: {
-    bg: 'bg-amber-500/20',
-    border: 'border-amber-500/30',
-    hoverBorder: 'hover:border-amber-500/50',
-    text: 'text-amber-400',
-    badge: 'bg-amber-500/20 text-amber-300',
-    callout: 'border-l-2 border-amber-500/50 pl-3',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
+    callout: 'border-l-2 border-terra/50 pl-3',
   },
   rose: {
-    bg: 'bg-rose-500/20',
-    border: 'border-rose-500/30',
-    hoverBorder: 'hover:border-rose-500/50',
-    text: 'text-rose-400',
-    badge: 'bg-rose-500/20 text-rose-300',
-    callout: 'border-l-2 border-rose-500/50 pl-3',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
+    callout: 'border-l-2 border-terra/50 pl-3',
   },
   violet: {
-    bg: 'bg-violet-500/20',
-    border: 'border-violet-500/30',
-    hoverBorder: 'hover:border-violet-500/50',
-    text: 'text-violet-400',
-    badge: 'bg-violet-500/20 text-violet-300',
-    callout: 'border-l-2 border-violet-500/50 pl-3',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30',
+    hoverBorder: 'hover:border-terra/50',
+    text: 'text-terra-light',
+    badge: 'bg-terra/20 text-terra-light',
+    callout: 'border-l-2 border-terra/50 pl-3',
   },
 };
 
@@ -87,7 +87,7 @@ export function PillarCard({ pillarId, accentColor, actionCount, icon }: PillarC
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h3 className="font-bold text-text-heading text-lg leading-tight">
+            <h3 className="font-display font-bold text-text-heading text-lg leading-tight">
               {t(`resilience.pillars.${pillarKey}.title`)}
             </h3>
           </div>

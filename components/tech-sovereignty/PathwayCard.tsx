@@ -18,40 +18,40 @@ export interface PathwayCardProps {
 
 const colorClasses = {
   sky: {
-    bg: 'bg-sky-500/20',
-    border: 'border-sky-500/30 hover:border-sky-500/60',
-    text: 'text-sky-400',
-    progress: 'bg-sky-500',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30 hover:border-terra/60',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
   },
   violet: {
-    bg: 'bg-violet-500/20',
-    border: 'border-violet-500/30 hover:border-violet-500/60',
-    text: 'text-violet-400',
-    progress: 'bg-violet-500',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30 hover:border-terra/60',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
   },
   amber: {
-    bg: 'bg-amber-500/20',
-    border: 'border-amber-500/30 hover:border-amber-500/60',
-    text: 'text-amber-400',
-    progress: 'bg-amber-500',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30 hover:border-terra/60',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
   },
   green: {
-    bg: 'bg-green-500/20',
-    border: 'border-green-500/30 hover:border-green-500/60',
-    text: 'text-green-400',
-    progress: 'bg-green-500',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30 hover:border-terra/60',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
   },
   orange: {
-    bg: 'bg-orange-500/20',
-    border: 'border-orange-500/30 hover:border-orange-500/60',
-    text: 'text-orange-400',
-    progress: 'bg-orange-500',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30 hover:border-terra/60',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
   },
   rose: {
-    bg: 'bg-rose-500/20',
-    border: 'border-rose-500/30 hover:border-rose-500/60',
-    text: 'text-rose-400',
-    progress: 'bg-rose-500',
+    bg: 'bg-terra/20',
+    border: 'border-terra/30 hover:border-terra/60',
+    text: 'text-terra-light',
+    progress: 'bg-terra',
   },
 };
 
@@ -94,7 +94,7 @@ export function PathwayCard({
           {icon}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-bold text-text-heading mb-1 group-hover:text-text-heading/90">
+          <h3 className="font-display text-lg font-bold text-text-heading mb-1 group-hover:text-text-heading/90">
             {title}
           </h3>
           <p className="text-text-secondary text-base line-clamp-2">{description}</p>

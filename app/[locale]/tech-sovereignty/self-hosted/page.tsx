@@ -7,15 +7,15 @@ import { useSearchParams } from 'next/navigation';
 
 // Core Pedagogical Principle Component
 const CorePrinciple = () => (
-  <div className="bg-canvas-raised border border-violet-500/30 rounded-xl p-6 mb-8">
+  <div className="bg-canvas-raised border border-terra/30 rounded-xl p-6 mb-8">
     <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-12 h-12 bg-violet-500/20 rounded-xl flex items-center justify-center">
-        <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="flex-shrink-0 w-12 h-12 bg-terra/20 rounded-xl flex items-center justify-center">
+        <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-bold text-white mb-2">Core Pedagogical Principle: Ownership Through Understanding</h3>
+        <h3 className="font-display text-lg font-bold text-white mb-2">Core Pedagogical Principle: Ownership Through Understanding</h3>
         <p className="text-text-secondary mb-3">
           Self-hosting isn&apos;t just about running software—it&apos;s about understanding <strong className="text-white">what your data is</strong>,
           <strong className="text-white"> where it lives</strong>, and <strong className="text-white">who has access to it</strong>. Students learn to make informed
@@ -23,15 +23,15 @@ const CorePrinciple = () => (
         </p>
         <div className="grid md:grid-cols-3 gap-4 mt-4">
           <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
-            <h4 className="font-semibold text-violet-300 mb-1">Data Awareness</h4>
+            <h4 className="font-semibold text-terra-light mb-1">Data Awareness</h4>
             <p className="text-sm text-text-muted">Understand what data services collect, where it&apos;s stored, and why that matters for privacy and autonomy.</p>
           </div>
           <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
-            <h4 className="font-semibold text-violet-300 mb-1">Service Architecture</h4>
+            <h4 className="font-semibold text-terra-light mb-1">Service Architecture</h4>
             <p className="text-sm text-text-muted">Learn how web services work: clients, servers, databases, and the flow of information between them.</p>
           </div>
           <div className="bg-canvas-deep rounded-lg p-4 border border-canvas-border">
-            <h4 className="font-semibold text-violet-300 mb-1">Trade-off Analysis</h4>
+            <h4 className="font-semibold text-terra-light mb-1">Trade-off Analysis</h4>
             <p className="text-sm text-text-muted">Evaluate convenience vs. control, understanding when self-hosting makes sense and when it doesn&apos;t.</p>
           </div>
         </div>
@@ -204,8 +204,8 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
 
           {/* Representation */}
           <div className="bg-canvas-raised rounded-lg p-4 border border-canvas-border">
-            <h6 className="text-sm font-semibold text-violet-400 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-violet-500/20 text-violet-400 rounded-full flex items-center justify-center text-xs">2</span>
+            <h6 className="text-sm font-semibold text-terra-light mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 bg-terra/20 text-terra-light rounded-full flex items-center justify-center text-xs">2</span>
               Multiple Means of Representation
               <span className="text-xs font-normal text-text-muted">(The &quot;What&quot; of Learning)</span>
             </h6>
@@ -215,7 +215,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.multipleFormats.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-violet-400">•</span>
+                      <span className="text-terra-light">•</span>
                       {item}
                     </li>
                   ))}
@@ -226,7 +226,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.vocabularySupport.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-violet-400">•</span>
+                      <span className="text-terra-light">•</span>
                       {item}
                     </li>
                   ))}
@@ -237,7 +237,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.backgroundKnowledge.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-violet-400">•</span>
+                      <span className="text-terra-light">•</span>
                       {item}
                     </li>
                   ))}
@@ -315,7 +315,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           </div>
         </div>
         <svg
-          className={`w-5 h-5 text-violet-400 transform transition-transform ${expanded ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-terra-light transform transition-transform ${expanded ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -334,7 +334,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           {/* Step-by-step instructions */}
           <div>
             <h6 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-              <svg className="w-4 h-4 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
               </svg>
               Step-by-Step Instructions
@@ -342,7 +342,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
             <div className="space-y-3">
               {activity.steps.map((step, i) => (
                 <div key={i} className="flex gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-violet-500/20 text-violet-400 rounded-full flex items-center justify-center text-xs font-bold">
+                  <div className="flex-shrink-0 w-6 h-6 bg-terra/20 text-terra-light rounded-full flex items-center justify-center text-xs font-bold">
                     {i + 1}
                   </div>
                   <div className="flex-1">
@@ -385,8 +385,8 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                 <h6 className="text-xs font-semibold text-warm mb-1">Support (Struggling Learners)</h6>
                 <p className="text-xs text-text-muted">{activity.differentiation.support}</p>
               </div>
-              <div className="bg-secret/10 border border-violet-500/30 rounded-lg p-3">
-                <h6 className="text-xs font-semibold text-violet-300 mb-1">Extension (Advanced Learners)</h6>
+              <div className="bg-secret/10 border border-terra/30 rounded-lg p-3">
+                <h6 className="text-xs font-semibold text-terra-light mb-1">Extension (Advanced Learners)</h6>
                 <p className="text-xs text-text-muted">{activity.differentiation.extension}</p>
               </div>
             </div>
@@ -401,7 +401,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: number; projectId: string }) => (
   <div
     id={`${projectId}-lesson-${index + 1}`}
-    className="bg-canvas-raised border border-canvas-border rounded-lg p-6 hover:border-violet-500/30 transition-colors scroll-mt-24"
+    className="bg-canvas-raised border border-canvas-border rounded-lg p-6 hover:border-terra/30 transition-colors scroll-mt-24"
   >
     <div className="flex items-start gap-4">
       <div className="flex-shrink-0 w-10 h-10 bg-secret text-white rounded-full flex items-center justify-center font-bold">
@@ -415,7 +415,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
               lesson.gradeBand === '6-8'
                 ? 'bg-primary/20 text-primary'
                 : lesson.gradeBand === '9-12'
-                  ? 'bg-violet-500/20 text-violet-300'
+                  ? 'bg-terra/20 text-terra-light'
                   : 'bg-warm/20 text-warm'
             }`}>
               {lesson.gradeBand === '6-8' ? 'Grades 6-8' : lesson.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
@@ -427,8 +427,8 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
         <div className="space-y-4 mt-4">
           {/* Deep Understanding - Highlighted */}
           {lesson.conceptualUnderstanding && lesson.conceptualUnderstanding.length > 0 && (
-            <div className="bg-secret/10 border border-violet-500/30 rounded-lg p-4">
-              <h5 className="text-sm font-semibold text-violet-300 mb-2 flex items-center gap-2">
+            <div className="bg-secret/10 border border-terra/30 rounded-lg p-4">
+              <h5 className="text-sm font-semibold text-terra-light mb-2 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
@@ -438,7 +438,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
               <ul className="text-sm text-text-secondary space-y-1">
                 {lesson.conceptualUnderstanding.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-violet-400 mt-1">&#9733;</span>
+                    <span className="text-terra-light mt-1">&#9733;</span>
                     {item}
                   </li>
                 ))}
@@ -465,7 +465,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           {lesson.detailedActivities && lesson.detailedActivities.length > 0 ? (
             <div>
               <h5 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
-                <svg className="w-4 h-4 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
                 Detailed Activities
@@ -482,7 +482,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
               <ul className="text-sm text-text-secondary space-y-1">
                 {lesson.activities.map((activity, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-violet-400">&#8226;</span>
+                    <span className="text-terra-light">&#8226;</span>
                     {activity}
                   </li>
                 ))}
@@ -511,7 +511,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
   const difficultyColors: Record<string, string> = {
     'Beginner': 'bg-primary/20 text-primary',
     'Intermediate': 'bg-warm/20 text-warm',
-    'Advanced': 'bg-red-500/20 text-red-400',
+    'Advanced': 'bg-terra/20 text-terra-light',
   };
 
   return (
@@ -524,7 +524,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 flex-wrap">
-              <h3 className="text-xl font-bold text-white">{project.title}</h3>
+              <h3 className="font-display text-xl font-bold text-white">{project.title}</h3>
               <span className={`text-xs px-2 py-1 rounded-full ${difficultyColors[project.difficulty] || 'bg-canvas-deep text-text-muted'}`}>
                 {project.difficulty}
               </span>
@@ -532,7 +532,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
                 project.gradeBand === '6-8'
                   ? 'bg-primary/20 text-primary'
                   : project.gradeBand === '9-12'
-                    ? 'bg-violet-500/20 text-violet-300'
+                    ? 'bg-terra/20 text-terra-light'
                     : 'bg-warm/20 text-warm'
               }`}>
                 {project.gradeBand === '6-8' ? 'Grades 6-8' : project.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
@@ -659,7 +659,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <ul className="space-y-2">
               {project.extensions.map((ext, i) => (
                 <li key={i} className="flex items-start gap-2 text-text-secondary">
-                  <span className="text-violet-400">&#9733;</span>
+                  <span className="text-terra-light">&#9733;</span>
                   {ext}
                 </li>
               ))}
@@ -672,7 +672,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <ul className="space-y-2">
               {project.realWorldConnections.map((connection, i) => (
                 <li key={i} className="flex items-start gap-2 text-text-secondary">
-                  <span className="text-violet-400">&#8594;</span>
+                  <span className="text-terra-light">&#8594;</span>
                   {connection}
                 </li>
               ))}
@@ -2378,7 +2378,7 @@ export default function SelfHostedPage() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center text-sm text-text-muted hover:text-violet-400 transition-colors"
+            className="inline-flex items-center text-sm text-text-muted hover:text-terra-light transition-colors"
           >
             <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -2389,7 +2389,7 @@ export default function SelfHostedPage() {
       </div>
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-violet-600 to-violet-400 text-white py-16">
+      <div className="bg-gradient-to-br from-terra-dark to-terra-light text-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
@@ -2397,9 +2397,9 @@ export default function SelfHostedPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
               </svg>
             </div>
-            <span className="text-violet-300/80 text-sm font-medium">Track B</span>
+            <span className="text-terra-light/80 text-sm font-medium">Track B</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Self-Hosted Services</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-4">Self-Hosted Services</h1>
           <p className="text-xl text-white/90 max-w-3xl">
             Take control of your digital life by running your own cloud storage, communication tools,
             and web applications. Learn the skills to break free from big tech dependencies.
@@ -2435,7 +2435,7 @@ export default function SelfHostedPage() {
         <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between">
           <Link
             href={`/${locale}/tech-sovereignty/networking`}
-            className="text-text-muted hover:text-violet-400 transition-colors flex items-center gap-1"
+            className="text-text-muted hover:text-terra-light transition-colors flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -2444,7 +2444,7 @@ export default function SelfHostedPage() {
           </Link>
           <Link
             href={`/${locale}/tech-sovereignty/ai-llm`}
-            className="text-text-muted hover:text-violet-400 transition-colors flex items-center gap-1"
+            className="text-text-muted hover:text-terra-light transition-colors flex items-center gap-1"
           >
             Next: AI/LLM
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

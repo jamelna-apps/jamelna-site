@@ -9,31 +9,31 @@ import { PathwayCrossLinks } from '@/components/tech-sovereignty/PathwayCrossLin
 
 // Core Pedagogical Principle Component
 const CorePrinciple = () => (
-  <div className="bg-canvas-raised border border-violet-500/30 rounded-xl p-6 mb-8">
+  <div className="bg-canvas-raised border border-terra/30 rounded-xl p-6 mb-8">
     <div className="flex items-start gap-4">
-      <div className="flex-shrink-0 w-12 h-12 bg-violet-500/30 rounded-xl flex items-center justify-center">
-        <svg className="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="flex-shrink-0 w-12 h-12 bg-terra/30 rounded-xl flex items-center justify-center">
+        <svg className="w-6 h-6 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-bold text-white mb-2">Core Pedagogical Principle: Understanding Over Memorization</h3>
+        <h3 className="font-display text-lg font-bold text-white mb-2">Core Pedagogical Principle: Understanding Over Memorization</h3>
         <p className="text-text-secondary mb-3">
           Every lesson in this curriculum prioritizes <strong>deep conceptual understanding</strong> over surface-level skills.
           Students should never just &quot;make it work&quot;—they must understand <em>why</em> it works, <em>what</em> is happening
           at each step, and <em>how</em> the hardware and software interact.
         </p>
         <div className="grid md:grid-cols-3 gap-4 mt-4">
-          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
-            <h4 className="font-semibold text-violet-300 mb-1">Ask &quot;Why?&quot;</h4>
+          <div className="bg-canvas-raised rounded-lg p-4 border border-terra/20">
+            <h4 className="font-semibold text-terra-light mb-1">Ask &quot;Why?&quot;</h4>
             <p className="text-sm text-text-muted">Every configuration choice should be explainable. If a student can&apos;t explain why a setting exists, they haven&apos;t learned it.</p>
           </div>
-          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
-            <h4 className="font-semibold text-violet-300 mb-1">Trace the Path</h4>
+          <div className="bg-canvas-raised rounded-lg p-4 border border-terra/20">
+            <h4 className="font-semibold text-terra-light mb-1">Trace the Path</h4>
             <p className="text-sm text-text-muted">Students should be able to follow data from source to destination, understanding what happens at each step and in each device.</p>
           </div>
-          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
-            <h4 className="font-semibold text-violet-300 mb-1">Predict & Verify</h4>
+          <div className="bg-canvas-raised rounded-lg p-4 border border-terra/20">
+            <h4 className="font-semibold text-terra-light mb-1">Predict & Verify</h4>
             <p className="text-sm text-text-muted">Before making changes, students predict what will happen. Understanding means being able to predict outcomes.</p>
           </div>
         </div>
@@ -138,19 +138,19 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <div className="bg-canvas-deep border border-violet-500/30 rounded-lg overflow-hidden">
+    <div className="bg-canvas-deep border border-terra/30 rounded-lg overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
         className="w-full p-4 flex items-center justify-between text-left hover:bg-canvas-raised transition-colors"
       >
         <div className="flex items-center gap-2">
-          <svg className="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
-          <span className="font-semibold text-violet-300">Universal Design for Learning (UDL) Supports</span>
+          <span className="font-semibold text-terra-light">Universal Design for Learning (UDL) Supports</span>
         </div>
         <svg
-          className={`w-5 h-5 text-violet-400 transform transition-transform ${expanded ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-terra-light transform transition-transform ${expanded ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -162,11 +162,11 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
       {expanded && (
         <div className="px-4 pb-4 space-y-4">
           {/* Engagement */}
-          <div className="bg-canvas-raised rounded-lg p-4 border border-sky-500/20">
-            <h6 className="text-sm font-semibold text-violet-300 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-violet-500/20 rounded-full flex items-center justify-center text-xs">1</span>
+          <div className="bg-canvas-raised rounded-lg p-4 border border-terra/20">
+            <h6 className="text-sm font-semibold text-terra-light mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 bg-terra/20 rounded-full flex items-center justify-center text-xs">1</span>
               Multiple Means of Engagement
-              <span className="text-xs font-normal text-violet-400">(The &quot;Why&quot; of Learning)</span>
+              <span className="text-xs font-normal text-terra-light">(The &quot;Why&quot; of Learning)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
@@ -174,7 +174,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.choiceAndAutonomy.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-violet-400/60">•</span>
+                      <span className="text-terra-light/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -185,7 +185,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.relevanceAndAuthenticity.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-violet-400/60">•</span>
+                      <span className="text-terra-light/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -196,7 +196,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.engagement.selfRegulation.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-violet-400/60">•</span>
+                      <span className="text-terra-light/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -207,10 +207,10 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
 
           {/* Representation */}
           <div className="bg-canvas-raised rounded-lg p-4 border border-secondary/20">
-            <h6 className="text-sm font-semibold text-sky-400 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-sky-500/20 rounded-full flex items-center justify-center text-xs">2</span>
+            <h6 className="text-sm font-semibold text-terra-light mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 bg-terra/20 rounded-full flex items-center justify-center text-xs">2</span>
               Multiple Means of Representation
-              <span className="text-xs font-normal text-sky-400">(The &quot;What&quot; of Learning)</span>
+              <span className="text-xs font-normal text-terra-light">(The &quot;What&quot; of Learning)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
@@ -218,7 +218,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.multipleFormats.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-sky-400/60">•</span>
+                      <span className="text-terra-light/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -229,7 +229,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.vocabularySupport.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-sky-400/60">•</span>
+                      <span className="text-terra-light/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -240,7 +240,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.representation.backgroundKnowledge.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-sky-400/60">•</span>
+                      <span className="text-terra-light/60">•</span>
                       {item}
                     </li>
                   ))}
@@ -250,11 +250,11 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
           </div>
 
           {/* Action & Expression */}
-          <div className="bg-canvas-raised rounded-lg p-4 border border-violet-500/20">
-            <h6 className="text-sm font-semibold text-purple-300 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center text-xs">3</span>
+          <div className="bg-canvas-raised rounded-lg p-4 border border-terra/20">
+            <h6 className="text-sm font-semibold text-terra-light mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 bg-terra/20 rounded-full flex items-center justify-center text-xs">3</span>
               Multiple Means of Action & Expression
-              <span className="text-xs font-normal text-purple-300">(The &quot;How&quot; of Learning)</span>
+              <span className="text-xs font-normal text-terra-light">(The &quot;How&quot; of Learning)</span>
             </h6>
             <div className="grid md:grid-cols-3 gap-3 text-xs">
               <div>
@@ -262,7 +262,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.physicalOptions.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-purple-300">•</span>
+                      <span className="text-terra-light">•</span>
                       {item}
                     </li>
                   ))}
@@ -273,7 +273,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.expressionOptions.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-purple-300">•</span>
+                      <span className="text-terra-light">•</span>
                       {item}
                     </li>
                   ))}
@@ -284,7 +284,7 @@ const UDLSection = ({ udl }: { udl: UDLFramework }) => {
                 <ul className="text-text-muted space-y-0.5">
                   {udl.actionExpression.executiveFunctionSupport.map((item, i) => (
                     <li key={i} className="flex items-start gap-1">
-                      <span className="text-purple-300">•</span>
+                      <span className="text-terra-light">•</span>
                       {item}
                     </li>
                   ))}
@@ -309,7 +309,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
         className="w-full p-4 bg-canvas-deep flex items-center justify-between text-left hover:bg-canvas-raised transition-colors"
       >
         <div className="flex items-center gap-3">
-          <span className="flex-shrink-0 w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+          <span className="flex-shrink-0 w-8 h-8 bg-terra text-white rounded-full flex items-center justify-center text-sm font-bold">
             {index + 1}
           </span>
           <div>
@@ -318,7 +318,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           </div>
         </div>
         <svg
-          className={`w-5 h-5 text-sky-400 transform transition-transform ${expanded ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 text-terra-light transform transition-transform ${expanded ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -336,8 +336,8 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 
           {/* Video Resources (if available) */}
           {activity.videoResources && activity.videoResources.length > 0 && (
-            <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
-              <h6 className="text-sm font-semibold text-red-300 mb-2 flex items-center gap-2">
+            <div className="bg-terra/10 border border-terra/30 rounded-lg p-3">
+              <h6 className="text-sm font-semibold text-terra-light mb-2 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -351,14 +351,14 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                     href={video.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block bg-canvas-raised rounded p-2 hover:bg-orange-500/20 transition-colors border border-orange-500/30"
+                    className="block bg-canvas-raised rounded p-2 hover:bg-terra/20 transition-colors border border-terra/30"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div>
-                        <p className="text-sm font-medium text-red-300">{video.title}</p>
-                        <p className="text-xs text-red-300">{video.description}</p>
+                        <p className="text-sm font-medium text-terra-light">{video.title}</p>
+                        <p className="text-xs text-terra-light">{video.description}</p>
                       </div>
-                      <span className="flex-shrink-0 text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded">
+                      <span className="flex-shrink-0 text-xs bg-terra/20 text-terra-light px-2 py-0.5 rounded">
                         {video.duration}
                       </span>
                     </div>
@@ -371,7 +371,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
           {/* Step-by-step instructions */}
           <div>
             <h6 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-              <svg className="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
               </svg>
               Step-by-Step Instructions
@@ -379,7 +379,7 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
             <div className="space-y-3">
               {activity.steps.map((step, i) => (
                 <div key={i} className="flex gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-sky-500/20 text-sky-400 rounded-full flex items-center justify-center text-xs font-bold">
+                  <div className="flex-shrink-0 w-6 h-6 bg-terra/20 text-terra-light rounded-full flex items-center justify-center text-xs font-bold">
                     {i + 1}
                   </div>
                   <div className="flex-1">
@@ -390,8 +390,8 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
                       </span>
                     )}
                     {step.teacherNotes && (
-                      <div className="mt-2 bg-amber-500/10 border-l-2 border-amber-400 pl-3 py-1">
-                        <p className="text-xs text-amber-300">
+                      <div className="mt-2 bg-terra/10 border-l-2 border-terra-light pl-3 py-1">
+                        <p className="text-xs text-terra-light">
                           <span className="font-semibold">Teacher Note:</span> {step.teacherNotes}
                         </p>
                       </div>
@@ -404,27 +404,27 @@ const DetailedActivityCard = ({ activity, index }: { activity: DetailedActivity;
 
           {/* Formative Assessment */}
           {activity.formativeAssessment && (
-            <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
-              <h6 className="text-xs font-semibold text-green-300 mb-1 flex items-center gap-1">
+            <div className="bg-terra/10 border border-terra/30 rounded-lg p-3">
+              <h6 className="text-xs font-semibold text-terra-light mb-1 flex items-center gap-1">
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Check for Understanding
               </h6>
-              <p className="text-xs text-green-300">{activity.formativeAssessment}</p>
+              <p className="text-xs text-terra-light">{activity.formativeAssessment}</p>
             </div>
           )}
 
           {/* Differentiation */}
           {activity.differentiation && (
             <div className="grid md:grid-cols-2 gap-3">
-              <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg p-3">
-                <h6 className="text-xs font-semibold text-orange-300 mb-1">Support (Struggling Learners)</h6>
-                <p className="text-xs text-orange-300">{activity.differentiation.support}</p>
+              <div className="bg-terra/10 border border-terra/30 rounded-lg p-3">
+                <h6 className="text-xs font-semibold text-terra-light mb-1">Support (Struggling Learners)</h6>
+                <p className="text-xs text-terra-light">{activity.differentiation.support}</p>
               </div>
-              <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-3">
-                <h6 className="text-xs font-semibold text-purple-300 mb-1">Extension (Advanced Learners)</h6>
-                <p className="text-xs text-purple-300">{activity.differentiation.extension}</p>
+              <div className="bg-terra/10 border border-terra/30 rounded-lg p-3">
+                <h6 className="text-xs font-semibold text-terra-light mb-1">Extension (Advanced Learners)</h6>
+                <p className="text-xs text-terra-light">{activity.differentiation.extension}</p>
               </div>
             </div>
           )}
@@ -450,10 +450,10 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           <div className="flex items-center gap-2">
             <span className={`text-xs px-2 py-1 rounded font-medium ${
               lesson.gradeBand === '6-8'
-                ? 'bg-violet-500/20 text-violet-300'
+                ? 'bg-terra/20 text-terra-light'
                 : lesson.gradeBand === '9-12'
-                  ? 'bg-sky-500/20 text-sky-400'
-                  : 'bg-purple-500/20 text-purple-300'
+                  ? 'bg-terra/20 text-terra-light'
+                  : 'bg-terra/20 text-terra-light'
             }`}>
               {lesson.gradeBand === '6-8' ? 'Grades 6-8' : lesson.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
             </span>
@@ -464,18 +464,18 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
         <div className="space-y-4 mt-4">
           {/* Deep Understanding - Highlighted */}
           {lesson.conceptualUnderstanding && lesson.conceptualUnderstanding.length > 0 && (
-            <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-lg p-4">
-              <h5 className="text-sm font-semibold text-indigo-300 mb-2 flex items-center gap-2">
+            <div className="bg-terra/10 border border-terra/20 rounded-lg p-4">
+              <h5 className="text-sm font-semibold text-terra-light mb-2 flex items-center gap-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
                 Deep Understanding Goals
               </h5>
-              <p className="text-xs text-indigo-400 mb-2 italic">Students should be able to explain in their own words:</p>
-              <ul className="text-sm text-indigo-300 space-y-1">
+              <p className="text-xs text-terra-light mb-2 italic">Students should be able to explain in their own words:</p>
+              <ul className="text-sm text-terra-light space-y-1">
                 {lesson.conceptualUnderstanding.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-indigo-500 mt-1">&#9733;</span>
+                    <span className="text-terra mt-1">&#9733;</span>
                     {item}
                   </li>
                 ))}
@@ -491,7 +491,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
             <ul className="text-sm text-text-muted space-y-1">
               {lesson.objectives.map((obj, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">&#10003;</span>
+                  <span className="text-terra mt-1">&#10003;</span>
                   {obj}
                 </li>
               ))}
@@ -502,7 +502,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
           {lesson.detailedActivities && lesson.detailedActivities.length > 0 ? (
             <div>
               <h5 className="text-sm font-medium text-text-secondary mb-3 flex items-center gap-2">
-                <svg className="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
                 Detailed Activities
@@ -519,7 +519,7 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
               <ul className="text-sm text-text-muted space-y-1">
                 {lesson.activities.map((activity, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-sky-400">&#8226;</span>
+                    <span className="text-terra-light">&#8226;</span>
                     {activity}
                   </li>
                 ))}
@@ -546,9 +546,9 @@ const LessonCard = ({ lesson, index, projectId }: { lesson: Lesson; index: numbe
 // Project Section Component
 const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; isExpanded: boolean; onToggle: () => void }) => {
   const difficultyColors: Record<string, string> = {
-    'Beginner': 'bg-green-500/20 text-green-300',
-    'Intermediate': 'bg-yellow-500/20 text-yellow-300',
-    'Advanced': 'bg-red-500/20 text-red-300',
+    'Beginner': 'bg-terra/20 text-terra-light',
+    'Intermediate': 'bg-terra/20 text-terra-light',
+    'Advanced': 'bg-terra/20 text-terra-light',
   };
 
   return (
@@ -561,16 +561,16 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 flex-wrap">
-              <h3 className="text-xl font-bold text-white">{project.title}</h3>
+              <h3 className="font-display text-xl font-bold text-white">{project.title}</h3>
               <span className={`text-xs px-2 py-1 rounded-full ${difficultyColors[project.difficulty] || 'bg-canvas-deep text-text-secondary'}`}>
                 {project.difficulty}
               </span>
               <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                 project.gradeBand === '6-8'
-                  ? 'bg-violet-500/20 text-violet-300'
+                  ? 'bg-terra/20 text-terra-light'
                   : project.gradeBand === '9-12'
-                    ? 'bg-sky-500/20 text-sky-400'
-                    : 'bg-purple-500/20 text-purple-300'
+                    ? 'bg-terra/20 text-terra-light'
+                    : 'bg-terra/20 text-terra-light'
               }`}>
                 {project.gradeBand === '6-8' ? 'Grades 6-8' : project.gradeBand === '9-12' ? 'Grades 9-12' : 'Grades 6-12'}
               </span>
@@ -609,7 +609,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <ul className="space-y-2">
               {project.learningObjectives.map((objective, i) => (
                 <li key={i} className="flex items-start gap-3 text-text-muted">
-                  <span className="flex-shrink-0 w-6 h-6 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-sm font-medium">
+                  <span className="flex-shrink-0 w-6 h-6 bg-terra/20 text-terra-light rounded-full flex items-center justify-center text-sm font-medium">
                     {i + 1}
                   </span>
                   {objective}
@@ -638,7 +638,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
               <ul className="space-y-2">
                 {project.materials.required.map((material, i) => (
                   <li key={i} className="flex items-center gap-2 text-text-muted">
-                    <span className="text-green-500">&#10003;</span>
+                    <span className="text-terra">&#10003;</span>
                     {material}
                   </li>
                 ))}
@@ -696,7 +696,7 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
             <ul className="space-y-2">
               {project.extensions.map((ext, i) => (
                 <li key={i} className="flex items-start gap-2 text-text-muted">
-                  <span className="text-purple-500">&#9733;</span>
+                  <span className="text-terra">&#9733;</span>
                   {ext}
                 </li>
               ))}
@@ -704,12 +704,12 @@ const ProjectSection = ({ project, isExpanded, onToggle }: { project: Project; i
           </div>
 
           {/* Real World Connections */}
-          <div className="bg-sky-500/10 rounded-lg p-6">
+          <div className="bg-terra/10 rounded-lg p-6">
             <h4 className="text-lg font-semibold text-white mb-3">Real-World Connections</h4>
             <ul className="space-y-2">
               {project.realWorldConnections.map((connection, i) => (
                 <li key={i} className="flex items-start gap-2 text-text-secondary">
-                  <span className="text-sky-400">&#8594;</span>
+                  <span className="text-terra-light">&#8594;</span>
                   {connection}
                 </li>
               ))}
@@ -7675,7 +7675,7 @@ export default function NetworkingCurriculum() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <Link
             href={`/${locale}/tech-sovereignty`}
-            className="inline-flex items-center text-sm text-text-secondary hover:text-sky-400 transition-colors"
+            className="inline-flex items-center text-sm text-text-secondary hover:text-terra-light transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -7689,15 +7689,15 @@ export default function NetworkingCurriculum() {
       <section className="relative py-12 md:py-16 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-deep to-deep-darker"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 opacity-30 blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(143, 168, 200, 0.4), transparent)' }} />
+          style={{ background: 'radial-gradient(circle, rgba(196, 112, 63, 0.4), transparent)' }} />
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex items-center gap-3 mb-4">
-            <span className="bg-sky-500 text-canvas-deep text-sm px-3 py-1 rounded-full font-medium">Track A</span>
+            <span className="bg-terra text-canvas-deep text-sm px-3 py-1 rounded-full font-medium">Track A</span>
             <span className="bg-canvas-raised text-text-secondary text-sm px-3 py-1 rounded-full border border-canvas-border">4 Projects</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
             {t('tracks.networking.title')}
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mb-8">
@@ -7729,7 +7729,7 @@ export default function NetworkingCurriculum() {
       {/* Track Overview */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-canvas-raised rounded-xl border border-canvas-border p-8 mb-12">
-          <h2 className="text-2xl font-bold text-white mb-4">Track Overview</h2>
+          <h2 className="font-display text-2xl font-bold text-white mb-4">Track Overview</h2>
           <p className="text-text-secondary mb-6 leading-relaxed">
             The Networking Fundamentals track takes students from zero networking knowledge to designing
             community-scale internet infrastructure. Students will build real networks, analyze real
@@ -7738,47 +7738,47 @@ export default function NetworkingCurriculum() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-white mb-2">What You&apos;ll Learn</h3>
+              <h3 className="font-display font-semibold text-white mb-2">What You&apos;ll Learn</h3>
               <ul className="space-y-2 text-text-secondary">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">&#10003;</span>
+                  <span className="text-terra mt-1">&#10003;</span>
                   How data travels across networks and the internet
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">&#10003;</span>
+                  <span className="text-terra mt-1">&#10003;</span>
                   Configure routers, switches, and network services
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">&#10003;</span>
+                  <span className="text-terra mt-1">&#10003;</span>
                   Analyze network traffic using professional tools
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">&#10003;</span>
+                  <span className="text-terra mt-1">&#10003;</span>
                   Build mesh networks that don&apos;t depend on ISPs
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">&#10003;</span>
+                  <span className="text-terra mt-1">&#10003;</span>
                   Plan community-owned internet infrastructure
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-2">Why This Matters</h3>
+              <h3 className="font-display font-semibold text-white mb-2">Why This Matters</h3>
               <ul className="space-y-2 text-text-secondary">
                 <li className="flex items-start gap-2">
-                  <span className="text-sky-400 mt-1">&#8594;</span>
+                  <span className="text-terra-light mt-1">&#8594;</span>
                   Understanding networks is foundational to all tech sovereignty work
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-sky-400 mt-1">&#8594;</span>
+                  <span className="text-terra-light mt-1">&#8594;</span>
                   Communities can build their own internet access
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-sky-400 mt-1">&#8594;</span>
+                  <span className="text-terra-light mt-1">&#8594;</span>
                   Network knowledge helps you make informed privacy decisions
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-sky-400 mt-1">&#8594;</span>
+                  <span className="text-terra-light mt-1">&#8594;</span>
                   These skills are in high demand across many careers
                 </li>
               </ul>
@@ -7790,7 +7790,7 @@ export default function NetworkingCurriculum() {
         <CorePrinciple />
 
         {/* Projects */}
-        <h2 className="text-2xl font-bold text-white mb-6">Projects & Lesson Plans</h2>
+        <h2 className="font-display text-2xl font-bold text-white mb-6">Projects & Lesson Plans</h2>
         <div className="space-y-6">
           {projects.map((project) => (
             <ProjectSection
@@ -7803,8 +7803,8 @@ export default function NetworkingCurriculum() {
         </div>
 
         {/* Educator Notes */}
-        <div className="mt-12 bg-amber-500/10 rounded-xl border border-amber-500/30 p-8">
-          <h2 className="text-2xl font-bold text-white mb-4">Notes for Educators</h2>
+        <div className="mt-12 bg-terra/10 rounded-xl border border-terra/30 p-8">
+          <h2 className="font-display text-2xl font-bold text-white mb-4">Notes for Educators</h2>
           <div className="space-y-4 text-text-secondary">
             <p>
               <strong>Pacing:</strong> The suggested durations are flexible. Some groups may move faster or slower
@@ -7833,8 +7833,8 @@ export default function NetworkingCurriculum() {
         </div>
 
         {/* Community Network Resources */}
-        <div className="mt-12 bg-canvas-raised rounded-xl border border-sky-500/30 p-8">
-          <h2 className="text-2xl font-bold text-white mb-2">Community Network Resources</h2>
+        <div className="mt-12 bg-canvas-raised rounded-xl border border-terra/30 p-8">
+          <h2 className="font-display text-2xl font-bold text-white mb-2">Community Network Resources</h2>
           <p className="text-text-secondary mb-6">
             Learn from real-world community networks and access comprehensive guides for building your own.
             These resources inspired this curriculum and provide practical guidance for implementation.
@@ -7842,14 +7842,14 @@ export default function NetworkingCurriculum() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* NYC Mesh */}
-            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-terra/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-sky-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-terra/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-white">NYC Mesh</h3>
+                <h3 className="font-display font-bold text-white">NYC Mesh</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 New York City&apos;s community-owned network. Volunteer-driven, neutral, private. See how they install, organize, and sustain a real mesh network.
@@ -7859,7 +7859,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.nycmesh.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-sky-400 hover:text-sky-400 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Main Site
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7870,7 +7870,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.nycmesh.net/blog/how/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-sky-400 hover:text-sky-400 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   How It Works
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7881,7 +7881,7 @@ export default function NetworkingCurriculum() {
                   href="https://wiki.nycmesh.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-sky-400 hover:text-sky-400 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Technical Wiki
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7892,14 +7892,14 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Internet Society DIY Toolkit */}
-            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-terra/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-sky-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-terra/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-white">ISOC DIY Toolkit</h3>
+                <h3 className="font-display font-bold text-white">ISOC DIY Toolkit</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 The Internet Society&apos;s 10-step guide for building community networks. Covers community engagement, sustainability, governance, and technical setup.
@@ -7909,7 +7909,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.internetsociety.org/resources/community-network-diy-toolkit/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-sky-400 hover:text-sky-400 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Complete Toolkit
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7920,7 +7920,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.internetsociety.org/blog/2024/02/build-a-community-network/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-sky-400 hover:text-sky-400 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Getting Started Guide
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7931,14 +7931,14 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Community Network Manual */}
-            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-terra/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-terra/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-white">Technical Manuals</h3>
+                <h3 className="font-display font-bold text-white">Technical Manuals</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 In-depth technical guides covering LibreRouter, MAZI Toolkit, and community LTE. Published by UN IGF&apos;s Dynamic Coalition on Community Connectivity.
@@ -7948,7 +7948,7 @@ export default function NetworkingCurriculum() {
                   href="https://direitorio.fgv.br/en/publication/community-network-manual-how-build-internet-yourself"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-purple-300 hover:text-purple-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Community Network Manual
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7959,7 +7959,7 @@ export default function NetworkingCurriculum() {
                   href="https://librerouter.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-purple-300 hover:text-purple-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   LibreRouter Project
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7970,14 +7970,14 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Other Community Networks */}
-            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-terra/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-terra/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-white">Global Networks</h3>
+                <h3 className="font-display font-bold text-white">Global Networks</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 Learn from successful community networks around the world. Each has unique lessons about governance, technology, and sustainability.
@@ -7987,7 +7987,7 @@ export default function NetworkingCurriculum() {
                   href="https://guifi.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-green-400 hover:text-green-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Guifi.net (Spain)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7998,7 +7998,7 @@ export default function NetworkingCurriculum() {
                   href="https://freifunk.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-green-400 hover:text-green-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Freifunk (Germany)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8009,7 +8009,7 @@ export default function NetworkingCurriculum() {
                   href="https://detroitcommunitytech.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-green-400 hover:text-green-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Detroit Community Tech
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8020,15 +8020,15 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Technical Resources */}
-            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-terra/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-terra/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-white">Technical Tools</h3>
+                <h3 className="font-display font-bold text-white">Technical Tools</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 Open-source firmware, mesh protocols, and tools for building your own network infrastructure.
@@ -8038,7 +8038,7 @@ export default function NetworkingCurriculum() {
                   href="https://openwrt.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-orange-400 hover:text-orange-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   OpenWrt (Router Firmware)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8049,7 +8049,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.open-mesh.org/projects/batman-adv/wiki"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-orange-400 hover:text-orange-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   BATMAN-adv (Mesh Protocol)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8060,7 +8060,7 @@ export default function NetworkingCurriculum() {
                   href="https://www.wireshark.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-orange-400 hover:text-orange-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Wireshark (Traffic Analysis)
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8071,14 +8071,14 @@ export default function NetworkingCurriculum() {
             </div>
 
             {/* Books & Reading */}
-            <div className="bg-canvas-raised rounded-lg border border-sky-500/20 p-5 hover:shadow-md transition-shadow">
+            <div className="bg-canvas-raised rounded-lg border border-terra/20 p-5 hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-terra/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-terra-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-white">Further Reading</h3>
+                <h3 className="font-display font-bold text-white">Further Reading</h3>
               </div>
               <p className="text-sm text-text-muted mb-3">
                 Books and comprehensive guides for deep learning about wireless networking and community-built infrastructure.
@@ -8088,7 +8088,7 @@ export default function NetworkingCurriculum() {
                   href="http://wndw.net"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Wireless Networking in the Developing World
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8099,7 +8099,7 @@ export default function NetworkingCurriculum() {
                   href="https://apc.org/en/pubs/telecommunications-reclaimed"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                  className="text-sm text-terra-light hover:text-terra-light flex items-center gap-1"
                 >
                   Telecommunications Reclaimed
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -8111,8 +8111,8 @@ export default function NetworkingCurriculum() {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-8 bg-sky-500/20 rounded-lg p-6 text-center">
-            <h3 className="text-lg font-bold text-white mb-2">Ready to Build?</h3>
+          <div className="mt-8 bg-terra/20 rounded-lg p-6 text-center">
+            <h3 className="font-display text-lg font-bold text-white mb-2">Ready to Build?</h3>
             <p className="text-sm text-text-secondary mb-4">
               Start with the curriculum above, then connect with existing community networks to learn from their experience.
               Remember NYC Mesh&apos;s core principle: <em>&quot;Installing is the main activity of a community network. Everything else you do should be about enabling more installs.&quot;</em>
@@ -8121,7 +8121,7 @@ export default function NetworkingCurriculum() {
 
           {/* Credits & Acknowledgments */}
           <div className="mt-8 bg-canvas-deep rounded-lg p-6 border border-canvas-border">
-            <h3 className="text-lg font-bold text-white mb-4">Acknowledgments & Credits</h3>
+            <h3 className="font-display text-lg font-bold text-white mb-4">Acknowledgments & Credits</h3>
             <p className="text-sm text-text-muted mb-4">
               This curriculum was developed using open resources, documentation, and lessons learned from community networks around the world.
               We gratefully acknowledge the following organizations whose work has informed and inspired these materials:
@@ -8131,27 +8131,27 @@ export default function NetworkingCurriculum() {
                 <h4 className="font-semibold text-white mb-2">Community Networks</h4>
                 <ul className="space-y-1 text-text-muted">
                   <li>
-                    <a href="https://www.nycmesh.net" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">NYC Mesh</a>
+                    <a href="https://www.nycmesh.net" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">NYC Mesh</a>
                     {' '}- Documentation, install guides, and community organizing practices
                   </li>
                   <li>
-                    <a href="https://guifi.net" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">guifi.net</a>
+                    <a href="https://guifi.net" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">guifi.net</a>
                     {' '}- Network commons model and cooperative governance structures
                   </li>
                   <li>
-                    <a href="https://www.freifunk.net" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">Freifunk</a>
+                    <a href="https://www.freifunk.net" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">Freifunk</a>
                     {' '}- Open source mesh networking and community building
                   </li>
                   <li>
-                    <a href="https://b4rn.org.uk" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">B4RN (Broadband for the Rural North)</a>
+                    <a href="https://b4rn.org.uk" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">B4RN (Broadband for the Rural North)</a>
                     {' '}- Rural cooperative fiber network model
                   </li>
                   <li>
-                    <a href="https://detroitcommunitytech.org" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">Detroit Community Technology Project</a>
+                    <a href="https://detroitcommunitytech.org" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">Detroit Community Technology Project</a>
                     {' '}- Digital stewards program and community training methodology
                   </li>
                   <li>
-                    <a href="https://www.intnetwork.org" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">Rhizomatica</a>
+                    <a href="https://www.intnetwork.org" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">Rhizomatica</a>
                     {' '}- Indigenous community network and autonomous telecommunications
                   </li>
                 </ul>
@@ -8160,23 +8160,23 @@ export default function NetworkingCurriculum() {
                 <h4 className="font-semibold text-white mb-2">Educational Resources</h4>
                 <ul className="space-y-1 text-text-muted">
                   <li>
-                    <a href="https://www.internetsociety.org/resources/community-network-diy-toolkit/" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">Internet Society</a>
+                    <a href="https://www.internetsociety.org/resources/community-network-diy-toolkit/" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">Internet Society</a>
                     {' '}- Community Network DIY Toolkit and training materials
                   </li>
                   <li>
-                    <a href="https://apc.org" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">Association for Progressive Communications (APC)</a>
+                    <a href="https://apc.org" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">Association for Progressive Communications (APC)</a>
                     {' '}- Community network policy advocacy and documentation
                   </li>
                   <li>
-                    <a href="http://wndw.net" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">WNDW</a>
+                    <a href="http://wndw.net" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">WNDW</a>
                     {' '}- Wireless Networking in the Developing World guide
                   </li>
                   <li>
-                    <a href="https://open-mesh.org/projects/batman-adv/wiki" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">B.A.T.M.A.N. Project</a>
+                    <a href="https://open-mesh.org/projects/batman-adv/wiki" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">B.A.T.M.A.N. Project</a>
                     {' '}- BATMAN-adv mesh protocol documentation
                   </li>
                   <li>
-                    <a href="https://openwrt.org" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-400">OpenWrt Project</a>
+                    <a href="https://openwrt.org" target="_blank" rel="noopener noreferrer" className="text-terra-light hover:text-terra-light">OpenWrt Project</a>
                     {' '}- Open source router firmware and networking guides
                   </li>
                 </ul>
@@ -8203,7 +8203,7 @@ export default function NetworkingCurriculum() {
           </Link>
           <Link
             href={`/${locale}/tech-sovereignty/self-hosted`}
-            className="inline-flex items-center bg-sky-500 text-canvas-deep px-6 py-3 rounded-lg hover:bg-sky-400 transition-colors font-semibold"
+            className="inline-flex items-center bg-terra text-canvas-deep px-6 py-3 rounded-lg hover:bg-terra-light transition-colors font-semibold"
           >
             Next: Self-Hosted Services
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

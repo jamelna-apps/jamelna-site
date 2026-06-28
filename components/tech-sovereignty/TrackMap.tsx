@@ -35,9 +35,9 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       id: 'digital-rights',
       title: 'Digital Rights',
       subtitle: 'Understand Why',
-      color: 'text-amber-400',
-      bgColor: 'bg-amber-500/20',
-      borderColor: 'border-amber-500/50',
+      color: 'text-terra-light',
+      bgColor: 'bg-terra/20',
+      borderColor: 'border-terra/50',
       x: 50,
       y: 8,
       link: `/${locale}/tech-sovereignty/digital-rights`,
@@ -46,9 +46,9 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       id: 'linux-foss',
       title: 'Linux & FOSS',
       subtitle: 'Foundation',
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/20',
-      borderColor: 'border-green-500/50',
+      color: 'text-terra-light',
+      bgColor: 'bg-terra/20',
+      borderColor: 'border-terra/50',
       x: 15,
       y: 35,
       link: `/${locale}/tech-sovereignty/linux-foss`,
@@ -57,9 +57,9 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       id: 'networking',
       title: 'Networking',
       subtitle: 'Connect',
-      color: 'text-sky-400',
-      bgColor: 'bg-sky-500/20',
-      borderColor: 'border-sky-500/50',
+      color: 'text-terra-light',
+      bgColor: 'bg-terra/20',
+      borderColor: 'border-terra/50',
       x: 50,
       y: 35,
       link: `/${locale}/tech-sovereignty/networking`,
@@ -68,9 +68,9 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       id: 'self-hosted',
       title: 'Self-Hosted',
       subtitle: 'Deploy',
-      color: 'text-violet-400',
-      bgColor: 'bg-violet-500/20',
-      borderColor: 'border-violet-500/50',
+      color: 'text-terra-light',
+      bgColor: 'bg-terra/20',
+      borderColor: 'border-terra/50',
       x: 85,
       y: 35,
       link: `/${locale}/tech-sovereignty/self-hosted`,
@@ -79,9 +79,9 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       id: 'app-dev',
       title: 'App Dev',
       subtitle: 'Build',
-      color: 'text-sky-400',
-      bgColor: 'bg-sky-500/20',
-      borderColor: 'border-sky-500/50',
+      color: 'text-terra-light',
+      bgColor: 'bg-terra/20',
+      borderColor: 'border-terra/50',
       x: 15,
       y: 62,
       link: `/${locale}/tech-sovereignty/app-dev`,
@@ -90,9 +90,9 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       id: 'ai-llm',
       title: 'AI/LLM',
       subtitle: 'Extend',
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/20',
-      borderColor: 'border-orange-500/50',
+      color: 'text-terra-light',
+      bgColor: 'bg-terra/20',
+      borderColor: 'border-terra/50',
       x: 85,
       y: 62,
       link: `/${locale}/tech-sovereignty/ai-llm`,
@@ -101,9 +101,9 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
       id: 'community',
       title: 'Community',
       subtitle: 'Share',
-      color: 'text-rose-400',
-      bgColor: 'bg-rose-500/20',
-      borderColor: 'border-rose-500/50',
+      color: 'text-terra-light',
+      bgColor: 'bg-terra/20',
+      borderColor: 'border-terra/50',
       x: 50,
       y: 89,
       link: `/${locale}/tech-sovereignty/community`,
@@ -169,7 +169,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           onClick={() => setSelectedSequence(selectedSequence === 'sovereignty' ? null : 'sovereignty')}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedSequence === 'sovereignty'
-              ? 'bg-violet-500 text-white'
+              ? 'bg-terra text-white'
               : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
@@ -179,7 +179,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           onClick={() => setSelectedSequence(selectedSequence === 'developer' ? null : 'developer')}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedSequence === 'developer'
-              ? 'bg-sky-500 text-white'
+              ? 'bg-terra text-white'
               : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
@@ -189,7 +189,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           onClick={() => setSelectedSequence(selectedSequence === 'aiPath' ? null : 'aiPath')}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
             selectedSequence === 'aiPath'
-              ? 'bg-orange-500 text-white'
+              ? 'bg-terra text-white'
               : 'bg-canvas-raised text-text-secondary hover:bg-canvas-border'
           }`}
         >
@@ -220,7 +220,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
               refY="3.5"
               orient="auto"
             >
-              <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" className="text-violet-400" />
+              <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" className="text-terra-light" />
             </marker>
           </defs>
           {connections.map((conn, idx) => {
@@ -235,7 +235,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
                 y1={`${from.y}%`}
                 x2={`${to.x}%`}
                 y2={`${to.y}%`}
-                stroke={highlighted ? '#a78bfa' : '#3f3f46'}
+                stroke={highlighted ? '#D4896A' : '#3f3f46'}
                 strokeWidth={highlighted ? 3 : 2}
                 strokeDasharray={conn.type === 'optional' ? '5,5' : undefined}
                 markerEnd={highlighted ? 'url(#arrowhead-highlighted)' : 'url(#arrowhead)'}
@@ -286,7 +286,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
         </div>
 
         {/* Start Here Indicator */}
-        <div className="absolute top-3 right-3 bg-amber-500/20 text-amber-300 text-xs px-3 py-1.5 rounded-full font-medium">
+        <div className="absolute top-3 right-3 bg-terra/20 text-terra-light text-xs px-3 py-1.5 rounded-full font-medium">
           Start with Digital Rights →
         </div>
       </div>
@@ -296,7 +296,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
         <div className="mt-4 bg-canvas-raised rounded-lg p-4 border border-canvas-border">
           {selectedSequence === 'sovereignty' && (
             <div>
-              <h4 className="font-semibold text-violet-400 mb-2">Full Sovereignty Path</h4>
+              <h4 className="font-semibold text-terra-light mb-2">Full Sovereignty Path</h4>
               <p className="text-text-secondary text-sm">
                 The complete journey to tech independence. Start by understanding your digital rights,
                 build foundational Linux skills, master networking, deploy your own services, then
@@ -306,7 +306,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           )}
           {selectedSequence === 'developer' && (
             <div>
-              <h4 className="font-semibold text-sky-400 mb-2">Developer Path</h4>
+              <h4 className="font-semibold text-terra-light mb-2">Developer Path</h4>
               <p className="text-text-secondary text-sm">
                 Focus on building applications that serve your community. Learn the foundations of
                 open source development, then create tools and platforms that reflect community values.
@@ -315,7 +315,7 @@ export function TrackMap({ locale, onTrackHover }: TrackMapProps) {
           )}
           {selectedSequence === 'aiPath' && (
             <div>
-              <h4 className="font-semibold text-orange-400 mb-2">AI Independence Path</h4>
+              <h4 className="font-semibold text-terra-light mb-2">AI Independence Path</h4>
               <p className="text-text-secondary text-sm">
                 Run powerful AI models on your own hardware. Build the infrastructure foundation, then
                 deploy and customize AI tools that keep your data private and under your control.
