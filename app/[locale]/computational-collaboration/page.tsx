@@ -39,7 +39,7 @@ export default function ComputationalCollaborationPage() {
   return (
     <main className="min-h-screen bg-canvas">
       {/* Hero */}
-      <section className="pt-10 pb-12 px-6 bg-canvas-deep">
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
           <p className="reveal text-sm uppercase tracking-widest text-terra mb-4 font-mono">

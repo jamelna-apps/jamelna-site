@@ -203,10 +203,10 @@ export default function ExplorePage() {
   return (
     <main className="min-h-screen bg-canvas">
       {/* Hero */}
-      <section className="pt-16 pb-10 px-6 bg-canvas-deep">
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
-          <p className="text-xs font-mono uppercase tracking-wider text-terra mb-3">
+          <p className="text-sm font-mono uppercase tracking-widest text-terra mb-4">
             {t('explore.kicker')}
           </p>
           <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">

@@ -1976,6 +1976,54 @@
       "title": "Ready to Get Started?",
       "description": "Select a pathway above to explore recommended curricula for your school's CS education program.",
       "button": "Explore Curricula"
+    },
+    "aiPlanner": {
+      "title": "AI Planning Assistant",
+      "subtitle": "Design your K-12 computer science education program with AI-assisted guidance",
+      "welcome": {
+        "title": "Welcome to the AI Planning Assistant",
+        "description": "I can help you build a comprehensive K-12 computer science education plan tailored to your district. Ask me about curriculum recommendations, scope and sequence, or standards alignment."
+      },
+      "chat": {
+        "placeholder": "Ask about K-12 computer science curriculum planning...",
+        "placeholderWithDistrict": "Ask about the computer science curriculum for {district}...",
+        "clearChat": "Clear chat",
+        "sendMessage": "Send message"
+      },
+      "sources": {
+        "title": "Sources",
+        "csta": "CSTA Standard",
+        "statePolicy": "State Policy",
+        "curriculum": "Curriculum",
+        "scopeSequence": "Scope & Sequence"
+      },
+      "suggestedPrompts": {
+        "scopeSequence": {
+          "label": "K-12 Scope & Sequence",
+          "prompt": "Create a complete K-12 scope and sequence for computer science education aligned to our state standards."
+        },
+        "curriculumRecs": {
+          "label": "Curriculum Recommendations",
+          "prompt": "Which free computer science curricula would you recommend for our grade levels and pathways?"
+        },
+        "cstaAlignment": {
+          "label": "CSTA Standards Alignment",
+          "prompt": "How can we align our computer science program with the CSTA standards across all grade levels?"
+        },
+        "implementation": {
+          "label": "Implementation Roadmap",
+          "prompt": "Help us create a phased implementation plan for launching computer science education in our district."
+        }
+      },
+      "labels": {
+        "thinking": "Thinking...",
+        "streaming": "Generating response...",
+        "error": "Error occurred"
+      },
+      "errors": {
+        "generic": "Something went wrong. Please try again.",
+        "networkError": "Network error. Please check your connection and try again."
+      }
     }
   },
   "privacy": {

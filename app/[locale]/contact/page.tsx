@@ -12,9 +12,8 @@ export default function ContactPage() {
       <section className="pt-10 pb-8 px-6 bg-canvas-deep">
         <div className="max-w-5xl mx-auto">
           <hr className="heading-rule" />
-          <h1 className="text-display-section font-display text-text-heading mb-4 reveal-slide-left">
-            <span className="font-light">Get in</span>{' '}
-            <span className="font-extrabold">{t('title')}</span>
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4 reveal-slide-left">
+            Get in {t('title')}
           </h1>
           <p className="text-xl text-text-secondary max-w-2xl reveal-fade">
             {t('description')}

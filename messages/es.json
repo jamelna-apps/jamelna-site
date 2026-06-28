@@ -871,6 +871,54 @@
     "implementation": {
       "title": "Apoyo a la Implementación",
       "description": "Obtén orientación personalizada para llevar la educación en informática a tu escuela o distrito."
+    },
+    "aiPlanner": {
+      "title": "Asistente de Planificación con IA",
+      "subtitle": "Diseña tu programa de educación en informática K-12 con orientación asistida por IA",
+      "welcome": {
+        "title": "Bienvenido al Asistente de Planificación con IA",
+        "description": "Puedo ayudarte a crear un plan integral de educación en informática K-12 adaptado a tu distrito. Pregúntame sobre recomendaciones de currículo, alcance y secuencia, o alineación con estándares."
+      },
+      "chat": {
+        "placeholder": "Pregunta sobre la planificación del currículo de informática K-12...",
+        "placeholderWithDistrict": "Pregunta sobre el currículo de informática para {district}...",
+        "clearChat": "Borrar chat",
+        "sendMessage": "Enviar mensaje"
+      },
+      "sources": {
+        "title": "Fuentes",
+        "csta": "Estándar CSTA",
+        "statePolicy": "Política Estatal",
+        "curriculum": "Currículo",
+        "scopeSequence": "Alcance y Secuencia"
+      },
+      "suggestedPrompts": {
+        "scopeSequence": {
+          "label": "Alcance y Secuencia K-12",
+          "prompt": "Crea un alcance y secuencia completo K-12 para la educación en informática alineado con nuestros estándares estatales."
+        },
+        "curriculumRecs": {
+          "label": "Recomendaciones de Currículo",
+          "prompt": "¿Qué currículos gratuitos de informática recomendarías para nuestros niveles de grado y trayectorias?"
+        },
+        "cstaAlignment": {
+          "label": "Alineación con Estándares CSTA",
+          "prompt": "¿Cómo podemos alinear nuestro programa de informática con los estándares CSTA en todos los niveles de grado?"
+        },
+        "implementation": {
+          "label": "Hoja de Ruta de Implementación",
+          "prompt": "Ayúdanos a crear un plan de implementación por fases para lanzar la educación en informática en nuestro distrito."
+        }
+      },
+      "labels": {
+        "thinking": "Pensando...",
+        "streaming": "Generando respuesta...",
+        "error": "Ocurrió un error"
+      },
+      "errors": {
+        "generic": "Algo salió mal. Por favor, inténtalo de nuevo.",
+        "networkError": "Error de red. Por favor, comprueba tu conexión e inténtalo de nuevo."
+      }
     }
   },
   "techSovereignty": {

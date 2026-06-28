@@ -44,67 +44,80 @@ export default async function GalleryPage({ params }: { params: { slug: string }
 
   if (!gallery) {
     return (
-      <div className="bg-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-light text-gray-900 mb-4">Gallery Not Found</h1>
-          <Link href="/photography" className="text-gray-800 hover:text-gray-900">
-            ← Back to Photography
-          </Link>
-        </div>
+      <div className="min-h-screen bg-canvas">
+        <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+          <div className="max-w-5xl mx-auto">
+            <hr className="heading-rule" />
+            <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
+              Gallery Not Found
+            </h1>
+            <Link
+              href="/photography"
+              className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-terra transition-colors"
+            >
+              ← Back to Photography
+            </Link>
+          </div>
+        </section>
       </div>
     );
   }
 
   return (
-    <div className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12">
+    <div className="min-h-screen bg-canvas">
+      {/* Header */}
+      <section className="pt-10 pb-8 px-6 bg-canvas-deep">
+        <div className="max-w-5xl mx-auto">
           <Link
             href="/photography"
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors mb-8 inline-block"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-terra transition-colors mb-8"
           >
             ← Back to Photography
           </Link>
-          <h1 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
+          <hr className="heading-rule" />
+          <h1 className="text-display-section font-display font-extrabold text-text-heading mb-4">
             {gallery.title}
           </h1>
           {gallery.description && (
-            <p className="text-lg text-gray-800 font-light max-w-3xl">
+            <p className="text-xl text-text-secondary max-w-2xl">
               {gallery.description}
             </p>
           )}
         </div>
+      </section>
 
-        {/* Photo Grid */}
-        {gallery.photos && gallery.photos.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {gallery.photos.map((photo: { image: object; alt?: string; caption?: string }, index: number) => (
-              <div
-                key={index}
-                className="aspect-square bg-gray-100 rounded-lg overflow-hidden group relative"
-              >
-                <Image
-                  src={urlFor(photo.image).width(800).height(800).url()}
-                  alt={photo.alt || `Photo ${index + 1}`}
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {photo.caption && (
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <p className="text-white text-sm font-light">{photo.caption}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-16">
-            <p className="text-gray-500 font-light">No photos in this gallery yet.</p>
-          </div>
-        )}
-      </div>
+      {/* Photo Grid */}
+      <section className="py-12 px-4 bg-canvas-deep">
+        <div className="max-w-6xl mx-auto">
+          {gallery.photos && gallery.photos.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {gallery.photos.map((photo: { image: object; alt?: string; caption?: string }, index: number) => (
+                <div
+                  key={index}
+                  className="aspect-square bg-canvas-raised border border-canvas-border rounded-lg overflow-hidden group relative"
+                >
+                  <Image
+                    src={urlFor(photo.image).width(800).height(800).url()}
+                    alt={photo.alt || `Photo ${index + 1}`}
+                    width={800}
+                    height={800}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {photo.caption && (
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <p className="text-white text-sm">{photo.caption}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <p className="text-text-muted">No photos in this gallery yet.</p>
+            </div>
+          )}
+        </div>
+      </section>
     </div>
   );
 }
